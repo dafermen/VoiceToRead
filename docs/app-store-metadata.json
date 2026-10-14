@@ -27,12 +27,11 @@
     }
   },
   "ownerPending": [
-    "register new bundle identifier and app record",
     "configure new Xcode Cloud workflow and TestFlight group",
     "published privacyPolicyURL",
     "published supportURL",
     "copyright",
-    "public version",
+    "align source version 0.1.0 with App Store version 1.0 before public submission",
     "pricing/territories",
     "age questionnaire",
     "reviewer contact in App Store Connect",
@@ -48,6 +47,11 @@
   },
   "publisherType": "individual",
   "bundleIdentifier": "com.innovalogic.voicetoread",
-  "appStoreConnectAppID": null,
-  "supportMessageRetention": "Gmail; delete from support mailbox within 90 days after resolution, unless legally required to retain. Confirmed by owner 2026-10-13."
+  "appStoreConnectAppID": "6822564230",
+  "supportMessageRetention": "Gmail; delete from support mailbox within 90 days after resolution, unless legally required to retain. Confirmed by owner 2026-10-13.",
+  "sku": "voicetoread-ios-001",
+  "primaryLocale": "en-US",
+  "appStoreConnectVersion": "1.0",
+  "appStoreConnectStatus": "Prepare for Submission",
+  "registrationEvidence": "User screenshot 2026-10-13 23:19:42 America/New_York; App Information shows matching name, bundle ID, SKU and Apple ID. No authenticated API verification."
 }

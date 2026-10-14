@@ -17,9 +17,9 @@ Esta es otra aplicación: no actualiza la instalación anterior ni puede leer au
 
 Repositorio independiente confirmado por el titular: https://github.com/dafermen/VoiceToRead.git. Configurado como `origin`, rama `main`. Se comprobó que el remoto estaba vacío antes de la primera subida. No enviar cambios al remoto del proyecto base.
 
-## Activación de distribución pendiente
+## Registro confirmado y distribución pendiente
 
-1. Registrar `com.innovalogic.voicetoread` y crear el registro VoiceToRead en App Store Connect. Apple debe aceptar el nombre; la búsqueda pública no lo reserva.
+1. **Confirmado por captura del titular, 2026-10-13 23:19:42:** VoiceToRead, bundle `com.innovalogic.voicetoread`, Apple ID **6822564230**, SKU `voicetoread-ios-001`, idioma principal English (U.S.). [Ficha de App Store Connect](https://appstoreconnect.apple.com/apps/6822564230/distribution/info). Estado visible: **1.0 Prepare for Submission**. No implica subida de un build, TestFlight ni aprobación.
 2. Configurar firma automática para el equipo y el nuevo identificador.
 3. Conceder a Xcode Cloud acceso al repositorio GitHub `dafermen/VoiceToRead`, ya creado y conectado.
 4. Crear un workflow del esquema VoiceToRead con Archive iOS y preparación TestFlight; elegir un SDK admitido por Apple.
@@ -40,3 +40,7 @@ Validación ejecutada el 2026-10-13 con Xcode 15.2:
 - Persisten dos advertencias locales heredadas de concurrencia: callback @MainActor en SessionTranslationView y callback Sendable en CaptionViewModel. El log unitario también emite avisos SQLite al retirar almacenes temporales; todas las aserciones pasaron. No se declaran corregidos por este renombrado.
 
 Estos resultados no incluyen firma, archive moderno, registro de Apple, Cloud, TestFlight ni prueba física de la identidad nueva. Xcode 15.2 no compila la implementación moderna de Translation. El proyecto base permanece intacto. Los reportes heredados no sustituyen estas pruebas.
+
+## Versión de la ficha
+
+La captura de App Store Connect muestra **1.0**; el código fuente conserva **0.1.0 (1)**. Alinear la versión del archivo y de la ficha antes de seleccionar el build para revisión pública. Esta actualización solo registra la evidencia: no cambia MARKETING_VERSION, firma ni configuración remota. Subtítulo y categorías se ven vacíos en la captura.

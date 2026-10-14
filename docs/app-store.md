@@ -1,6 +1,6 @@
 # Preparación de App Store — VoiceToRead
 
-Actualizado 2026-10-13 · paquete de preparación, **no enviado a App Review**. Fuente 0.1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Nuevo registro de App Store Connect pendiente, bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
+Actualizado 2026-10-13 · paquete de preparación, **no enviado a App Review**. Fuente 0.1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Registro confirmado por captura del titular: Apple ID **6822564230**, SKU `voicetoread-ios-001`, estado **1.0 Prepare for Submission**. Alinear la versión fuente antes del envío público. Bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
 
 ## Material preparado
 

@@ -2,7 +2,9 @@
 
 ## Identidad y distribución nueva
 
-- [ ] Registrar com.innovalogic.voicetoread con el equipo 7799N4RYUG y crear el registro de App Store Connect.
+- [x] Crear registro VoiceToRead con bundle com.innovalogic.voicetoread: Apple ID 6822564230, confirmado por captura del titular del 2026-10-13.
+- [ ] Verificar firma del nuevo identificador con el equipo configurado 7799N4RYUG.
+- [ ] Alinear versión fuente 0.1.0 con la versión 1.0 visible en App Store Connect antes de revisión pública.
 - [x] Crear/conectar repositorio GitHub independiente: `dafermen/VoiceToRead`, rama `main`.
 - [ ] Configurar Cloud y grupo TestFlight para la nueva app.
 - [ ] Verificar esquema VoiceToRead, versión/build efectivos, firma y SDK admitido al enviar.

@@ -10,7 +10,7 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Bundle ID: `com.innovalogic.voicetoread`; initial version **0.1.0 (1)**.
 - Local folder: `/Users/dariomeneses/Projects/VoiceToRead`.
 - This app has its own storage and installation. It does not update or automatically import data from the previous application.
-- Repository: [dafermen/VoiceToRead](https://github.com/dafermen/VoiceToRead), branch `main`. Apple registration, Xcode Cloud and TestFlight for this identity are pending.
+- Repository: [dafermen/VoiceToRead](https://github.com/dafermen/VoiceToRead), branch `main`. App Store Connect record **6822564230** is confirmed by the owner’s screenshot (1.0, Prepare for Submission). Xcode Cloud and TestFlight for this identity remain unverified; source version is still 0.1.0.
 - Current setup and validation: [project identity](docs/project-identity.md). Older build numbers in inherited reports describe the code base, not releases of this new app.
 
 ## Read, translate and review
