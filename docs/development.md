@@ -1,6 +1,6 @@
 # Desarrollo de VoiceToRead
 
-Estado e identidad vigentes: [inicio del proyecto](project-identity.md). Versión **0.1.0 (1)**, esquema de datos **V8**. La copia tiene Git local sin remoto; la configuración de Apple y GitHub se realiza para esta nueva app.
+Estado e identidad vigentes: [inicio del proyecto](project-identity.md). Versión **0.1.0 (1)**, esquema de datos **V8**. El remoto `origin` es `https://github.com/dafermen/VoiceToRead.git`, rama `main`. La configuración de Apple y Xcode Cloud sigue pendiente para esta nueva app.
 
 ## Preparar el entorno
 

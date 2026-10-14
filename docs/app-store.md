@@ -52,4 +52,4 @@ Ejecuta `python3 scripts/validate-store-metadata.py` para verificar límites de 
 4. Abrir ambas páginas sin iniciar sesión, desde móvil, y comprobar HTTPS, contenido completo EN/ES, enlaces y correo. La portada del dominio no sustituye la página de privacidad de esta app.
 5. Solo entonces completar `privacyPolicyURL` y `supportURL` en la metadata y App Store Connect. `websiteURL` identifica la portada; `proposedPublicURLs` documenta las rutas previstas sin afirmar que existan.
 
-Esta copia deja preparada la documentación para un futuro repositorio GitHub independiente. No modifica Hostinger, no publica la política y no envía correos al contacto facilitado.
+La documentación pertenece al repositorio independiente `dafermen/VoiceToRead`. No modifica Hostinger, no publica la política y no envía correos al contacto facilitado.

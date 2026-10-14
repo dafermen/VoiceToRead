@@ -15,13 +15,13 @@
 
 Esta es otra aplicación: no actualiza la instalación anterior ni puede leer automáticamente su contenedor privado. Las sesiones existentes permanecen en la aplicación anterior. Exportarlas antes de eliminarla; no se implementa aquí una migración entre apps. Las nuevas sesiones se guardan dentro del contenedor propio en `Application Support/VoiceToRead/Sessions.store`.
 
-El repositorio Git es local y no tiene remoto configurado. Las referencias `https://github.com/dafermen/VoiceToRead` en ejemplos de documentación indican el destino propuesto; no confirman que el repositorio exista. No enviar cambios al remoto del proyecto base.
+Repositorio independiente confirmado por el titular: https://github.com/dafermen/VoiceToRead.git. Configurado como `origin`, rama `main`. Se comprobó que el remoto estaba vacío antes de la primera subida. No enviar cambios al remoto del proyecto base.
 
 ## Activación de distribución pendiente
 
 1. Registrar `com.innovalogic.voicetoread` y crear el registro VoiceToRead en App Store Connect. Apple debe aceptar el nombre; la búsqueda pública no lo reserva.
 2. Configurar firma automática para el equipo y el nuevo identificador.
-3. Crear/conectar el nuevo repositorio GitHub y conceder acceso a Xcode Cloud.
+3. Conceder a Xcode Cloud acceso al repositorio GitHub `dafermen/VoiceToRead`, ya creado y conectado.
 4. Crear un workflow del esquema VoiceToRead con Archive iOS y preparación TestFlight; elegir un SDK admitido por Apple.
 5. Crear el grupo interno, asignar la compilación procesada y comprobar la instalación como nueva app.
 6. Publicar las páginas propias de privacidad/soporte y completar los requisitos de App Store antes de revisión pública.

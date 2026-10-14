@@ -66,7 +66,7 @@ Registro actualizado el 10 de octubre de 2026. Las horas del relato usan America
 
 Durante el desarrollo de la base hubo cambios de nombre y rutas; algunas herramientas conservaron un cwd anterior inexistente. Para esta copia la ruta vigente es `/Users/dariomeneses/Projects/VoiceToRead` y el proyecto es `VoiceToRead.xcodeproj`.
 
-Confirmar pwd y git status antes de editar. Si un entorno restringe escrituras a otra carpeta, usar sus permisos normales o actualizar el workspace; no borrar ni clonar de nuevo para resolver el fallo. El repositorio actual es local sin remoto. Esta nueva identidad usa `com.innovalogic.voicetoread` y almacenamiento propio; no conserva la continuidad de la instalación anterior.
+Confirmar pwd y git status antes de editar. Si un entorno restringe escrituras a otra carpeta, usar sus permisos normales o actualizar el workspace; no borrar ni clonar de nuevo para resolver el fallo. El remoto actual es `https://github.com/dafermen/VoiceToRead.git`, rama `main`. Esta nueva identidad usa `com.innovalogic.voicetoread` y almacenamiento propio; no conserva la continuidad de la instalación anterior.
 
 ## 2. Mac antiguo y dispositivo más nuevo
 

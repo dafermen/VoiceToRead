@@ -1,6 +1,6 @@
 # Distribución de VoiceToRead
 
-Esta app es independiente. **Registro de Apple, repositorio remoto, workflow Cloud y TestFlight pendientes**. No reutilizar los identificadores o archivos firmados de la app anterior. Estado de validación: [identidad](project-identity.md).
+Esta app es independiente. **Registro de Apple, workflow Cloud y TestFlight pendientes**. No reutilizar los identificadores o archivos firmados de la app anterior. Estado de validación: [identidad](project-identity.md).
 
 | Dato | Valor actual |
 |---|---|
@@ -8,7 +8,7 @@ Esta app es independiente. **Registro de Apple, repositorio remoto, workflow Clo
 | Bundle ID | com.innovalogic.voicetoread |
 | Equipo configurado | 7799N4RYUG |
 | Versión / build fuente inicial | 0.1.0 / 1 |
-| Git | Local, rama main, sin remoto |
+| Git | https://github.com/dafermen/VoiceToRead.git, rama main |
 | App Store Connect ID | Pendiente de creación |
 | Xcode Cloud / grupo TestFlight | Pendientes de configurar |
 | Almacenamiento | Application Support/VoiceToRead/Sessions.store |
@@ -16,7 +16,7 @@ Esta app es independiente. **Registro de Apple, repositorio remoto, workflow Clo
 ## Primera entrega
 
 1. Registrar el Bundle ID con el equipo y crear el nuevo registro VoiceToRead en App Store Connect; SKU propuesto `voicetoread-ios`. La aceptación del nombre todavía debe confirmarla Apple.
-2. Crear un repositorio separado, subir el commit validado y configurar ese remoto en la copia. El destino GitHub propuesto es `dafermen/VoiceToRead`; no usar el repositorio del proyecto base.
+2. Usar el repositorio independiente ya conectado: `dafermen/VoiceToRead`, remoto `origin`, rama `main`. Subir los commits validados allí; no usar el repositorio del proyecto base.
 3. En Xcode, Integrate → Create Workflow, elegir VoiceToRead y conceder acceso al repositorio nuevo. Usar `main`, esquema compartido VoiceToRead, Archive iOS y preparación TestFlight para pruebas internas. Para publicación pública elegir una preparación elegible de App Store.
 4. Elegir un Xcode/SDK admitido por Apple al enviar. La compilación local con Xcode 15.2 no verifica las ramas modernas de Speech/Translation ni demuestra elegibilidad de subida.
 5. Inspeccionar el resultado del commit exacto: compilación, exportación/firma, subida y procesamiento son etapas distintas. Resolver acuerdos/permisos desde la cuenta del titular si Apple los solicita.

@@ -3,7 +3,8 @@
 ## Identidad y distribución nueva
 
 - [ ] Registrar com.innovalogic.voicetoread con el equipo 7799N4RYUG y crear el registro de App Store Connect.
-- [ ] Crear/conectar repositorio GitHub independiente; configurar Cloud y grupo TestFlight.
+- [x] Crear/conectar repositorio GitHub independiente: `dafermen/VoiceToRead`, rama `main`.
+- [ ] Configurar Cloud y grupo TestFlight para la nueva app.
 - [ ] Verificar esquema VoiceToRead, versión/build efectivos, firma y SDK admitido al enviar.
 - [ ] Compilar ramas modernas de Speech/Translation con SDK compatible.
 - [ ] Verificar exportación, subida, procesamiento, asignación a testers e instalación de esta app.
