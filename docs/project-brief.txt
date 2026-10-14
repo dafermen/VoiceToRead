@@ -1,0 +1,905 @@
+ACTUALIZACIÓN 2026-10-12 — build fuente 23
+Reproducción A mi ritmo por párrafo completo, corrección directa, favoritas protegidas (V8), pestañas EN/ES sin reiniciar sesión. Material bilingüe de App Store en docs/app-store.md; publicación pendiente del titular y aceptación final. Entrega y pruebas en docs/pace-checkpoint.md.
+
+# PROJECT: Offline Live Caption for iPhone
+
+Act as a senior iOS software architect and developer.
+
+I want you to design and incrementally develop a production-quality native iPhone application that generates real-time English closed captions from the iPhone microphone, with the primary requirement that transcription must work without an Internet connection.
+
+The application is intended for situations such as conferences, training sessions, classes, meetings, and presentations where cellular/Wi-Fi connectivity may be poor or completely unavailable.
+
+The project must be designed from the beginning with maintainability, privacy, accessibility, testing, documentation, and eventual Apple App Store distribution in mind.
+
+Do not attempt to build the entire application at once.
+
+Work incrementally according to the phases defined below.
+
+At the end of every development phase:
+
+1. The project must compile.
+2. The implemented functionality must work.
+3. Existing functionality must remain working.
+4. Tests relevant to that phase must be executed.
+5. Documentation must be updated.
+6. Any architectural decisions must be documented.
+7. Provide a short implementation summary.
+8. Provide manual testing instructions.
+9. Clearly identify what remains for the next phase.
+10. Do not continue automatically to the next phase unless explicitly instructed.
+
+---
+
+# 1. PRODUCT VISION
+
+Create a native iPhone application that allows a user to place the phone near a speaker during an English-language conference and read what is being said as live captions.
+
+Primary workflow:
+
+Speaker
+↓
+iPhone microphone
+↓
+On-device speech recognition
+↓
+Real-time English transcription
+↓
+Large readable captions
+↓
+Optional local transcript storage
+
+The core transcription functionality must work offline.
+
+Internet-based AI features may be introduced later, but they must always remain optional and separate from the offline transcription engine.
+
+---
+
+# 2. PRIMARY TECHNICAL APPROACH
+
+Use Apple's native technologies whenever appropriate.
+
+Preferred stack:
+
+- Swift
+- SwiftUI
+- Apple Speech framework
+- SpeechAnalyzer
+- SpeechTranscriber
+- AVFoundation / AVAudioEngine
+- Swift Concurrency
+- Observation or appropriate native state management
+- SwiftData when persistent structured storage becomes necessary
+- XCTest / Swift Testing where appropriate
+
+Target modern iPhone versions that support the required on-device SpeechAnalyzer/SpeechTranscriber capabilities.
+
+Do not use deprecated APIs when a current supported Apple API exists.
+
+Before implementing a framework API, verify its current Apple documentation and availability requirements.
+
+Do not silently replace the offline architecture with a cloud transcription service.
+
+---
+
+# 3. NON-NEGOTIABLE REQUIREMENTS
+
+The core application must:
+
+- Work without Internet connectivity.
+- Capture audio using the iPhone microphone.
+- Perform English speech-to-text on device.
+- Display partial/live transcription with low perceived latency.
+- Support long conference sessions.
+- Remain responsive while transcribing.
+- Handle interruptions and audio-session changes gracefully.
+- Clearly indicate listening/transcribing state.
+- Handle microphone permission correctly.
+- Handle unavailable speech models/assets gracefully.
+- Never require an OpenAI API key for offline transcription.
+- Never embed secrets in the application.
+- Avoid uploading conference audio unless a future feature explicitly requires it and the user knowingly opts in.
+- Follow Apple's privacy and App Store requirements.
+
+---
+
+# 4. ARCHITECTURE
+
+Use a clean, modular architecture.
+
+Suggested initial modules/layers:
+
+App
+UI / Views
+ViewModels
+Services
+Speech
+Audio
+Models
+Persistence
+Utilities
+
+Avoid unnecessary abstraction during the MVP.
+
+Prefer protocols where they provide real benefits such as testing or interchangeable implementations.
+
+Important components may eventually include:
+
+SpeechTranscriptionService
+AudioCaptureService
+TranscriptRepository
+ConferenceSession
+AppSettings
+ConnectivityService
+AIProcessingService
+
+The offline speech engine must be isolated behind an abstraction so another engine, such as a local Whisper implementation, could be evaluated in the future without rewriting the UI.
+
+Example conceptual protocol:
+
+SpeechTranscribing
+
+Possible implementations:
+
+AppleSpeechTranscriber
+FutureWhisperTranscriber
+
+Do NOT implement Whisper during the initial phases.
+
+---
+
+# 5. DEVELOPMENT PRINCIPLE
+
+Use vertical incremental development.
+
+Every phase must produce a usable improvement.
+
+Never create dozens of unfinished components for future phases.
+
+Implement only what is required for the current phase while keeping the architecture extensible.
+
+Keep the main branch/project buildable at all times.
+
+Prefer simple working software over premature complexity.
+
+---
+
+# PHASE 0 — PROJECT FOUNDATION
+
+Goal:
+
+Create a professional project foundation before implementing transcription.
+
+Tasks:
+
+- Create native SwiftUI iPhone application.
+- Define minimum supported iOS version based on SpeechAnalyzer requirements.
+- Establish project folder/module structure.
+- Configure application identifiers using placeholders when necessary.
+- Establish naming conventions.
+- Configure Git repository structure.
+- Create .gitignore.
+- Create README.md.
+- Create CHANGELOG.md.
+- Create CONTRIBUTING.md.
+- Create LICENSE placeholder/decision note if appropriate.
+- Create docs directory.
+- Create architecture documentation.
+- Create development roadmap.
+- Document minimum iPhone/iOS requirements.
+- Document offline-first architecture.
+- Document privacy principles.
+- Create basic application shell.
+- Verify successful simulator/device build where applicable.
+
+Documentation structure:
+
+README.md
+
+docs/
+    architecture.md
+    roadmap.md
+    development.md
+    testing.md
+    privacy.md
+    app-store.md
+    decisions/
+        ADR-001-offline-first.md
+        ADR-002-apple-speech-engine.md
+
+README must explain:
+
+- Product purpose
+- Current project status
+- Requirements
+- Architecture overview
+- How to build
+- How to test
+- Current limitations
+- Roadmap
+
+Acceptance criteria:
+
+The project builds successfully and displays a basic home screen.
+
+STOP after completing Phase 0.
+
+---
+
+# PHASE 1 — MICROPHONE CAPTURE
+
+Goal:
+
+Prove that the application can safely access and monitor microphone input.
+
+Implement:
+
+- Microphone permission flow.
+- Proper usage description in Info.plist/project configuration.
+- AVAudioSession configuration.
+- AVAudioEngine microphone capture.
+- Start Listening button.
+- Stop button.
+- Listening status indicator.
+- Error states.
+- Basic audio-level indicator if practical.
+
+States should be explicit, for example:
+
+idle
+requestingPermission
+ready
+listening
+stopping
+error
+
+Handle:
+
+- Permission denied.
+- Permission restricted.
+- No available input.
+- Audio engine failure.
+- App moving between foreground/background where relevant.
+
+Do not implement speech transcription yet unless absolutely required by the API architecture.
+
+Testing:
+
+- Unit tests for state transitions where practical.
+- Manual device test procedure.
+
+Update documentation.
+
+Acceptance criteria:
+
+On a real iPhone, the user can start and stop microphone capture reliably.
+
+STOP.
+
+---
+
+# PHASE 2 — OFFLINE LIVE TRANSCRIPTION PROTOTYPE
+
+Goal:
+
+Deliver the first genuinely useful version.
+
+Implement Apple's current on-device speech transcription using:
+
+SpeechAnalyzer
+SpeechTranscriber
+
+Configure for English initially:
+
+en-US
+
+Requirements:
+
+- Feed microphone audio to the speech analyzer.
+- Receive transcription results asynchronously.
+- Display partial/live results.
+- Display finalized results appropriately.
+- Keep UI responsive.
+- Avoid duplicate text.
+- Correctly assemble partial and final segments.
+- Provide Start and Stop.
+- Clearly show LIVE status.
+
+Critical requirement:
+
+Test and document operation in Airplane Mode.
+
+Handle required language/model assets.
+
+If an on-device language asset must be downloaded before offline use:
+
+- Detect availability.
+- Explain the requirement to the user.
+- Provide an appropriate setup state.
+- Never pretend offline transcription is available when the required asset is missing.
+
+UI concept:
+
+LIVE CAPTION
+
+● Listening
+
+Today we're going to discuss
+the new security procedures
+and how they affect...
+
+[ Stop ]
+
+Focus on functionality rather than visual polish.
+
+Acceptance criteria:
+
+On a compatible real iPhone with required assets installed, enable Airplane Mode, speak English near the phone, and see live transcription without Internet access.
+
+Document measured/observed latency and known limitations.
+
+STOP.
+
+---
+
+# PHASE 3 — CAPTION EXPERIENCE
+
+Goal:
+
+Make live captions comfortable to read during a real conference.
+
+Implement:
+
+- Large readable typography.
+- Automatic scrolling.
+- Current/partial sentence visually distinguished if useful.
+- Previous transcript retained above.
+- Adjustable text size.
+- Light mode.
+- Dark mode.
+- High contrast considerations.
+- Screen wake behavior appropriate for long sessions.
+- Orientation/layout handling where appropriate.
+- Start/Pause/Resume/Stop if technically reliable.
+- Elapsed conference time.
+
+Design for someone looking repeatedly between a presenter and the phone.
+
+Avoid unnecessary visual elements.
+
+Accessibility:
+
+- Dynamic Type.
+- VoiceOver labels.
+- Sufficient touch target sizes.
+- Appropriate contrast.
+- Reduced motion considerations where applicable.
+
+Acceptance criteria:
+
+The application can comfortably be used to follow a 30+ minute presentation.
+
+STOP.
+
+---
+
+# PHASE 4 — CONFERENCE SESSIONS AND LOCAL STORAGE
+
+Goal:
+
+Allow transcripts to survive after the conference.
+
+Create ConferenceSession model containing fields such as:
+
+id
+title
+createdAt
+startedAt
+endedAt
+duration
+language
+transcript
+notes if appropriate
+
+Implement:
+
+- Start new conference.
+- End conference.
+- Save transcript locally.
+- Conference history.
+- Open previous transcript.
+- Rename session.
+- Delete session with confirmation.
+- Search transcripts if practical.
+- Local-only persistence.
+
+Use SwiftData if appropriate.
+
+No account should be required.
+
+No cloud storage is required.
+
+Acceptance criteria:
+
+User can record/transcribe a conference offline, close the application, reopen it, and read the saved transcript.
+
+STOP.
+
+---
+
+# PHASE 5 — EXPORT AND SHARING
+
+Goal:
+
+Make transcripts useful outside the application.
+
+Implement native iOS sharing.
+
+Initial export formats:
+
+- Plain text (.txt)
+- PDF only if justified and implemented cleanly
+- Copy to clipboard
+- iOS Share Sheet
+
+Include useful metadata:
+
+Conference title
+Date
+Duration
+Language
+
+Do not export captured audio unless an explicit audio-recording feature is added later.
+
+Acceptance criteria:
+
+A saved transcript can be exported/shared using standard iOS mechanisms.
+
+STOP.
+
+---
+
+# PHASE 6 — SETTINGS AND OFFLINE READINESS
+
+Goal:
+
+Ensure the user knows before entering a conference whether the application is ready to operate offline.
+
+Create an Offline Readiness screen.
+
+Show:
+
+Microphone permission: Ready / Problem
+English speech model: Installed / Missing
+Storage: Available
+Offline transcription: Ready / Not Ready
+
+Add settings:
+
+Transcription language
+Caption size
+Keep screen awake
+Auto-save
+Appearance
+
+Initially support English en-US.
+
+Architect localization/language selection so additional languages can be introduced later.
+
+Add a clear:
+
+"Test Offline Mode"
+
+workflow that helps the user verify transcription before attending a conference.
+
+Acceptance criteria:
+
+The user can verify beforehand that the app will work without connectivity.
+
+STOP.
+
+---
+
+# PHASE 7 — RELIABILITY FOR LONG SESSIONS
+
+Goal:
+
+Prepare the app for real conferences lasting hours.
+
+Investigate and test:
+
+- 30 minutes
+- 60 minutes
+- 2 hours
+- longer where practical
+
+Monitor:
+
+Memory usage
+CPU usage
+Battery consumption
+Thermal behavior
+Transcript growth
+UI rendering performance
+Audio buffer stability
+
+Do not allow an ever-growing SwiftUI Text structure to degrade performance.
+
+Optimize transcript rendering/storage where required.
+
+Handle:
+
+- Phone calls.
+- Siri interruptions.
+- Bluetooth audio changes.
+- AirPods connection/disconnection.
+- Audio route changes.
+- Application interruptions.
+- Lock screen behavior.
+- Low storage.
+- Speech analyzer errors.
+- Model availability changes.
+
+Document test results.
+
+Acceptance criteria:
+
+The application remains stable during extended real-world transcription sessions.
+
+STOP.
+
+---
+
+# PHASE 8 — PRIVACY AND SECURITY REVIEW
+
+Goal:
+
+Prepare privacy behavior for production.
+
+Document exactly:
+
+- What audio is captured.
+- Whether audio is stored.
+- What transcript information is stored.
+- Where information is stored.
+- Whether anything leaves the device.
+- When Internet is used.
+- What permissions are requested.
+
+Principle:
+
+Offline transcription should remain on-device.
+
+Minimize collected information.
+
+Do not add analytics SDKs unless explicitly approved.
+
+Do not add advertising SDKs.
+
+Do not add tracking.
+
+Review Apple's required privacy manifest behavior and current App Store privacy requirements.
+
+Create/update:
+
+docs/privacy.md
+
+Draft user-facing privacy policy content.
+
+Ensure microphone permission text clearly explains why microphone access is required.
+
+STOP.
+
+---
+
+# PHASE 9 — APP STORE READINESS
+
+Goal:
+
+Prepare a release candidate suitable for App Store submission.
+
+Review the current Apple App Store Review Guidelines before finalizing.
+
+Perform:
+
+- App Store compliance review.
+- Privacy review.
+- Permission review.
+- Accessibility review.
+- Crash/error review.
+- Performance review.
+- Supported-device review.
+- Offline functionality review.
+
+Prepare:
+
+- App name candidates.
+- Subtitle.
+- App description.
+- Keywords.
+- Privacy Policy.
+- Support URL requirements.
+- App Store screenshots checklist.
+- App icon requirements.
+- Launch experience.
+- Version/build numbering.
+- Release notes.
+- Age rating considerations.
+- App Privacy answers.
+- Export compliance considerations.
+- Required permission explanations.
+
+Do not claim guaranteed accessibility, transcription accuracy, or functionality that the app cannot provide.
+
+Clearly communicate that speech recognition accuracy may vary depending on:
+
+- Speaker distance.
+- Background noise.
+- Accent.
+- Microphone obstruction.
+- Multiple simultaneous speakers.
+- Device model.
+
+Run release build validation.
+
+Create:
+
+docs/app-store.md
+docs/release-checklist.md
+
+STOP.
+
+---
+
+# PHASE 10 — OPTIONAL ONLINE AI FEATURES
+
+This phase must remain completely separate from core offline transcription.
+
+Only begin when explicitly requested.
+
+Potential features when Internet becomes available:
+
+- Spanish translation.
+- Conference summary.
+- Key points.
+- Action items.
+- Vocabulary extraction.
+- Technical vocabulary explanations.
+- Questions and answers about the conference.
+- Study guide.
+- Quiz generation.
+
+Possible architecture:
+
+Saved local transcript
+↓
+Explicit user action
+↓
+Online AI processing
+↓
+Generated study material
+
+Important:
+
+Never automatically upload conference transcripts without clear user action and appropriate disclosure.
+
+Never embed OpenAI API secrets directly in the iOS application.
+
+Use a secure backend architecture for online AI services.
+
+The application must remain useful even when these online features are completely unavailable.
+
+---
+
+# FUTURE RESEARCH — ALTERNATIVE LOCAL ENGINE
+
+Do not implement during MVP.
+
+Investigate only if Apple Speech transcription proves insufficient.
+
+Candidate:
+
+whisper.cpp or another appropriate on-device speech recognition engine.
+
+Compare:
+
+Accuracy
+Latency
+Battery consumption
+Memory
+Model size
+Thermal impact
+App Store implications
+Supported devices
+Conference audio performance
+
+Because the architecture uses SpeechTranscribing abstraction, another engine should be introducible without redesigning the application.
+
+---
+
+# TESTING STRATEGY
+
+Maintain:
+
+Unit tests
+Integration tests where practical
+Manual real-device tests
+
+Important test scenarios:
+
+Quiet room
+Conference audio from several meters away
+Background noise
+Different English accents
+Fast speech
+Slow speech
+Technical vocabulary
+Airplane Mode
+30-minute session
+60-minute session
+2-hour session
+Incoming interruption
+Bluetooth route change
+Low battery
+App foreground/background transitions
+
+Create and maintain:
+
+docs/testing.md
+
+Every phase must specify exactly how I can manually verify the implemented feature on my iPhone.
+
+---
+
+# DOCUMENTATION POLICY
+
+Documentation is part of the implementation, not an afterthought.
+
+Whenever architecture changes, update architecture.md.
+
+Whenever functionality changes, update README when relevant.
+
+Whenever an important architectural decision is made, create an ADR.
+
+ADR format:
+
+Title
+Status
+Context
+Decision
+Alternatives considered
+Consequences
+
+Examples:
+
+ADR-001 Offline-first architecture
+ADR-002 Apple SpeechAnalyzer as initial engine
+ADR-003 Local transcript persistence
+ADR-004 Optional cloud AI architecture
+
+Code should contain comments for non-obvious logic, but avoid comments that merely repeat what the code says.
+
+Public/internal APIs should use appropriate Swift documentation comments where they improve maintainability.
+
+---
+
+# GIT DEVELOPMENT POLICY
+
+Work incrementally.
+
+Use small logical commits.
+
+Suggested commit convention:
+
+feat:
+fix:
+docs:
+test:
+refactor:
+chore:
+
+Examples:
+
+feat: add microphone permission flow
+feat: implement offline speech transcription
+fix: prevent duplicate partial transcripts
+docs: document offline speech architecture
+test: add transcription state tests
+
+Never combine unrelated major changes in one commit.
+
+---
+
+# DEFINITION OF DONE FOR EVERY PHASE
+
+A phase is complete only when:
+
+[ ] Application compiles
+[ ] Feature works
+[ ] Existing functionality still works
+[ ] Error states are handled
+[ ] Relevant tests pass
+[ ] Manual testing instructions exist
+[ ] Documentation is updated
+[ ] No secrets are committed
+[ ] No unnecessary dependencies were introduced
+[ ] Current Apple API availability was verified
+[ ] App Store implications were considered
+[ ] Git changes are clean and understandable
+
+---
+
+# IMPORTANT DEVELOPMENT RULES
+
+Do not invent Apple APIs.
+
+Verify current Apple API signatures before implementation.
+
+Prefer Apple official documentation as the primary source for Apple framework behavior.
+
+Avoid third-party dependencies unless they provide a significant documented benefit.
+
+Do not prematurely implement future phases.
+
+Do not silently change architectural decisions.
+
+If a technical assumption proves incorrect, stop, explain the issue, propose alternatives, and document the decision.
+
+Do not compromise the offline requirement.
+
+Do not require user registration for the core functionality.
+
+Do not collect unnecessary personal information.
+
+Do not implement advertisements.
+
+Do not implement tracking.
+
+Do not implement audio recording/storage unless explicitly requested.
+
+Optimize first for:
+
+1. Reliability
+2. Offline functionality
+3. Transcription readability
+4. Privacy
+5. Battery efficiency
+6. Accessibility
+7. Maintainability
+
+---
+
+# FIRST ASSIGNMENT
+
+Begin ONLY with PHASE 0.
+
+Before writing code:
+
+1. Inspect the existing repository, if one exists.
+2. Verify the current Apple platform requirements for SpeechAnalyzer and SpeechTranscriber.
+3. Propose the minimum supported iOS version.
+4. Present the proposed project architecture.
+5. Present the proposed directory structure.
+6. Identify any important App Store/privacy considerations that affect architecture from day one.
+
+Then implement Phase 0.
+
+Build the project and resolve build errors.
+
+Update all required documentation.
+
+At completion provide:
+
+PHASE 0 COMPLETION REPORT
+
+- What was implemented
+- Files created/modified
+- Architecture decisions
+- Build result
+- Tests performed
+- Manual verification steps
+- Known limitations
+- Documentation created/updated
+- Git status/commit recommendation
+- Exact objectives for Phase 1
+
+Then STOP and wait for my approval before proceeding to Phase 1.

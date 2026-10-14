@@ -1,0 +1,21 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+IDEWorkspaceChecks.plist
+*.ipa
+*.dSYM
+*.dSYM.zip
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+# Secrets and signing
+.env
+.env.*
+!.env.example
+*.p12
+*.mobileprovision
+# Local test output
+*.xcresult

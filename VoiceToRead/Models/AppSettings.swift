@@ -1,0 +1,125 @@
+import Foundation
+import Observation
+import SwiftUI
+import UIKit
+
+enum InterfaceLanguage: String, CaseIterable {
+    case english = "en", spanish = "es"
+    var name: String { self == .english ? "English" : "Español" }
+    var locale: Locale { Locale(identifier: rawValue) }
+}
+
+enum AppAppearance: String, CaseIterable, Equatable, Hashable, Sendable {
+    case system, light, dark
+}
+
+/// Persist a stable locale; unknown/older preferences retain English as the default.
+enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
+    case english = "en-US", spanish = "es-ES"
+    var name: String { self == .english ? "English" : "Español" }
+    var code: String { self == .english ? "en" : "es" }
+    var opposite: Self { self == .english ? .spanish : .english }
+    var mode: TranscriptLanguage { self == .english ? .english : .spanish }
+}
+
+enum ReaderPaper: String, CaseIterable {
+    case system, yellow, blue, green, purple
+    var label: String {
+        switch self { case .system: "System"; case .yellow: "Amarillo claro"; case .blue: "Azul claro"
+        case .green: "Verde claro"; case .purple: "Morado claro" }
+    }
+    var color: Color {
+        switch self {
+        case .system: Color(uiColor: .systemBackground)
+        case .yellow: Color(red: 1, green: 0.97, blue: 0.82)
+        case .blue: Color(red: 0.87, green: 0.95, blue: 1)
+        case .green: Color(red: 0.89, green: 0.97, blue: 0.87)
+        case .purple: Color(red: 0.95, green: 0.89, blue: 0.99)
+        }
+    }
+}
+
+@MainActor
+@Observable
+final class AppSettings {
+    @ObservationIgnored private let defaults: UserDefaults
+    var captionSize: Double { didSet { defaults.set(captionSize, forKey: "captionSize") } }
+    var lineSpacing: Double { didSet { defaults.set(lineSpacing, forKey: "lineSpacing") } }
+    var boldCaptions: Bool { didSet { defaults.set(boldCaptions, forKey: "boldCaptions") } }
+    var highContrast: Bool { didSet { defaults.set(highContrast, forKey: "highContrast") } }
+    var keepAwake: Bool { didSet { defaults.set(keepAwake, forKey: "keepAwake") } }
+    // Remember choices; audio defaults on only for a fresh installation, never auto-starts.
+    var saveAudio: Bool { didSet { defaults.set(saveAudio, forKey: "saveAudio") } }
+    /// Opt-in: processing may suppress distant speakers and loudspeaker playback.
+    var reduceBackgroundNoise: Bool { didSet { defaults.set(reduceBackgroundNoise, forKey: "reduceBackgroundNoise") } }
+    var continueInBackground: Bool { didSet { defaults.set(continueInBackground, forKey: "continueInBackground") } }
+    var appearance: AppAppearance { didSet { defaults.set(appearance.rawValue, forKey: "appearance") } }
+    var interfaceLanguage: InterfaceLanguage { didSet { defaults.set(interfaceLanguage.rawValue, forKey: "interfaceLanguage") } }
+    var captureLanguage: CaptureLanguage { didSet { defaults.set(captureLanguage.rawValue, forKey: "captureLanguage") } }
+    var readerPaper: ReaderPaper { didSet { defaults.set(readerPaper.rawValue, forKey: "readerPaper") } }
+    var ruledPaper: Bool { didSet { defaults.set(ruledPaper, forKey: "ruledPaper") } }
+    var transcriptionLanguage: String { captureLanguage.rawValue }
+
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+        interfaceLanguage = InterfaceLanguage(rawValue: defaults.string(forKey: "interfaceLanguage") ?? "") ?? .english
+        captureLanguage = CaptureLanguage(rawValue: defaults.string(forKey: "captureLanguage") ?? "") ?? .english
+        readerPaper = ReaderPaper(rawValue: defaults.string(forKey: "readerPaper") ?? "") ?? .system
+        ruledPaper = defaults.bool(forKey: "ruledPaper")
+        let storedSize = defaults.object(forKey: "captionSize") as? Double ?? 28
+        captionSize = min(max(storedSize.isFinite ? storedSize : 28, 20), 44)
+        let storedSpacing = defaults.object(forKey: "lineSpacing") as? Double ?? 4
+        lineSpacing = min(max(storedSpacing.isFinite ? storedSpacing : 4, 0), 16)
+        boldCaptions = defaults.bool(forKey: "boldCaptions")
+        highContrast = defaults.bool(forKey: "highContrast")
+        keepAwake = defaults.object(forKey: "keepAwake") as? Bool ?? true
+        saveAudio = defaults.object(forKey: "saveAudio") as? Bool ?? true
+        reduceBackgroundNoise = defaults.bool(forKey: "reduceBackgroundNoise")
+        continueInBackground = defaults.bool(forKey: "continueInBackground")
+        appearance = AppAppearance(rawValue: defaults.string(forKey: "appearance") ?? "") ?? .system
+    }
+
+    /// Call before opening/creating the persistent store. Preserve legacy installations
+    /// whose old default was false but which never wrote an explicit preference.
+    static func registerAudioDefault(existingInstallation: Bool, defaults: UserDefaults = .standard) {
+        if defaults.object(forKey: "saveAudio") == nil {
+            defaults.set(!existingInstallation, forKey: "saveAudio")
+        }
+    }
+
+    var colorScheme: ColorScheme? {
+        switch appearance {
+        case .system: nil
+        case .light: .light
+        case .dark: .dark
+        }
+    }
+}
+
+
+/// The background provides only paper color. Rules belong to each text layout.
+struct ReaderSurface: View {
+    let settings: AppSettings
+    @Environment(\.colorScheme) private var scheme
+    var body: some View {
+        Group {
+            if settings.highContrast { scheme == .dark ? Color.black : Color.white }
+            else { settings.readerPaper.color }
+        }.allowsHitTesting(false).accessibilityHidden(true)
+    }
+}
+
+struct ReaderPaperOptions: View {
+    @Bindable var settings: AppSettings
+    var body: some View {
+        Section("Fondo de lectura") {
+            Picker("Color del fondo", selection: $settings.readerPaper) {
+                ForEach(ReaderPaper.allCases, id: \.self) { Text(LocalizedStringKey($0.label)).tag($0) }
+            }.accessibilityIdentifier("readerPaperPicker")
+            Toggle("Renglones de cuaderno", isOn: $settings.ruledPaper)
+                .accessibilityIdentifier("ruledPaperToggle")
+            Text("Los colores claros usan texto oscuro. Alto contraste tiene prioridad y oculta los renglones.")
+                .font(.caption).foregroundStyle(.secondary)
+        }
+    }
+}

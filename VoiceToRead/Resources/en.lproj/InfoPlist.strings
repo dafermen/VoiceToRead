@@ -1,0 +1,2 @@
+"NSMicrophoneUsageDescription" = "VoiceToRead uses the microphone when you start listening or pronunciation practice. Session audio is saved only when Save audio is enabled. Practice takes are temporary.";
+"NSSpeechRecognitionUsageDescription" = "VoiceToRead recognizes English or Spanish speech on your device for captions and optional practice word recognition. On-device support is required; the app does not send audio to a server.";
