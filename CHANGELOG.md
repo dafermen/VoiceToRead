@@ -1,8 +1,16 @@
+## VoiceToRead 1.0 — preparación de publicación (2026-10-14)
+
+- Alinea la versión fuente con la ficha pública 1.0; conserva bundle ID, firma configurada y datos existentes.
+- Añade responsable, soporte, enlaces públicos EN/ES y conservación de correos a la privacidad local.
+- Prepara 12 capturas reales de simulador, textos bilingües, guía de envío y ZIP regenerable.
+- Documenta TestFlight interno confirmado por el titular, web HTTPS verificada y decisión de gratuidad en Estados Unidos/Colombia.
+- Debug/UI en iPhone e iPad y Release sin firma validados; SDK moderno, aceptación física final y envío a revisión continúan pendientes. No publicado en App Store.
+
 ## VoiceToRead 0.1.0 (1) — proyecto independiente
 
 - Nueva identidad: com.innovalogic.voicetoread, con proyecto, esquema, módulos, tests, almacenamiento, exportaciones y textos renombrados.
 - Conserva las funciones del código base, incluidas tarjetas bilingües, traducción local, grabación, práctica de idiomas y soporte iPhone/iPad.
-- Registro de Apple, firma de distribución, Xcode Cloud y TestFlight pendientes para esta nueva identidad.
+- Estado inicial: registro de Apple, firma de distribución, Xcode Cloud y TestFlight estaban pendientes. Ver preparación 1.0 para el estado actualizado.
 
 Los apartados siguientes son historial heredado con nombres adaptados; los builds 2–27 no son entregas de esta nueva aplicación.
 

@@ -286,3 +286,15 @@ El contenido usa `ReaderParagraph`, que ya resuelve tamaño, interlineado, selec
 ## Sitio público y políticas — VoiceToRead
 
 La web bilingüe se genera en `website/dist/`. La [guía de publicación y explicación para estudiantes](website-publication.md) cubre HTML/CSS, generación desde documentos, idiomas, validación, hPanel y SSL. El [README de la web](../website/README.md) contiene los comandos. Sitio preparado; subida y HTTPS públicos pendientes.
+
+## Preparar una publicación sin confundirla con instalar la app
+
+Una app tiene tres identificadores distintos: el **bundle ID** identifica el producto; **MARKETING_VERSION** es la versión visible (ahora 1.0); **CURRENT_PROJECT_VERSION** identifica una compilación. Cloud puede asignar su propio número al archivo. Cambiar un texto en GitHub no demuestra qué número recibió Apple: se comprueba el Info.plist del archivo y TestFlight.
+
+TestFlight interno permite probar, pero un archivo marcado Internal Testing Only no puede enviarse a la tienda pública. El workflow debe archivar con TestFlight and App Store. Después se instala y prueba ese mismo archivo antes de seleccionarlo en la ficha 1.0. No se resuelve creando otro bundle ID ni borrando sesiones.
+
+`PrivacyPolicyView` usa el locale de SwiftUI (idioma de menús) para elegir `/en/privacy/` o `/privacy/`. El idioma de captura puede ser distinto. `Link` abre el navegador o correo únicamente al tocarlo; el texto local de privacidad no necesita conexión. Los textos visibles están traducidos en ambos Localizable.strings. El responsable y el plazo de soporte deben coincidir con la política pública.
+
+Para capturas reproducibles, `--store-screenshots` crea una biblioteca **en memoria**, con texto ficticio y preferencias separadas. Está dentro de `#if DEBUG`: el compilador elimina ese código de Release. No se inicia el micrófono ni se simula una traducción en vivo. XCTest navega por las pantallas reales, verifica controles y guarda capturas como attachments. Esta técnica comprueba presentación y navegación, pero no la precisión del reconocimiento, los servicios modernos de traducción ni la firma de Apple.
+
+El [paquete de publicación](store/submission-kit.md) distingue hechos comprobados, decisiones del titular y verificaciones pendientes. El validador `--ready` debe seguir fallando mientras haya pendientes; es una protección contra enviar una ficha incompleta, no un error que deba ocultarse.

@@ -515,3 +515,12 @@
 "Live preview is not saved. Translate the saved session to export." = "La vista previa no se guarda. Traduce la sesión guardada para exportarla.";
 "Translating confirmed text…" = "Traduciendo texto confirmado…";
 "Waiting for translation…" = "Esperando traducción…";
+
+/* Public privacy and support, release 1.0. */
+"Responsible person: Dario Fernando Meneses Ceron." = "Responsable: Dario Fernando Meneses Ceron.";
+"Read the public privacy policy" = "Leer la política de privacidad pública";
+"Support and frequently asked questions" = "Soporte y preguntas frecuentes";
+"Support emails are handled in Gmail and deleted from the support mailbox within 90 days after resolution, unless retention is legally required. Provider backups follow Google's policies. Do not send recordings or sensitive transcripts unless necessary for your request." = "Los correos de soporte se gestionan en Gmail y se eliminan del buzón dentro de los 90 días posteriores a la resolución, salvo obligación legal de conservarlos. Las copias del proveedor siguen las políticas de Google. No envíes grabaciones ni transcripciones sensibles salvo que sean necesarias para tu consulta.";
+"Opening our website uses Hostinger hosting, which may process connection data such as IP addresses and technical logs. The website has no added analytics, advertising or tracking cookies. The public policy explains these services separately from the app's local processing." = "Al abrir nuestra web se utiliza el alojamiento de Hostinger, que puede tratar datos de conexión como direcciones IP y registros técnicos. La web no añade analítica, publicidad ni cookies de seguimiento. La política pública explica estos servicios por separado del procesamiento local de la app.";
+"Last updated: October 14, 2026." = "Última actualización: 14 de octubre de 2026.";
+"dariofernandomeneses@gmail.com" = "dariofernandomeneses@gmail.com";

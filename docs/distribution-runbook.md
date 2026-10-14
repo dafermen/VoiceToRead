@@ -186,3 +186,11 @@ La ruta /private/tmp usada durante el incidente no es almacenamiento permanente.
 ## Build 16: Translation branch
 
 Use a fresh archive from source build 16 or later. Translation generation is compiled only when the SDK supplies the Translation module and runs only on iOS 18+. A successful Xcode 15.2 local build verifies compatibility UI/data logic, not the Apple translation implementation. Keep bundle identifier, signing team and store path unchanged.
+
+## 2026-10-14: VoiceToRead ya en TestFlight; preparación pública
+
+Evidencia: el titular confirmó que la nueva app se ve e instala en el iPhone. El workflow Default mostrado tenía Archive iOS + Internal Testing Only y postacción Dev. La primera compilación verde sin builds visibles no demostraba disponibilidad; revisar siempre preparación, exportación, procesamiento y asignación al grupo.
+
+Para App Store: usar TestFlight and App Store, generar un archivo nuevo con versión 1.0 y comprobar su número efectivo. No reutilizar una compilación Internal Only. Versión fuente alineada a 1.0 en esta preparación; firma y bundle ID se conservan. La web pasó de un fallo SSL inicial a HTTPS válido en privacidad/soporte EN/ES. Los enlaces ya se registran en metadatos y en la app. Gratis y Estados Unidos/Colombia confirmados por el titular; falta aplicarlos en Apple. Ver [paquete de publicación](store/submission-kit.md).
+
+Incidente de capturas: los attachments de XCTest para iPhone 15/iOS 17.2 tuvieron 1178 × 2556; Apple espera 1179 × 2556. Capturar con simctl a tamaño nativo, comprobar dimensiones y entregar JPEG sin alfa. No estirar imágenes ni confundir una captura QA con el material comercial. La primera prueba de privacidad falló por consultar `app.links`: SwiftUI exponía los controles de otro tipo. La consulta por identificador accesible resolvió el fallo en inglés y español sin cambiar la funcionalidad de Link.

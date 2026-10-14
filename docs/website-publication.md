@@ -8,7 +8,7 @@ Preparado el **13 de octubre de 2026**. El titular confirmó el subdominio y el 
 - ZIP local: `website/VoiceToRead-Hostinger.zip`. Puede regenerarse desde GitHub con `python3 website/build.py`.
 - Soporte por Gmail. El titular aprobó eliminar correos del buzón dentro de los 90 días posteriores a resolver una consulta, salvo obligación legal. La política aclara que los respaldos del proveedor siguen sus propios procesos. Este es un procedimiento que el titular debe cumplir; la web no borra correos automáticamente.
 - No se dispone de acceso autenticado a hPanel en esta sesión. No se han subido archivos, modificado DNS ni cambiado el sitio principal.
-- La comprobación HTTPS del subdominio devolvió `SSL: no alternative certificate subject name matches target host name`. Debe resolverse antes de usar las URLs en App Store Connect. No ignorar la validación TLS para dar por publicada la política.
+- Incidente inicial: HTTPS fallaba por certificado sin el subdominio. **Resuelto en la comprobación del 2026-10-14:** privacidad y soporte EN/ES responden HTTPS 200 con verificación TLS y contacto correcto. No fue necesario desactivar TLS.
 
 ## Subir el ZIP con hPanel
 
@@ -23,9 +23,9 @@ Preparado el **13 de octubre de 2026**. El titular confirmó el subdominio y el 
 
 Guías oficiales: [Administrador de archivos de Hostinger](https://www.hostinger.com/support/4548688-basic-actions-in-the-file-manager-in-hostinger/), [SSL de Hostinger](https://support.hostinger.com/en/articles/1583258-how-to-install-lifetime-ssl-at-hostinger), [problemas al emitir SSL](https://www.hostinger.com/support/5613445-how-to-fix-a-failed-lifetime-ssl-installation-in-hostinger/).
 
-## URLs previstas para Apple
+## URLs públicas para Apple
 
-| Campo | URL prevista, aún por verificar públicamente |
+| Campo | URL pública verificada |
 |---|---|
 | Marketing URL / web | `https://voicetoread.innovalogic.tech/` |
 | Privacy Policy URL | `https://voicetoread.innovalogic.tech/privacy/` |
@@ -33,13 +33,13 @@ Guías oficiales: [Administrador de archivos de Hostinger](https://www.hostinger
 | Privacidad en inglés | `https://voicetoread.innovalogic.tech/en/privacy/` |
 | Soporte en inglés | `https://voicetoread.innovalogic.tech/en/support/` |
 
-Tras verificar publicación y HTTPS, completar `privacyPolicyURL` y `supportURL` de `docs/app-store-metadata.json`, quitar sus pendientes y copiar las URLs en App Store Connect. Añadir el enlace público a la política dentro de la app y sincronizar allí los nuevos apartados de soporte/web antes del envío. La política local existente sigue disponible; no se cambió el binario en esta tarea.
+El 2026-10-14 se completaron `privacyPolicyURL` y `supportURL` de `docs/app-store-metadata.json` con URLs verificadas y se añadieron los enlaces, responsable y apartados de soporte/web a la política local de la app. Copiar las URLs del idioma correspondiente en App Store Connect. La app mantiene el texto local para consultar sin Internet.
 
 Apple exige una política accesible y datos de contacto de soporte. Seguridad y accesibilidad complementan la web; no reemplazan los formularios de App Store Connect. Fuentes: [App Review, sección 5.1.1](https://developer.apple.com/app-store/review/guidelines/#privacy), [gestionar App Privacy](https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/), [preparación para revisión](https://developer.apple.com/app-store/review/).
 
 ## Lo que la web no resuelve por sí sola
 
-Continúan pendientes el registro de la nueva app/bundle, distribución firmada, prueba en dispositivos, capturas comerciales, edad, cifrado, App Privacy según el binario real, precio/territorios y contacto privado del revisor. La web no garantiza aprobación. Ver [preparación de App Store](app-store.md) y [checklist](release-checklist.md).
+Registro e instalación interna confirmados. Continúan pendientes la distribución pública 1.0, aceptación física final, revisión de capturas, edad, cifrado, App Privacy y contacto privado del revisor. El titular eligió gratuita y Estados Unidos/Colombia; falta aplicar estas opciones en Apple. La web no garantiza aprobación. Ver [preparación de App Store](app-store.md) y [checklist](release-checklist.md).
 
 No se ha creado un contrato EULA personalizado ni se han inventado datos fiscales o jurídicos. Revisar el acuerdo estándar de Apple al preparar la ficha. No cambiar de categoría a Kids por mencionar aprendizaje supervisado.
 
@@ -62,4 +62,4 @@ Para actualizar, editar fuentes, regenerar, validar y subir el nuevo ZIP. No edi
 - Chrome temporal: 40 combinaciones de página/ancho (320, 390, 768 y 1440 px), sin desbordamiento horizontal; cambio de idioma de privacidad a su equivalente correcto.
 - Revisión visual de portada en escritorio y móvil, y privacidad en inglés en móvil. No equivale a una auditoría completa con lector de pantalla.
 - Metadata EN/ES dentro de límites. No se ejecutaron pruebas de la app: esta entrega solo modifica web/documentación, sin cambios Swift ni de firma.
-- Publicación pública no verificada: falta la carga en Hostinger y corregir SSL.
+- Comprobación posterior 2026-10-14: privacidad y soporte EN/ES publicados, HTTPS 200 y contacto presente.

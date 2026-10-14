@@ -43,4 +43,20 @@ Estos resultados no incluyen firma, archive moderno, registro de Apple, Cloud, T
 
 ## Versión de la ficha
 
-La captura de App Store Connect muestra **1.0**; el código fuente conserva **0.1.0 (1)**. Alinear la versión del archivo y de la ficha antes de seleccionar el build para revisión pública. Esta actualización solo registra la evidencia: no cambia MARKETING_VERSION, firma ni configuración remota. Subtítulo y categorías se ven vacíos en la captura.
+La ficha muestra **1.0**. El 2026-10-14 se alineó MARKETING_VERSION a **1.0** en Debug y Release; CURRENT_PROJECT_VERSION conserva **1** como valor fuente. Cloud puede asignar otro número: verificar siempre el Info.plist del archivo y TestFlight. Subtítulo y categorías se veían vacíos en la captura inicial.
+
+El titular confirmó el 2026-10-14 que VoiceToRead ya se instaló desde TestFlight y funciona en su iPhone. Es evidencia de instalación/uso básico, no de toda la matriz de aceptación ni de la versión 1.0 aún por compilar. El workflow mostrado usa Internal Testing Only; cambiarlo a TestFlight and App Store y crear un archivo nuevo antes de revisión pública.
+
+## Preparación 1.0 — 2026-10-14
+
+- MARKETING_VERSION 1.0 en Debug/Release; bundle y esquema V8 conservados.
+- Privacidad local: responsable, contacto, plazo de soporte y tratamiento web; enlaces EN/ES verificados públicamente por HTTPS.
+- Release genérico iOS sin firma compiló; Info.plist confirma 1.0 (1), bundle esperado, iOS 17 e iPhone/iPad. Ejecutable sin `--store-screenshots`, `Learning together` ni `--ui-test-review`. Log: `/private/tmp/VoiceToRead-store-release.log`.
+- iPhone 15/iOS 17.2: recorridos de biblioteca/lectura/edición/privacidad EN/ES aprobados. Evidencia: `/private/tmp/VoiceToRead-store-iphone-v2.xcresult`.
+- iPad Pro 12.9 (6.ª gen.)/iPadOS 17.2: mismos recorridos EN/ES aprobados y capturas nativas generadas. Evidencia: `build/store-ipad-20261014-070944/Tests.xcresult`.
+- Localización: 519 claves y 2 permisos, paridad EN/ES y placeholders correctos. Textos de tienda dentro de límites. `--ready` sigue rechazando el envío mientras falten archivo público, declaraciones y aceptación final.
+- Persisten dos warnings heredados de concurrencia (SessionTranslationView y CaptionViewModel). Esta entrega no los presenta como corregidos. No se repitió la batería unitaria completa: los cambios funcionales son enlaces/texto de privacidad y versión; se verificaron los recorridos afectados y Release.
+
+Xcode 15.2 local no compila la rama moderna de Translation. Estas pruebas no certifican el SDK actual de distribución, precisión del reconocimiento, traducción real, firma ni aceptación física 1.0. El responsable eligió gratis sin compras y Estados Unidos/Colombia; esas opciones aún deben aplicarse en Apple. No hubo envío a App Review ni modificación autenticada de la ficha.
+
+Capturas finales de iPhone: `build/store-iphone-20261014-072025/Tests.xcresult`, ambos recorridos aprobados. Se revisaron visualmente 12 candidatos (biblioteca, lectura y edición; EN/ES; iPhone/iPad). JPEG sin alfa: iPhone 1179 × 2556, iPad 2048 × 2732. Archivos en `docs/store/screenshots/`; paquete regenerable en `build/app-store/VoiceToRead-AppStore-1.0.zip`. No incluye capturas sintéticas de traducción.

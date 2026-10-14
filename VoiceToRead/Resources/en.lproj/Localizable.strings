@@ -515,3 +515,12 @@
 "Live preview is not saved. Translate the saved session to export." = "Live preview is not saved. Translate the saved session to export.";
 "Translating confirmed text…" = "Translating confirmed text…";
 "Waiting for translation…" = "Waiting for translation…";
+
+/* Public privacy and support, release 1.0. */
+"Responsible person: Dario Fernando Meneses Ceron." = "Responsible person: Dario Fernando Meneses Ceron.";
+"Read the public privacy policy" = "Read the public privacy policy";
+"Support and frequently asked questions" = "Support and frequently asked questions";
+"Support emails are handled in Gmail and deleted from the support mailbox within 90 days after resolution, unless retention is legally required. Provider backups follow Google's policies. Do not send recordings or sensitive transcripts unless necessary for your request." = "Support emails are handled in Gmail and deleted from the support mailbox within 90 days after resolution, unless retention is legally required. Provider backups follow Google's policies. Do not send recordings or sensitive transcripts unless necessary for your request.";
+"Opening our website uses Hostinger hosting, which may process connection data such as IP addresses and technical logs. The website has no added analytics, advertising or tracking cookies. The public policy explains these services separately from the app's local processing." = "Opening our website uses Hostinger hosting, which may process connection data such as IP addresses and technical logs. The website has no added analytics, advertising or tracking cookies. The public policy explains these services separately from the app's local processing.";
+"Last updated: October 14, 2026." = "Last updated: October 14, 2026.";
+"dariofernandomeneses@gmail.com" = "dariofernandomeneses@gmail.com";

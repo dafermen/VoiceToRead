@@ -7,10 +7,10 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 ## New independent project
 
 - Open `VoiceToRead.xcodeproj`, scheme **VoiceToRead**.
-- Bundle ID: `com.innovalogic.voicetoread`; initial version **0.1.0 (1)**.
+- Bundle ID: `com.innovalogic.voicetoread`; public-release source version **1.0 (1)**.
 - Local folder: `/Users/dariomeneses/Projects/VoiceToRead`.
 - This app has its own storage and installation. It does not update or automatically import data from the previous application.
-- Repository: [dafermen/VoiceToRead](https://github.com/dafermen/VoiceToRead), branch `main`. App Store Connect record **6822564230** is confirmed by the owner’s screenshot (1.0, Prepare for Submission). Xcode Cloud and TestFlight for this identity remain unverified; source version is still 0.1.0.
+- Repository: [dafermen/VoiceToRead](https://github.com/dafermen/VoiceToRead), branch `main`. App Store Connect record **6822564230** is confirmed by the owner’s screenshot (1.0, Prepare for Submission). The owner confirmed VoiceToRead runs on iPhone through internal TestFlight. Source version is now 1.0; an App Store-eligible archive and final device acceptance remain pending.
 - Current setup and validation: [project identity](docs/project-identity.md). Older build numbers in inherited reports describe the code base, not releases of this new app.
 
 ## Read, translate and review
@@ -55,4 +55,6 @@ The Mac script selects an available simulator, runs tests, builds Debug/Release 
 - [Privacy policy](docs/privacy-policy-draft.md) and [support pages](docs/store/support.md)
 - [Bilingual public website](website/README.md) and [Hostinger deployment guide](docs/website-publication.md)
 
-Responsible person: **Dario Fernando Meneses Ceron**. Support/privacy: **dariofernandomeneses@gmail.com**. Website destination: https://voicetoread.innovalogic.tech/ (Hostinger). The bilingual site and upload ZIP are prepared; hosting upload and SSL verification remain pending. No open-source license has been granted; see LICENSE.
+Responsible person: **Dario Fernando Meneses Ceron**. Support/privacy: **dariofernandomeneses@gmail.com**. Website: https://voicetoread.innovalogic.tech/ (Hostinger). Public privacy/support pages in both languages were verified over HTTPS on 2026-10-14. No open-source license has been granted; see LICENSE.
+
+Public release preparation: [submission kit](docs/store/submission-kit.md). Owner selected **free, no in-app purchases**, initially **United States and Colombia**. Nothing has been submitted to App Review.

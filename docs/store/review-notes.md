@@ -15,8 +15,8 @@ Privacy policy is accessible in Settings. Sessions/audio are local and excluded 
 
 Before copying these notes to App Store Connect, append:
 - Actual tested device models and OS versions (PENDING).
-- Public support/privacy URLs (PENDING publication and verification on innovalogic.tech, hosted by Hostinger). Public support/privacy email confirmed: dariofernandomeneses@gmail.com.
+- Public support: https://voicetoread.innovalogic.tech/en/support/ and privacy: https://voicetoread.innovalogic.tech/en/privacy/ (HTTPS verified 2026-10-14). Contact: dariofernandomeneses@gmail.com.
 - Reviewer contact name, phone and email, entered privately in App Store Connect (PENDING; do not commit personal phone numbers here).
-- Exact final version/build selected for public review (PENDING; source build 1 is a development delivery).
+- Exact final version/build selected for public review (PENDING; source version 1.0 / build 1 is not proof of the uploaded archive number).
 
 Do not distribute the DEBUG synthetic test fixtures as reviewer functionality. Never provide an internal-testing-only build for public App Review; archive a build eligible for TestFlight and App Store.

@@ -60,6 +60,42 @@ struct AppRootView: View {
     private func openStorage() {
         do {
             #if DEBUG
+            // Store screenshots use fictional saved text and an isolated in-memory library.
+            // This branch is excluded from Release; it never starts the microphone or translation.
+            if ProcessInfo.processInfo.arguments.contains("--store-screenshots") {
+                let spanish = ProcessInfo.processInfo.arguments.contains("--store-spanish")
+                let suite = "VoiceToRead.StoreScreenshots"
+                let defaults = UserDefaults(suiteName: suite)!
+                defaults.removePersistentDomain(forName: suite)
+                let settings = AppSettings(defaults: defaults)
+                settings.interfaceLanguage = spanish ? .spanish : .english
+                settings.appearance = .light
+                let repository = try TranscriptRepository(inMemory: true)
+                let sample = try repository.create(title: spanish ? "Aprendemos juntos" : "Learning together",
+                                                   language: spanish ? .spanish : .english)
+                let paragraphs = spanish ? [
+                    "Cada persona aprende a su propio ritmo. Podemos detenernos, leer de nuevo y continuar cuando estemos preparados.",
+                    "Escuchar una frase corta y repetirla nos ayuda a practicar. No hace falta hacerlo perfecto para empezar.",
+                    "Antes de compartir nuestras notas, revisamos las palabras y corregimos lo que sea necesario.",
+                    "Conservemos las ideas que queremos recordar y hagamos espacio para nuevas preguntas."
+                ] : [
+                    "Everyone learns at their own pace. We can pause, read again and continue when we feel ready.",
+                    "Listening to a short phrase and repeating it helps us practise. We do not need to be perfect to begin.",
+                    "Before sharing our notes, we review the words and correct anything that needs attention.",
+                    "Let us keep the ideas we want to remember and make room for new questions."
+                ]
+                let run = UUID()
+                let segments = paragraphs.enumerated().map { index, text in
+                    CaptionSegment(runID: run, start: Double(index * 15), end: Double((index + 1) * 15), text: text)
+                }
+                try repository.apply(.init(removedIDs: [], upserted: segments), to: sample)
+                try repository.checkpoint(sample, duration: 60, ended: true)
+                try repository.setFavorite(true, for: sample)
+                try repository.toggleBookmark(segments[0], in: sample)
+                coordinator = SessionCoordinator(repository: repository, settings: settings)
+                storageFailure = false
+                return
+            }
             if ProcessInfo.processInfo.arguments.contains("--ui-test-review") {
                 UserDefaults.standard.removeObject(forKey: "playbackAtMyPace")
                 let repository = try TranscriptRepository(inMemory: true)

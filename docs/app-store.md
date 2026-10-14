@@ -1,14 +1,14 @@
 # Preparación de App Store — VoiceToRead
 
-Actualizado 2026-10-13 · paquete de preparación, **no enviado a App Review**. Fuente 0.1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Registro confirmado por captura del titular: Apple ID **6822564230**, SKU `voicetoread-ios-001`, estado **1.0 Prepare for Submission**. Alinear la versión fuente antes del envío público. Bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
+Actualizado 2026-10-14 · paquete de preparación, **no enviado a App Review**. Fuente 1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Registro confirmado por captura del titular: Apple ID **6822564230**, SKU `voicetoread-ios-001`, estado **1.0 Prepare for Submission**. Versión fuente alineada; falta un nuevo archivo apto para distribución pública. Bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
 
 ## Material preparado
 
 | Material | Archivo | Estado |
 |---|---|---|
 | Descripción, subtítulo, palabras clave y novedades EN/ES | [Metadata JSON](app-store-metadata.json) | Borrador listo para revisar/copiar |
-| Política de privacidad consolidada EN/ES | [Política](privacy-policy-draft.md) | Responsable, correo y conservación confirmados; publicación/HTTPS pendientes |
-| Soporte y preguntas frecuentes EN/ES | [Soporte](store/support.md) | Correo, dominio y Hostinger confirmados; página pendiente |
+| Política de privacidad consolidada EN/ES | [Política](privacy-policy-draft.md) | Responsable, correo y conservación confirmados; HTTPS verificado 2026-10-14 |
+| Soporte y preguntas frecuentes EN/ES | [Soporte](store/support.md) | Página EN/ES publicada; HTTPS verificado |
 | Instrucciones para el revisor | [Notas](store/review-notes.md) | Falta dispositivo probado, contacto privado y build final |
 | Datos tratados y manifiesto | [Privacidad técnica](privacy.md) | Revisar informe del archivo final |
 | Compilación, firma y recuperación | [Runbook](distribution-runbook.md) / [incidencias](build-incidents.md) | Consultar antes de repetir exportación |
@@ -16,9 +16,9 @@ Actualizado 2026-10-13 · paquete de preparación, **no enviado a App Review**. 
 
 ## Decisiones del titular pendientes
 
-El titular confirmó **Dario Fernando Meneses Ceron**, persona natural, y `dariofernandomeneses@gmail.com` para soporte/privacidad. Confirmó el subdominio **https://voicetoread.innovalogic.tech/** en Hostinger, administrado con hPanel, y borrar correos de soporte de Gmail dentro de los 90 días posteriores a resolverlos, salvo obligación legal. Esta confirmación documental no verifica ni modifica la identidad registrada en Apple Developer. La web EN/ES está preparada en `website/dist/`; publicación y SSL siguen pendientes. Los campos definitivos de URL permanecen vacíos hasta comprobar acceso público. El contacto privado de App Review se completa directamente en App Store Connect.
+El titular confirmó **Dario Fernando Meneses Ceron**, persona natural, y `dariofernandomeneses@gmail.com` para soporte/privacidad. Confirmó el subdominio **https://voicetoread.innovalogic.tech/** en Hostinger, administrado con hPanel, y borrar correos de soporte de Gmail dentro de los 90 días posteriores a resolverlos, salvo obligación legal. Esta confirmación documental no verifica ni modifica la identidad registrada en Apple Developer. La web EN/ES está publicada; las URLs de privacidad/soporte se verificaron por HTTPS y se registraron en los metadatos. El titular confirmó app gratuita sin compras y disponibilidad inicial Estados Unidos/Colombia; falta aplicar esas opciones en Apple. El contacto privado de App Review se completa directamente en App Store Connect.
 
-Elegir versión pública, precio, territorios, categoría principal/secundaria, copyright y disponibilidad por plataforma. Propuesta editorial: Education/Educación; no marcar Kids Category solo por ofrecer práctica supervisada a niños. Si no se ofrece un EULA personalizado, revisar el [acuerdo estándar de Apple](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) y confirmar su uso. No inventar datos fiscales, condición de comerciante ni declaraciones legales.
+Versión pública 1.0. Confirmar categoría principal/secundaria y copyright, y aplicar precio/territorios ya elegidos. Propuesta editorial: Education/Educación; no marcar Kids Category solo por ofrecer práctica supervisada a niños. Si no se ofrece un EULA personalizado, revisar el [acuerdo estándar de Apple](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) y confirmar su uso. No inventar datos fiscales, condición de comerciante ni declaraciones legales.
 
 ## Pasos antes de enviar
 
@@ -38,7 +38,7 @@ Herramienta de apoyo para comprender conversaciones, leer a su ritmo y practicar
 
 ## Estado histórico
 
-El usuario confirmó uso de TestFlight y traducción del proyecto base en su iPhone; esa confirmación no corresponde a la nueva identidad VoiceToRead. Los fallos de exportación 9–12 y recuperación local están en el runbook; no deben presentarse como el estado actual sin consultar el SHA/build concreto. La nueva funcionalidad y esta documentación se validan por separado; estar en GitHub no demuestra instalación en el teléfono.
+Además del uso del proyecto base, el 2026-10-14 el usuario confirmó instalación y funcionamiento básico de VoiceToRead desde TestFlight en su iPhone. No se conoce el número instalado ni se ha probado todavía la futura versión pública 1.0. Los fallos de exportación 9–12 y recuperación local están en el runbook; no deben presentarse como el estado actual sin consultar el SHA/build concreto. La nueva funcionalidad y esta documentación se validan por separado; estar en GitHub no demuestra instalación en el teléfono.
 
 ## Comprobación de los textos
 
@@ -49,3 +49,5 @@ Ejecuta `python3 scripts/validate-store-metadata.py` para verificar límites de 
 La web está preparada con privacidad, soporte, seguridad y accesibilidad EN/ES. Seguir [la guía de publicación](website-publication.md): ZIP, carpeta del subdominio, SSL y comprobación sin iniciar sesión. Esa guía también explica el funcionamiento para estudiantes.
 
 URLs previstas: `https://voicetoread.innovalogic.tech/privacy/` y `https://voicetoread.innovalogic.tech/support/`. El certificado consultado no cubría el subdominio; resolverlo en hPanel antes de usar esas URLs. Tras verificar publicación, actualizar metadata y enlazar/sincronizar la política dentro de la app. No se modificó el binario ni se envió a revisión en esta tarea.
+
+Paquete práctico con campos y orden de entrega: [submission-kit.md](store/submission-kit.md).

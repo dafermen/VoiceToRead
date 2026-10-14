@@ -2,6 +2,61 @@ import XCTest
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
+    func testStoreScreenshotsAndPrivacyEnglish() throws { try captureStoreScreenshots(spanish: false) }
+
+    @MainActor
+    func testStoreScreenshotsAndPrivacySpanish() throws { try captureStoreScreenshots(spanish: true) }
+
+    /// Capture real screens with fictional text; never depends on a microphone or downloaded models.
+    @MainActor
+    private func captureStoreScreenshots(spanish: Bool) throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--store-screenshots"]
+        if spanish { app.launchArguments.append("--store-spanish") }
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        let sessions = app.tabBars.buttons[spanish ? "Sesiones" : "Sessions"]
+        XCTAssertTrue(sessions.waitForExistence(timeout: 20))
+        sessions.tap()
+        let sample = app.staticTexts[spanish ? "Aprendemos juntos" : "Learning together"]
+        XCTAssertTrue(sample.waitForExistence(timeout: 5))
+        func capture(_ name: String) {
+            let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            attachment.name = "Store-" + (spanish ? "es-ES-" : "en-US-") + name
+            attachment.lifetime = .keepAlways
+            add(attachment)
+            // Keep the screen stable for simctl's native-size capture. XCTest on iOS 17.2
+            // rounds iPhone 15 attachments down to 1178 px, while Apple requires 1179 px.
+            Thread.sleep(forTimeInterval: 5)
+        }
+        capture("01-library")
+        sample.tap()
+        let edit = app.buttons["editTranscriptButton"]
+        XCTAssertTrue(edit.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["favoriteSessionButton"].exists)
+        capture("02-reading")
+        edit.tap()
+        XCTAssertTrue(app.buttons["editParagraph-1"].waitForExistence(timeout: 5))
+        capture("03-review")
+        // Relaunch removes the editor sheet; the isolated library is recreated, not the user's data.
+        app.terminate(); app.launch()
+        let settings = app.tabBars.buttons[spanish ? "Ajustes" : "Settings"]
+        XCTAssertTrue(settings.waitForExistence(timeout: 15)); settings.tap()
+        let privacy = app.staticTexts[spanish ? "Política de privacidad" : "Privacy Policy"]
+        for _ in 0..<8 {
+            if privacy.isHittable { break }
+            app.swipeUp()
+        }
+        XCTAssertTrue(privacy.isHittable); privacy.tap()
+        XCTAssertTrue(app.descendants(matching: .any)["publicPrivacyLink"].firstMatch.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["publicSupportLink"].firstMatch.exists)
+        XCTAssertTrue(app.descendants(matching: .any)["privacyContactLink"].firstMatch.exists)
+        XCTAssertTrue(app.staticTexts[spanish ? "Responsable: Dario Fernando Meneses Ceron." : "Responsible person: Dario Fernando Meneses Ceron."].exists)
+        capture("04-privacy-qa")
+        app.terminate()
+    }
+
+    @MainActor
     func testLiveBilingualEnglishCapture() throws { try checkLiveBilingual(spanish: false) }
 
     @MainActor
