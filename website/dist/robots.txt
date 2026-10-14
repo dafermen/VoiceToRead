@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://voicetoread.innovalogic.tech/sitemap.xml

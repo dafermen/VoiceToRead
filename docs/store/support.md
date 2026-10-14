@@ -2,7 +2,7 @@
 
 Publication draft · 2026-10-13. Support and privacy / Soporte y privacidad: [dariofernandomeneses@gmail.com](mailto:dariofernandomeneses@gmail.com). Publisher / Responsable: **Dario Fernando Meneses Ceron** (individual / persona natural).
 
-Website / Sitio: [innovalogic.tech](https://innovalogic.tech/), hosted with / alojado en Hostinger. Proposed support page / Página propuesta: `https://innovalogic.tech/voicetoread/support/` (not yet published or verified / aún no publicada ni verificada).
+Website / Sitio: [innovalogic.tech](https://innovalogic.tech/), hosted with / alojado en Hostinger. Proposed support page / Página propuesta: `https://voicetoread.innovalogic.tech/support/` (not yet published or verified / aún no publicada ni verificada).
 
 ## Español
 

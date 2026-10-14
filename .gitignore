@@ -19,3 +19,7 @@ IDEWorkspaceChecks.plist
 *.mobileprovision
 # Local test output
 *.xcresult
+
+# Regenerable Hostinger upload archive
+website/VoiceToRead-Hostinger.zip
+website/__pycache__/

@@ -52,6 +52,7 @@ The Mac script selects an available simulator, runs tests, builds Debug/Release 
 - [Student/junior developer guide](docs/junior-guide.md) and [code walkthrough](docs/code-walkthrough.md)
 - [Architecture](docs/architecture.md), [testing](docs/testing.md) and [known incidents](docs/build-incidents.md)
 - [Distribution setup](docs/distribution-runbook.md) and [App Store preparation](docs/app-store.md)
-- [Privacy policy draft](docs/privacy-policy-draft.md) and [support pages](docs/store/support.md)
+- [Privacy policy](docs/privacy-policy-draft.md) and [support pages](docs/store/support.md)
+- [Bilingual public website](website/README.md) and [Hostinger deployment guide](docs/website-publication.md)
 
-Responsible person: **Dario Fernando Meneses Ceron**. Support/privacy: **dariofernandomeneses@gmail.com**. Website: https://innovalogic.tech/ (Hostinger). Dedicated VoiceToRead policy/support pages remain unpublished. No open-source license has been granted; see LICENSE.
+Responsible person: **Dario Fernando Meneses Ceron**. Support/privacy: **dariofernandomeneses@gmail.com**. Website destination: https://voicetoread.innovalogic.tech/ (Hostinger). The bilingual site and upload ZIP are prepared; hosting upload and SSL verification remain pending. No open-source license has been granted; see LICENSE.

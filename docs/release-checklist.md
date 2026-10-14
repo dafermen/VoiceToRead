@@ -22,7 +22,11 @@
 ## Publicación pública
 
 - [x] Responsable y contacto confirmados: Dario Fernando Meneses Ceron, dariofernandomeneses@gmail.com.
-- [x] Sitio previsto: innovalogic.tech, hosting Hostinger.
+- [x] Sitio previsto: voicetoread.innovalogic.tech, Hostinger/hPanel.
+- [x] Política de correos de soporte confirmada: Gmail, 90 días tras resolución salvo obligación legal.
+- [x] Web bilingüe y ZIP de hPanel preparados; [guía](website-publication.md).
+- [ ] Corregir/verificar el certificado SSL del subdominio.
+- [ ] Sincronizar política/enlace público dentro de la app después de verificar la web.
 - [ ] Publicar y verificar las páginas específicas de privacidad y soporte.
 - [ ] Confirmar licencia/copyright, precio, territorios, categorías y versión pública.
 - [ ] Completar privacidad, edad y cifrado según el binario final.

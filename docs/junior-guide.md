@@ -282,3 +282,7 @@ Las pruebas UI usan respuestas prefijadas dentro de `#if DEBUG`. Verifican parej
 `LiveLanguageCard` es un `ViewModifier`: decora una vista sin cambiar sus datos ni la traducción. Recibe `CaptureLanguage`, por eso inglés siempre usa azul y español verde aunque se invierta la captura. `LiveSpanishView` aplica el mismo modifier al original, a la traducción pendiente y al provisional en modo Ambos. Los modos de un solo idioma conservan su presentación.
 
 El contenido usa `ReaderParagraph`, que ya resuelve tamaño, interlineado, selección y renglones. Un fondo `RoundedRectangle` añade relleno, borde y sombra sin añadir elementos a VoiceOver. Las etiquetas de idioma evitan depender del color. La preferencia de alto contraste llega desde `CaptionScreen`; también se respeta el contraste aumentado del sistema. En esos casos el fondo es blanco/negro y el borde más marcado. `@ViewBuilder` permite devolver vistas distintas al activar/desactivar la tarjeta; no omitirlo en helpers condicionales (ver incidente de fuente 26).
+
+## Sitio público y políticas — VoiceToRead
+
+La web bilingüe se genera en `website/dist/`. La [guía de publicación y explicación para estudiantes](website-publication.md) cubre HTML/CSS, generación desde documentos, idiomas, validación, hPanel y SSL. El [README de la web](../website/README.md) contiene los comandos. Sitio preparado; subida y HTTPS públicos pendientes.

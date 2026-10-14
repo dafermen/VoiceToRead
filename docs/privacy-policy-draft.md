@@ -1,11 +1,11 @@
 # VoiceToRead — Privacy policy / Política de privacidad
 
-**Publication draft · 2026-10-13.** Confirm the pending support-handling details, then publish this text at a publicly accessible URL before App Store submission. This file is the consolidated policy; older build notes are not the public policy.
+**Approved support-handling policy · 2026-10-13. Public hosting and HTTPS verification pending.** Publish this text at a publicly accessible URL before App Store submission. This file is the consolidated policy; older build notes are not the public policy.
 
 Publisher / Responsable: **Dario Fernando Meneses Ceron** (individual / persona natural).
 Privacy contact / Contacto: [dariofernandomeneses@gmail.com](mailto:dariofernandomeneses@gmail.com).
 Website / Sitio web: [innovalogic.tech](https://innovalogic.tech/).
-Proposed policy page / Página propuesta: `https://innovalogic.tech/voicetoread/privacy/` — publication and access verification pending / pendiente de publicación y verificación.
+Proposed policy page / Página propuesta: `https://voicetoread.innovalogic.tech/privacy/` — publication and access verification pending / pendiente de publicación y verificación.
 
 ## English
 
@@ -37,8 +37,12 @@ Local sessions stay until you delete/discard them or remove the app. To delete a
 ### Tracking, children and support
 VoiceToRead has no required account, advertising, tracking or developer analytics. Reading and language practice can be used with adult guidance by children; there are no social profiles or public sharing feeds inside the app. Device permissions and exported content should be managed by the supervising adult.
 
-If you contact support outside the app, we receive the information you choose to send and use it to answer your request. Please do not send private recordings or other people's personal information. The publisher must confirm the support provider and retention process before publishing this policy.
+If you contact support outside the app, we receive the information you choose to send and use it to answer your request. Please do not send private recordings or other people's personal information. Support is handled through Gmail at dariofernandomeneses@gmail.com. Messages are used to respond to requests and are deleted from the support mailbox within 90 days after resolution, unless a legal obligation requires retention. Provider backup deletion follows Google’s processes. Do not send passwords or sensitive recordings. You can request access, correction or deletion of information you supplied by writing to the same address. We cannot access or remotely delete sessions on your device.
 
+### This website
+The public website is hosted by Hostinger. Its pages do not include advertising, analytics scripts, embedded media, tracking cookies or contact forms. Hosting infrastructure may process connection data such as IP address, requested page, date and browser information to deliver and secure the site. These technical records are subject to the hosting configuration and [Hostinger’s privacy policy](https://www.hostinger.com/legal/privacy-policy); they are separate from the app’s local recordings and transcripts. Email support is also subject to [Google’s privacy policy](https://policies.google.com/privacy). Following an external link takes you to that provider’s service.
+
+### Changes and privacy requests
 Policy changes will be reflected in the updated date. Contact the publisher above for privacy questions.
 
 ## Español
@@ -71,8 +75,12 @@ Las sesiones permanecen hasta que las elimines/descartes o desinstales la app. P
 ### Seguimiento, menores y soporte
 VoiceToRead no exige cuenta ni incluye publicidad, rastreo o analítica del desarrollador. Los menores pueden usar lectura y práctica con acompañamiento adulto; la app no incluye perfiles sociales ni publicaciones públicas. El adulto debe supervisar permisos y contenido exportado.
 
-Si contactas al soporte fuera de la app, recibimos lo que decidas enviar y lo usamos para responder. Evita enviar grabaciones privadas o información personal de terceros. Antes de publicar esta política, el titular debe confirmar el proveedor y el procedimiento de conservación del soporte.
+Si contactas al soporte fuera de la app, recibimos lo que decidas enviar y lo usamos para responder. Evita enviar grabaciones privadas o información personal de terceros. El soporte se gestiona mediante Gmail en dariofernandomeneses@gmail.com. Los mensajes se usan para atender consultas y se eliminan del buzón de soporte dentro de los 90 días posteriores a su resolución, salvo obligación legal de conservación. La eliminación en los respaldos del proveedor depende de los procesos de Google. No envíes contraseñas ni grabaciones sensibles. Puedes solicitar acceso, corrección o eliminación de los datos que hayas enviado escribiendo a esa dirección. No podemos acceder a las sesiones de tu dispositivo ni eliminarlas a distancia.
 
+### Este sitio web
+El sitio público se aloja en Hostinger. Sus páginas no incluyen publicidad, scripts de analítica, contenido multimedia externo, cookies de seguimiento ni formularios de contacto. La infraestructura de alojamiento puede tratar datos de conexión como dirección IP, página solicitada, fecha e información del navegador para servir y proteger la web. Estos registros técnicos dependen de la configuración del alojamiento y de la [política de privacidad de Hostinger](https://www.hostinger.com/legal/privacy-policy); son independientes de las grabaciones y transcripciones locales de la app. El soporte por correo también está sujeto a la [política de privacidad de Google](https://policies.google.com/privacy). Al seguir un enlace externo, accedes al servicio de ese proveedor.
+
+### Cambios y consultas de privacidad
 Los cambios se reflejarán en la fecha de actualización. Para consultas de privacidad, utiliza el contacto del titular indicado arriba.
 
 ---

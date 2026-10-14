@@ -31,7 +31,6 @@
     "configure new Xcode Cloud workflow and TestFlight group",
     "published privacyPolicyURL",
     "published supportURL",
-    "support message handling and retention",
     "copyright",
     "public version",
     "pricing/territories",
@@ -41,13 +40,14 @@
   ],
   "supportEmail": "dariofernandomeneses@gmail.com",
   "privacyEmail": "dariofernandomeneses@gmail.com",
-  "websiteURL": "https://innovalogic.tech/",
+  "websiteURL": "https://voicetoread.innovalogic.tech/",
   "hostingProvider": "Hostinger",
   "proposedPublicURLs": {
-    "privacyPolicyURL": "https://innovalogic.tech/voicetoread/privacy/",
-    "supportURL": "https://innovalogic.tech/voicetoread/support/"
+    "privacyPolicyURL": "https://voicetoread.innovalogic.tech/privacy/",
+    "supportURL": "https://voicetoread.innovalogic.tech/support/"
   },
   "publisherType": "individual",
   "bundleIdentifier": "com.innovalogic.voicetoread",
-  "appStoreConnectAppID": null
+  "appStoreConnectAppID": null,
+  "supportMessageRetention": "Gmail; delete from support mailbox within 90 days after resolution, unless legally required to retain. Confirmed by owner 2026-10-13."
 }

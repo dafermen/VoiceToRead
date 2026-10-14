@@ -76,3 +76,7 @@ Ver [interfaz bilingüe y primera preparación](interface-and-onboarding.md). El
 - [A mi ritmo, edición directa y favoritas](at-my-pace.md): uso y arquitectura.
 - [Checkpoint de entrega](pace-checkpoint.md): resultados y pendientes reales.
 - [Preparación de App Store](app-store.md): índice de política, soporte, textos EN/ES, notas para revisión y decisiones del titular.
+
+## Sitio público y políticas — VoiceToRead
+
+La web bilingüe se genera en `website/dist/`. La [guía de publicación y explicación para estudiantes](website-publication.md) cubre HTML/CSS, generación desde documentos, idiomas, validación, hPanel y SSL. El [README de la web](../website/README.md) contiene los comandos. Sitio preparado; subida y HTTPS públicos pendientes.
