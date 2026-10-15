@@ -159,7 +159,7 @@ import AVFoundation
         let recorder = SessionAudioRecorder(url: url)
         recorder.append(CapturedAudio(buffer: buffer)) { XCTFail("Recording fixture failed") }; try recorder.finish()
         let player = PracticePlayer(); defer { player.close() }
-        try player.load(url); player.rate = 0.75
+        try player.load(url); player.speed = .slow
         let unit = LearningUnit(id: "test", paragraphID: UUID(), english: "Test", spanish: nil, context: "Test", start: 0, end: 0.15)
         player.play(unit); XCTAssertTrue(player.playing)
         try await Task.sleep(for: .milliseconds(650)); XCTAssertFalse(player.playing)

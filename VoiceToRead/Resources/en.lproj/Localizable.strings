@@ -549,3 +549,36 @@
 "Save the draft before protecting it." = "Save the draft before protecting it.";
 "Favorites protect the session and its audio." = "Favorites protect the session and its audio.";
 "Requires confirmation." = "Requires confirmation.";
+
+"Listen again" = "Listen again";
+"Playback interrupted. Tap Resume." = "Playback interrupted. Tap Resume.";
+"Paragraph finished" = "Paragraph finished";
+"Playback finished" = "Playback finished";
+"Playing" = "Playing";
+"Paused · tap Resume" = "Paused · tap Resume";
+"Ready · tap Play" = "Ready · tap Play";
+"Listen" = "Listen";
+"Original audio" = "Original audio";
+"Translated voice" = "Translated voice";
+"Original audio · %@" = "Original audio · %@";
+"Translated voice · %@" = "Translated voice · %@";
+"Paragraph %lld of %lld" = "Paragraph %lld of %lld";
+"Choose a paragraph, then tap Play." = "Choose a paragraph, then tap Play.";
+"Choose a paragraph, then tap Play. Nothing advances automatically." = "Choose a paragraph, then tap Play. Nothing advances automatically.";
+"Reading preferences" = "Reading preferences";
+"Restart paragraph" = "Restart paragraph";
+"Manage session" = "Manage session";
+"Repeat this phrase" = "Repeat this phrase";
+"Translation saved" = "Translation saved";
+"Translation interrupted. Tap Play to restart this paragraph." = "Translation interrupted. Tap Play to restart this paragraph.";
+"Translation will continue when recording stops and the app is open." = "Translation will continue when recording stops and the app is open.";
+"Dismiss" = "Dismiss";
+"Bold captions" = "Bold captions";
+
+"%@" = "%@";
+"%@ → %@" = "%@ → %@";
+
+"Paragraphs" = "Paragraphs";
+"Exports use the original recording timeline, not the generated voice." = "Exports use the original recording timeline, not the generated voice.";
+
+"Cancel translation" = "Cancel translation";

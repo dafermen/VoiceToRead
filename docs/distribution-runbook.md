@@ -1,5 +1,7 @@
 # Distribución de VoiceToRead
 
+Actualización 2026-10-15: [reproducción unificada y traducción al detener](playback-unification.md), con [evidencia y pendientes](playback-unification-checkpoint.md). Verificar en dispositivo descargas iniciales, permisos, auriculares/interrupciones, VoiceOver y lectura EN↔ES antes de enviar a revisión. La compilación local con Xcode 15.2 no ejecuta el traductor Apple de iOS 18+.
+
 Esta app es independiente. **Registro de Apple, workflow Cloud y TestFlight pendientes**. No reutilizar los identificadores o archivos firmados de la app anterior. Estado de validación: [identidad](project-identity.md).
 
 | Dato | Valor actual |

@@ -8,23 +8,21 @@ Estas opciones apoyan a personas con discapacidad auditiva o baja visión, perso
 
 ## Escuchar una traducción
 
-1. Termina y guarda la sesión. Abre **Sesiones → sesión → Traducción**.
-2. Traduce o actualiza los párrafos si hace falta. Selecciona el idioma traducido o **Ambos**.
-3. Pulsa el altavoz **Escuchar traducción** de una tarjeta, o **Escuchar traducción completa** para recorrer los párrafos en orden.
-4. Usa **Pausar traducción**, **Continuar traducción** o **Detener traducción**. El párrafo activo se resalta y se identifica con texto. Puedes elegir velocidad **Lenta / Normal / Rápida**; cambiarla detiene la lectura y se aplica al siguiente inicio explícito.
-5. Para escuchar una corrección, guarda primero la edición y vuelve a tocar el altavoz.
+1. Pulsa Detener: en dispositivos compatibles comienza la traducción automáticamente. Revisa progreso o reintenta si falta preparar idiomas. Guarda la sesión cuando quieras conservarla.
+2. Abre **Sesiones → sesión → Audio y subtítulos** o abre el lector desde Traducción.
+3. En Escuchar elige audio original o voz traducida; en Leer elige original, traducción o Ambos.
+4. Usa el único botón central Reproducir/Pausar/Continuar. Anterior y Siguiente seleccionan sin sonido. A mi ritmo reproduce un párrafo; Continua recorre los siguientes. Ambos audios usan controles del mismo tamaño.
+5. Opciones permite cambiar velocidad y lectura. Guarda las correcciones antes de escucharlas.
 
 Inglés original → voz española; español original → voz inglesa. La selección del idioma de interfaz no cambia esta dirección. En **Ambos** se lee únicamente la traducción, nunca el texto bilingüe concatenado. **Escuchar original** reproduce el archivo grabado; **Escuchar traducción** usa una voz generada por Apple. Funciona con traducciones guardadas aunque la sesión no tenga grabación de audio. No crea un doblaje, archivo exportable de voz sintética ni una imitación del hablante.
 
 Generar nuevas traducciones conserva los requisitos existentes: SDK compatible, iOS/iPadOS 18+ y modelos de Apple preparados. Leer una traducción ya guardada usa AVSpeechSynthesizer, disponible también en el mínimo iOS 17 de la app. La voz debe estar disponible en el dispositivo; si falta, se presenta un mensaje para preparar una voz en Ajustes de accesibilidad. La descarga inicial puede requerir Internet. Verificar voz, volumen y ruta de audio en el dispositivo antes de una actividad.
 
-La entrada está restringida a sesiones que pueden reproducirse sin captura activa. No hay voz automática durante la transcripción en vivo. Entrar al editor, abrir audio original, compartir, cambiar presentación o salir detiene la voz. Una interrupción, cambio de auriculares o salida a segundo plano también detiene la lectura y requiere un nuevo toque. No se reanuda sola después de una alarma. No se envía el texto a un servidor del desarrollador ni se agrega almacenamiento de audio sintetizado.
+La reproducción permanece separada de la captura. No hay voz automática durante la transcripción en vivo ni al terminar de traducir. Editar, cambiar fuente de audio, compartir o salir pausa/detiene el sonido. Cambiar solo el idioma visible conserva el sonido. Ante interrupción, el original conserva su posición y la voz traducida requiere Play para reiniciar el párrafo. No se envía texto a un servidor del desarrollador ni se almacena audio sintetizado.
 
-## Más espacio y frase anterior
+## Lector y navegación
 
-En **Audio y subtítulos**, el lector desplazable ocupa el alto disponible, en lugar de estar limitado a 160 puntos. La barra de reproducción permanece accesible abajo. **Opciones de reproducción** despliega la lista de frases, edición completa, exportación y borrado de audio. Plegarlas o usar pantalla completa devuelve espacio al texto. Los párrafos largos se desplazan verticalmente.
-
-En **A mi ritmo**, **Frase anterior** reproduce el párrafo anterior completo, **Repetir** vuelve al seleccionado y **Siguiente** avanza solo por decisión del usuario. Anterior está deshabilitado al principio y Siguiente al final. Terminar un párrafo conserva su texto en pantalla; no arranca el siguiente. La segmentación sigue los párrafos reconocidos y sus tiempos guardados, no necesariamente una sola oración gramatical.
+El lector desplazable ocupa el espacio disponible. Opciones abre una hoja, no una lista que comprima la lectura. Anterior/Siguiente seleccionan silenciosamente; el usuario pulsa Play cuando está preparado. El botón circular duplicado se elimina. Al terminar permanece el párrafo completo. Ver [guía unificada](playback-unification.md).
 
 ## Favoritos y borrado
 
@@ -40,7 +38,7 @@ Cada reproducción tiene un token UUID. Al detener o reemplazar una lectura, el 
 
 El controlador activa AVAudioSession solo cuando el usuario pide leer, y la desactiva solo si fue su propietario. Cerrar una pantalla inactiva no debe apagar audio que pertenece a otro componente. Los observadores de interrupción se retiran al cerrar. Esta separación permite probar la cola con un doble sin descargar voces ni grabar micrófono.
 
-`SessionMediaView` mantiene los rangos de `PlaybackParagraph` y usa el mismo `playParagraph` para anterior, repetir y siguiente. `SessionHistoryView` distingue revelar acciones, quitar protección y borrar: son decisiones separadas. `TranscriptRepository` sigue siendo la última barrera para proteger archivos y registros.
+`SessionMediaView` mantiene los rangos de `PlaybackParagraph` y separa `selectParagraph` (sin sonido) de `togglePlayback`. Ambos tipos de voz usan `PlaybackTransport`. `SessionHistoryView` distingue revelar acciones, quitar protección y borrar: son decisiones separadas. `TranscriptRepository` sigue siendo la última barrera para proteger archivos y registros.
 
 Referencia de API: [AVSpeechSynthesizer, Apple](https://developer.apple.com/documentation/avfaudio/avspeechsynthesizer).
 

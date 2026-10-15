@@ -41,6 +41,7 @@ final class SessionMediaTests: XCTestCase {
         player.select(range: 0.6...1.4); player.toggle()
         try await Task.sleep(for: .milliseconds(100))
         XCTAssertTrue(player.playing, "An old completion must not stop the newly selected paragraph")
+        player.interrupt(); XCTAssertTrue(player.interrupted)
         player.pause(); let paused = player.time
         try await Task.sleep(for: .milliseconds(100))
         XCTAssertEqual(player.time, paused)
@@ -49,6 +50,7 @@ final class SessionMediaTests: XCTestCase {
         player.seek(-10)
         XCTAssertEqual(player.time, 0.6)
         player.select(range: nil)
+        XCTAssertFalse(player.interrupted, "Selecting another paragraph clears the old interruption")
         player.play(from: 1.8)
         try await Task.sleep(for: .seconds(1))
         XCTAssertFalse(player.playing)

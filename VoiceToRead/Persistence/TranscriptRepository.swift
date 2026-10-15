@@ -322,9 +322,13 @@ final class TranscriptRepository {
     }
 
     /// Guarda el lote completo de forma atómica. Nunca publica resultados parciales ni obsoletos.
-    func saveTranslation(_ snapshot: TranslationSnapshot, for session: ConferenceSession) throws {
+    func saveTranslation(_ snapshot: TranslationSnapshot, for session: ConferenceSession, allowCompletedDraft: Bool = false) throws {
         try snapshot.validate()
-        guard try draft(for: session.id) == nil,
+        let identifier = session.id
+        var request = FetchDescriptor<ConferenceSession>(predicate: #Predicate { $0.id == identifier })
+        request.fetchLimit = 1
+        guard try context.fetch(request).first != nil else { throw TranslationFailure.sourceChanged }
+        guard try draft(for: session.id) == nil || (allowCompletedDraft && session.endedAt != nil),
               snapshot.language.rawValue == session.language,
               snapshot.isCurrent(try reviewedParagraphs(for: session)) else { throw TranslationFailure.sourceChanged }
         let encoded = try JSONEncoder().encode(snapshot)

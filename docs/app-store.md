@@ -1,5 +1,7 @@
 # Preparación de App Store — VoiceToRead
 
+Actualización 2026-10-15: [reproducción unificada y traducción al detener](playback-unification.md), con [evidencia y pendientes](playback-unification-checkpoint.md). Verificar en dispositivo descargas iniciales, permisos, auriculares/interrupciones, VoiceOver y lectura EN↔ES antes de enviar a revisión. La compilación local con Xcode 15.2 no ejecuta el traductor Apple de iOS 18+.
+
 Actualizado 2026-10-15 · paquete de preparación, **no enviado a App Review**. Fuente 1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Registro confirmado por captura del titular: Apple ID **6822564230**, SKU `voicetoread-ios-001`, estado **1.0 Prepare for Submission**. Versión fuente alineada; falta un nuevo archivo apto para distribución pública. Bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
 
 ## Material preparado

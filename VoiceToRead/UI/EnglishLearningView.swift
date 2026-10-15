@@ -5,58 +5,36 @@ import AVFoundation
 /// Cada salida/interrupción detiene el bucle; reanudar siempre requiere tocar Play.
 @MainActor @Observable
 final class PracticePlayer {
-    private var audio: AVAudioPlayer?
+    private var player = SessionPlayer()
     private var timer: Task<Void, Never>?
-    private var interruption: NSObjectProtocol?
-    private(set) var playing = false
-    private(set) var duration = 0.0
+    private var selected: String?
+    var playing: Bool { player.playing }
+    var duration: Double { player.duration }
+    var paused: Bool { !playing && player.time > player.bounds.lowerBound && player.time < player.bounds.upperBound }
     var repeating = false
-    var rate: Float = 1 { didSet { audio?.rate = rate } }
-    var failure: String?
-    func load(_ url: URL) throws {
-        close()
-        let player = try AVAudioPlayer(contentsOf: url)
-        player.enableRate = true; player.rate = rate; player.prepareToPlay()
-        audio = player; duration = player.duration
-        interruption = NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification,
-            object: nil, queue: .main) { [weak self] _ in
-            Task { @MainActor [weak self] in self?.stop() }
-        }
-    }
+    var speed: TranslationSpeechSpeed = .normal { didSet { player.speed = speed } }
+    var failure: String? { get { player.failure } set { player.failure = newValue } }
+    func load(_ url: URL) throws { close(); player.load(url); player.speed = speed }
     func play(_ unit: LearningUnit) {
-        stop()
-        guard let audio, let range = unit.audioRange(duration: duration) else { return }
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
-            try AVAudioSession.sharedInstance().setActive(true)
-            audio.currentTime = range.lowerBound; audio.rate = rate
-            guard audio.play() else { throw RecordingFailure.unavailable }
-            playing = true
-            timer = Task { @MainActor [weak self] in
-                while !Task.isCancelled {
-                    do { try await Task.sleep(for: .milliseconds(50)) } catch { return }
-                    guard let self, let audio = self.audio else { return }
-                    if audio.currentTime >= range.upperBound || !audio.isPlaying {
-                        if self.repeating {
-                            audio.currentTime = range.lowerBound
-                            guard audio.play() else { self.stop(); self.failure = "Could not replay this recording."; return }
-                        } else { self.stop(); return }
-                    }
+        guard let range = unit.audioRange(duration: duration) else { return }
+        if selected != unit.id { player.select(range: range); selected = unit.id }
+        player.toggle()
+        timer?.cancel()
+        timer = Task { @MainActor [weak self] in
+            while !Task.isCancelled {
+                do { try await Task.sleep(for: .milliseconds(100)) } catch { return }
+                guard let self else { return }
+                if self.player.interrupted { self.repeating = false; return }
+                if !self.player.playing && self.player.time >= self.player.bounds.upperBound {
+                    if self.repeating { self.player.toggle() } else { return }
                 }
             }
-        } catch { stop(); failure = "Could not play this recording. Please try again." }
+        }
     }
-    func stop() {
-        timer?.cancel(); timer = nil
-        audio?.pause()
-        if playing { try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation) }
-        playing = false
-    }
-    func close() {
-        stop(); audio = nil; duration = 0
-        if let interruption { NotificationCenter.default.removeObserver(interruption) }
-        interruption = nil
-    }
+    func pause() { timer?.cancel(); timer = nil; player.pause() }
+    func stop() { pause(); selected = nil; player.seek(player.bounds.lowerBound) }
+    func close() { timer?.cancel(); timer = nil; selected = nil; repeating = false; player.stop() }
+
 }
 
 @MainActor
@@ -88,35 +66,29 @@ struct EnglishLearningView: View {
                         Text("Saved expressions").tag(true)
                     }.pickerStyle(.segmented).accessibilityIdentifier("learningCollection")
                     if let unit = current {
-                        HStack {
-                            Button("Previous", systemImage: "chevron.left") { move(-1) }
-                                .disabled(selected == 0)
-                            Spacer()
-                            Text("\(selected + 1) / \(choices.count)").monospacedDigit().font(.caption)
-                            Spacer()
-                            Button("Next", systemImage: "chevron.right") { move(1) }
-                                .disabled(selected + 1 >= choices.count).accessibilityIdentifier("nextLearningPhrase")
-                        }.labelStyle(.iconOnly).buttonStyle(.bordered).controlSize(.large)
+                        Text("Paragraph \(selected + 1) of \(choices.count)").font(.caption)
                         Text(unit.english).font(.title2).textSelection(.enabled)
                             .accessibilityIdentifier("learningEnglish")
                         if unit.audioRange(duration: player.duration) != nil {
-                            HStack(spacing: 24) {
-                                Button(uiKey(player.playing ? "Stop practice audio" : "Listen to phrase"),
-                                       systemImage: player.playing ? "stop.circle.fill" : "play.circle.fill") {
-                                    if player.playing { player.stop() } else { player.play(unit) }
-                                }.font(.largeTitle).labelStyle(.iconOnly).accessibilityIdentifier("learningPlay")
-                                Button("Repeat", systemImage: "repeat") { player.repeating.toggle() }
-                                    .labelStyle(.iconOnly).buttonStyle(.bordered)
-                                    .tint(player.repeating ? .accentColor : .secondary)
-                                    .accessibilityValue(uiKey(player.repeating ? "On" : "Off"))
+                            PlaybackTransport(playing: player.playing,
+                                title: player.playing ? "Pause" : player.paused ? "Resume" : "Play",
+                                previousEnabled: selected > 0, nextEnabled: selected + 1 < choices.count,
+                                previous: { move(-1) }, toggle: {
+                                    if player.playing { player.pause() } else { player.play(unit) }
+                                }, next: { move(1) })
+                            HStack {
+                                Toggle("Repeat this phrase", isOn: $player.repeating)
                                     .accessibilityIdentifier("learningRepeat")
-                                Picker("Speed", selection: $player.rate) {
-                                    Text("0.75×").tag(Float(0.75)); Text("1×").tag(Float(1))
-                                }.pickerStyle(.segmented).accessibilityIdentifier("learningSpeed")
+                                Picker("Reading speed", selection: $player.speed) {
+                                    ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+                                }.pickerStyle(.menu).accessibilityIdentifier("learningSpeed")
                             }
                             Text("Listen, then say the phrase aloud. Playback uses the original audio; timing is approximate.")
                                 .font(.caption).foregroundStyle(.secondary)
                         } else {
+                            PlaybackTransport(playing: false, title: "Play", previousEnabled: selected > 0,
+                                nextEnabled: selected + 1 < choices.count, enabled: false,
+                                previous: { move(-1) }, toggle: {}, next: { move(1) })
                             Text("No recorded audio for this phrase. You can still read, reveal the translation and save expressions.")
                                 .font(.caption).foregroundStyle(.secondary)
                         }

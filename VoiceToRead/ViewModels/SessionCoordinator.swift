@@ -10,6 +10,14 @@ final class SessionCoordinator {
     let repository: TranscriptRepository
     private(set) var currentSession: ConferenceSession?
     var storageMessage: String?
+    private(set) var automaticTranslationJob: TranslationJob?
+    private(set) var automaticTranslationSession: ConferenceSession?
+    var automaticTranslationMessage: String?
+    var automaticTranslationProgress = 0
+    private var translationQueue: [ConferenceSession] = []
+    private var translationForeground = true
+    private let translationSupported: () -> Bool
+
     let settings: AppSettings
     private(set) var currentIsDraft = false
     var needsSessionDecision: Bool { currentIsDraft }
@@ -23,7 +31,8 @@ final class SessionCoordinator {
     }
     @ObservationIgnored private var monitorTask: Task<Void, Never>?
 
-    init(repository: TranscriptRepository, caption: CaptionViewModel? = nil, settings: AppSettings? = nil) {
+    init(repository: TranscriptRepository, caption: CaptionViewModel? = nil, settings: AppSettings? = nil, translationSupported: @escaping () -> Bool = { TranslationJob.supported }) {
+        self.translationSupported = translationSupported
         self.repository = repository
         self.caption = caption ?? CaptionViewModel()
         self.settings = settings ?? AppSettings()
@@ -31,6 +40,7 @@ final class SessionCoordinator {
         self.caption.onPrepareCapture = { [weak self] in self?.applyCapturePreferences() }
         self.caption.onWillStart = { [weak self] in
             guard let self else { return }
+            self.suspendAutomaticTranslation()
             self.applyCapturePreferences()
             let capacity = StorageReadiness.check(at: self.repository.storageURL)
             if let bytes = capacity.availableBytes, bytes < StorageReadiness.minimumBytes {
@@ -62,7 +72,9 @@ final class SessionCoordinator {
         self.caption.onEnded = { [weak self] in
             guard let self else { return }
             self.monitorTask?.cancel()
-            _ = self.checkpointCurrent(ended: true)
+            if self.checkpointCurrent(ended: true), !self.resolvingSession, let session = self.currentSession {
+                self.enqueueTranslation(session)
+            }
         }
     }
 
@@ -124,6 +136,7 @@ final class SessionCoordinator {
         resolvingSession = true
         defer { resolvingSession = false }
         await caption.stop()
+        if let currentSession { cancelAutomaticTranslation(for: currentSession.id) }
         do {
             if let currentSession { try repository.delete(currentSession) }
             currentSession = nil
@@ -150,6 +163,71 @@ final class SessionCoordinator {
         currentSession = nil
         titleOverride = nil
         suggestedTitle = SessionTitle.suggested()
+        advanceAutomaticTranslation()
+    }
+
+    /// Stop enqueues a derived document after the recognizer/recorder have finished.
+    /// Saving is still explicit; Discard cancels its job and deletes any completed translation.
+    func enqueueTranslation(_ session: ConferenceSession) {
+        guard !session.orderedCaptions.isEmpty else { return }
+        if automaticTranslationSession?.id == session.id && automaticTranslationJob != nil { return }
+        if !translationQueue.contains(where: { $0.id == session.id }) { translationQueue.append(session) }
+        advanceAutomaticTranslation()
+    }
+    func advanceAutomaticTranslation() {
+        guard automaticTranslationJob == nil, translationForeground,
+              !caption.state.active, !caption.state.busy, !resolvingSession,
+              !translationQueue.isEmpty else { return }
+        let session = translationQueue.removeFirst()
+        automaticTranslationSession = session
+        automaticTranslationProgress = 0
+        do {
+            let source = try repository.reviewedParagraphs(for: session)
+            guard !source.isEmpty else { return }
+            let previous = try repository.translation(for: session.id)?.decoded()
+            if previous?.isCurrent(source) == true { automaticTranslationMessage = "Translation saved"; advanceAutomaticTranslation(); return }
+            guard translationSupported() else { throw TranslationFailure.unsupported }
+            automaticTranslationJob = TranslationJob(plan: IncrementalTranslation(source: source, previous: previous,
+                language: CaptureLanguage(rawValue: session.language) ?? .english))
+            automaticTranslationMessage = nil
+        } catch { automaticTranslationMessage = error.localizedDescription }
+    }
+    func completeAutomaticTranslation(_ job: TranslationJob, result: Result<[ReviewParagraph], Error>) {
+        guard automaticTranslationJob?.id == job.id, let session = automaticTranslationSession else { return }
+        automaticTranslationJob = nil
+        do {
+            let updated = try job.plan.merging(result.get())
+            // A manual translation/edit may have completed while this request was in flight.
+            // Preserve that newer, current document instead of overwriting the user's correction.
+            let latest = try repository.translation(for: session.id)?.decoded()
+            if latest?.isCurrent(job.plan.source) != true {
+                try repository.saveTranslation(updated, for: session, allowCompletedDraft: true)
+            }
+            automaticTranslationMessage = "Translation saved"
+        } catch { automaticTranslationMessage = error.localizedDescription }
+        advanceAutomaticTranslation()
+    }
+    func cancelAutomaticTranslation(for id: UUID? = nil) {
+        let target = id ?? automaticTranslationSession?.id
+        translationQueue.removeAll { $0.id == target }
+        if automaticTranslationSession?.id == target {
+            automaticTranslationJob = nil; automaticTranslationSession = nil; automaticTranslationMessage = nil
+        }
+        advanceAutomaticTranslation()
+    }
+    func retryAutomaticTranslation() {
+        if let session = automaticTranslationSession { enqueueTranslation(session) }
+    }
+    func automaticTranslationForeground(_ active: Bool) {
+        translationForeground = active
+        if active { advanceAutomaticTranslation() } else { suspendAutomaticTranslation() }
+    }
+    private func suspendAutomaticTranslation() {
+        if automaticTranslationJob != nil, let session = automaticTranslationSession {
+            translationQueue.insert(session, at: 0)
+            automaticTranslationJob = nil
+            automaticTranslationMessage = "Translation will continue when recording stops and the app is open."
+        }
     }
 
     private func monitorSession() {

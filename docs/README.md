@@ -1,5 +1,10 @@
 # Documentación de VoiceToRead
 
+## Actualización 2026-10-15
+
+[Reproducción unificada y traducción automática](playback-unification.md): guía de uso y explicación para estudiantes. [Checkpoint](playback-unification-checkpoint.md).
+
+
 - [Traducción bilingüe en vivo (build 24)](translation.md).
 - [Estado de entrega build 24](live-bilingual-checkpoint.md).
 

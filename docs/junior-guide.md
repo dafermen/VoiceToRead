@@ -1,5 +1,10 @@
 # VoiceToRead para estudiantes y desarrolladores junior
 
+## Reproductor unificado y traducción al detener
+
+Consulta [el recorrido por eventos, cola, estados y persistencia](playback-unification.md#para-estudiantes-cómo-está-construido). Se separan seleccionar un párrafo, iniciar sonido, elegir texto visible y guardar la sesión. Esto apoya lectura a distintos ritmos, discapacidad auditiva/baja visión y aprendizaje infantil acompañado.
+
+
 Estado actual: **VoiceToRead 1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
 
 ## Lectura accesible de traducciones (15 de octubre de 2026)

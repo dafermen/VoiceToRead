@@ -1,5 +1,7 @@
 # Lista de publicación — VoiceToRead
 
+Actualización 2026-10-15: [reproducción unificada y traducción al detener](playback-unification.md), con [evidencia y pendientes](playback-unification-checkpoint.md). Verificar en dispositivo descargas iniciales, permisos, auriculares/interrupciones, VoiceOver y lectura EN↔ES antes de enviar a revisión. La compilación local con Xcode 15.2 no ejecuta el traductor Apple de iOS 18+.
+
 ## Identidad y distribución nueva
 
 - [x] Crear registro VoiceToRead con bundle com.innovalogic.voicetoread: Apple ID 6822564230, confirmado por captura del titular del 2026-10-13.

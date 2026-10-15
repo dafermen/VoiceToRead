@@ -6,11 +6,11 @@ Fuente build 23 · 2026-10-12. Resultados y entrega: [checkpoint](pace-checkpoin
 
 1. Abre **Sesiones → una sesión → Audio y subtítulos**.
 2. Elige **A mi ritmo**. Pulsa reproducir para escuchar únicamente el párrafo elegido. El texto completo permanece visible después de terminar; puedes desplazarlo si es largo.
-3. **Frase anterior** reproduce el anterior; **Repetir párrafo** vuelve al inicio; **Siguiente párrafo** reproduce el siguiente solo cuando lo solicitas. También puedes seleccionar otro en la lista de **Opciones de reproducción**. El lector aprovecha el alto disponible y las opciones se mantienen plegadas inicialmente. El último párrafo no avanza automáticamente.
+3. **Anterior/Siguiente** seleccionan otro párrafo sin reproducirlo. Pulsa Play cuando estés preparado. Al terminar, el mismo botón permite Escuchar de nuevo. Reiniciar párrafo está en Opciones. La lista de párrafos también selecciona en silencio.
 4. **Corregir párrafo** pausa la reproducción y abre directamente su texto. Guardar conserva la corrección; Cancelar permite descartar cambios. Al volver se conserva el párrafo, sin reproducción automática.
 5. **Continua** permite escuchar la grabación completa desde la posición elegida. Cambiar de modo pausa el audio. El modo se recuerda en este dispositivo.
 
-Los rangos corresponden a párrafos reconocidos, que no siempre equivalen a una oración gramatical. Una sesión sin audio conserva lectura y edición, pero no puede reproducirse. Sin tiempos guardados no se inventan rangos. Los tiempos se acotan a la duración real de una grabación incompleta.
+Los rangos corresponden a párrafos reconocidos, que no siempre equivalen a una oración gramatical. Una sesión sin audio original conserva lectura/edición y puede reproducir una traducción vigente mediante voz generada. Sin tiempos guardados no se inventan rangos. Los tiempos se acotan a la duración real de una grabación incompleta.
 
 Desde Traducción, la corrección en reproducción modifica el texto traducido si se muestran la traducción o ambos idiomas; no reescribe el original. Para corregir el original, selecciona su idioma o entra desde la sesión. Las exportaciones usan el texto corregido. El audio original nunca se modifica; los subtítulos corregidos o traducidos conservan sincronización aproximada dentro del párrafo.
 

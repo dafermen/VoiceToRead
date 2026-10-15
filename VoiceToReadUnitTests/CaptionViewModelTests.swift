@@ -4,6 +4,53 @@ import SwiftData
 
 @MainActor
 final class CaptionViewModelTests: XCTestCase {
+    func testStopAutomaticallyTranslatesDraftAndDiscardRejectsLateResult() async throws {
+        let name = UUID().uuidString
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults); settings.saveAudio = false
+        let repo = try TranscriptRepository(inMemory: true)
+        let model = CaptionViewModel(microphone: CaptionMicrophone(), speech: MockSpeech())
+        let coordinator = SessionCoordinator(repository: repo, caption: model, settings: settings, translationSupported: { true })
+        await model.start(); await model.pause()
+        XCTAssertNil(coordinator.automaticTranslationJob, "Pause is not the end of a recording")
+        await model.stop()
+        let session = try XCTUnwrap(coordinator.currentSession)
+        let job = try XCTUnwrap(coordinator.automaticTranslationJob)
+        XCTAssertNotNil(try repo.draft(for: session.id))
+        let translated = job.source.map { ReviewParagraph(id: $0.id, text: "Traducción") }
+        coordinator.completeAutomaticTranslation(job, result: .success(translated))
+        XCTAssertNotNil(try repo.translation(for: session.id))
+        XCTAssertNotNil(try repo.draft(for: session.id), "Translation must not publish a recovery draft")
+        await coordinator.discardCurrent()
+        coordinator.completeAutomaticTranslation(job, result: .success(translated))
+        XCTAssertNil(try repo.translation(for: session.id), "Late callbacks must not recreate discarded data")
+    }
+
+    func testAutomaticTranslationFailureRetryAndForegroundCancellation() async throws {
+        let repo = try TranscriptRepository(inMemory: true)
+        let session = try repo.create(title: "Ready", draft: true)
+        let paragraph = CaptionSegment(runID: UUID(), start: 0, end: 1, text: "Hello")
+        try repo.apply(.init(removedIDs: [], upserted: [paragraph]), to: session)
+        try repo.checkpoint(session, duration: 1, ended: true)
+        let coordinator = SessionCoordinator(repository: repo, translationSupported: { true })
+        coordinator.enqueueTranslation(session)
+        let old = try XCTUnwrap(coordinator.automaticTranslationJob)
+        coordinator.automaticTranslationForeground(false)
+        XCTAssertNil(coordinator.automaticTranslationJob)
+        coordinator.completeAutomaticTranslation(old, result: .success([.init(id: paragraph.id, text: "Hola")]))
+        XCTAssertNil(try repo.translation(for: session.id))
+        coordinator.automaticTranslationForeground(true)
+        let resumed = try XCTUnwrap(coordinator.automaticTranslationJob)
+        XCTAssertNotEqual(old.id, resumed.id)
+        coordinator.completeAutomaticTranslation(resumed, result: .failure(TranslationFailure.incomplete))
+        XCTAssertNotNil(coordinator.automaticTranslationMessage)
+        coordinator.retryAutomaticTranslation()
+        XCTAssertNotNil(coordinator.automaticTranslationJob)
+        coordinator.cancelAutomaticTranslation()
+        XCTAssertNil(coordinator.automaticTranslationJob)
+    }
+
     func testLanguageIsFixedAcrossPauseAndResumeUntilNewSession() async throws {
         let name = UUID().uuidString
         let defaults = UserDefaults(suiteName: name)!

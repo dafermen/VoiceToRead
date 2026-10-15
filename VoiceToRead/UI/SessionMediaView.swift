@@ -59,9 +59,14 @@ struct CaptureOptionsView: View {
 final class SessionPlayer {
     private var engine = AVAudioEngine()
     private var node = AVAudioPlayerNode()
+    private var tempo = AVAudioUnitTimePitch()
+    private var ownsAudio = false
+    private(set) var interrupted = false
+    var speed: TranslationSpeechSpeed = .normal { didSet { tempo.rate = speed.playbackRate } }
     private var file: AVAudioFile?
     private var timer: Task<Void, Never>?
     private var interruption: NSObjectProtocol?
+    private var routeObservers: [NSObjectProtocol] = []
     private var generation = UUID()
     private var anchor = 0.0
     private(set) var playing = false
@@ -77,17 +82,29 @@ final class SessionPlayer {
             let file = try AVAudioFile(forReading: url)
             self.file = file
             duration = Double(file.length) / file.processingFormat.sampleRate
-            engine = AVAudioEngine(); node = AVAudioPlayerNode()
+            engine = AVAudioEngine(); node = AVAudioPlayerNode(); tempo = AVAudioUnitTimePitch()
+            tempo.rate = speed.playbackRate
             engine.attach(node)
-            engine.connect(node, to: engine.mainMixerNode, format: file.processingFormat)
+            engine.attach(tempo)
+            engine.connect(node, to: tempo, format: file.processingFormat)
+            engine.connect(tempo, to: engine.mainMixerNode, format: file.processingFormat)
             interruption = NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification,
-                object: nil, queue: .main) { [weak self] _ in
-                Task { @MainActor [weak self] in self?.pause() }
+                object: nil, queue: .main) { [weak self] notification in
+                guard (notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? NSNumber)?.uintValue == AVAudioSession.InterruptionType.began.rawValue else { return }
+                Task { @MainActor [weak self] in self?.interrupt() }
+            }
+            for name in [AVAudioSession.routeChangeNotification, AVAudioSession.mediaServicesWereResetNotification] {
+                routeObservers.append(NotificationCenter.default.addObserver(forName: name, object: nil, queue: .main) { [weak self] note in
+                    if name == AVAudioSession.routeChangeNotification {
+                        guard (note.userInfo?[AVAudioSessionRouteChangeReasonKey] as? NSNumber)?.uintValue == AVAudioSession.RouteChangeReason.oldDeviceUnavailable.rawValue else { return }
+                    }
+                    Task { @MainActor [weak self] in self?.interrupt() }
+                })
             }
         } catch { failure = "This recording could not be opened. The transcript is still available." }
     }
     func select(range: ClosedRange<Double>?) {
-        pause()
+        pause(); interrupted = false
         if let range {
             guard range.lowerBound.isFinite, range.upperBound.isFinite,
                   range.lowerBound >= 0, range.lowerBound < duration,
@@ -102,6 +119,7 @@ final class SessionPlayer {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
             try AVAudioSession.sharedInstance().setActive(true)
+            ownsAudio = true; interrupted = false
             if time >= bounds.upperBound || time < bounds.lowerBound { time = bounds.lowerBound }
             let rate = file.processingFormat.sampleRate
             let first = AVAudioFramePosition(time * rate)
@@ -146,16 +164,24 @@ final class SessionPlayer {
         // Scrubbing to the end leaves playback paused rather than unexpectedly restarting.
         if resume && time < bounds.upperBound { toggle() }
     }
+    func interrupt() {
+        guard playing else { return }
+        pause(); interrupted = true
+    }
     func pause() {
         updateTime(); generation = UUID()
         timer?.cancel(); timer = nil
         node.stop(); engine.pause(); playing = false
-        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        if ownsAudio {
+            try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+            ownsAudio = false
+        }
     }
     func stop() {
         if let interruption { NotificationCenter.default.removeObserver(interruption) }
         interruption = nil
-        pause(); engine.stop(); file = nil; time = 0; duration = 0; range = nil
+        routeObservers.forEach(NotificationCenter.default.removeObserver); routeObservers = []
+        pause(); engine.stop(); file = nil; time = 0; duration = 0; range = nil; interrupted = false
     }
 }
 
@@ -182,15 +208,43 @@ struct SessionMediaView: View {
     let paragraphs: [ReviewParagraph]
     let hasCorrections: Bool
     var initialParagraphID: UUID? = nil
+    var initialAudio: PlaybackAudio = .original
     var translatedCues: [SubtitleCue]? = nil
     var translationLanguage: String? = nil
     @Environment(\.dismiss) private var dismiss
     @Environment(\.verticalSizeClass) private var verticalSizeClass
     private var compactPlayback: Bool { fullScreen || verticalSizeClass == .compact }
     @State private var player = SessionPlayer()
+    @State private var speech = TranslationSpeechPlayer()
+    @State private var snapshot: TranslationSnapshot?
+    @State private var listening: PlaybackAudio = .original
+    @State private var originalStarted = false
+    @State private var reading: TranscriptLanguage = .english
+    @Environment(AppSettings.self) private var settings
+    @AppStorage("translationSpeechSpeed") private var speed = TranslationSpeechSpeed.normal
+    private var language: CaptureLanguage { CaptureLanguage(rawValue: session.language) ?? .english }
+    private var currentTranslation: Bool { snapshot?.language == language && snapshot?.isCurrent(reviewed) == true }
+    private var audibleParagraphs: [ReviewParagraph] {
+        listening == .translation ? TranslationSpeechPlayer.paragraphs(snapshot: snapshot, source: reviewed) :
+            reviewed.filter { paragraph in playbackParagraphs.contains { $0.id == paragraph.id } }
+    }
+    private var isPlaying: Bool { listening == .original ? player.playing : speech.state == .speaking }
+    private var finished: Bool { listening == .original ? player.duration > 0 && player.time >= player.bounds.upperBound : speech.completedParagraphID != nil }
+    private var primaryLabel: String {
+        if isPlaying { return "Pause" }
+        if finished { return "Listen again" }
+        if listening == .translation { return speech.state == .paused ? "Resume" : "Play" }
+        return originalStarted || player.interrupted ? "Resume" : "Play"
+    }
+    private var playbackStatus: String {
+        if player.interrupted && listening == .original { return "Playback interrupted. Tap Resume." }
+        if listening == .translation, let message = speech.message { return message }
+        if finished { return atMyPace ? "Paragraph finished" : "Playback finished" }
+        if isPlaying { return "Playing" }
+        return primaryLabel == "Resume" ? "Paused · tap Resume" : "Ready · tap Play"
+    }
     @State private var audioURL: URL?
     @State private var cues: [SubtitleCue] = []
-    @State private var captions = true
     @State private var showingPhrases = false
     @State private var deleting = false
     @State private var busy = false
@@ -200,6 +254,7 @@ struct SessionMediaView: View {
     @State private var exportTask: Task<Void, Never>?
     @State private var fullScreen = false
     @State private var showingOptions = false
+    @State private var afterOptions: (() -> Void)?
     @State private var editing = false
     @State private var editingParagraph: ReviewParagraph?
     @State private var selectedParagraphID: UUID?
@@ -207,160 +262,53 @@ struct SessionMediaView: View {
     @AppStorage("playbackAtMyPace") private var atMyPace = false
     @Query private var favorites: [SessionFavorite]
     private var protected: Bool { favorites.contains { $0.sessionID == session.id } }
-    private var selectedParagraph: PlaybackParagraph? { playbackParagraphs.first { $0.id == selectedParagraphID } }
-    private var activeParagraphID: UUID? { atMyPace ? selectedParagraphID : currentCue?.paragraphID ?? selectedParagraphID }
-    private var captionText: String? { atMyPace ? selectedParagraph?.text : currentCue?.text }
+    private var activeParagraphID: UUID? {
+        if listening == .translation { return speech.paragraphID ?? speech.completedParagraphID ?? selectedParagraphID }
+        return atMyPace ? selectedParagraphID : currentCue?.paragraphID ?? selectedParagraphID
+    }
     @State private var reviewed: [ReviewParagraph] = []
     @State private var edited = false
     @Environment(\.scenePhase) private var phase
-    private var currentCue: SubtitleCue? { cues.first { $0.start <= player.time && player.time < $0.end } }
+    private var currentCue: SubtitleCue? {
+        cues.first { $0.start <= player.time && player.time < $0.end } ??
+            cues.last { $0.start <= player.time }
+    }
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 12) {
-                if audioURL != nil {
-                    if !compactPlayback {
-                    Picker("Playback mode", selection: $atMyPace) {
-                        Text("Continuous").tag(false)
-                        Text("At my pace").tag(true)
-                    }.pickerStyle(.segmented).accessibilityIdentifier("playbackModePicker")
+            VStack(spacing: 8) {
+                if !compactPlayback { sourceSelectors }
+                if !compactPlayback { Picker("Playback mode", selection: $atMyPace) {
+                    Text("Continuous").tag(false)
+                    Text("At my pace").tag(true)
+                }.pickerStyle(.segmented).accessibilityIdentifier("playbackModePicker") }
+                reader
+                if busy { ProgressView("Preparing files…") }
+                playbackProgress
+                PlaybackTransport(playing: isPlaying, title: primaryLabel,
+                    previousEnabled: neighbor(-1) != nil, nextEnabled: neighbor(1) != nil,
+                    enabled: !audibleParagraphs.isEmpty,
+                    previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) })
+                HStack {
+                    if let activeParagraphID {
+                        Button(editLabel, systemImage: "pencil") { beginParagraphEdit(activeParagraphID) }
+                            .accessibilityIdentifier("editPlaybackParagraphButton")
                     }
-                    if captions {
-                        ScrollView {
-                        (captionText.map { Text(verbatim: $0) } ?? Text(uiKey(player.playing ? "…" : "Play to read synchronized captions")))
-                            .font(.title2.weight(.medium)).multilineTextAlignment(.center)
-                            .frame(maxWidth: .infinity).fixedSize(horizontal: false, vertical: true)
-                            .padding().background(.black, in: RoundedRectangle(cornerRadius: 16))
-                            .foregroundStyle(.white).accessibilityIdentifier("playbackCaption")
-                        }.id(activeParagraphID)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .accessibilityIdentifier("playbackCaptionScroll")
-                            .background(.black, in: RoundedRectangle(cornerRadius: 16))
-                    }
-                    if !compactPlayback {
-                    Slider(value: Binding(get: { player.time }, set: { player.seek($0) }),
-                           in: player.bounds)
-                        .accessibilityLabel("Playback position")
-                        .accessibilityValue(SessionClock.format(player.time))
-                    HStack {
-                        Text(SessionClock.format(player.time)).monospacedDigit()
-                        Spacer()
-                        Text(SessionClock.format(atMyPace ? player.bounds.upperBound : player.duration)).monospacedDigit()
-                    }.font(.caption).foregroundStyle(.secondary)
-                    }
-                    HStack(spacing: 8) {
-                        if atMyPace {
-                            Button("Previous paragraph", systemImage: "backward.end.fill") {
-                                if let previousPlaybackParagraph { playParagraph(previousPlaybackParagraph) }
-                            }.disabled(previousPlaybackParagraph == nil)
-                                .accessibilityIdentifier("previousParagraphButton")
-                            Button("Repeat paragraph", systemImage: "arrow.counterclockwise") {
-                                if let selectedParagraph { playParagraph(selectedParagraph) }
-                            }.disabled(selectedParagraph == nil)
-                                .accessibilityIdentifier("repeatParagraphButton")
-                        } else {
-                            Button("Back 10 seconds", systemImage: "gobackward.10") { player.seek(player.time - 10) }
-                        }
-                        Button(uiKey(player.playing ? "Pause" : "Play"), systemImage: player.playing ? "pause.fill" : "play.fill") { player.toggle() }
-                            .accessibilityIdentifier("recordingPlayButton")
-                            .disabled(atMyPace && selectedParagraph == nil)
-                        if atMyPace {
-                            Button("Next paragraph", systemImage: "forward.end.fill") { nextParagraph() }
-                                .disabled(nextPlaybackParagraph == nil).accessibilityIdentifier("nextParagraphButton")
-                        } else {
-                            Button("Forward 10 seconds", systemImage: "goforward.10") { player.seek(player.time + 10) }
-                        }
-                        Button("Subtitles", systemImage: captions ? "captions.bubble.fill" : "captions.bubble") { captions.toggle() }
-                            .accessibilityValue(uiKey(captions ? "On" : "Off"))
-                        if compactPlayback, let activeParagraphID {
-                            Button("Correct paragraph", systemImage: "pencil") { beginParagraphEdit(activeParagraphID) }
-                                .accessibilityIdentifier("editPlaybackParagraphButton")
-                        }
-                    }.labelStyle(.iconOnly).font(.title2).buttonStyle(PlaybackButtonStyle())
-                        .frame(minHeight: 44)
-                    if !compactPlayback, let activeParagraphID {
-                        Button(uiKey(translatedCues != nil && translationLanguage != sessionSourceLanguage ? "Edit translation" : "Correct paragraph"), systemImage: "pencil") {
-                            beginParagraphEdit(activeParagraphID)
-                        }.frame(minHeight: 44).accessibilityIdentifier("editPlaybackParagraphButton")
-                    }
-                }
-                if !fullScreen {
-                    if audioURL != nil {
-                    Button(uiKey(showingOptions ? "Hide playback options" : "Playback options"), systemImage: showingOptions ? "chevron.down" : "ellipsis.circle") {
-                        showingOptions.toggle()
-                    }.frame(minHeight: 44).accessibilityIdentifier("playbackOptionsButton")
-                        .accessibilityValue(uiKey(showingOptions ? "Expanded" : "Collapsed"))
-                    }
-                    if showingOptions || audioURL == nil {
-                    List {
-                        if audioURL == nil { Text("No audio saved for this session. Enable Save audio before starting your next session.") }
-                        if translatedCues == nil {
-                        Section {
-                            Button("Edit transcript", systemImage: "pencil") { player.pause(); editing = true }
-                                .accessibilityIdentifier("editMediaTranscriptButton")
-                        }
-                        }
-                        if let translationLanguage {
-                            Text(uiKey("Captions: \(translationLanguage). Audio remains in \(CaptureLanguage(rawValue: session.language)?.name ?? "English"). Timing within each paragraph is approximate.")).font(.caption)
-                        }
-                        if audioURL != nil && !cues.isEmpty {
-                            Section {
-                                if atMyPace {
-                                    Text("One paragraph at a time. Use Previous, Repeat or Next when you are ready.")
-                                        .font(.caption).foregroundStyle(.secondary)
-                                }
-                                Button(uiKey(showingPhrases ? "Hide phrases" : "Listen by phrase"),
-                                       systemImage: showingPhrases ? "chevron.up" : "chevron.down") { showingPhrases.toggle() }
-                                    .accessibilityValue(uiKey(showingPhrases ? "Expanded" : "Collapsed"))
-                                    .accessibilityIdentifier("phraseListButton")
-                                if showingPhrases {
-                                ForEach(Array(playbackParagraphs.enumerated()), id: \.element.id) { index, paragraph in
-                                    Button { playParagraph(paragraph) } label: {
-                                        VStack(alignment: .leading, spacing: 4) {
-                                            (paragraph.text.isEmpty ? Text("Empty paragraph") : Text(verbatim: paragraph.text))
-                                                .foregroundStyle(.primary)
-                                            Label(SessionClock.format(paragraph.start), systemImage: "play.circle")
-                                                .font(.caption)
-                                        }.frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 6)
-                                    }
-                                    .listRowBackground(activeParagraphID == paragraph.id ? Color.accentColor.opacity(0.12) : Color.clear)
-                                    .accessibilityHint(uiKey(atMyPace ? "Play only this paragraph" : "Listen from this paragraph"))
-                                    .accessibilityIdentifier("listenPlaybackParagraph-\(index)")
-                                }
-                                }
-                            }
-                        }
-                        Section("Export") {
-                            if audioURL != nil {
-                                Button("Share audio (M4A)", systemImage: "waveform") { prepareExport(kind: .audio) }
-                                Button("Share audio + text + subtitles", systemImage: "square.and.arrow.up") { prepareExport(kind: .bundle) }
-                            }
-                            Button("Subtitles (SRT)") { prepareExport(kind: .srt) }.disabled(cues.isEmpty)
-                            Button("Subtitles (WebVTT)") { prepareExport(kind: .vtt) }.disabled(cues.isEmpty)
-                            if cues.isEmpty { Text("No synchronized captions are available. Older sessions keep their text but do not contain audio timing.").font(.caption) }
-                            if hasCorrections || edited { Text("Corrections are included. Timing within edited paragraphs is estimated; preview before sharing.").font(.caption) }
-                            Text("Pauses are removed from saved audio and subtitles. These files follow this session's recording, not the timeline of an external video.").font(.caption)
-                        }.disabled(busy)
-                        if audioURL != nil {
-                            Section {
-                                Button("Delete audio, keep text", role: .destructive) { player.pause(); deleting = true }
-                                if protected { Text("Remove protection before deleting the session or its audio.").font(.caption) }
-                            }.disabled(busy || protected)
-                        }
-                        if busy { HStack { ProgressView(); Text("Preparing files…") } }
-                    }.listStyle(.insetGrouped).accessibilityIdentifier("mediaActionsList")
-                        .frame(maxHeight: audioURL == nil || !captions ? .infinity : compactPlayback ? 100 : 220)
-                    }
-                }
+                    Spacer()
+                    Button("Paragraphs", systemImage: "list.bullet") { showingPhrases = true }
+                        .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44).accessibilityIdentifier("openParagraphList")
+                    Button("Playback options", systemImage: "ellipsis.circle") { showingOptions = true }
+                        .accessibilityIdentifier("playbackOptionsButton")
+                }.font(.subheadline).frame(minHeight: 44)
             }
             .padding(.horizontal)
             .navigationTitle("Audio & subtitles").navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Done") { dismiss() } }
                 ToolbarItem(placement: .primaryAction) {
-                    if audioURL != nil {
+                    if !reviewed.isEmpty {
                         Button(uiKey(fullScreen ? "Exit full screen" : "Full screen"), systemImage: fullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
-                            captions = true; fullScreen.toggle()
+                            fullScreen.toggle()
                         }
                     }
                 }
@@ -376,27 +324,59 @@ struct SessionMediaView: View {
             }
             .sheet(item: $editingParagraph) { paragraph in
                 ParagraphEditorView(paragraph: paragraph, savesImmediately: true,
-                    translation: translatedCues != nil && translationLanguage != sessionSourceLanguage) { text in
+                    translation: reading != language.mode && currentTranslation) { text in
                     try saveParagraph(paragraph, text: text)
                 }
             }
             .task { reviewed = paragraphs; load() }
             .onChange(of: atMyPace) { _, _ in
-                player.pause()
-                if atMyPace {
-                    let match = playbackParagraphs.first { $0.start <= player.time && player.time < $0.end }
-                    if let paragraph = match ?? selectedParagraph ?? playbackParagraphs.first {
-                        selectedParagraphID = paragraph.id
-                        player.select(range: paragraph.start...paragraph.end)
-                    }
-                    showingPhrases = true
-                } else { player.select(range: nil) }
+                if let id = activeParagraphID ?? audibleParagraphs.first?.id { selectParagraph(id) }
             }
-            .onDisappear { player.stop(); exportTask?.cancel(); cleanup() }
-            .onChange(of: phase) { _, phase in if phase != .active { player.pause() } }
+            .onChange(of: speech.paragraphID) { _, id in if let id { selectedParagraphID = id } }
+            .onChange(of: player.time) { _, _ in
+                if listening == .original, !atMyPace, let id = currentCue?.paragraphID { selectedParagraphID = id }
+            }
+            .onChange(of: listening) { _, _ in
+                let id = selectedParagraphID
+                pausePlayback(); speech.stop()
+                selectParagraph(id ?? audibleParagraphs.first?.id)
+            }
+            .onChange(of: reading) { _, _ in
+                do { try rebuildCues() } catch { failure = error.localizedDescription }
+            }
+            .onChange(of: speed) { _, value in
+                player.speed = value
+                if listening == .translation { speech.stop() }
+            }
+            .onDisappear { player.stop(); speech.close(); exportTask?.cancel(); cleanup() }
+            .onChange(of: phase) { _, phase in if phase != .active { player.interrupt(); speech.interrupt() } }
+            .sheet(isPresented: $showingPhrases) {
+                NavigationStack {
+                    List(Array(audibleParagraphs.enumerated()), id: \.element.id) { index, paragraph in
+                        Button {
+                            selectParagraph(paragraph.id); showingPhrases = false
+                        } label: {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Paragraph \(index + 1) of \(audibleParagraphs.count)").font(.caption)
+                                Text(paragraph.text).foregroundStyle(.primary).lineLimit(3)
+                            }
+                        }.buttonStyle(.plain).accessibilityIdentifier("listenPlaybackParagraph-\(index)")
+                    }.navigationTitle("Paragraphs").navigationBarTitleDisplayMode(.inline)
+                        .toolbar { Button("Done") { showingPhrases = false } }
+                }
+            }
+            .sheet(isPresented: $showingOptions, onDismiss: {
+                let action = afterOptions; afterOptions = nil; action?()
+            }) {
+                NavigationStack {
+                    playbackOptions
+                        .navigationTitle("Playback options").navigationBarTitleDisplayMode(.inline)
+                        .toolbar { Button("Done") { showingOptions = false } }
+                }
+            }
             .confirmationDialog(uiKey("Delete the recording permanently? Your text and subtitles will stay."), isPresented: $deleting, titleVisibility: .visible) {
                 Button("Delete audio", role: .destructive) {
-                    player.stop()
+                    pausePlayback(); player.stop()
                     do { try repository.deleteAudio(for: session.id); audioURL = nil; try rebuildCues() }
                     catch { failure = error is SessionProtectionFailure ? error.localizedDescription : "Could not delete the recording. Please try again." }
                 }
@@ -408,72 +388,210 @@ struct SessionMediaView: View {
         }
     }
 
+    private var editLabel: LocalizedStringKey {
+        uiKey(reading != language.mode && currentTranslation ? "Edit translation" : "Correct paragraph")
+    }
+    private var sourceSelectors: some View {
+        HStack {
+            Menu {
+                Picker("Listen", selection: $listening) {
+                    Text("Original audio").tag(PlaybackAudio.original).disabled(audioURL == nil)
+                    Text("Translated voice").tag(PlaybackAudio.translation).disabled(!currentTranslation)
+                }
+                Picker("Reading speed", selection: $speed) {
+                    ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+                }
+            } label: {
+                Label { Text(listening == .original ? "Original audio · \(language.name)" : "Translated voice · \(language.opposite.name)") }
+                    icon: { Image(systemName: "speaker.wave.2") }
+                    .frame(minHeight: 44).contentShape(Rectangle())
+            }.accessibilityIdentifier("playbackAudioMenu")
+            Spacer()
+            Menu {
+                Picker("Reading language", selection: $reading) {
+                    Text(LocalizedStringKey(language.name)).tag(language.mode)
+                    if currentTranslation {
+                        Text(LocalizedStringKey(language.opposite.name)).tag(language.opposite.mode)
+                        Text("Both").tag(TranscriptLanguage.both)
+                    }
+                }
+            } label: {
+                Label { Text(LocalizedStringKey(reading.rawValue)) } icon: { Image(systemName: "text.bubble") }
+                    .frame(minHeight: 44).contentShape(Rectangle())
+            }.accessibilityIdentifier("playbackTextMenu")
+        }.font(.subheadline).frame(minHeight: 44)
+    }
+    private var reader: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                if let id = activeParagraphID, let original = reviewed.first(where: { $0.id == id }) {
+                    if reading == language.mode || reading == .both {
+                        PlaybackTextCard(text: original.text, language: language, translated: false, settings: settings, identifier: "playbackCaption")
+                    }
+                    if reading != language.mode, let translated = snapshot?.translated.first(where: { $0.id == id }) {
+                        PlaybackTextCard(text: translated.text, language: language.opposite, translated: true, settings: settings, identifier: reading == .both ? "playbackTranslationCaption" : "playbackCaption")
+                    }
+                } else {
+                    Text("Choose a paragraph, then tap Play.").padding()
+                }
+            }.frame(maxWidth: .infinity, alignment: .leading).padding(4)
+        }.id(activeParagraphID).frame(maxWidth: .infinity, maxHeight: .infinity)
+            .accessibilityIdentifier("playbackCaptionScroll")
+    }
+    private var playbackProgress: some View {
+        VStack(spacing: 4) {
+            HStack {
+                if let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) {
+                    Text("Paragraph \(index + 1) of \(reviewed.count)").accessibilityIdentifier("playbackParagraphPosition")
+                }
+                Spacer()
+                Text(LocalizedStringKey(speed.rawValue))
+            }.font(.caption).foregroundStyle(.secondary)
+            Text(LocalizedStringKey(playbackStatus)).font(.caption.weight(.semibold))
+                .accessibilityIdentifier("playbackStatus")
+            if !compactPlayback {
+            VStack(spacing: 4) {
+            if listening == .original && audioURL != nil {
+                Slider(value: Binding(get: { player.time }, set: { player.seek($0) }), in: player.bounds)
+                    .accessibilityLabel("Playback position")
+                HStack {
+                    Text(SessionClock.format(player.time - player.bounds.lowerBound))
+                    Spacer()
+                    Text(SessionClock.format(player.bounds.upperBound - player.bounds.lowerBound))
+                }.font(.caption).monospacedDigit()
+            } else {
+                // Speech has no reliable audio duration: never borrow timestamps from the recording.
+                Text("Generated voice · translation only").font(.caption).foregroundStyle(.secondary)
+                    .frame(maxHeight: .infinity)
+            }
+            }.frame(height: 56)
+            }
+        }
+    }
+    private var playbackOptions: some View {
+        @Bindable var settings = settings
+        return List {
+            Section {
+                sourceSelectors
+                Picker("Playback mode", selection: $atMyPace) {
+                    Text("Continuous").tag(false)
+                    Text("At my pace").tag(true)
+                }
+                Button("Listen by phrase", systemImage: "list.bullet") {
+                    afterOptions = { showingPhrases = true }; showingOptions = false
+                }.accessibilityIdentifier("phraseListButton")
+                Button("Restart paragraph", systemImage: "arrow.counterclockwise") {
+                    if let activeParagraphID { selectParagraph(activeParagraphID) }
+                    showingOptions = false
+                }
+                Button("Edit transcript", systemImage: "pencil") {
+                    pausePlayback(); speech.stop(); afterOptions = { editing = true }; showingOptions = false
+                }.accessibilityIdentifier("editMediaTranscriptButton")
+            }
+            Section("Reading preferences") {
+                Slider(value: $settings.captionSize, in: 20...44, step: 2) { Text("Text size") }
+                Toggle("Bold captions", isOn: $settings.boldCaptions)
+                Toggle("High contrast", isOn: $settings.highContrast)
+            }
+            ReaderPaperOptions(settings: settings)
+            if audioURL == nil {
+                Text("No audio saved for this session. Enable Save audio before starting your next session.")
+            }
+            Section("Export") {
+                if audioURL != nil {
+                    Button("Share audio (M4A)", systemImage: "waveform") { requestExport(.audio) }
+                    Button("Share audio + text + subtitles", systemImage: "square.and.arrow.up") { requestExport(.bundle) }
+                }
+                Button("Subtitles (SRT)") { requestExport(.srt) }.disabled(cues.isEmpty)
+                Button("Subtitles (WebVTT)") { requestExport(.vtt) }.disabled(cues.isEmpty)
+                if cues.isEmpty {
+                    Text("No synchronized captions are available. Older sessions keep their text but do not contain audio timing.").font(.caption)
+                }
+                Text("Exports use the original recording timeline, not the generated voice.").font(.caption)
+                if hasCorrections || edited {
+                    Text("Corrections are included. Timing within edited paragraphs is estimated; preview before sharing.").font(.caption)
+                }
+            }.disabled(busy)
+            if audioURL != nil {
+                Section("Manage session") {
+                    Button("Delete audio, keep text", role: .destructive) {
+                        pausePlayback(); afterOptions = { deleting = true }; showingOptions = false
+                    }
+                    if protected { Text("Remove protection before deleting the session or its audio.").font(.caption) }
+                }.disabled(busy || protected)
+            }
+        }.listStyle(.insetGrouped).accessibilityIdentifier("mediaActionsList")
+    }
+    private func requestExport(_ kind: ExportKind) {
+        afterOptions = { prepareExport(kind: kind) }; showingOptions = false
+    }
     private func load() {
         do {
+            reviewed = try repository.reviewedParagraphs(for: session)
+            snapshot = try repository.translation(for: session.id)?.decoded()
             if let url = try repository.audioURL(for: session.id), FileManager.default.fileExists(atPath: url.path) {
-                audioURL = url; player.load(url)
+                audioURL = url; player.load(url); player.speed = speed
             }
+            listening = initialAudio == .translation && currentTranslation ? .translation : audioURL != nil ? .original : .translation
+            reading = translationLanguage.flatMap(TranscriptLanguage.init(rawValue:)) ??
+                (listening == .translation ? language.opposite.mode : language.mode)
+            if !currentTranslation { reading = language.mode }
             try rebuildCues()
-            if let paragraph = playbackParagraphs.first(where: { $0.id == initialParagraphID }) {
-                showingPhrases = true
-                playParagraph(paragraph)
-            } else if atMyPace, let paragraph = playbackParagraphs.first {
-                selectedParagraphID = paragraph.id
-                player.select(range: paragraph.start...paragraph.end)
-                showingPhrases = true
-            }
+            selectParagraph(initialParagraphID ?? audibleParagraphs.first?.id ?? reviewed.first?.id)
+            speech.observeInterruptions()
         } catch { failure = "Could not open session media. Your transcript is unchanged." }
     }
-
     private func rebuildCues() throws {
+        snapshot = try repository.translation(for: session.id)?.decoded()
         let times = try repository.media(for: session.id)?.decodedTimings() ?? [:]
         playbackParagraphs = PlaybackParagraph.make(reviewed, timings: times, duration: player.duration)
-        var generated = SubtitleExport.cues(paragraphs: reviewed, timings: times)
-        if translatedCues != nil, let mode = translationLanguage.flatMap(TranscriptLanguage.init(rawValue:)),
-           let snapshot = try repository.translation(for: session.id)?.decoded() {
-            reviewed = snapshot.paragraphs(mode: mode)
-            playbackParagraphs = PlaybackParagraph.make(reviewed, timings: times, duration: player.duration)
-            generated = TranslatedSubtitles.cues(snapshot: snapshot, timings: times, mode: mode)
+        let generated: [SubtitleCue]
+        if currentTranslation, let snapshot { generated = TranslatedSubtitles.cues(snapshot: snapshot, timings: times, mode: reading) }
+        else { generated = SubtitleExport.cues(paragraphs: reviewed, timings: times) }
+        cues = generated.filter { audioURL == nil || $0.start < player.duration }.map {
+            SubtitleCue(id: $0.id, paragraphID: $0.paragraphID, start: $0.start,
+                end: audioURL == nil ? $0.end : min($0.end, player.duration), text: $0.text)
         }
-        // A failed recording may retain only a prefix. Never display captions past that prefix.
-        if audioURL != nil, player.duration > 0 {
-            cues = generated.compactMap { cue in
-                guard cue.start < player.duration else { return nil }
-                return SubtitleCue(id: cue.id, paragraphID: cue.paragraphID, start: cue.start,
-                    end: min(cue.end, player.duration), text: cue.text)
-            }
-        } else { cues = generated }
     }
-
-    private var sessionSourceLanguage: String { (CaptureLanguage(rawValue: session.language) ?? .english).mode.rawValue }
-    private var previousPlaybackParagraph: PlaybackParagraph? {
-        guard let index = playbackParagraphs.firstIndex(where: { $0.id == selectedParagraphID }), index > 0 else { return nil }
-        return playbackParagraphs[index - 1]
+    private func neighbor(_ offset: Int) -> ReviewParagraph? {
+        guard let index = audibleParagraphs.firstIndex(where: { $0.id == activeParagraphID }),
+              audibleParagraphs.indices.contains(index + offset) else { return nil }
+        return audibleParagraphs[index + offset]
     }
-    private var nextPlaybackParagraph: PlaybackParagraph? {
-        guard let index = playbackParagraphs.firstIndex(where: { $0.id == selectedParagraphID }),
-              index + 1 < playbackParagraphs.count else { return nil }
-        return playbackParagraphs[index + 1]
+    private func moveParagraph(_ offset: Int) {
+        if let paragraph = neighbor(offset) { selectParagraph(paragraph.id) }
     }
-    private func playParagraph(_ paragraph: PlaybackParagraph) {
-        selectedParagraphID = paragraph.id
-        player.select(range: atMyPace ? paragraph.start...paragraph.end : nil)
-        player.play(from: paragraph.start)
+    /// Navigation selects silently; only the central button starts sound, in either language.
+    private func selectParagraph(_ id: UUID?) {
+        pausePlayback(); speech.stop(); speech.message = nil; selectedParagraphID = id; originalStarted = false
+        if let paragraph = playbackParagraphs.first(where: { $0.id == id }) {
+            player.select(range: atMyPace ? paragraph.start...paragraph.end : nil)
+            player.seek(paragraph.start)
+        }
     }
-    private func nextParagraph() {
-        if let next = nextPlaybackParagraph { playParagraph(next) }
+    private func pausePlayback() {
+        player.pause()
+        if speech.state == .speaking { speech.togglePause() }
+    }
+    private func togglePlayback() {
+        if listening == .original { speech.stop(); originalStarted = true; player.toggle(); return }
+        player.pause()
+        if speech.state != .idle { speech.togglePause(); return }
+        guard let index = audibleParagraphs.firstIndex(where: { $0.id == activeParagraphID }) else { return }
+        let values = atMyPace ? [audibleParagraphs[index]] : Array(audibleParagraphs[index...])
+        speech.start(values, language: language.opposite, speed: speed)
     }
     private func beginParagraphEdit(_ id: UUID) {
-        player.pause(); selectedParagraphID = id
+        pausePlayback(); speech.stop(); selectedParagraphID = id
         do {
-            if translatedCues != nil && translationLanguage != sessionSourceLanguage {
+            if reading != language.mode && currentTranslation {
                 editingParagraph = try repository.translation(for: session.id)?.decoded().translated.first { $0.id == id }
             } else { editingParagraph = reviewed.first { $0.id == id } }
         } catch { failure = error.localizedDescription }
     }
     /// Guardar corrige texto por UUID, conserva audio y selección, y nunca reinicia la reproducción.
     private func saveParagraph(_ paragraph: ReviewParagraph, text: String) throws {
-        if translatedCues != nil && translationLanguage != sessionSourceLanguage {
+        if reading != language.mode && currentTranslation {
             guard var snapshot = try repository.translation(for: session.id)?.decoded(),
                   snapshot.translated.contains(paragraph) else { throw ReviewFailure.sessionChanged }
             snapshot.edits[paragraph.id.uuidString] = text
@@ -486,7 +604,12 @@ struct SessionMediaView: View {
             reviewed = updated
         }
         edited = true
+        speech.stop()
         try rebuildCues()
+        if !currentTranslation {
+            reading = language.mode
+            if audioURL != nil { listening = .original }
+        }
     }
 
     private func cleanup() {
@@ -499,7 +622,8 @@ struct SessionMediaView: View {
     /// La elección del destino pertenece al usuario mediante la hoja nativa de iOS.
     private func prepareExport(kind: ExportKind) {
         guard !busy else { return }
-        player.pause(); cleanup(); busy = true
+        pausePlayback(); cleanup(); busy = true
+        do { try rebuildCues() } catch { failure = error.localizedDescription; busy = false; return }
         exportTask = Task { @MainActor in
             defer { busy = false }
             do {
@@ -517,7 +641,7 @@ struct SessionMediaView: View {
                 try Task.checkCancellation()
                 if kind == .bundle {
                     let url = directory.appendingPathComponent("Transcript.txt")
-                    try TranscriptReview.text(reviewed).write(to: url, atomically: true, encoding: .utf8)
+                    try TranscriptReview.text(currentTranslation ? snapshot?.paragraphs(mode: reading) ?? reviewed : reviewed).write(to: url, atomically: true, encoding: .utf8)
                     urls.append(url)
                 }
                 let formats: [SubtitleFormat] = kind == .srt ? [.srt] : kind == .vtt ? [.vtt] : kind == .bundle && !cues.isEmpty ? [.srt, .vtt] : []
@@ -569,5 +693,59 @@ private struct PlaybackButtonStyle: ButtonStyle {
             .frame(minWidth: 44, minHeight: 44)
             .contentShape(Rectangle())
             .opacity(isEnabled ? (configuration.isPressed ? 0.5 : 1) : 0.3)
+    }
+}
+
+/// Shared transport: identical geometry, ordering and accessible names for every audio source.
+enum PlaybackAudio: String { case original, translation }
+struct PlaybackTransport: View {
+    let playing: Bool
+    let title: String
+    let previousEnabled: Bool
+    let nextEnabled: Bool
+    var enabled = true
+    let previous: () -> Void
+    let toggle: () -> Void
+    let next: () -> Void
+    var body: some View {
+        HStack(spacing: 32) {
+            Button("Previous paragraph", systemImage: "backward.end.fill", action: previous)
+                .disabled(!previousEnabled).accessibilityIdentifier("previousParagraphButton")
+            Button(LocalizedStringKey(title), systemImage: playing ? "pause.fill" : "play.fill", action: toggle)
+                .frame(width: 56, height: 56)
+                .background(Color.accentColor, in: Circle()).foregroundStyle(.white)
+                .disabled(!enabled).accessibilityIdentifier("recordingPlayButton")
+            Button("Next paragraph", systemImage: "forward.end.fill", action: next)
+                .disabled(!nextEnabled).accessibilityIdentifier("nextParagraphButton")
+        }.labelStyle(.iconOnly).font(.title2).buttonStyle(PlaybackButtonStyle())
+            .frame(maxWidth: .infinity)
+    }
+}
+struct PlaybackTextCard: View {
+    let text: String
+    let language: CaptureLanguage
+    let translated: Bool
+    let settings: AppSettings
+    var identifier = ""
+    @Environment(\.colorScheme) private var cardScheme
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
+                .font(.caption.weight(.semibold))
+            ReaderParagraph(text: text, points: settings.captionSize, spacing: settings.lineSpacing,
+                            bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
+                .textSelection(.enabled).accessibilityIdentifier(identifier)
+        }.environment(\.colorScheme, !settings.highContrast && settings.readerPaper != .system ? .light : settings.colorScheme ?? cardScheme)
+         .modifier(LiveLanguageCard(language: language, highContrast: settings.highContrast,
+                                   paper: settings.readerPaper))
+    }
+}
+
+/// Equal-width entry buttons keep original/translation choices visually balanced.
+struct PlaybackLaunchStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label.font(.subheadline).frame(maxWidth: .infinity, minHeight: 48)
+            .padding(.horizontal, 6).background(Color.accentColor.opacity(configuration.isPressed ? 0.2 : 0.08),
+                                            in: RoundedRectangle(cornerRadius: 10))
     }
 }

@@ -24,6 +24,33 @@ struct AppRootView: View {
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
+                .safeAreaInset(edge: .bottom) {
+                    if coordinator.automaticTranslationJob != nil || coordinator.automaticTranslationMessage != nil {
+                        HStack {
+                            if let job = coordinator.automaticTranslationJob {
+                                ProgressView()
+                                Text("Translating confirmed text…")
+                                Text("\(coordinator.automaticTranslationProgress)/\(job.source.count)")
+                            } else if let message = coordinator.automaticTranslationMessage {
+                                Text(LocalizedStringKey(message)).lineLimit(3)
+                                if message != "Translation saved" {
+                                    Button("Retry translation") { coordinator.retryAutomaticTranslation() }
+                                }
+                            }
+                            Button(uiKey(coordinator.automaticTranslationJob == nil ? "Dismiss" : "Cancel translation"), systemImage: "xmark") { coordinator.cancelAutomaticTranslation() }
+                                .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                        }.font(.caption).padding(.horizontal).background(.regularMaterial)
+                            .accessibilityIdentifier("automaticTranslationStatus")
+                    }
+                }
+                .background {
+                    if let job = coordinator.automaticTranslationJob {
+                        TranslationRunner(job: job, progress: { value in
+                            if coordinator.automaticTranslationJob?.id == job.id { coordinator.automaticTranslationProgress = value }
+                        }) { result in coordinator.completeAutomaticTranslation(job, result: result) }.id(job.id)
+                    }
+                }
+                .environment(coordinator.settings)
                 .modelContainer(coordinator.repository.container)
                 .preferredColorScheme(coordinator.settings.colorScheme)
                 .environment(\.locale, coordinator.settings.interfaceLanguage.locale)
@@ -46,6 +73,9 @@ struct AppRootView: View {
         }
         .task { if coordinator == nil { openStorage() } }
         .onChange(of: scenePhase) { _, phase in
+            // A language-download permission sheet can make the scene inactive.
+            // Suspend only on actual backgrounding, not while Apple is requesting consent.
+            if phase != .inactive { coordinator?.automaticTranslationForeground(phase == .active) }
             if phase == .background {
                 UIApplication.shared.isIdleTimerDisabled = false
                 if let coordinator, let identifier = coordinator.caption.prepareForBackground() {

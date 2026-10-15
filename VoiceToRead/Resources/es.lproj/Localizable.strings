@@ -549,3 +549,36 @@
 "Save the draft before protecting it." = "Guarda el borrador antes de protegerlo.";
 "Favorites protect the session and its audio." = "Los favoritos protegen la sesión y su audio.";
 "Requires confirmation." = "Requiere confirmación.";
+
+"Listen again" = "Escuchar de nuevo";
+"Playback interrupted. Tap Resume." = "Reproducción interrumpida. Pulsa Continuar.";
+"Paragraph finished" = "Párrafo terminado";
+"Playback finished" = "Reproducción terminada";
+"Playing" = "Reproduciendo";
+"Paused · tap Resume" = "En pausa · pulsa Continuar";
+"Ready · tap Play" = "Listo · pulsa Reproducir";
+"Listen" = "Escuchar";
+"Original audio" = "Audio original";
+"Translated voice" = "Voz traducida";
+"Original audio · %@" = "Audio original · %@";
+"Translated voice · %@" = "Voz traducida · %@";
+"Paragraph %lld of %lld" = "Párrafo %lld de %lld";
+"Choose a paragraph, then tap Play." = "Elige un párrafo y pulsa Reproducir.";
+"Choose a paragraph, then tap Play. Nothing advances automatically." = "Elige un párrafo y pulsa Reproducir. No avanza automáticamente.";
+"Reading preferences" = "Preferencias de lectura";
+"Restart paragraph" = "Reiniciar párrafo";
+"Manage session" = "Administrar sesión";
+"Repeat this phrase" = "Repetir esta frase";
+"Translation saved" = "Traducción guardada";
+"Translation interrupted. Tap Play to restart this paragraph." = "Traducción interrumpida. Pulsa Reproducir para reiniciar este párrafo.";
+"Translation will continue when recording stops and the app is open." = "La traducción continuará cuando termine la grabación y la aplicación esté abierta.";
+"Dismiss" = "Cerrar";
+"Bold captions" = "Texto en negrita";
+
+"%@" = "%@";
+"%@ → %@" = "%@ → %@";
+
+"Paragraphs" = "Párrafos";
+"Exports use the original recording timeline, not the generated voice." = "Los archivos exportados siguen los tiempos de la grabación original, no los de la voz generada.";
+
+"Cancel translation" = "Cancelar traducción";

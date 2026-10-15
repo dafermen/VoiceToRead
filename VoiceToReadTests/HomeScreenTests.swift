@@ -57,6 +57,57 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testUnifiedAudioGeometryAndSilentNavigation() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap(); app.staticTexts["Review sample"].tap()
+        app.buttons["sessionMediaButton"].tap()
+        let play = app.buttons["recordingPlayButton"]
+        XCTAssertTrue(play.waitForExistence(timeout: 8))
+        app.buttons["At my pace"].tap()
+        XCTAssertFalse(app.buttons["repeatParagraphButton"].exists)
+        let original = play.frame.size
+        let reader = app.scrollViews["playbackCaptionScroll"]
+        let originalHeight = reader.frame.height
+        app.buttons["nextParagraphButton"].tap()
+        XCTAssertEqual(play.label, "Play")
+        XCTAssertEqual(app.staticTexts["playbackParagraphPosition"].label, "Paragraph 2 of 80")
+        let audioMenu = app.buttons["playbackAudioMenu"]
+        XCTAssertTrue(audioMenu.isEnabled)
+        audioMenu.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        app.buttons["Translated voice"].tap()
+        XCTAssertEqual(play.frame.size, original)
+        XCTAssertEqual(reader.frame.height, originalHeight, accuracy: 2)
+        XCTAssertEqual(play.label, "Play")
+        app.buttons["playbackTextMenu"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap(); app.buttons["Both"].tap()
+        XCTAssertTrue(app.staticTexts["playbackTranslationCaption"].exists)
+        XCTAssertTrue(app.staticTexts["playbackCaption"].exists)
+        play.tap(); XCTAssertEqual(play.label, "Pause")
+        play.tap(); XCTAssertEqual(play.label, "Resume")
+        app.buttons["nextParagraphButton"].tap(); XCTAssertEqual(play.label, "Play")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Unified-bilingual-reader"; shot.lifetime = .keepAlways; add(shot)
+        app.terminate()
+    }
+
+    @MainActor
+    func testStopAutomaticallyTranslatesWithoutTranslateButton() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-live-translation", "--ui-test-session-flow"]
+        app.launch()
+        let start = app.buttons["primaryCaptionAction"]
+        XCTAssertTrue(start.waitForExistence(timeout: 15)); start.tap()
+        let stop = app.buttons["stopCaptionAction"]
+        XCTAssertTrue(stop.waitForExistence(timeout: 10))
+        sleep(2); stop.tap()
+        XCTAssertTrue(app.staticTexts["Translation saved"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["saveSessionButton"].exists, "Automatic translation leaves the save/discard decision intact")
+        app.terminate()
+    }
+
+    @MainActor
     func testLongPlaybackParagraphScrollsAndPreviousRestoresIt() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-long-paragraph"]
@@ -124,26 +175,23 @@ final class HomeScreenTests: XCTestCase {
         app.tabBars.buttons["Sessions"].tap()
         app.staticTexts["Review sample"].tap()
         app.buttons["sessionTranslationButton"].tap()
-        let all = app.buttons["speakFullTranslation"]
-        XCTAssertTrue(all.waitForExistence(timeout: 8))
-        XCTAssertTrue(app.buttons["speakTranslation-0"].exists)
-        XCTAssertFalse(app.buttons["listenTranslated-0"].exists, "This fixture has no original audio")
-        all.tap()
-        let pause = app.buttons["pauseTranslationSpeech"]
-        XCTAssertTrue(pause.waitForExistence(timeout: 8))
-        pause.tap()
-        XCTAssertEqual(pause.label, "Resume translation")
-        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        shot.name = reverse ? "Translation-speech-English-paused" : "Translation-speech-Spanish-paused"
-        shot.lifetime = .keepAlways; add(shot)
-        pause.tap()
-        XCTAssertEqual(pause.label, "Pause translation")
-        app.buttons["stopTranslationSpeech"].tap()
-        XCTAssertTrue(all.exists)
+        XCTAssertTrue(app.buttons["speakTranslation-0"].waitForExistence(timeout: 8))
+        XCTAssertFalse(app.buttons["listenTranslated-0"].exists)
         app.buttons["speakTranslation-0"].tap()
-        XCTAssertTrue(pause.waitForExistence(timeout: 3))
-        app.buttons["editSpanishButton"].tap()
-        XCTAssertFalse(pause.exists, "Editing must stop synthesized audio")
+        let play = app.buttons["recordingPlayButton"]
+        XCTAssertTrue(play.waitForExistence(timeout: 8))
+        XCTAssertEqual(play.label, "Play")
+        play.tap()
+        XCTAssertEqual(play.label, "Pause")
+        play.tap()
+        XCTAssertEqual(play.label, "Resume")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = reverse ? "Unified-translated-English" : "Unified-translated-Spanish"
+        shot.lifetime = .keepAlways; add(shot)
+        app.buttons["nextParagraphButton"].tap()
+        XCTAssertEqual(play.label, "Play", "Navigation must not auto-play")
+        app.buttons["previousParagraphButton"].tap()
+        XCTAssertFalse(app.buttons["previousParagraphButton"].isEnabled)
         app.terminate()
     }
 
@@ -219,7 +267,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.buttons["previousParagraphButton"].isEnabled)
         XCTAssertGreaterThan(app.scrollViews["playbackCaptionScroll"].frame.height, 180)
         app.buttons["recordingPlayButton"].tap()
-        expectation(for: NSPredicate(format: "label == 'Play'"), evaluatedWith: app.buttons["recordingPlayButton"])
+        expectation(for: NSPredicate(format: "label == 'Listen again'"), evaluatedWith: app.buttons["recordingPlayButton"])
         waitForExpectations(timeout: 8)
         let caption = app.staticTexts["playbackCaption"]
         XCTAssertTrue(caption.label.contains("Acmee"), "Finished paragraphs must stay visible")
@@ -230,7 +278,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["saveParagraphCorrection"].tap()
         XCTAssertTrue(caption.waitForExistence(timeout: 5))
         XCTAssertTrue(caption.label.contains("Reviewed at my pace."))
-        XCTAssertEqual(app.buttons["recordingPlayButton"].label, "Play")
+        XCTAssertEqual(app.buttons["recordingPlayButton"].label, "Listen again")
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = "Pace-corrected-paragraph"; shot.lifetime = .keepAlways; add(shot)
         app.buttons["nextParagraphButton"].tap()
@@ -259,13 +307,13 @@ final class HomeScreenTests: XCTestCase {
         Thread.sleep(forTimeInterval: 1)
         app.buttons["playbackOptionsButton"].tap()
         XCTAssertTrue(app.buttons["phraseListButton"].waitForExistence(timeout: 5))
-        app.buttons["phraseListButton"].tap()
         // Protected audio cannot be deleted, even from the media screen.
         let delete = app.buttons["Delete audio, keep text"]
         for _ in 0..<18 { if delete.exists { break }; app.collectionViews["mediaActionsList"].swipeUp() }
         XCTAssertTrue(delete.exists)
         XCTAssertFalse(delete.isEnabled)
-        app.buttons["Done"].tap()
+        app.navigationBars["Playback options"].buttons["Done"].tap()
+        app.navigationBars["Audio & subtitles"].buttons["Done"].tap()
         app.buttons["favoriteSessionButton"].tap()
         if app.frame.width > 600 {
             // iPad confirmation popovers cancel by tapping outside, without a Cancel row.
@@ -503,11 +551,12 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.staticTexts["learningSpanish"].exists)
         app.buttons["revealLearningSpanish"].tap()
         XCTAssertTrue(app.staticTexts["learningSpanish"].exists)
-        app.segmentedControls["learningSpeed"].buttons["0.75×"].tap()
-        app.buttons["learningRepeat"].tap()
-        app.buttons["learningPlay"].tap()
-        XCTAssertEqual(app.buttons["learningPlay"].label, "Stop practice audio")
-        app.buttons["learningPlay"].tap()
+        app.buttons["learningSpeed"].tap()
+        app.buttons["Slow"].tap()
+        app.switches["learningRepeat"].tap()
+        app.buttons["recordingPlayButton"].tap()
+        XCTAssertEqual(app.buttons["recordingPlayButton"].label, "Pause")
+        app.buttons["recordingPlayButton"].tap()
         app.buttons["saveLearningExpression"].tap()
         app.buttons["confirmLearningExpression"].tap()
         app.segmentedControls["learningCollection"].buttons["Saved expressions"].tap()
@@ -534,7 +583,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(paragraph.waitForExistence(timeout: 10))
         XCTAssertEqual(paragraph.label, "Hola mundo. Aprendemos juntos.")
         app.segmentedControls["translationLanguagePicker"].buttons["Both"].tap()
-        XCTAssertTrue(paragraph.label.contains("Acmee"))
+        XCTAssertTrue(app.staticTexts["translatedOriginal-0"].label.contains("Acmee"))
         XCTAssertTrue(paragraph.label.contains("Hola mundo"))
         app.segmentedControls["translationLanguagePicker"].buttons["English"].tap()
         XCTAssertFalse(paragraph.label.contains("Hola mundo"))
@@ -554,22 +603,18 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["listenTranslated-0"].tap()
         let play = app.buttons["recordingPlayButton"]
         XCTAssertTrue(play.waitForExistence(timeout: 5))
+        play.tap()
         expectation(for: NSPredicate(format: "label == 'Pause'"), evaluatedWith: play)
         waitForExpectations(timeout: 8)
         play.tap()
-        XCTAssertEqual(play.label, "Play")
+        XCTAssertEqual(play.label, "Resume")
         XCTAssertTrue(app.staticTexts["playbackCaption"].exists)
         app.buttons["At my pace"].tap()
         app.buttons["playbackOptionsButton"].tap()
-        // Changing mode selects the paragraph at the current audio time. Explicitly choose the first.
+        app.buttons["phraseListButton"].tap()
+        // Explicitly choose the first paragraph without starting audio.
         let firstPlaybackParagraph = app.buttons["listenPlaybackParagraph-0"]
-        let playbackActions = app.collectionViews["mediaActionsList"]
-        for _ in 0..<24 {
-            if firstPlaybackParagraph.exists && firstPlaybackParagraph.isHittable { break }
-            playbackActions.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.8)).press(forDuration: 0.1,
-                thenDragTo: playbackActions.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)),
-                withVelocity: .slow, thenHoldForDuration: 0.1)
-        }
+        XCTAssertTrue(firstPlaybackParagraph.waitForExistence(timeout: 8))
         firstPlaybackParagraph.tap()
         app.buttons["editPlaybackParagraphButton"].tap()
         let playbackEditor = app.textViews["paragraphEditor"]
@@ -814,16 +859,18 @@ final class HomeScreenTests: XCTestCase {
         paragraph.tap()
         let play = app.buttons["recordingPlayButton"]
         XCTAssertTrue(play.waitForExistence(timeout: 10))
+        play.tap()
         expectation(for: NSPredicate(format: "label == 'Pause'"), evaluatedWith: play)
         waitForExpectations(timeout: 10)
         play.tap()
-        XCTAssertEqual(play.label, "Play")
-        app.buttons["playbackOptionsButton"].tap()
-        app.buttons["phraseListButton"].tap()
+        XCTAssertEqual(play.label, "Resume")
+        app.buttons["openParagraphList"].tap()
         let cue = app.buttons["listenPlaybackParagraph-0"]
         for _ in 0..<5 { if cue.isHittable { break }; app.swipeUp() }
         XCTAssertTrue(cue.isHittable)
         cue.tap()
+        XCTAssertEqual(play.label, "Play")
+        play.tap()
         XCTAssertEqual(play.label, "Pause")
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = "Phrase-playback"; shot.lifetime = .keepAlways; add(shot)
@@ -867,6 +914,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["Apply"].tap()
         app.buttons["saveTranscriptEdits"].tap()
         XCTAssertTrue(app.navigationBars["Audio & subtitles"].waitForExistence(timeout: 5))
+        app.buttons["playbackOptionsButton"].tap()
         let subtitles = app.buttons["Subtitles (SRT)"]
         let actions = app.collectionViews["mediaActionsList"]
         for _ in 0..<24 {

@@ -45,6 +45,7 @@ final class TranslationTests: XCTestCase {
         output.onFinish?(newToken)
         XCTAssertEqual(player.state, .idle)
         XCTAssertNil(player.paragraphID)
+        XCTAssertEqual(player.completedParagraphID, a.id)
         XCTAssertEqual(releases, 2)
     }
 
@@ -65,6 +66,35 @@ final class TranslationTests: XCTestCase {
         XCTAssertEqual(player.state, .idle)
         XCTAssertEqual(player.message, TranslationSpeechFailure.voiceUnavailable.localizedDescription)
         XCTAssertEqual(releases, 2)
+    }
+
+    func testAutomaticTranslationCannotSaveIntoActiveOrDeletedDraft() throws {
+        let repo = try TranscriptRepository(inMemory: true)
+        let session = try repo.create(title: "Draft", draft: true)
+        let caption = CaptionSegment(runID: UUID(), start: 0, end: 1, text: "Hello")
+        try repo.apply(.init(removedIDs: [], upserted: [caption]), to: session)
+        let snapshot = TranslationSnapshot(source: [.init(id: caption.id, text: "Hello")], generated: [.init(id: caption.id, text: "Hola")])
+        XCTAssertThrowsError(try repo.saveTranslation(snapshot, for: session, allowCompletedDraft: true))
+        try repo.checkpoint(session, duration: 1, ended: true)
+        try repo.saveTranslation(snapshot, for: session, allowCompletedDraft: true)
+        try repo.delete(session)
+        XCTAssertThrowsError(try repo.saveTranslation(snapshot, for: session, allowCompletedDraft: true))
+    }
+
+    func testAutomaticResultPreservesManualTranslationCompletedMeanwhile() throws {
+        let repo = try TranscriptRepository(inMemory: true)
+        let session = try repo.create(title: "Manual wins")
+        let caption = CaptionSegment(runID: UUID(), start: 0, end: 1, text: "Hello")
+        try repo.apply(.init(removedIDs: [], upserted: [caption]), to: session)
+        try repo.checkpoint(session, duration: 1, ended: true)
+        let coordinator = SessionCoordinator(repository: repo, translationSupported: { true })
+        coordinator.enqueueTranslation(session)
+        let job = try XCTUnwrap(coordinator.automaticTranslationJob)
+        let manual = TranslationSnapshot(source: [.init(id: caption.id, text: "Hello")],
+            generated: [.init(id: caption.id, text: "Hola")], edits: [caption.id.uuidString: "Buenos días"])
+        try repo.saveTranslation(manual, for: session)
+        coordinator.completeAutomaticTranslation(job, result: .success([.init(id: caption.id, text: "Hola")]))
+        XCTAssertEqual(try repo.translation(for: session.id)?.decoded().translated.first?.text, "Buenos días")
     }
 
     func testOldPayloadDefaultsToEnglishAndReverseSubtitlesKeepTimes() throws {

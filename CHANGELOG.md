@@ -1,3 +1,11 @@
+## VoiceToRead 1.0 — reproducción unificada y traducción automática (2026-10-15)
+
+- Unifica tamaño, lector y controles del audio original y la voz traducida. Separa Escuchar de Leer.
+- Elimina repetición duplicada, conserva último párrafo, añade progreso por párrafo y navegación silenciosa.
+- Usa tarjetas bilingües, opciones en hoja y lectura larga desplazable; práctica comparte controles, pausa real y bucle explícito.
+- Inicia traducción al detener, conserva Guardar/Descartar y rechaza callbacks tardíos o textos obsoletos.
+- Guías inclusivas y técnicas: [documentación](docs/playback-unification.md); [evidencia y entrega](docs/playback-unification-checkpoint.md).
+
 ## VoiceToRead 1.0 — lectura accesible y voz traducida (2026-10-15)
 
 - Lee traducciones corregidas EN↔ES por párrafo o completas, incluso sin grabación original; voz Apple, velocidad, pausa/continuar/detener y resaltado del párrafo activo.

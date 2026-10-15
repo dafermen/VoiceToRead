@@ -51,6 +51,7 @@ enum TranslationSpeechFailure: LocalizedError {
 enum TranslationSpeechSpeed: String, CaseIterable, Identifiable {
     case slow = "Slow", normal = "Normal", fast = "Fast"
     var id: Self { self }
+    var playbackRate: Float { self == .slow ? 0.75 : self == .fast ? 1.25 : 1 }
     var rate: Float {
         switch self { case .slow: return 0.35; case .normal: return AVSpeechUtteranceDefaultSpeechRate; case .fast: return 0.58 }
     }
@@ -63,6 +64,7 @@ final class TranslationSpeechPlayer {
     enum State { case idle, speaking, paused }
     private(set) var state: State = .idle
     private(set) var paragraphID: UUID?
+    private(set) var completedParagraphID: UUID?
     var message: String?
     private var queue: [ReviewParagraph] = []
     private var index = 0
@@ -124,12 +126,12 @@ final class TranslationSpeechPlayer {
     }
     func stop() {
         token = UUID() // Reject late callbacks from a previous phrase or a dismissed screen.
-        output.stop(); queue = []; index = 0; paragraphID = nil; state = .idle
+        output.stop(); queue = []; index = 0; completedParagraphID = nil; paragraphID = nil; state = .idle
         if ownsAudio { deactivate(); ownsAudio = false }
     }
     func interrupt() {
         guard state != .idle else { return }
-        stop(); message = "Translation reading stopped. Tap a speaker when you are ready to listen again."
+        stop(); message = "Translation interrupted. Tap Play to restart this paragraph."
     }
     private func speakCurrent() throws {
         guard queue.indices.contains(index) else { stop(); return }
@@ -140,7 +142,11 @@ final class TranslationSpeechPlayer {
     private func finished(_ completed: UUID) {
         guard completed == token, state != .idle else { return }
         token = UUID(); index += 1; paragraphID = nil
-        guard index < queue.count else { stop(); return }
+        guard index < queue.count else {
+            let last = queue.last?.id
+            stop(); completedParagraphID = last
+            return
+        }
         guard state == .speaking else { return }
         do { try speakCurrent() } catch { interrupt() }
     }
