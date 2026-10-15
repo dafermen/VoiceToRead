@@ -42,3 +42,13 @@
 Las pruebas ya ejecutadas se registran en [inicio del proyecto](project-identity.md). Los reports/checkpoints anteriores son antecedentes del código base, no evidencia de aceptación de la identidad nueva.
 
 Decisión del titular (2026-10-14): gratuita, sin compras dentro de la app, Estados Unidos y Colombia. Falta aplicarla en App Store Connect. Ver [paquete de entrega](store/submission-kit.md).
+
+## Aceptación de voz traducida y lectura accesible — 2026-10-15
+
+- [ ] En iPhone/iPad reales, comprobar voz EN→ES y ES→EN con traducción corregida, por frase/completa y sin audio original.
+- [ ] Comprobar Pausar/Continuar/Detener, velocidades, resaltado, cambio de auriculares, alarma y salir de la pantalla; nada debe reanudarse sin acción explícita.
+- [ ] Comprobar una voz no disponible y preparación sin conexión; no confundir modelos de traducción y voces de síntesis.
+- [ ] Leer párrafos largos, desplazar hasta el final, girar, usar texto grande, anterior/repetir/siguiente, edición y opciones plegadas.
+- [ ] Deslizar izquierda: círculos de protección/eliminar; favorita bloquea borrar sesión/audio; quitar protección conserva datos y borrar exige confirmación aparte.
+- [ ] Recorrer controles con VoiceOver/Voice Control y probar con personas con discapacidad auditiva/baja visión, aprendices y adultos que acompañen a niños. No declarar accesibilidad integral solo por XCTest.
+- [ ] Nueva compilación Cloud y disponibilidad real en TestFlight; verificar la versión instalada antes de atribuir resultados a este cambio.

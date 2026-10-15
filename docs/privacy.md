@@ -13,6 +13,7 @@ Source data-flow description updated for optional recording and subtitles; statu
 | Preferences | Caption size, wake, appearance, paper/rules, selected capture language, remembered audio/background choices | App's UserDefaults domain |
 | Disk capacity | Checked for storage readiness and low-storage safeguard | Local value, not transmitted |
 | Export / Copy / Share | Only after user action | Destination chosen by user; may transmit or sync text, audio and subtitle files |
+| Translation speech | Explicit playback of corrected saved destination text through Apple AVSpeechSynthesizer; no recording/export of synthesized audio | Device voice; availability/download managed by Apple; no developer server |
 | Diagnostics | Microphone check shows volume only | Device memory |
 
 No account, analytics, advertising, tracking, OpenAI key, server endpoint or custom network client exists.

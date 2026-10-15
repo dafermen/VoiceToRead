@@ -21,9 +21,13 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Pause/resume with a prominent interruption notice. Reread previous paragraphs without automatic scrolling until you choose to follow again.
 - Optional saved microphone audio, noise reduction and background continuation. Recording always starts explicitly; background capture is opt-in.
 - Save/discard sessions, recover drafts, correct text, search transcripts, bookmark phrases and protect favorites from accidental deletion.
-- Replay continuously or one paragraph at a time with **At my pace**, correcting the selected phrase while paused.
+- Replay continuously or one paragraph at a time with **At my pace**: previous, repeat and next; correct the selected phrase while paused. The caption reader fills the available height; secondary playback options collapse.
 - Export TXT/PDF, recorded audio and synchronized SRT/WebVTT subtitles. Timing after text edits is approximate.
-- Translate saved sessions, review bilingual text, practice phrases and compare temporary pronunciation recordings. Local word recognition is not pronunciation scoring.
+- Translate saved sessions and **listen to the corrected translation**, by paragraph or in full, with English/Spanish Apple voices, pause/resume, stop and reading speed. The active paragraph is highlighted. This is generated speech, separate from the original recording, and needs an available device voice.
+- Swipe left on a saved session (or use its actions button) for circular favorite/protect and delete controls. Protected sessions cannot be deleted; removing protection and deleting require separate confirmations.
+- Review bilingual text, practice phrases and compare temporary pronunciation recordings. Local word recognition is not pronunciation scoring.
+
+See [accessible listening and reading](docs/translated-speech.md) for user steps, junior developer explanations, limits and acceptance checks.
 
 ## Requirements and limits
 

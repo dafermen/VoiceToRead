@@ -185,6 +185,8 @@ struct SessionMediaView: View {
     var translatedCues: [SubtitleCue]? = nil
     var translationLanguage: String? = nil
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+    private var compactPlayback: Bool { fullScreen || verticalSizeClass == .compact }
     @State private var player = SessionPlayer()
     @State private var audioURL: URL?
     @State private var cues: [SubtitleCue] = []
@@ -197,6 +199,7 @@ struct SessionMediaView: View {
     @State private var folder: URL?
     @State private var exportTask: Task<Void, Never>?
     @State private var fullScreen = false
+    @State private var showingOptions = false
     @State private var editing = false
     @State private var editingParagraph: ReviewParagraph?
     @State private var selectedParagraphID: UUID?
@@ -216,7 +219,7 @@ struct SessionMediaView: View {
         NavigationStack {
             VStack(spacing: 12) {
                 if audioURL != nil {
-                    if !fullScreen {
+                    if !compactPlayback {
                     Picker("Playback mode", selection: $atMyPace) {
                         Text("Continuous").tag(false)
                         Text("At my pace").tag(true)
@@ -230,10 +233,11 @@ struct SessionMediaView: View {
                             .padding().background(.black, in: RoundedRectangle(cornerRadius: 16))
                             .foregroundStyle(.white).accessibilityIdentifier("playbackCaption")
                         }.id(activeParagraphID)
-                            .frame(maxHeight: fullScreen ? .infinity : 160)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .accessibilityIdentifier("playbackCaptionScroll")
                             .background(.black, in: RoundedRectangle(cornerRadius: 16))
                     }
-                    if !fullScreen {
+                    if !compactPlayback {
                     Slider(value: Binding(get: { player.time }, set: { player.seek($0) }),
                            in: player.bounds)
                         .accessibilityLabel("Playback position")
@@ -244,8 +248,12 @@ struct SessionMediaView: View {
                         Text(SessionClock.format(atMyPace ? player.bounds.upperBound : player.duration)).monospacedDigit()
                     }.font(.caption).foregroundStyle(.secondary)
                     }
-                    HStack(spacing: fullScreen ? 20 : 28) {
+                    HStack(spacing: 8) {
                         if atMyPace {
+                            Button("Previous paragraph", systemImage: "backward.end.fill") {
+                                if let previousPlaybackParagraph { playParagraph(previousPlaybackParagraph) }
+                            }.disabled(previousPlaybackParagraph == nil)
+                                .accessibilityIdentifier("previousParagraphButton")
                             Button("Repeat paragraph", systemImage: "arrow.counterclockwise") {
                                 if let selectedParagraph { playParagraph(selectedParagraph) }
                             }.disabled(selectedParagraph == nil)
@@ -264,19 +272,26 @@ struct SessionMediaView: View {
                         }
                         Button("Subtitles", systemImage: captions ? "captions.bubble.fill" : "captions.bubble") { captions.toggle() }
                             .accessibilityValue(uiKey(captions ? "On" : "Off"))
-                        if fullScreen, let activeParagraphID {
+                        if compactPlayback, let activeParagraphID {
                             Button("Correct paragraph", systemImage: "pencil") { beginParagraphEdit(activeParagraphID) }
                                 .accessibilityIdentifier("editPlaybackParagraphButton")
                         }
                     }.labelStyle(.iconOnly).font(.title2).buttonStyle(PlaybackButtonStyle())
                         .frame(minHeight: 44)
-                    if !fullScreen, let activeParagraphID {
+                    if !compactPlayback, let activeParagraphID {
                         Button(uiKey(translatedCues != nil && translationLanguage != sessionSourceLanguage ? "Edit translation" : "Correct paragraph"), systemImage: "pencil") {
                             beginParagraphEdit(activeParagraphID)
                         }.frame(minHeight: 44).accessibilityIdentifier("editPlaybackParagraphButton")
                     }
                 }
                 if !fullScreen {
+                    if audioURL != nil {
+                    Button(uiKey(showingOptions ? "Hide playback options" : "Playback options"), systemImage: showingOptions ? "chevron.down" : "ellipsis.circle") {
+                        showingOptions.toggle()
+                    }.frame(minHeight: 44).accessibilityIdentifier("playbackOptionsButton")
+                        .accessibilityValue(uiKey(showingOptions ? "Expanded" : "Collapsed"))
+                    }
+                    if showingOptions || audioURL == nil {
                     List {
                         if audioURL == nil { Text("No audio saved for this session. Enable Save audio before starting your next session.") }
                         if translatedCues == nil {
@@ -291,7 +306,7 @@ struct SessionMediaView: View {
                         if audioURL != nil && !cues.isEmpty {
                             Section {
                                 if atMyPace {
-                                    Text("One paragraph at a time. Repeat it or choose Next when you are ready.")
+                                    Text("One paragraph at a time. Use Previous, Repeat or Next when you are ready.")
                                         .font(.caption).foregroundStyle(.secondary)
                                 }
                                 Button(uiKey(showingPhrases ? "Hide phrases" : "Listen by phrase"),
@@ -334,6 +349,8 @@ struct SessionMediaView: View {
                         }
                         if busy { HStack { ProgressView(); Text("Preparing files…") } }
                     }.listStyle(.insetGrouped).accessibilityIdentifier("mediaActionsList")
+                        .frame(maxHeight: audioURL == nil || !captions ? .infinity : compactPlayback ? 100 : 220)
+                    }
                 }
             }
             .padding(.horizontal)
@@ -429,6 +446,10 @@ struct SessionMediaView: View {
     }
 
     private var sessionSourceLanguage: String { (CaptureLanguage(rawValue: session.language) ?? .english).mode.rawValue }
+    private var previousPlaybackParagraph: PlaybackParagraph? {
+        guard let index = playbackParagraphs.firstIndex(where: { $0.id == selectedParagraphID }), index > 0 else { return nil }
+        return playbackParagraphs[index - 1]
+    }
     private var nextPlaybackParagraph: PlaybackParagraph? {
         guard let index = playbackParagraphs.firstIndex(where: { $0.id == selectedParagraphID }),
               index + 1 < playbackParagraphs.count else { return nil }
@@ -542,10 +563,11 @@ enum RecordingExport {
 }
 
 private struct PlaybackButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(minWidth: 44, minHeight: 44)
             .contentShape(Rectangle())
-            .opacity(configuration.isPressed ? 0.5 : 1)
+            .opacity(isEnabled ? (configuration.isPressed ? 0.5 : 1) : 0.3)
     }
 }

@@ -5,6 +5,68 @@ import SwiftData
 @MainActor
 final class TranslationTests: XCTestCase {
 
+    func testSpokenTranslationUsesCorrectedDestinationAndRejectsStaleSource() {
+        let id = UUID()
+        let source = [ReviewParagraph(id: id, text: "Hello")]
+        let saved = TranslationSnapshot(source: source, generated: [.init(id: id, text: "Hola")], edits: [id.uuidString: "Buenos días"])
+        XCTAssertEqual(TranslationSpeechPlayer.paragraphs(snapshot: saved, source: source).map(\.text), ["Buenos días"])
+        XCTAssertTrue(TranslationSpeechPlayer.paragraphs(snapshot: saved, source: [.init(id: id, text: "Changed")]).isEmpty)
+        XCTAssertTrue(TranslationSpeechPlayer.paragraphs(snapshot: saved, source: source, id: UUID()).isEmpty)
+        let reverse = TranslationSnapshot(source: [.init(id: id, text: "Hola")], generated: source, sourceLocale: "es-ES")
+        XCTAssertEqual(TranslationSpeechPlayer.paragraphs(snapshot: reverse, source: reverse.source).map(\.text), ["Hello"])
+    }
+
+    func testSpeechQueuePauseResumeReplacementAndLateCompletion() throws {
+        let output = FakeTranslationSpeechOutput()
+        var releases = 0
+        let player = TranslationSpeechPlayer(output: output, activate: {}, deactivate: { releases += 1 })
+        let a = ReviewParagraph(id: UUID(), text: "Primera frase")
+        let b = ReviewParagraph(id: UUID(), text: "Segunda frase")
+        player.start([a, b], language: .spanish, speed: .slow)
+        let oldToken = try XCTUnwrap(output.tokens.last)
+        XCTAssertEqual(player.paragraphID, a.id)
+        XCTAssertEqual(output.languages, [.spanish])
+        XCTAssertEqual(output.rates, [TranslationSpeechSpeed.slow.rate])
+        player.togglePause(); XCTAssertEqual(player.state, .paused)
+        // Completion racing Pause must not start another paragraph until Resume.
+        output.onFinish?(oldToken)
+        XCTAssertEqual(output.texts.count, 1)
+        player.togglePause()
+        XCTAssertEqual(player.state, .speaking)
+        XCTAssertEqual(player.paragraphID, b.id)
+        XCTAssertEqual(output.texts, [a.text, b.text])
+        player.togglePause(); player.togglePause()
+        XCTAssertEqual(output.resumeCount, 1)
+        player.start([a], language: .english, speed: .fast)
+        let newToken = try XCTUnwrap(output.tokens.last)
+        output.onFinish?(oldToken)
+        XCTAssertEqual(player.paragraphID, a.id, "Old utterances cannot advance a replacement queue")
+        XCTAssertEqual(output.languages.last, .english)
+        output.onFinish?(newToken)
+        XCTAssertEqual(player.state, .idle)
+        XCTAssertNil(player.paragraphID)
+        XCTAssertEqual(releases, 2)
+    }
+
+    func testSpeechInterruptionCloseEmptyAndMissingVoiceReleaseAudio() {
+        let output = FakeTranslationSpeechOutput()
+        var activations = 0; var releases = 0
+        let player = TranslationSpeechPlayer(output: output, activate: { activations += 1 }, deactivate: { releases += 1 })
+        let paragraph = ReviewParagraph(id: UUID(), text: "Hello")
+        player.start([.init(id: UUID(), text: "  ")], language: .english, speed: .normal)
+        XCTAssertEqual(activations, 0)
+        player.start([paragraph], language: .english, speed: .normal)
+        player.interrupt()
+        XCTAssertEqual(player.state, .idle); XCTAssertNotNil(player.message)
+        XCTAssertEqual(releases, 1)
+        player.close(); XCTAssertEqual(releases, 1, "Idle cleanup must not deactivate another audio owner")
+        output.failure = TranslationSpeechFailure.voiceUnavailable
+        player.start([paragraph], language: .english, speed: .normal)
+        XCTAssertEqual(player.state, .idle)
+        XCTAssertEqual(player.message, TranslationSpeechFailure.voiceUnavailable.localizedDescription)
+        XCTAssertEqual(releases, 2)
+    }
+
     func testOldPayloadDefaultsToEnglishAndReverseSubtitlesKeepTimes() throws {
         let id = UUID()
         let source = [ReviewParagraph(id: id, text: "Hola mundo")]
@@ -255,4 +317,23 @@ final class TranslationTests: XCTestCase {
         XCTAssertNotNil(try migrated.media(for: id))
         XCTAssertNil(try migrated.translation(for: id))
     }
+}
+
+/// Deliberate test double: tests state transitions and text selection, not voice quality.
+@MainActor
+private final class FakeTranslationSpeechOutput: TranslationSpeechOutput {
+    var onFinish: ((UUID) -> Void)?
+    var texts: [String] = []
+    var tokens: [UUID] = []
+    var languages: [CaptureLanguage] = []
+    var rates: [Float] = []
+    var resumeCount = 0
+    var failure: Error?
+    func speak(_ text: String, language: CaptureLanguage, rate: Float, token: UUID) throws {
+        if let failure { throw failure }
+        texts.append(text); tokens.append(token); languages.append(language); rates.append(rate)
+    }
+    func pause() -> Bool { true }
+    func resume() -> Bool { resumeCount += 1; return true }
+    func stop() {}
 }

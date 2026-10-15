@@ -1,6 +1,6 @@
 # Preparación de App Store — VoiceToRead
 
-Actualizado 2026-10-14 · paquete de preparación, **no enviado a App Review**. Fuente 1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Registro confirmado por captura del titular: Apple ID **6822564230**, SKU `voicetoread-ios-001`, estado **1.0 Prepare for Submission**. Versión fuente alineada; falta un nuevo archivo apto para distribución pública. Bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
+Actualizado 2026-10-15 · paquete de preparación, **no enviado a App Review**. Fuente 1.0 (1); evidencia actual en [inicio del proyecto](project-identity.md). Registro confirmado por captura del titular: Apple ID **6822564230**, SKU `voicetoread-ios-001`, estado **1.0 Prepare for Submission**. Versión fuente alineada; falta un nuevo archivo apto para distribución pública. Bundle `com.innovalogic.voicetoread`, equipo `7799N4RYUG`. Conservar esta identidad y sus sesiones.
 
 ## Material preparado
 
@@ -51,3 +51,5 @@ La web está preparada con privacidad, soporte, seguridad y accesibilidad EN/ES.
 URLs previstas: `https://voicetoread.innovalogic.tech/privacy/` y `https://voicetoread.innovalogic.tech/support/`. El certificado consultado no cubría el subdominio; resolverlo en hPanel antes de usar esas URLs. Tras verificar publicación, actualizar metadata y enlazar/sincronizar la política dentro de la app. No se modificó el binario ni se envió a revisión en esta tarea.
 
 Paquete práctico con campos y orden de entrega: [submission-kit.md](store/submission-kit.md).
+
+Nueva entrega de lectura accesible: [voz traducida y controles](translated-speech.md). Los textos EN/ES y notas del revisor se actualizaron como borrador; validar el nuevo binario y comparar capturas antes de publicar.

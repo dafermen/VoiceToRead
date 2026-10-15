@@ -1,6 +1,12 @@
 # VoiceToRead para estudiantes y desarrolladores junior
 
-Estado actual: **VoiceToRead 0.1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
+Estado actual: **VoiceToRead 1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
+
+## Lectura accesible de traducciones (15 de octubre de 2026)
+
+La nueva [guía de voz traducida](translated-speech.md) explica la cola de párrafos corregidos, el sintetizador Apple, los estados de pausa y los tokens que rechazan respuestas antiguas. Incluye pasos para escuchar sin grabación, navegación anterior/siguiente, protección al deslizar y límites de accesibilidad. Estas decisiones buscan apoyar a personas con discapacidad auditiva o baja visión, usuarios que aún no dominan un idioma y niños acompañados por adultos; no solo añadir botones.
+
+Ejercicio: guarda una traducción corregida sin audio, escúchala, pausa justo cuando termina un párrafo y reanuda. Explica por qué el controlador no debe avanzar mientras está pausado y por qué no se debe leer el texto original al elegir Ambos. Después protege una sesión y demuestra que el repositorio rechaza su eliminación aunque alguien evite la interfaz.
 
 ## Build 22: filtrar antes de repartir el audio
 
@@ -21,7 +27,7 @@ Ejercicio: crear sesión en español, pausar, intentar cambiar idioma, reanudar 
 
 ## 1. Qué problema resuelve
 
-VoiceToRead convierte voz en inglés captada por el micrófono del iPhone en texto legible. Está pensada para clases, reuniones, conferencias y otras situaciones en las que conviene leer lo que se escucha.
+VoiceToRead convierte voz en inglés o español captada por el micrófono del iPhone/iPad en texto legible. Está pensada para clases, reuniones, conferencias y otras situaciones en las que conviene leer lo que se escucha.
 
 El usuario puede ampliar la lectura, girar el teléfono, pausar, guardar una sesión, marcar frases y corregir palabras antes de compartir. Si activa la grabación antes de empezar, también puede conservar audio, reproducirlo y exportar subtítulos.
 

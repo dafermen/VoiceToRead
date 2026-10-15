@@ -57,6 +57,97 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testLongPlaybackParagraphScrollsAndPreviousRestoresIt() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-long-paragraph"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        app.staticTexts["Review sample"].tap()
+        app.buttons["sessionMediaButton"].tap()
+        app.buttons["At my pace"].tap()
+        let reader = app.scrollViews["playbackCaptionScroll"]
+        XCTAssertTrue(reader.waitForExistence(timeout: 8))
+        XCTAssertGreaterThan(reader.frame.height, 180)
+        let text = app.staticTexts["playbackCaption"]
+        XCTAssertTrue(text.label.hasSuffix("End of long paragraph."))
+        let originalY = text.frame.minY
+        reader.swipeUp()
+        XCTAssertLessThan(text.frame.minY, originalY, "A long paragraph must scroll inside the expanded reader")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Long-paragraph-expanded-reader"; shot.lifetime = .keepAlways; add(shot)
+        app.buttons["nextParagraphButton"].tap()
+        XCTAssertTrue(text.label.contains("Paragraph 2"))
+        app.buttons["previousParagraphButton"].tap()
+        XCTAssertTrue(text.label.hasPrefix("Start of long paragraph."))
+        XCTAssertFalse(app.buttons["previousParagraphButton"].isEnabled)
+        app.terminate()
+    }
+
+    @MainActor
+    func testSwipeActionsProtectBeforeDeleting() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        let row = app.staticTexts["Review sample"]
+        row.swipeLeft()
+        let protect = app.buttons["protectSessionAction"]
+        XCTAssertTrue(protect.waitForExistence(timeout: 5))
+        let delete = app.buttons["deleteSessionAction"]
+        XCTAssertTrue(delete.isEnabled)
+        protect.tap()
+        XCTAssertFalse(delete.isEnabled)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Protected-circular-actions"; shot.lifetime = .keepAlways; add(shot)
+        protect.tap()
+        app.buttons["confirmRemoveSessionProtection"].tap()
+        XCTAssertTrue(delete.isEnabled)
+        XCTAssertTrue(row.exists, "Removing protection must preserve the session")
+        delete.tap()
+        app.buttons["confirmDeleteSession"].tap()
+        XCTAssertFalse(row.waitForExistence(timeout: 2))
+    }
+
+    @MainActor
+    func testTranslationSpeechWithoutRecordingEnglishToSpanish() throws { try checkTranslationSpeech(reverse: false) }
+    @MainActor
+    func testTranslationSpeechWithoutRecordingSpanishToEnglish() throws { try checkTranslationSpeech(reverse: true) }
+    @MainActor
+    private func checkTranslationSpeech(reverse: Bool) throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-translation"]
+        if reverse { app.launchArguments.append("--ui-test-spanish") }
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        app.staticTexts["Review sample"].tap()
+        app.buttons["sessionTranslationButton"].tap()
+        let all = app.buttons["speakFullTranslation"]
+        XCTAssertTrue(all.waitForExistence(timeout: 8))
+        XCTAssertTrue(app.buttons["speakTranslation-0"].exists)
+        XCTAssertFalse(app.buttons["listenTranslated-0"].exists, "This fixture has no original audio")
+        all.tap()
+        let pause = app.buttons["pauseTranslationSpeech"]
+        XCTAssertTrue(pause.waitForExistence(timeout: 8))
+        pause.tap()
+        XCTAssertEqual(pause.label, "Resume translation")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = reverse ? "Translation-speech-English-paused" : "Translation-speech-Spanish-paused"
+        shot.lifetime = .keepAlways; add(shot)
+        pause.tap()
+        XCTAssertEqual(pause.label, "Pause translation")
+        app.buttons["stopTranslationSpeech"].tap()
+        XCTAssertTrue(all.exists)
+        app.buttons["speakTranslation-0"].tap()
+        XCTAssertTrue(pause.waitForExistence(timeout: 3))
+        app.buttons["editSpanishButton"].tap()
+        XCTAssertFalse(pause.exists, "Editing must stop synthesized audio")
+        app.terminate()
+    }
+
+    @MainActor
     func testLiveBilingualEnglishCapture() throws { try checkLiveBilingual(spanish: false) }
 
     @MainActor
@@ -125,6 +216,8 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["sessionMediaButton"].tap()
         XCTAssertTrue(app.buttons["At my pace"].waitForExistence(timeout: 5))
         app.buttons["At my pace"].tap()
+        XCTAssertFalse(app.buttons["previousParagraphButton"].isEnabled)
+        XCTAssertGreaterThan(app.scrollViews["playbackCaptionScroll"].frame.height, 180)
         app.buttons["recordingPlayButton"].tap()
         expectation(for: NSPredicate(format: "label == 'Play'"), evaluatedWith: app.buttons["recordingPlayButton"])
         waitForExpectations(timeout: 8)
@@ -143,6 +236,10 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["nextParagraphButton"].tap()
         expectation(for: NSPredicate(format: "label CONTAINS 'Paragraph 2'"), evaluatedWith: caption)
         waitForExpectations(timeout: 5)
+        XCTAssertTrue(app.buttons["previousParagraphButton"].isEnabled)
+        app.buttons["previousParagraphButton"].tap()
+        XCTAssertTrue(caption.label.contains("Acmee"))
+        XCTAssertFalse(app.buttons["previousParagraphButton"].isEnabled)
         app.buttons["Full screen"].tap()
         XCUIDevice.shared.orientation = .landscapeLeft
         defer { XCUIDevice.shared.orientation = .portrait }
@@ -154,6 +251,14 @@ final class HomeScreenTests: XCTestCase {
         landscape.name = "Pace-fullscreen-landscape"; landscape.lifetime = .keepAlways; add(landscape)
         app.buttons["Exit full screen"].tap()
         XCUIDevice.shared.orientation = .portrait
+        expectation(for: NSPredicate { _, _ in
+            app.frame.height > app.frame.width && app.buttons["playbackOptionsButton"].isHittable
+        }, evaluatedWith: app)
+        waitForExpectations(timeout: 8)
+        // iPad resizes the sheet after the device orientation event; wait for that animation.
+        Thread.sleep(forTimeInterval: 1)
+        app.buttons["playbackOptionsButton"].tap()
+        XCTAssertTrue(app.buttons["phraseListButton"].waitForExistence(timeout: 5))
         app.buttons["phraseListButton"].tap()
         // Protected audio cannot be deleted, even from the media screen.
         let delete = app.buttons["Delete audio, keep text"]
@@ -455,6 +560,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(play.label, "Play")
         XCTAssertTrue(app.staticTexts["playbackCaption"].exists)
         app.buttons["At my pace"].tap()
+        app.buttons["playbackOptionsButton"].tap()
         // Changing mode selects the paragraph at the current audio time. Explicitly choose the first.
         let firstPlaybackParagraph = app.buttons["listenPlaybackParagraph-0"]
         let playbackActions = app.collectionViews["mediaActionsList"]
@@ -712,8 +818,9 @@ final class HomeScreenTests: XCTestCase {
         waitForExpectations(timeout: 10)
         play.tap()
         XCTAssertEqual(play.label, "Play")
+        app.buttons["playbackOptionsButton"].tap()
         app.buttons["phraseListButton"].tap()
-        let cue = app.buttons["listenCue-0"]
+        let cue = app.buttons["listenPlaybackParagraph-0"]
         for _ in 0..<5 { if cue.isHittable { break }; app.swipeUp() }
         XCTAssertTrue(cue.isHittable)
         cue.tap()
@@ -750,6 +857,7 @@ final class HomeScreenTests: XCTestCase {
         landscape.name = "Media-Playback-Landscape"; landscape.lifetime = .keepAlways; add(landscape)
         app.buttons["Exit full screen"].tap()
         XCUIDevice.shared.orientation = .portrait
+        app.buttons["playbackOptionsButton"].tap()
         app.buttons["editMediaTranscriptButton"].tap()
         XCTAssertTrue(app.buttons["editParagraph-1"].waitForExistence(timeout: 5))
         app.buttons["editParagraph-1"].tap()

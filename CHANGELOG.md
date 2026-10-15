@@ -1,3 +1,12 @@
+## VoiceToRead 1.0 — lectura accesible y voz traducida (2026-10-15)
+
+- Lee traducciones corregidas EN↔ES por párrafo o completas, incluso sin grabación original; voz Apple, velocidad, pausa/continuar/detener y resaltado del párrafo activo.
+- Evita reproducción automática: detiene la voz al editar, abrir otro audio, salir o recibir interrupciones. No agrega doblaje ni exportación de voz sintética.
+- Amplía el visor desplazable de subtítulos y pliega opciones secundarias; añade frase anterior a A mi ritmo.
+- Reúne protección y borrado en dos círculos al deslizar a la izquierda, con alternativa por botón/VoiceOver; mantiene confirmaciones y la protección del repositorio.
+- Actualiza guías de proyecto, GitHub y estudiantes con apoyo a discapacidad auditiva/baja visión, comprensión de nuevos idiomas y práctica infantil acompañada.
+- Resultados y limitaciones: [checkpoint](docs/translated-speech-checkpoint.md). Disponibilidad en TestFlight/App Store pendiente de distribución.
+
 ## VoiceToRead 1.0 — preparación de publicación (2026-10-14)
 
 - Alinea la versión fuente con la ficha pública 1.0; conserva bundle ID, firma configurada y datos existentes.

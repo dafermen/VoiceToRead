@@ -60,3 +60,7 @@ El titular confirmó el 2026-10-14 que VoiceToRead ya se instaló desde TestFlig
 Xcode 15.2 local no compila la rama moderna de Translation. Estas pruebas no certifican el SDK actual de distribución, precisión del reconocimiento, traducción real, firma ni aceptación física 1.0. El responsable eligió gratis sin compras y Estados Unidos/Colombia; esas opciones aún deben aplicarse en Apple. No hubo envío a App Review ni modificación autenticada de la ficha.
 
 Capturas finales de iPhone: `build/store-iphone-20261014-072025/Tests.xcresult`, ambos recorridos aprobados. Se revisaron visualmente 12 candidatos (biblioteca, lectura y edición; EN/ES; iPhone/iPad). JPEG sin alfa: iPhone 1179 × 2556, iPad 2048 × 2732. Archivos en `docs/store/screenshots/`; paquete regenerable en `build/app-store/VoiceToRead-AppStore-1.0.zip`. No incluye capturas sintéticas de traducción.
+
+## Lectura accesible — 2026-10-15
+
+Fuente 1.0 (1), sin migración de datos ni cambio de identidad. Añade voz de traducción, visor ampliado, frase anterior y acciones circulares de sesiones. Detalles y evidencia: [guía](translated-speech.md) / [checkpoint](translated-speech-checkpoint.md). No implica un envío a revisión ni una actualización instalada.

@@ -524,3 +524,28 @@
 "Opening our website uses Hostinger hosting, which may process connection data such as IP addresses and technical logs. The website has no added analytics, advertising or tracking cookies. The public policy explains these services separately from the app's local processing." = "Opening our website uses Hostinger hosting, which may process connection data such as IP addresses and technical logs. The website has no added analytics, advertising or tracking cookies. The public policy explains these services separately from the app's local processing.";
 "Last updated: October 14, 2026." = "Last updated: October 14, 2026.";
 "dariofernandomeneses@gmail.com" = "dariofernandomeneses@gmail.com";
+
+/* Accessible translation speech, reading area and protected session actions. */
+"A voice for this language is unavailable. Download an English or Spanish voice in device Settings → Accessibility → Spoken Content → Voices, then try again." = "A voice for this language is unavailable. Download an English or Spanish voice in device Settings → Accessibility → Spoken Content → Voices, then try again.";
+"Translation audio could not start. Please try again." = "Translation audio could not start. Please try again.";
+"Translation reading stopped. Tap a speaker when you are ready to listen again." = "Translation reading stopped. Tap a speaker when you are ready to listen again.";
+"Slow" = "Slow";
+"Normal" = "Normal";
+"Fast" = "Fast";
+"Translation reading paused" = "Translation reading paused";
+"Reading translation" = "Reading translation";
+"Listen to translation" = "Listen to translation";
+"Listen to full translation" = "Listen to full translation";
+"Generated voice · translation only" = "Generated voice · translation only";
+"Resume translation" = "Resume translation";
+"Pause translation" = "Pause translation";
+"Stop translation" = "Stop translation";
+"Reading speed" = "Reading speed";
+"Previous paragraph" = "Previous paragraph";
+"Hide playback options" = "Hide playback options";
+"Playback options" = "Playback options";
+"One paragraph at a time. Use Previous, Repeat or Next when you are ready." = "One paragraph at a time. Use Previous, Repeat or Next when you are ready.";
+"Swipe left on a session, or tap its actions button, to protect or delete it." = "Swipe left on a session, or tap its actions button, to protect or delete it.";
+"Save the draft before protecting it." = "Save the draft before protecting it.";
+"Favorites protect the session and its audio." = "Favorites protect the session and its audio.";
+"Requires confirmation." = "Requires confirmation.";

@@ -104,7 +104,9 @@ struct AppRootView: View {
                 let run = UUID()
                 var segments: [CaptionSegment] = []
                 for index in 1...80 {
-                    let text: String = index == 1
+                    let text: String = index == 1 && ProcessInfo.processInfo.arguments.contains("--ui-test-long-paragraph")
+                        ? "Start of long paragraph. " + String(repeating: "Take your time to read this sentence and understand the conversation. ", count: 40) + "End of long paragraph."
+                        : index == 1
                         ? "Acmee makes captions useful. Acmee keeps words clear. Acmees stays unchanged."
                         : "Paragraph \(index). Reading, reviewing and sharing should be simple. Keep the original words safe while correcting a transcript."
                     segments.append(CaptionSegment(runID: run, start: Double(index), end: Double(index + 1), text: spanishSample ? "Hola mundo. Aprendemos juntos." : text))

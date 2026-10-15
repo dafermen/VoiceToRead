@@ -12,6 +12,9 @@ struct SessionTranslationView: View {
     let repository: TranscriptRepository
     var searchQuery = ""
     @Environment(\.dismiss) private var dismiss
+    @State private var speech = TranslationSpeechPlayer()
+    @AppStorage("translationSpeechSpeed") private var speechSpeed = TranslationSpeechSpeed.normal
+    @Environment(\.scenePhase) private var phase
     @State private var source: [ReviewParagraph] = []
     @State private var snapshot: TranslationSnapshot?
     @State private var mode: TranscriptLanguage = .spanish
@@ -61,6 +64,7 @@ struct SessionTranslationView: View {
                     ForEach(TranscriptLanguage.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }.pickerStyle(.segmented).padding().accessibilityIdentifier("translationLanguagePicker")
                 status.padding(.horizontal)
+                if current && mode != language.mode { speechControls.padding(.horizontal) }
                 ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: 20) {
@@ -69,15 +73,31 @@ struct SessionTranslationView: View {
                                 Text(paragraph.text).font(.title2).textSelection(.enabled)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .accessibilityIdentifier("translatedParagraph-\(index)")
+                                if speech.paragraphID == paragraph.id {
+                                    Label(uiKey(speech.state == .paused ? "Translation reading paused" : "Reading translation"), systemImage: "speaker.wave.2.fill")
+                                        .font(.caption.weight(.semibold))
+                                }
+                                if current && mode != language.mode {
+                                    Button("Listen to translation", systemImage: "speaker.wave.2.fill") { speak(id: paragraph.id) }
+                                        .frame(minHeight: 44).disabled(job != nil || preparing)
+                                        .accessibilityIdentifier("speakTranslation-\(index)")
+                                }
                                 if audioDuration != nil && cues.contains(where: { $0.paragraphID == paragraph.id }) {
                                     Button("Listen to original", systemImage: "play.circle") {
-                                        playback = TranslationPlayback(paragraphID: paragraph.id)
+                                        speech.stop(); playback = TranslationPlayback(paragraphID: paragraph.id)
                                     }.font(.caption).disabled(job != nil || preparing)
                                         .accessibilityIdentifier("listenTranslated-\(index)")
                                 }
-                            }.id(paragraph.id)
+                            }
+                            .padding(10)
+                            .background(speech.paragraphID == paragraph.id ? Color.accentColor.opacity(0.15) : Color.clear,
+                                        in: RoundedRectangle(cornerRadius: 12))
+                            .id(paragraph.id)
                         }
                     }.padding()
+                }
+                .onChange(of: speech.paragraphID) { _, id in
+                    if let id { proxy.scrollTo(id, anchor: .top) }
                 }
                 .onChange(of: displayed) { _, values in
                     if !searchQuery.isEmpty, let match = values.first(where: { $0.text.localizedStandardContains(searchQuery) }) {
@@ -91,11 +111,11 @@ struct SessionTranslationView: View {
             .navigationTitle("Translation").navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Done") { job = nil; dismiss() }
+                    Button("Done") { speech.close(); job = nil; dismiss() }
                 }
                 ToolbarItem(placement: .primaryAction) {
                     if current {
-                        Button("Edit \(language.opposite.name)", systemImage: "pencil") { editing = true }
+                        Button("Edit \(language.opposite.name)", systemImage: "pencil") { speech.stop(); editing = true }
                             .disabled(job != nil || preparing).accessibilityIdentifier("editSpanishButton")
                     }
                 }
@@ -115,7 +135,10 @@ struct SessionTranslationView: View {
                     }.id(job.id)
                 }
             }
-            .task { load() }
+            .task { load(); speech.observeInterruptions() }
+            .onChange(of: mode) { _, _ in speech.stop() }
+            .onChange(of: speechSpeed) { _, _ in speech.stop() }
+            .onChange(of: phase) { _, value in if value != .active { speech.interrupt() } }
             .sheet(isPresented: $editing) {
                 if let snapshot {
                     TranscriptEditorView(originals: snapshot.generated, reviewed: snapshot.translated,
@@ -146,8 +169,43 @@ struct SessionTranslationView: View {
             .alert("Translation", isPresented: Binding(get: { failure != nil }, set: { if !$0 { failure = nil } })) {
                 Button("OK") { failure = nil }
             } message: { Text(LocalizedStringKey(failure ?? "")) }
-            .onDisappear { job = nil; exportTask?.cancel(); if share == nil { cleanup() } }
+            .onDisappear { speech.close(); job = nil; exportTask?.cancel(); if share == nil { cleanup() } }
         }
+    }
+
+    private func speak(id: UUID? = nil) {
+        guard current, job == nil, !preparing else { return }
+        speech.start(TranslationSpeechPlayer.paragraphs(snapshot: snapshot, source: source, id: id),
+                     language: language.opposite, speed: speechSpeed)
+    }
+
+    private var speechControls: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            ViewThatFits(in: .horizontal) {
+                HStack { speechButtons }
+                VStack(alignment: .leading) { speechButtons }
+            }
+            Text("Generated voice · translation only").font(.caption).foregroundStyle(.secondary)
+            if let message = speech.message {
+                Text(LocalizedStringKey(message)).font(.callout).accessibilityIdentifier("translationSpeechMessage")
+            }
+        }
+    }
+    @ViewBuilder private var speechButtons: some View {
+        if speech.state == .idle {
+            Button("Listen to full translation", systemImage: "speaker.wave.2.fill") { speak() }
+                .disabled(job != nil || preparing || TranslationSpeechPlayer.paragraphs(snapshot: snapshot, source: source).isEmpty)
+                .frame(minHeight: 44).accessibilityIdentifier("speakFullTranslation")
+        } else {
+            Button(uiKey(speech.state == .paused ? "Resume translation" : "Pause translation"),
+                   systemImage: speech.state == .paused ? "play.fill" : "pause.fill") { speech.togglePause() }
+                .frame(minHeight: 44).accessibilityIdentifier("pauseTranslationSpeech")
+            Button("Stop translation", systemImage: "stop.fill") { speech.stop() }
+                .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44).accessibilityIdentifier("stopTranslationSpeech")
+        }
+        Picker("Reading speed", selection: $speechSpeed) {
+            ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        }.pickerStyle(.menu).accessibilityIdentifier("translationReadingSpeed")
     }
 
     @ViewBuilder private var status: some View {
@@ -178,16 +236,16 @@ struct SessionTranslationView: View {
     private var controls: some View {
         HStack {
             Button(uiKey(current ? "Translate again" : snapshot == nil ? "Translate to \(language.opposite.name)" : "Update changed paragraphs"), systemImage: "character.bubble") {
-                if current { replacing = true } else { start() }
+                speech.stop(); if current { replacing = true } else { start() }
             }.disabled(!canTranslate || !loaded || source.allSatisfy { $0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty } || job != nil || preparing)
                 .accessibilityIdentifier("translateSpanishButton")
             Spacer()
             if current {
-                Button("Audio & subtitles", systemImage: "captions.bubble") { playback = TranslationPlayback(paragraphID: nil) }
+                Button("Audio & subtitles", systemImage: "captions.bubble") { speech.stop(); playback = TranslationPlayback(paragraphID: nil) }
                     .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
                     .disabled(job != nil || preparing).accessibilityIdentifier("translatedMediaButton")
             }
-            Button("Share", systemImage: "square.and.arrow.up") { exportMenu = true }
+            Button("Share", systemImage: "square.and.arrow.up") { speech.stop(); exportMenu = true }
                 .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
                 .disabled(!loaded || displayed.isEmpty || job != nil || preparing)
                 .accessibilityIdentifier("shareTranslationButton")
@@ -231,6 +289,7 @@ struct SessionTranslationView: View {
 
     private func start(replaceAll: Bool = false) {
         guard canTranslate, job == nil else { return }
+        speech.stop()
         progress = 0
         let plan = IncrementalTranslation(source: source, previous: replaceAll ? nil : snapshot, language: language)
         if plan.pending.isEmpty {

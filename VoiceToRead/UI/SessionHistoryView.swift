@@ -12,6 +12,8 @@ struct SessionHistoryView: View {
     @Query private var translations: [SessionTranslation]
     @Query private var favorites: [SessionFavorite]
     @State private var onlyFavorites = false
+    @State private var actionsSessionID: UUID?
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var unprotecting: ConferenceSession?
     @State private var query = ""
     @State private var deleting: ConferenceSession?
@@ -37,6 +39,8 @@ struct SessionHistoryView: View {
                 Text("All sessions").tag(false)
                 Text("Favorites").tag(true)
             }.pickerStyle(.segmented).accessibilityIdentifier("sessionFavoritesFilter")
+            Text("Swipe left on a session, or tap its actions button, to protect or delete it.")
+                .font(.caption).foregroundStyle(.secondary)
             if onlyFavorites {
                 Text("Favorites protect sessions and audio from accidental deletion. They are not backups; export a copy to keep elsewhere.")
                     .font(.caption).foregroundStyle(.secondary)
@@ -70,18 +74,21 @@ struct SessionHistoryView: View {
         }
         .searchable(text: $query, prompt: "Titles, English or Spanish")
         .navigationTitle("Sessions")
+        .onChange(of: onlyFavorites) { _, _ in actionsSessionID = nil }
+        .onChange(of: query) { _, _ in actionsSessionID = nil }
         .confirmationDialog(uiKey("Remove favorite protection?"), isPresented: Binding(
             get: { unprotecting != nil }, set: { if !$0 { unprotecting = nil } }), titleVisibility: .visible) {
                 Button("Remove protection", role: .destructive) {
                     if let unprotecting { setFavorite(false, session: unprotecting) }
                     unprotecting = nil
-                }
+                }.accessibilityIdentifier("confirmRemoveSessionProtection")
                 Button("Cancel", role: .cancel) { unprotecting = nil }
             } message: { Text("The session stays saved. Deleting it later will require a separate confirmation.") }
         .confirmationDialog(uiKey("Delete this session permanently?"), isPresented: Binding(
             get: { deleting != nil }, set: { if !$0 { deleting = nil } }), titleVisibility: .visible) {
                 Button("Delete", role: .destructive) {
                     if let deleting {
+                        guard !isFavorite(deleting) else { self.deleting = nil; return }
                         if coordinator.currentSession?.id == deleting.id {
                             Task { await coordinator.discardCurrent() }
                         } else {
@@ -90,7 +97,7 @@ struct SessionHistoryView: View {
                         }
                     }
                     deleting = nil
-                }
+                }.accessibilityIdentifier("confirmDeleteSession")
             }
         .alert("Storage problem", isPresented: Binding(
             get: { failure != nil }, set: { if !$0 { failure = nil } })) {
@@ -113,7 +120,10 @@ struct SessionHistoryView: View {
         }
     }
 
+    /// A horizontal gesture only reveals actions: deleting always needs a separate tap and confirmation.
+    /// The actions button and VoiceOver actions offer the same path without requiring a swipe.
     private func sessionLink(_ session: ConferenceSession) -> some View {
+        HStack(spacing: 8) {
         NavigationLink {
             SessionDetailView(session: session, repository: coordinator.repository,
                 canEdit: coordinator.currentSession?.id != session.id || coordinator.caption.state == .ended,
@@ -131,18 +141,69 @@ struct SessionHistoryView: View {
                 (session.endedAt == nil ? Text("Unfinished or interrupted session") : Text(verbatim: SessionClock.format(session.duration))).font(.caption)
             }
         }
-        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+        .accessibilityIdentifier("sessionRow-" + session.id.uuidString)
+        if actionsSessionID == session.id {
+            let draft = drafts.contains { $0.sessionID == session.id }
+            Button {
+                toggleProtection(session)
+            } label: {
+                Image(systemName: isFavorite(session) ? "lock.fill" : "star")
+                    .font(.title3.weight(.semibold)).foregroundStyle(.black)
+                    .frame(width: 48, height: 48).background(.yellow, in: Circle())
+            }
+            .buttonStyle(.plain).disabled(draft)
+            .accessibilityLabel(uiKey(isFavorite(session) ? "Remove protection" : "Favorite & protect"))
+            .accessibilityHint(uiKey(draft ? "Save the draft before protecting it." : "Favorites protect the session and its audio."))
+            .accessibilityIdentifier("protectSessionAction")
+            Button {
+                requestDeletion(session)
+            } label: {
+                Image(systemName: "trash")
+                    .font(.title3.weight(.semibold)).foregroundStyle(.white)
+                    .frame(width: 48, height: 48)
+                    .background(canDelete(session) ? Color.red : Color.gray, in: Circle())
+            }
+            .buttonStyle(.plain).disabled(!canDelete(session))
+            .accessibilityLabel("Delete")
+            .accessibilityHint(uiKey(isFavorite(session) ? "Remove protection before deleting the session or its audio." : "Requires confirmation."))
+            .accessibilityIdentifier("deleteSessionAction")
+        } else {
+            Button("Session actions", systemImage: "ellipsis.circle") { revealActions(session.id) }
+                .labelStyle(.iconOnly).buttonStyle(.plain).frame(width: 44, height: 44)
+                .accessibilityIdentifier("sessionActions-" + session.id.uuidString)
+        }
+        }
+        .contentShape(Rectangle())
+        .simultaneousGesture(DragGesture(minimumDistance: 25).onEnded { value in
+            guard abs(value.translation.width) > abs(value.translation.height) * 1.5 else { return }
+            if value.translation.width < -40 { revealActions(session.id) }
+            else if value.translation.width > 40 { revealActions(nil) }
+        })
+        .accessibilityElement(children: .contain)
+        .accessibilityActions {
+            Button("Session actions") { revealActions(session.id) }
             if !drafts.contains(where: { $0.sessionID == session.id }) {
-                Button(uiKey(isFavorite(session) ? "Remove protection" : "Favorite & protect"), systemImage: "star") {
-                    if isFavorite(session) { unprotecting = session } else { setFavorite(true, session: session) }
-                }.tint(.orange)
+                Button(uiKey(isFavorite(session) ? "Remove protection" : "Favorite & protect")) { toggleProtection(session) }
+            }
+            if canDelete(session) {
+                Button("Delete") { requestDeletion(session) }
             }
         }
-        .swipeActions(allowsFullSwipe: false) {
-            Button("Delete", role: .destructive) { deleting = session }
-                .disabled(isFavorite(session))
-                .disabled(coordinator.currentSession?.id == session.id && coordinator.caption.state != .ended)
-        }
+    }
+    private func revealActions(_ id: UUID?) {
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.2)) { actionsSessionID = id }
+    }
+    private func toggleProtection(_ session: ConferenceSession) {
+        guard !drafts.contains(where: { $0.sessionID == session.id }) else { return }
+        if isFavorite(session) { unprotecting = session }
+        else { setFavorite(true, session: session) }
+    }
+    private func canDelete(_ session: ConferenceSession) -> Bool {
+        !isFavorite(session) && !(coordinator.currentSession?.id == session.id && coordinator.caption.state != .ended)
+    }
+    private func requestDeletion(_ session: ConferenceSession) {
+        guard canDelete(session) else { return }
+        deleting = session
     }
 
 }

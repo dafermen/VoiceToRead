@@ -80,3 +80,6 @@ Ver [interfaz bilingüe y primera preparación](interface-and-onboarding.md). El
 ## Sitio público y políticas — VoiceToRead
 
 La web bilingüe se genera en `website/dist/`. La [guía de publicación y explicación para estudiantes](website-publication.md) cubre HTML/CSS, generación desde documentos, idiomas, validación, hPanel y SSL. El [README de la web](../website/README.md) contiene los comandos. Sitio preparado; subida y HTTPS públicos pendientes.
+
+- [Escuchar traducciones: guía de uso inclusivo y desarrollo](translated-speech.md)
+- [Validación y pendientes de voz traducida](translated-speech-checkpoint.md)

@@ -6,7 +6,7 @@ Fuente build 23 · 2026-10-12. Resultados y entrega: [checkpoint](pace-checkpoin
 
 1. Abre **Sesiones → una sesión → Audio y subtítulos**.
 2. Elige **A mi ritmo**. Pulsa reproducir para escuchar únicamente el párrafo elegido. El texto completo permanece visible después de terminar; puedes desplazarlo si es largo.
-3. **Repetir párrafo** vuelve al inicio; **Siguiente párrafo** reproduce el siguiente solo cuando lo solicitas. También puedes seleccionar otro en la lista. El último párrafo no avanza automáticamente.
+3. **Frase anterior** reproduce el anterior; **Repetir párrafo** vuelve al inicio; **Siguiente párrafo** reproduce el siguiente solo cuando lo solicitas. También puedes seleccionar otro en la lista de **Opciones de reproducción**. El lector aprovecha el alto disponible y las opciones se mantienen plegadas inicialmente. El último párrafo no avanza automáticamente.
 4. **Corregir párrafo** pausa la reproducción y abre directamente su texto. Guardar conserva la corrección; Cancelar permite descartar cambios. Al volver se conserva el párrafo, sin reproducción automática.
 5. **Continua** permite escuchar la grabación completa desde la posición elegida. Cambiar de modo pausa el audio. El modo se recuerda en este dispositivo.
 
@@ -16,7 +16,7 @@ Desde Traducción, la corrección en reproducción modifica el texto traducido s
 
 ## Favoritas
 
-En el detalle toca **Añadir a favoritas y proteger**. En Sesiones, el filtro **Favoritas** reúne las sesiones protegidas sin copiarlas ni mover sus grabaciones. También existe una acción al deslizar la fila.
+En el detalle toca **Añadir a favoritas y proteger**. En Sesiones, el filtro **Favoritas** reúne las sesiones protegidas sin copiarlas ni mover sus grabaciones. Al deslizar la fila hacia la izquierda aparecen dos círculos: favorita/proteger y eliminar. Eliminar queda gris y deshabilitado al proteger. El botón de opciones y las acciones de VoiceOver ofrecen acceso sin gesto.
 
 Mientras está protegida, no se puede borrar la sesión ni su audio. Para hacerlo, toca **Favorita protegida**, confirma **Quitar protección**, y después inicia y confirma el borrado por separado. Quitar protección no borra nada. Guarda primero un borrador de recuperación para poder protegerlo.
 
@@ -33,3 +33,5 @@ Ajustes/Settings y las otras pestañas se resuelven explícitamente con el idiom
 - `ParagraphEditorView`: reutiliza Undo/Redo y descarte; el callback puede lanzar un error. Solo cierra después de guardar correctamente.
 - `SessionFavorite`: tabla independiente añadida en esquema V8; V1–V7 no se redefinen. `requireUnprotected` se ejecuta antes de cualquier eliminación de archivo/modelo.
 - `@Query` actualiza biblioteca y protección del reproductor. No se usa un booleano de UI como única barrera de borrado.
+
+Voz sintetizada de traducciones y explicación inclusiva: [guía actual](translated-speech.md).

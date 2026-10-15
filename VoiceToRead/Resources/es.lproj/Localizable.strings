@@ -524,3 +524,28 @@
 "Opening our website uses Hostinger hosting, which may process connection data such as IP addresses and technical logs. The website has no added analytics, advertising or tracking cookies. The public policy explains these services separately from the app's local processing." = "Al abrir nuestra web se utiliza el alojamiento de Hostinger, que puede tratar datos de conexión como direcciones IP y registros técnicos. La web no añade analítica, publicidad ni cookies de seguimiento. La política pública explica estos servicios por separado del procesamiento local de la app.";
 "Last updated: October 14, 2026." = "Última actualización: 14 de octubre de 2026.";
 "dariofernandomeneses@gmail.com" = "dariofernandomeneses@gmail.com";
+
+/* Accessible translation speech, reading area and protected session actions. */
+"A voice for this language is unavailable. Download an English or Spanish voice in device Settings → Accessibility → Spoken Content → Voices, then try again." = "No hay una voz disponible para este idioma. Descarga una voz en inglés o español en Ajustes del dispositivo → Accesibilidad → Contenido leído → Voces y vuelve a intentarlo.";
+"Translation audio could not start. Please try again." = "No se pudo iniciar la voz de la traducción. Inténtalo de nuevo.";
+"Translation reading stopped. Tap a speaker when you are ready to listen again." = "Se detuvo la lectura de la traducción. Toca un altavoz cuando quieras volver a escuchar.";
+"Slow" = "Lenta";
+"Normal" = "Normal";
+"Fast" = "Rápida";
+"Translation reading paused" = "Lectura de traducción en pausa";
+"Reading translation" = "Leyendo traducción";
+"Listen to translation" = "Escuchar traducción";
+"Listen to full translation" = "Escuchar traducción completa";
+"Generated voice · translation only" = "Voz generada · solo la traducción";
+"Resume translation" = "Continuar traducción";
+"Pause translation" = "Pausar traducción";
+"Stop translation" = "Detener traducción";
+"Reading speed" = "Velocidad de lectura";
+"Previous paragraph" = "Frase anterior";
+"Hide playback options" = "Ocultar opciones de reproducción";
+"Playback options" = "Opciones de reproducción";
+"One paragraph at a time. Use Previous, Repeat or Next when you are ready." = "Un párrafo a la vez. Elige Anterior, Repetir o Siguiente cuando estés listo.";
+"Swipe left on a session, or tap its actions button, to protect or delete it." = "Desliza una sesión hacia la izquierda, o toca su botón de opciones, para protegerla o eliminarla.";
+"Save the draft before protecting it." = "Guarda el borrador antes de protegerlo.";
+"Favorites protect the session and its audio." = "Los favoritos protegen la sesión y su audio.";
+"Requires confirmation." = "Requiere confirmación.";
