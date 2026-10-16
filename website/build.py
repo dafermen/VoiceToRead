@@ -16,7 +16,7 @@ OUT = HERE / 'dist'
 BASE = 'https://voicetoread.innovalogic.tech'
 EMAIL = 'dariofernandomeneses@gmail.com'
 OWNER = 'Dario Fernando Meneses Ceron'
-DATE = '2026-10-13'
+DATE = '2026-10-15'
 PAGES = ('home', 'privacy', 'support', 'security', 'accessibility')
 COPY = {
     'es': {
@@ -42,7 +42,7 @@ COPY = {
         'accessText': 'Herramientas de lectura para apoyar a personas con dificultades auditivas o baja visión, y práctica de idiomas con acompañamiento adulto para niños. La disponibilidad de funciones depende del dispositivo y los modelos instalados.',
         'accessLink': 'Explora las opciones de accesibilidad',
         'limits': 'Los subtítulos y las traducciones pueden contener errores. Comprueba la información importante. VoiceToRead no sustituye la interpretación profesional ni los servicios de accesibilidad que necesites.',
-        'updated': 'Actualizado el 13 de octubre de 2026', 'onPage': 'En esta página',
+        'updated': 'Actualizado el 15 de octubre de 2026', 'onPage': 'En esta página',
         'privacyIntro': 'Qué información utiliza VoiceToRead, dónde permanece y qué puedes hacer con ella.',
         'supportIntro': 'Respuestas claras para empezar, recuperar una sesión y leer a tu ritmo.',
         'securityIntro': 'Cómo cuidar tus grabaciones y comunicar un problema de seguridad.',
@@ -74,7 +74,7 @@ COPY = {
         'accessText': 'Reading tools to support people with hearing loss or low vision, plus language practice for children with adult guidance. Feature availability depends on your device and installed models.',
         'accessLink': 'Explore accessibility options',
         'limits': 'Captions and translations may contain errors. Check important information. VoiceToRead does not replace professional interpretation or the accessibility services you need.',
-        'updated': 'Updated October 13, 2026', 'onPage': 'On this page',
+        'updated': 'Updated October 15, 2026', 'onPage': 'On this page',
         'privacyIntro': 'What information VoiceToRead uses, where it stays and the choices you have.',
         'supportIntro': 'Clear answers to help you start, recover a session and read at your own pace.',
         'securityIntro': 'How to look after your recordings and report a security concern.',
@@ -115,7 +115,10 @@ Email [dariofernandomeneses@gmail.com](mailto:dariofernandomeneses@gmail.com) wi
 The [privacy policy](/en/privacy/) explains storage, deletion, support and third-party services. Visit [Support](/en/support/) for help with common problems.'''
 }
 ACCESS = {
-'es': '''### Leer y escuchar a tu ritmo
+'es': '''### Opciones sencillas y recuperación
+Activa Modo sencillo o Mostrar nombres de los botones en Ajustes. Lectura enfocada mantiene un párrafo visible y espera tu decisión. Preparar VoiceToRead explica permisos e idiomas y ofrece una demostración sin grabar. Escribir una respuesta lee el texto elegido solo al pulsar Decir; no lo traduce ni lo guarda. Las sesiones guardadas eliminadas se pueden recuperar durante 30 días en Eliminados recientemente.
+
+### Leer y escuchar a tu ritmo
 VoiceToRead ofrece texto grande o en negrita, ajustes de interlineado, contraste alto, fondos claros y guías de lectura opcionales. Puedes usar pantalla completa y orientación vertical u horizontal en iPhone y iPad compatibles.
 
 En las sesiones guardadas, «A mi ritmo» reproduce un párrafo y espera a que elijas el siguiente. Puedes repetirlo, corregirlo y volver a leer sin avanzar automáticamente.
@@ -136,7 +139,10 @@ Las páginas usan títulos y enlaces descriptivos, etiquetas de idioma, navegaci
 
 ### Ayúdanos a detectar barreras
 Escribe a [dariofernandomeneses@gmail.com](mailto:dariofernandomeneses@gmail.com). Indica la pantalla o página, el dispositivo y la herramienta de accesibilidad que utilizas, si corresponde. No necesitas compartir un diagnóstico médico. Revisaremos tu caso para buscar una solución.''',
-'en': '''### Read and listen at your own pace
+'en': '''### Simple choices and recovery
+Enable Simple mode or Show button names in Settings. Focused reading keeps one paragraph visible and waits for your choice. Prepare VoiceToRead explains permissions and languages and offers a demonstration without recording. Write a response speaks your chosen text only when you tap Speak; it neither translates nor saves it. Deleted saved sessions can be recovered for 30 days in Recently deleted.
+
+### Read and listen at your own pace
 VoiceToRead offers larger or bold text, line spacing, high contrast, light backgrounds and optional reading guides. You can use fullscreen and portrait or landscape orientation on compatible iPhone and iPad devices.
 
 In saved sessions, At my pace plays one paragraph and waits for you to choose the next. You can repeat it, correct it and reread without automatically advancing.

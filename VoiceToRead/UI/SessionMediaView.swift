@@ -213,7 +213,8 @@ struct SessionMediaView: View {
     var translationLanguage: String? = nil
     @Environment(\.dismiss) private var dismiss
     @Environment(\.verticalSizeClass) private var verticalSizeClass
-    private var compactPlayback: Bool { fullScreen || verticalSizeClass == .compact }
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    private var compactPlayback: Bool { fullScreen || settings.focusedReading || verticalSizeClass == .compact }
     @State private var player = SessionPlayer()
     @State private var speech = TranslationSpeechPlayer()
     @State private var snapshot: TranslationSnapshot?
@@ -276,32 +277,16 @@ struct SessionMediaView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 8) {
-                if !compactPlayback { sourceSelectors }
-                if !compactPlayback { Picker("Playback mode", selection: $atMyPace) {
-                    Text("Continuous").tag(false)
-                    Text("At my pace").tag(true)
-                }.pickerStyle(.segmented).accessibilityIdentifier("playbackModePicker") }
-                reader
-                if busy { ProgressView("Preparing files…") }
-                playbackProgress
-                PlaybackTransport(playing: isPlaying, title: primaryLabel,
-                    previousEnabled: neighbor(-1) != nil, nextEnabled: neighbor(1) != nil,
-                    enabled: !audibleParagraphs.isEmpty,
-                    previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) })
-                HStack {
-                    if let activeParagraphID {
-                        Button(editLabel, systemImage: "pencil") { beginParagraphEdit(activeParagraphID) }
-                            .accessibilityIdentifier("editPlaybackParagraphButton")
+            Group {
+                if dynamicTypeSize.isAccessibilitySize {
+                    ScrollViewReader { proxy in
+                        ScrollView { playbackLayout }
+                            .onChange(of: selectedParagraphID) { _, _ in
+                                if settings.focusedReading { proxy.scrollTo("playback-reader-top", anchor: .top) }
+                            }
                     }
-                    Spacer()
-                    Button("Paragraphs", systemImage: "list.bullet") { showingPhrases = true }
-                        .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44).accessibilityIdentifier("openParagraphList")
-                    Button("Playback options", systemImage: "ellipsis.circle") { showingOptions = true }
-                        .accessibilityIdentifier("playbackOptionsButton")
-                }.font(.subheadline).frame(minHeight: 44)
+                } else { playbackLayout }
             }
-            .padding(.horizontal)
             .navigationTitle("Audio & subtitles").navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Done") { dismiss() } }
@@ -328,8 +313,10 @@ struct SessionMediaView: View {
                     try saveParagraph(paragraph, text: text)
                 }
             }
-            .task { reviewed = paragraphs; load() }
+            .task { reviewed = paragraphs; load(); if settings.focusedReading { atMyPace = true } }
+            .onChange(of: settings.focusedReading) { _, enabled in if enabled { atMyPace = true } }
             .onChange(of: atMyPace) { _, _ in
+                if settings.focusedReading && !atMyPace { settings.focusedReading = false }
                 if let id = activeParagraphID ?? audibleParagraphs.first?.id { selectParagraph(id) }
             }
             .onChange(of: speech.paragraphID) { _, id in if let id { selectedParagraphID = id } }
@@ -388,6 +375,35 @@ struct SessionMediaView: View {
         }
     }
 
+    private var playbackLayout: some View {
+        VStack(spacing: 8) {
+            if !compactPlayback { sourceSelectors }
+            if !compactPlayback { Picker("Playback mode", selection: $atMyPace) {
+                Text("Continuous").tag(false)
+                Text("At my pace").tag(true)
+            }.pickerStyle(.segmented).accessibilityIdentifier("playbackModePicker") }
+            reader.id("playback-reader-top")
+            if busy { ProgressView("Preparing files…") }
+            playbackProgress
+            PlaybackTransport(playing: isPlaying, title: primaryLabel,
+                previousEnabled: neighbor(-1) != nil, nextEnabled: neighbor(1) != nil,
+                enabled: !audibleParagraphs.isEmpty,
+                previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) })
+            (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout())) {
+                if let activeParagraphID {
+                    Button(editLabel, systemImage: "pencil") { beginParagraphEdit(activeParagraphID) }
+                        .frame(minHeight: 44).accessibilityIdentifier("editPlaybackParagraphButton")
+                }
+                Spacer()
+                Button("Paragraphs", systemImage: "list.bullet") { showingPhrases = true }
+                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44).accessibilityIdentifier("openParagraphList")
+                Button("Playback options", systemImage: "ellipsis.circle") { showingOptions = true }
+                    .frame(minHeight: 44).accessibilityIdentifier("playbackOptionsButton")
+            }.font(.subheadline).frame(minHeight: 44)
+        }
+        .padding(.horizontal)
+    }
+
     private var editLabel: LocalizedStringKey {
         uiKey(reading != language.mode && currentTranslation ? "Edit translation" : "Correct paragraph")
     }
@@ -435,12 +451,14 @@ struct SessionMediaView: View {
                     Text("Choose a paragraph, then tap Play.").padding()
                 }
             }.frame(maxWidth: .infinity, alignment: .leading).padding(4)
-        }.id(activeParagraphID).frame(maxWidth: .infinity, maxHeight: .infinity)
+        }.id(activeParagraphID).frame(maxWidth: .infinity,
+            minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
+            maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
             .accessibilityIdentifier("playbackCaptionScroll")
     }
     private var playbackProgress: some View {
         VStack(spacing: 4) {
-            HStack {
+            (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
                 if let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) {
                     Text("Paragraph \(index + 1) of \(reviewed.count)").accessibilityIdentifier("playbackParagraphPosition")
                 }
@@ -489,6 +507,9 @@ struct SessionMediaView: View {
                 }.accessibilityIdentifier("editMediaTranscriptButton")
             }
             Section("Reading preferences") {
+                Toggle("Focused reading", isOn: $settings.focusedReading)
+                Toggle("Show button names", isOn: $settings.showButtonNames)
+                Text("Focused reading keeps one paragraph visible. Use Previous or Next, then Play when you are ready.").font(.caption)
                 Slider(value: $settings.captionSize, in: 20...44, step: 2) { Text("Text size") }
                 Toggle("Bold captions", isOn: $settings.boldCaptions)
                 Toggle("High contrast", isOn: $settings.highContrast)
@@ -699,6 +720,7 @@ private struct PlaybackButtonStyle: ButtonStyle {
 /// Shared transport: identical geometry, ordering and accessible names for every audio source.
 enum PlaybackAudio: String { case original, translation }
 struct PlaybackTransport: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let playing: Bool
     let title: String
     let previousEnabled: Bool
@@ -708,16 +730,22 @@ struct PlaybackTransport: View {
     let toggle: () -> Void
     let next: () -> Void
     var body: some View {
-        HStack(spacing: 32) {
-            Button("Previous paragraph", systemImage: "backward.end.fill", action: previous)
+        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 16)) : AnyLayout(HStackLayout(spacing: 32))) {
+            Button("Previous", systemImage: "backward.end.fill", action: previous)
+                .accessibilityLabel("Previous paragraph")
+                .keyboardShortcut(.leftArrow, modifiers: .command)
                 .disabled(!previousEnabled).accessibilityIdentifier("previousParagraphButton")
             Button(LocalizedStringKey(title), systemImage: playing ? "pause.fill" : "play.fill", action: toggle)
-                .frame(width: 56, height: 56)
-                .background(Color.accentColor, in: Circle()).foregroundStyle(.white)
+                .accessibilityLabel(LocalizedStringKey(title))
+                .frame(minWidth: 56, minHeight: 56)
+                .padding(.horizontal, 8)
+                .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 28)).foregroundStyle(.white)
                 .disabled(!enabled).accessibilityIdentifier("recordingPlayButton")
-            Button("Next paragraph", systemImage: "forward.end.fill", action: next)
+            Button("Next", systemImage: "forward.end.fill", action: next)
+                .accessibilityLabel("Next paragraph")
+                .keyboardShortcut(.rightArrow, modifiers: .command)
                 .disabled(!nextEnabled).accessibilityIdentifier("nextParagraphButton")
-        }.labelStyle(.iconOnly).font(.title2).buttonStyle(PlaybackButtonStyle())
+        }.labelStyle(AccessibleControlLabelStyle()).font(.title2).buttonStyle(PlaybackButtonStyle())
             .frame(maxWidth: .infinity)
     }
 }
@@ -728,11 +756,12 @@ struct PlaybackTextCard: View {
     let settings: AppSettings
     var identifier = ""
     @Environment(\.colorScheme) private var cardScheme
+    @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
                 .font(.caption.weight(.semibold))
-            ReaderParagraph(text: text, points: settings.captionSize, spacing: settings.lineSpacing,
+            ReaderParagraph(text: text, points: settings.captionSize * textScale, spacing: settings.lineSpacing,
                             bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                 .textSelection(.enabled).accessibilityIdentifier(identifier)
         }.environment(\.colorScheme, !settings.highContrast && settings.readerPaper != .system ? .light : settings.colorScheme ?? cardScheme)

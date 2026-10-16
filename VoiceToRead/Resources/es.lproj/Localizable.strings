@@ -582,3 +582,109 @@
 "Exports use the original recording timeline, not the generated voice." = "Los archivos exportados siguen los tiempos de la grabación original, no los de la voz generada.";
 
 "Cancel translation" = "Cancelar traducción";
+
+"Accessibility and ease of use" = "Accesibilidad y facilidad de uso";
+
+"Simple mode" = "Modo sencillo";
+
+"Show button names" = "Mostrar nombres de los botones";
+
+"Vibrate when listening pauses" = "Vibrar cuando se pause la escucha";
+
+"Focused reading" = "Lectura enfocada";
+
+"Simple mode keeps essential actions visible. Focused reading shows one paragraph at a time and waits for you to continue." = "El modo sencillo mantiene visibles las acciones esenciales. La lectura enfocada muestra un párrafo a la vez y espera a que decidas continuar.";
+
+"Write a response" = "Escribir una respuesta";
+
+"Prepare VoiceToRead" = "Preparar VoiceToRead";
+
+"Later" = "Más tarde";
+
+"Resume recording" = "Reanudar grabación";
+
+"Not checked on this visit" = "Sin comprobar en esta visita";
+
+"Prepare once, then start when you are ready. Permission requests happen only when you choose the corresponding button. Recording never starts here." = "Prepara la app y empieza cuando estés listo. Los permisos se solicitan solo al pulsar su botón. Aquí nunca se inicia una grabación.";
+
+"See a short demonstration" = "Ver una demostración breve";
+
+"Translation preparation" = "Preparación de la traducción";
+
+"Translation is optional. Captions and recordings work without it. Apple may ask to download the selected languages." = "La traducción es opcional. Los subtítulos y las grabaciones funcionan sin ella. Apple puede solicitar descargar los idiomas seleccionados.";
+
+"Prepare translation" = "Preparar traducción";
+
+"Preparing translation…" = "Preparando traducción…";
+
+"Translation test succeeded" = "Prueba de traducción completada";
+
+"Demonstration · no recording" = "Demostración · sin grabación";
+
+"Step %lld of %lld" = "Paso %lld de %lld";
+
+"Quick guide" = "Guía rápida";
+
+"Tap the microphone when you are ready. Words will appear as the person speaks." = "Pulsa el micrófono cuando estés listo. Las palabras aparecerán mientras la persona habla.";
+
+"Pause stops listening temporarily. Resume continues only when you choose it." = "Pausar detiene la escucha temporalmente. Reanudar la continúa solo cuando tú lo decides.";
+
+"Stop finishes the recording and starts translation. Save keeps it; Discard permanently removes this draft." = "Detener finaliza la grabación e inicia la traducción. Guardar la conserva; Descartar elimina definitivamente este borrador.";
+
+"In Audio & subtitles, choose what to hear and what to read. Previous and Next select silently; Play starts the selected paragraph." = "En Audio y subtítulos, elige qué escuchar y qué leer. Anterior y Siguiente seleccionan sin sonido; Reproducir inicia el párrafo seleccionado.";
+
+"Write what you want to say. The voice reads exactly this text in the language you choose; it does not translate it." = "Escribe lo que quieras decir. La voz lee exactamente este texto en el idioma elegido; no lo traduce.";
+
+"Voice language" = "Idioma de la voz";
+
+"Your response" = "Tu respuesta";
+
+"Your response is not saved. It is cleared when you leave this screen." = "Tu respuesta no se guarda. Se borra al salir de esta pantalla.";
+
+"Pause or stop listening before speaking a response." = "Pausa o detén la escucha antes de reproducir una respuesta.";
+
+"Speak response" = "Decir respuesta";
+
+"Clear response" = "Borrar respuesta";
+
+"Response finished" = "Respuesta finalizada";
+
+"Speech interrupted. Tap Speak response to start again." = "Voz interrumpida. Pulsa Decir respuesta para empezar de nuevo.";
+
+"What would you like to do?" = "¿Qué quieres hacer?";
+
+"Listen now" = "Escuchar ahora";
+
+"My sessions" = "Mis sesiones";
+
+"Language practice" = "Practicar idioma";
+
+"Choose a saved session to practise its phrases. First record and save a session if your library is empty." = "Elige una sesión guardada para practicar sus frases. Si la biblioteca está vacía, primero graba y guarda una sesión.";
+
+"Recently deleted" = "Eliminados recientemente";
+
+"Moved to Recently deleted" = "Movida a Eliminados recientemente";
+
+"Remove this session?" = "¿Eliminar esta sesión?";
+
+"You can restore this session and its audio for 30 days in Recently deleted." = "Puedes restaurar esta sesión y su audio durante 30 días en Eliminados recientemente.";
+
+"Sessions and audio remain on this device for 30 days. Expired items are permanently removed when the app opens. Restore them or delete them permanently here." = "Las sesiones y su audio permanecen en este dispositivo durante 30 días. Los elementos vencidos se eliminan definitivamente al abrir la app. Aquí puedes restaurarlos o eliminarlos definitivamente.";
+
+"No deleted sessions" = "No hay sesiones eliminadas";
+
+"Recovery deadline" = "Fecha límite de recuperación";
+
+"Restore" = "Restaurar";
+
+"Delete permanently" = "Eliminar definitivamente";
+
+"Expired sessions could not be removed. Please retry from Recently deleted." = "No se pudieron eliminar las sesiones vencidas. Inténtalo de nuevo en Eliminados recientemente.";
+
+"Focused reading keeps one paragraph visible. Use Previous or Next, then Play when you are ready." = "La lectura enfocada mantiene un párrafo visible. Usa Anterior o Siguiente y pulsa Reproducir cuando estés listo.";
+
+"Saved sessions moved to Recently deleted remain recoverable on this device for 30 days. Expired items are permanently removed when the app opens or returns to the foreground. Delete permanently removes them immediately. Discarding a draft and deleting only audio remain permanent. Written responses stay in memory and are cleared when leaving their screen." = "Las sesiones guardadas que pasan a Eliminados recientemente se pueden recuperar en este dispositivo durante 30 días. Los elementos vencidos se eliminan definitivamente al abrir la app o volver a primer plano. Eliminar definitivamente los borra de inmediato. Descartar un borrador y eliminar solo el audio siguen siendo acciones definitivas. Las respuestas escritas permanecen en memoria y se borran al salir de su pantalla.";
+
+"Home" = "Inicio";
+
+"Listening paused. Microphone is off. Tap Resume recording to continue." = "Escucha en pausa. El micrófono está apagado. Pulsa Reanudar grabación para continuar.";

@@ -11,6 +11,8 @@ struct SessionHistoryView: View {
     @Query private var drafts: [SessionDraft]
     @Query private var translations: [SessionTranslation]
     @Query private var favorites: [SessionFavorite]
+    @Query private var trash: [SessionTrash]
+    @State private var lastDeletedID: UUID?
     @State private var onlyFavorites = false
     @State private var actionsSessionID: UUID?
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -28,13 +30,26 @@ struct SessionHistoryView: View {
         return (english + spanish).filter { $0.text.localizedStandardContains(query) }
     }
     private var filtered: [ConferenceSession] {
-        let sessions = onlyFavorites ? sessions.filter { isFavorite($0) } : sessions
+        let visible = sessions.filter { session in !trash.contains { $0.sessionID == session.id } }
+        let sessions = onlyFavorites ? visible.filter { isFavorite($0) } : visible
         guard !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return sessions }
         return sessions.filter { $0.title.localizedStandardContains(query) || !matches($0).isEmpty }
     }
 
     var body: some View {
         List {
+            NavigationLink("Recently deleted") { RecentlyDeletedView(repository: coordinator.repository) }
+                .accessibilityIdentifier("recentlyDeletedLink")
+            if let id = lastDeletedID, trash.contains(where: { $0.sessionID == id }), let lastDeleted = sessions.first(where: { $0.id == id }) {
+                HStack {
+                    Text("Moved to Recently deleted")
+                    Spacer()
+                    Button("Undo") {
+                        do { try coordinator.repository.restore(lastDeleted); self.lastDeletedID = nil }
+                        catch { failure = error.localizedDescription }
+                    }.accessibilityIdentifier("undoSessionDeletion")
+                }
+            }
             Picker("Show sessions", selection: $onlyFavorites) {
                 Text("All sessions").tag(false)
                 Text("Favorites").tag(true)
@@ -84,20 +99,28 @@ struct SessionHistoryView: View {
                 }.accessibilityIdentifier("confirmRemoveSessionProtection")
                 Button("Cancel", role: .cancel) { unprotecting = nil }
             } message: { Text("The session stays saved. Deleting it later will require a separate confirmation.") }
-        .confirmationDialog(uiKey("Delete this session permanently?"), isPresented: Binding(
+        .confirmationDialog(uiKey("Remove this session?"), isPresented: Binding(
             get: { deleting != nil }, set: { if !$0 { deleting = nil } }), titleVisibility: .visible) {
                 Button("Delete", role: .destructive) {
                     if let deleting {
                         guard !isFavorite(deleting) else { self.deleting = nil; return }
-                        if coordinator.currentSession?.id == deleting.id {
-                            Task { await coordinator.discardCurrent() }
-                        } else {
-                            do { try coordinator.repository.delete(deleting) }
-                            catch { failure = error is SessionProtectionFailure ? error.localizedDescription : "The session could not be deleted." }
-                        }
+                        do {
+                            if drafts.contains(where: { $0.sessionID == deleting.id }) {
+                                if coordinator.currentSession?.id == deleting.id { Task { await coordinator.discardCurrent() } }
+                                else { try coordinator.repository.delete(deleting) }
+                            } else {
+                                coordinator.cancelAutomaticTranslation(for: deleting.id)
+                                try coordinator.repository.moveToTrash(deleting)
+                                lastDeletedID = deleting.id; actionsSessionID = nil
+                            }
+                        } catch { failure = error.localizedDescription }
                     }
                     deleting = nil
                 }.accessibilityIdentifier("confirmDeleteSession")
+            } message: {
+                Text(uiKey(drafts.contains { $0.sessionID == deleting?.id }
+                    ? "Discard permanently deletes this session's transcript and any recorded audio."
+                    : "You can restore this session and its audio for 30 days in Recently deleted."))
             }
         .alert("Storage problem", isPresented: Binding(
             get: { failure != nil }, set: { if !$0 { failure = nil } })) {
@@ -168,8 +191,10 @@ struct SessionHistoryView: View {
             .accessibilityHint(uiKey(isFavorite(session) ? "Remove protection before deleting the session or its audio." : "Requires confirmation."))
             .accessibilityIdentifier("deleteSessionAction")
         } else {
-            Button("Session actions", systemImage: "ellipsis.circle") { revealActions(session.id) }
-                .labelStyle(.iconOnly).buttonStyle(.plain).frame(width: 44, height: 44)
+            Button { revealActions(session.id) } label: {
+                Label("Session actions", systemImage: "ellipsis.circle").labelStyle(.iconOnly)
+                    .frame(width: 44, height: 44).contentShape(Rectangle())
+            }.buttonStyle(.borderless)
                 .accessibilityIdentifier("sessionActions-" + session.id.uuidString)
         }
         }
@@ -492,5 +517,52 @@ struct BookmarkListView: View {
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
             .alert("Could not remove bookmark", isPresented: $failure) { Button("OK") {} }
         }
+    }
+}
+
+/// Recovery is explicit and preserves every original file. Permanent deletion is confirmed separately.
+@MainActor
+struct RecentlyDeletedView: View {
+    let repository: TranscriptRepository
+    @Query(sort: \ConferenceSession.createdAt, order: .reverse) private var sessions: [ConferenceSession]
+    @Query private var trash: [SessionTrash]
+    @State private var deleting: ConferenceSession?
+    @State private var failure: String?
+    var body: some View {
+        List {
+            Text("Sessions and audio remain on this device for 30 days. Expired items are permanently removed when the app opens. Restore them or delete them permanently here.")
+                .font(.callout)
+            if trash.isEmpty { Text("No deleted sessions") }
+            ForEach(sessions.filter { session in trash.contains { $0.sessionID == session.id } }) { session in
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(session.title).font(.headline)
+                    if let marker = trash.first(where: { $0.sessionID == session.id }) {
+                        Text("Recovery deadline").font(.caption)
+                        Text(marker.expiresAt, style: .date).font(.caption)
+                    }
+                    ViewThatFits(in: .horizontal) {
+                        HStack { actions(session) }
+                        VStack(alignment: .leading) { actions(session) }
+                    }.buttonStyle(.borderless)
+                }.padding(.vertical, 6)
+            }
+        }.navigationTitle("Recently deleted")
+            .task { do { try repository.purgeExpiredTrash() } catch { failure = error.localizedDescription } }
+            .confirmationDialog("Delete this session permanently?", isPresented: Binding(get: { deleting != nil }, set: { if !$0 { deleting = nil } }), titleVisibility: .visible) {
+                Button("Delete permanently", role: .destructive) {
+                    if let deleting { do { try repository.delete(deleting) } catch { failure = error.localizedDescription } }
+                    deleting = nil
+                }.accessibilityIdentifier("permanentlyDeleteSession")
+                Button("Cancel", role: .cancel) { deleting = nil }
+            } message: { Text("This permanently deletes the transcript and any audio from this session.") }
+            .alert("Storage problem", isPresented: Binding(get: { failure != nil }, set: { if !$0 { failure = nil } })) {
+                Button("OK") { failure = nil }
+            } message: { Text(LocalizedStringKey(failure ?? "")) }
+    }
+    @ViewBuilder private func actions(_ session: ConferenceSession) -> some View {
+        Button("Restore", systemImage: "arrow.uturn.backward") {
+            do { try repository.restore(session) } catch { failure = error.localizedDescription }
+        }.accessibilityIdentifier("restoreDeletedSession")
+        Button("Delete permanently", systemImage: "trash", role: .destructive) { deleting = session }
     }
 }

@@ -1,5 +1,7 @@
 # Recorrido del código para estudiantes
 
+Actualización V9: [experiencia accesible, respuestas escritas y papelera recuperable](accessible-experience.md). La tabla `SessionTrash` se añade sin modificar los modelos históricos.
+
 Estado actual: **VoiceToRead 0.1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
 
 ## Build 22: entrada de voz procesada

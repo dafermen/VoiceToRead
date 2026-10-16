@@ -15,7 +15,7 @@ final class TranscriptRepository {
     let storageURL: URL?
 
     init(inMemory: Bool = false, directory: URL? = nil) throws {
-        let schema = Schema(versionedSchema: SessionSchemaV8.self)
+        let schema = Schema(versionedSchema: SessionSchemaV9.self)
         let configuration: ModelConfiguration
         if inMemory {
             storageURL = nil
@@ -143,7 +143,7 @@ final class TranscriptRepository {
 
     func setFavorite(_ enabled: Bool, for session: ConferenceSession) throws {
         // Los borradores deben guardarse antes de protegerse: Discard siempre conserva su significado.
-        guard try draft(for: session.id) == nil else { throw ReviewFailure.sessionChanged }
+        guard try draft(for: session.id) == nil, try trash(for: session.id) == nil else { throw ReviewFailure.sessionChanged }
         if let existing = try favorite(for: session.id) {
             if !enabled { context.delete(existing) }
         } else if enabled { context.insert(SessionFavorite(sessionID: session.id)) }
@@ -155,9 +155,36 @@ final class TranscriptRepository {
         if try favorite(for: sessionID) != nil { throw SessionProtectionFailure.protected }
     }
 
+    func trash(for id: UUID) throws -> SessionTrash? {
+        try context.fetch(FetchDescriptor<SessionTrash>(predicate: #Predicate { $0.sessionID == id })).first
+    }
+    /// Soft deletion is only available for completed library sessions, never active drafts.
+    func moveToTrash(_ session: ConferenceSession, now: Date = Date()) throws {
+        try requireUnprotected(session.id)
+        guard try draft(for: session.id) == nil, session.endedAt != nil else { throw ReviewFailure.sessionChanged }
+        guard try trash(for: session.id) == nil else { return }
+        context.insert(SessionTrash(sessionID: session.id, deletedAt: now))
+        do { try context.save() } catch { context.rollback(); throw error }
+    }
+    func restore(_ session: ConferenceSession) throws {
+        guard let marker = try trash(for: session.id) else { return }
+        context.delete(marker)
+        do { try context.save() } catch { context.rollback(); throw error }
+    }
+    /// Expiry is applied when the app opens/returns to the foreground, not by a background timer.
+    func purgeExpiredTrash(now: Date = Date()) throws {
+        for marker in try context.fetch(FetchDescriptor<SessionTrash>()) where marker.expiresAt <= now {
+            let id = marker.sessionID
+            if let session = try context.fetch(FetchDescriptor<ConferenceSession>(predicate: #Predicate { $0.id == id })).first {
+                try delete(session)
+            }
+        }
+    }
+
     func delete(_ session: ConferenceSession) throws {
         try requireUnprotected(session.id)
         let identifier = session.id
+        let savedTrash = try trash(for: identifier)
         let savedBookmarks = try bookmarks(for: identifier)
         let savedReview = try review(for: identifier)
         let savedMedia = try media(for: identifier)
@@ -177,6 +204,7 @@ final class TranscriptRepository {
         for caption in session.captions { context.delete(caption) }
         for bookmark in savedBookmarks { context.delete(bookmark) }
         if let savedReview { context.delete(savedReview) }
+        if let savedTrash { context.delete(savedTrash) }
         context.delete(session)
         do { try context.save() } catch { context.rollback(); cacheSessionID = nil; throw error }
         if cacheSessionID == identifier {
@@ -324,6 +352,7 @@ final class TranscriptRepository {
     /// Guarda el lote completo de forma atómica. Nunca publica resultados parciales ni obsoletos.
     func saveTranslation(_ snapshot: TranslationSnapshot, for session: ConferenceSession, allowCompletedDraft: Bool = false) throws {
         try snapshot.validate()
+        guard try trash(for: session.id) == nil else { throw ReviewFailure.sessionChanged }
         let identifier = session.id
         var request = FetchDescriptor<ConferenceSession>(predicate: #Predicate { $0.id == identifier })
         request.fetchLimit = 1

@@ -16,9 +16,21 @@ struct AppRootView: View {
             if let coordinator {
                 TabView {
                     NavigationStack {
-                        LiveCaptionView(coordinator: coordinator)
+                        if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
+                        else {
+                            VStack(spacing: 0) {
+                                if !coordinator.settings.preparationSeen && coordinator.caption.state == .idle {
+                                    HStack {
+                                        NavigationLink("Prepare VoiceToRead") { OfflineReadinessView(coordinator: coordinator) }
+                                        Spacer()
+                                        Button("Later") { coordinator.settings.preparationSeen = true }
+                                    }.padding().background(.regularMaterial)
+                                }
+                                LiveCaptionView(coordinator: coordinator)
+                            }
+                        }
                     }
-                    .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
+                    .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
                     NavigationStack { SessionHistoryView(coordinator: coordinator) }
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }
@@ -83,6 +95,10 @@ struct AppRootView: View {
                 }
             } else if phase == .active {
                 coordinator?.caption.foregrounded()
+                if let coordinator {
+                    do { try coordinator.repository.purgeExpiredTrash() }
+                    catch { coordinator.storageMessage = "Expired sessions could not be removed. Please retry from Recently deleted." }
+                }
             }
         }
     }
@@ -128,6 +144,9 @@ struct AppRootView: View {
             }
             if ProcessInfo.processInfo.arguments.contains("--ui-test-review") {
                 UserDefaults.standard.removeObject(forKey: "playbackAtMyPace")
+                UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-simple"), forKey: "simpleMode")
+                UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-labels"), forKey: "showButtonNames")
+                UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-focus"), forKey: "focusedReading")
                 let repository = try TranscriptRepository(inMemory: true)
                 let spanishSample = ProcessInfo.processInfo.arguments.contains("--ui-test-spanish")
                 let sample = try repository.create(title: "Review sample", language: spanishSample ? .spanish : .english)
@@ -200,17 +219,22 @@ struct AppRootView: View {
             let oldStore = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?
                 .appendingPathComponent("VoiceToRead/Sessions.store")
             AppSettings.registerAudioDefault(existingInstallation: oldStore.map { FileManager.default.fileExists(atPath: $0.path) } ?? false)
-            coordinator = SessionCoordinator(repository: try TranscriptRepository())
+            let repository = try TranscriptRepository()
+            coordinator = SessionCoordinator(repository: repository)
+            do { try repository.purgeExpiredTrash() }
+            catch { coordinator?.storageMessage = "Expired sessions could not be removed. Please retry from Recently deleted." }
             storageFailure = false
         } catch { storageFailure = true }
     }
 }
 
 @MainActor
-private struct LiveCaptionView: View {
+struct LiveCaptionView: View {
+    @Environment(\.dismiss) private var dismiss
     let coordinator: SessionCoordinator
     @Query private var bookmarks: [CaptionBookmark]
     @State private var showingBookmarks = false
+    @State private var showingResponse = false
 
     var body: some View {
         CaptionScreen(model: coordinator.caption, settings: coordinator.settings,
@@ -224,7 +248,15 @@ private struct LiveCaptionView: View {
                       sessionTitle: Binding(get: { coordinator.sessionTitle }, set: { coordinator.sessionTitle = $0 }),
                       bookmarkSegment: { coordinator.toggleBookmark($0) },
                       showBookmarks: { showingBookmarks = true },
-                      bookmarkedIDs: Set(bookmarks.filter { $0.sessionID == coordinator.currentSession?.id }.map(\.segmentID)))
+                      bookmarkedIDs: Set(bookmarks.filter { $0.sessionID == coordinator.currentSession?.id }.map(\.segmentID)),
+                      writeResponse: { showingResponse = true },
+                      returnHome: coordinator.settings.simpleMode ? { dismiss() } : nil)
+            .sheet(isPresented: $showingResponse) {
+                NavigationStack {
+                    WrittenResponseView(coordinator: coordinator)
+                        .toolbar { Button("Done") { showingResponse = false } }
+                }
+            }
             .sheet(isPresented: $showingBookmarks) {
                 BookmarkListView(sessionID: coordinator.currentSession?.id, repository: coordinator.repository)
             }

@@ -1,5 +1,13 @@
 ## VoiceToRead 1.0 — reproducción unificada y traducción automática (2026-10-15)
 
+## 2026-10-15 — opciones de accesibilidad y recuperación
+
+- Modo sencillo, nombres opcionales de controles, aviso de pausa con vibración configurable y lectura enfocada.
+- Preparación guiada, demostración sin grabación y respuestas escritas reproducidas con voz local.
+- Papelera recuperable por 30 días, Deshacer y borrado permanente explícito; migración V9 conserva datos previos.
+- Preferencias EN/ES, teclado y letra de reproducción adaptable al sistema; guía de aceptación con tecnologías de apoyo.
+- Documentación de usuario, desarrollo junior, privacidad y paquete web actualizados. Ver checkpoint para validación y distribución reales.
+
 - Unifica tamaño, lector y controles del audio original y la voz traducida. Separa Escuchar de Leer.
 - Elimina repetición duplicada, conserva último párrafo, añade progreso por párrafo y navegación silenciosa.
 - Usa tarjetas bilingües, opciones en hoja y lectura larga desplazable; práctica comparte controles, pausa real y bucle explícito.

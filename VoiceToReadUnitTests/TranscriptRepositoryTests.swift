@@ -4,6 +4,75 @@ import SwiftData
 
 @MainActor
 final class TranscriptRepositoryTests: XCTestCase {
+    func testV8MigrationTrashRestoreAndExpiryPreserveOriginalData() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent("Trash-\(UUID())")
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let id = try autoreleasepool { () throws -> UUID in
+            let schema = Schema(versionedSchema: SessionSchemaV8.self)
+            let config = ModelConfiguration("Sessions", schema: schema, url: directory.appendingPathComponent("Sessions.store"), cloudKitDatabase: .none)
+            let container = try ModelContainer(for: schema, configurations: [config])
+            let session = ConferenceSession(title: "Keep everything")
+            session.endedAt = Date()
+            container.mainContext.insert(session)
+            let caption = StoredCaption(segment: CaptionSegment(runID: UUID(), start: 0, end: 2, text: "Original"), order: 0)
+            container.mainContext.insert(caption); session.captions.append(caption)
+            try container.mainContext.save()
+            return session.id
+        }
+        let now = Date()
+        try autoreleasepool {
+            let repo = try TranscriptRepository(directory: directory)
+            let session = try XCTUnwrap(repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).first)
+            XCTAssertEqual(session.id, id)
+            let original = try repo.reviewedParagraphs(for: session)
+            try repo.saveTranslation(TranslationSnapshot(source: original, generated: original.map { .init(id: $0.id, text: "Traducido") }), for: session)
+            let audio = try repo.prepareRecording(for: session)
+            try Data("recording".utf8).write(to: audio)
+            try repo.setFavorite(true, for: session)
+            XCTAssertThrowsError(try repo.moveToTrash(session))
+            try repo.setFavorite(false, for: session)
+            try repo.moveToTrash(session, now: now)
+            XCTAssertNotNil(try repo.trash(for: id))
+            XCTAssertThrowsError(try repo.setFavorite(true, for: session))
+            XCTAssertTrue(FileManager.default.fileExists(atPath: audio.path))
+        }
+        try autoreleasepool {
+            let repo = try TranscriptRepository(directory: directory)
+            let session = try XCTUnwrap(repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).first)
+            let audio = try XCTUnwrap(repo.audioURL(for: id))
+            XCTAssertNotNil(try repo.trash(for: id))
+            try repo.restore(session)
+            XCTAssertNil(try repo.trash(for: id))
+            XCTAssertEqual(try repo.translation(for: id)?.decoded().translated.first?.text, "Traducido")
+            XCTAssertEqual(try Data(contentsOf: audio), Data("recording".utf8))
+            try repo.moveToTrash(session, now: now)
+            try repo.moveToTrash(session, now: now.addingTimeInterval(100))
+            XCTAssertEqual(try repo.trash(for: id)?.deletedAt, now, "Repeated removal must not extend retention")
+            try repo.purgeExpiredTrash(now: now.addingTimeInterval(29 * 86400))
+            XCTAssertTrue(FileManager.default.fileExists(atPath: audio.path))
+            try repo.purgeExpiredTrash(now: now.addingTimeInterval(30 * 86400))
+            XCTAssertTrue(try repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).isEmpty)
+            XCTAssertNil(try repo.trash(for: id)); XCTAssertNil(try repo.translation(for: id))
+            XCTAssertFalse(FileManager.default.fileExists(atPath: audio.path))
+        }
+    }
+
+    func testTrashRefusesDraftAndLateTranslation() throws {
+        let repo = try TranscriptRepository(inMemory: true)
+        let draft = try repo.create(title: "Draft", draft: true)
+        XCTAssertThrowsError(try repo.moveToTrash(draft))
+        let session = try repo.create(title: "Finished")
+        let segment = CaptionSegment(runID: UUID(), start: 0, end: 1, text: "Hello")
+        try repo.apply(.init(removedIDs: [], upserted: [segment]), to: session)
+        try repo.checkpoint(session, duration: 1, ended: true)
+        let source = try repo.reviewedParagraphs(for: session)
+        try repo.moveToTrash(session)
+        XCTAssertThrowsError(try repo.saveTranslation(TranslationSnapshot(source: source, generated: source), for: session))
+        try repo.restore(session)
+        XCTAssertNoThrow(try repo.saveTranslation(TranslationSnapshot(source: source, generated: source), for: session))
+    }
+
     func testV7MigrationFavoriteProtectionAndExplicitRemovalSurviveReopen() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent("Favorites-\(UUID())")
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)

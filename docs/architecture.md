@@ -1,5 +1,7 @@
 # Architecture through Phase 9
 
+Actualización V9: [experiencia accesible, respuestas escritas y papelera recuperable](accessible-experience.md). La tabla `SessionTrash` se añade sin modificar los modelos históricos.
+
 Estado actual: **VoiceToRead 0.1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
 App -> AppRootView -> SessionCoordinator -> CaptionViewModel -> SpeechTranscribing.
 CaptionViewModel selects LegacySpeechTranscriber for Xcode 15.2 builds and older iOS versions. Swift 6.2+ builds select AppleSpeechTranscriber on iOS 26+. Both use AudioCaptureService and never fall back to server recognition. Modern conversion stays in its AudioConversion actor.

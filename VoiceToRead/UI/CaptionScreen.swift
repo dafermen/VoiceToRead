@@ -14,6 +14,8 @@ struct CaptionScreen: View {
     var bookmarkSegment: ((CaptionSegment) -> Void)? = nil
     var showBookmarks: (() -> Void)? = nil
     var bookmarkedIDs: Set<UUID> = []
+    var writeResponse: (() -> Void)? = nil
+    var returnHome: (() -> Void)? = nil
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .title) private var scaledSize: CGFloat = 28
@@ -35,9 +37,10 @@ struct CaptionScreen: View {
     private var readerLayout: some View {
         GeometryReader { geometry in
             let compact = geometry.size.width > geometry.size.height && !dynamicTypeSize.isAccessibilitySize
+            AccessibilityScrollingContent {
             VStack(spacing: 0) {
                 if !compact && !isFullScreen {
-                    HStack {
+                    (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
                         status
                         Spacer(minLength: 8)
                         utilities
@@ -57,7 +60,8 @@ struct CaptionScreen: View {
                             .id(model.language)
                     } else { transcript }
                 }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
+                           maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
                     .background(ReaderSurface(settings: settings))
                     .environment(\.colorScheme, settings.readerPaper != .system && !settings.highContrast ? .light : colorScheme)
                 if model.state == .ended && needsSessionDecision {
@@ -69,7 +73,7 @@ struct CaptionScreen: View {
                 }
                 if isFullScreen || compact || model.state != .ended {
                     Divider()
-                    HStack(spacing: 8) {
+                    (dynamicTypeSize.isAccessibilitySize && isFullScreen ? AnyLayout(VStackLayout(spacing: 8)) : AnyLayout(HStackLayout(spacing: 8))) {
                         if isFullScreen {
                             status
                             Spacer(minLength: 0)
@@ -87,6 +91,7 @@ struct CaptionScreen: View {
                     .padding(.horizontal, 16).padding(.vertical, 6)
                     .background(.bar)
                 }
+            }
             }
         }
     }
@@ -113,7 +118,11 @@ struct CaptionScreen: View {
     var body: some View {
         presentedReader
         .confirmationDialog("Session actions", isPresented: $showingActions, titleVisibility: .visible) {
+            if let writeResponse { Button("Write a response", action: writeResponse).disabled(model.state.active || model.state.busy) }
             Button("Recording options") { showingOptions = true }
+            Button("Capture preferences") { showingCaptureOptions = true }
+            Button("Full screen") { isFullScreen.toggle() }
+            if supportsLiveTranslation { Button("Reading language") { showingLiveDisplay = true } }
             if let saveSession {
                 Button("Save Session", action: saveSession)
                     .disabled(model.state != .ended || !needsSessionDecision)
@@ -149,9 +158,9 @@ struct CaptionScreen: View {
         .onChange(of: model.state) { _, _ in applyWakePreference() }
         .onChange(of: model.canResume) { wasPaused, paused in
             if paused && !wasPaused {
-                UINotificationFeedbackGenerator().notificationOccurred(.warning)
+                if settings.pauseHaptics { UINotificationFeedbackGenerator().notificationOccurred(.warning) }
                 UIAccessibility.post(notification: .announcement,
-                    argument: InterfaceLocalization.string("Listening paused. Microphone is off. Tap Resume to continue.", language: settings.interfaceLanguage))
+                    argument: InterfaceLocalization.string("Listening paused. Microphone is off. Tap Resume recording to continue.", language: settings.interfaceLanguage))
             }
         }
         .onChange(of: settings.keepAwake) { _, _ in applyWakePreference() }
@@ -210,20 +219,26 @@ struct CaptionScreen: View {
         }
     }
 
+    private var resumeActions: some View {
+        HStack {
+            Button { Task { await model.start() } } label: {
+                Label("Resume recording", systemImage: "play.fill")
+                    .font(.headline).frame(maxWidth: .infinity, minHeight: 44)
+            }.buttonStyle(.borderedProminent).accessibilityIdentifier("resumeCaptureButton")
+            Button("Detalles", systemImage: "info.circle") { showingStatus = true }
+                .labelStyle(.iconOnly).font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
+        }
+    }
+
     private var resumePanel: some View {
         VStack(alignment: .leading, spacing: 6) {
+            // At the largest text sizes, keep the recovery action above the explanation.
+            if dynamicTypeSize.isAccessibilitySize { resumeActions }
             Label("Escucha en pausa · Micrófono apagado", systemImage: "pause.circle.fill")
                 .font(.headline).accessibilityIdentifier("pausedCaptureBanner")
             Text("No se están capturando nuevas palabras. Pulsa Resume para continuar.")
                 .font(.subheadline)
-            HStack {
-                Button { Task { await model.start() } } label: {
-                    Label("Resume / Reanudar", systemImage: "play.fill")
-                        .font(.headline).frame(maxWidth: .infinity, minHeight: 44)
-                }.buttonStyle(.borderedProminent).accessibilityIdentifier("resumeCaptureButton")
-                Button("Detalles", systemImage: "info.circle") { showingStatus = true }
-                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
-            }
+            if !dynamicTypeSize.isAccessibilitySize { resumeActions }
         }.padding(12).frame(maxWidth: .infinity, alignment: .leading)
             .background(Color.orange.opacity(0.15))
             .accessibilityElement(children: .contain)
@@ -285,16 +300,20 @@ struct CaptionScreen: View {
 
     private var utilities: some View {
         HStack(spacing: 0) {
+            if let returnHome {
+                Button("Home", systemImage: "house", action: returnHome)
+                    .labelStyle(.iconOnly).font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
+                    .disabled(model.state.active || model.state.busy)
+            }
             if model.state == .ended { newSessionButton }
-            translationButton
-            fullScreenButton
-            Button { showingOptions = true } label: {
-                Image(systemName: "textformat.size").frame(width: 44, height: 44)
+            if !settings.simpleMode { translationButton; fullScreenButton }
+            if !settings.simpleMode { Button { showingOptions = true } label: {
+                Image(systemName: "textformat.size").font(.system(size: 22)).frame(width: 44, height: 44)
             }
             .accessibilityLabel("Reading options")
-            .accessibilityIdentifier("readingOptionsButton")
+            .accessibilityIdentifier("readingOptionsButton") }
             Button { showingActions = true } label: {
-                Image(systemName: "ellipsis.circle").frame(width: 44, height: 44)
+                Image(systemName: "ellipsis.circle").font(.system(size: 22)).frame(width: 44, height: 44)
             }
             .accessibilityLabel("Session actions")
             .accessibilityIdentifier("sessionActionsButton")
@@ -314,7 +333,7 @@ struct CaptionScreen: View {
     @ViewBuilder private var translationButton: some View {
         if supportsLiveTranslation {
             Button { showingLiveDisplay = true } label: {
-                Image(systemName: "character.bubble").frame(width: 44, height: 44)
+                Image(systemName: "character.bubble").font(.system(size: 22)).frame(width: 44, height: 44)
                     .foregroundStyle(liveDisplay == .original ? Color.primary : Color.accentColor)
             }
             .accessibilityLabel("Live caption display")
@@ -332,7 +351,7 @@ struct CaptionScreen: View {
     private var fullScreenButton: some View {
         Button { isFullScreen.toggle() } label: {
             Image(systemName: isFullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
-                .frame(width: 44, height: 44)
+                .font(.system(size: 22)).frame(width: 44, height: 44)
         }
         .accessibilityLabel(uiKey(isFullScreen ? "Exit full screen" : "Full screen"))
         .accessibilityIdentifier("fullScreenButton")
@@ -474,7 +493,7 @@ struct CaptionScreen: View {
     }
 
     private var quickPreferences: some View {
-        HStack(spacing: 12) {
+        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
             Button {
                 settings.saveAudio.toggle()
                 model.saveAudio = settings.saveAudio
@@ -531,7 +550,7 @@ struct CaptionScreen: View {
             .padding(.horizontal, 8).frame(minHeight: 36)
             .background(Color.secondary.opacity(0.08), in: RoundedRectangle(cornerRadius: 8))
         }
-        HStack(spacing: 16) {
+        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 16)) : AnyLayout(HStackLayout(spacing: 16))) {
             Button { titleFocused = false; saveSession?() } label: { Label("Save Session", systemImage: "square.and.arrow.down") }
                 .accessibilityIdentifier("saveSessionButton")
             Spacer(minLength: 0)
@@ -543,17 +562,17 @@ struct CaptionScreen: View {
     }
 
     private var captureControls: some View {
-        HStack(spacing: 12) {
+        (dynamicTypeSize.isAccessibilitySize && (settings.showButtonNames || settings.simpleMode) ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
             primaryButton(iconOnly: true)
             stopButton(iconOnly: true)
             Spacer(minLength: 0)
-            capturePreferencesButton
+            if !settings.simpleMode { capturePreferencesButton }
         }
     }
 
     private var capturePreferencesButton: some View {
             Button { showingCaptureOptions = true } label: {
-                Image(systemName: "slider.horizontal.3")
+                Image(systemName: "slider.horizontal.3").font(.system(size: 22))
             }
             .frame(minWidth: 44, minHeight: 44)
             .accessibilityLabel("Capture preferences")
@@ -566,9 +585,8 @@ struct CaptionScreen: View {
             if needsSessionDecision { confirmNewSession = true }
             else { Task { await beginNewSession() } }
         } label: {
-            Image(systemName: "plus").font(.title3.weight(.semibold))
-                .frame(width: 44, height: 44).foregroundStyle(.white)
-                .background(Color.accentColor, in: Circle())
+            NamedCircleControl(title: "New Session", symbol: "plus", prominent: true,
+                               names: settings.showButtonNames || settings.simpleMode)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("New Session").accessibilityIdentifier("primaryCaptionAction")
@@ -580,26 +598,26 @@ struct CaptionScreen: View {
             Button {
                 Task { if model.state == .listening { await model.pause() } else { await model.start() } }
             } label: {
-                Image(systemName: primaryIcon).font(.title3.weight(.semibold))
-                    .frame(width: 44, height: 44).foregroundStyle(.white)
-                    .background(Color.accentColor, in: Circle())
+                NamedCircleControl(title: primaryTitle, symbol: primaryIcon, prominent: true,
+                                   names: settings.showButtonNames || settings.simpleMode)
             }
             .buttonStyle(.plain)
             .accessibilityLabel(LocalizedStringKey(primaryTitle))
             .accessibilityIdentifier("primaryCaptionAction")
+            .keyboardShortcut("r", modifiers: .command)
             .disabled(model.state.busy || model.preparationPending)
         }
     }
 
     private func stopButton(iconOnly: Bool) -> some View {
         Button { Task { await model.stop() } } label: {
-            Image(systemName: "stop.fill").font(.title3)
-                .frame(width: 44, height: 44)
-                .background(Color.secondary.opacity(0.15), in: Circle())
+            NamedCircleControl(title: "Stop", symbol: "stop.fill", prominent: false,
+                               names: settings.showButtonNames || settings.simpleMode)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Stop")
         .accessibilityIdentifier("stopCaptionAction")
+        .keyboardShortcut(".", modifiers: .command)
         .disabled(model.state == .stopping || (!model.state.active && model.state != .paused && !isProblem))
     }
 

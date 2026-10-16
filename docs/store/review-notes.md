@@ -21,3 +21,6 @@ Before copying these notes to App Store Connect, append:
 - Exact final version/build selected for public review (PENDING; source version 1.0 / build 1 is not proof of the uploaded archive number).
 
 Do not distribute the DEBUG synthetic test fixtures as reviewer functionality. Never provide an internal-testing-only build for public App Review; archive a build eligible for TestFlight and App Store.
+
+
+Accessibility update: Settings offers Simple mode, visible button names, focused paragraph reading, optional pause vibration and a preparation demo without capture. Write a response speaks user-entered text on explicit action, does not translate it and clears it on leaving. Recently deleted retains completed removed sessions locally for 30 days; Restore and Delete permanently are explicit. Draft discard remains permanent. See accessible-experience-checkpoint.md for actual validation; no new accessibility certification is claimed.

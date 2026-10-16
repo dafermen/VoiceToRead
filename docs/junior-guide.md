@@ -1,5 +1,7 @@
 # VoiceToRead para estudiantes y desarrolladores junior
 
+Actualización de experiencia accesible: [guía de los ocho cambios](accessible-experience.md) y [evidencia/pendientes](accessible-experience-checkpoint.md).
+
 ## Reproductor unificado y traducción al detener
 
 Consulta [el recorrido por eventos, cola, estados y persistencia](playback-unification.md#para-estudiantes-cómo-está-construido). Se separan seleccionar un párrafo, iniciar sonido, elegir texto visible y guardar la sesión. Esto apoya lectura a distintos ritmos, discapacidad auditiva/baja visión y aprendizaje infantil acompañado.

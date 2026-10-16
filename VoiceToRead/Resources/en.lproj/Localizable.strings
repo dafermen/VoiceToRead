@@ -582,3 +582,109 @@
 "Exports use the original recording timeline, not the generated voice." = "Exports use the original recording timeline, not the generated voice.";
 
 "Cancel translation" = "Cancel translation";
+
+"Accessibility and ease of use" = "Accessibility and ease of use";
+
+"Simple mode" = "Simple mode";
+
+"Show button names" = "Show button names";
+
+"Vibrate when listening pauses" = "Vibrate when listening pauses";
+
+"Focused reading" = "Focused reading";
+
+"Simple mode keeps essential actions visible. Focused reading shows one paragraph at a time and waits for you to continue." = "Simple mode keeps essential actions visible. Focused reading shows one paragraph at a time and waits for you to continue.";
+
+"Write a response" = "Write a response";
+
+"Prepare VoiceToRead" = "Prepare VoiceToRead";
+
+"Later" = "Later";
+
+"Resume recording" = "Resume recording";
+
+"Not checked on this visit" = "Not checked on this visit";
+
+"Prepare once, then start when you are ready. Permission requests happen only when you choose the corresponding button. Recording never starts here." = "Prepare once, then start when you are ready. Permission requests happen only when you choose the corresponding button. Recording never starts here.";
+
+"See a short demonstration" = "See a short demonstration";
+
+"Translation preparation" = "Translation preparation";
+
+"Translation is optional. Captions and recordings work without it. Apple may ask to download the selected languages." = "Translation is optional. Captions and recordings work without it. Apple may ask to download the selected languages.";
+
+"Prepare translation" = "Prepare translation";
+
+"Preparing translation…" = "Preparing translation…";
+
+"Translation test succeeded" = "Translation test succeeded";
+
+"Demonstration · no recording" = "Demonstration · no recording";
+
+"Step %lld of %lld" = "Step %lld of %lld";
+
+"Quick guide" = "Quick guide";
+
+"Tap the microphone when you are ready. Words will appear as the person speaks." = "Tap the microphone when you are ready. Words will appear as the person speaks.";
+
+"Pause stops listening temporarily. Resume continues only when you choose it." = "Pause stops listening temporarily. Resume continues only when you choose it.";
+
+"Stop finishes the recording and starts translation. Save keeps it; Discard permanently removes this draft." = "Stop finishes the recording and starts translation. Save keeps it; Discard permanently removes this draft.";
+
+"In Audio & subtitles, choose what to hear and what to read. Previous and Next select silently; Play starts the selected paragraph." = "In Audio & subtitles, choose what to hear and what to read. Previous and Next select silently; Play starts the selected paragraph.";
+
+"Write what you want to say. The voice reads exactly this text in the language you choose; it does not translate it." = "Write what you want to say. The voice reads exactly this text in the language you choose; it does not translate it.";
+
+"Voice language" = "Voice language";
+
+"Your response" = "Your response";
+
+"Your response is not saved. It is cleared when you leave this screen." = "Your response is not saved. It is cleared when you leave this screen.";
+
+"Pause or stop listening before speaking a response." = "Pause or stop listening before speaking a response.";
+
+"Speak response" = "Speak response";
+
+"Clear response" = "Clear response";
+
+"Response finished" = "Response finished";
+
+"Speech interrupted. Tap Speak response to start again." = "Speech interrupted. Tap Speak response to start again.";
+
+"What would you like to do?" = "What would you like to do?";
+
+"Listen now" = "Listen now";
+
+"My sessions" = "My sessions";
+
+"Language practice" = "Language practice";
+
+"Choose a saved session to practise its phrases. First record and save a session if your library is empty." = "Choose a saved session to practise its phrases. First record and save a session if your library is empty.";
+
+"Recently deleted" = "Recently deleted";
+
+"Moved to Recently deleted" = "Moved to Recently deleted";
+
+"Remove this session?" = "Remove this session?";
+
+"You can restore this session and its audio for 30 days in Recently deleted." = "You can restore this session and its audio for 30 days in Recently deleted.";
+
+"Sessions and audio remain on this device for 30 days. Expired items are permanently removed when the app opens. Restore them or delete them permanently here." = "Sessions and audio remain on this device for 30 days. Expired items are permanently removed when the app opens. Restore them or delete them permanently here.";
+
+"No deleted sessions" = "No deleted sessions";
+
+"Recovery deadline" = "Recovery deadline";
+
+"Restore" = "Restore";
+
+"Delete permanently" = "Delete permanently";
+
+"Expired sessions could not be removed. Please retry from Recently deleted." = "Expired sessions could not be removed. Please retry from Recently deleted.";
+
+"Focused reading keeps one paragraph visible. Use Previous or Next, then Play when you are ready." = "Focused reading keeps one paragraph visible. Use Previous or Next, then Play when you are ready.";
+
+"Saved sessions moved to Recently deleted remain recoverable on this device for 30 days. Expired items are permanently removed when the app opens or returns to the foreground. Delete permanently removes them immediately. Discarding a draft and deleting only audio remain permanent. Written responses stay in memory and are cleared when leaving their screen." = "Saved sessions moved to Recently deleted remain recoverable on this device for 30 days. Expired items are permanently removed when the app opens or returns to the foreground. Delete permanently removes them immediately. Discarding a draft and deleting only audio remain permanent. Written responses stay in memory and are cleared when leaving their screen.";
+
+"Home" = "Home";
+
+"Listening paused. Microphone is off. Tap Resume recording to continue." = "Listening paused. Microphone is off. Tap Resume recording to continue.";

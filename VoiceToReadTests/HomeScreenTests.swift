@@ -57,6 +57,118 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testSimpleHomeWrittenResponseAndGuide() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-simple", "--ui-test-labels"]
+        app.launch()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 20))
+        app.buttons["Write a response"].tap()
+        let editor = app.textViews["writtenResponseText"]
+        XCTAssertTrue(editor.waitForExistence(timeout: 5))
+        editor.tap(); editor.typeText("Please speak slowly. I am reading your words. Thank you for waiting while I write my response.")
+        app.buttons["speakWrittenResponse"].tap()
+        XCTAssertEqual(app.buttons["speakWrittenResponse"].label, "Pause")
+        app.buttons["speakWrittenResponse"].tap()
+        XCTAssertEqual(app.buttons["speakWrittenResponse"].label, "Resume")
+        app.buttons["Stop"].tap()
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.buttons["Write a response"].tap()
+        XCTAssertEqual(app.textViews["writtenResponseText"].value as? String, "")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.buttons["Prepare VoiceToRead"].tap()
+        app.buttons["See a short demonstration"].tap()
+        XCTAssertTrue(app.staticTexts["Demonstration · no recording"].waitForExistence(timeout: 5))
+        app.buttons["Next"].tap()
+        XCTAssertTrue(app.staticTexts["Step 2 of 4"].exists)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Accessible-guide"; shot.lifetime = .keepAlways; add(shot)
+        app.terminate()
+    }
+
+    func testRecentlyDeletedRestoreAndPermanentRemoval() throws {
+        let app = XCUIApplication(); app.launchArguments = ["--ui-test-review"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20)); app.tabBars.buttons["Sessions"].tap()
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'sessionActions-'")).firstMatch.tap()
+        app.buttons["deleteSessionAction"].tap(); app.buttons["confirmDeleteSession"].tap()
+        XCTAssertTrue(app.buttons["undoSessionDeletion"].waitForExistence(timeout: 5))
+        app.buttons["undoSessionDeletion"].tap()
+        XCTAssertTrue(app.staticTexts["Review sample"].exists)
+        sleep(1) // Wait for the restored row to finish its native List insertion animation.
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'sessionActions-'")).firstMatch.tap()
+        app.buttons["deleteSessionAction"].tap(); app.buttons["confirmDeleteSession"].tap()
+        app.buttons["recentlyDeletedLink"].tap()
+        app.buttons["restoreDeletedSession"].tap()
+        XCTAssertTrue(app.staticTexts["No deleted sessions"].waitForExistence(timeout: 5))
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'sessionActions-'")).firstMatch.tap()
+        app.buttons["deleteSessionAction"].tap(); app.buttons["confirmDeleteSession"].tap()
+        app.buttons["recentlyDeletedLink"].tap()
+        app.buttons["Delete permanently"].tap(); app.buttons["permanentlyDeleteSession"].tap()
+        XCTAssertTrue(app.staticTexts["No deleted sessions"].waitForExistence(timeout: 5))
+        app.terminate()
+    }
+
+    func testFocusedReaderWithLargeTextAndButtonNames() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation", "--ui-test-focus", "--ui-test-labels", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20)); app.tabBars.buttons["Sessions"].tap()
+        app.staticTexts["Review sample"].tap(); app.buttons["sessionMediaButton"].tap()
+        XCTAssertTrue(app.buttons["recordingPlayButton"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.segmentedControls["playbackModePicker"].exists)
+        app.buttons["nextParagraphButton"].tap()
+        XCTAssertEqual(app.buttons["recordingPlayButton"].label, "Play")
+        XCTAssertTrue(app.staticTexts["playbackCaption"].exists)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Focused-large-text"; shot.lifetime = .keepAlways; add(shot)
+        app.terminate()
+    }
+
+    @MainActor
+    func testSimpleHomeAccessibilityDescriptionsAndTraits() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-simple", "--ui-test-labels"]
+        app.launch()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 20))
+        try app.performAccessibilityAudit(for: [.sufficientElementDescription, .trait, .hitRegion])
+        app.terminate()
+    }
+
+    @MainActor
+    func testLargeTextCapturePauseAndResumeRemainReachable() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        app.launch()
+        let primary = app.buttons["primaryCaptionAction"]
+        XCTAssertTrue(primary.waitForExistence(timeout: 20)); primary.tap()
+        XCTAssertTrue(app.buttons["stopCaptionAction"].waitForExistence(timeout: 10))
+        primary.tap()
+        XCTAssertTrue(app.buttons["resumeCaptureButton"].waitForExistence(timeout: 10))
+        XCTAssertTrue(app.buttons["resumeCaptureButton"].isHittable, "Resume should be immediately reachable at the largest text size")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Large-text-pause"; shot.lifetime = .keepAlways; add(shot)
+        app.buttons["resumeCaptureButton"].tap()
+        XCTAssertEqual(primary.label, "Pause")
+        app.buttons["stopCaptionAction"].tap()
+        XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 10))
+        app.terminate()
+    }
+
+    @MainActor
+    func testDefaultPreparationGuideReturnsWithoutStartingCapture() throws {
+        let app = XCUIApplication(); app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow"]
+        app.launch()
+        XCTAssertTrue(app.buttons["Prepare VoiceToRead"].waitForExistence(timeout: 20))
+        app.buttons["Prepare VoiceToRead"].tap()
+        XCTAssertTrue(app.navigationBars["Offline Readiness"].waitForExistence(timeout: 5))
+        app.buttons["See a short demonstration"].tap()
+        XCTAssertTrue(app.staticTexts["Demonstration · no recording"].waitForExistence(timeout: 5))
+        app.navigationBars["Quick guide"].buttons["Done"].tap()
+        app.navigationBars["Offline Readiness"].buttons["Done"].tap()
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Start Listening")
+        app.terminate()
+    }
+
+    @MainActor
     func testUnifiedAudioGeometryAndSilentNavigation() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation"]

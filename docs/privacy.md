@@ -25,7 +25,7 @@ Audio saving initially defaults on for a new installation; background stays off.
 ## Persistence and deletion
 SwiftData uses an explicit application-support store with CloudKit disabled. The transcript and recording directory is excluded from backup and created with complete-until-first-user-authentication protection.
 A finalized segment save commits incrementally; unfinished sessions can be reopened after interruption. Unsaved/partial text can be lost on cancellation or termination. Compatibility results remain provisional until request finalization (normally around 50 seconds); backgrounding can lose that current chunk.
-Session deletion removes its recording, synchronized timing, draft marker, related captions, bookmarks, saved translations and corrections/reading position, but this is logical deletion and not a forensic secure-erase guarantee. Exported copies and clipboard content are controlled separately by the destination/user.
+Permanent session deletion removes its recording, synchronized timing, draft marker, related captions, bookmarks, saved translations and corrections/reading position, but this is logical deletion and not a forensic secure-erase guarantee. Exported copies and clipboard content are controlled separately by the destination/user.
 Deleting the app removes its local data; backup exclusion means users should export transcripts they wish to retain.
 Verify SQLite/WAL sidecar protection and backup exclusion on device before release.
 
@@ -74,3 +74,8 @@ Ver [interfaz bilingüe y primera preparación](interface-and-onboarding.md). El
 ## Actualización 23 — 2026-10-12
 
 Build 23 añade el marcador local SessionFavorite (V8) y la preferencia local playbackAtMyPace. No añade destinatarios ni servicios de red. Protección no significa backup: bloquea borrado desde la app hasta quitarla, sin impedir desinstalación/pérdida del dispositivo. La política consolidada EN/ES sustituye el borrador histórico: [política](privacy-policy-draft.md).
+
+
+## Accessible recovery and written responses (2026-10-15)
+
+V9 adds a separate SessionTrash marker. Moving a completed saved session to Recently deleted retains all its existing local files for 30 days. Restore removes only the marker. Explicit permanent deletion or expiry at launch/foreground deletes associated data through the existing repository deletion path. Draft discard and audio-only removal remain permanent. Written responses are view-memory text, spoken only by explicit action, never added to the session database or exported as audio. Leaving their screen clears the text; backgrounding interrupts speech.

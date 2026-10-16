@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+Actualización de experiencia accesible: [guía de los ocho cambios](accessible-experience.md) y [evidencia/pendientes](accessible-experience-checkpoint.md).
+
 ## Actualización 2026-10-15
 
 [Reproducción unificada y traducción automática](playback-unification.md): guía de uso y explicación para estudiantes. [Checkpoint](playback-unification-checkpoint.md).
@@ -18,7 +20,7 @@
 
 Actualizada el 11 de octubre de 2026. Los documentos de aprendizaje están en español; la interfaz de la app y parte de la documentación técnica conservan el inglés.
 
-La identidad vigente es **VoiceToRead 0.1.0 (1)**. Empezar por [inicio del proyecto](project-identity.md): los informes antiguos son historial heredado y no prueban distribución de esta nueva app.
+La identidad vigente es **VoiceToRead 1.0**. Empezar por [inicio del proyecto](project-identity.md): los informes antiguos son historial heredado y no prueban distribución de esta nueva app.
 
 ## Por dónde empezar
 

@@ -58,10 +58,20 @@ final class AppSettings {
     var captureLanguage: CaptureLanguage { didSet { defaults.set(captureLanguage.rawValue, forKey: "captureLanguage") } }
     var readerPaper: ReaderPaper { didSet { defaults.set(readerPaper.rawValue, forKey: "readerPaper") } }
     var ruledPaper: Bool { didSet { defaults.set(ruledPaper, forKey: "ruledPaper") } }
+    var simpleMode: Bool { didSet { defaults.set(simpleMode, forKey: "simpleMode") } }
+    var showButtonNames: Bool { didSet { defaults.set(showButtonNames, forKey: "showButtonNames") } }
+    var pauseHaptics: Bool { didSet { defaults.set(pauseHaptics, forKey: "pauseHaptics") } }
+    var focusedReading: Bool { didSet { defaults.set(focusedReading, forKey: "focusedReading") } }
+    var preparationSeen: Bool { didSet { defaults.set(preparationSeen, forKey: "preparationSeen") } }
     var transcriptionLanguage: String { captureLanguage.rawValue }
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        simpleMode = defaults.bool(forKey: "simpleMode")
+        showButtonNames = defaults.bool(forKey: "showButtonNames")
+        pauseHaptics = defaults.object(forKey: "pauseHaptics") as? Bool ?? true
+        focusedReading = defaults.bool(forKey: "focusedReading")
+        preparationSeen = defaults.bool(forKey: "preparationSeen")
         interfaceLanguage = InterfaceLanguage(rawValue: defaults.string(forKey: "interfaceLanguage") ?? "") ?? .english
         captureLanguage = CaptureLanguage(rawValue: defaults.string(forKey: "captureLanguage") ?? "") ?? .english
         readerPaper = ReaderPaper(rawValue: defaults.string(forKey: "readerPaper") ?? "") ?? .system
@@ -121,5 +131,42 @@ struct ReaderPaperOptions: View {
             Text("Los colores claros usan texto oscuro. Alto contraste tiene prioridad y oculta los renglones.")
                 .font(.caption).foregroundStyle(.secondary)
         }
+    }
+}
+
+/// Visible names are optional; accessible names remain present even in the compact interface.
+struct NamedCircleControl: View {
+    let title: String
+    let symbol: String
+    let prominent: Bool
+    let names: Bool
+    var body: some View {
+        VStack(spacing: 4) {
+            Image(systemName: symbol).font(.system(size: 20, weight: .semibold))
+                .frame(width: 44, height: 44)
+                .foregroundStyle(prominent ? Color.white : Color.primary)
+                .background(prominent ? Color.accentColor : Color.secondary.opacity(0.15), in: Circle())
+            if names { Text(LocalizedStringKey(title)).font(.caption).fixedSize(horizontal: false, vertical: true) }
+        }.accessibilityElement(children: .ignore).accessibilityLabel(LocalizedStringKey(title))
+    }
+}
+struct AccessibleControlLabelStyle: LabelStyle {
+    @AppStorage("showButtonNames") private var names = false
+    @AppStorage("simpleMode") private var simple = false
+    func makeBody(configuration: Configuration) -> some View {
+        VStack(spacing: 4) {
+            configuration.icon
+            if names || simple { configuration.title.font(.caption).fixedSize(horizontal: false, vertical: true) }
+        }
+    }
+}
+
+/// At accessibility text sizes, allow the whole screen to scroll instead of compressing controls.
+struct AccessibilityScrollingContent<Content: View>: View {
+    @Environment(\.dynamicTypeSize) private var size
+    @ViewBuilder let content: () -> Content
+    var body: some View {
+        if size.isAccessibilitySize { ScrollView { content() } }
+        else { content() }
     }
 }

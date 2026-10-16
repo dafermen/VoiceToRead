@@ -84,7 +84,7 @@ enum SessionSchemaV2: VersionedSchema {
 }
 
 enum SessionMigrationPlan: SchemaMigrationPlan {
-    static var schemas: [any VersionedSchema.Type] { [SessionSchemaV1.self, SessionSchemaV2.self, SessionSchemaV3.self, SessionSchemaV4.self, SessionSchemaV5.self, SessionSchemaV6.self, SessionSchemaV7.self, SessionSchemaV8.self] }
+    static var schemas: [any VersionedSchema.Type] { [SessionSchemaV1.self, SessionSchemaV2.self, SessionSchemaV3.self, SessionSchemaV4.self, SessionSchemaV5.self, SessionSchemaV6.self, SessionSchemaV7.self, SessionSchemaV8.self, SessionSchemaV9.self] }
     static var stages: [MigrationStage] {
         [.lightweight(fromVersion: SessionSchemaV1.self, toVersion: SessionSchemaV2.self),
          .lightweight(fromVersion: SessionSchemaV2.self, toVersion: SessionSchemaV3.self),
@@ -92,7 +92,8 @@ enum SessionMigrationPlan: SchemaMigrationPlan {
          .lightweight(fromVersion: SessionSchemaV4.self, toVersion: SessionSchemaV5.self),
          .lightweight(fromVersion: SessionSchemaV5.self, toVersion: SessionSchemaV6.self),
          .lightweight(fromVersion: SessionSchemaV6.self, toVersion: SessionSchemaV7.self),
-         .lightweight(fromVersion: SessionSchemaV7.self, toVersion: SessionSchemaV8.self)]
+         .lightweight(fromVersion: SessionSchemaV7.self, toVersion: SessionSchemaV8.self),
+         .lightweight(fromVersion: SessionSchemaV8.self, toVersion: SessionSchemaV9.self)]
     }
 }
 
@@ -137,4 +138,20 @@ enum SessionSchemaV8: VersionedSchema {
 enum SessionProtectionFailure: LocalizedError {
     case protected
     var errorDescription: String? { "Remove favorite protection before deleting this session or its audio." }
+}
+
+/// A separate tombstone table leaves all previous schema models unchanged during migration.
+/// Audio, corrections and translations remain in place until explicit/per-retention deletion.
+@Model
+final class SessionTrash {
+    @Attribute(.unique) var sessionID: UUID
+    var deletedAt: Date
+    init(sessionID: UUID, deletedAt: Date = Date()) {
+        self.sessionID = sessionID; self.deletedAt = deletedAt
+    }
+    var expiresAt: Date { deletedAt.addingTimeInterval(30 * 24 * 60 * 60) }
+}
+enum SessionSchemaV9: VersionedSchema {
+    static var versionIdentifier: Schema.Version { Schema.Version(9, 0, 0) }
+    static var models: [any PersistentModel.Type] { SessionSchemaV8.models + [SessionTrash.self] }
 }
