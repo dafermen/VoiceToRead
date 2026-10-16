@@ -93,6 +93,18 @@ struct OfflineReadinessView: View {
                 Text("Prepare once, then start when you are ready. Permission requests happen only when you choose the corresponding button. Recording never starts here.")
                 Button("See a short demonstration") { demo = true }
             }
+            Section("Listening languages") {
+                LabeledContent("Capture language", value: InterfaceLocalization.string(coordinator.settings.captureLanguage.name, language: coordinator.settings.interfaceLanguage))
+                LabeledContent("Translation", value: InterfaceLocalization.string(coordinator.settings.captureLanguage.opposite.name, language: coordinator.settings.interfaceLanguage))
+                Text("Change the capture language in Settings before starting.").font(.caption)
+                ForEach(CaptureLanguage.allCases, id: \.self) { language in
+                    LabeledContent(LocalizedStringKey(language.name)) {
+                        Text(uiKey(AVSpeechSynthesisVoice(language: language.rawValue) == nil ? "Voice unavailable" : "Voice available"))
+                    }
+                }
+                Text("If a voice is unavailable, open device Settings → Accessibility → Spoken Content → Voices to download it. Test playback before your meeting.").font(.caption)
+                NavigationLink("Microphone Check") { MicrophoneCheckView() }
+            }
             Section("Required checks") {
                 LabeledContent("Microphone") { Text(uiKey(permission == .granted ? "Ready" : "Permission needed")) }
                 LabeledContent("Speech recognition") { Text(LocalizedStringKey(coordinator.caption.readiness.description)) }

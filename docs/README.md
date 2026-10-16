@@ -94,3 +94,7 @@ La web bilingüe se genera en `website/dist/`. La [guía de publicación y expli
 ## Marcadores visibles y reproducción bilingüe
 
 [Guía de uso y desarrollo](bookmarks-and-bilingual-playback.md): un selector para leer y escuchar, original seguido de traducción, escucha directa en cada párrafo y marcadores compartidos por UUID. Incluye explicación paso a paso para estudiantes y límites de las pruebas.
+
+## Escucha más clara y notas (V10)
+
+[Guía de uso y explicación para estudiantes](listening-comfort.md): identificación del texto que suena, pausa cancelable, velocidades por idioma, preferencias, búsqueda, notas de marcadores y preparación. [Validación y entrega](listening-comfort-checkpoint.md).

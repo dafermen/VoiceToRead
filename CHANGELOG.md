@@ -1,3 +1,12 @@
+## 2026-10-16 — comodidad de escucha y notas
+
+- Tarjeta activa con borde y “Escuchando ahora”, seguimiento opcional al desplazar manualmente.
+- Pausa de 0/1/2 segundos entre idiomas, velocidades independientes y preferencias de idioma/modo recordadas.
+- Búsqueda de párrafos en ambos idiomas con reproducción directa.
+- Notas opcionales de marcadores y escucha local sin abrir otro reproductor; migración aditiva V9→V10.
+- Preparación antes de reunión/clase con micrófono, idiomas y voces; documentación de usuario, desarrollo junior y GitHub actualizada.
+- [Uso y arquitectura](docs/listening-comfort.md) · [verificación](docs/listening-comfort-checkpoint.md).
+
 ## VoiceToRead 1.0 — corrección de marcadores y escucha bilingüe
 
 - Hace visible Guardar/Quitar marcador en original, tarjetas bilingües, sesiones, traducción y reproductor; comparte identidad y persistencia.

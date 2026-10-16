@@ -23,7 +23,7 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Pause/resume with a prominent interruption notice. Reread previous paragraphs without automatic scrolling until you choose to follow again.
 - Optional saved microphone audio, noise reduction and background continuation. Recording always starts explicitly; background capture is opt-in.
 - Save/discard sessions, recover drafts, correct text, search transcripts, bookmark phrases and protect favorites from accidental deletion.
-- Replay continuously or one paragraph at a time with **At my pace**: previous, repeat and next; correct the selected phrase while paused. The caption reader fills the available height; secondary playback options collapse.
+- Replay continuously or one paragraph at a time with **At my pace**: previous and next, with replay from the main button; correct the selected phrase while paused. The caption reader fills the available height; secondary playback options collapse.
 - Export TXT/PDF, recorded audio and synchronized SRT/WebVTT subtitles. Timing after text edits is approximate.
 - Automatically translate finalized text after Stop on compatible devices, with progress and retry; Save/Discard remains your choice. **Listen to the corrected translation or original audio in one reader**, with matching controls, pause/resume and reading speed. Previous/Next select silently. One language choice controls text and sound: Both plays original then translation for each paragraph; At my pace stops after both. Translation paragraphs play inline, without opening another player. Generated speech needs an available device voice.
 - [Unified playback and automatic translation](docs/playback-unification.md): usage, student-oriented architecture and limitations; [validation checkpoint](docs/playback-unification-checkpoint.md).
@@ -31,6 +31,14 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Review bilingual text, practice phrases and compare temporary pronunciation recordings. Local word recognition is not pronunciation scoring.
 
 See [accessible listening and reading](docs/translated-speech.md) for user steps, junior developer explanations, limits and acceptance checks.
+
+## Listening comfort
+
+- The speaking card has a border and “Listening now”; manual scrolling pauses automatic following.
+- Remember language/mode preferences, set independent original/translation speeds and choose a 0/1/2-second gap between languages.
+- Search original or translated paragraphs and play a result directly; add private notes to bookmarks and preview their corrected text with local speech.
+- Check microphone, languages, voices and preparation before a meeting or class.
+- [User/student guide](docs/listening-comfort.md) · [validation and delivery](docs/listening-comfort-checkpoint.md).
 
 ## Requirements and limits
 

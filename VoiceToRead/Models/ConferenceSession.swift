@@ -84,7 +84,7 @@ enum SessionSchemaV2: VersionedSchema {
 }
 
 enum SessionMigrationPlan: SchemaMigrationPlan {
-    static var schemas: [any VersionedSchema.Type] { [SessionSchemaV1.self, SessionSchemaV2.self, SessionSchemaV3.self, SessionSchemaV4.self, SessionSchemaV5.self, SessionSchemaV6.self, SessionSchemaV7.self, SessionSchemaV8.self, SessionSchemaV9.self] }
+    static var schemas: [any VersionedSchema.Type] { [SessionSchemaV1.self, SessionSchemaV2.self, SessionSchemaV3.self, SessionSchemaV4.self, SessionSchemaV5.self, SessionSchemaV6.self, SessionSchemaV7.self, SessionSchemaV8.self, SessionSchemaV9.self, SessionSchemaV10.self] }
     static var stages: [MigrationStage] {
         [.lightweight(fromVersion: SessionSchemaV1.self, toVersion: SessionSchemaV2.self),
          .lightweight(fromVersion: SessionSchemaV2.self, toVersion: SessionSchemaV3.self),
@@ -93,7 +93,8 @@ enum SessionMigrationPlan: SchemaMigrationPlan {
          .lightweight(fromVersion: SessionSchemaV5.self, toVersion: SessionSchemaV6.self),
          .lightweight(fromVersion: SessionSchemaV6.self, toVersion: SessionSchemaV7.self),
          .lightweight(fromVersion: SessionSchemaV7.self, toVersion: SessionSchemaV8.self),
-         .lightweight(fromVersion: SessionSchemaV8.self, toVersion: SessionSchemaV9.self)]
+         .lightweight(fromVersion: SessionSchemaV8.self, toVersion: SessionSchemaV9.self),
+         .lightweight(fromVersion: SessionSchemaV9.self, toVersion: SessionSchemaV10.self)]
     }
 }
 
@@ -154,4 +155,16 @@ final class SessionTrash {
 enum SessionSchemaV9: VersionedSchema {
     static var versionIdentifier: Schema.Version { Schema.Version(9, 0, 0) }
     static var models: [any PersistentModel.Type] { SessionSchemaV8.models + [SessionTrash.self] }
+}
+
+/// Notes belong to bookmarks, not transcripts. An additive table preserves every previous schema.
+@Model
+final class BookmarkNote {
+    @Attribute(.unique) var bookmarkID: UUID
+    var text: String
+    init(bookmarkID: UUID, text: String) { self.bookmarkID = bookmarkID; self.text = text }
+}
+enum SessionSchemaV10: VersionedSchema {
+    static var versionIdentifier: Schema.Version { Schema.Version(10, 0, 0) }
+    static var models: [any PersistentModel.Type] { SessionSchemaV9.models + [BookmarkNote.self] }
 }

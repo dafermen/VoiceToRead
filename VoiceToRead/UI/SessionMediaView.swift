@@ -228,6 +228,21 @@ struct SessionMediaView: View {
     @State private var reading: TranscriptLanguage = .english
     @Environment(AppSettings.self) private var settings
     @AppStorage("translationSpeechSpeed") private var speed = TranslationSpeechSpeed.normal
+    @AppStorage("originalPlaybackSpeed") private var originalSpeed = TranslationSpeechSpeed.normal
+    @AppStorage("playbackLanguagePreference") private var savedLanguage = ""
+    @AppStorage("playbackLanguageGap") private var languageGap = 0
+    @State private var followingSpeech = true
+    @State private var paragraphQuery = ""
+    private var matchingPlaybackParagraphs: [(offset: Int, element: ReviewParagraph)] {
+        Array(reviewed.enumerated()).filter { _, paragraph in
+            audibleParagraphs.contains(where: { $0.id == paragraph.id }) &&
+                (paragraphQuery.isEmpty || paragraph.text.localizedStandardContains(paragraphQuery) ||
+                (currentTranslation && snapshot?.translated.first { $0.id == paragraph.id }?.text.localizedStandardContains(paragraphQuery) == true))
+        }
+    }
+    private var speakingTranslation: Bool { usesSequence ? sequence.translated : listening == .translation }
+    private var waitingForLanguage: Bool { usesSequence && sequence.waitingBetweenLanguages }
+    private var highlightedCard: String { speakingTranslation ? "translation-card" : "original-card" }
     private var language: CaptureLanguage { CaptureLanguage(rawValue: session.language) ?? .english }
     private var currentTranslation: Bool { snapshot?.language == language && snapshot?.isCurrent(reviewed) == true }
     private var audibleParagraphs: [ReviewParagraph] {
@@ -245,6 +260,7 @@ struct SessionMediaView: View {
     }
     private var playbackStatus: String {
         if usesSequence, let message = sequence.message { return message }
+        if waitingForLanguage && isPlaying { return "Pause between languages" }
         if usesSequence && isPlaying { return sequence.translated ? "Playing translation" : "Playing original" }
         if player.interrupted && listening == .original { return "Playback interrupted. Tap Resume." }
         if listening == .translation, let message = speech.message { return message }
@@ -339,29 +355,37 @@ struct SessionMediaView: View {
                 pausePlayback(); speech.stop()
                 selectParagraph(id ?? audibleParagraphs.first?.id)
             }
-            .onChange(of: reading) { _, _ in
+            .onChange(of: reading) { _, value in
                 listening = reading == language.opposite.mode ? .translation : .original
                 selectParagraph(selectedParagraphID ?? reviewed.first?.id)
                 do { try rebuildCues() } catch { failure = error.localizedDescription }
             }
             .onChange(of: speed) { _, value in
-                sequence.stop(); player.speed = value
+                sequence.stop()
                 if listening == .translation { speech.stop() }
             }
+            .onChange(of: originalSpeed) { _, value in sequence.stop(); player.pause(); player.speed = value }
+            .onChange(of: languageGap) { _, _ in sequence.stop() }
             .onDisappear { sequence.close(); player.stop(); speech.close(); exportTask?.cancel(); cleanup() }
             .onChange(of: phase) { _, phase in if phase != .active { sequence.interrupt(); player.interrupt(); speech.interrupt() } }
             .sheet(isPresented: $showingPhrases) {
                 NavigationStack {
-                    List(Array(audibleParagraphs.enumerated()), id: \.element.id) { index, paragraph in
+                    List(matchingPlaybackParagraphs, id: \.element.id) { index, paragraph in
                         Button {
-                            selectParagraph(paragraph.id); showingPhrases = false
+                            selectParagraph(paragraph.id); showingPhrases = false; togglePlayback()
                         } label: {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("Paragraph \(index + 1) of \(audibleParagraphs.count)").font(.caption)
                                 Text(paragraph.text).foregroundStyle(.primary).lineLimit(3)
+                                if let translated = snapshot?.translated.first(where: { $0.id == paragraph.id }), currentTranslation {
+                                    Text(translated.text).foregroundStyle(.secondary).lineLimit(3)
+                                }
+                                Label("Listen from this paragraph", systemImage: "play.circle")
                             }
                         }.buttonStyle(.plain).accessibilityIdentifier("listenPlaybackParagraph-\(index)")
-                    }.navigationTitle("Paragraphs").navigationBarTitleDisplayMode(.inline)
+                    }.overlay { if matchingPlaybackParagraphs.isEmpty && !paragraphQuery.isEmpty { Text("No matching paragraphs") } }
+                        .searchable(text: $paragraphQuery, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search original or translation")
+                        .navigationTitle("Paragraphs").navigationBarTitleDisplayMode(.inline)
                         .toolbar { Button("Done") { showingPhrases = false } }
                 }
             }
@@ -423,17 +447,17 @@ struct SessionMediaView: View {
     private var sourceSelectors: some View {
         HStack {
             Menu {
-                Picker("Reading speed", selection: $speed) {
-                    ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
-                }
+                PlaybackPreferenceControls()
             } label: {
-                Label { Text(LocalizedStringKey(speed.rawValue)) }
+                Label { Text("Reading speed") }
                     icon: { Image(systemName: "speedometer") }
                     .frame(minHeight: 44).contentShape(Rectangle())
             }.accessibilityIdentifier("playbackAudioMenu")
             Spacer()
             Menu {
-                Picker("Read and listen", selection: $reading) {
+                Picker("Read and listen", selection: Binding(get: { reading }, set: {
+                    reading = $0; savedLanguage = PlaybackLanguagePreference(mode: $0, source: language).rawValue
+                })) {
                     Text(LocalizedStringKey(language.name)).tag(language.mode)
                     if currentTranslation {
                         Text(LocalizedStringKey(language.opposite.name)).tag(language.opposite.mode)
@@ -449,22 +473,36 @@ struct SessionMediaView: View {
         }.font(.subheadline).frame(minHeight: 44)
     }
     private var reader: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
-                if let id = activeParagraphID, let original = reviewed.first(where: { $0.id == id }) {
-                    if reading == language.mode || reading == .both {
-                        PlaybackTextCard(text: original.text, language: language, translated: false, settings: settings, identifier: "playbackCaption")
-                    }
-                    if reading != language.mode, let translated = snapshot?.translated.first(where: { $0.id == id }) {
-                        PlaybackTextCard(text: translated.text, language: language.opposite, translated: true, settings: settings, identifier: reading == .both ? "playbackTranslationCaption" : "playbackCaption")
-                    }
-                } else {
-                    Text("Choose a paragraph, then tap Play.").padding()
+        ScrollViewReader { proxy in
+            VStack(spacing: 0) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 12) {
+                        if let id = activeParagraphID, let original = reviewed.first(where: { $0.id == id }) {
+                            if reading == language.mode || reading == .both {
+                                PlaybackTextCard(text: original.text, language: language, translated: false, settings: settings,
+                                    identifier: "playbackCaption", speaking: isPlaying && !waitingForLanguage && !speakingTranslation)
+                                    .id("original-card")
+                            }
+                            if reading != language.mode, let translated = snapshot?.translated.first(where: { $0.id == id }) {
+                                PlaybackTextCard(text: translated.text, language: language.opposite, translated: true, settings: settings,
+                                    identifier: reading == .both ? "playbackTranslationCaption" : "playbackCaption",
+                                    speaking: isPlaying && !waitingForLanguage && speakingTranslation).id("translation-card")
+                            }
+                        } else { Text("Choose a paragraph, then tap Play.").padding() }
+                    }.frame(maxWidth: .infinity, alignment: .leading).padding(4)
                 }
-            }.frame(maxWidth: .infinity, alignment: .leading).padding(4)
-        }.id(activeParagraphID).frame(maxWidth: .infinity,
-            minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
-            maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
+                .simultaneousGesture(DragGesture(minimumDistance: 10).onChanged { _ in followingSpeech = false })
+                .onChange(of: highlightedCard) { _, card in if followingSpeech { proxy.scrollTo(card, anchor: .top) } }
+                .onChange(of: activeParagraphID) { _, _ in if followingSpeech { proxy.scrollTo(highlightedCard, anchor: .top) } }
+                .onChange(of: isPlaying) { _, playing in if playing && followingSpeech { proxy.scrollTo(highlightedCard, anchor: .top) } }
+                if !followingSpeech {
+                    Button("Follow audio", systemImage: "arrow.down.to.line") {
+                        followingSpeech = true; proxy.scrollTo(highlightedCard, anchor: .top)
+                    }.frame(minHeight: 44).accessibilityIdentifier("followPlaybackAudio")
+                }
+            }
+        }.frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
+                maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
             .accessibilityIdentifier("playbackCaptionScroll")
     }
     private var playbackProgress: some View {
@@ -480,8 +518,13 @@ struct SessionMediaView: View {
                     Text("Paragraph \(index + 1) of \(reviewed.count)").accessibilityIdentifier("playbackParagraphPosition")
                 }
                 Spacer()
-                Text(LocalizedStringKey(speed.rawValue))
+                Text(LocalizedStringKey(reading.rawValue))
             }.font(.caption).foregroundStyle(.secondary)
+            ViewThatFits(in: .horizontal) {
+                HStack { speedSummary }
+                VStack(alignment: .leading) { speedSummary }
+            }.font(.caption).foregroundStyle(.secondary)
+            Text(uiKey(atMyPace ? "At my pace" : "Continuous")).font(.caption)
             Text(LocalizedStringKey(playbackStatus)).font(.caption.weight(.semibold))
                 .accessibilityIdentifier("playbackStatus")
             if !compactPlayback {
@@ -502,6 +545,12 @@ struct SessionMediaView: View {
             }.frame(height: 56)
             }
         }
+    }
+    @ViewBuilder private var speedSummary: some View {
+        if reading == language.mode || reading == .both {
+            Text("Original speed") + Text(": ") + Text(LocalizedStringKey(originalSpeed.rawValue))
+        }
+        if reading != language.mode { Text("Translation speed") + Text(": ") + Text(LocalizedStringKey(speed.rawValue)) }
     }
     private var playbackOptions: some View {
         @Bindable var settings = settings
@@ -568,12 +617,16 @@ struct SessionMediaView: View {
             reviewed = try repository.reviewedParagraphs(for: session)
             snapshot = try repository.translation(for: session.id)?.decoded()
             if let url = try repository.audioURL(for: session.id), FileManager.default.fileExists(atPath: url.path) {
-                audioURL = url; player.load(url); player.speed = speed
+                audioURL = url; player.load(url); player.speed = originalSpeed
             }
             listening = initialAudio == .translation && currentTranslation ? .translation : audioURL != nil ? .original : .translation
             reading = translationLanguage.flatMap(TranscriptLanguage.init(rawValue:)) ??
                 (listening == .translation ? language.opposite.mode : language.mode)
+            if translationLanguage == nil, initialAudio == .original, let preference = PlaybackLanguagePreference(rawValue: savedLanguage) {
+                reading = preference.mode(source: language, hasTranslation: currentTranslation)
+            }
             if !currentTranslation { reading = language.mode }
+            listening = reading == language.opposite.mode ? .translation : .original
             sequence.load(audioURL)
             try rebuildCues()
             selectParagraph(initialParagraphID ?? audibleParagraphs.first?.id ?? reviewed.first?.id)
@@ -620,7 +673,7 @@ struct SessionMediaView: View {
             guard let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) else { return }
             let values = atMyPace ? [reviewed[index]] : Array(reviewed[index...])
             sequence.start(ParagraphAudioStep.make(source: values, translated: currentTranslation ? snapshot?.translated ?? [] : [],
-                language: language, mode: reading, ranges: playbackParagraphs), speed: speed)
+                language: language, mode: reading, ranges: playbackParagraphs), speed: speed, originalSpeed: originalSpeed, gapSeconds: languageGap)
             return
         }
         sequence.stop()
@@ -784,18 +837,21 @@ struct PlaybackTextCard: View {
     let translated: Bool
     let settings: AppSettings
     var identifier = ""
+    var speaking = false
     @Environment(\.colorScheme) private var cardScheme
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
                 .font(.caption.weight(.semibold))
+            if speaking { Label("Listening now", systemImage: "speaker.wave.2.fill").font(.caption.weight(.bold)) }
             ReaderParagraph(text: text, points: settings.captionSize * textScale, spacing: settings.lineSpacing,
                             bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                 .textSelection(.enabled).accessibilityIdentifier(identifier)
         }.environment(\.colorScheme, !settings.highContrast && settings.readerPaper != .system ? .light : settings.colorScheme ?? cardScheme)
          .modifier(LiveLanguageCard(language: language, highContrast: settings.highContrast,
                                    paper: settings.readerPaper))
+         .overlay(RoundedRectangle(cornerRadius: 12).stroke(speaking ? Color.accentColor : .clear, lineWidth: 3))
     }
 }
 
@@ -805,5 +861,25 @@ struct PlaybackLaunchStyle: ButtonStyle {
         configuration.label.font(.subheadline).frame(maxWidth: .infinity, minHeight: 48)
             .padding(.horizontal, 6).background(Color.accentColor.opacity(configuration.isPressed ? 0.2 : 0.08),
                                             in: RoundedRectangle(cornerRadius: 10))
+    }
+}
+
+/// Shared controls persist locally for both the full player and inline listening.
+struct PlaybackPreferenceControls: View {
+    @AppStorage("originalPlaybackSpeed") private var original = TranslationSpeechSpeed.normal
+    @AppStorage("translationSpeechSpeed") private var translation = TranslationSpeechSpeed.normal
+    @AppStorage("playbackLanguageGap") private var gap = 0
+    var body: some View {
+        Picker("Original speed", selection: $original) {
+            ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        }
+        Picker("Translation speed", selection: $translation) {
+            ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        }
+        Picker("Pause between languages", selection: $gap) {
+            Text("No pause").tag(0)
+            Text("1 second").tag(1)
+            Text("2 seconds").tag(2)
+        }
     }
 }

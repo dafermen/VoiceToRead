@@ -217,8 +217,17 @@ final class ParagraphPlayback {
     private var steps: [ParagraphAudioStep] = []
     private var index = 0
     private var speed: TranslationSpeechSpeed = .normal
+    private var originalSpeed: TranslationSpeechSpeed = .normal
+    private var gapSeconds = 0
+    private(set) var waitingBetweenLanguages = false
+    private var gapTask: Task<Void, Never>?
+    private var gapToken = UUID()
+    private var gapObservers: [NSObjectProtocol] = []
+    private let wait: (Int) async throws -> Void
     private var current: ParagraphAudioStep? { steps.indices.contains(index) ? steps[index] : nil }
-    init(recording: SessionPlayer? = nil, voice: TranslationSpeechPlayer? = nil) {
+    init(recording: SessionPlayer? = nil, voice: TranslationSpeechPlayer? = nil,
+         wait: @escaping (Int) async throws -> Void = { try await Task.sleep(for: .seconds($0)) }) {
+        self.wait = wait
         self.recording = recording ?? SessionPlayer(); self.voice = voice ?? TranslationSpeechPlayer()
         self.recording.onFinish = { [weak self] in self?.advance() }
         self.voice.onFinish = { [weak self] in self?.advance() }
@@ -230,14 +239,18 @@ final class ParagraphPlayback {
         if let url { recording.load(url) }
         voice.observeInterruptions()
     }
-    func start(_ steps: [ParagraphAudioStep], speed: TranslationSpeechSpeed) {
+    func start(_ steps: [ParagraphAudioStep], speed: TranslationSpeechSpeed,
+               originalSpeed: TranslationSpeechSpeed? = nil, gapSeconds: Int = 0) {
         stop(); message = nil; self.steps = steps; self.speed = speed
+        self.originalSpeed = originalSpeed ?? speed; self.gapSeconds = min(2, max(0, gapSeconds))
         guard !steps.isEmpty else { message = "No playable text in this paragraph."; return }
-        state = .playing; playCurrent()
+        observeGapInterruptions(); state = .playing; playCurrent()
     }
     private func playCurrent() {
         guard let step = current else { state = .completed; return }
+        waitingBetweenLanguages = false
         paragraphID = step.paragraph.id; translated = step.translated
+        let speed = step.translated ? self.speed : originalSpeed
         if let range = step.recording {
             recording.speed = speed; recording.select(range: range); recording.toggle()
             if let failure = recording.failure { stop(); message = failure }
@@ -248,19 +261,36 @@ final class ParagraphPlayback {
     }
     private func advance() {
         guard state == .playing || state == .paused else { return }
+        let previous = current
         index += 1
         guard index < steps.count else { state = .completed; return }
-        if state == .playing { playCurrent() }
+        waitingBetweenLanguages = gapSeconds > 0 && previous?.paragraph.id == current?.paragraph.id && previous?.translated != current?.translated
+        if state == .playing {
+            if waitingBetweenLanguages { scheduleGap() } else { playCurrent() }
+        }
+    }
+    /// Cancellation plus a token prevents an old timer from starting audio after Stop or navigation.
+    private func scheduleGap() {
+        gapTask?.cancel(); gapToken = UUID()
+        let token = gapToken
+        gapTask = Task { [weak self, wait, gapSeconds] in
+            do { try await wait(gapSeconds) } catch { return }
+            guard let self, !Task.isCancelled, self.gapToken == token, self.state == .playing else { return }
+            self.playCurrent()
+        }
     }
     func pause() {
         guard state == .playing else { return }
         state = .paused
+        gapTask?.cancel(); gapToken = UUID()
         recording.pause()
         if voice.state == .speaking { voice.togglePause() }
     }
     func resume() {
         guard state == .paused, let step = current else { return }
         state = .playing
+        // Resume gives the reader the full selected gap again, without skipping the translation.
+        if waitingBetweenLanguages { scheduleGap(); return }
         if step.paragraph.id != paragraphID || step.translated != translated { playCurrent() }
         else if step.recording != nil {
             recording.toggle()
@@ -270,6 +300,7 @@ final class ParagraphPlayback {
         else { playCurrent() }
     }
     func stop() {
+        gapTask?.cancel(); gapTask = nil; gapToken = UUID(); waitingBetweenLanguages = false
         state = .idle; steps = []; index = 0; paragraphID = nil
         recording.pause(); voice.stop()
     }
@@ -277,5 +308,37 @@ final class ParagraphPlayback {
         guard state == .playing || state == .paused else { return }
         stop(); message = "Playback interrupted. Tap Play to restart this paragraph."
     }
-    func close() { stop(); recording.stop(); voice.close() }
+    /// Engines are idle during the gap, so the queue itself must observe interruptions too.
+    private func observeGapInterruptions() {
+        guard gapObservers.isEmpty else { return }
+        for name in [AVAudioSession.interruptionNotification, AVAudioSession.routeChangeNotification, AVAudioSession.mediaServicesWereResetNotification] {
+            gapObservers.append(NotificationCenter.default.addObserver(forName: name, object: nil, queue: .main) { [weak self] note in
+                if name == AVAudioSession.interruptionNotification,
+                   (note.userInfo?[AVAudioSessionInterruptionTypeKey] as? NSNumber)?.uintValue != AVAudioSession.InterruptionType.began.rawValue { return }
+                if name == AVAudioSession.routeChangeNotification {
+                    let reason = (note.userInfo?[AVAudioSessionRouteChangeReasonKey] as? NSNumber)?.uintValue
+                    guard reason == AVAudioSession.RouteChangeReason.oldDeviceUnavailable.rawValue || reason == AVAudioSession.RouteChangeReason.newDeviceAvailable.rawValue else { return }
+                }
+                Task { @MainActor [weak self] in
+                    if self?.waitingBetweenLanguages == true { self?.interrupt() }
+                }
+            })
+        }
+    }
+    func close() {
+        stop(); recording.stop(); voice.close()
+        gapObservers.forEach(NotificationCenter.default.removeObserver); gapObservers = []
+    }
+}
+
+/// Store the role (original/translation/both), not English/Spanish: sessions can use either language.
+enum PlaybackLanguagePreference: String {
+    case original, translation, both
+    init(mode: TranscriptLanguage, source: CaptureLanguage) {
+        self = mode == .both ? .both : mode == source.mode ? .original : .translation
+    }
+    func mode(source: CaptureLanguage, hasTranslation: Bool) -> TranscriptLanguage {
+        guard hasTranslation else { return source.mode }
+        return self == .both ? .both : self == .translation ? source.opposite.mode : source.mode
+    }
 }

@@ -19,11 +19,13 @@ struct AppRootView: View {
                         if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
                         else {
                             VStack(spacing: 0) {
-                                if !coordinator.settings.preparationSeen && coordinator.caption.state == .idle {
+                                if coordinator.caption.state == .idle {
                                     HStack {
-                                        NavigationLink("Prepare VoiceToRead") { OfflineReadinessView(coordinator: coordinator) }
+                                        NavigationLink("Before a meeting or class") { OfflineReadinessView(coordinator: coordinator) }
                                         Spacer()
-                                        Button("Later") { coordinator.settings.preparationSeen = true }
+                                        if !coordinator.settings.preparationSeen {
+                                            Button("Later") { coordinator.settings.preparationSeen = true }
+                                        }
                                     }.padding().background(.regularMaterial)
                                 }
                                 LiveCaptionView(coordinator: coordinator)
@@ -143,7 +145,9 @@ struct AppRootView: View {
                 return
             }
             if ProcessInfo.processInfo.arguments.contains("--ui-test-review") {
-                UserDefaults.standard.removeObject(forKey: "playbackAtMyPace")
+                for key in ["playbackAtMyPace", "playbackLanguagePreference", "playbackLanguageGap", "originalPlaybackSpeed", "translationSpeechSpeed"] {
+                    UserDefaults.standard.removeObject(forKey: key)
+                }
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-simple"), forKey: "simpleMode")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-labels"), forKey: "showButtonNames")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-focus"), forKey: "focusedReading")

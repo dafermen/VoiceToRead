@@ -405,7 +405,7 @@ struct SessionDetailView: View {
         }
         .sheet(isPresented: $showingBookmarks) {
             BookmarkListView(sessionID: session.id, repository: repository,
-                jumpableIDs: Set(originals.map(\.id)), onSelect: { position = $0 })
+                jumpableIDs: Set(originals.map(\.id)), allowPlayback: canPlay, onSelect: { position = $0 })
         }
         .alert("Rename session", isPresented: $renaming) {
             TextField("Title", text: $title)
@@ -461,15 +461,28 @@ struct SessionDetailView: View {
 struct BookmarkListView: View {
     let repository: TranscriptRepository
     let jumpableIDs: Set<UUID>
+    let allowPlayback: Bool
     let onSelect: ((UUID) -> Void)?
     @Query private var bookmarks: [CaptionBookmark]
     @Query private var reviews: [SessionReview]
     @Environment(\.dismiss) private var dismiss
     @State private var failure = false
+    @Query private var notes: [BookmarkNote]
+    @Query private var sessions: [ConferenceSession]
+    @State private var noteBookmark: CaptionBookmark?
+    @State private var noteText = ""
+    @Environment(\.dynamicTypeSize) private var noteTypeSize
+    @State private var speech = ParagraphPlayback()
+    @AppStorage("originalPlaybackSpeed") private var originalSpeed = TranslationSpeechSpeed.normal
+    @AppStorage("translationSpeechSpeed") private var translatedSpeed = TranslationSpeechSpeed.normal
+    @AppStorage("playbackLanguageGap") private var gap = 0
+    @AppStorage("playbackLanguagePreference") private var preferredLanguage = "original"
+    @Environment(\.scenePhase) private var phase
 
-    init(sessionID: UUID?, repository: TranscriptRepository, jumpableIDs: Set<UUID> = [], onSelect: ((UUID) -> Void)? = nil) {
+    init(sessionID: UUID?, repository: TranscriptRepository, jumpableIDs: Set<UUID> = [], allowPlayback: Bool = false, onSelect: ((UUID) -> Void)? = nil) {
         self.repository = repository
         self.jumpableIDs = jumpableIDs
+        self.allowPlayback = allowPlayback
         self.onSelect = onSelect
         let identifier = sessionID ?? UUID()
         _bookmarks = Query(filter: #Predicate<CaptionBookmark> { $0.sessionID == identifier }, sort: \.createdAt)
@@ -483,6 +496,7 @@ struct BookmarkListView: View {
     var body: some View {
         NavigationStack {
             List {
+                if allowPlayback { Text("Bookmark previews use generated voices and your saved language preference.").font(.caption).foregroundStyle(.secondary) }
                 if corrections == nil {
                     Text("Saved corrections could not be loaded. Reopen this session.")
                 } else if bookmarks.isEmpty {
@@ -491,7 +505,7 @@ struct BookmarkListView: View {
                 }
                 if let corrections {
                     ForEach(bookmarks) { bookmark in
-                        Group {
+                        VStack(alignment: .leading, spacing: 8) {
                             if let onSelect, jumpableIDs.contains(bookmark.segmentID) {
                                 Button {
                                     dismiss()
@@ -508,11 +522,21 @@ struct BookmarkListView: View {
                             } else {
                                 Text(corrections[bookmark.segmentID.uuidString] ?? bookmark.text).textSelection(.enabled)
                             }
-                        }
-                        .font(.title3)
+                        if let note = notes.first(where: { $0.bookmarkID == bookmark.id }) { Text(note.text).font(.callout) }
+                        (noteTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(spacing: 16))) {
+                            Button(uiKey(speech.paragraphID == bookmark.segmentID && speech.state == .playing ? "Stop" : "Listen"),
+                                   systemImage: speech.paragraphID == bookmark.segmentID && speech.state == .playing ? "stop.fill" : "play.fill") {
+                                play(bookmark)
+                            }.disabled(!allowPlayback).accessibilityIdentifier("listenBookmark-" + bookmark.segmentID.uuidString)
+                            Button("Bookmark note", systemImage: "square.and.pencil") {
+                                noteText = notes.first(where: { $0.bookmarkID == bookmark.id })?.text ?? ""
+                                noteBookmark = bookmark
+                            }.accessibilityIdentifier("noteBookmark-" + bookmark.segmentID.uuidString)
+                        }.buttonStyle(.borderless).frame(minHeight: 44)
+                        }.font(.title3)
                         .swipeActions {
                             Button("Remove", role: .destructive) {
-                                do { try repository.removeBookmark(bookmark) }
+                                do { speech.stop(); try repository.removeBookmark(bookmark) }
                                 catch { failure = true }
                             }
                         }
@@ -521,8 +545,48 @@ struct BookmarkListView: View {
             }
             .navigationTitle("Bookmarks").navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
-            .alert("Could not remove bookmark", isPresented: $failure) { Button("OK") {} }
+            .alert("Could not update bookmark", isPresented: $failure) { Button("OK") {} }
+            .sheet(item: $noteBookmark) { bookmark in
+                NavigationStack {
+                    Form { TextField("Optional note", text: $noteText, axis: .vertical).lineLimit(3...8).accessibilityIdentifier("bookmarkNoteInput") }
+                        .navigationTitle("Bookmark note")
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) { Button("Cancel") { noteBookmark = nil } }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Save") {
+                                    do { try repository.saveBookmarkNote(noteText, for: bookmark); noteBookmark = nil }
+                                    catch { noteBookmark = nil; failure = true }
+                                }
+                            }
+                        }
+                }
+            }
+            .safeAreaInset(edge: .bottom) {
+                if let message = speech.message { Text(LocalizedStringKey(message)).padding().background(.regularMaterial) }
+            }
+            .task { speech.load(nil) }
+            .onDisappear { speech.close() }
+            .onChange(of: phase) { _, value in if value != .active { speech.interrupt() } }
+            .onChange(of: noteBookmark?.id) { _, _ in speech.stop() }
         }
+    }
+    private func play(_ bookmark: CaptionBookmark) {
+        guard allowPlayback else { return }
+        if speech.paragraphID == bookmark.segmentID && speech.state == .playing { speech.stop(); return }
+        guard let session = sessions.first(where: { $0.id == bookmark.sessionID }), session.endedAt != nil else {
+            speech.message = "Stop this session in Captions before listening."; return
+        }
+        do {
+            let source = try repository.reviewedParagraphs(for: session)
+            let translation = try repository.translation(for: session.id)?.decoded()
+            let language = CaptureLanguage(rawValue: session.language) ?? .english
+            let hasTranslation = translation?.isCurrent(source) == true && translation?.language == language
+            let mode = (PlaybackLanguagePreference(rawValue: preferredLanguage) ?? .original).mode(source: language, hasTranslation: hasTranslation)
+            // Bookmark previews use corrected text with the local voice; the saved recording is unchanged.
+            speech.start(ParagraphAudioStep.make(source: source.filter { $0.id == bookmark.segmentID },
+                translated: hasTranslation ? translation?.translated ?? [] : [], language: language, mode: mode, ranges: []),
+                speed: translatedSpeed, originalSpeed: originalSpeed, gapSeconds: gap)
+        } catch { failure = true }
     }
 }
 

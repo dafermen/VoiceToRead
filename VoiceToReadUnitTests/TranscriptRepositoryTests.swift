@@ -4,6 +4,43 @@ import SwiftData
 
 @MainActor
 final class TranscriptRepositoryTests: XCTestCase {
+    func testV9MigrationBookmarkNotesPersistAndDeleteWithMarker() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let ids = try autoreleasepool { () throws -> (UUID, UUID) in
+            let schema = Schema(versionedSchema: SessionSchemaV9.self)
+            let config = ModelConfiguration("Sessions", schema: schema, url: directory.appendingPathComponent("Sessions.store"), cloudKitDatabase: .none)
+            let container = try ModelContainer(for: schema, configurations: [config])
+            let session = ConferenceSession(title: "Before notes")
+            let segment = CaptionSegment(runID: UUID(), start: 0, end: 1, text: "Keep original")
+            container.mainContext.insert(session)
+            let caption = StoredCaption(segment: segment, order: 0)
+            container.mainContext.insert(caption); session.captions.append(caption)
+            let bookmark = CaptionBookmark(sessionID: session.id, segment: segment)
+            container.mainContext.insert(bookmark)
+            try container.mainContext.save()
+            return (session.id, bookmark.id)
+        }
+        try autoreleasepool {
+            let repo = try TranscriptRepository(directory: directory)
+            let bookmark = try XCTUnwrap(repo.bookmarks(for: ids.0).first)
+            XCTAssertEqual(bookmark.id, ids.1)
+            try repo.saveBookmarkNote("  Practice this phrase  ", for: bookmark)
+        }
+        let repo = try TranscriptRepository(directory: directory)
+        let bookmark = try XCTUnwrap(repo.bookmarks(for: ids.0).first)
+        XCTAssertEqual(try repo.bookmarkNote(for: ids.1)?.text, "Practice this phrase")
+        XCTAssertEqual(bookmark.text, "Keep original")
+        try repo.saveBookmarkNote(" ", for: bookmark)
+        XCTAssertNil(try repo.bookmarkNote(for: ids.1))
+        try repo.saveBookmarkNote("New note", for: bookmark)
+        try repo.removeBookmark(bookmark)
+        XCTAssertNil(try repo.bookmarkNote(for: ids.1))
+        XCTAssertTrue(try repo.bookmarks(for: ids.0).isEmpty)
+        XCTAssertEqual(try repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).first?.fullTranscript, "Keep original")
+    }
+
     func testBookmarkFromSavedOrTranslatedParagraphUsesSameIDAndSurvivesReopening() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }

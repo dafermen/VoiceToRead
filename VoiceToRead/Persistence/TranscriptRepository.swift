@@ -15,7 +15,7 @@ final class TranscriptRepository {
     let storageURL: URL?
 
     init(inMemory: Bool = false, directory: URL? = nil) throws {
-        let schema = Schema(versionedSchema: SessionSchemaV9.self)
+        let schema = Schema(versionedSchema: SessionSchemaV10.self)
         let configuration: ModelConfiguration
         if inMemory {
             storageURL = nil
@@ -202,7 +202,10 @@ final class TranscriptRepository {
         // Explicit deletion also covers iOS 17 stores where cascade propagation
         // can leave registered caption objects behind in the context.
         for caption in session.captions { context.delete(caption) }
-        for bookmark in savedBookmarks { context.delete(bookmark) }
+        for bookmark in savedBookmarks {
+            if let note = try bookmarkNote(for: bookmark.id) { context.delete(note) }
+            context.delete(bookmark)
+        }
         if let savedReview { context.delete(savedReview) }
         if let savedTrash { context.delete(savedTrash) }
         context.delete(session)
@@ -223,6 +226,7 @@ final class TranscriptRepository {
 
     func toggleBookmark(_ segment: CaptionSegment, in session: ConferenceSession) throws {
         if let existing = try bookmarks(for: session.id).first(where: { $0.segmentID == segment.id }) {
+            if let note = try bookmarkNote(for: existing.id) { context.delete(note) }
             context.delete(existing)
         } else {
             context.insert(CaptionBookmark(sessionID: session.id, segment: segment))
@@ -239,7 +243,22 @@ final class TranscriptRepository {
             start: paragraph.start, end: paragraph.end, text: text), in: session)
     }
 
+    func bookmarkNote(for bookmarkID: UUID) throws -> BookmarkNote? {
+        try context.fetch(FetchDescriptor<BookmarkNote>(predicate: #Predicate { $0.bookmarkID == bookmarkID })).first
+    }
+
+    func saveBookmarkNote(_ text: String, for bookmark: CaptionBookmark) throws {
+        guard try trash(for: bookmark.sessionID) == nil,
+              try bookmarks(for: bookmark.sessionID).contains(where: { $0.id == bookmark.id }) else { throw ReviewFailure.sessionChanged }
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        if let note = try bookmarkNote(for: bookmark.id) {
+            if trimmed.isEmpty { context.delete(note) } else { note.text = trimmed }
+        } else if !trimmed.isEmpty { context.insert(BookmarkNote(bookmarkID: bookmark.id, text: trimmed)) }
+        do { try context.save() } catch { context.rollback(); throw error }
+    }
+
     func removeBookmark(_ bookmark: CaptionBookmark) throws {
+        if let note = try bookmarkNote(for: bookmark.id) { context.delete(note) }
         context.delete(bookmark)
         do { try context.save() } catch { context.rollback(); cacheSessionID = nil; throw error }
     }

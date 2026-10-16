@@ -5,6 +5,73 @@ import SwiftData
 
 @MainActor
 final class TranslationTests: XCTestCase {
+    func testGapCanPauseResumeAndCancelWithoutLateSpeech() async throws {
+        let original = ReviewParagraph(id: UUID(), text: "Hello")
+        let output = FakeTranslationSpeechOutput()
+        var continuations: [CheckedContinuation<Void, Never>] = []
+        let waiting = expectation(description: "both gap attempts started"); waiting.expectedFulfillmentCount = 2
+        let player = ParagraphPlayback(voice: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), wait: { seconds in
+            XCTAssertEqual(seconds, 2)
+            await withCheckedContinuation { continuations.append($0); waiting.fulfill() }
+        })
+        let steps = ParagraphAudioStep.make(source: [original], translated: [.init(id: original.id, text: "Hola")], language: .english, mode: .both, ranges: [])
+        player.start(steps, speed: .fast, originalSpeed: .slow, gapSeconds: 2)
+        XCTAssertEqual(output.rates, [TranslationSpeechSpeed.slow.rate])
+        output.onFinish?(try XCTUnwrap(output.tokens.last))
+        XCTAssertTrue(player.waitingBetweenLanguages)
+        // Yield until the deliberately suspended timer is installed; no wall-clock sleep is needed.
+        while continuations.isEmpty { await Task.yield() }
+        player.pause(); XCTAssertEqual(player.state, .paused)
+        player.resume()
+        await fulfillment(of: [waiting], timeout: 5)
+        player.stop()
+        continuations.forEach { $0.resume() }
+        await Task.yield()
+        XCTAssertEqual(output.texts, ["Hello"])
+        XCTAssertEqual(player.state, .idle)
+        XCTAssertFalse(player.waitingBetweenLanguages)
+        player.start(steps, speed: .fast, originalSpeed: .slow)
+        output.onFinish?(try XCTUnwrap(output.tokens.last))
+        XCTAssertEqual(output.rates.last, TranslationSpeechSpeed.fast.rate)
+        XCTAssertEqual(output.texts.last, "Hola")
+        player.close()
+    }
+
+    func testGapFinishesBeforeTranslationAndNeverBetweenParagraphs() async throws {
+        let a = ReviewParagraph(id: UUID(), text: "First")
+        let b = ReviewParagraph(id: UUID(), text: "Second")
+        let output = FakeTranslationSpeechOutput()
+        let entered = expectation(description: "gap entered")
+        var release: CheckedContinuation<Void, Never>?
+        let player = ParagraphPlayback(voice: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), wait: { _ in
+            await withCheckedContinuation { release = $0; entered.fulfill() }
+        })
+        let steps = ParagraphAudioStep.make(source: [a,b], translated: [.init(id: a.id, text: "Primero")], language: .english, mode: .both, ranges: [])
+        player.start(steps, speed: .normal, gapSeconds: 1)
+        output.onFinish?(try XCTUnwrap(output.tokens.last))
+        await fulfillment(of: [entered], timeout: 5)
+        XCTAssertEqual(output.texts, ["First"])
+        release?.resume()
+        let spoke = expectation(description: "translation after gap")
+        Task { @MainActor in
+            while output.texts.count < 2 { await Task.yield() }
+            spoke.fulfill()
+        }
+        await fulfillment(of: [spoke], timeout: 5)
+        XCTAssertFalse(player.waitingBetweenLanguages)
+        output.onFinish?(try XCTUnwrap(output.tokens.last))
+        XCTAssertEqual(output.texts, ["First", "Primero", "Second"])
+        player.close()
+    }
+
+    func testSavedPlaybackRoleAdaptsToCaptureLanguageWithoutLosingPreference() {
+        let preference = PlaybackLanguagePreference(mode: .spanish, source: .english)
+        XCTAssertEqual(preference, .translation)
+        XCTAssertEqual(preference.mode(source: .spanish, hasTranslation: true), .english)
+        XCTAssertEqual(PlaybackLanguagePreference.both.mode(source: .english, hasTranslation: false), .english)
+        XCTAssertEqual(PlaybackLanguagePreference.both.mode(source: .spanish, hasTranslation: true), .both)
+    }
+
 
     func testBilingualQueueFinishesBothBeforeNextAndIgnoresCancelledVoice() {
         let a = ReviewParagraph(id: UUID(), text: "First original")

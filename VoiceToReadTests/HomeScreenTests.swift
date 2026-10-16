@@ -119,6 +119,10 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["nextParagraphButton"].tap()
         XCTAssertEqual(app.buttons["recordingPlayButton"].label, "Play")
         XCTAssertTrue(app.staticTexts["playbackCaption"].exists)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        defer { XCUIDevice.shared.orientation = .portrait }
+        XCTAssertTrue(app.buttons["recordingPlayButton"].exists)
+        XCTAssertTrue(app.staticTexts["playbackCaption"].exists)
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Focused-large-text"; shot.lifetime = .keepAlways; add(shot)
         app.terminate()
     }
@@ -156,8 +160,8 @@ final class HomeScreenTests: XCTestCase {
     func testDefaultPreparationGuideReturnsWithoutStartingCapture() throws {
         let app = XCUIApplication(); app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow"]
         app.launch()
-        XCTAssertTrue(app.buttons["Prepare VoiceToRead"].waitForExistence(timeout: 20))
-        app.buttons["Prepare VoiceToRead"].tap()
+        XCTAssertTrue(app.buttons["Before a meeting or class"].waitForExistence(timeout: 20))
+        app.buttons["Before a meeting or class"].tap()
         XCTAssertTrue(app.navigationBars["Offline Readiness"].waitForExistence(timeout: 5))
         app.buttons["See a short demonstration"].tap()
         XCTAssertTrue(app.staticTexts["Demonstration · no recording"].waitForExistence(timeout: 5))
@@ -165,6 +169,34 @@ final class HomeScreenTests: XCTestCase {
         app.navigationBars["Offline Readiness"].buttons["Done"].tap()
         XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Start Listening")
+        app.terminate()
+    }
+
+    @MainActor
+    func testPlaybackComfortPreferencesAndSearch() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap(); app.staticTexts["Review sample"].tap()
+        app.buttons["sessionMediaButton"].tap()
+        XCTAssertTrue(app.buttons["recordingPlayButton"].waitForExistence(timeout: 10))
+        app.buttons["At my pace"].tap()
+        app.buttons["playbackTextMenu"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        app.buttons["Both"].tap()
+        app.buttons["recordingPlayButton"].tap()
+        XCTAssertTrue(app.staticTexts["Listening now"].exists)
+        app.buttons["recordingPlayButton"].tap()
+        app.navigationBars["Audio & subtitles"].buttons["Done"].tap()
+        app.buttons["sessionMediaButton"].tap()
+        XCTAssertTrue(app.buttons["recordingPlayButton"].waitForExistence(timeout: 8))
+        XCTAssertEqual(app.buttons["playbackTextMenu"].value as? String, "Both")
+        XCTAssertTrue(app.buttons["At my pace"].isSelected)
+        app.buttons["openParagraphList"].tap()
+        let search = app.searchFields.firstMatch
+        XCTAssertTrue(search.waitForExistence(timeout: 5)); search.tap(); search.typeText("zzznomatch")
+        XCTAssertFalse(app.buttons["listenPlaybackParagraph-0"].exists)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Playback-search"; shot.lifetime = .keepAlways; add(shot)
         app.terminate()
     }
 
@@ -283,7 +315,15 @@ final class HomeScreenTests: XCTestCase {
         mark.tap(); XCTAssertEqual(mark.label, "Remove bookmark")
         app.buttons["Bookmarks"].tap()
         XCTAssertFalse(app.staticTexts["No bookmarks yet"].exists)
-        app.buttons["Done"].tap()
+        let noteButton = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "noteBookmark-")).firstMatch
+        XCTAssertTrue(noteButton.waitForExistence(timeout: 5)); noteButton.tap()
+        let note = app.descendants(matching: .any).matching(identifier: "bookmarkNoteInput").firstMatch
+        XCTAssertTrue(note.waitForExistence(timeout: 5)); note.tap(); note.typeText("Practise tomorrow")
+        app.navigationBars["Bookmark note"].buttons["Save"].tap()
+        XCTAssertTrue(app.staticTexts["Practise tomorrow"].waitForExistence(timeout: 5))
+        let listen = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listenBookmark-")).firstMatch
+        XCTAssertTrue(listen.isEnabled); listen.tap(); XCTAssertEqual(listen.label, "Stop"); listen.tap()
+        app.navigationBars["Bookmarks"].buttons["Done"].tap()
         app.buttons["sessionTranslationButton"].tap()
         let translated = app.buttons["translationBookmark-0"]
         XCTAssertTrue(translated.waitForExistence(timeout: 5)); XCTAssertEqual(translated.label, "Remove bookmark")

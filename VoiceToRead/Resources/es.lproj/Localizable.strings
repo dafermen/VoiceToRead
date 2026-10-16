@@ -708,3 +708,49 @@
 "Not bookmarked" = "Sin marcador";
 
 "Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again." = "Pulsa Guardar marcador junto a un párrafo confirmado en Subtítulos, Sesiones o Traducción. Abre Marcadores para encontrarlo de nuevo.";
+
+"Listening now" = "Escuchando ahora";
+
+"Follow audio" = "Seguir audio";
+
+"Original speed" = "Velocidad del original";
+
+"Translation speed" = "Velocidad de la traducción";
+
+"Pause between languages" = "Pausa entre idiomas";
+
+"No pause" = "Sin pausa";
+
+"1 second" = "1 segundo";
+
+"2 seconds" = "2 segundos";
+
+"Search original or translation" = "Buscar en original o traducción";
+
+"Bookmark note" = "Nota del marcador";
+
+"Optional note" = "Nota opcional";
+
+"Could not update bookmark" = "No se pudo actualizar el marcador";
+
+"Stop this session in Captions before listening." = "Detén esta sesión en Subtítulos antes de escuchar.";
+
+"Before a meeting or class" = "Antes de una reunión o clase";
+
+"Listening languages" = "Idiomas para escuchar";
+
+"Change the capture language in Settings before starting." = "Cambia el idioma de captura en Ajustes antes de comenzar.";
+
+"Voice available" = "Voz disponible";
+
+"Voice unavailable" = "Voz no disponible";
+
+"If a voice is unavailable, open device Settings → Accessibility → Spoken Content → Voices to download it. Test playback before your meeting." = "Si falta una voz, abre Ajustes del dispositivo → Accesibilidad → Contenido leído → Voces para descargarla. Prueba la reproducción antes de tu reunión.";
+
+": " = ": ";
+
+"Capture language" = "Idioma de captura";
+
+"No matching paragraphs" = "No hay párrafos coincidentes";
+
+"Bookmark previews use generated voices and your saved language preference." = "Los marcadores se escuchan con voces generadas y la preferencia de idioma guardada.";

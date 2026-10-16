@@ -708,3 +708,49 @@
 "Not bookmarked" = "Not bookmarked";
 
 "Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again." = "Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again.";
+
+"Listening now" = "Listening now";
+
+"Follow audio" = "Follow audio";
+
+"Original speed" = "Original speed";
+
+"Translation speed" = "Translation speed";
+
+"Pause between languages" = "Pause between languages";
+
+"No pause" = "No pause";
+
+"1 second" = "1 second";
+
+"2 seconds" = "2 seconds";
+
+"Search original or translation" = "Search original or translation";
+
+"Bookmark note" = "Bookmark note";
+
+"Optional note" = "Optional note";
+
+"Could not update bookmark" = "Could not update bookmark";
+
+"Stop this session in Captions before listening." = "Stop this session in Captions before listening.";
+
+"Before a meeting or class" = "Before a meeting or class";
+
+"Listening languages" = "Listening languages";
+
+"Change the capture language in Settings before starting." = "Change the capture language in Settings before starting.";
+
+"Voice available" = "Voice available";
+
+"Voice unavailable" = "Voice unavailable";
+
+"If a voice is unavailable, open device Settings → Accessibility → Spoken Content → Voices to download it. Test playback before your meeting." = "If a voice is unavailable, open device Settings → Accessibility → Spoken Content → Voices to download it. Test playback before your meeting.";
+
+": " = ": ";
+
+"Capture language" = "Capture language";
+
+"No matching paragraphs" = "No matching paragraphs";
+
+"Bookmark previews use generated voices and your saved language preference." = "Bookmark previews use generated voices and your saved language preference.";
