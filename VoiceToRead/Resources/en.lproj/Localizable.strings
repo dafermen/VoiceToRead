@@ -756,3 +756,57 @@
 "Bookmark previews use generated voices and your saved language preference." = "Bookmark previews use generated voices and your saved language preference.";
 
 "For long paragraphs, choose At my pace to finish reading before moving on. You can also scroll the text." = "For long paragraphs, choose At my pace to finish reading before moving on. You can also scroll the text.";
+
+"Speak and translate" = "Speak and translate";
+
+"Spanish → English" = "Spanish → English";
+
+"Speak Spanish, pause, and hear the English translation. The microphone stays off while the phone speaks." = "Speak Spanish, pause, and hear the English translation. The microphone stays off while the phone speaks.";
+
+"Your Spanish message" = "Your Spanish message";
+
+"English translation" = "English translation";
+
+"Finished speaking" = "Finished speaking";
+
+"Speak Spanish" = "Speak Spanish";
+
+"Translate and speak" = "Translate and speak";
+
+"Repeat English" = "Repeat English";
+
+"Install speech model" = "Install speech model";
+
+"Finish after a pause" = "Finish after a pause";
+
+"3 seconds" = "3 seconds";
+
+"5 seconds" = "5 seconds";
+
+"Only when I tap Finished speaking" = "Only when I tap Finished speaking";
+
+"A pause is estimated from speech and sound. In noise, tap Finished speaking. Each turn lasts up to one minute. You can also type or correct your message." = "A pause is estimated from speech and sound. In noise, tap Finished speaking. Each turn lasts up to one minute. You can also type or correct your message.";
+
+"This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it." = "This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.";
+
+"Speaking English — microphone off" = "Speaking English — microphone off";
+
+"Ready for your message" = "Ready for your message";
+
+"Preparing Spanish recognition…" = "Preparing Spanish recognition…";
+
+"Listening in Spanish…" = "Listening in Spanish…";
+
+"Finishing your message…" = "Finishing your message…";
+
+"Translating to English…" = "Translating to English…";
+
+"Stopping…" = "Stopping…";
+
+"Listening was interrupted. Review the Spanish text, then translate or speak again." = "Listening was interrupted. Review the Spanish text, then translate or speak again.";
+
+"No speech detected. Tap Speak Spanish to try again." = "No speech detected. Tap Speak Spanish to try again.";
+
+"Review the Spanish text before translating. Recognition may be incomplete." = "Review the Spanish text before translating. Recognition may be incomplete.";
+
+"Translation could not finish. Check language downloads and try Translate and speak again." = "Translation could not finish. Check language downloads and try Translate and speak again.";

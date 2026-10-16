@@ -32,6 +32,10 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 
 See [accessible listening and reading](docs/translated-speech.md) for user steps, junior developer explanations, limits and acceptance checks.
 
+## Speak and translate
+
+Speak Spanish, pause and hear the English translation for everyday conversations. Choose a 3/5-second pause or finish manually; type/correct a message, repeat English, or cancel. The microphone is off during playback, and each new turn starts explicitly. Temporary text only: no recording or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
+
 ## Listening comfort
 
 - Adjust caption text from **14–60 base points** in Settings, live Reading options or playback Reading preferences. Your saved size is preserved; Dynamic Type still applies. Use **At my pace** for time to finish long paragraphs and scroll any text that exceeds the reader.

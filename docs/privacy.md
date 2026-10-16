@@ -6,14 +6,15 @@ Source data-flow description updated for optional recording and subtitles; statu
 | Microphone audio | User-started listening, optional background continuation, bounded queues; optional Save audio selected before a session | Memory plus local protected CAF when Save audio is enabled (initially on in new installations); M4A export |
 | Speech analysis | SFSpeechRecognizer en-US or es-ES with on-device support checked and required; modern SpeechAnalyzer where available; no remote fallback | Device; installed Apple models |
 | Model setup | System Dictation setup for the selected language for compatibility engine; explicit Install Selected Language Model only for modern engine | Apple's system asset service |
-| Final captions | Incremental recovery draft always; explicit Save publishes to library, Discard deletes | Local SwiftData store |
+| Saved-session final captions | Incremental recovery draft always; explicit Save publishes to library, Discard deletes | Local SwiftData store |
 | Transcript corrections and reading position | Original recognition is retained; corrections and last read paragraph are stored separately | Local SwiftData store |
 | Partial captions | Provisional, displayed in memory; not saved | Device memory |
 | Session metadata | UUID, title, dates, active-listening duration, language and ended status | Local SwiftData store |
 | Preferences | Caption size, wake, appearance, paper/rules, selected capture language, remembered audio/background choices | App's UserDefaults domain |
 | Disk capacity | Checked for storage readiness and low-storage safeguard | Local value, not transmitted |
 | Export / Copy / Share | Only after user action | Destination chosen by user; may transmit or sync text, audio and subtitle files |
-| Translation speech | Explicit playback of corrected saved destination text through Apple AVSpeechSynthesizer; no recording/export of synthesized audio | Device voice; availability/download managed by Apple; no developer server |
+| Translation speech | Explicit playback of corrected saved destination text; in Speak and translate, automatic English speech after a user-started Spanish turn or Translate and speak action. Playback uses Apple AVSpeechSynthesizer; no recording/export of synthesized audio | Device voice; availability/download managed by Apple; no developer server |
+| Temporary conversation | Spanish recognition, text editing, translation and English speech; no recorded file or saved session; cleared when the view is closed | Device memory and Apple language/voice resources |
 | Diagnostics | Microphone check shows volume only | Device memory |
 
 No account, analytics, advertising, tracking, OpenAI key, server endpoint or custom network client exists.

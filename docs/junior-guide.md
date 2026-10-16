@@ -323,3 +323,7 @@ El [paquete de publicación](store/submission-kit.md) distingue hechos comprobad
 ### Tamaño de letra compartido (2026-10-16)
 
 `CaptionTextSize` en `AppSettings.swift` define 14–60 puntos base y el valor inicial 28. `CaptionSizeControl` se reutiliza en Ajustes, lectura en vivo y reproductor. El gesto y VoiceOver llaman al mismo límite; al cargar preferencias se valida también el dato persistido. Así evitamos que una pantalla acepte 14 y otra lo restablezca a 20. Dynamic Type sigue multiplicando el tamaño de presentación. El tamaño visual y el avance del audio son responsabilidades separadas: para terminar de leer un párrafo usamos A mi ritmo, no un cambio oculto del reproductor. [Uso y límites](listening-comfort.md#párrafos-largos-en-un-iphone-pequeño).
+
+## Hablar y traducir (2026-10-16)
+
+[Guía de implementación para estudiantes](speak-and-translate.md#para-estudiantes-arquitectura-y-decisiones): máquina de estados temporal, detección heurística de pausa, finalización de micrófono antes de la voz, validación de traducciones y rechazo de callbacks obsoletos. El modo no crea una sesión de SwiftData.

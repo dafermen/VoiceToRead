@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+- [Hablar y traducir: español a inglés, uso, privacidad y arquitectura](speak-and-translate.md).
+
 Actualización de experiencia accesible: [guía de los ocho cambios](accessible-experience.md) y [evidencia/pendientes](accessible-experience-checkpoint.md).
 
 ## Actualización 2026-10-15
@@ -98,3 +100,5 @@ La web bilingüe se genera en `website/dist/`. La [guía de publicación y expli
 ## Escucha más clara y notas (V10)
 
 [Guía de uso y explicación para estudiantes](listening-comfort.md): identificación del texto que suena, pausa cancelable, velocidades por idioma, preferencias, búsqueda, notas de marcadores y preparación. [Validación y entrega](listening-comfort-checkpoint.md).
+
+[Estado de validación y entrega](speak-and-translate-checkpoint.md).

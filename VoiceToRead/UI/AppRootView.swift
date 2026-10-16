@@ -20,6 +20,7 @@ struct AppRootView: View {
                         else {
                             VStack(spacing: 0) {
                                 if coordinator.caption.state == .idle {
+                                    SpeakTranslateEntry(coordinator: coordinator).buttonStyle(.bordered).padding(.top, 4)
                                     HStack {
                                         NavigationLink("Before a meeting or class") { OfflineReadinessView(coordinator: coordinator) }
                                         Spacer()

@@ -17,6 +17,7 @@ struct SettingsView: View {
                 Toggle("Focused reading", isOn: $settings.focusedReading).accessibilityIdentifier("focusedReadingToggle")
                 Text("Simple mode keeps essential actions visible. Focused reading shows one paragraph at a time and waits for you to continue.").font(.caption)
                 NavigationLink("Write a response") { WrittenResponseView(coordinator: coordinator) }
+                SpeakTranslateEntry(coordinator: coordinator)
             }
             Section("App interface") {
                 Picker("Menus and buttons", selection: $settings.interfaceLanguage) {
@@ -321,6 +322,7 @@ struct SimpleHomeView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 Text("What would you like to do?").font(.title2.bold())
+                SpeakTranslateEntry(coordinator: coordinator)
                 NavigationLink { LiveCaptionView(coordinator: coordinator) } label: { Label("Listen now", systemImage: "mic.fill").frame(maxWidth: .infinity, minHeight: 60) }
                     .accessibilityIdentifier("simpleListenNow")
                 NavigationLink { SessionHistoryView(coordinator: coordinator) } label: { Label("My sessions", systemImage: "clock").frame(maxWidth: .infinity, minHeight: 60) }

@@ -180,3 +180,7 @@ Protección: botón o swipe → `setFavorite` → fila única V8. Borrado de ses
 ## Escucha más clara y notas (V10)
 
 [Guía de uso y explicación para estudiantes](listening-comfort.md): identificación del texto que suena, pausa cancelable, velocidades por idioma, preferencias, búsqueda, notas de marcadores y preparación. [Validación y entrega](listening-comfort-checkpoint.md).
+
+## Hablar y traducir (2026-10-16)
+
+[Guía de implementación para estudiantes](speak-and-translate.md#para-estudiantes-arquitectura-y-decisiones): máquina de estados temporal, detección heurística de pausa, finalización de micrófono antes de la voz, validación de traducciones y rechazo de callbacks obsoletos. El modo no crea una sesión de SwiftData.

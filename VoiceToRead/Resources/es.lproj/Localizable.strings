@@ -756,3 +756,57 @@
 "Bookmark previews use generated voices and your saved language preference." = "Los marcadores se escuchan con voces generadas y la preferencia de idioma guardada.";
 
 "For long paragraphs, choose At my pace to finish reading before moving on. You can also scroll the text." = "Para párrafos largos, elige A mi ritmo para terminar de leer antes de avanzar. También puedes desplazar el texto.";
+
+"Speak and translate" = "Hablar y traducir";
+
+"Spanish → English" = "Español → Inglés";
+
+"Speak Spanish, pause, and hear the English translation. The microphone stays off while the phone speaks." = "Habla en español, haz una pausa y escucha la traducción al inglés. El micrófono permanece apagado mientras habla el teléfono.";
+
+"Your Spanish message" = "Tu mensaje en español";
+
+"English translation" = "Traducción al inglés";
+
+"Finished speaking" = "Terminé de hablar";
+
+"Speak Spanish" = "Hablar en español";
+
+"Translate and speak" = "Traducir y decir en voz alta";
+
+"Repeat English" = "Repetir en inglés";
+
+"Install speech model" = "Instalar modelo de voz";
+
+"Finish after a pause" = "Terminar tras una pausa";
+
+"3 seconds" = "3 segundos";
+
+"5 seconds" = "5 segundos";
+
+"Only when I tap Finished speaking" = "Solo al pulsar Terminé de hablar";
+
+"A pause is estimated from speech and sound. In noise, tap Finished speaking. Each turn lasts up to one minute. You can also type or correct your message." = "La pausa se estima a partir del reconocimiento y el sonido. Si hay ruido, pulsa Terminé de hablar. Cada intervención dura hasta un minuto. También puedes escribir o corregir tu mensaje.";
+
+"This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it." = "Esta conversación es temporal. No se guarda una grabación ni una sesión. Revisa la traducción antes de confiar en ella.";
+
+"Speaking English — microphone off" = "Hablando en inglés — micrófono apagado";
+
+"Ready for your message" = "Listo para tu mensaje";
+
+"Preparing Spanish recognition…" = "Preparando reconocimiento en español…";
+
+"Listening in Spanish…" = "Escuchando en español…";
+
+"Finishing your message…" = "Terminando tu mensaje…";
+
+"Translating to English…" = "Traduciendo al inglés…";
+
+"Stopping…" = "Deteniendo…";
+
+"Listening was interrupted. Review the Spanish text, then translate or speak again." = "Se interrumpió la escucha. Revisa el texto en español y después traduce o vuelve a hablar.";
+
+"No speech detected. Tap Speak Spanish to try again." = "No se detectó voz. Pulsa Hablar en español para volver a intentarlo.";
+
+"Review the Spanish text before translating. Recognition may be incomplete." = "Revisa el texto en español antes de traducir. El reconocimiento puede estar incompleto.";
+
+"Translation could not finish. Check language downloads and try Translate and speak again." = "No se pudo terminar la traducción. Revisa las descargas de idiomas y vuelve a pulsar Traducir y decir en voz alta.";

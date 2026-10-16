@@ -2,6 +2,35 @@ import XCTest
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
+    func testSpeakTranslateTypedMessageAndDismissal() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation"]
+        app.launch()
+        let entry = app.buttons["speakTranslateEntry"]
+        XCTAssertTrue(entry.waitForExistence(timeout: 20))
+        entry.tap()
+        let input = app.textViews["conversationSource"]
+        XCTAssertTrue(input.waitForExistence(timeout: 10))
+        input.tap(); input.typeText("Un vaso de agua por favor")
+        app.swipeUp()
+        let translate = app.buttons["conversationTranslate"]
+        if !translate.isHittable { app.swipeUp() }
+        XCTAssertTrue(translate.isEnabled)
+        translate.tap()
+        let result = app.staticTexts["conversationTranslation"]
+        XCTAssertTrue(result.waitForExistence(timeout: 10))
+        XCTAssertTrue(result.label.contains("Test translation"))
+        let screenshot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        screenshot.name = "Speak-and-translate"; screenshot.lifetime = .keepAlways; add(screenshot)
+        app.navigationBars.buttons["Done"].tap()
+        XCTAssertTrue(entry.waitForExistence(timeout: 10))
+        entry.tap()
+        XCTAssertTrue(input.waitForExistence(timeout: 10))
+        XCTAssertEqual(input.value as? String, "")
+        app.navigationBars.buttons["Done"].tap()
+    }
+
+    @MainActor
     func testStoreScreenshotsAndPrivacyEnglish() throws { try captureStoreScreenshots(spanish: false) }
 
     @MainActor

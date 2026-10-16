@@ -326,6 +326,8 @@ private final class MockSpeech: SpeechTranscribing {
     var installations = 0
     var cancellations = 0
     var delayStart = false
+    var finalText = "Final sentence."
+    var finishError: Error?
     var pendingStart: CheckedContinuation<Void, Never>?
     private var output: AsyncThrowingStream<TranscriptionUpdate, Error>.Continuation?
     private var runID = UUID()
@@ -345,9 +347,171 @@ private final class MockSpeech: SpeechTranscribing {
         output?.finish(throwing: TranscriptionFailure.interrupted("Microphone interrupted."))
     }
     func resolveStart() { pendingStart?.resume(); pendingStart = nil }
+    func emitPartial(_ text: String) {
+        output?.yield(.init(runID: runID, start: 0, end: 1, text: text, isFinal: false))
+    }
     func finish() async throws {
-        output?.yield(.init(runID: runID, start: 0, end: 1, text: "Final sentence.", isFinal: true))
+        if let finishError { output?.finish(throwing: finishError); throw finishError }
+        output?.yield(.init(runID: runID, start: 0, end: 1, text: finalText, isFinal: true))
         output?.finish()
     }
     func cancel() async { cancellations += 1; output?.finish() }
+}
+
+
+@MainActor
+final class SpeakTranslateTests: XCTestCase {
+    func testPauseRequiresRecognizedTextQuietAndStableWords() {
+        var detector = ConversationPause()
+        XCTAssertFalse(detector.shouldFinish(text: "", level: 0, now: 100, delay: 3))
+        XCTAssertFalse(detector.shouldFinish(text: "Quiero agua", level: 0, now: 101, delay: 3))
+        XCTAssertFalse(detector.shouldFinish(text: "Quiero agua", level: 0.8, now: 103, delay: 3))
+        XCTAssertFalse(detector.shouldFinish(text: "Quiero agua", level: 0, now: 105, delay: 3))
+        XCTAssertTrue(detector.shouldFinish(text: "Quiero agua", level: 0, now: 106, delay: 3))
+        XCTAssertFalse(detector.shouldFinish(text: "Quiero agua fría", level: 0, now: 107, delay: 3))
+        XCTAssertFalse(detector.shouldFinish(text: "Quiero agua fría", level: 0, now: 200, delay: 0))
+    }
+    func testFinalizesMicrophoneBeforeTranslatingAndSpeaksOnlyOnce() async throws {
+        let speech = MockSpeech()
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let output = ConversationTestOutput()
+        let player = TranslationSpeechPlayer(output: output, activate: {
+            XCTAssertEqual(capture.state, .ended)
+        }, deactivate: {})
+        let model = SpeakTranslateModel(capture: capture, speaker: player, supported: { true })
+        model.start()
+        await eventually { model.phase == .listening }
+        XCTAssertEqual(speech.language, .spanish)
+        XCTAssertFalse(capture.saveAudio)
+        model.finish()
+        await eventually { model.phase == .translating }
+        let job = try XCTUnwrap(model.job)
+        XCTAssertEqual(job.plan.language, .spanish)
+        XCTAssertEqual(capture.state, .ended)
+        let reply = job.source.map { ReviewParagraph(id: $0.id, text: "A glass of water, please.") }
+        model.complete(job, result: .success(reply))
+        model.complete(job, result: .success(reply))
+        XCTAssertEqual(output.spoken, ["A glass of water, please."])
+        XCTAssertEqual(output.language, .english)
+        XCTAssertEqual(speech.starts, 1, "Playback never reopens the microphone")
+        model.cancel()
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(player.state, .idle)
+    }
+    func testCancelRejectsLateTranslationAndAllowsNextTurn() async throws {
+        let speech = MockSpeech()
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let output = ConversationTestOutput()
+        let player = TranslationSpeechPlayer(output: output, activate: {}, deactivate: {})
+        let model = SpeakTranslateModel(capture: capture, speaker: player, supported: { true })
+        model.edit("Un café por favor")
+        model.translate()
+        let old = try XCTUnwrap(model.job)
+        model.cancel()
+        model.complete(old, result: .success(old.source.map { .init(id: $0.id, text: "Coffee, please") }))
+        XCTAssertTrue(output.spoken.isEmpty)
+        await eventually { model.phase == .ready }
+        model.edit("Agua")
+        model.translate()
+        let current = try XCTUnwrap(model.job)
+        XCTAssertNotEqual(old.id, current.id)
+        model.complete(current, result: .success([]))
+        XCTAssertNotNil(model.message)
+        XCTAssertTrue(output.spoken.isEmpty, "Incomplete translation cannot be spoken")
+        model.cancel()
+        await eventually { model.phase == .ready }
+    }
+    func testInterruptionDoesNotAutomaticallyTranslateOrResume() async {
+        let speech = MockSpeech()
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let output = ConversationTestOutput()
+        let model = SpeakTranslateModel(capture: capture,
+            speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
+        model.start()
+        await eventually { model.phase == .listening }
+        speech.interrupt()
+        await eventually { if case .problem = capture.state { return true }; return false }
+        model.poll(now: ProcessInfo.processInfo.systemUptime)
+        XCTAssertEqual(model.phase, .ready)
+        XCTAssertNil(model.job)
+        XCTAssertTrue(output.spoken.isEmpty)
+        XCTAssertNotNil(model.message)
+        model.cancel()
+        await eventually { model.phase == .ready }
+    }
+    func testQuietPauseAutomaticallyFinalizesAndUsesFinalRevision() async throws {
+        let speech = MockSpeech(); speech.finalText = "Quiero agua fría."
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let model = SpeakTranslateModel(capture: capture, supported: { true })
+        model.start()
+        await eventually { model.phase == .listening }
+        speech.emitPartial("Quiero agua")
+        await eventually { !capture.transcript.partial.isEmpty }
+        let now = ProcessInfo.processInfo.systemUptime
+        model.poll(now: now)
+        XCTAssertEqual(model.phase, .listening)
+        model.poll(now: now + 4)
+        await eventually { model.phase == .translating }
+        XCTAssertEqual(model.job?.source.first?.text, "Quiero agua fría.")
+        XCTAssertEqual(capture.state, .ended)
+        model.cancel()
+        await eventually { model.phase == .ready }
+    }
+    func testFailedFinalizationRequiresReviewInsteadOfAutomaticSpeech() async {
+        let speech = MockSpeech(); speech.finishError = TranscriptionFailure.finalizationTimeout
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let model = SpeakTranslateModel(capture: capture, supported: { true })
+        model.start()
+        await eventually { model.phase == .listening }
+        speech.emitPartial("Un café")
+        await eventually { !capture.transcript.partial.isEmpty }
+        model.poll(now: ProcessInfo.processInfo.systemUptime)
+        model.finish()
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(model.source, "Un café")
+        XCTAssertNil(model.job)
+        XCTAssertNotNil(model.message)
+        model.cancel()
+        await eventually { model.phase == .ready }
+    }
+    func testCancelDuringRecognitionStartupCannotStartTranslation() async {
+        let speech = MockSpeech(); speech.delayStart = true
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let model = SpeakTranslateModel(capture: capture, supported: { true })
+        model.start()
+        await eventually { speech.pendingStart != nil }
+        model.cancel()
+        speech.resolveStart()
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(capture.state, .idle)
+        XCTAssertNil(model.job)
+    }
+    func testUnsupportedDeviceDoesNotStartCaptureOrTranslation() {
+        let speech = MockSpeech()
+        let model = SpeakTranslateModel(capture: CaptionViewModel(microphone: CaptionMicrophone(), speech: speech), supported: { false })
+        model.start(); model.edit("Hola"); model.translate()
+        XCTAssertEqual(speech.starts, 0)
+        XCTAssertNil(model.job)
+        XCTAssertEqual(model.phase, .ready)
+    }
+    private func eventually(_ condition: () -> Bool) async {
+        for _ in 0..<200 {
+            if condition() { return }
+            try? await Task.sleep(for: .milliseconds(10))
+        }
+        XCTFail("Conversation did not reach the expected state")
+    }
+}
+
+@MainActor
+private final class ConversationTestOutput: TranslationSpeechOutput {
+    var onFinish: ((UUID) -> Void)?
+    var spoken: [String] = []
+    var language: CaptureLanguage?
+    func speak(_ text: String, language: CaptureLanguage, rate: Float, token: UUID) throws {
+        spoken.append(text); self.language = language
+    }
+    func pause() -> Bool { true }
+    func resume() -> Bool { true }
+    func stop() {}
 }

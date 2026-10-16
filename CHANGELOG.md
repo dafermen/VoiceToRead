@@ -1,3 +1,11 @@
+## 2026-10-16 — hablar en español y reproducir en inglés
+
+- Modo temporal Hablar y traducir, con acceso desde Captions y el inicio sencillo.
+- Finalización automática tras pausa estimada de 3/5 segundos, alternativa manual y límite de un minuto.
+- Texto original editable, traducción visible, voz inglesa automática tras finalizar, repetir y cancelar.
+- Captura y voz excluyentes; cancelación de trabajos tardíos y sin reinicio automático tras interrupciones.
+- No guarda audio ni sesiones ni modifica preferencias globales de captura. [Guía y arquitectura](docs/speak-and-translate.md).
+
 ## 2026-10-16 — tamaños de letra para pantallas pequeñas
 
 - Amplía el rango base de subtítulos de 20–44 a 14–60 puntos, conservando el tamaño guardado y el valor inicial de 28.
