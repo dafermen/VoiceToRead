@@ -17,3 +17,9 @@ La primera compilación de comprobación detectó un observador `scenePhase` ret
 ## Compatibilidad
 
 Se conserva el esquema y los datos de marcadores/notas anteriores. Favoritos de sesiones completas, correcciones, grabaciones y expresiones de práctica conservan su función. La web de Hostinger y la publicación App Store no se actualizan automáticamente con este commit.
+
+## Reintento de distribución solicitado — 2026-10-16
+
+El titular pidió una nueva compilación para App Store Connect/TestFlight. El código de la app sigue siendo el validado en `6717215`; este registro activa un nuevo cambio en `main` para el workflow Default.
+
+La ejecución anterior `00b43544-37e8-4f38-9cc7-ec8587ce003f` terminó Archive iOS correctamente, sin errores y con dos advertencias, pero su estado global en GitHub seguía pendiente al solicitar el reintento. No se pudo confirmar su disponibilidad en TestFlight. No confundir el éxito de Archive con procesamiento/distribución completados: comprobar el nuevo flujo y la asignación al grupo Dev antes de anunciar disponibilidad en el iPhone.
