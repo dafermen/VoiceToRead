@@ -1,5 +1,7 @@
 # Marcadores y escucha bilingüe por párrafo
 
+> Actualización 2026-10-16: la interfaz de marcadores de frases y la reproducción inline en Traducción se retiraron. Consulta [la navegación actual](simplified-navigation.md); las referencias anteriores describen el historial de implementación.
+
 ## Cómo usarlo
 
 Estas mejoras facilitan volver a una frase, comprender una conversación en otro idioma y practicar con tiempo propio. Están orientadas a apoyar a personas con discapacidad auditiva o baja visión, estudiantes de idiomas y niños acompañados por un adulto. Los nombres de las acciones y sus estados acompañan a los símbolos: el color y el sonido no son la única señal.

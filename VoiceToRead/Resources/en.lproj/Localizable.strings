@@ -139,7 +139,7 @@
 "Export, Copy and Share are explicit actions. The destination you choose may sync or transmit the transcript, audio or subtitles according to its own privacy policy." = "Export, Copy and Share are explicit actions. The destination you choose may sync or transmit the transcript, audio or subtitles according to its own privacy policy.";
 "Files could not be prepared. Check storage and try again. The saved recording is unchanged." = "Files could not be prepared. Check storage and try again. The saved recording is unchanged.";
 "Final captions are protected in a recovery draft. After Stop, choose Save Session or Discard." = "Final captions are protected in a recovery draft. After Stop, choose Save Session or Discard.";
-"Final captions, phrase bookmarks and optional audio are stored in a local recovery draft. After Stop, Save Session keeps it in the library; Discard deletes it. Unfinished drafts are available in Sessions after reopening. You can rename, export and delete sessions. Saved transcripts and recordings are excluded from device backup; deleting the app removes them." = "Final captions, phrase bookmarks and optional audio are stored in a local recovery draft. After Stop, Save Session keeps it in the library; Discard deletes it. Unfinished drafts are available in Sessions after reopening. You can rename, export and delete sessions. Saved transcripts and recordings are excluded from device backup; deleting the app removes them.";
+"Final captions and optional audio are stored in a local recovery draft. After Stop, Save Session keeps it in the library; Discard deletes it. Unfinished drafts are available in Sessions after reopening. You can rename, export and delete sessions. Saved transcripts and recordings are excluded from device backup; deleting the app removes them." = "Final captions and optional audio are stored in a local recovery draft. After Stop, Save Session keeps it in the library; Discard deletes it. Unfinished drafts are available in Sessions after reopening. You can rename, export and delete sessions. Saved transcripts and recordings are excluded from device backup; deleting the app removes them.";
 "Find" = "Find";
 "Find and replace" = "Find and replace";
 "Finishing" = "Finishing";
@@ -830,3 +830,9 @@
 "Tap the microphone to speak, then Finished speaking. Read both texts and tap Play English when you are ready. No need to hold the button." = "Tap the microphone to speak, then Finished speaking. Read both texts and tap Play English when you are ready. No need to hold the button.";
 
 "Translation could not finish. Check language downloads and try translating again." = "Translation could not finish. Check language downloads and try translating again.";
+
+"Text & translation" = "Text & translation";
+
+"Check preparation" = "Check preparation";
+
+"Original" = "Original";

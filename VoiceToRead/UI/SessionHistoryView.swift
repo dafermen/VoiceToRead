@@ -248,8 +248,6 @@ struct SessionDetailView: View {
     @State private var playbackParagraphID: UUID?
     @State private var playableParagraphIDs: Set<UUID> = []
     @Query private var reviews: [SessionReview]
-    @Query private var bookmarks: [CaptionBookmark]
-    @State private var showingBookmarks = false
     @State private var showingTranslation = false
     @State private var showingLearning = false
     @State private var showingEditor = false
@@ -269,7 +267,6 @@ struct SessionDetailView: View {
         self.initialSearch = initialSearch
         let identifier = session.id
         _reviews = Query(filter: #Predicate<SessionReview> { $0.sessionID == identifier })
-        _bookmarks = Query(filter: #Predicate<CaptionBookmark> { $0.sessionID == identifier }, sort: \.createdAt)
     }
 
     private var originals: [ReviewParagraph] { session.orderedCaptions.map { ReviewParagraph(id: $0.id, text: $0.text) } }
@@ -331,7 +328,7 @@ struct SessionDetailView: View {
                 }
                 Button("Audio & subtitles", systemImage: "waveform") { playbackParagraphID = nil; showingMedia = true }
                     .disabled(!canPlay || corrections == nil).accessibilityIdentifier("sessionMediaButton")
-                Button(uiKey("Translate to \(CaptureLanguage(rawValue: session.language)?.opposite.name ?? "Español")"), systemImage: "character.bubble") { showingTranslation = true }
+                Button("Text & translation", systemImage: "character.bubble") { showingTranslation = true }
                     .disabled(!canEdit || !canPlay || corrections == nil || paragraphs.isEmpty)
                     .accessibilityIdentifier("sessionTranslationButton")
                 Button("Practicar idioma", systemImage: "book") { showingLearning = true }
@@ -346,10 +343,7 @@ struct SessionDetailView: View {
                         ForEach(Array(paragraphs.enumerated()), id: \.element.id) { index, paragraph in
                             VStack(alignment: .leading, spacing: 4) {
                                 paragraphView(paragraph, index: index)
-                                BookmarkToggleButton(marked: bookmarks.contains { $0.segmentID == paragraph.id }) {
-                                    do { try repository.toggleBookmark(paragraphID: paragraph.id, in: session) }
-                                    catch { failure = error.localizedDescription }
-                                }.disabled(!canEdit).accessibilityIdentifier("savedBookmark-\(index)")
+
                             }.id(paragraph.id)
                         }
                     }.scrollTargetLayout()
@@ -370,7 +364,6 @@ struct SessionDetailView: View {
                 Button("Edit transcript", systemImage: "pencil") { showingEditor = true }
                     .disabled(!canEdit || corrections == nil || originals.isEmpty)
                     .accessibilityIdentifier("editTranscriptButton")
-                Button("Bookmarks", systemImage: "bookmark") { showingBookmarks = true }
                 Button("Review & share", systemImage: "square.and.arrow.up") { showingShare = true }
                     .disabled(corrections == nil).accessibilityIdentifier("reviewShareButton")
             }
@@ -401,11 +394,7 @@ struct SessionDetailView: View {
             }
         }
         .sheet(isPresented: $showingShare) {
-            TranscriptShareView(session: session, repository: repository, canEdit: canEdit, bookmarks: bookmarks)
-        }
-        .sheet(isPresented: $showingBookmarks) {
-            BookmarkListView(sessionID: session.id, repository: repository,
-                jumpableIDs: Set(originals.map(\.id)), allowPlayback: canPlay, onSelect: { position = $0 })
+            TranscriptShareView(session: session, repository: repository, canEdit: canEdit)
         }
         .alert("Rename session", isPresented: $renaming) {
             TextField("Title", text: $title)
@@ -457,139 +446,6 @@ struct SessionDetailView: View {
     }
 }
 
-@MainActor
-struct BookmarkListView: View {
-    let repository: TranscriptRepository
-    let jumpableIDs: Set<UUID>
-    let allowPlayback: Bool
-    let onSelect: ((UUID) -> Void)?
-    @Query private var bookmarks: [CaptionBookmark]
-    @Query private var reviews: [SessionReview]
-    @Environment(\.dismiss) private var dismiss
-    @State private var failure = false
-    @Query private var notes: [BookmarkNote]
-    @Query private var sessions: [ConferenceSession]
-    @State private var noteBookmark: CaptionBookmark?
-    @State private var noteText = ""
-    @Environment(\.dynamicTypeSize) private var noteTypeSize
-    @State private var speech = ParagraphPlayback()
-    @AppStorage("originalPlaybackSpeed") private var originalSpeed = TranslationSpeechSpeed.normal
-    @AppStorage("translationSpeechSpeed") private var translatedSpeed = TranslationSpeechSpeed.normal
-    @AppStorage("playbackLanguageGap") private var gap = 0
-    @AppStorage("playbackLanguagePreference") private var preferredLanguage = "original"
-    @Environment(\.scenePhase) private var phase
-
-    init(sessionID: UUID?, repository: TranscriptRepository, jumpableIDs: Set<UUID> = [], allowPlayback: Bool = false, onSelect: ((UUID) -> Void)? = nil) {
-        self.repository = repository
-        self.jumpableIDs = jumpableIDs
-        self.allowPlayback = allowPlayback
-        self.onSelect = onSelect
-        let identifier = sessionID ?? UUID()
-        _bookmarks = Query(filter: #Predicate<CaptionBookmark> { $0.sessionID == identifier }, sort: \.createdAt)
-        _reviews = Query(filter: #Predicate<SessionReview> { $0.sessionID == identifier })
-    }
-
-    private var corrections: [String: String]? {
-        do { return try reviews.first?.decodedCorrections() ?? [:] } catch { return nil }
-    }
-
-    var body: some View {
-        NavigationStack {
-            List {
-                if allowPlayback { Text("Bookmark previews use generated voices and your saved language preference.").font(.caption).foregroundStyle(.secondary) }
-                if corrections == nil {
-                    Text("Saved corrections could not be loaded. Reopen this session.")
-                } else if bookmarks.isEmpty {
-                    ContentUnavailableView("No bookmarks yet", systemImage: "bookmark",
-                        description: Text("Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again."))
-                }
-                if let corrections {
-                    ForEach(bookmarks) { bookmark in
-                        VStack(alignment: .leading, spacing: 8) {
-                            if let onSelect, jumpableIDs.contains(bookmark.segmentID) {
-                                Button {
-                                    dismiss()
-                                    onSelect(bookmark.segmentID)
-                                } label: {
-                                    HStack {
-                                        Text(corrections[bookmark.segmentID.uuidString] ?? bookmark.text)
-                                            .foregroundStyle(.primary)
-                                        Spacer()
-                                        Image(systemName: "arrow.right")
-                                    }
-                                }
-                                .accessibilityHint("Go to this paragraph")
-                            } else {
-                                Text(corrections[bookmark.segmentID.uuidString] ?? bookmark.text).textSelection(.enabled)
-                            }
-                        if let note = notes.first(where: { $0.bookmarkID == bookmark.id }) { Text(note.text).font(.callout) }
-                        (noteTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(spacing: 16))) {
-                            Button(uiKey(speech.paragraphID == bookmark.segmentID && speech.state == .playing ? "Stop" : "Listen"),
-                                   systemImage: speech.paragraphID == bookmark.segmentID && speech.state == .playing ? "stop.fill" : "play.fill") {
-                                play(bookmark)
-                            }.disabled(!allowPlayback).accessibilityIdentifier("listenBookmark-" + bookmark.segmentID.uuidString)
-                            Button("Bookmark note", systemImage: "square.and.pencil") {
-                                noteText = notes.first(where: { $0.bookmarkID == bookmark.id })?.text ?? ""
-                                noteBookmark = bookmark
-                            }.accessibilityIdentifier("noteBookmark-" + bookmark.segmentID.uuidString)
-                        }.buttonStyle(.borderless).frame(minHeight: 44)
-                        }.font(.title3)
-                        .swipeActions {
-                            Button("Remove", role: .destructive) {
-                                do { speech.stop(); try repository.removeBookmark(bookmark) }
-                                catch { failure = true }
-                            }
-                        }
-                    }
-                }
-            }
-            .navigationTitle("Bookmarks").navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { dismiss() } } }
-            .alert("Could not update bookmark", isPresented: $failure) { Button("OK") {} }
-            .sheet(item: $noteBookmark) { bookmark in
-                NavigationStack {
-                    Form { TextField("Optional note", text: $noteText, axis: .vertical).lineLimit(3...8).accessibilityIdentifier("bookmarkNoteInput") }
-                        .navigationTitle("Bookmark note")
-                        .toolbar {
-                            ToolbarItem(placement: .cancellationAction) { Button("Cancel") { noteBookmark = nil } }
-                            ToolbarItem(placement: .confirmationAction) {
-                                Button("Save") {
-                                    do { try repository.saveBookmarkNote(noteText, for: bookmark); noteBookmark = nil }
-                                    catch { noteBookmark = nil; failure = true }
-                                }
-                            }
-                        }
-                }
-            }
-            .safeAreaInset(edge: .bottom) {
-                if let message = speech.message { Text(LocalizedStringKey(message)).padding().background(.regularMaterial) }
-            }
-            .task { speech.load(nil) }
-            .onDisappear { speech.close() }
-            .onChange(of: phase) { _, value in if value != .active { speech.interrupt() } }
-            .onChange(of: noteBookmark?.id) { _, _ in speech.stop() }
-        }
-    }
-    private func play(_ bookmark: CaptionBookmark) {
-        guard allowPlayback else { return }
-        if speech.paragraphID == bookmark.segmentID && speech.state == .playing { speech.stop(); return }
-        guard let session = sessions.first(where: { $0.id == bookmark.sessionID }), session.endedAt != nil else {
-            speech.message = "Stop this session in Captions before listening."; return
-        }
-        do {
-            let source = try repository.reviewedParagraphs(for: session)
-            let translation = try repository.translation(for: session.id)?.decoded()
-            let language = CaptureLanguage(rawValue: session.language) ?? .english
-            let hasTranslation = translation?.isCurrent(source) == true && translation?.language == language
-            let mode = (PlaybackLanguagePreference(rawValue: preferredLanguage) ?? .original).mode(source: language, hasTranslation: hasTranslation)
-            // Bookmark previews use corrected text with the local voice; the saved recording is unchanged.
-            speech.start(ParagraphAudioStep.make(source: source.filter { $0.id == bookmark.segmentID },
-                translated: hasTranslation ? translation?.translated ?? [] : [], language: language, mode: mode, ranges: []),
-                speed: translatedSpeed, originalSpeed: originalSpeed, gapSeconds: gap)
-        } catch { failure = true }
-    }
-}
-
 /// Recovery is explicit and preserves every original file. Permanent deletion is confirmed separately.
 @MainActor
 struct RecentlyDeletedView: View {
@@ -634,18 +490,5 @@ struct RecentlyDeletedView: View {
             do { try repository.restore(session) } catch { failure = error.localizedDescription }
         }.accessibilityIdentifier("restoreDeletedSession")
         Button("Delete permanently", systemImage: "trash", role: .destructive) { deleting = session }
-    }
-}
-
-
-struct BookmarkToggleButton: View {
-    let marked: Bool
-    let action: () -> Void
-    var body: some View {
-        Button(action: action) {
-            Label(uiKey(marked ? "Remove bookmark" : "Save bookmark"), systemImage: marked ? "bookmark.fill" : "bookmark")
-                .font(.caption).foregroundStyle(.tint).frame(minHeight: 44)
-        }.buttonStyle(.borderless)
-            .accessibilityValue(uiKey(marked ? "Bookmarked" : "Not bookmarked"))
     }
 }

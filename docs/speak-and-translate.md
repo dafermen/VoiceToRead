@@ -6,7 +6,7 @@ Este modo ayuda a pedir algo en una tienda, formular una pregunta o comunicarse 
 
 ## Uso
 
-1. Desde **Subtítulos/Captions**, antes de empezar una sesión, abre **Hablar y traducir / Speak and translate**. También está en **Ajustes → Accesibilidad y facilidad de uso** y en el inicio del modo sencillo. Se deshabilita mientras haya otra captura activa o una traducción automática de sesión.
+1. Desde **Subtítulos/Captions**, antes de empezar una sesión, pulsa el **icono de conversación**, junto al selector de subtítulos en vivo, para abrir **Hablar y traducir / Speak and translate**. También está en **Ajustes → Accesibilidad y facilidad de uso** y en el inicio del modo sencillo. Se deshabilita mientras haya otra captura activa o una traducción automática de sesión.
 2. Elige **Automático** o **Por botón**. La app recuerda el modo elegido al cerrar y volver a abrir, pero no conserva el mensaje. La elección inicial es Automático; cambiarla no inicia el micrófono.
 3. **Automático:** pulsa **Hablar en español**, di una frase y haz una pausa de unos **3 segundos**. Con texto estable y volumen bajo, termina la captura, traduce y reproduce en inglés. Puedes elegir **5 segundos** o pulsar **Terminé de hablar** si hay ruido. La pausa es una estimación, no una comprensión del final de un párrafo.
 4. **Por botón:** pulsa **Hablar en español** una vez, habla y pulsa **Terminé de hablar**. Aparecen el español y la traducción inglesa **sin reproducir sonido**. Cuando estés preparado, pulsa **Reproducir en inglés**. No necesitas mantener presionado el micrófono; esto facilita el uso a personas con dificultades motoras y permite leer a su propio ritmo.

@@ -139,7 +139,7 @@
 "Export, Copy and Share are explicit actions. The destination you choose may sync or transmit the transcript, audio or subtitles according to its own privacy policy." = "Exportar, Copiar y Compartir son acciones que tú eliges. El destino puede sincronizar o transmitir la transcripción, el audio o los subtítulos según su política de privacidad.";
 "Files could not be prepared. Check storage and try again. The saved recording is unchanged." = "No se pudieron preparar los archivos. Revisa el almacenamiento e inténtalo de nuevo. La grabación guardada no cambió.";
 "Final captions are protected in a recovery draft. After Stop, choose Save Session or Discard." = "Los subtítulos finales se conservan en un borrador de recuperación. Después de Detener, elige Guardar sesión o Descartar.";
-"Final captions, phrase bookmarks and optional audio are stored in a local recovery draft. After Stop, Save Session keeps it in the library; Discard deletes it. Unfinished drafts are available in Sessions after reopening. You can rename, export and delete sessions. Saved transcripts and recordings are excluded from device backup; deleting the app removes them." = "Los subtítulos finales, los marcadores y el audio opcional se guardan en un borrador local de recuperación. Después de Detener, Guardar sesión lo conserva en la biblioteca; Descartar lo elimina. Los borradores sin terminar aparecen en Sesiones al volver a abrir la aplicación. Puedes renombrar, exportar y eliminar sesiones. Las transcripciones y grabaciones se excluyen de la copia de seguridad; desinstalar la aplicación las elimina.";
+"Final captions and optional audio are stored in a local recovery draft. After Stop, Save Session keeps it in the library; Discard deletes it. Unfinished drafts are available in Sessions after reopening. You can rename, export and delete sessions. Saved transcripts and recordings are excluded from device backup; deleting the app removes them." = "Los subtítulos finales y el audio opcional se guardan en un borrador local de recuperación. Después de Detener, Guardar sesión lo conserva en la biblioteca; Descartar lo elimina. Los borradores sin terminar aparecen en Sesiones al volver a abrir la aplicación. Puedes renombrar, exportar y eliminar sesiones. Las transcripciones y grabaciones se excluyen de la copia de seguridad; desinstalar la aplicación las elimina.";
 "Find" = "Buscar";
 "Find and replace" = "Buscar y reemplazar";
 "Finishing" = "Finalizando";
@@ -830,3 +830,9 @@
 "Tap the microphone to speak, then Finished speaking. Read both texts and tap Play English when you are ready. No need to hold the button." = "Pulsa el micrófono para hablar y después Terminé de hablar. Lee ambos textos y pulsa Reproducir en inglés cuando estés listo. No tienes que mantener pulsado el botón.";
 
 "Translation could not finish. Check language downloads and try translating again." = "No se pudo terminar la traducción. Revisa las descargas de idiomas y vuelve a traducir.";
+
+"Text & translation" = "Texto y traducción";
+
+"Check preparation" = "Comprobar preparación";
+
+"Original" = "Original";

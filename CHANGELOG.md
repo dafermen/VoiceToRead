@@ -1,3 +1,11 @@
+## 2026-10-16 — menos redundancias y más espacio de lectura
+
+- Texto y traducción sustituye Traducir a Español/English y concentra revisión, corrección y exportación; Audio y subtítulos concentra reproducción.
+- Retira controles, listas y exportación de marcadores de frases; conserva datos heredados y Favoritos de sesiones completas.
+- Listo/Done usa ✓ con nombre VoiceOver y área de toque de 44 puntos; Guardar/Descartar mantienen texto explícito.
+- Hablar y traducir usa icono junto al selector en vivo; preparación pasa a Ajustes, conservando avisos necesarios de permisos/modelos.
+- Documentación de usuario, GitHub, desarrollo junior y notas de revisión actualizadas. [Guía](docs/simplified-navigation.md) · [verificación](docs/simplified-navigation-checkpoint.md).
+
 ## 2026-10-16 — controles claros y conversación por botón
 
 - Sustituye Following/Follow latest y Volver al vivo por una flecha circular accesible compartida entre lector original y bilingüe.

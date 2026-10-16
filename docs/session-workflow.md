@@ -64,3 +64,7 @@ Al releer el original o las tarjetas bilingües, una flecha hacia abajo dentro d
 La pantalla normal usa la pestaña Ajustes, sin otro botón pequeño duplicado. En pantalla completa conserva Preferencias de captura porque la pestaña no está disponible. Los controles rápidos visibles antes de empezar permiten elegir Guardar audio, Reducir ruido y Segundo plano; se adaptan a columna cuando no cabe una fila. Los indicadores durante la sesión conservan acceso a las preferencias y explican su efecto en la captura actual o futura.
 
 Para comunicarte en español y escuchar inglés, abre **Hablar y traducir** antes de iniciar una sesión. Sus modos Automático y Por botón están separados del idioma de los menús y de la grabación de sesiones. [Pasos y límites](speak-and-translate.md).
+
+## Navegación actual — 2026-10-16
+
+Texto y traducción permite corregir/exportar; Audio y subtítulos es el único reproductor de sesiones. Ya no se ofrecen marcadores de frases ni exportación de marcadores. Favoritos de sesiones completas siguen protegidos. En Subtítulos, Hablar y traducir está junto al selector en vivo; Comprobar preparación está en Ajustes y los avisos necesarios siguen en el lector. [Guía completa](simplified-navigation.md).

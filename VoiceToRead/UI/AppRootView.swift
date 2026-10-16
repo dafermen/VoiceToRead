@@ -18,19 +18,7 @@ struct AppRootView: View {
                     NavigationStack {
                         if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
                         else {
-                            VStack(spacing: 0) {
-                                if coordinator.caption.state == .idle {
-                                    SpeakTranslateEntry(coordinator: coordinator).buttonStyle(.bordered).padding(.top, 4)
-                                    HStack {
-                                        NavigationLink("Before a meeting or class") { OfflineReadinessView(coordinator: coordinator) }
-                                        Spacer()
-                                        if !coordinator.settings.preparationSeen {
-                                            Button("Later") { coordinator.settings.preparationSeen = true }
-                                        }
-                                    }.padding().background(.regularMaterial)
-                                }
-                                LiveCaptionView(coordinator: coordinator)
-                            }
+                            LiveCaptionView(coordinator: coordinator)
                         }
                     }
                     .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
@@ -237,8 +225,7 @@ struct AppRootView: View {
 struct LiveCaptionView: View {
     @Environment(\.dismiss) private var dismiss
     let coordinator: SessionCoordinator
-    @Query private var bookmarks: [CaptionBookmark]
-    @State private var showingBookmarks = false
+    @State private var showingConversation = false
     @State private var showingResponse = false
 
     var body: some View {
@@ -251,19 +238,19 @@ struct LiveCaptionView: View {
                       discardSession: { await coordinator.discardCurrent() },
                       needsSessionDecision: coordinator.needsSessionDecision,
                       sessionTitle: Binding(get: { coordinator.sessionTitle }, set: { coordinator.sessionTitle = $0 }),
-                      bookmarkSegment: { coordinator.toggleBookmark($0) },
-                      showBookmarks: { showingBookmarks = true },
-                      bookmarkedIDs: Set(bookmarks.filter { $0.sessionID == coordinator.currentSession?.id }.map(\.segmentID)),
+                      speakAndTranslate: { showingConversation = true },
+                      canSpeakAndTranslate: !coordinator.caption.state.active && !coordinator.caption.state.busy &&
+                          !coordinator.caption.preparationPending && coordinator.automaticTranslationJob == nil,
                       writeResponse: { showingResponse = true },
                       returnHome: coordinator.settings.simpleMode ? { dismiss() } : nil)
             .sheet(isPresented: $showingResponse) {
                 NavigationStack {
                     WrittenResponseView(coordinator: coordinator)
-                        .toolbar { Button("Done") { showingResponse = false } }
+                        .toolbar { DoneButton { showingResponse = false } }
                 }
             }
-            .sheet(isPresented: $showingBookmarks) {
-                BookmarkListView(sessionID: coordinator.currentSession?.id, repository: coordinator.repository)
+            .sheet(isPresented: $showingConversation) {
+                SpeakTranslateView(settings: coordinator.settings)
             }
     }
 }

@@ -15,6 +15,10 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Repository: [dafermen/VoiceToRead](https://github.com/dafermen/VoiceToRead), branch `main`. App Store Connect record **6822564230** is confirmed by the owner’s screenshot (1.0, Prepare for Submission). The owner confirmed VoiceToRead runs on iPhone through internal TestFlight. Source version is now 1.0; an App Store-eligible archive and final device acceptance remain pending.
 - Current setup and validation: [project identity](docs/project-identity.md). Older build numbers in inherited reports describe the code base, not releases of this new app.
 
+## Simplified navigation
+
+A compact conversation icon opens Speak and translate beside live caption display. Preparation is in Settings → Check preparation; required permission/model notices remain visible. Completion uses an accessible ✓, and session playback stays in Audio & subtitles. [User and student guide](docs/simplified-navigation.md).
+
 ## Read, translate and review
 
 - English capture by default, optional Spanish; English/Spanish interface selected independently.
@@ -22,10 +26,10 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Fullscreen, portrait/landscape, larger or bold text, line spacing, light paper colors and notebook guides.
 - Pause/resume with a prominent interruption notice. Reread previous paragraphs without automatic scrolling; the circular down arrow returns to live text and resumes following.
 - Clearly labelled Save audio, Reduce noise and Background controls show On/Off before starting. Optional saved microphone audio, noise reduction and background continuation. Recording always starts explicitly; background capture is opt-in.
-- Save/discard sessions, recover drafts, correct text, search transcripts, bookmark phrases and protect favorites from accidental deletion.
+- Save/discard sessions, recover drafts, correct text, search transcripts, protect favorites from accidental deletion.
 - Replay continuously or one paragraph at a time with **At my pace**: previous and next, with replay from the main button; correct the selected phrase while paused. The caption reader fills the available height; secondary playback options collapse.
 - Export TXT/PDF, recorded audio and synchronized SRT/WebVTT subtitles. Timing after text edits is approximate.
-- Automatically translate finalized text after Stop on compatible devices, with progress and retry; Save/Discard remains your choice. **Listen to the corrected translation or original audio in one reader**, with matching controls, pause/resume and reading speed. Previous/Next select silently. One language choice controls text and sound: Both plays original then translation for each paragraph; At my pace stops after both. Translation paragraphs play inline, without opening another player. Generated speech needs an available device voice.
+- Automatically translate finalized text after Stop on compatible devices, with progress and retry; Save/Discard remains your choice. **Listen to the corrected translation or original audio in one reader**, with matching controls, pause/resume and reading speed. Previous/Next select silently. One language choice controls text and sound: Both plays original then translation for each paragraph; At my pace stops after both. **Text & translation** is for review, correction and export; its single Audio & subtitles shortcut opens the shared player. Generated speech needs an available device voice.
 - [Unified playback and automatic translation](docs/playback-unification.md): usage, student-oriented architecture and limitations; [validation checkpoint](docs/playback-unification-checkpoint.md).
 - Swipe left on a saved session (or use its actions button) for circular favorite/protect and delete controls. Protected sessions cannot be deleted; removing protection and deleting require separate confirmations.
 - Review bilingual text, practice phrases and compare temporary pronunciation recordings. Local word recognition is not pronunciation scoring.
@@ -42,7 +46,7 @@ Speak Spanish, pause and hear the English translation for everyday conversations
 
 - The speaking card has a border and “Listening now”; manual scrolling pauses automatic following.
 - Remember language/mode preferences, set independent original/translation speeds and choose a 0/1/2-second gap between languages.
-- Search original or translated paragraphs and play a result directly; add private notes to bookmarks and preview their corrected text with local speech.
+- Search original or translated paragraphs. Review text in Text & translation and listen in Audio & subtitles; phrase bookmarks are retired, while whole-session favorites remain.
 - Check microphone, languages, voices and preparation before a meeting or class.
 - [User/student guide](docs/listening-comfort.md) · [validation and delivery](docs/listening-comfort-checkpoint.md).
 
@@ -80,4 +84,4 @@ Responsible person: **Dario Fernando Meneses Ceron**. Support/privacy: **dariofe
 
 Public release preparation: [submission kit](docs/store/submission-kit.md). Owner selected **free, no in-app purchases**, initially **United States and Colombia**. Nothing has been submitted to App Review.
 
-- [Visible bookmarks and bilingual paragraph playback: usage and developer guide](docs/bookmarks-and-bilingual-playback.md).
+- [Historical bookmark and bilingual playback implementation](docs/bookmarks-and-bilingual-playback.md).

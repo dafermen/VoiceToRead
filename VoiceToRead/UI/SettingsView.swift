@@ -38,7 +38,7 @@ struct SettingsView: View {
                 LabeledContent("Idioma de esta sesión", value: coordinator.caption.language.name)
             }
             Section("Offline preparation") {
-                NavigationLink("Offline Readiness") { OfflineReadinessView(coordinator: coordinator) }
+                NavigationLink("Check preparation") { OfflineReadinessView(coordinator: coordinator) }
                 NavigationLink("Microphone Check") { MicrophoneCheckView() }
                     .disabled(coordinator.caption.state.active || coordinator.caption.state.busy)
             }
@@ -173,7 +173,7 @@ struct OfflineReadinessView: View {
             }
         }
         .sheet(isPresented: $demo) { AccessibilityDemoView() }
-        .toolbar { Button("Done") { coordinator.settings.preparationSeen = true; dismiss() } }
+        .toolbar { DoneButton { coordinator.settings.preparationSeen = true; dismiss() } }
         .onDisappear { translationJob = nil }
         .task { await refresh() }
         .onChange(of: phase) { _, phase in
@@ -189,7 +189,7 @@ struct OfflineReadinessView: View {
                     Text("5. Repeat before attending a conference. If a check fails, prepare the device while online.")
                 }
                 .navigationTitle("Test Offline Mode")
-                .toolbar { Button("Done") { instructions = false } }
+                .toolbar { DoneButton { instructions = false } }
             }
         }
     }
@@ -259,7 +259,7 @@ struct AccessibilityDemoView: View {
                     }.buttonStyle(.bordered).controlSize(.large)
                 }.padding()
             }.navigationTitle("Quick guide")
-                .toolbar { Button("Done") { dismiss() } }
+                .toolbar { DoneButton { dismiss() } }
         }
     }
 }
@@ -307,7 +307,7 @@ struct WrittenResponseView: View {
             }
         }.navigationTitle("Write a response")
             .toolbar(.visible, for: .navigationBar)
-            .toolbar { if typing { Button("Done") { typing = false } } }
+            .toolbar { if typing { DoneButton { typing = false } } }
             .onAppear { language = coordinator.settings.captureLanguage; speech.observeInterruptions() }
             .onDisappear { speech.close(); text = "" }
             .onChange(of: phase) { _, phase in if phase != .active { speech.interrupt() } }

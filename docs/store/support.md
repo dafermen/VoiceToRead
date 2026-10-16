@@ -24,7 +24,7 @@ Al escribir al soporte, indica versión/build, modelo, iOS/iPadOS y pasos para r
 
 VoiceToRead helps you follow conversations and practice a language using captions, translation and local recordings. Compatible iPhone and iPad devices are supported; models depend on device, language and OS.
 
-- **Not listening:** check microphone permission and Offline Readiness in Settings. Prepare the selected spoken language while online. Interface language and spoken language are separate choices.
+- **Not listening:** check microphone permission and Check preparation in Settings. Prepare the selected spoken language while online. Interface language and spoken language are separate choices.
 - **Alarm/call paused capture:** choose Resume after the interruption. The microphone never restarts automatically.
 - **No playback audio:** Save audio must be enabled before starting. Unsaved audio cannot be reconstructed.
 - **Read slowly:** Sessions → your session → Audio & subtitles → At my pace. Repeat, correct or play the next paragraph when ready.

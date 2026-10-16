@@ -267,7 +267,7 @@ struct SpeakTranslateView: View {
             }
             .navigationTitle("Speak and translate")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { model.cancel(); dismiss() } } }
+            .toolbar { ToolbarItem(placement: .confirmationAction) { DoneButton { model.cancel(); dismiss() } } }
         }
         .background {
             if let job = model.job {

@@ -12,9 +12,7 @@ struct TranscriptShareView: View {
     @Query private var reviews: [SessionReview]
     @Environment(\.dismiss) private var dismiss
     @State private var originals: [ReviewParagraph]
-    @State private var savedBookmarks: [ReviewParagraph]
     @State private var format: ExportFormat = .text
-    @State private var selection: ExportSelection = .all
     @State private var includeDetails = true
     @State private var prepared: Data?
     @State private var preparedRequest: ExportRequest?
@@ -26,14 +24,13 @@ struct TranscriptShareView: View {
     @State private var temporaryURL: URL?
     @State private var copied = false
 
-    init(session: ConferenceSession, repository: TranscriptRepository, canEdit: Bool, bookmarks: [CaptionBookmark]) {
+    init(session: ConferenceSession, repository: TranscriptRepository, canEdit: Bool) {
         self.session = session
         self.repository = repository
         self.canEdit = canEdit
         let identifier = session.id
         _reviews = Query(filter: #Predicate<SessionReview> { $0.sessionID == identifier })
         _originals = State(initialValue: session.orderedCaptions.map { ReviewParagraph(id: $0.id, text: $0.text) })
-        _savedBookmarks = State(initialValue: bookmarks.map { ReviewParagraph(id: $0.segmentID, text: $0.text) })
     }
 
     private var corrections: [String: String]? {
@@ -45,10 +42,9 @@ struct TranscriptShareView: View {
     }
     private var bodyText: String {
         guard let corrections else { return "" }
-        let source = selection == .all ? originals : savedBookmarks
-        return TranscriptReview.text(TranscriptReview.paragraphs(originals: source, corrections: corrections))
+        return TranscriptReview.text(TranscriptReview.paragraphs(originals: originals, corrections: corrections))
     }
-    private var exportTitle: String { session.title + (selection == .bookmarks ? " - Bookmarks" : "") }
+    private var exportTitle: String { session.title }
     private var exportText: String {
         TranscriptExport.render(title: exportTitle, date: session.startedAt, duration: session.duration,
             language: session.language, transcript: bodyText, unfinished: session.endedAt == nil, includeDetails: includeDetails)
@@ -60,10 +56,6 @@ struct TranscriptShareView: View {
         NavigationStack {
             VStack(spacing: 0) {
                 VStack(spacing: 10) {
-                    Picker("Content", selection: $selection) {
-                        Text("Full transcript").tag(ExportSelection.all)
-                        Text("Bookmarks").tag(ExportSelection.bookmarks)
-                    }.pickerStyle(.segmented).accessibilityIdentifier("exportContentPicker")
                     HStack {
                         Picker("Format", selection: $format) {
                             Text("TXT").tag(ExportFormat.text)
@@ -92,7 +84,7 @@ struct TranscriptShareView: View {
             }
             .navigationTitle("Review & share").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Done") { dismiss() } }
+                ToolbarItem(placement: .cancellationAction) { DoneButton { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Edit", systemImage: "pencil") { showingEditor = true }
                         .disabled(!canEdit || corrections == nil).accessibilityIdentifier("editFromPreview")
@@ -122,7 +114,7 @@ struct TranscriptShareView: View {
                 description: Text("Reopen the session before sharing. Your original captions have not been changed."))
         } else if !hasText {
             ContentUnavailableView("No text to share", systemImage: "text.bubble",
-                description: Text(uiKey(selection == .bookmarks ? "This session has no bookmarked text." : "This transcript is empty.")))
+                description: Text("This transcript is empty."))
         } else if preparing || preparedRequest != request {
             ProgressView(uiKey(format == .pdf ? "Preparing PDF" : "Preparing preview"))
         } else if format == .pdf, let prepared {
@@ -181,7 +173,6 @@ struct TranscriptShareView: View {
     }
 }
 
-private enum ExportSelection: Hashable { case all, bookmarks }
 private enum ExportFormat: Hashable, Sendable {
     case text, pdf
     var contentType: UTType { self == .pdf ? .pdf : .plainText }

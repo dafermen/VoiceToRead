@@ -211,7 +211,7 @@ private struct FindReplaceView: View {
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Find and replace").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Done") { dismiss() } }
+                ToolbarItem(placement: .cancellationAction) { DoneButton { dismiss() } }
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
                     Button("Preview matches") { focused = nil }

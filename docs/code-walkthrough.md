@@ -191,3 +191,9 @@ Protección: botón o swipe → `setFavorite` → fila única V8. Borrado de ses
 - `UI/SessionTranslationView.swift`: `LiveSpanishView` ofrece la misma flecha al detener seguimiento. Al pulsarla cambia `follow` y su observador desplaza hasta `translationBottom`. Leer subtítulos anteriores también está disponible mediante acción accesible.
 - `UI/SpeakTranslateView.swift`: `Mode`, `selectMode` y la instantánea `speakWhenComplete` separan finalización de captura y salida de voz. `complete` valida el trabajo y solo llama `play` automáticamente en Automático. La vista persiste el modo y ajusta instrucciones, botones y estado; el modelo no depende de UserDefaults para sus pruebas.
 - Pruebas: `SpeakTranslateTests` usa entrada/salida simuladas para garantizar silencio hasta Play, invalidación tras editar y bloqueo de cambio de modo en curso. `HomeScreenTests` recorre ambos modos, persistencia al reabrir, flecha de lectura bilingüe/original y acceso a preferencias en pantalla completa.
+
+## Simplificación de navegación — 2026-10-16
+
+La [guía actual](simplified-navigation.md#para-estudiantes-qué-cambió-y-por-qué) explica cómo separar revisar texto de reproducir audio, reutilizar DoneButton sin cambiar las decisiones de guardado, pasar una acción desde el coordinador a un icono compacto y retirar una función conservando los modelos persistidos. Las secciones históricas de marcadores/reproducción inline ya no describen la interfaz actual.
+
+Ejercicio: abre Texto y traducción, corrige un párrafo y luego entra en Audio y subtítulos. Comprueba que el texto corregido llega al único reproductor. Explica por qué mantener los IDs permite conservar tiempos y datos anteriores, y por qué eliminar vistas no requiere borrar filas de SwiftData.

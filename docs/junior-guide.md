@@ -335,3 +335,9 @@ Una traducción terminada no obliga a reproducir sonido. `SpeakTranslateModel.Mo
 Ejercicio: en Por botón, escribe y traduce sin hablar, pulsa Play y cancela. Reabre: el modo debe conservarse y el texto estar vacío. Explica por qué guardar ambas cosas en UserDefaults cambiaría las expectativas de privacidad. Comprueba también una pausa larga durante escucha manual: no debe cerrar el turno salvo el límite de duración.
 
 `ReturnToLiveButton` comparte aspecto y nombre accesible entre los lectores original y bilingüe. Cada lector conserva su propio estado de seguimiento y desplazamiento. Una acción visible única evita confundir estado con acción. `CapturePreferenceLabel` muestra nombre y On/Off; `ViewThatFits` cambia de fila a columna cuando falta espacio. Esto ayuda a baja visión y a quienes no reconocen un icono, sin depender del color. Lee [el recorrido de sesiones](session-workflow.md#controles-claros--2026-10-16).
+
+## Simplificación de navegación — 2026-10-16
+
+La [guía actual](simplified-navigation.md#para-estudiantes-qué-cambió-y-por-qué) explica cómo separar revisar texto de reproducir audio, reutilizar DoneButton sin cambiar las decisiones de guardado, pasar una acción desde el coordinador a un icono compacto y retirar una función conservando los modelos persistidos. Las secciones históricas de marcadores/reproducción inline ya no describen la interfaz actual.
+
+Ejercicio: abre Texto y traducción, corrige un párrafo y luego entra en Audio y subtítulos. Comprueba que el texto corregido llega al único reproductor. Explica por qué mantener los IDs permite conservar tiempos y datos anteriores, y por qué eliminar vistas no requiere borrar filas de SwiftData.

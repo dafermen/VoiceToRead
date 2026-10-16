@@ -204,6 +204,12 @@ struct PlaybackParagraph: Identifiable, Equatable {
     }
 }
 
+/// Each opening is a new presentation; paragraph IDs remain stable for saving corrections.
+private struct ParagraphEditRequest: Identifiable {
+    let id = UUID()
+    let paragraph: ReviewParagraph
+}
+
 @MainActor
 struct SessionMediaView: View {
     let session: ConferenceSession
@@ -281,11 +287,10 @@ struct SessionMediaView: View {
     @State private var showingOptions = false
     @State private var afterOptions: (() -> Void)?
     @State private var editing = false
-    @State private var editingParagraph: ReviewParagraph?
+    @State private var editingParagraph: ParagraphEditRequest?
     @State private var selectedParagraphID: UUID?
     @State private var playbackParagraphs: [PlaybackParagraph] = []
     @AppStorage("playbackAtMyPace") private var atMyPace = false
-    @Query private var bookmarks: [CaptionBookmark]
     @Query private var favorites: [SessionFavorite]
     private var protected: Bool { favorites.contains { $0.sessionID == session.id } }
     private var activeParagraphID: UUID? {
@@ -315,7 +320,7 @@ struct SessionMediaView: View {
             }
             .navigationTitle("Audio & subtitles").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Done") { dismiss() } }
+                ToolbarItem(placement: .cancellationAction) { DoneButton { dismiss() } }
                 ToolbarItem(placement: .primaryAction) {
                     if !reviewed.isEmpty {
                         Button(uiKey(fullScreen ? "Exit full screen" : "Full screen"), systemImage: fullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
@@ -333,10 +338,13 @@ struct SessionMediaView: View {
                     try rebuildCues()
                 }
             }
-            .sheet(item: $editingParagraph) { paragraph in
-                ParagraphEditorView(paragraph: paragraph, savesImmediately: true,
+            .sheet(item: $editingParagraph, onDismiss: { editingParagraph = nil }) { request in
+                ParagraphEditorView(paragraph: request.paragraph, savesImmediately: true,
                     translation: reading != language.mode && currentTranslation) { text in
-                    try saveParagraph(paragraph, text: text)
+                    try saveParagraph(request.paragraph, text: text)
+                    // Clear the presenting item after a successful save so the same
+                    // paragraph can open again, even when its stable UUID is unchanged.
+                    editingParagraph = nil
                 }
             }
             .task { reviewed = paragraphs; load(); if settings.focusedReading { atMyPace = true } }
@@ -386,7 +394,7 @@ struct SessionMediaView: View {
                     }.overlay { if matchingPlaybackParagraphs.isEmpty && !paragraphQuery.isEmpty { Text("No matching paragraphs") } }
                         .searchable(text: $paragraphQuery, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search original or translation")
                         .navigationTitle("Paragraphs").navigationBarTitleDisplayMode(.inline)
-                        .toolbar { Button("Done") { showingPhrases = false } }
+                        .toolbar { DoneButton { showingPhrases = false } }
                 }
             }
             .sheet(isPresented: $showingOptions, onDismiss: {
@@ -395,7 +403,7 @@ struct SessionMediaView: View {
                 NavigationStack {
                     playbackOptions
                         .navigationTitle("Playback options").navigationBarTitleDisplayMode(.inline)
-                        .toolbar { Button("Done") { showingOptions = false } }
+                        .toolbar { DoneButton { showingOptions = false } }
                 }
             }
             .confirmationDialog(uiKey("Delete the recording permanently? Your text and subtitles will stay."), isPresented: $deleting, titleVisibility: .visible) {
@@ -428,14 +436,20 @@ struct SessionMediaView: View {
                 previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) })
             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout())) {
                 if let activeParagraphID {
-                    Button(editLabel, systemImage: "pencil") { beginParagraphEdit(activeParagraphID) }
-                        .frame(minHeight: 44).accessibilityIdentifier("editPlaybackParagraphButton")
+                    Button { beginParagraphEdit(activeParagraphID) } label: {
+                        Label(editLabel, systemImage: "pencil")
+                            .frame(minHeight: 44).contentShape(Rectangle())
+                    }.accessibilityIdentifier("editPlaybackParagraphButton")
                 }
                 Spacer()
-                Button("Paragraphs", systemImage: "list.bullet") { showingPhrases = true }
-                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44).accessibilityIdentifier("openParagraphList")
-                Button("Playback options", systemImage: "ellipsis.circle") { showingOptions = true }
-                    .frame(minHeight: 44).accessibilityIdentifier("playbackOptionsButton")
+                Button { showingPhrases = true } label: {
+                    Label("Paragraphs", systemImage: "list.bullet").labelStyle(.iconOnly)
+                        .frame(minWidth: 44, minHeight: 44).contentShape(Rectangle())
+                }.accessibilityIdentifier("openParagraphList")
+                Button { showingOptions = true } label: {
+                    Label("Playback options", systemImage: "ellipsis.circle")
+                        .frame(minHeight: 44).contentShape(Rectangle())
+                }.accessibilityIdentifier("playbackOptionsButton")
             }.font(.subheadline).frame(minHeight: 44)
         }
         .padding(.horizontal)
@@ -458,14 +472,14 @@ struct SessionMediaView: View {
                 Picker("Read and listen", selection: Binding(get: { reading }, set: {
                     reading = $0; savedLanguage = PlaybackLanguagePreference(mode: $0, source: language).rawValue
                 })) {
-                    Text(LocalizedStringKey(language.name)).tag(language.mode)
+                    Text("Original").tag(language.mode)
                     if currentTranslation {
-                        Text(LocalizedStringKey(language.opposite.name)).tag(language.opposite.mode)
+                        Text("Translation").tag(language.opposite.mode)
                         Text("Both").tag(TranscriptLanguage.both)
                     }
                 }
             } label: {
-                Label { Text(LocalizedStringKey(reading.rawValue)) } icon: { Image(systemName: "text.bubble") }
+                Label { Text(uiKey(reading == .both ? "Both" : reading == language.mode ? "Original" : "Translation")) } icon: { Image(systemName: "text.bubble") }
                     .frame(minHeight: 44).contentShape(Rectangle())
             }.accessibilityLabel("Read and listen")
                 .accessibilityValue(Text(LocalizedStringKey(reading.rawValue)))
@@ -508,12 +522,6 @@ struct SessionMediaView: View {
     private var playbackProgress: some View {
         VStack(spacing: 4) {
             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
-                if let activeParagraphID {
-                    BookmarkToggleButton(marked: bookmarks.contains { $0.sessionID == session.id && $0.segmentID == activeParagraphID }) {
-                        do { try repository.toggleBookmark(paragraphID: activeParagraphID, in: session) }
-                        catch { failure = error.localizedDescription }
-                    }.accessibilityIdentifier("playbackBookmarkButton")
-                }
                 if let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) {
                     Text("Paragraph \(index + 1) of \(reviewed.count)").accessibilityIdentifier("playbackParagraphPosition")
                 }
@@ -688,9 +696,11 @@ struct SessionMediaView: View {
     private func beginParagraphEdit(_ id: UUID) {
         sequence.stop(); pausePlayback(); speech.stop(); selectedParagraphID = id
         do {
+            let paragraph: ReviewParagraph?
             if reading != language.mode && currentTranslation {
-                editingParagraph = try repository.translation(for: session.id)?.decoded().translated.first { $0.id == id }
-            } else { editingParagraph = reviewed.first { $0.id == id } }
+                paragraph = try repository.translation(for: session.id)?.decoded().translated.first { $0.id == id }
+            } else { paragraph = reviewed.first { $0.id == id } }
+            editingParagraph = paragraph.map { ParagraphEditRequest(paragraph: $0) }
         } catch { failure = error.localizedDescription }
     }
     /// Guardar corrige texto por UUID, conserva audio y selección, y nunca reinicia la reproducción.

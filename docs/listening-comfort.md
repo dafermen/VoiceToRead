@@ -1,5 +1,7 @@
 # Escucha accesible, preferencias y notas
 
+> Actualización 2026-10-16: la interfaz de marcadores de frases y la reproducción inline en Traducción se retiraron. Consulta [la navegación actual](simplified-navigation.md); las referencias anteriores describen el historial de implementación.
+
 ## Para quién y para qué
 
 VoiceToRead apoya a personas con dificultades auditivas o visuales, a quienes necesitan comprender otro idioma y a niños que practican acompañados por un adulto. Estas mejoras ayudan a seguir el texto al propio ritmo; no equivalen a una certificación de accesibilidad ni sustituyen interpretación profesional.

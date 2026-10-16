@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+- [Navegación simplificada: lectores, reproductor único, ✓ y retirada de marcadores](simplified-navigation.md).
+
 - [Hablar y traducir: Automático/Por botón, español a inglés, privacidad y arquitectura](speak-and-translate.md).
 
 Actualización de experiencia accesible: [guía de los ocho cambios](accessible-experience.md) y [evidencia/pendientes](accessible-experience-checkpoint.md).

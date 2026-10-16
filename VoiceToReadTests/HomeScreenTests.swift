@@ -220,13 +220,18 @@ final class HomeScreenTests: XCTestCase {
     func testDefaultPreparationGuideReturnsWithoutStartingCapture() throws {
         let app = XCUIApplication(); app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow"]
         app.launch()
-        XCTAssertTrue(app.buttons["Before a meeting or class"].waitForExistence(timeout: 20))
-        app.buttons["Before a meeting or class"].tap()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        XCTAssertFalse(app.buttons["Before a meeting or class"].exists)
+        app.tabBars.buttons["Settings"].tap()
+        let preparation = app.buttons["Check preparation"]
+        if !preparation.isHittable { app.swipeUp() }
+        preparation.tap()
         XCTAssertTrue(app.navigationBars["Offline Readiness"].waitForExistence(timeout: 5))
         app.buttons["See a short demonstration"].tap()
         XCTAssertTrue(app.staticTexts["Demonstration · no recording"].waitForExistence(timeout: 5))
         app.navigationBars["Quick guide"].buttons["Done"].tap()
         app.navigationBars["Offline Readiness"].buttons["Done"].tap()
+        app.tabBars.buttons["Captions"].tap()
         XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Start Listening")
         app.terminate()
@@ -279,7 +284,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(play.label, "Play")
         XCTAssertEqual(app.staticTexts["playbackParagraphPosition"].label, "Paragraph 2 of 80")
         app.buttons["playbackTextMenu"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
-        app.buttons["Español"].tap()
+        app.buttons["Translation"].tap()
         XCTAssertEqual(play.frame.size, original)
         XCTAssertEqual(reader.frame.height, originalHeight, accuracy: 2)
         XCTAssertEqual(play.label, "Play")
@@ -365,31 +370,37 @@ final class HomeScreenTests: XCTestCase {
 
 
     @MainActor
-    func testVisibleBookmarksSaveRemoveAndReopen() throws {
+    func testReadersRetireBookmarksAndKeepSessionFavorites() throws {
         let app = XCUIApplication(); app.launchArguments = ["--ui-test-review", "--ui-test-translation"]
         app.launch(); XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        XCTAssertFalse(app.buttons["Before a meeting or class"].exists)
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].isHittable)
+        app.buttons["sessionActionsButton"].tap()
+        XCTAssertFalse(app.buttons["Bookmarks"].exists)
+        // iPad presents a popover without a Cancel row; dismiss by tapping outside it.
+        if app.buttons["Cancel"].exists { app.buttons["Cancel"].tap() }
+        else { app.coordinate(withNormalizedOffset: CGVector(dx: 0.02, dy: 0.12)).tap() }
         app.tabBars.buttons["Sessions"].tap(); app.staticTexts["Review sample"].tap()
-        let mark = app.buttons["savedBookmark-0"]
-        XCTAssertTrue(mark.waitForExistence(timeout: 5))
-        if mark.label == "Remove bookmark" { mark.tap() }
-        mark.tap(); XCTAssertEqual(mark.label, "Remove bookmark")
-        app.buttons["Bookmarks"].tap()
-        XCTAssertFalse(app.staticTexts["No bookmarks yet"].exists)
-        let noteButton = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "noteBookmark-")).firstMatch
-        XCTAssertTrue(noteButton.waitForExistence(timeout: 5)); noteButton.tap()
-        let note = app.descendants(matching: .any).matching(identifier: "bookmarkNoteInput").firstMatch
-        XCTAssertTrue(note.waitForExistence(timeout: 5)); note.tap(); note.typeText("Practise tomorrow")
-        app.navigationBars["Bookmark note"].buttons["Save"].tap()
-        XCTAssertTrue(app.staticTexts["Practise tomorrow"].waitForExistence(timeout: 5))
-        let listen = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listenBookmark-")).firstMatch
-        XCTAssertTrue(listen.isEnabled); listen.tap(); XCTAssertEqual(listen.label, "Stop"); listen.tap()
-        app.navigationBars["Bookmarks"].buttons["Done"].tap()
+        XCTAssertTrue(app.buttons["favoriteSessionButton"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["savedBookmark-0"].exists)
+        XCTAssertFalse(app.buttons["Bookmarks"].exists)
+        XCTAssertEqual(app.buttons["sessionTranslationButton"].label, "Text & translation")
         app.buttons["sessionTranslationButton"].tap()
-        let translated = app.buttons["translationBookmark-0"]
-        XCTAssertTrue(translated.waitForExistence(timeout: 5)); XCTAssertEqual(translated.label, "Remove bookmark")
-        translated.tap(); XCTAssertEqual(translated.label, "Save bookmark")
-        app.navigationBars["Translation"].buttons["Done"].tap()
-        XCTAssertEqual(mark.label, "Save bookmark")
+        XCTAssertTrue(app.staticTexts["translatedParagraph-0"].waitForExistence(timeout: 8))
+        XCTAssertFalse(app.buttons["playTranslationParagraph-0"].exists)
+        XCTAssertFalse(app.buttons["translationBookmark-0"].exists)
+        XCTAssertTrue(app.buttons["editSpanishButton"].exists)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Text-and-translation-clean"; shot.lifetime = .keepAlways; add(shot)
+        app.buttons["translatedMediaButton"].tap()
+        XCTAssertTrue(app.buttons["recordingPlayButton"].waitForExistence(timeout: 8))
+        XCTAssertFalse(app.buttons["playbackBookmarkButton"].exists)
+        app.navigationBars["Audio & subtitles"].buttons["Done"].tap()
+        app.navigationBars["Text & translation"].buttons["Done"].tap()
+        app.buttons["reviewShareButton"].tap()
+        XCTAssertTrue(app.staticTexts["exportPreviewText"].waitForExistence(timeout: 10))
+        XCTAssertFalse(app.segmentedControls["exportContentPicker"].exists)
+        XCTAssertFalse(app.buttons["Bookmarks"].exists)
         app.terminate()
     }
 
@@ -407,20 +418,18 @@ final class HomeScreenTests: XCTestCase {
         app.tabBars.buttons["Sessions"].tap()
         app.staticTexts["Review sample"].tap()
         app.buttons["sessionTranslationButton"].tap()
-        let play = app.buttons["playTranslationParagraph-0"]
-        XCTAssertTrue(play.waitForExistence(timeout: 8)); play.tap()
-        XCTAssertFalse(app.buttons["recordingPlayButton"].exists, "Inline listening must not open another player")
-        XCTAssertEqual(play.label, "Pause")
-        play.tap(); XCTAssertEqual(play.label, "Resume")
-        app.buttons["stopTranslationParagraph-0"].tap()
-        XCTAssertEqual(play.label, "Listen to translation")
+        XCTAssertTrue(app.staticTexts["translatedParagraph-0"].waitForExistence(timeout: 8))
+        XCTAssertFalse(app.buttons["playTranslationParagraph-0"].exists)
         app.segmentedControls["translationLanguagePicker"].buttons["Both"].tap()
-        XCTAssertEqual(play.label, "Listen to both")
+        app.buttons["translatedMediaButton"].tap()
+        let play = app.buttons["recordingPlayButton"]
+        XCTAssertTrue(play.waitForExistence(timeout: 8))
+        XCTAssertEqual(app.buttons["playbackTextMenu"].value as? String, "Both")
         play.tap(); XCTAssertEqual(play.label, "Pause")
-        XCTAssertEqual(app.staticTexts["inlinePlaybackStatus"].label, "Playing original")
-        app.buttons["stopTranslationParagraph-0"].tap()
+        play.tap(); XCTAssertEqual(play.label, "Resume")
+        XCTAssertTrue(app.staticTexts["playbackTranslationCaption"].exists)
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        shot.name = "Inline-bilingual-paragraph"; shot.lifetime = .keepAlways; add(shot)
+        shot.name = "Unified-bilingual-playback"; shot.lifetime = .keepAlways; add(shot)
         app.terminate()
     }
 
@@ -455,11 +464,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.staticTexts[sourceID].exists, "Original and translation must remain paired by paragraph")
         XCTAssertTrue(translated.label.contains(spanish ? "Test translation" : "Traducción de prueba"))
         XCTAssertTrue(app.staticTexts[sourceID].label.contains(spanish ? "Párrafo" : "Paragraph"))
-        let bookmarkID = translated.identifier.replacingOccurrences(of: "liveTranslated-", with: "liveBookmark-")
-        let mark = app.buttons[bookmarkID]
-        XCTAssertTrue(mark.exists)
-        mark.tap(); XCTAssertEqual(mark.label, "Remove bookmark")
-        mark.tap(); XCTAssertEqual(mark.label, "Save bookmark")
+        XCTAssertFalse(app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveBookmark-")).firstMatch.exists)
         let follow = app.buttons["liveTranslationFollowButton"]
         XCTAssertFalse(follow.exists)
         app.scrollViews["liveTranslationReader"].swipeDown()
@@ -857,7 +862,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["At my pace"].tap()
         app.buttons["playbackOptionsButton"].tap()
         app.buttons["phraseListButton"].tap()
-        // Explicitly choose the first paragraph without starting audio.
+        // Choose the first paragraph; opening its editor stops playback.
         let firstPlaybackParagraph = app.buttons["listenPlaybackParagraph-0"]
         XCTAssertTrue(firstPlaybackParagraph.waitForExistence(timeout: 8))
         firstPlaybackParagraph.tap()
@@ -866,8 +871,18 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(playbackEditor.waitForExistence(timeout: 5))
         playbackEditor.tap(); playbackEditor.typeText(" Corrección durante audio.")
         app.buttons["saveParagraphCorrection"].tap()
+        // The updated text is visible behind the sheet before dismissal completes.
+        // Wait for the editor to leave before trying to reopen it.
+        expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: playbackEditor)
+        waitForExpectations(timeout: 8)
+        let reopen = app.buttons["editPlaybackParagraphButton"]
+        expectation(for: NSPredicate(format: "hittable == true"), evaluatedWith: reopen)
+        waitForExpectations(timeout: 8)
         XCTAssertTrue(app.staticTexts["playbackCaption"].label.contains("Corrección durante audio."))
-        app.buttons["editPlaybackParagraphButton"].tap()
+        let beforeReopen = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        beforeReopen.name = "Player-after-saving-correction"; beforeReopen.lifetime = .keepAlways; add(beforeReopen)
+        reopen.tap()
+        XCTAssertTrue(playbackEditor.waitForExistence(timeout: 10))
         playbackEditor.tap(); playbackEditor.typeText(" DESCARTAR")
         app.navigationBars["Edit translation"].buttons["Cancel"].tap()
         app.buttons["Discard changes"].tap()
@@ -1217,7 +1232,7 @@ final class HomeScreenTests: XCTestCase {
         app.launch()
         XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 15))
         app.tabBars.buttons["Settings"].tap()
-        app.staticTexts["Offline Readiness"].tap()
+        app.staticTexts["Check preparation"].tap()
         XCTAssertTrue(app.navigationBars["Offline Readiness"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["Test Offline Mode"].exists)
         app.navigationBars.buttons.element(boundBy: 0).tap()
@@ -1382,7 +1397,6 @@ final class HomeScreenTests: XCTestCase {
             $0.label.hasPrefix("Paragraph ") && reader.frame.contains($0.frame)
         }
         let paragraph = try XCTUnwrap(visible)
-        let label = paragraph.label
         let oldY = paragraph.frame.minY
         let oldValue = reader.value as? String
         expectation(for: NSPredicate { _, _ in (reader.value as? String) != oldValue }, evaluatedWith: reader)
@@ -1390,15 +1404,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(paragraph.isHittable)
         XCTAssertEqual(paragraph.frame.minY, oldY, accuracy: 3)
         XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Pause")
-        let markerID = paragraph.identifier.replacingOccurrences(of: "caption-", with: "liveBookmark-")
-        let saveMarker = app.buttons[markerID]
-        XCTAssertTrue(saveMarker.exists)
-        saveMarker.tap()
-        XCTAssertEqual(saveMarker.label, "Remove bookmark")
-        app.buttons["sessionActionsButton"].tap()
-        app.buttons["Bookmarks"].tap()
-        XCTAssertTrue(app.staticTexts[label].waitForExistence(timeout: 5))
-        app.buttons["Done"].tap()
+        XCTAssertFalse(app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveBookmark-")).firstMatch.exists)
         app.buttons["backToLiveButton"].tap()
         XCTAssertFalse(app.buttons["backToLiveButton"].exists)
         XCTAssertTrue((reader.value as? String)?.contains("Following live captions") == true)
@@ -1464,9 +1470,9 @@ final class HomeScreenTests: XCTestCase {
         let preview = app.staticTexts["exportPreviewText"]
         XCTAssertTrue(preview.waitForExistence(timeout: 10))
         XCTAssertTrue(preview.label.contains("Reviewed note."))
-        app.segmentedControls["exportContentPicker"].buttons["Bookmarks"].tap()
+        XCTAssertFalse(app.segmentedControls["exportContentPicker"].exists)
         XCTAssertTrue(preview.label.contains("Acme makes"))
-        XCTAssertFalse(preview.label.contains("Paragraph 2."))
+        XCTAssertTrue(preview.label.contains("Paragraph 2."))
         let details = app.switches["Session details"]
         details.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
         expectation(for: NSPredicate(format: "value == '0'"), evaluatedWith: details)
@@ -1490,7 +1496,7 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
-    func testDiscardRestoreOriginalAndResumeReadingFromBookmark() throws {
+    func testDiscardAndRestoreOriginalWithoutBookmarkNavigation() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-reviewed"]
         XCUIDevice.shared.orientation = .portrait
@@ -1507,19 +1513,11 @@ final class HomeScreenTests: XCTestCase {
         app.buttons.matching(NSPredicate(format: "label == %@ AND identifier != %@", "Restore original", "restoreOriginalDraft")).firstMatch.tap()
         app.buttons["saveTranscriptEdits"].tap()
         XCTAssertTrue(app.staticTexts["reviewParagraph-0"].label.contains("Acmee makes"))
-        app.buttons["Bookmarks"].tap()
-        app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "Paragraph 80.")).firstMatch.tap()
-        let last = app.staticTexts["reviewParagraph-79"]
-        expectation(for: NSPredicate(format: "hittable == true"), evaluatedWith: last)
-        waitForExpectations(timeout: 10)
+        XCTAssertFalse(app.buttons["Bookmarks"].exists)
         app.navigationBars.buttons["Sessions"].tap()
         app.staticTexts["Review sample"].tap()
-        expectation(for: NSPredicate(format: "hittable == true"), evaluatedWith: last)
-        waitForExpectations(timeout: 10)
-        let capture = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        capture.name = "Review-Restored-position"
-        capture.lifetime = .keepAlways
-        add(capture)
+        XCTAssertTrue(app.staticTexts["reviewParagraph-0"].label.contains("Acmee makes"))
+
     }
 
     @MainActor

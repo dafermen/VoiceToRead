@@ -11,9 +11,8 @@ struct CaptionScreen: View {
     var discardSession: (() async -> Void)? = nil
     var needsSessionDecision = false
     var sessionTitle: Binding<String>? = nil
-    var bookmarkSegment: ((CaptionSegment) -> Void)? = nil
-    var showBookmarks: (() -> Void)? = nil
-    var bookmarkedIDs: Set<UUID> = []
+    var speakAndTranslate: (() -> Void)? = nil
+    var canSpeakAndTranslate = true
     var writeResponse: (() -> Void)? = nil
     var returnHome: (() -> Void)? = nil
     @Environment(\.colorScheme) private var colorScheme
@@ -40,7 +39,7 @@ struct CaptionScreen: View {
             AccessibilityScrollingContent {
             VStack(spacing: 0) {
                 if !compact && !isFullScreen {
-                    (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
+                    ((dynamicTypeSize.isAccessibilitySize || settings.showButtonNames) ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
                         status
                         Spacer(minLength: 8)
                         utilities
@@ -56,10 +55,7 @@ struct CaptionScreen: View {
                             ReviewParagraph(id: $0.id, text: $0.text)
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
-                           lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
-                           bookmarkedIDs: bookmarkedIDs, bookmark: { id in
-                               if let segment = model.transcript.finalized.first(where: { $0.id == id }) { bookmarkSegment?(segment) }
-                           })
+                           lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast)
                             .id(model.language)
                     } else { transcript }
                 }
@@ -111,7 +107,7 @@ struct CaptionScreen: View {
                 Form { CaptureOptionsView(model: model, settings: settings) }
                     .navigationTitle("Capture preferences")
                     .navigationBarTitleDisplayMode(.inline)
-                    .toolbar { Button("Done") { showingCaptureOptions = false } }
+                    .toolbar { DoneButton { showingCaptureOptions = false } }
             }
             .presentationDetents([.medium, .large])
         }
@@ -135,7 +131,6 @@ struct CaptionScreen: View {
             }
             Button("New Session") { Task { await beginNewSession() } }
                 .disabled(model.state.active || model.state.busy || model.preparationPending || needsSessionDecision)
-            if let showBookmarks { Button("Bookmarks", action: showBookmarks) }
             Button("Session information") { showingStatus = true }
             Button("Cancel", role: .cancel) { }
         } message: {
@@ -309,7 +304,7 @@ struct CaptionScreen: View {
                     .disabled(model.state.active || model.state.busy)
             }
             if model.state == .ended { newSessionButton }
-            if !settings.simpleMode { translationButton; fullScreenButton }
+            if !settings.simpleMode { translationButton; conversationButton; fullScreenButton }
             if !settings.simpleMode { Button { showingOptions = true } label: {
                 Image(systemName: "textformat.size").font(.system(size: 22)).frame(width: 44, height: 44)
             }
@@ -399,22 +394,20 @@ struct CaptionScreen: View {
     }
 
     private func captionRow(_ segment: CaptionSegment) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            if let bookmarkSegment {
-                BookmarkToggleButton(marked: bookmarkedIDs.contains(segment.id)) { bookmarkSegment(segment) }
-                    .accessibilityIdentifier("liveBookmark-" + segment.id.uuidString)
-            }
-            ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
-                .accessibilityIdentifier("caption-" + segment.id.uuidString)
+        ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
+            .accessibilityIdentifier("caption-" + segment.id.uuidString)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    /// Same conversation entry as Settings, compact beside the live language selector.
+    @ViewBuilder private var conversationButton: some View {
+        if let speakAndTranslate {
+            Button("Speak and translate", systemImage: "bubble.left.and.bubble.right.fill", action: speakAndTranslate)
+                .labelStyle(AccessibleControlLabelStyle())
+                .font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
+                .help("Speak and translate").disabled(!canSpeakAndTranslate)
+                .accessibilityIdentifier("speakTranslateEntry")
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .contextMenu {
-            if let bookmarkSegment {
-                Button(uiKey(bookmarkedIDs.contains(segment.id) ? "Remove bookmark" : "Save bookmark"),
-                       systemImage: "bookmark") { bookmarkSegment(segment) }
-            }
-        }
-        .accessibilityAction(named: "Toggle bookmark") { bookmarkSegment?(segment) }
     }
 
     private func captionContent(height: CGFloat) -> some View {
@@ -651,11 +644,10 @@ struct CaptionScreen: View {
                 }
                 Section {
                     Text("Final captions are protected in a recovery draft. After Stop, choose Save Session or Discard.")
-                    Text("Touch and hold a finished paragraph to save a bookmark. Bookmarks are kept with the recovery draft until you save or discard it.")
                 }
             }
             .navigationTitle("Reading options").navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { showingOptions = false } } }
+            .toolbar { ToolbarItem(placement: .confirmationAction) { DoneButton { showingOptions = false } } }
         }
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
@@ -690,7 +682,7 @@ struct CaptionScreen: View {
                 }
             }
             .navigationTitle("Session information").navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { showingStatus = false } } }
+            .toolbar { ToolbarItem(placement: .confirmationAction) { DoneButton { showingStatus = false } } }
         }
     }
 
@@ -805,5 +797,16 @@ private struct CapturePreferenceLabel: View {
             Label(uiKey(enabled ? "On" : "Off"), systemImage: enabled ? "checkmark.circle.fill" : "circle")
                 .font(.caption)
         }.frame(minHeight: 44)
+    }
+}
+
+/// Compact completion action. Keep a spoken name and a full-size touch target.
+struct DoneButton: View {
+    let action: () -> Void
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: "checkmark").font(.body.weight(.semibold))
+                .frame(minWidth: 44, minHeight: 44)
+        }.accessibilityLabel("Done").help("Done")
     }
 }

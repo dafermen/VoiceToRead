@@ -1,5 +1,7 @@
 # Traducción y revisión — build 17
 
+> Actualización 2026-10-16: la interfaz de marcadores de frases y la reproducción inline en Traducción se retiraron. Consulta [la navegación actual](simplified-navigation.md); las referencias anteriores describen el historial de implementación.
+
 Actualización 2026-10-15: al Detener, la app intenta traducir automáticamente el borrador final en dispositivos compatibles. Guardar/Descartar sigue siendo explícito. Ver [flujo actual](playback-unification.md). La vista previa en vivo sigue siendo temporal.
 
 ## Actualización build 20: ambos sentidos

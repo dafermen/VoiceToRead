@@ -123,7 +123,7 @@ struct EnglishLearningView: View {
                 }.padding()
             }
             .navigationTitle("Practicar idioma").navigationBarTitleDisplayMode(.inline)
-            .toolbar { Button("Done") { dismiss() } }
+            .toolbar { DoneButton { dismiss() } }
             .task { load() }
             .sheet(item: $pronunciation) { unit in
                 PronunciationPracticeView(text: unit.english, language: language)
