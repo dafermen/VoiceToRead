@@ -19,6 +19,7 @@ struct ConversationPause {
 /// finalized before translation/speech. Tokens reject results after Cancel or backgrounding.
 @MainActor @Observable
 final class SpeakTranslateModel {
+    enum Mode: String, CaseIterable { case automatic, byButton }
     enum Phase: Equatable { case ready, preparing, listening, finishing, translating, cancelling }
     let capture: CaptionViewModel
     let speaker: TranslationSpeechPlayer
@@ -27,7 +28,14 @@ final class SpeakTranslateModel {
     private(set) var translated = ""
     private(set) var job: TranslationJob?
     var message: String?
+    private(set) var mode: Mode = .automatic
     var pauseSeconds: Double = 3
+    // Snapshot the selected mode for each job; a late response cannot change its audio policy.
+    private var speakWhenComplete = false
+    func selectMode(_ mode: Mode) {
+        guard canEdit else { return }
+        self.mode = mode
+    }
     private var token = UUID()
     private var operation: Task<Void, Never>?
     private var monitor: Task<Void, Never>?
@@ -91,7 +99,7 @@ final class SpeakTranslateModel {
             message = "Listening was interrupted. Review the Spanish text, then translate or speak again."
             return
         }
-        if detector.shouldFinish(text: source, level: capture.inputLevel, now: now, delay: pauseSeconds) ||
+        if detector.shouldFinish(text: source, level: capture.inputLevel, now: now, delay: mode == .automatic ? pauseSeconds : 0) ||
             now - listeningSince >= 60 || source.count >= 4000 {
             finish()
         } else if source.isEmpty && now - listeningSince >= 15 {
@@ -121,6 +129,7 @@ final class SpeakTranslateModel {
     func translate() {
         guard canEdit, supported(), !source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         message = nil; translated = ""
+        speakWhenComplete = mode == .automatic
         job = TranslationJob(plan: IncrementalTranslation(
             source: [ReviewParagraph(id: UUID(), text: source)], previous: nil, language: .spanish))
         phase = .translating
@@ -131,9 +140,9 @@ final class SpeakTranslateModel {
         do {
             let snapshot = try completed.plan.merging(result.get())
             translated = snapshot.translated.map(\.text).joined(separator: "\n")
-            play()
+            if speakWhenComplete { play() }
         } catch {
-            message = "Translation could not finish. Check language downloads and try Translate and speak again."
+            message = "Translation could not finish. Check language downloads and try translating again."
         }
     }
     func play() {
@@ -176,13 +185,21 @@ struct SpeakTranslateView: View {
     @Environment(\.scenePhase) private var scenePhase
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     @State private var model = SpeakTranslateModel()
+    @AppStorage("conversationMode") private var savedMode = SpeakTranslateModel.Mode.automatic.rawValue
     @FocusState private var editing: Bool
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     Text("Spanish → English").font(.title2.bold())
-                    Text("Speak Spanish, pause, and hear the English translation. The microphone stays off while the phone speaks.")
+                    Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {
+                        Text("Automatic").tag(SpeakTranslateModel.Mode.automatic)
+                        Text("By button").tag(SpeakTranslateModel.Mode.byButton)
+                    }.pickerStyle(.segmented).disabled(!model.canEdit)
+                        .accessibilityIdentifier("conversationMode")
+                    Text(uiKey(model.mode == .automatic
+                        ? "Speak Spanish, pause, and hear the English translation. The microphone stays off while the phone speaks."
+                        : "Tap the microphone to speak, then Finished speaking. Read both texts and tap Play English when you are ready. No need to hold the button."))
                     if !TranslationJob.supported {
                         Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription)).foregroundStyle(.secondary)
                     }
@@ -218,11 +235,14 @@ struct SpeakTranslateView: View {
                     } else if !model.busy && model.speaker.state == .idle {
                         Button { editing = false; model.start() } label: { Label("Speak Spanish", systemImage: "mic.fill") }
                             .disabled(!TranslationJob.supported || model.capture.preparationPending).accessibilityIdentifier("conversationStart")
-                        Button { editing = false; model.translate() } label: { Label("Translate and speak", systemImage: "speaker.wave.2.fill") }
+                        Button { editing = false; model.translate() } label: {
+                            Label(uiKey(model.mode == .automatic ? "Translate and speak" : "Translate message"), systemImage: "character.bubble")
+                        }
                             .disabled(!TranslationJob.supported || model.source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                             .accessibilityIdentifier("conversationTranslate")
                         if !model.translated.isEmpty {
-                            Button("Repeat English", systemImage: "speaker.wave.2") { model.play() }
+                            Button("Play English", systemImage: "speaker.wave.2.fill") { model.play() }
+                                .accessibilityIdentifier("conversationPlay")
                         }
                     }
                     if model.busy || model.speaker.state != .idle {
@@ -234,12 +254,13 @@ struct SpeakTranslateView: View {
                         Button("Install speech model") { Task { await model.capture.installAssets() } }
                             .disabled(model.capture.preparationPending)
                     }
-                    Text("Finish after a pause").font(.headline)
-                    Picker("Finish after a pause", selection: $model.pauseSeconds) {
-                        Text("3 seconds").tag(3.0)
-                        Text("5 seconds").tag(5.0)
-                        Text("Only when I tap Finished speaking").tag(0.0)
-                    }.disabled(model.busy)
+                    if model.mode == .automatic {
+                        Text("Finish after a pause").font(.headline)
+                        Picker("Finish after a pause", selection: $model.pauseSeconds) {
+                            Text("3 seconds").tag(3.0)
+                            Text("5 seconds").tag(5.0)
+                        }.disabled(model.busy)
+                    }
                     Text("A pause is estimated from speech and sound. In noise, tap Finished speaking. Each turn lasts up to one minute. You can also type or correct your message.").font(.footnote)
                     Text("This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.").font(.footnote).foregroundStyle(.secondary)
                 }.padding().buttonStyle(.borderedProminent).controlSize(.large)
@@ -255,7 +276,12 @@ struct SpeakTranslateView: View {
                 }.id(job.id)
             }
         }
-        .task { model.speaker.observeInterruptions(); await model.capture.checkReadiness() }
+        .task {
+            model.selectMode(SpeakTranslateModel.Mode(rawValue: savedMode) ?? .automatic)
+            model.speaker.observeInterruptions()
+            await model.capture.checkReadiness()
+        }
+        .onChange(of: model.mode) { _, mode in savedMode = mode.rawValue }
         .onDisappear { model.cancel(); model.speaker.close() }
         .onChange(of: scenePhase) { _, phase in
             if phase == .background { model.cancel() }
@@ -264,7 +290,9 @@ struct SpeakTranslateView: View {
     private var status: String {
         if model.speaker.state != .idle { return "Speaking English — microphone off" }
         switch model.phase {
-        case .ready: return "Ready for your message"
+        case .ready:
+            return model.mode == .byButton && !model.translated.isEmpty
+                ? "Translation ready — tap Play English" : "Ready for your message"
         case .preparing: return "Preparing Spanish recognition…"
         case .listening: return "Listening in Spanish…"
         case .finishing: return "Finishing your message…"

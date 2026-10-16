@@ -497,8 +497,7 @@ struct LiveSpanishView: View {
             HStack {
                 Text(display == .both ? "\(language.name) → \(language.opposite.name)" : "\(language.opposite.name)").font(.caption)
                 Spacer()
-                Button(uiKey(follow ? "Following" : "Follow latest")) { follow.toggle() }.font(.caption)
-                    .frame(minHeight: 44).accessibilityIdentifier("liveTranslationFollowButton")
+
             }.padding(.horizontal)
             ScrollViewReader { proxy in
                 ScrollView {
@@ -518,6 +517,13 @@ struct LiveSpanishView: View {
                     }.padding()
                 }
                 .accessibilityIdentifier("liveTranslationReader")
+                .accessibilityAction(named: "Read earlier captions") { follow = false }
+                .overlay(alignment: .bottomTrailing) {
+                    if !follow {
+                        ReturnToLiveButton { follow = true }
+                            .accessibilityIdentifier("liveTranslationFollowButton").padding(12)
+                    }
+                }
                 .simultaneousGesture(DragGesture(minimumDistance: 10).onChanged { value in
                     if value.translation.height > 10 { follow = false }
                 })

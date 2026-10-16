@@ -1,3 +1,11 @@
+## 2026-10-16 — controles claros y conversación por botón
+
+- Sustituye Following/Follow latest y Volver al vivo por una flecha circular accesible compartida entre lector original y bilingüe.
+- Identifica Guardar audio, Reducir ruido y Segundo plano con nombre y estado visible; disposición adaptable al espacio.
+- Elimina el acceso pequeño duplicado a Preferencias de captura en pantalla normal, conservándolo en pantalla completa.
+- Hablar y traducir distingue Automático de Por botón. El segundo espera Reproducir en inglés tras traducir y no exige mantener pulsado el micrófono. Recuerda el modo, sin conservar la conversación.
+- Actualiza documentación de usuario, desarrollo junior y notas de App Review. [Uso](docs/speak-and-translate.md) · [evidencia](docs/speak-and-translate-checkpoint.md).
+
 ## 2026-10-16 — hablar en español y reproducir en inglés
 
 - Modo temporal Hablar y traducir, con acceso desde Captions y el inicio sencillo.

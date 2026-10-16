@@ -9,7 +9,7 @@ Flujo introducido en build 14 y ampliado en fuente 0.1.0 build 15. La disponibil
 
 ## Recorrido principal
 
-1. En Captions, elige Audio y Background. La elección se recuerda para futuras sesiones y al cerrar/reabrir la app.
+1. En Captions, elige Guardar audio, Reducir ruido y Segundo plano; cada control indica su estado. La elección se recuerda para futuras sesiones y al cerrar/reabrir la app.
 2. Pulsa el micrófono circular para iniciar. Cambia a pausa mientras escucha y a reproducir para continuar. El cuadrado circular termina la captura.
 3. Tras Stop, pulsa Save Session para conservarla en la biblioteca o Discard para eliminar el texto y cualquier audio, previa confirmación.
 4. El + azul prepara otra sesión con un solo toque si ya guardaste. Si queda un borrador pendiente, ofrece Save and new session, Discard and new session o Cancel. No inicia el micrófono automáticamente.
@@ -18,7 +18,7 @@ Los iconos mantienen etiquetas para VoiceOver y áreas de toque de 44 puntos. Gu
 
 ## Preferencias frente a captura actual
 
-Ambas preferencias están apagadas al instalar por primera vez. Después se conserva la elección del usuario. La grabación usa la preferencia que había al iniciar. Cambiar Audio durante una sesión prepara la siguiente, sin crear audio retroactivo. Segundo plano puede activarse/desactivarse para la sesión actual desde sus preferencias. Llamadas o interrupciones de iOS siguen deteniendo la captura; no hay reanudación automática.
+En la versión actual, Guardar audio está activado en instalaciones nuevas; Segundo plano y Reducir ruido están inicialmente desactivados. Se conservan las elecciones anteriores del usuario. La grabación usa la preferencia que había al iniciar. Cambiar Audio durante una sesión prepara la siguiente, sin crear audio retroactivo. Segundo plano puede activarse/desactivarse para la sesión actual desde sus preferencias. Llamadas o interrupciones de iOS siguen deteniendo la captura; no hay reanudación automática.
 
 ## Borradores de recuperación
 
@@ -56,3 +56,11 @@ Ver [interfaz bilingüe y primera preparación](interface-and-onboarding.md). El
 ## Actualización 23 — 2026-10-12
 
 Build 23 protege sesiones guardadas con Favorita y añade un filtro sin copiar archivos. Quitar protección no elimina; se requiere un borrado posterior confirmado. Los borradores deben publicarse antes de protegerlos.
+
+## Controles claros — 2026-10-16
+
+Al releer el original o las tarjetas bilingües, una flecha hacia abajo dentro de un círculo permite **Volver al texto en vivo** y retomar el seguimiento. Desaparece al activarlo. VoiceOver conserva ese nombre y la acción Leer subtítulos anteriores. No necesitas entender los términos Following/Follow latest.
+
+La pantalla normal usa la pestaña Ajustes, sin otro botón pequeño duplicado. En pantalla completa conserva Preferencias de captura porque la pestaña no está disponible. Los controles rápidos visibles antes de empezar permiten elegir Guardar audio, Reducir ruido y Segundo plano; se adaptan a columna cuando no cabe una fila. Los indicadores durante la sesión conservan acceso a las preferencias y explican su efecto en la captura actual o futura.
+
+Para comunicarte en español y escuchar inglés, abre **Hablar y traducir** antes de iniciar una sesión. Sus modos Automático y Por botón están separados del idioma de los menús y de la grabación de sesiones. [Pasos y límites](speak-and-translate.md).

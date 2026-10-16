@@ -184,3 +184,10 @@ Protección: botón o swipe → `setFavorite` → fila única V8. Borrado de ses
 ## Hablar y traducir (2026-10-16)
 
 [Guía de implementación para estudiantes](speak-and-translate.md#para-estudiantes-arquitectura-y-decisiones): máquina de estados temporal, detección heurística de pausa, finalización de micrófono antes de la voz, validación de traducciones y rechazo de callbacks obsoletos. El modo no crea una sesión de SwiftData.
+
+## Controles y modo de conversación — 2026-10-16
+
+- `UI/CaptionScreen.swift`: `ReturnToLiveButton` es una vista compartida con área de toque 44×44 y nombre VoiceOver. La superposición no resta una barra permanente al lector. `CapturePreferenceLabel` explica acción/estado; `quickPreferences` usa `ViewThatFits`. El botón de preferencias permanece solo en los controles de pantalla completa.
+- `UI/SessionTranslationView.swift`: `LiveSpanishView` ofrece la misma flecha al detener seguimiento. Al pulsarla cambia `follow` y su observador desplaza hasta `translationBottom`. Leer subtítulos anteriores también está disponible mediante acción accesible.
+- `UI/SpeakTranslateView.swift`: `Mode`, `selectMode` y la instantánea `speakWhenComplete` separan finalización de captura y salida de voz. `complete` valida el trabajo y solo llama `play` automáticamente en Automático. La vista persiste el modo y ajusta instrucciones, botones y estado; el modelo no depende de UserDefaults para sus pruebas.
+- Pruebas: `SpeakTranslateTests` usa entrada/salida simuladas para garantizar silencio hasta Play, invalidación tras editar y bloqueo de cambio de modo en curso. `HomeScreenTests` recorre ambos modos, persistencia al reabrir, flecha de lectura bilingüe/original y acceso a preferencias en pantalla completa.

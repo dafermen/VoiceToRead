@@ -31,6 +31,37 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testConversationByButtonWaitsForExplicitPlayback() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation"]
+        app.launch()
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
+        app.buttons["speakTranslateEntry"].tap()
+        app.segmentedControls["conversationMode"].buttons["By button"].tap()
+        let input = app.textViews["conversationSource"]
+        input.tap(); input.typeText("Quiero un cafe por favor")
+        app.swipeUp()
+        let translate = app.buttons["conversationTranslate"]
+        if !translate.isHittable { app.swipeUp() }
+        XCTAssertEqual(translate.label, "Translate message")
+        translate.tap()
+        XCTAssertTrue(app.staticTexts["conversationTranslation"].waitForExistence(timeout: 10))
+        XCTAssertEqual(app.staticTexts["conversationStatus"].label, "Translation ready — tap Play English")
+        XCTAssertFalse(app.buttons["conversationCancel"].exists)
+        let play = app.buttons["conversationPlay"]
+        if !play.isHittable { app.swipeUp() }
+        play.tap()
+        XCTAssertTrue(app.buttons["conversationCancel"].waitForExistence(timeout: 5))
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Conversation-by-button"; shot.lifetime = .keepAlways; add(shot)
+        app.navigationBars.buttons["Done"].tap()
+        app.buttons["speakTranslateEntry"].tap()
+        XCTAssertTrue(app.segmentedControls["conversationMode"].buttons["By button"].isSelected)
+        XCTAssertEqual(app.textViews["conversationSource"].value as? String, "")
+        app.navigationBars.buttons["Done"].tap()
+    }
+
+    @MainActor
     func testStoreScreenshotsAndPrivacyEnglish() throws { try captureStoreScreenshots(spanish: false) }
 
     @MainActor
@@ -429,6 +460,13 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(mark.exists)
         mark.tap(); XCTAssertEqual(mark.label, "Remove bookmark")
         mark.tap(); XCTAssertEqual(mark.label, "Save bookmark")
+        let follow = app.buttons["liveTranslationFollowButton"]
+        XCTAssertFalse(follow.exists)
+        app.scrollViews["liveTranslationReader"].swipeDown()
+        XCTAssertTrue(follow.waitForExistence(timeout: 5))
+        XCTAssertEqual(follow.label, "Back to live text")
+        follow.tap()
+        XCTAssertFalse(follow.exists)
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = spanish ? "Live-both-Spanish" : "Live-both-English"; shot.lifetime = .keepAlways; add(shot)
         selector.tap(); app.buttons[spanish ? "Translation English" : "Translation Español"].tap()
@@ -743,10 +781,14 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation"]
         app.launch()
-        XCTAssertTrue(app.buttons["capturePreferencesButton"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.buttons["fullScreenButton"].waitForExistence(timeout: 20))
+        XCTAssertFalse(app.buttons["capturePreferencesButton"].exists)
+        app.buttons["fullScreenButton"].tap()
+        XCTAssertTrue(app.buttons["capturePreferencesButton"].waitForExistence(timeout: 5))
         app.buttons["capturePreferencesButton"].tap()
         XCTAssertTrue(app.switches["saveAudioToggle"].waitForExistence(timeout: 5))
         app.navigationBars["Capture preferences"].buttons["Done"].tap()
+        app.buttons["fullScreenButton"].tap()
         app.tabBars.buttons["Sessions"].tap()
         app.staticTexts["Review sample"].tap()
         app.buttons["learnEnglishButton"].tap()
@@ -890,6 +932,9 @@ final class HomeScreenTests: XCTestCase {
         let quick = app.buttons["quickNoisePreference"]
         XCTAssertTrue(quick.waitForExistence(timeout: 20))
         XCTAssertTrue(quick.isHittable)
+        XCTAssertTrue(quick.staticTexts["Reduce noise"].exists)
+        XCTAssertTrue(app.buttons["quickAudioPreference"].staticTexts["Save audio"].exists)
+        XCTAssertFalse(app.buttons["capturePreferencesButton"].exists)
         XCTAssertEqual(quick.value as? String, "Off")
         quick.tap()
         XCTAssertEqual(quick.value as? String, "On")
@@ -901,6 +946,7 @@ final class HomeScreenTests: XCTestCase {
         waitForExpectations(timeout: 10)
         app.buttons["primaryCaptionAction"].tap()
         XCTAssertTrue(app.buttons["resumeCaptureButton"].waitForExistence(timeout: 5))
+        app.buttons["fullScreenButton"].tap()
         app.buttons["capturePreferencesButton"].tap()
         let toggle = app.switches["noiseReductionToggle"]
         XCTAssertTrue(toggle.waitForExistence(timeout: 5))
@@ -911,6 +957,7 @@ final class HomeScreenTests: XCTestCase {
         let settingsShot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         settingsShot.name = "Noise-session-preferences"; settingsShot.lifetime = .keepAlways; add(settingsShot)
         app.buttons["Done"].tap()
+        app.buttons["fullScreenButton"].tap()
         app.buttons["resumeCaptureButton"].tap()
         expectation(for: NSPredicate(format: "label == 'Pause'"), evaluatedWith: app.buttons["primaryCaptionAction"])
         waitForExpectations(timeout: 10)
@@ -920,6 +967,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["interfaceLanguagePicker"].tap()
         app.buttons["Español"].tap()
         app.tabBars.buttons["Subtítulos"].tap()
+        app.buttons["fullScreenButton"].tap()
         app.buttons["capturePreferencesButton"].tap()
         XCTAssertTrue(app.switches["noiseReductionToggle"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.switches["noiseReductionToggle"].label.contains("Reducir ruido de fondo"))

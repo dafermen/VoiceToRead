@@ -1,5 +1,20 @@
 # Entrega: Hablar y traducir — 2026-10-16
 
+## Ampliación: controles claros y modos separados
+
+- Flecha circular compartida para volver a texto en vivo en lector original y bilingüe; nombre accesible conservado.
+- Guardar audio, Reducir ruido y Segundo plano con nombre/estado visible. Acceso duplicado a preferencias eliminado en pantalla normal, conservado en pantalla completa.
+- Automático y Por botón separados. Por botón no finaliza al detectar una pausa ni reproduce traducciones hasta Play; mantiene límites de duración y cancelación. El modo se recuerda, el mensaje no.
+- Primera pasada iPhone 15 / iOS 17.2: **10 pruebas específicas + 4 de interfaz aprobadas**, `/private/tmp/vtr-controls-tests.xcresult`. Cubre silencio hasta Play, edición, interrupciones/cancelación, recorrido automático, flecha bilingüe y preferencias con sesión pausada.
+- Pasada final tras persistir el modo: **10 pruebas específicas + 2 de interfaz aprobadas**, `/private/tmp/vtr-controls-final.xcresult`. Comprueba reapertura sin mensaje, conservación de Por botón y relectura original estable mientras llegan subtítulos; la flecha retoma seguimiento.
+- Release para dispositivo sin firma: **BUILD SUCCEEDED**, `/private/tmp/vtr-controls-release.log`. Mantiene las dos advertencias de concurrencia preexistentes indicadas abajo; sin errores nuevos.
+- Localización: **695 claves + 2 permisos**, **485 claves extraídas** cubiertas. Metadatos App Store y `git diff --check` sin errores.
+- Capturas revisadas: [controles](qa/speak-and-translate/capture-controls-iphone.png) y [conversación por botón](qa/speak-and-translate/by-button-iphone.png). El mensaje inglés mostrado es una respuesta ficticia de DEBUG; no ilustra calidad de Apple Translation.
+
+Para la aceptación física, comprobar ambos modos con voz española real; en Por botón, esperar tras traducir sin sonido y después pulsar Reproducir en inglés. Reabrir conserva el modo pero limpia el texto. Probar el regreso al texto en vivo en Original/Ambos y etiquetas de controles con letra grande y VoiceOver. La nueva distribución a TestFlight se verifica aparte de estas pruebas locales.
+
+## Evidencia de la implementación anterior
+
 ## Alcance
 
 Modo temporal español → inglés: captura explícita, cierre por pausa estimada o botón, traducción seguida de voz, edición/escritura, repetir y cancelar. Acceso inicial en Captions, Ajustes e inicio sencillo. No modifica idioma global, grabaciones o sesiones existentes. Guía: [Hablar y traducir](speak-and-translate.md).

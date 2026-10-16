@@ -327,3 +327,11 @@ El [paquete de publicación](store/submission-kit.md) distingue hechos comprobad
 ## Hablar y traducir (2026-10-16)
 
 [Guía de implementación para estudiantes](speak-and-translate.md#para-estudiantes-arquitectura-y-decisiones): máquina de estados temporal, detección heurística de pausa, finalización de micrófono antes de la voz, validación de traducciones y rechazo de callbacks obsoletos. El modo no crea una sesión de SwiftData.
+
+## Controles claros y voz por decisión del usuario — 2026-10-16
+
+Una traducción terminada no obliga a reproducir sonido. `SpeakTranslateModel.Mode` distingue Automático de Por botón; al crear un trabajo se copia la decisión en `speakWhenComplete`. Así el resultado asíncrono sabe si debe hablar o quedar disponible para Play. Se bloquea cambiar modo durante operaciones y se valida la identidad del resultado antes de usarlo. `@AppStorage` conserva la elección, mientras que el mensaje pertenece al modelo temporal de la pantalla y desaparece al cerrarla.
+
+Ejercicio: en Por botón, escribe y traduce sin hablar, pulsa Play y cancela. Reabre: el modo debe conservarse y el texto estar vacío. Explica por qué guardar ambas cosas en UserDefaults cambiaría las expectativas de privacidad. Comprueba también una pausa larga durante escucha manual: no debe cerrar el turno salvo el límite de duración.
+
+`ReturnToLiveButton` comparte aspecto y nombre accesible entre los lectores original y bilingüe. Cada lector conserva su propio estado de seguimiento y desplazamiento. Una acción visible única evita confundir estado con acción. `CapturePreferenceLabel` muestra nombre y On/Off; `ViewThatFits` cambia de fila a columna cuando falta espacio. Esto ayuda a baja visión y a quienes no reconocen un icono, sin depender del color. Lee [el recorrido de sesiones](session-workflow.md#controles-claros--2026-10-16).

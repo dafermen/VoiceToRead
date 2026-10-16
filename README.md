@@ -20,8 +20,8 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - English capture by default, optional Spanish; English/Spanish interface selected independently.
 - Live **Original / Translation / Both** modes. Both uses blue English cards and green Spanish cards with language labels, rounded borders and subtle shadows. Dark mode and high contrast are supported.
 - Fullscreen, portrait/landscape, larger or bold text, line spacing, light paper colors and notebook guides.
-- Pause/resume with a prominent interruption notice. Reread previous paragraphs without automatic scrolling until you choose to follow again.
-- Optional saved microphone audio, noise reduction and background continuation. Recording always starts explicitly; background capture is opt-in.
+- Pause/resume with a prominent interruption notice. Reread previous paragraphs without automatic scrolling; the circular down arrow returns to live text and resumes following.
+- Clearly labelled Save audio, Reduce noise and Background controls show On/Off before starting. Optional saved microphone audio, noise reduction and background continuation. Recording always starts explicitly; background capture is opt-in.
 - Save/discard sessions, recover drafts, correct text, search transcripts, bookmark phrases and protect favorites from accidental deletion.
 - Replay continuously or one paragraph at a time with **At my pace**: previous and next, with replay from the main button; correct the selected phrase while paused. The caption reader fills the available height; secondary playback options collapse.
 - Export TXT/PDF, recorded audio and synchronized SRT/WebVTT subtitles. Timing after text edits is approximate.
@@ -34,7 +34,7 @@ See [accessible listening and reading](docs/translated-speech.md) for user steps
 
 ## Speak and translate
 
-Speak Spanish, pause and hear the English translation for everyday conversations. Choose a 3/5-second pause or finish manually; type/correct a message, repeat English, or cancel. The microphone is off during playback, and each new turn starts explicitly. Temporary text only: no recording or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
+Speak Spanish, pause and hear the English translation for everyday conversations. Choose **Automatic** (3/5-second pause, translation and speech) or **By button** (tap to start, tap Finished speaking, then explicitly Play English). The mode is remembered. Type/correct a message, play English again, or cancel. The microphone is off during playback, and each new turn starts explicitly. Temporary text only: no recording or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
 
 ## Listening comfort
 

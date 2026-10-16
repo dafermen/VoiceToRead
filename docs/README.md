@@ -1,6 +1,6 @@
 # Documentación de VoiceToRead
 
-- [Hablar y traducir: español a inglés, uso, privacidad y arquitectura](speak-and-translate.md).
+- [Hablar y traducir: Automático/Por botón, español a inglés, privacidad y arquitectura](speak-and-translate.md).
 
 Actualización de experiencia accesible: [guía de los ocho cambios](accessible-experience.md) y [evidencia/pendientes](accessible-experience-checkpoint.md).
 

@@ -810,3 +810,23 @@
 "Review the Spanish text before translating. Recognition may be incomplete." = "Revisa el texto en español antes de traducir. El reconocimiento puede estar incompleto.";
 
 "Translation could not finish. Check language downloads and try Translate and speak again." = "No se pudo terminar la traducción. Revisa las descargas de idiomas y vuelve a pulsar Traducir y decir en voz alta.";
+
+"Back to live text" = "Volver al texto en vivo";
+
+"Reduce noise" = "Reducir ruido";
+
+"Automatic" = "Automático";
+
+"By button" = "Por botón";
+
+"Conversation mode" = "Modo de conversación";
+
+"Translate message" = "Traducir mensaje";
+
+"Play English" = "Reproducir en inglés";
+
+"Translation ready — tap Play English" = "Traducción lista — pulsa Reproducir en inglés";
+
+"Tap the microphone to speak, then Finished speaking. Read both texts and tap Play English when you are ready. No need to hold the button." = "Pulsa el micrófono para hablar y después Terminé de hablar. Lee ambos textos y pulsa Reproducir en inglés cuando estés listo. No tienes que mantener pulsado el botón.";
+
+"Translation could not finish. Check language downloads and try translating again." = "No se pudo terminar la traducción. Revisa las descargas de idiomas y vuelve a traducir.";

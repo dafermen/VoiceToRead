@@ -2,7 +2,7 @@
 
 ## Uso
 
-En **Ajustes → Preferencias de captura → Reducir ruido de fondo** (English: **Settings → Capture preferences → Reduce background noise**) activa el interruptor antes de iniciar. También está el icono de filtro junto al acceso rápido de audio en Subtítulos. Cambiar la preferencia no inicia el micrófono. La elección queda guardada para sesiones futuras.
+En **Ajustes → Preferencias de captura → Reducir ruido de fondo** (English: **Settings → Capture preferences → Reduce background noise**) activa el interruptor antes de iniciar. Antes de iniciar también está el control **Reducir ruido / Reduce noise** en Subtítulos, junto a **Guardar audio / Save audio**. Cada control muestra Activado/Desactivado mediante texto y símbolo, sin depender solo del color. El acceso general es Ajustes; el botón adicional de Preferencias de captura se conserva en pantalla completa, donde no aparece la pestaña Ajustes. Cambiar la preferencia no inicia el micrófono. La elección queda guardada para sesiones futuras.
 
 Inicialmente está desactivada: el usuario puede comparar dos sesiones breves en su ambiente y decidir. Si la cambia durante la captura o una pausa, se aplica a la próxima sesión. La tarjeta muestra el valor de la sesión actual para evitar confundirlo con la preferencia futura. Pausar y Reanudar conserva el mismo tratamiento de audio.
 

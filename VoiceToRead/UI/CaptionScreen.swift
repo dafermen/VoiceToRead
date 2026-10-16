@@ -475,14 +475,10 @@ struct CaptionScreen: View {
         .accessibilityAction(named: Text("Increase text size")) { settings.captionSize = CaptionTextSize.clamped(settings.captionSize + 2) }
         .accessibilityAction(named: Text("Decrease text size")) { settings.captionSize = CaptionTextSize.clamped(settings.captionSize - 2) }
         .accessibilityAction(named: "Read earlier captions") { pauseFollowing() }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
+        .overlay(alignment: .bottomTrailing) {
             if !followLive && hasCaptions {
-                Button { followLive = true } label: {
-                    Label("Back to live", systemImage: "arrow.down.to.line")
-                        .font(.subheadline).frame(minHeight: 44).padding(.horizontal, 12)
-                }
-                .accessibilityIdentifier("backToLiveButton")
-                .background(.regularMaterial, in: Capsule()).padding(.bottom, 4)
+                ReturnToLiveButton { followLive = true }
+                    .accessibilityIdentifier("backToLiveButton").padding(12)
             }
         }
     }
@@ -501,13 +497,18 @@ struct CaptionScreen: View {
     }
 
     private var quickPreferences: some View {
-        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 12) { quickPreferenceButtons }.fixedSize(horizontal: true, vertical: false)
+            VStack(alignment: .leading, spacing: 8) { quickPreferenceButtons }
+        }.font(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    @ViewBuilder private var quickPreferenceButtons: some View {
             Button {
                 settings.saveAudio.toggle()
                 model.saveAudio = settings.saveAudio
             } label: {
-                Label(uiKey(settings.saveAudio ? "Audio on" : "Audio off"), systemImage: settings.saveAudio ? "waveform.circle.fill" : "waveform.circle")
-                    .frame(minHeight: 44)
+                CapturePreferenceLabel(title: "Save audio", enabled: settings.saveAudio)
             }
             .accessibilityLabel("Save audio")
             .accessibilityValue(uiKey(settings.saveAudio ? "On" : "Off"))
@@ -516,27 +517,21 @@ struct CaptionScreen: View {
                 settings.reduceBackgroundNoise.toggle()
                 model.reduceBackgroundNoise = settings.reduceBackgroundNoise
             } label: {
-                Image(systemName: settings.reduceBackgroundNoise
-                      ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
-                    .font(.title3).frame(minWidth: 44, minHeight: 44)
+                CapturePreferenceLabel(title: "Reduce noise", enabled: settings.reduceBackgroundNoise)
             }
             .accessibilityLabel("Reduce background noise")
             .accessibilityValue(uiKey(settings.reduceBackgroundNoise ? "On" : "Off"))
             .help("Reduce background noise")
             .accessibilityIdentifier("quickNoisePreference")
-            Spacer(minLength: 0)
             Button {
                 settings.continueInBackground.toggle()
                 model.continueInBackground = settings.continueInBackground
             } label: {
-                Label("Background", systemImage: settings.continueInBackground ? "checkmark.circle.fill" : "circle")
-                    .frame(minHeight: 44)
+                CapturePreferenceLabel(title: "Background", enabled: settings.continueInBackground)
             }
             .accessibilityLabel("Continue in background")
             .accessibilityValue(uiKey(settings.continueInBackground ? "On" : "Off"))
             .accessibilityIdentifier("quickBackgroundPreference")
-        }
-        .font(.subheadline)
     }
 
     private var resolutionControls: some View {
@@ -574,7 +569,6 @@ struct CaptionScreen: View {
             primaryButton(iconOnly: true)
             stopButton(iconOnly: true)
             Spacer(minLength: 0)
-            if !settings.simpleMode { capturePreferencesButton }
         }
     }
 
@@ -781,5 +775,35 @@ struct CaptionScreen: View {
             guard followLive, !Task.isCancelled else { return }
             proxy.scrollTo("liveBottom", anchor: .bottom)
         }
+    }
+}
+
+/// One recognizable return-to-bottom affordance for original and bilingual readers.
+struct ReturnToLiveButton: View {
+    let action: () -> Void
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: "arrow.down.circle.fill")
+                .font(.system(size: 32))
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(Color.accentColor, Color(uiColor: .systemBackground))
+                .frame(width: 44, height: 44)
+        }
+        .buttonStyle(.plain)
+        .background(.regularMaterial, in: Circle())
+        .accessibilityLabel("Back to live text")
+        .help("Back to live text")
+    }
+}
+
+private struct CapturePreferenceLabel: View {
+    let title: String
+    let enabled: Bool
+    var body: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(LocalizedStringKey(title)).fixedSize(horizontal: false, vertical: true)
+            Label(uiKey(enabled ? "On" : "Off"), systemImage: enabled ? "checkmark.circle.fill" : "circle")
+                .font(.caption)
+        }.frame(minHeight: 44)
     }
 }
