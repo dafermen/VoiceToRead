@@ -19,6 +19,22 @@ final class AppSettingsTests: XCTestCase {
         XCTAssertEqual(restored.captureLanguage, .english)
     }
 
+    func testExpandedCaptionSizePersistsAndPreservesExistingChoices() {
+        let name = UUID().uuidString
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        XCTAssertEqual(AppSettings(defaults: defaults).captionSize, 28)
+        for size in [14.0, 16, 28, 44, 60] {
+            let settings = AppSettings(defaults: defaults)
+            settings.captionSize = size
+            XCTAssertEqual(AppSettings(defaults: defaults).captionSize, size)
+        }
+        defaults.set(-5, forKey: "captionSize")
+        XCTAssertEqual(AppSettings(defaults: defaults).captionSize, 14)
+        XCTAssertEqual(CaptionTextSize.clamped(.nan), 28)
+        XCTAssertEqual(CaptionTextSize.clamped(.infinity), 28)
+    }
+
     func testPreferencesPersistAndInvalidValuesUseSafeDefaults() {
         let name = "VoiceToReadTests.\(UUID().uuidString)"
         let defaults = UserDefaults(suiteName: name)!
@@ -28,7 +44,7 @@ final class AppSettingsTests: XCTestCase {
         let settings = AppSettings(defaults: defaults)
         XCTAssertTrue(settings.saveAudio)
         XCTAssertFalse(settings.continueInBackground)
-        XCTAssertEqual(settings.captionSize, 44)
+        XCTAssertEqual(settings.captionSize, 60)
         XCTAssertEqual(settings.appearance, .system)
         settings.lineSpacing = 12
         settings.boldCaptions = true

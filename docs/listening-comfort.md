@@ -16,8 +16,15 @@ VoiceToRead apoya a personas con dificultades auditivas o visuales, a quienes ne
 
 Si una sesión no tiene traducción vigente, el reproductor usa el original sin borrar la preferencia para futuras sesiones. Guardamos el papel del idioma (original/traducción/ambos), no una elección fija inglés/español: al cambiar el idioma hablado de una sesión, la preferencia sigue siendo coherente.
 
+## Párrafos largos en un iPhone pequeño
+
+En **Ajustes → Subtítulos**, **Opciones de lectura** de la conversación en vivo o **Preferencias de lectura** del reproductor, mueve **Tamaño del texto** hacia la izquierda. El rango base es **14–60 puntos**; prueba 16 o 18 si necesitas ver más contenido. El valor se muestra junto al control y se recuerda entre sesiones. La instalación nueva sigue usando 28 y se conserva cualquier elección anterior válida.
+
+Reducir la letra no garantiza que todo párrafo quepa: puedes desplazar el área de texto. En reproducción, selecciona **A mi ritmo** para que se detenga al terminar el párrafo (después de ambos idiomas si elegiste Ambos), lee con calma y elige Siguiente cuando estés listo. En Continuo, el audio sigue determinando el avance. El tamaño de accesibilidad de iOS continúa ampliando el tamaño base: no se desactiva para forzar el texto dentro de la pantalla.
+
 ## Para estudiantes: cómo funciona
 
+- `CaptionTextSize` centraliza el rango y la validación de valores no finitos. `CaptionSizeControl` comparte el slider y el valor visible entre las tres pantallas. El gesto de pellizco y las acciones de VoiceOver usan la misma función de límites; así una pantalla no vuelve a imponer el antiguo mínimo de 20. La preferencia mantiene la clave `captionSize`, sin migrar la base de sesiones.
 - `ParagraphAudioStep.make` crea pasos con UUID del párrafo, idioma, texto y, cuando existe, intervalo de grabación. No modifica los archivos originales.
 - `ParagraphPlayback` coordina los motores de audio y voz. Cada finalización real avanza el índice. Si el siguiente paso es el otro idioma del mismo párrafo, programa una tarea cancelable para esperar. No usa un temporizador para adivinar cuándo acaba la voz.
 - Cancelar una tarea y cambiar su token UUID impide que una espera antigua reproduzca contenido después de salir o detener. La cola observa interrupciones durante la espera, cuando los motores están inactivos. Pausa conserva el paso pendiente; Reanudar reinicia el intervalo seleccionado.

@@ -39,6 +39,34 @@ enum ReaderPaper: String, CaseIterable {
     }
 }
 
+/// One base-size range for sliders, pinch gestures and VoiceOver actions.
+/// Dynamic Type still scales this base size to respect the system preference.
+enum CaptionTextSize {
+    static let range: ClosedRange<Double> = 14...60
+    static let defaultValue: Double = 28
+    static func clamped(_ value: Double) -> Double {
+        guard value.isFinite else { return defaultValue }
+        return min(max(value, range.lowerBound), range.upperBound)
+    }
+}
+
+/// Shared controls keep live captions and saved-session playback in sync.
+struct CaptionSizeControl: View {
+    @Binding var size: Double
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Text size")
+                Spacer()
+                Text("\(Int(size)) points").monospacedDigit()
+            }
+            Slider(value: $size, in: CaptionTextSize.range, step: 2)
+                .accessibilityLabel("Caption size")
+                .accessibilityValue(Text("\(Int(size)) points"))
+        }
+    }
+}
+
 @MainActor
 @Observable
 final class AppSettings {
@@ -76,8 +104,8 @@ final class AppSettings {
         captureLanguage = CaptureLanguage(rawValue: defaults.string(forKey: "captureLanguage") ?? "") ?? .english
         readerPaper = ReaderPaper(rawValue: defaults.string(forKey: "readerPaper") ?? "") ?? .system
         ruledPaper = defaults.bool(forKey: "ruledPaper")
-        let storedSize = defaults.object(forKey: "captionSize") as? Double ?? 28
-        captionSize = min(max(storedSize.isFinite ? storedSize : 28, 20), 44)
+        let storedSize = defaults.object(forKey: "captionSize") as? Double ?? CaptionTextSize.defaultValue
+        captionSize = CaptionTextSize.clamped(storedSize)
         let storedSpacing = defaults.object(forKey: "lineSpacing") as? Double ?? 4
         lineSpacing = min(max(storedSpacing.isFinite ? storedSpacing : 4, 0), 16)
         boldCaptions = defaults.bool(forKey: "boldCaptions")

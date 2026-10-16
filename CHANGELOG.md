@@ -1,3 +1,10 @@
+## 2026-10-16 — tamaños de letra para pantallas pequeñas
+
+- Amplía el rango base de subtítulos de 20–44 a 14–60 puntos, conservando el tamaño guardado y el valor inicial de 28.
+- Unifica ajustes, lectura en vivo, reproductor, gesto de pellizco y acciones de VoiceOver; muestra el tamaño elegido.
+- Añade una indicación en el reproductor para usar A mi ritmo y desplazar los párrafos largos. No cambia automáticamente la preferencia de reproducción.
+- Mantiene Dynamic Type y el mismo tamaño relativo para original y traducción.
+
 ## 2026-10-16 — comodidad de escucha y notas
 
 - Tarjeta activa con borde y “Escuchando ahora”, seguimiento opcional al desplazar manualmente.

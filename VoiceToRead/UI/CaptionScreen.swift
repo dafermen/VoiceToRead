@@ -382,17 +382,17 @@ struct CaptionScreen: View {
         MagnificationGesture()
             .updating($pinchScale) { value, scale, _ in scale = value }
             .onEnded { value in
-                settings.captionSize = min(max(settings.captionSize * Double(value), 20), 44)
+                settings.captionSize = CaptionTextSize.clamped(settings.captionSize * Double(value))
             }
     }
 
     private var captionPoints: CGFloat {
-        scaledSize * CGFloat(min(max(settings.captionSize * Double(pinchScale), 20), 44)) / 28
+        scaledSize * CGFloat(CaptionTextSize.clamped(settings.captionSize * Double(pinchScale))) / 28
     }
 
     private var captionFont: Font {
         let magnified: Double = settings.captionSize * Double(pinchScale)
-        let bounded: Double = min(max(magnified, 20.0), 44.0)
+        let bounded: Double = CaptionTextSize.clamped(magnified)
         let points: CGFloat = scaledSize * CGFloat(bounded) / 28.0
         let weight: Font.Weight = settings.boldCaptions ? .semibold : .regular
         return Font.system(size: points, weight: weight)
@@ -472,8 +472,8 @@ struct CaptionScreen: View {
             }
         })
         .simultaneousGesture(resizeGesture)
-        .accessibilityAction(named: Text("Increase text size")) { settings.captionSize = min(settings.captionSize + 2, 44) }
-        .accessibilityAction(named: Text("Decrease text size")) { settings.captionSize = max(settings.captionSize - 2, 20) }
+        .accessibilityAction(named: Text("Increase text size")) { settings.captionSize = CaptionTextSize.clamped(settings.captionSize + 2) }
+        .accessibilityAction(named: Text("Decrease text size")) { settings.captionSize = CaptionTextSize.clamped(settings.captionSize - 2) }
         .accessibilityAction(named: "Read earlier captions") { pauseFollowing() }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             if !followLive && hasCaptions {
@@ -636,9 +636,7 @@ struct CaptionScreen: View {
                     Text("Make every word easy to read.")
                         .font(captionFont)
                         .lineSpacing(settings.lineSpacing)
-                    Slider(value: $settings.captionSize, in: 20...44, step: 2)
-                        .accessibilityLabel("Caption size")
-                        .accessibilityValue("\(Int(settings.captionSize)) points")
+                    CaptionSizeControl(size: $settings.captionSize)
                 }
                 Section("Reading style") {
                     Slider(value: $settings.lineSpacing, in: 0...16, step: 2) {

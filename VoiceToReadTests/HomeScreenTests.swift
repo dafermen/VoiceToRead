@@ -1179,7 +1179,8 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.navigationBars["Reading options"].waitForExistence(timeout: 5))
         let slider = app.sliders["Caption size"]
         XCTAssertTrue(slider.exists)
-        slider.adjust(toNormalizedSliderPosition: 0.75)
+        slider.adjust(toNormalizedSliderPosition: 0)
+        XCTAssertEqual(slider.value as? String, "14 points")
         let selectedSize = slider.value as? String
         app.buttons["Done"].tap()
         XCTAssertTrue(reader.waitForExistence(timeout: 5))
@@ -1187,7 +1188,9 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
         app.buttons["readingOptionsButton"].tap()
         XCTAssertEqual(app.sliders["Caption size"].value as? String, selectedSize)
-        slider.adjust(toNormalizedSliderPosition: 1.0 / 3.0)
+        slider.adjust(toNormalizedSliderPosition: 1)
+        XCTAssertEqual(slider.value as? String, "60 points")
+        slider.adjust(toNormalizedSliderPosition: 14.0 / 46.0)
         app.buttons["Done"].tap()
         app.buttons["sessionActionsButton"].tap()
         XCTAssertTrue(app.buttons["New Session"].waitForExistence(timeout: 5))

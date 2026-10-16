@@ -34,6 +34,8 @@ See [accessible listening and reading](docs/translated-speech.md) for user steps
 
 ## Listening comfort
 
+- Adjust caption text from **14–60 base points** in Settings, live Reading options or playback Reading preferences. Your saved size is preserved; Dynamic Type still applies. Use **At my pace** for time to finish long paragraphs and scroll any text that exceeds the reader.
+
 - The speaking card has a border and “Listening now”; manual scrolling pauses automatic following.
 - Remember language/mode preferences, set independent original/translation speeds and choose a 0/1/2-second gap between languages.
 - Search original or translated paragraphs and play a result directly; add private notes to bookmarks and preview their corrected text with local speech.

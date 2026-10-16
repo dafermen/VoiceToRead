@@ -46,7 +46,7 @@ struct SettingsView: View {
                 NavigationLink("Names & translation terms") { PersonalVocabularyView() }
             }
             Section("Captions") {
-                Slider(value: $settings.captionSize, in: 20...44, step: 2) { Text("Caption size") }
+                CaptionSizeControl(size: $settings.captionSize)
                 Toggle("Keep screen awake while listening", isOn: $settings.keepAwake)
                 Picker("Appearance", selection: $settings.appearance) {
                     ForEach(AppAppearance.allCases, id: \.self) { appearance in

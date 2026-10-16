@@ -104,7 +104,7 @@ For each run record date, source commit, device/OS/SDK, scenario, result, latenc
 ## Build 15 acceptance
 - Start transcription with audio off: Transcribing and live level, no red recording indicator. Audio on: Recording only after recorder/capture starts. Pause: level clears, microphone stops, Resume keeps the session.
 - Interrupt capture, keep finalized text/draft, return to foreground without automatic restart, then explicitly Resume. Verify repeated failure if microphone remains unavailable.
-- Pinch to increase/decrease text, verify 20–44 bounds, relaunch to verify persistence, rotate/fullscreen and use Aa/VoiceOver alternatives.
+- Pinch to increase/decrease text, verify 14–60 base-point bounds, relaunch to verify persistence, rotate/fullscreen and use Aa/VoiceOver alternatives.
 - Save with default title, custom title, whitespace-only title and long title; verify history/search after reopening.
 - Tap a timed paragraph; verify playback jumps, Play/Pause and another cue work. Test corrected text, absent timing, deleted/truncated audio and no overlap with capture.
 
@@ -131,3 +131,11 @@ Run `HomeScreenTests/testLiveBilingualEnglishCapture` and `testLiveBilingualSpan
 On a physical device with the modern build, choose both directions, prepare languages, speak new sentences and compare original/translation pairs. Check provisional text, delayed translation/error retry, long sessions, background/foreground, reading earlier paragraphs without jumps, large Dynamic Type and VoiceOver. Confirm that changing display leaves audio/capture running and reopening retains the chosen display.
 
 For source 27 cards, inspect the retained bilingual screenshots in portrait and landscape: English blue/Spanish green in either capture direction, compact padding, rounded outlines, readable labels and unclipped text. Also inspect dark appearance and increased/high contrast (monochrome strong borders), including provisional/waiting cards. Color must not be the sole language cue. These visual checks supplement the existing pairing and capture-state assertions.
+
+## Rango de letra ampliado — 2026-10-16
+
+- Simulador iPhone 15 / iOS 17.2: 9 pruebas `AppSettingsTests` y 2 pruebas de interfaz aprobadas, sin fallos.
+- `testReadingOptionsDoNotOccupyTheReader` verifica selección de 14 y 60 puntos, conservación al reabrir y área de lectura sin controles permanentes.
+- `testLongPlaybackParagraphScrollsAndPreviousRestoresIt` verifica desplazamiento de un párrafo largo y regreso a él con Anterior.
+- Evidencia local: `/private/tmp/vtr-font-range.xcresult`, `/private/tmp/vtr-font-range.log` (`TEST SUCCEEDED`). Localización EN/ES: 658 claves y 2 permisos coincidentes; 467 claves extraídas cubiertas.
+- Esta comprobación no sustituye la prueba física en el iPhone del usuario; la entrega en TestFlight requiere completar Xcode Cloud y el procesamiento de Apple.

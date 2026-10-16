@@ -319,3 +319,7 @@ El [paquete de publicación](store/submission-kit.md) distingue hechos comprobad
 ## Escucha más clara y notas (V10)
 
 [Guía de uso y explicación para estudiantes](listening-comfort.md): identificación del texto que suena, pausa cancelable, velocidades por idioma, preferencias, búsqueda, notas de marcadores y preparación. [Validación y entrega](listening-comfort-checkpoint.md).
+
+### Tamaño de letra compartido (2026-10-16)
+
+`CaptionTextSize` en `AppSettings.swift` define 14–60 puntos base y el valor inicial 28. `CaptionSizeControl` se reutiliza en Ajustes, lectura en vivo y reproductor. El gesto y VoiceOver llaman al mismo límite; al cargar preferencias se valida también el dato persistido. Así evitamos que una pantalla acepte 14 y otra lo restablezca a 20. Dynamic Type sigue multiplicando el tamaño de presentación. El tamaño visual y el avance del audio son responsabilidades separadas: para terminar de leer un párrafo usamos A mi ritmo, no un cambio oculto del reproductor. [Uso y límites](listening-comfort.md#párrafos-largos-en-un-iphone-pequeño).

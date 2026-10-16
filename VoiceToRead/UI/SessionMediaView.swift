@@ -576,7 +576,8 @@ struct SessionMediaView: View {
                 Toggle("Focused reading", isOn: $settings.focusedReading)
                 Toggle("Show button names", isOn: $settings.showButtonNames)
                 Text("Focused reading keeps one paragraph visible. Use Previous or Next, then Play when you are ready.").font(.caption)
-                Slider(value: $settings.captionSize, in: 20...44, step: 2) { Text("Text size") }
+                CaptionSizeControl(size: $settings.captionSize)
+                Text("For long paragraphs, choose At my pace to finish reading before moving on. You can also scroll the text.").font(.caption)
                 Toggle("Bold captions", isOn: $settings.boldCaptions)
                 Toggle("High contrast", isOn: $settings.highContrast)
             }
