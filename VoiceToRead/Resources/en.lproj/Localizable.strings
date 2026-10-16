@@ -836,3 +836,31 @@
 "Check preparation" = "Check preparation";
 
 "Original" = "Original";
+
+// Two-way conversation, explicit turns and accessible language labels.
+"Conversation" = "Conversation";
+"Choose who speaks. Tap again to finish and play the translation." = "Choose who speaks. Tap again to finish and play the translation.";
+"Finish & play English" = "Finish & play English";
+"Finish & play Spanish" = "Finish & play Spanish";
+"Speak English" = "Speak English";
+"Your last exchange will appear here in both languages." = "Your last exchange will appear here in both languages.";
+"Conversation options" = "Conversation options";
+"Translate and play" = "Translate and play";
+"Correct message" = "Correct message";
+"Write in Spanish" = "Write in Spanish";
+"Write in English" = "Write in English";
+"Type instead" = "Type instead";
+"By button: choose a language, speak, then tap Finish to translate and play. You do not need to hold the button." = "By button: choose a language, speak, then tap Finish to translate and play. You do not need to hold the button.";
+"Automatic: a quiet pause ends the turn and plays the translation. You can also finish with the button." = "Automatic: a quiet pause ends the turn and plays the translation. You can also finish with the button.";
+"Each turn lasts up to one minute. At the manual time limit, review the text and tap Play before it speaks." = "Each turn lasts up to one minute. At the manual time limit, review the text and tap Play before it speaks.";
+"Speaking Spanish — microphone off" = "Speaking Spanish — microphone off";
+"Ready for the next turn" = "Ready for the next turn";
+"Preparing English recognition…" = "Preparing English recognition…";
+"Listening in English…" = "Listening in English…";
+"Translating to Spanish…" = "Translating to Spanish…";
+"Listening was interrupted. Review the text, then translate or start another turn." = "Listening was interrupted. Review the text, then translate or start another turn.";
+"No speech detected. Choose a language to try again." = "No speech detected. Choose a language to try again.";
+"Review the text before translating. Recognition may be incomplete." = "Review the text before translating. Recognition may be incomplete.";
+"Play Spanish" = "Play Spanish";
+"Message" = "Message";
+"Stop audio" = "Stop audio";

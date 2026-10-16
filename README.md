@@ -17,7 +17,7 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 
 ## Simplified navigation
 
-A compact conversation icon opens Speak and translate beside live caption display. Preparation is in Settings → Check preparation; required permission/model notices remain visible. Completion uses an accessible ✓, and session playback stays in Audio & subtitles. [User and student guide](docs/simplified-navigation.md).
+A compact conversation icon opens Conversation beside live caption display. Preparation is in Settings → Check preparation; required permission/model notices remain visible. Completion uses an accessible ✓, and session playback stays in Audio & subtitles. [User and student guide](docs/simplified-navigation.md).
 
 ## Read, translate and review
 
@@ -36,9 +36,9 @@ A compact conversation icon opens Speak and translate beside live caption displa
 
 See [accessible listening and reading](docs/translated-speech.md) for user steps, junior developer explanations, limits and acceptance checks.
 
-## Speak and translate
+## Conversation: Spanish ↔ English
 
-Speak Spanish, pause and hear the English translation for everyday conversations. Choose **Automatic** (3/5-second pause, translation and speech) or **By button** (tap to start, tap Finished speaking, then explicitly Play English). The mode is remembered. Type/correct a message, play English again, or cancel. The microphone is off during playback, and each new turn starts explicitly. Temporary text only: no recording or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
+Two taps per turn: **Speak Spanish → Finish & play English**, then **Speak English → Finish & play Spanish** for the reply. No need to hold a button or change global settings. Both texts remain in labeled cards; stop/replay audio, correct a message, or type instead. The microphone stays off during playback and each turn starts explicitly. **By button** is the default; Automatic pause detection is under Options. Conversations are temporary: no audio file or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
 
 ## Listening comfort
 

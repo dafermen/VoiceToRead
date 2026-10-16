@@ -16,7 +16,7 @@ OUT = HERE / 'dist'
 BASE = 'https://voicetoread.innovalogic.tech'
 EMAIL = 'dariofernandomeneses@gmail.com'
 OWNER = 'Dario Fernando Meneses Ceron'
-DATE = '2026-10-15'
+DATE = '2026-10-16'
 PAGES = ('home', 'privacy', 'support', 'security', 'accessibility')
 COPY = {
     'es': {
@@ -42,7 +42,7 @@ COPY = {
         'accessText': 'Herramientas de lectura para apoyar a personas con dificultades auditivas o baja visión, y práctica de idiomas con acompañamiento adulto para niños. La disponibilidad de funciones depende del dispositivo y los modelos instalados.',
         'accessLink': 'Explora las opciones de accesibilidad',
         'limits': 'Los subtítulos y las traducciones pueden contener errores. Comprueba la información importante. VoiceToRead no sustituye la interpretación profesional ni los servicios de accesibilidad que necesites.',
-        'updated': 'Actualizado el 15 de octubre de 2026', 'onPage': 'En esta página',
+        'updated': 'Actualizado el 16 de octubre de 2026', 'onPage': 'En esta página',
         'privacyIntro': 'Qué información utiliza VoiceToRead, dónde permanece y qué puedes hacer con ella.',
         'supportIntro': 'Respuestas claras para empezar, recuperar una sesión y leer a tu ritmo.',
         'securityIntro': 'Cómo cuidar tus grabaciones y comunicar un problema de seguridad.',
@@ -74,7 +74,7 @@ COPY = {
         'accessText': 'Reading tools to support people with hearing loss or low vision, plus language practice for children with adult guidance. Feature availability depends on your device and installed models.',
         'accessLink': 'Explore accessibility options',
         'limits': 'Captions and translations may contain errors. Check important information. VoiceToRead does not replace professional interpretation or the accessibility services you need.',
-        'updated': 'Updated October 15, 2026', 'onPage': 'On this page',
+        'updated': 'Updated October 16, 2026', 'onPage': 'On this page',
         'privacyIntro': 'What information VoiceToRead uses, where it stays and the choices you have.',
         'supportIntro': 'Clear answers to help you start, recover a session and read at your own pace.',
         'securityIntro': 'How to look after your recordings and report a security concern.',

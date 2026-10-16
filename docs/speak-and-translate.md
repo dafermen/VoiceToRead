@@ -1,41 +1,51 @@
-# Hablar y traducir: español a inglés
+# Conversación: español e inglés por turnos
 
 ## Para comunicarse en situaciones cotidianas
 
-Este modo ayuda a pedir algo en una tienda, formular una pregunta o comunicarse cuando todavía no se domina el inglés. También permite escribir en lugar de hablar, como apoyo para personas con dificultades del habla o de audición. El texto visible y el tamaño configurable apoyan la lectura; niños pueden practicar acompañados por un adulto. No garantiza traducción exacta ni sustituye interpretación profesional o servicios de accesibilidad.
+Conversación (antes Hablar y traducir) permite pedir algo, hacer una pregunta y entender la respuesta en el otro idioma. Es una ayuda para personas que no dominan el idioma, personas con dificultades auditivas o del habla y niños que practican acompañados por un adulto. Las tarjetas, el tamaño de lectura compartido y los controles etiquetados apoyan también a personas con baja visión. No garantiza traducción exacta ni sustituye interpretación profesional.
 
-## Uso
+## Uso: dos toques por turno
 
-1. Desde **Subtítulos/Captions**, antes de empezar una sesión, pulsa el **icono de conversación**, junto al selector de subtítulos en vivo, para abrir **Hablar y traducir / Speak and translate**. También está en **Ajustes → Accesibilidad y facilidad de uso** y en el inicio del modo sencillo. Se deshabilita mientras haya otra captura activa o una traducción automática de sesión.
-2. Elige **Automático** o **Por botón**. La app recuerda el modo elegido al cerrar y volver a abrir, pero no conserva el mensaje. La elección inicial es Automático; cambiarla no inicia el micrófono.
-3. **Automático:** pulsa **Hablar en español**, di una frase y haz una pausa de unos **3 segundos**. Con texto estable y volumen bajo, termina la captura, traduce y reproduce en inglés. Puedes elegir **5 segundos** o pulsar **Terminé de hablar** si hay ruido. La pausa es una estimación, no una comprensión del final de un párrafo.
-4. **Por botón:** pulsa **Hablar en español** una vez, habla y pulsa **Terminé de hablar**. Aparecen el español y la traducción inglesa **sin reproducir sonido**. Cuando estés preparado, pulsa **Reproducir en inglés**. No necesitas mantener presionado el micrófono; esto facilita el uso a personas con dificultades motoras y permite leer a su propio ritmo.
-5. En el primer uso, permite micrófono y reconocimiento si iOS lo solicita. Esta intervención usa español sin modificar el idioma predeterminado de las grabaciones. El micrófono queda apagado al traducir y reproducir. **Reproducir en inglés** también sirve para volver a escuchar; **Cancelar** detiene la operación. Otra intervención siempre requiere pulsar de nuevo **Hablar en español**.
-6. Puedes escribir o corregir el español cuando no haya una operación activa. En Automático aparece **Traducir y decir en voz alta**; en Por botón, **Traducir mensaje**, que espera después a **Reproducir en inglés**. Editar invalida la traducción anterior. Si la finalización del reconocimiento falla, se pide revisar el texto y no se reproduce una traducción incompleta automáticamente.
+1. Antes de empezar una grabación, abre el **icono de conversación**, junto al selector de subtítulos en vivo. También está en Ajustes y el inicio sencillo. No está disponible durante otra captura o traducción automática de sesión.
+2. Pulsa **Hablar en español**. Habla sin mantener pulsado el botón. Este cambia a **Terminar y reproducir en inglés**: púlsalo cuando acabes. La app finaliza el reconocimiento, traduce y reproduce en inglés automáticamente.
+3. Para la respuesta, pulsa **Hablar en inglés**. Cuando la otra persona termine, pulsa el mismo botón, ahora **Terminar y reproducir en español**. Oirás la traducción española.
+4. Los dos botones permanecen visibles; el turno incompatible queda deshabilitado. El estado indica el idioma que está escuchando, traduciendo o reproduciendo. Original y traducción aparecen en tarjetas con etiquetas, colores y el mismo tamaño de lectura.
+5. **Detener audio** corta la voz y conserva el texto. **Reproducir en inglés/español** repite la última traducción. El siguiente turno siempre requiere una pulsación nueva; no cambia de persona automáticamente.
+6. Para corregir un error, pulsa **Corregir mensaje** y después **Traducir y reproducir**. **Escribir en su lugar** permite escoger español o inglés y escribir sin hablar. Cancelar el editor conserva el intercambio anterior. Si falla la traducción, puedes reintentar con **Traducir y reproducir** sin volver a hablar.
 
-Cada intervención de voz dura como máximo un minuto. Sin texto reconocido durante 15 segundos, se detiene y permite reintentar. En modo manual también se aplica el límite de un minuto. El volumen depende de la salida de audio elegida por iOS; prueba antes de usarlo con otra persona. Salir o mandar la app al fondo cancela captura, traducción y voz. Regresar nunca inicia el micrófono automáticamente.
+Cada turno conserva sus textos hasta iniciar otro, aplicar una edición o cerrar la pantalla. No hay historial de conversación guardado. El idioma del turno no cambia el idioma global de captura ni el idioma de los menús.
+
+## Opciones y límites
+
+El modo inicial es **Por botón**, también para quienes usaban la pantalla anterior. En **Opciones de conversación (···)** puedes elegir **Automático**: una pausa estimada de 3 o 5 segundos termina la escucha, traduce y reproduce. También puedes terminar con el botón. La app recuerda el modo, pero no el mensaje; la pausa vuelve a 3 segundos al reabrir.
+
+En Por botón, las pausas naturales no terminan la escucha. Cada turno tiene un límite de un minuto o 4000 caracteres: al alcanzarlo se finaliza y traduce, pero hay que pulsar Reproducir para oírlo. Sin texto reconocido durante 15 segundos se detiene y permite reintentar. La detección automática es una estimación basada en texto estable y volumen bajo, no una comprensión del final de una frase.
+
+El micrófono permanece apagado durante la traducción y la voz. No se puede iniciar otro turno mientras habla: espera o pulsa Detener audio. Salir o mandar la app al fondo cancela captura, traducción y voz. Una interrupción requiere revisar el texto o iniciar otro turno; nunca reinicia el micrófono solo.
 
 ## Requisitos y privacidad
 
-La traducción necesita iOS/iPadOS 18 o posterior, una compilación compatible y los modelos de Apple preparados. Reconocimiento español y voz inglesa deben estar disponibles. El primer uso puede necesitar internet para descargar recursos; comprueba el funcionamiento sin conexión en tu dispositivo antes de depender de él.
+La traducción necesita iOS/iPadOS 18 o posterior, una compilación compatible y los modelos de Apple preparados. El reconocimiento y las voces de ambos idiomas deben estar disponibles. El primer uso puede solicitar permisos y descargar recursos; prueba antes de depender de la app sin conexión. La salida y el volumen dependen del dispositivo y los auriculares elegidos.
 
-Este modo no guarda grabaciones ni sesiones. El texto permanece temporalmente en pantalla hasta otra intervención o hasta cerrar. No cambia la opción global Guardar audio. Reutiliza el reconocimiento local, Translation y las voces de Apple; no añade servicios del desarrollador, cuentas o analítica. Puede haber errores de reconocimiento y traducción: revisa las dos tarjetas.
+Conversación no guarda grabaciones ni sesiones y no cambia Guardar audio. Reutiliza reconocimiento local, Apple Translation y voces de Apple; no añade cuentas, analítica ni servidores del desarrollador. Revisa los textos: el reconocimiento y la traducción pueden contener errores.
 
 ## Para estudiantes: arquitectura y decisiones
 
-- `SpeakTranslateModel` posee un `CaptionViewModel` independiente y un `TranslationSpeechPlayer`. No se conecta a `TranscriptRepository`: así una conversación breve no genera grabaciones, borradores ni sesiones guardadas.
-- La máquina de estados sigue preparado → preparando → escuchando → finalizando → traduciendo. El estado del reproductor indica cuándo habla. La interfaz deshabilita acciones incompatibles.
-- `Mode` separa cuándo terminar de escuchar de cuándo reproducir. `selectMode` solo acepta cambios mientras está listo y sin voz; `speakWhenComplete` copia la decisión al crear el trabajo. Por botón desactiva el detector de pausa y exige Play para hablar, incluso al llegar al límite de un minuto. `@AppStorage("conversationMode")` recuerda únicamente el modo.
-- `ConversationPause` combina estabilidad del texto y volumen del micrófono. Su reloj usa tiempo monotónico (`systemUptime`) para evitar cambios de hora. El umbral de volumen es una heurística; el botón manual y la espera larga son alternativas necesarias.
-- `capture.stop()` se espera antes de crear `TranslationJob`. Se usa el texto final revisado por el reconocedor, no el provisional. El reconocedor libera el micrófono antes de activar reproducción: esto impide que el teléfono transcriba su propia traducción.
-- `TranslationRunner` comparte la preparación y ejecución de Apple Translation con el resto de la app. `IncrementalTranslation.merging` valida IDs, orden y respuestas no vacías antes de hablar. La traducción usa español como origen e inglés como destino, independientemente del idioma de los menús.
-- Cancelar invalida el token y elimina el trabajo de traducción de forma síncrona, detiene la voz y corta la captura. La limpieza espera una finalización pendiente antes de reiniciar el modelo. Un callback de una traducción antigua no puede producir voz tras Cancelar, salir o volver a otra intervención.
-- Se conserva el texto para corregir errores y reintentar, pero editar descarta la traducción derivada. La siguiente escucha siempre exige una pulsación nueva para que el usuario controle quién está hablando.
+- `SpeakTranslateModel` posee un `CaptionViewModel` independiente y un `TranslationSpeechPlayer`. No usa `TranscriptRepository`: esta conversación temporal no crea sesiones ni archivos de audio.
+- Estados: preparado → preparando → escuchando → finalizando → traduciendo → voz → preparado. `canEdit` exige estado preparado y reproductor inactivo. El modelo y la interfaz impiden comenzar otro micrófono durante reproducción.
+- `start(language:)` captura el idioma del turno antes de iniciar el trabajo asíncrono. Configura el reconocedor con ese idioma. `IncrementalTranslation` recibe el mismo origen y `play()` utiliza `language.opposite`; por eso una respuesta inglesa produce voz española. Cambiar la dirección no modifica preferencias globales.
+- `finish()` espera `capture.stop()` y utiliza el texto final revisado por el reconocedor. Solo entonces crea la traducción. Esto evita traducir un fragmento provisional o grabar la voz del teléfono.
+- `Mode` decide cuándo terminar de escuchar. Ambos modos reproducen al pulsar Terminar; en automático también al detectar pausa. `speakWhenComplete` conserva la decisión del trabajo. La excepción es el límite manual de duración/caracteres, que permite revisar y pulsar Play.
+- `@AppStorage("conversationTurnMode")` recuerda el modo. La clave nueva evita heredar el antiguo flujo de tres pasos; la primera apertura usa Por botón. El texto es estado temporal, no una preferencia.
+- `ConversationPause` combina estabilidad del texto y nivel del micrófono, usando `systemUptime` para que cambiar el reloj no afecte la pausa. El botón manual sigue disponible en ambientes ruidosos.
+- `TranslationRunner` ejecuta Apple Translation. `IncrementalTranslation.merging` valida identificadores y respuestas no vacías. Un error conserva el original para reintentar; una respuesta vieja no puede completar un trabajo nuevo.
+- Cancelar invalida el token y el trabajo de forma síncrona, detiene la voz y serializa la limpieza con la finalización pendiente. Salir o ir al fondo aplica la misma cancelación.
+- El editor tiene una copia local: Cancelar no altera la tarjeta. Aplicar invalida la traducción anterior y crea otra con el idioma elegido. Tarjetas compartidas y controles con texto evitan depender solo del color o de iconos desconocidos.
 
 ## Verificación
 
-Las pruebas unitarias ejercitan pausa, finalización antes de voz, revisiones finales, respuesta duplicada, cancelación, interrupción, indisponibilidad y errores de finalización. Las pruebas de interfaz usan una traducción ficticia explícita de DEBUG: verifican traducción automática, espera antes de Play en modo Por botón, cancelación al cerrar, mensaje temporal vacío al reabrir y persistencia del modo. Las pruebas unitarias comprueban que una pausa no termine el turno manual y que editar invalide la voz anterior. No demuestra la calidad de traducción de Apple ni el reconocimiento real.
+Las pruebas unitarias cubren ambos sentidos, revisión final antes de voz, bloqueo de otra captura durante reproducción, errores/reintento, callbacks antiguos, interrupciones, cancelación, pausa automática y límites manuales. Las pruebas de interfaz recorren dos turnos, detener, reabrir, escribir, cancelar una corrección y recordar el modo.
 
-Antes de publicar, probar en iPhone/iPad físicos con modelos preparados: frase española → pausa → inglés audible, ruido ambiental, espera larga/manual, llamada/alarma, salida al fondo, auriculares y primera descarga. Confirmar que la voz inglesa no reaparece como texto español.
+Los dobles de micrófono, traducción y voz de las pruebas UI son explícitos y solo existen en DEBUG. Verifican el flujo, no la calidad de los servicios reales. Probar físicamente español → inglés y respuesta inglesa → español, permisos/descargas, ruido, auriculares, llamada/alarma, letra grande y VoiceOver antes de dar por validada la experiencia completa.
 
 [Estado de validación y entrega](speak-and-translate-checkpoint.md).

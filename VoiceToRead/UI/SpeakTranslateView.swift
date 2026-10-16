@@ -28,9 +28,10 @@ final class SpeakTranslateModel {
     private(set) var translated = ""
     private(set) var job: TranslationJob?
     var message: String?
-    private(set) var mode: Mode = .automatic
+    private(set) var mode: Mode = .byButton
+    private(set) var language: CaptureLanguage = .spanish
     var pauseSeconds: Double = 3
-    // Snapshot the selected mode for each job; a late response cannot change its audio policy.
+    // Capture the output policy when a job starts; late callbacks cannot start another turn.
     private var speakWhenComplete = false
     func selectMode(_ mode: Mode) {
         guard canEdit else { return }
@@ -47,8 +48,18 @@ final class SpeakTranslateModel {
 
     init(capture: CaptionViewModel? = nil, speaker: TranslationSpeechPlayer? = nil,
          supported: @escaping () -> Bool = { TranslationJob.supported }) {
+        #if DEBUG
+        if capture == nil && ProcessInfo.processInfo.arguments.contains("--ui-test-conversation") {
+            self.capture = CaptionViewModel(microphone: ConversationPreviewMicrophone(), speech: ConversationPreviewSpeech())
+            self.speaker = TranslationSpeechPlayer(output: ConversationPreviewOutput(), activate: {}, deactivate: {})
+        } else {
+            self.capture = capture ?? CaptionViewModel()
+            self.speaker = speaker ?? TranslationSpeechPlayer()
+        }
+        #else
         self.capture = capture ?? CaptionViewModel()
         self.speaker = speaker ?? TranslationSpeechPlayer()
+        #endif
         self.supported = supported
         self.capture.configureLanguage(.spanish)
     }
@@ -56,8 +67,16 @@ final class SpeakTranslateModel {
         guard canEdit else { return }
         source = String(text.prefix(4000)); translated = ""; message = nil
     }
-    func start() {
-        guard !busy, !capture.preparationPending, supported() else { return }
+    /// Changing direction is explicit and never modifies the session capture preference.
+    func selectLanguage(_ language: CaptureLanguage) {
+        guard canEdit else { return }
+        if self.language != language {
+            self.language = language; source = ""; translated = ""; message = nil
+        }
+    }
+    func start(language: CaptureLanguage = .spanish) {
+        guard canEdit, !capture.preparationPending, supported() else { return }
+        self.language = language
         speaker.stop(); message = nil; translated = ""; source = ""
         token = UUID(); let request = token
         phase = .preparing
@@ -65,7 +84,7 @@ final class SpeakTranslateModel {
             guard let self else { return }
             await capture.reset()
             guard token == request else { return }
-            capture.configureLanguage(.spanish)
+            capture.configureLanguage(language)
             capture.foregrounded()
             await capture.checkReadiness()
             guard token == request else { return }
@@ -96,18 +115,19 @@ final class SpeakTranslateModel {
             .filter { !$0.isEmpty }.joined(separator: "\n")
         guard capture.state == .listening else {
             monitor?.cancel(); phase = .ready
-            message = "Listening was interrupted. Review the Spanish text, then translate or speak again."
+            message = "Listening was interrupted. Review the text, then translate or start another turn."
             return
         }
         if detector.shouldFinish(text: source, level: capture.inputLevel, now: now, delay: mode == .automatic ? pauseSeconds : 0) ||
             now - listeningSince >= 60 || source.count >= 4000 {
-            finish()
+            // A safety limit ends manual capture without speaking unexpectedly.
+            finish(speakWhenDone: mode == .automatic)
         } else if source.isEmpty && now - listeningSince >= 15 {
             cancel()
-            message = "No speech detected. Tap Speak Spanish to try again."
+            message = "No speech detected. Choose a language to try again."
         }
     }
-    func finish() {
+    func finish(speakWhenDone: Bool = true) {
         guard phase == .listening else { return }
         monitor?.cancel(); phase = .finishing
         let request = token
@@ -119,19 +139,19 @@ final class SpeakTranslateModel {
             phase = .ready
             guard capture.notice == nil, !final.isEmpty else {
                 if !final.isEmpty { source = final }
-                message = "Review the Spanish text before translating. Recognition may be incomplete."
+                message = "Review the text before translating. Recognition may be incomplete."
                 return
             }
             source = final
-            translate()
+            translate(speakWhenDone: speakWhenDone)
         }
     }
-    func translate() {
+    func translate(speakWhenDone: Bool = true) {
         guard canEdit, supported(), !source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         message = nil; translated = ""
-        speakWhenComplete = mode == .automatic
+        speakWhenComplete = speakWhenDone
         job = TranslationJob(plan: IncrementalTranslation(
-            source: [ReviewParagraph(id: UUID(), text: source)], previous: nil, language: .spanish))
+            source: [ReviewParagraph(id: UUID(), text: source)], previous: nil, language: language))
         phase = .translating
     }
     func complete(_ completed: TranslationJob, result: Result<[ReviewParagraph], Error>) {
@@ -147,7 +167,7 @@ final class SpeakTranslateModel {
     }
     func play() {
         guard !busy, !translated.isEmpty else { return }
-        speaker.start([ReviewParagraph(id: UUID(), text: translated)], language: .english, speed: .normal)
+        speaker.start([ReviewParagraph(id: UUID(), text: translated)], language: language.opposite, speed: .normal)
     }
     /// Invalidate synchronously; then serialize cleanup after any in-flight finalization.
     func cancel() {
@@ -170,7 +190,7 @@ struct SpeakTranslateEntry: View {
     let coordinator: SessionCoordinator
     @State private var showing = false
     var body: some View {
-        Button { showing = true } label: { Label("Speak and translate", systemImage: "bubble.left.and.bubble.right.fill") }
+        Button { showing = true } label: { Label("Conversation", systemImage: "bubble.left.and.bubble.right.fill") }
             .accessibilityIdentifier("speakTranslateEntry")
             .disabled(coordinator.caption.state.active || coordinator.caption.state.busy ||
                       coordinator.caption.preparationPending || coordinator.automaticTranslationJob != nil)
@@ -178,126 +198,260 @@ struct SpeakTranslateEntry: View {
     }
 }
 
+/// A presentation has its own identity; editing never clears the visible turn until Apply.
+private struct ConversationEdit: Identifiable {
+    let id = UUID()
+    let language: CaptureLanguage
+    let text: String
+}
+
 @MainActor
 struct SpeakTranslateView: View {
     let settings: AppSettings
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
-    @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
+    @Environment(\.horizontalSizeClass) private var widthClass
+    @Environment(\.dynamicTypeSize) private var typeSize
     @State private var model = SpeakTranslateModel()
-    @AppStorage("conversationMode") private var savedMode = SpeakTranslateModel.Mode.automatic.rawValue
-    @FocusState private var editing: Bool
+    // A new preference deliberately makes two-tap conversation the default for existing users too.
+    @AppStorage("conversationTurnMode") private var savedMode = SpeakTranslateModel.Mode.byButton.rawValue
+    @State private var showingOptions = false
+    @State private var editor: ConversationEdit?
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 18) {
-                    Text("Spanish → English").font(.title2.bold())
-                    Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {
-                        Text("Automatic").tag(SpeakTranslateModel.Mode.automatic)
-                        Text("By button").tag(SpeakTranslateModel.Mode.byButton)
-                    }.pickerStyle(.segmented).disabled(!model.canEdit)
-                        .accessibilityIdentifier("conversationMode")
-                    Text(uiKey(model.mode == .automatic
-                        ? "Speak Spanish, pause, and hear the English translation. The microphone stays off while the phone speaks."
-                        : "Tap the microphone to speak, then Finished speaking. Read both texts and tap Play English when you are ready. No need to hold the button."))
-                    if !TranslationJob.supported {
-                        Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription)).foregroundStyle(.secondary)
-                    }
-                    Label(LocalizedStringKey(status), systemImage: model.phase == .listening ? "mic.fill" : "bubble.left.and.text.bubble.right")
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Choose who speaks. Tap again to finish and play the translation.")
+                        .font(.subheadline).foregroundStyle(.secondary)
+                    Label(LocalizedStringKey(status), systemImage: statusIcon)
                         .font(.headline).accessibilityIdentifier("conversationStatus")
-                    GroupBox("Your Spanish message") {
-                        if model.canEdit {
-                            TextEditor(text: Binding(get: { model.source }, set: { model.edit($0) }))
-                                .font(.system(size: settings.captionSize * textScale))
-                                .frame(minHeight: 130).focused($editing)
-                                .autocorrectionDisabled()
-                                .accessibilityLabel("Your Spanish message")
-                                .accessibilityIdentifier("conversationSource")
-                        } else {
-                            Text(model.source).font(.system(size: settings.captionSize * textScale))
-                                .frame(maxWidth: .infinity, minHeight: 80, alignment: .topLeading)
-                                .textSelection(.enabled)
-                        }
-                    }
-                    if !model.translated.isEmpty {
-                        GroupBox("English translation") {
-                            Text(model.translated).font(.system(size: settings.captionSize * textScale))
-                                .frame(maxWidth: .infinity, alignment: .leading).textSelection(.enabled)
-                                .accessibilityIdentifier("conversationTranslation")
-                        }.background(.blue.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
-                    }
-                    if let message = model.message ?? model.speaker.message {
-                        Label(LocalizedStringKey(message), systemImage: "info.circle").accessibilityIdentifier("conversationMessage")
-                    }
-                    if model.phase == .listening {
-                        Button { model.finish() } label: { Label("Finished speaking", systemImage: "checkmark.circle.fill") }
-                            .accessibilityIdentifier("conversationFinish")
-                    } else if !model.busy && model.speaker.state == .idle {
-                        Button { editing = false; model.start() } label: { Label("Speak Spanish", systemImage: "mic.fill") }
-                            .disabled(!TranslationJob.supported || model.capture.preparationPending).accessibilityIdentifier("conversationStart")
-                        Button { editing = false; model.translate() } label: {
-                            Label(uiKey(model.mode == .automatic ? "Translate and speak" : "Translate message"), systemImage: "character.bubble")
-                        }
-                            .disabled(!TranslationJob.supported || model.source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                            .accessibilityIdentifier("conversationTranslate")
-                        if !model.translated.isEmpty {
-                            Button("Play English", systemImage: "speaker.wave.2.fill") { model.play() }
-                                .accessibilityIdentifier("conversationPlay")
-                        }
-                    }
-                    if model.busy || model.speaker.state != .idle {
-                        Button("Cancel", systemImage: "stop.circle") { model.cancel() }
-                            .disabled(model.phase == .cancelling)
+                    turnControls
+                    if model.speaker.state != .idle {
+                        Button("Stop audio", systemImage: "stop.circle.fill") { model.speaker.stop() }
+                            .buttonStyle(.borderedProminent).controlSize(.large)
+                            .accessibilityIdentifier("conversationStopAudio")
+                    } else if model.busy {
+                        Button("Cancel", systemImage: "xmark.circle") { model.cancel() }
+                            .disabled(model.phase == .cancelling).frame(minHeight: 44)
                             .accessibilityIdentifier("conversationCancel")
                     }
-                    if model.capture.readiness == .missingAssets && !model.busy {
+                    if let message = model.message ?? model.speaker.message {
+                        Label(LocalizedStringKey(message), systemImage: "info.circle")
+                            .accessibilityIdentifier("conversationMessage")
+                    }
+                    if !TranslationJob.supported {
+                        Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription))
+                            .foregroundStyle(.secondary)
+                    }
+                    messageCards
+                    secondaryActions
+                    if model.capture.readiness == .missingAssets && model.canEdit {
                         Button("Install speech model") { Task { await model.capture.installAssets() } }
                             .disabled(model.capture.preparationPending)
                     }
-                    if model.mode == .automatic {
-                        Text("Finish after a pause").font(.headline)
-                        Picker("Finish after a pause", selection: $model.pauseSeconds) {
-                            Text("3 seconds").tag(3.0)
-                            Text("5 seconds").tag(5.0)
-                        }.disabled(model.busy)
-                    }
-                    Text("A pause is estimated from speech and sound. In noise, tap Finished speaking. Each turn lasts up to one minute. You can also type or correct your message.").font(.footnote)
-                    Text("This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.").font(.footnote).foregroundStyle(.secondary)
-                }.padding().buttonStyle(.borderedProminent).controlSize(.large)
+                }.padding()
             }
-            .navigationTitle("Speak and translate")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { DoneButton { model.cancel(); dismiss() } } }
+            .navigationTitle("Conversation").navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { DoneButton { model.cancel(); dismiss() } }
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Conversation options", systemImage: "ellipsis.circle") { showingOptions = true }
+                        .disabled(!model.canEdit).accessibilityIdentifier("conversationOptions")
+                }
+            }
+            .sheet(isPresented: $showingOptions) { options }
+            .sheet(item: $editor) { request in
+                ConversationMessageEditor(request: request) { text in
+                    model.selectLanguage(request.language); model.edit(text); model.translate()
+                }
+            }
         }
         .background {
             if let job = model.job {
-                TranslationRunner(job: job, progress: { _ in }) { result in
-                    model.complete(job, result: result)
-                }.id(job.id)
+                TranslationRunner(job: job, progress: { _ in }) { model.complete(job, result: $0) }.id(job.id)
             }
         }
         .task {
-            model.selectMode(SpeakTranslateModel.Mode(rawValue: savedMode) ?? .automatic)
+            model.selectMode(SpeakTranslateModel.Mode(rawValue: savedMode) ?? .byButton)
             model.speaker.observeInterruptions()
             await model.capture.checkReadiness()
         }
         .onChange(of: model.mode) { _, mode in savedMode = mode.rawValue }
         .onDisappear { model.cancel(); model.speaker.close() }
-        .onChange(of: scenePhase) { _, phase in
-            if phase == .background { model.cancel() }
+        .onChange(of: scenePhase) { _, phase in if phase == .background { model.cancel() } }
+    }
+
+    private var turnControls: some View {
+        (widthClass == .regular && !typeSize.isAccessibilitySize
+            ? AnyLayout(HStackLayout(spacing: 12)) : AnyLayout(VStackLayout(spacing: 10))) {
+            turnButton(.spanish)
+            turnButton(.english)
         }
     }
+    private func turnButton(_ language: CaptureLanguage) -> some View {
+        let listening = model.phase == .listening && model.language == language
+        return Button {
+            if listening { model.finish() } else { model.start(language: language) }
+        } label: {
+            HStack(spacing: 12) {
+                Image(systemName: listening ? "stop.fill" : "mic.fill").font(.title2)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(uiKey(listening
+                        ? (language == .spanish ? "Finish & play English" : "Finish & play Spanish")
+                        : (language == .spanish ? "Speak Spanish" : "Speak English"))).font(.headline)
+                    Text(verbatim: language == .spanish ? "Español → English" : "English → Español").font(.subheadline)
+                }
+                Spacer(minLength: 0)
+            }.padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: 48).contentShape(Rectangle())
+        }.buttonStyle(.borderedProminent).tint(language == .spanish ? .blue : .indigo)
+            .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported))
+            .accessibilityIdentifier(language == .spanish ? "conversationSpanishTurn" : "conversationEnglishTurn")
+    }
+    @ViewBuilder private var messageCards: some View {
+        if !model.source.isEmpty {
+            PlaybackTextCard(text: model.source, language: model.language, translated: false,
+                             settings: settings, identifier: "conversationSourceText")
+        } else if !model.busy {
+            Text("Your last exchange will appear here in both languages.")
+                .foregroundStyle(.secondary).frame(maxWidth: .infinity, minHeight: 100)
+        }
+        if !model.translated.isEmpty {
+            PlaybackTextCard(text: model.translated, language: model.language.opposite, translated: true,
+                             settings: settings, identifier: "conversationTranslation", speaking: model.speaker.state == .speaking)
+        }
+    }
+    private var secondaryActions: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if !model.translated.isEmpty {
+                Button(uiKey(model.language == .spanish ? "Play English" : "Play Spanish"), systemImage: "speaker.wave.2.fill") { model.play() }
+                    .disabled(!model.canEdit).frame(minHeight: 44).accessibilityIdentifier("conversationPlay")
+            }
+            if !model.source.isEmpty {
+                if model.translated.isEmpty && model.canEdit {
+                    Button("Translate and play", systemImage: "character.bubble") { model.translate() }
+                        .disabled(!TranslationJob.supported).frame(minHeight: 44)
+                        .accessibilityIdentifier("conversationTranslate")
+                }
+                Button("Correct message", systemImage: "pencil") {
+                    editor = ConversationEdit(language: model.language, text: model.source)
+                }.disabled(!model.canEdit).frame(minHeight: 44).accessibilityIdentifier("conversationCorrect")
+            }
+            Menu {
+                Button("Write in Spanish") { editor = ConversationEdit(language: .spanish, text: "") }
+                Button("Write in English") { editor = ConversationEdit(language: .english, text: "") }
+            } label: { Label("Type instead", systemImage: "keyboard").frame(minHeight: 44) }
+                .disabled(!model.canEdit || !TranslationJob.supported).accessibilityIdentifier("conversationType")
+        }.buttonStyle(.bordered)
+    }
+    private var options: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {
+                        Text("By button").tag(SpeakTranslateModel.Mode.byButton)
+                        Text("Automatic").tag(SpeakTranslateModel.Mode.automatic)
+                    }.pickerStyle(.segmented).accessibilityIdentifier("conversationMode")
+                    Text("By button: choose a language, speak, then tap Finish to translate and play. You do not need to hold the button.")
+                    if model.mode == .automatic {
+                        Picker("Finish after a pause", selection: $model.pauseSeconds) {
+                            Text("3 seconds").tag(3.0)
+                            Text("5 seconds").tag(5.0)
+                        }
+                        Text("Automatic: a quiet pause ends the turn and plays the translation. You can also finish with the button.")
+                    }
+                }
+                Section {
+                    Text("Each turn lasts up to one minute. At the manual time limit, review the text and tap Play before it speaks.")
+                    Text("This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.")
+                }
+            }.navigationTitle("Conversation options").navigationBarTitleDisplayMode(.inline)
+                .toolbar { DoneButton { showingOptions = false } }
+        }
+    }
+    private var statusIcon: String {
+        if model.speaker.state != .idle { return "speaker.wave.2.fill" }
+        return model.phase == .listening ? "mic.fill" : "bubble.left.and.bubble.right"
+    }
     private var status: String {
-        if model.speaker.state != .idle { return "Speaking English — microphone off" }
+        if model.speaker.state != .idle {
+            return model.language == .spanish ? "Speaking English — microphone off" : "Speaking Spanish — microphone off"
+        }
         switch model.phase {
-        case .ready:
-            return model.mode == .byButton && !model.translated.isEmpty
-                ? "Translation ready — tap Play English" : "Ready for your message"
-        case .preparing: return "Preparing Spanish recognition…"
-        case .listening: return "Listening in Spanish…"
+        case .ready: return "Ready for the next turn"
+        case .preparing: return model.language == .spanish ? "Preparing Spanish recognition…" : "Preparing English recognition…"
+        case .listening: return model.language == .spanish ? "Listening in Spanish…" : "Listening in English…"
         case .finishing: return "Finishing your message…"
-        case .translating: return "Translating to English…"
+        case .translating: return model.language == .spanish ? "Translating to English…" : "Translating to Spanish…"
         case .cancelling: return "Stopping…"
         }
     }
 }
+
+@MainActor
+private struct ConversationMessageEditor: View {
+    let request: ConversationEdit
+    let apply: (String) -> Void
+    @Environment(\.dismiss) private var dismiss
+    @State private var text: String
+    @FocusState private var focused: Bool
+    init(request: ConversationEdit, apply: @escaping (String) -> Void) {
+        self.request = request; self.apply = apply; _text = State(initialValue: request.text)
+    }
+    var body: some View {
+        NavigationStack {
+            TextEditor(text: $text).font(.title2).padding().focused($focused)
+                .autocorrectionDisabled().accessibilityLabel("Message")
+                .accessibilityIdentifier("conversationSource")
+                .onChange(of: text) { _, value in if value.count > 4000 { text = String(value.prefix(4000)) } }
+                .navigationTitle(uiKey(request.language == .spanish ? "Write in Spanish" : "Write in English"))
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Translate and play") { apply(text); dismiss() }
+                            .disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                            .accessibilityIdentifier("conversationApply")
+                    }
+                }.task { focused = true }
+        }.interactiveDismissDisabled(text != request.text)
+    }
+}
+
+#if DEBUG
+// Explicit simulator fixture: no real microphone or synthesized speech; never included in Release.
+@MainActor private final class ConversationPreviewMicrophone: AudioCapturing {
+    var permission: MicrophonePermission = .granted
+    var onFailure: (@MainActor @Sendable (CaptureFailure) -> Void)?
+    func requestPermission() async -> Bool { true }
+    func start() throws -> AsyncStream<Float> { AsyncStream { $0.finish() } }
+    func stop() throws {}
+}
+@MainActor private final class ConversationPreviewSpeech: SpeechTranscribing {
+    private var language: CaptureLanguage = .spanish
+    private var run = UUID()
+    private var output: AsyncThrowingStream<TranscriptionUpdate, Error>.Continuation?
+    private var text: String { language == .spanish ? "Un vaso de agua, por favor." : "Would you like cold water?" }
+    func configure(language: CaptureLanguage) { self.language = language }
+    func readiness() async -> SpeechReadiness { .ready }
+    func installAssets() async throws {}
+    func start() async throws -> AsyncThrowingStream<TranscriptionUpdate, Error> {
+        run = UUID()
+        let stream = AsyncThrowingStream<TranscriptionUpdate, Error>.makeStream()
+        output = stream.continuation
+        output?.yield(.init(runID: run, start: 0, end: 2, text: text, isFinal: false))
+        return stream.stream
+    }
+    func finish() async throws {
+        output?.yield(.init(runID: run, start: 0, end: 2, text: text, isFinal: true)); output?.finish()
+    }
+    func cancel() async { output?.finish() }
+}
+@MainActor private final class ConversationPreviewOutput: TranslationSpeechOutput {
+    var onFinish: ((UUID) -> Void)?
+    func speak(_ text: String, language: CaptureLanguage, rate: Float, token: UUID) throws {}
+    func pause() -> Bool { true }
+    func resume() -> Bool { true }
+    func stop() {}
+}
+#endif

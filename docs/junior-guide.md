@@ -341,3 +341,9 @@ Ejercicio: en Por botón, escribe y traduce sin hablar, pulsa Play y cancela. Re
 La [guía actual](simplified-navigation.md#para-estudiantes-qué-cambió-y-por-qué) explica cómo separar revisar texto de reproducir audio, reutilizar DoneButton sin cambiar las decisiones de guardado, pasar una acción desde el coordinador a un icono compacto y retirar una función conservando los modelos persistidos. Las secciones históricas de marcadores/reproducción inline ya no describen la interfaz actual.
 
 Ejercicio: abre Texto y traducción, corrige un párrafo y luego entra en Audio y subtítulos. Comprueba que el texto corregido llega al único reproductor. Explica por qué mantener los IDs permite conservar tiempos y datos anteriores, y por qué eliminar vistas no requiere borrar filas de SwiftData.
+
+## Conversación bilingüe de dos toques
+
+`SpeakTranslateModel.start(language:)` fija el idioma de cada turno, sin cambiar Ajustes. El primer toque inicia escucha y el segundo espera el texto final, lo traduce y reproduce en `language.opposite`. `canEdit` incluye el estado de voz: no basta con que la traducción haya terminado para volver a abrir el micrófono. El modo Por botón es inicial; Automático está en Opciones, con la preferencia nueva `conversationTurnMode`.
+
+El editor trabaja sobre una copia: cancelar no borra las tarjetas. Un resultado de traducción se aplica solo al identificador de trabajo actual; así una respuesta tardía no habla después de Cancelar. Ejercicio: seguir un turno inglés desde el botón hasta la voz española, detenerla y comenzar uno español; observar que el idioma global y las sesiones no cambian. Consulta [el flujo, límites y pruebas](speak-and-translate.md).

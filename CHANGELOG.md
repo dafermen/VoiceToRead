@@ -1,3 +1,12 @@
+## 2026-10-16 — conversación bilingüe en dos toques
+
+- Español → inglés e inglés → español con dos botones visibles: tocar para hablar y volver a tocar para terminar, traducir y reproducir.
+- Por botón como modo inicial; detección automática de pausa dentro de Opciones. Dirección independiente del idioma global.
+- Tarjetas original/traducción con igual tamaño, estado con idioma, detener/repetir voz y último intercambio visible.
+- Escritura y corrección en editor secundario; Cancelar conserva el mensaje y los fallos permiten reintentar sin hablar otra vez.
+- Impide activar otra captura durante reproducción; mantiene privacidad temporal, límites e interrupciones seguras.
+- Documentación de usuario, estudiantes, soporte y App Review actualizada. [Guía](docs/speak-and-translate.md) · [Verificación](docs/speak-and-translate-checkpoint.md).
+
 ## 2026-10-16 — menos redundancias y más espacio de lectura
 
 - Texto y traducción sustituye Traducir a Español/English y concentra revisión, corrección y exportación; Audio y subtítulos concentra reproducción.

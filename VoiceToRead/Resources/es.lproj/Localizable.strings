@@ -836,3 +836,31 @@
 "Check preparation" = "Comprobar preparación";
 
 "Original" = "Original";
+
+// Two-way conversation, explicit turns and accessible language labels.
+"Conversation" = "Conversación";
+"Choose who speaks. Tap again to finish and play the translation." = "Elige quién habla. Pulsa de nuevo para terminar y reproducir la traducción.";
+"Finish & play English" = "Terminar y reproducir en inglés";
+"Finish & play Spanish" = "Terminar y reproducir en español";
+"Speak English" = "Hablar en inglés";
+"Your last exchange will appear here in both languages." = "Aquí aparecerá el último intercambio en ambos idiomas.";
+"Conversation options" = "Opciones de conversación";
+"Translate and play" = "Traducir y reproducir";
+"Correct message" = "Corregir mensaje";
+"Write in Spanish" = "Escribir en español";
+"Write in English" = "Escribir en inglés";
+"Type instead" = "Escribir en lugar de hablar";
+"By button: choose a language, speak, then tap Finish to translate and play. You do not need to hold the button." = "Por botón: elige un idioma, habla y pulsa Terminar para traducir y reproducir. No necesitas mantener pulsado el botón.";
+"Automatic: a quiet pause ends the turn and plays the translation. You can also finish with the button." = "Automático: una pausa en silencio termina el turno y reproduce la traducción. También puedes terminar con el botón.";
+"Each turn lasts up to one minute. At the manual time limit, review the text and tap Play before it speaks." = "Cada turno dura hasta un minuto. Al alcanzar el límite en modo manual, revisa el texto y pulsa Reproducir para escucharlo.";
+"Speaking Spanish — microphone off" = "Reproduciendo español — micrófono apagado";
+"Ready for the next turn" = "Listo para el siguiente turno";
+"Preparing English recognition…" = "Preparando reconocimiento en inglés…";
+"Listening in English…" = "Escuchando en inglés…";
+"Translating to Spanish…" = "Traduciendo al español…";
+"Listening was interrupted. Review the text, then translate or start another turn." = "Se interrumpió la escucha. Revisa el texto y traduce o empieza otro turno.";
+"No speech detected. Choose a language to try again." = "No se detectó voz. Elige un idioma para volver a intentarlo.";
+"Review the text before translating. Recognition may be incomplete." = "Revisa el texto antes de traducir. El reconocimiento puede estar incompleto.";
+"Play Spanish" = "Reproducir en español";
+"Message" = "Mensaje";
+"Stop audio" = "Detener audio";

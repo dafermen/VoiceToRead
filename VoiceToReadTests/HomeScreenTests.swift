@@ -2,63 +2,78 @@ import XCTest
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
-    func testSpeakTranslateTypedMessageAndDismissal() throws {
+    func testConversationTwoTapTurnsInBothDirections() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation"]
+        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation", "--ui-test-conversation"]
         app.launch()
         let entry = app.buttons["speakTranslateEntry"]
-        XCTAssertTrue(entry.waitForExistence(timeout: 20))
+        XCTAssertTrue(entry.waitForExistence(timeout: 20)); entry.tap()
+        let spanish = app.buttons["conversationSpanishTurn"]
+        let english = app.buttons["conversationEnglishTurn"]
+        XCTAssertTrue(spanish.waitForExistence(timeout: 8))
+        XCTAssertTrue(english.isHittable)
+        spanish.tap()
+        let status = app.staticTexts["conversationStatus"]
+        expectation(for: NSPredicate(format: "label == %@", "Listening in Spanish…"), evaluatedWith: status)
+        waitForExpectations(timeout: 8)
+        XCTAssertFalse(english.isEnabled)
+        spanish.tap()
+        expectation(for: NSPredicate(format: "label == %@", "Speaking English — microphone off"), evaluatedWith: status)
+        waitForExpectations(timeout: 8)
+        XCTAssertTrue(app.staticTexts["conversationTranslation"].label.contains("Test translation"))
+        XCTAssertFalse(english.isEnabled)
+        app.buttons["conversationStopAudio"].tap()
+        XCTAssertTrue(app.staticTexts["conversationTranslation"].exists)
+        english.tap()
+        expectation(for: NSPredicate(format: "label == %@", "Listening in English…"), evaluatedWith: status)
+        waitForExpectations(timeout: 8)
+        english.tap()
+        expectation(for: NSPredicate(format: "label == %@", "Speaking Spanish — microphone off"), evaluatedWith: status)
+        waitForExpectations(timeout: 8)
+        XCTAssertTrue(app.staticTexts["conversationTranslation"].label.contains("Traducción de prueba"))
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Two-way-conversation"; shot.lifetime = .keepAlways; add(shot)
+        app.buttons["conversationStopAudio"].tap()
+        app.navigationBars["Conversation"].buttons["Done"].tap()
         entry.tap()
-        let input = app.textViews["conversationSource"]
-        XCTAssertTrue(input.waitForExistence(timeout: 10))
-        input.tap(); input.typeText("Un vaso de agua por favor")
-        app.swipeUp()
-        let translate = app.buttons["conversationTranslate"]
-        if !translate.isHittable { app.swipeUp() }
-        XCTAssertTrue(translate.isEnabled)
-        translate.tap()
-        let result = app.staticTexts["conversationTranslation"]
-        XCTAssertTrue(result.waitForExistence(timeout: 10))
-        XCTAssertTrue(result.label.contains("Test translation"))
-        let screenshot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        screenshot.name = "Speak-and-translate"; screenshot.lifetime = .keepAlways; add(screenshot)
-        app.navigationBars.buttons["Done"].tap()
-        XCTAssertTrue(entry.waitForExistence(timeout: 10))
-        entry.tap()
-        XCTAssertTrue(input.waitForExistence(timeout: 10))
-        XCTAssertEqual(input.value as? String, "")
-        app.navigationBars.buttons["Done"].tap()
+        XCTAssertFalse(app.staticTexts["conversationTranslation"].exists)
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].isEnabled)
     }
 
     @MainActor
-    func testConversationByButtonWaitsForExplicitPlayback() throws {
+    func testConversationTypingCorrectionAndAutomaticOptions() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation"]
+        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation", "--ui-test-conversation"]
         app.launch()
         XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
         app.buttons["speakTranslateEntry"].tap()
-        app.segmentedControls["conversationMode"].buttons["By button"].tap()
+        app.buttons["conversationType"].tap(); app.buttons["Write in English"].tap()
         let input = app.textViews["conversationSource"]
-        input.tap(); input.typeText("Quiero un cafe por favor")
-        app.swipeUp()
-        let translate = app.buttons["conversationTranslate"]
-        if !translate.isHittable { app.swipeUp() }
-        XCTAssertEqual(translate.label, "Translate message")
-        translate.tap()
-        XCTAssertTrue(app.staticTexts["conversationTranslation"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["conversationStatus"].label, "Translation ready — tap Play English")
-        XCTAssertFalse(app.buttons["conversationCancel"].exists)
-        let play = app.buttons["conversationPlay"]
-        if !play.isHittable { app.swipeUp() }
-        play.tap()
-        XCTAssertTrue(app.buttons["conversationCancel"].waitForExistence(timeout: 5))
-        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        shot.name = "Conversation-by-button"; shot.lifetime = .keepAlways; add(shot)
-        app.navigationBars.buttons["Done"].tap()
+        XCTAssertTrue(input.waitForExistence(timeout: 5))
+        input.tap(); input.typeText("How can I help?")
+        app.buttons["conversationApply"].tap()
+        XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 8))
+        app.buttons["conversationStopAudio"].tap()
+        let original = app.staticTexts["conversationSourceText"]
+        XCTAssertEqual(original.label, "How can I help?")
+        let correct = app.buttons["conversationCorrect"]
+        if !correct.isHittable { app.swipeUp() }
+        correct.tap()
+        XCTAssertTrue(input.waitForExistence(timeout: 5))
+        input.tap(); input.typeText(" Discard this.")
+        app.navigationBars.buttons["Cancel"].tap()
+        XCTAssertEqual(original.label, "How can I help?")
+        app.buttons["conversationOptions"].tap()
+        let modes = app.segmentedControls["conversationMode"]
+        XCTAssertTrue(modes.buttons["By button"].isSelected)
+        modes.buttons["Automatic"].tap()
+        app.navigationBars["Conversation options"].buttons["Done"].tap()
+        app.navigationBars["Conversation"].buttons["Done"].tap()
         app.buttons["speakTranslateEntry"].tap()
-        XCTAssertTrue(app.segmentedControls["conversationMode"].buttons["By button"].isSelected)
-        XCTAssertEqual(app.textViews["conversationSource"].value as? String, "")
-        app.navigationBars.buttons["Done"].tap()
+        app.buttons["conversationOptions"].tap()
+        XCTAssertTrue(modes.buttons["Automatic"].isSelected)
+        app.navigationBars["Conversation options"].buttons["Done"].tap()
+        XCTAssertFalse(app.staticTexts["conversationTranslation"].exists)
     }
 
     @MainActor

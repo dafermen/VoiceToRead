@@ -1,3 +1,27 @@
+# Entrega: Conversación bilingüe — 2026-10-16
+
+## Implementación actual
+
+Dos toques por turno en ambos sentidos, Por botón inicial, Automático en Opciones, tarjetas compartidas, reproducción/detención, edición y escritura separadas. No cambia idioma global ni guarda sesiones. [Guía vigente](speak-and-translate.md).
+
+- iPhone 15 / iOS 17.2: **133 pruebas unitarias y 2 de interfaz aprobadas**, `/private/tmp/vtr-two-way-tests.xcresult`.
+- iPad Air 5 / iOS 17.2: **1 prueba de interfaz aprobada**, `/private/tmp/vtr-two-way-ipad.xcresult`.
+- Release para simulador, sin firma: **BUILD SUCCEEDED**, `/private/tmp/vtr-two-way-release.log`. Dos advertencias preexistentes de aislamiento/concurrencia en `CaptionViewModel` y `SessionTranslationView`; no errores nuevos.
+- Capturas revisadas: [iPhone](qa/speak-and-translate/two-way-iphone.png) e [iPad](qa/speak-and-translate/two-way-ipad.png). Textos traducidos ficticios de DEBUG.
+- Localización extraída: 472 claves del compilador cubiertas. Metadatos App Store, 10 páginas del sitio/ZIP y `git diff --check` aprobados. Paquete de textos App Store regenerado; web preparada localmente, sin publicar Hostinger.
+- Localización inicial: 724 claves EN/ES + 2 permisos; sin diferencias de placeholders.
+- Los dobles de captura, traducción y voz usados por las pruebas son exclusivos de DEBUG. Hace falta verificar reconocimiento/Apple Translation/voz reales en ambos sentidos en dispositivos compatibles.
+- Para la próxima compilación: verificar distribución y procesamiento en TestFlight por separado. Una compilación local correcta no acredita disponibilidad. No cambiar certificados por advertencias Swift sin evidencia de un fallo de firma.
+
+## Aceptación física pendiente
+
+1. Español → terminar → voz inglesa; inglés → terminar → voz española. Confirmar que no hace falta cambiar Ajustes ni dar un tercer toque.
+2. Detener/repetir, escribir en ambos idiomas, cancelar una corrección y reintentar tras fallo de traducción.
+3. Probar descarga inicial, permisos, ruido, silencio, límite manual, auriculares, alarma/llamada y salida al fondo. Nunca debe reiniciarse el micrófono ni hablar una respuesta cancelada.
+4. iPhone/iPad, ambos idiomas de interfaz, orientación, letra grande y VoiceOver. El color debe acompañar etiquetas, no sustituirlas.
+
+## Registro histórico — flujo anterior, sustituido por el descrito arriba
+
 # Entrega: Hablar y traducir — 2026-10-16
 
 ## Ampliación: controles claros y modos separados

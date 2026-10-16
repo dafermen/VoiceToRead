@@ -443,6 +443,7 @@ final class SpeakTranslateTests: XCTestCase {
         let speech = MockSpeech(); speech.finalText = "Quiero agua fría."
         let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
         let model = SpeakTranslateModel(capture: capture, supported: { true })
+        model.selectMode(.automatic)
         model.start()
         await eventually { model.phase == .listening }
         speech.emitPartial("Quiero agua")
@@ -486,7 +487,7 @@ final class SpeakTranslateTests: XCTestCase {
         XCTAssertEqual(capture.state, .idle)
         XCTAssertNil(model.job)
     }
-    func testByButtonDoesNotFinishOnPauseAndWaitsForPlay() async throws {
+    func testByButtonDoesNotFinishOnPauseAndFinishPlaysImmediately() async throws {
         let speech = MockSpeech(); speech.finalText = "Un café, por favor."
         let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
         let output = ConversationTestOutput()
@@ -506,10 +507,9 @@ final class SpeakTranslateTests: XCTestCase {
         XCTAssertEqual(model.mode, .byButton, "Changing mode cannot alter a pending turn")
         let job = try XCTUnwrap(model.job)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "A coffee, please.") }))
-        XCTAssertTrue(output.spoken.isEmpty)
+        XCTAssertEqual(output.spoken, ["A coffee, please."])
         XCTAssertEqual(capture.state, .ended)
         XCTAssertEqual(model.translated, "A coffee, please.")
-        model.play()
         XCTAssertEqual(output.spoken, ["A coffee, please."])
         XCTAssertEqual(speech.starts, 1)
         model.cancel()
@@ -518,12 +518,83 @@ final class SpeakTranslateTests: XCTestCase {
     func testEditingManualTranslationInvalidatesPreviousSpeech() throws {
         let output = ConversationTestOutput()
         let model = SpeakTranslateModel(speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
-        model.selectMode(.byButton); model.edit("Hola"); model.translate()
+        model.selectMode(.byButton); model.edit("Hola"); model.translate(speakWhenDone: false)
         let job = try XCTUnwrap(model.job)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Hello") }))
         model.edit("Adiós"); model.play()
         XCTAssertTrue(model.translated.isEmpty)
         XCTAssertTrue(output.spoken.isEmpty)
+    }
+    func testEnglishTurnProducesSpanishAndBlocksAnotherMicrophoneDuringPlayback() async throws {
+        let speech = MockSpeech(); speech.finalText = "Would you like cold water?"
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let output = ConversationTestOutput()
+        let model = SpeakTranslateModel(capture: capture,
+            speaker: TranslationSpeechPlayer(output: output, activate: { XCTAssertEqual(capture.state, .ended) }, deactivate: {}), supported: { true })
+        XCTAssertEqual(model.mode, .byButton)
+        model.start(language: .english)
+        await eventually { model.phase == .listening }
+        XCTAssertEqual(speech.language, .english)
+        model.selectLanguage(.spanish)
+        XCTAssertEqual(model.language, .english, "An active turn cannot change direction")
+        model.finish()
+        await eventually { model.phase == .translating }
+        let job = try XCTUnwrap(model.job)
+        XCTAssertEqual(job.plan.language, .english)
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "¿Quieres agua fría?") }))
+        XCTAssertEqual(output.language, .spanish)
+        XCTAssertEqual(output.spoken, ["¿Quieres agua fría?"])
+        model.start(language: .spanish)
+        XCTAssertEqual(speech.starts, 1, "Output must finish or be stopped before listening again")
+        XCTAssertEqual(model.translated, "¿Quieres agua fría?")
+        model.speaker.stop()
+        speech.finalText = "Sí, gracias."
+        model.start(language: .spanish)
+        await eventually { model.phase == .listening }
+        XCTAssertEqual(speech.language, .spanish)
+        XCTAssertEqual(speech.starts, 2)
+        XCTAssertFalse(capture.saveAudio)
+        model.cancel()
+        await eventually { model.phase == .ready }
+    }
+    func testFailedEnglishTranslationKeepsSourceForRetryAndRejectsOldResult() throws {
+        let output = ConversationTestOutput()
+        let model = SpeakTranslateModel(speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
+        model.selectLanguage(.english); model.edit("How can I help?"); model.translate()
+        let first = try XCTUnwrap(model.job)
+        model.complete(first, result: .success([]))
+        XCTAssertEqual(model.source, "How can I help?")
+        XCTAssertEqual(model.language, .english)
+        XCTAssertNotNil(model.message)
+        model.translate()
+        let retry = try XCTUnwrap(model.job)
+        model.complete(first, result: .success(first.source.map { .init(id: $0.id, text: "Old") }))
+        XCTAssertTrue(output.spoken.isEmpty)
+        model.complete(retry, result: .success(retry.source.map { .init(id: $0.id, text: "¿En qué puedo ayudarte?") }))
+        XCTAssertEqual(output.language, .spanish)
+        model.speaker.stop()
+        model.play()
+        XCTAssertEqual(output.spoken.count, 2, "Replay reuses the translation without recognition")
+        model.speaker.stop()
+    }
+    func testManualTimeLimitTranslatesButWaitsForExplicitPlay() async throws {
+        let speech = MockSpeech(); speech.finalText = "One minute of speech."
+        let output = ConversationTestOutput()
+        let model = SpeakTranslateModel(capture: CaptionViewModel(microphone: CaptionMicrophone(), speech: speech),
+            speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
+        model.start(language: .english)
+        await eventually { model.phase == .listening }
+        speech.emitPartial("One minute")
+        await eventually { !model.capture.transcript.partial.isEmpty }
+        model.poll(now: ProcessInfo.processInfo.systemUptime + 61)
+        await eventually { model.phase == .translating }
+        let job = try XCTUnwrap(model.job)
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Un minuto de voz.") }))
+        XCTAssertTrue(output.spoken.isEmpty)
+        model.play()
+        XCTAssertEqual(output.language, .spanish)
+        model.cancel()
+        await eventually { model.phase == .ready }
     }
     func testUnsupportedDeviceDoesNotStartCaptureOrTranslation() {
         let speech = MockSpeech()

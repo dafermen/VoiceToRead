@@ -33,3 +33,5 @@ El editor de un párrafo usa una identidad nueva por apertura (`ParagraphEditReq
 Pruebas objetivo: abrir conversación desde el icono, volver de preparación en Ajustes sin iniciar captura, revisar/editar/compartir traducción sin reproducción inline, abrir el reproductor único, escuchar Ambos sin grabación y confirmar ausencia de marcadores sin perder Favoritos. Comprobar también preparación pendiente, pantalla horizontal, iPad, texto grande y VoiceOver.
 
 Las pruebas de simulador usan voces/entradas o traducciones controladas; no validan precisión de reconocimiento ni calidad de Apple Translation. La compilación local no implica distribución a TestFlight. Resultados concretos: [checkpoint](simplified-navigation-checkpoint.md).
+
+La pantalla antes llamada Hablar y traducir ahora es **Conversación**: dos toques por turno en español o inglés, sin cambiar Ajustes. Ver [guía actual](speak-and-translate.md).
