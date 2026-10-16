@@ -34,3 +34,7 @@ Probar con necesidades diferentes, sin pedir información médica. Ofrecer tarea
 - Voz real: inglés/español, auriculares, ruta de audio, alarmas, bloqueo y ausencia de voz instalada.
 
 Registrar dispositivo, versión, recorrido y resultado en el [checkpoint](accessible-experience-checkpoint.md). No marcar etiquetas de accesibilidad de App Store como verificadas solo por contar con controles nativos o pruebas automáticas.
+
+## Marcadores visibles y reproducción bilingüe
+
+[Guía de uso y desarrollo](bookmarks-and-bilingual-playback.md): un selector para leer y escuchar, original seguido de traducción, escucha directa en cada párrafo y marcadores compartidos por UUID. Incluye explicación paso a paso para estudiantes y límites de las pruebas.

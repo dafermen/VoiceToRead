@@ -56,7 +56,10 @@ struct CaptionScreen: View {
                             ReviewParagraph(id: $0.id, text: $0.text)
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
-                           lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast)
+                           lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
+                           bookmarkedIDs: bookmarkedIDs, bookmark: { id in
+                               if let segment = model.transcript.finalized.first(where: { $0.id == id }) { bookmarkSegment?(segment) }
+                           })
                             .id(model.language)
                     } else { transcript }
                 }
@@ -395,6 +398,25 @@ struct CaptionScreen: View {
         return Font.system(size: points, weight: weight)
     }
 
+    private func captionRow(_ segment: CaptionSegment) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            if let bookmarkSegment {
+                BookmarkToggleButton(marked: bookmarkedIDs.contains(segment.id)) { bookmarkSegment(segment) }
+                    .accessibilityIdentifier("liveBookmark-" + segment.id.uuidString)
+            }
+            ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
+                .accessibilityIdentifier("caption-" + segment.id.uuidString)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .contextMenu {
+            if let bookmarkSegment {
+                Button(uiKey(bookmarkedIDs.contains(segment.id) ? "Remove bookmark" : "Save bookmark"),
+                       systemImage: "bookmark") { bookmarkSegment(segment) }
+            }
+        }
+        .accessibilityAction(named: "Toggle bookmark") { bookmarkSegment?(segment) }
+    }
+
     private func captionContent(height: CGFloat) -> some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 20) {
@@ -412,21 +434,7 @@ struct CaptionScreen: View {
                     .font(.body).frame(minHeight: 44)
                 }
                 ForEach(model.transcript.finalized.dropFirst(firstVisibleIndex)) { segment in
-                    VStack(alignment: .leading, spacing: 4) {
-                        if bookmarkedIDs.contains(segment.id) {
-                            Label("Bookmarked", systemImage: "bookmark.fill").font(.caption)
-                        }
-                        ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
-                            .accessibilityIdentifier("caption-" + segment.id.uuidString)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .contextMenu {
-                        if let bookmarkSegment {
-                            Button(uiKey(bookmarkedIDs.contains(segment.id) ? "Remove bookmark" : "Save bookmark"),
-                                   systemImage: "bookmark") { bookmarkSegment(segment) }
-                        }
-                    }
-                    .accessibilityAction(named: "Toggle bookmark") { bookmarkSegment?(segment) }
+                    captionRow(segment)
                 }
                 // A single stable container avoids replacing the entire provisional view
                 // whenever the recognizer revises its audio range or identifier.

@@ -61,6 +61,8 @@ enum TranslationSpeechSpeed: String, CaseIterable, Identifiable {
 /// Queue one corrected destination paragraph at a time, so highlighting follows spoken text.
 @MainActor @Observable
 final class TranslationSpeechPlayer {
+    var onFinish: (() -> Void)?
+    var onInterrupted: (() -> Void)?
     enum State { case idle, speaking, paused }
     private(set) var state: State = .idle
     private(set) var paragraphID: UUID?
@@ -131,7 +133,7 @@ final class TranslationSpeechPlayer {
     }
     func interrupt() {
         guard state != .idle else { return }
-        stop(); message = "Translation interrupted. Tap Play to restart this paragraph."
+        stop(); message = "Translation interrupted. Tap Play to restart this paragraph."; onInterrupted?()
     }
     private func speakCurrent() throws {
         guard queue.indices.contains(index) else { stop(); return }
@@ -145,6 +147,7 @@ final class TranslationSpeechPlayer {
         guard index < queue.count else {
             let last = queue.last?.id
             stop(); completedParagraphID = last
+            onFinish?()
             return
         }
         guard state == .speaking else { return }
@@ -171,4 +174,108 @@ final class TranslationSpeechPlayer {
     func close() {
         stop(); observers.forEach(NotificationCenter.default.removeObserver); observers = []
     }
+}
+
+
+/// A queue contains one language at a time: original then translation, before advancing the paragraph.
+/// Recorded ranges are preferred; without a recording the corrected original is synthesized.
+struct ParagraphAudioStep: Equatable {
+    let paragraph: ReviewParagraph
+    let language: CaptureLanguage
+    let translated: Bool
+    let recording: ClosedRange<Double>?
+
+    static func make(source: [ReviewParagraph], translated: [ReviewParagraph], language: CaptureLanguage,
+                     mode: TranscriptLanguage, ranges: [PlaybackParagraph]) -> [Self] {
+        source.flatMap { original -> [Self] in
+            var result: [Self] = []
+            if mode == language.mode || mode == .both, !original.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                let range = ranges.first { $0.id == original.id }
+                result.append(Self(paragraph: original, language: language, translated: false,
+                                   recording: range.map { $0.start...$0.end }))
+            }
+            if mode != language.mode, let text = translated.first(where: { $0.id == original.id }),
+               !text.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                result.append(Self(paragraph: text, language: language.opposite, translated: true, recording: nil))
+            }
+            return result
+        }
+    }
+}
+
+/// Shared by inline paragraph controls and the bilingual media player. Completion, not a timer,
+/// advances the queue. Stop, selection changes and interruptions invalidate the underlying callbacks.
+@MainActor @Observable
+final class ParagraphPlayback {
+    enum State { case idle, playing, paused, completed }
+    private(set) var state: State = .idle
+    private(set) var paragraphID: UUID?
+    private(set) var translated = false
+    var message: String?
+    private let recording: SessionPlayer
+    private let voice: TranslationSpeechPlayer
+    private var steps: [ParagraphAudioStep] = []
+    private var index = 0
+    private var speed: TranslationSpeechSpeed = .normal
+    private var current: ParagraphAudioStep? { steps.indices.contains(index) ? steps[index] : nil }
+    init(recording: SessionPlayer? = nil, voice: TranslationSpeechPlayer? = nil) {
+        self.recording = recording ?? SessionPlayer(); self.voice = voice ?? TranslationSpeechPlayer()
+        self.recording.onFinish = { [weak self] in self?.advance() }
+        self.voice.onFinish = { [weak self] in self?.advance() }
+        self.recording.onInterrupted = { [weak self] in self?.interrupt() }
+        self.voice.onInterrupted = { [weak self] in self?.interrupt() }
+    }
+    func load(_ url: URL?) {
+        stop(); recording.stop()
+        if let url { recording.load(url) }
+        voice.observeInterruptions()
+    }
+    func start(_ steps: [ParagraphAudioStep], speed: TranslationSpeechSpeed) {
+        stop(); message = nil; self.steps = steps; self.speed = speed
+        guard !steps.isEmpty else { message = "No playable text in this paragraph."; return }
+        state = .playing; playCurrent()
+    }
+    private func playCurrent() {
+        guard let step = current else { state = .completed; return }
+        paragraphID = step.paragraph.id; translated = step.translated
+        if let range = step.recording {
+            recording.speed = speed; recording.select(range: range); recording.toggle()
+            if let failure = recording.failure { stop(); message = failure }
+        } else {
+            voice.start([step.paragraph], language: step.language, speed: speed)
+            if let failure = voice.message { stop(); message = failure }
+        }
+    }
+    private func advance() {
+        guard state == .playing || state == .paused else { return }
+        index += 1
+        guard index < steps.count else { state = .completed; return }
+        if state == .playing { playCurrent() }
+    }
+    func pause() {
+        guard state == .playing else { return }
+        state = .paused
+        recording.pause()
+        if voice.state == .speaking { voice.togglePause() }
+    }
+    func resume() {
+        guard state == .paused, let step = current else { return }
+        state = .playing
+        if step.paragraph.id != paragraphID || step.translated != translated { playCurrent() }
+        else if step.recording != nil {
+            recording.toggle()
+            if let failure = recording.failure { stop(); message = failure }
+        }
+        else if voice.state == .paused { voice.togglePause() }
+        else { playCurrent() }
+    }
+    func stop() {
+        state = .idle; steps = []; index = 0; paragraphID = nil
+        recording.pause(); voice.stop()
+    }
+    func interrupt() {
+        guard state == .playing || state == .paused else { return }
+        stop(); message = "Playback interrupted. Tap Play to restart this paragraph."
+    }
+    func close() { stop(); recording.stop(); voice.close() }
 }

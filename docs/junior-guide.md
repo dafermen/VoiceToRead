@@ -311,3 +311,7 @@ TestFlight interno permite probar, pero un archivo marcado Internal Testing Only
 Para capturas reproducibles, `--store-screenshots` crea una biblioteca **en memoria**, con texto ficticio y preferencias separadas. Está dentro de `#if DEBUG`: el compilador elimina ese código de Release. No se inicia el micrófono ni se simula una traducción en vivo. XCTest navega por las pantallas reales, verifica controles y guarda capturas como attachments. Esta técnica comprueba presentación y navegación, pero no la precisión del reconocimiento, los servicios modernos de traducción ni la firma de Apple.
 
 El [paquete de publicación](store/submission-kit.md) distingue hechos comprobados, decisiones del titular y verificaciones pendientes. El validador `--ready` debe seguir fallando mientras haya pendientes; es una protección contra enviar una ficha incompleta, no un error que deba ocultarse.
+
+## Marcadores visibles y reproducción bilingüe
+
+[Guía de uso y desarrollo](bookmarks-and-bilingual-playback.md): un selector para leer y escuchar, original seguido de traducción, escucha directa en cada párrafo y marcadores compartidos por UUID. Incluye explicación paso a paso para estudiantes y límites de las pruebas.

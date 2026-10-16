@@ -1,9 +1,94 @@
 import XCTest
+import AVFoundation
 import SwiftData
 @testable import VoiceToRead
 
 @MainActor
 final class TranslationTests: XCTestCase {
+
+    func testBilingualQueueFinishesBothBeforeNextAndIgnoresCancelledVoice() {
+        let a = ReviewParagraph(id: UUID(), text: "First original")
+        let b = ReviewParagraph(id: UUID(), text: "Second original")
+        let translated = [ReviewParagraph(id: a.id, text: "Primera traducción"), ReviewParagraph(id: b.id, text: "Segunda traducción")]
+        let steps = ParagraphAudioStep.make(source: [a,b], translated: translated, language: .english, mode: .both, ranges: [])
+        XCTAssertEqual(steps.map(\.language), [.english,.spanish,.english,.spanish])
+        let output = FakeTranslationSpeechOutput()
+        let voice = TranslationSpeechPlayer(output: output, activate: {}, deactivate: {})
+        let player = ParagraphPlayback(voice: voice)
+        player.start(steps, speed: .normal)
+        XCTAssertEqual(output.texts, [a.text]); XCTAssertFalse(player.translated)
+        output.onFinish?(output.tokens.last!)
+        XCTAssertEqual(output.texts.last, translated[0].text); XCTAssertTrue(player.translated)
+        XCTAssertEqual(player.paragraphID, a.id)
+        player.pause(); XCTAssertEqual(player.state, .paused)
+        player.resume(); XCTAssertEqual(output.resumeCount, 1)
+        output.onFinish?(output.tokens.last!)
+        XCTAssertEqual(player.paragraphID, b.id); XCTAssertFalse(player.translated)
+        let cancelled = output.tokens.last!
+        player.stop(); output.onFinish?(cancelled)
+        XCTAssertEqual(player.state, .idle); XCTAssertEqual(output.texts.count, 3)
+        player.start(Array(steps.prefix(2)), speed: .normal)
+        output.onFinish?(output.tokens.last!); output.onFinish?(output.tokens.last!)
+        XCTAssertEqual(player.state, .completed); XCTAssertEqual(player.paragraphID, a.id)
+        player.close()
+    }
+
+    func testRecordingCompletionHandsOffToTranslationAndStopsAtParagraph() async throws {
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".caf")
+        defer { try? FileManager.default.removeItem(at: url) }
+        let format = try XCTUnwrap(AVAudioFormat(standardFormatWithSampleRate: 16000, channels: 1))
+        let buffer = try XCTUnwrap(AVAudioPCMBuffer(pcmFormat: format, frameCapacity: 16000))
+        buffer.frameLength = 16000; buffer.floatChannelData?[0].initialize(repeating: 0, count: 16000)
+        try autoreleasepool { try AVAudioFile(forWriting: url, settings: format.settings).write(from: buffer) }
+        let a = ReviewParagraph(id: UUID(), text: "Original")
+        let output = FakeTranslationSpeechOutput()
+        let player = ParagraphPlayback(voice: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}))
+        player.load(url); defer { player.close() }
+        let steps = ParagraphAudioStep.make(source: [a], translated: [ReviewParagraph(id: a.id, text: "Traducción")], language: .english,
+            mode: .both, ranges: [PlaybackParagraph(id: a.id, text: a.text, start: 0.1, end: 0.3)])
+        player.start(steps, speed: .normal)
+        XCTAssertTrue(output.texts.isEmpty)
+        try await Task.sleep(for: .seconds(1))
+        XCTAssertEqual(output.texts, ["Traducción"]); XCTAssertTrue(player.translated)
+        output.onFinish?(try XCTUnwrap(output.tokens.last))
+        XCTAssertEqual(player.state, .completed); XCTAssertEqual(player.paragraphID, a.id)
+    }
+
+    func testMissingRecordingStopsQueueWithVisibleMessage() {
+        let a = ReviewParagraph(id: UUID(), text: "Original")
+        let output = FakeTranslationSpeechOutput()
+        let player = ParagraphPlayback(voice: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}))
+        defer { player.close() }
+        let steps = ParagraphAudioStep.make(source: [a], translated: [.init(id: a.id, text: "Traducción")], language: .english,
+            mode: .both, ranges: [.init(id: a.id, text: a.text, start: 0, end: 1)])
+        player.start(steps, speed: .normal)
+        XCTAssertEqual(player.state, .idle)
+        XCTAssertNotNil(player.message)
+        XCTAssertTrue(output.texts.isEmpty, "Do not silently skip an unreadable original recording")
+    }
+
+    func testLanguageSelectionAndOriginalRecordingRanges() {
+        let a = ReviewParagraph(id: UUID(), text: "Hola")
+        let translated = [ReviewParagraph(id: a.id, text: "Hello corrected")]
+        let ranges = [PlaybackParagraph(id: a.id, text: a.text, start: 1, end: 3)]
+        let both = ParagraphAudioStep.make(source: [a], translated: translated, language: .spanish, mode: .both, ranges: ranges)
+        XCTAssertEqual(both.map(\.language), [.spanish, .english]); XCTAssertEqual(both[0].recording, 1...3)
+        XCTAssertNil(both[1].recording)
+        XCTAssertEqual(ParagraphAudioStep.make(source: [a], translated: translated, language: .spanish, mode: .english, ranges: ranges).map(\.paragraph.text), ["Hello corrected"])
+        XCTAssertEqual(ParagraphAudioStep.make(source: [a], translated: translated, language: .spanish, mode: .spanish, ranges: ranges).count, 1)
+    }
+
+    func testInlineQueueInterruptionNeverContinuesIntoAnotherLanguage() {
+        let a = ReviewParagraph(id: UUID(), text: "Hello")
+        let output = FakeTranslationSpeechOutput()
+        let voice = TranslationSpeechPlayer(output: output, activate: {}, deactivate: {})
+        let player = ParagraphPlayback(voice: voice)
+        let steps = ParagraphAudioStep.make(source: [a], translated: [ReviewParagraph(id: a.id, text: "Hola")], language: .english, mode: .both, ranges: [])
+        player.start(steps, speed: .normal); let old = output.tokens.last!
+        voice.interrupt(); output.onFinish?(old)
+        XCTAssertEqual(player.state, .idle); XCTAssertNotNil(player.message); XCTAssertEqual(output.texts.count, 1)
+        player.close()
+    }
 
     func testSpokenTranslationUsesCorrectedDestinationAndRejectsStaleSource() {
         let id = UUID()

@@ -10,11 +10,11 @@ Estas opciones apoyan a personas con discapacidad auditiva o baja visión, perso
 
 1. Pulsa Detener: en dispositivos compatibles comienza la traducción automáticamente. Revisa progreso o reintenta si falta preparar idiomas. Guarda la sesión cuando quieras conservarla.
 2. Abre **Sesiones → sesión → Audio y subtítulos** o abre el lector desde Traducción.
-3. En Escuchar elige audio original o voz traducida; en Leer elige original, traducción o Ambos.
+3. En Leer y escuchar elige original, traducción o Ambos; la selección controla texto y audio.
 4. Usa el único botón central Reproducir/Pausar/Continuar. Anterior y Siguiente seleccionan sin sonido. A mi ritmo reproduce un párrafo; Continua recorre los siguientes. Ambos audios usan controles del mismo tamaño.
 5. Opciones permite cambiar velocidad y lectura. Guarda las correcciones antes de escucharlas.
 
-Inglés original → voz española; español original → voz inglesa. La selección del idioma de interfaz no cambia esta dirección. En **Ambos** se lee únicamente la traducción, nunca el texto bilingüe concatenado. **Escuchar original** reproduce el archivo grabado; **Escuchar traducción** usa una voz generada por Apple. Funciona con traducciones guardadas aunque la sesión no tenga grabación de audio. No crea un doblaje, archivo exportable de voz sintética ni una imitación del hablante.
+Inglés original → voz española; español original → voz inglesa. La selección del idioma de interfaz no cambia esta dirección. En **Ambos** se escucha primero el original y luego la traducción de cada párrafo; A mi ritmo se detiene después de ambos. **Escuchar original** reproduce el fragmento grabado, o voz generada si no hay archivo/rango en la reproducción por párrafo; **Escuchar traducción** usa una voz generada por Apple. Funciona con traducciones guardadas aunque la sesión no tenga grabación de audio. No crea un doblaje, archivo exportable de voz sintética ni una imitación del hablante.
 
 Generar nuevas traducciones conserva los requisitos existentes: SDK compatible, iOS/iPadOS 18+ y modelos de Apple preparados. Leer una traducción ya guardada usa AVSpeechSynthesizer, disponible también en el mínimo iOS 17 de la app. La voz debe estar disponible en el dispositivo; si falta, se presenta un mensaje para preparar una voz en Ajustes de accesibilidad. La descarga inicial puede requerir Internet. Verificar voz, volumen y ruta de audio en el dispositivo antes de una actividad.
 
@@ -45,3 +45,5 @@ Referencia de API: [AVSpeechSynthesizer, Apple](https://developer.apple.com/docu
 ## Verificación y entrega
 
 Consultar [checkpoint de esta entrega](translated-speech-checkpoint.md). La calidad de las voces, audífonos, interrupciones reales, lectura con VoiceOver, tamaños de letra accesibles y uso por niños/personas con discapacidad requieren aceptación en iPhone/iPad. Los tests y simuladores no certifican accesibilidad universal. Los cambios locales o en GitHub no significan que una nueva versión ya esté en TestFlight/App Store.
+
+La escucha desde cada párrafo de Traducción es directa. Uso actualizado y arquitectura: [marcadores y reproducción bilingüe](bookmarks-and-bilingual-playback.md).

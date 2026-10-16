@@ -688,3 +688,23 @@
 "Home" = "Inicio";
 
 "Listening paused. Microphone is off. Tap Resume recording to continue." = "Escucha en pausa. El micrófono está apagado. Pulsa Reanudar grabación para continuar.";
+
+"Read and listen" = "Leer y escuchar";
+
+"Original, then translation · each paragraph" = "Original y luego traducción · cada párrafo";
+
+"Generated voice · original text" = "Voz generada · texto original";
+
+"Playing original" = "Reproduciendo original";
+
+"Playing translation" = "Reproduciendo traducción";
+
+"Listen to both" = "Escuchar ambos";
+
+"No playable text in this paragraph." = "Este párrafo no tiene texto para reproducir.";
+
+"Playback interrupted. Tap Play to restart this paragraph." = "Reproducción interrumpida. Pulsa Reproducir para reiniciar este párrafo.";
+
+"Not bookmarked" = "Sin marcador";
+
+"Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again." = "Pulsa Guardar marcador junto a un párrafo confirmado en Subtítulos, Sesiones o Traducción. Abre Marcadores para encontrarlo de nuevo.";

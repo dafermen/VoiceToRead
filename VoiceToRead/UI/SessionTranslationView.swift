@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 import AVFoundation
 #if canImport(Translation)
 import Translation
@@ -14,6 +15,7 @@ struct SessionTranslationView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(AppSettings.self) private var readerSettings
     @Environment(\.scenePhase) private var phase
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var source: [ReviewParagraph] = []
     @State private var snapshot: TranslationSnapshot?
     @State private var mode: TranscriptLanguage = .spanish
@@ -26,6 +28,10 @@ struct SessionTranslationView: View {
     @State private var failure: String?
     @State private var editing = false
     @State private var playback: TranslationPlayback?
+    @State private var inlinePlayer = ParagraphPlayback()
+    @State private var audioRanges: [PlaybackParagraph] = []
+    @Query private var bookmarks: [CaptionBookmark]
+    @AppStorage("translationSpeechSpeed") private var playbackSpeed = TranslationSpeechSpeed.normal
     @State private var previewKind = "txt"
     @State private var pendingExport: String?
     @State private var replacing = false
@@ -54,10 +60,11 @@ struct SessionTranslationView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                Picker("Reading language", selection: $mode) {
+                Picker("Read and listen", selection: $mode) {
                     ForEach(TranscriptLanguage.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }.pickerStyle(.segmented).padding().accessibilityIdentifier("translationLanguagePicker")
                 status.padding(.horizontal)
+                if let message = inlinePlayer.message { Text(LocalizedStringKey(message)).font(.callout).padding(.horizontal) }
 
                 ScrollViewReader { proxy in
                 ScrollView {
@@ -72,19 +79,24 @@ struct SessionTranslationView: View {
                                     PlaybackTextCard(text: paragraph.text, language: mode == language.mode ? language : language.opposite,
                                                      translated: mode != language.mode, settings: readerSettings, identifier: "translatedParagraph-\(index)")
                                 }
-                                HStack(spacing: 12) {
-                                    if audioDuration != nil {
-                                        Button("Listen to original", systemImage: "waveform") {
-                                            playback = TranslationPlayback(paragraphID: paragraph.id, audio: .original)
-                                        }.accessibilityIdentifier("listenTranslated-\(index)")
-                                    }
-                                    if current {
-                                        Button("Listen to translation", systemImage: "speaker.wave.2") {
-                                            playback = TranslationPlayback(paragraphID: paragraph.id, audio: .translation)
-                                        }.accessibilityIdentifier("speakTranslation-\(index)")
+                                (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
+                                    Button(LocalizedStringKey(inlineTitle(paragraph.id)), systemImage: inlinePlayer.paragraphID == paragraph.id && inlinePlayer.state == .playing ? "pause.fill" : "play.fill") {
+                                        playInline(paragraph.id)
+                                    }.accessibilityIdentifier("playTranslationParagraph-\(index)")
+                                    if inlinePlayer.paragraphID == paragraph.id && (inlinePlayer.state == .playing || inlinePlayer.state == .paused) {
+                                        Button("Stop", systemImage: "stop.fill") { inlinePlayer.stop() }
+                                            .accessibilityIdentifier("stopTranslationParagraph-\(index)")
                                     }
                                 }.font(.subheadline).buttonStyle(PlaybackLaunchStyle())
                                     .frame(minHeight: 48).disabled(job != nil || preparing)
+                                BookmarkToggleButton(marked: bookmarks.contains { $0.sessionID == session.id && $0.segmentID == paragraph.id }) {
+                                    do { try repository.toggleBookmark(paragraphID: paragraph.id, in: session) }
+                                    catch { failure = error.localizedDescription }
+                                }.accessibilityIdentifier("translationBookmark-\(index)")
+                                if inlinePlayer.paragraphID == paragraph.id && inlinePlayer.state == .playing {
+                                    Text(uiKey(inlinePlayer.translated ? "Playing translation" : "Playing original"))
+                                        .font(.caption).accessibilityIdentifier("inlinePlaybackStatus")
+                                }
                             }
                             .id(paragraph.id)
                         }
@@ -157,7 +169,12 @@ struct SessionTranslationView: View {
             .alert("Translation", isPresented: Binding(get: { failure != nil }, set: { if !$0 { failure = nil } })) {
                 Button("OK") { failure = nil }
             } message: { Text(LocalizedStringKey(failure ?? "")) }
-            .onDisappear { job = nil; exportTask?.cancel(); if share == nil { cleanup() } }
+            .onChange(of: mode) { _, _ in inlinePlayer.stop() }
+            .onChange(of: editing) { _, _ in inlinePlayer.stop() }
+            .onChange(of: playback?.id) { _, _ in inlinePlayer.stop() }
+            .onChange(of: exportMenu) { _, _ in inlinePlayer.stop() }
+            .onChange(of: phase) { _, value in if value != .active { inlinePlayer.interrupt() } }
+            .onDisappear { inlinePlayer.close(); job = nil; exportTask?.cancel(); if share == nil { cleanup() } }
         }
     }
 
@@ -242,7 +259,8 @@ struct SessionTranslationView: View {
 
     private func start(replaceAll: Bool = false) {
         guard canTranslate, job == nil else { return }
-                progress = 0
+        progress = 0
+        inlinePlayer.stop()
         let plan = IncrementalTranslation(source: source, previous: replaceAll ? nil : snapshot, language: language)
         if plan.pending.isEmpty {
             do {
@@ -251,16 +269,34 @@ struct SessionTranslationView: View {
             } catch { failure = error.localizedDescription }
         } else { job = TranslationJob(plan: plan) }
     }
+    private func inlineTitle(_ id: UUID) -> String {
+        if inlinePlayer.paragraphID == id {
+            if inlinePlayer.state == .playing { return "Pause" }
+            if inlinePlayer.state == .paused { return "Resume" }
+        }
+        return mode == .both ? "Listen to both" : mode == language.mode ? "Listen to original" : "Listen to translation"
+    }
+    private func playInline(_ id: UUID) {
+        if inlinePlayer.paragraphID == id && inlinePlayer.state == .playing { inlinePlayer.pause(); return }
+        if inlinePlayer.paragraphID == id && inlinePlayer.state == .paused { inlinePlayer.resume(); return }
+        let originals = source.filter { $0.id == id }
+        inlinePlayer.start(ParagraphAudioStep.make(source: originals, translated: current ? snapshot?.translated ?? [] : [],
+            language: language, mode: mode, ranges: audioRanges), speed: playbackSpeed)
+    }
     private func load() {
         do {
             source = try repository.reviewedParagraphs(for: session)
             snapshot = try repository.translation(for: session.id)?.decoded()
             timings = try repository.media(for: session.id)?.decodedTimings() ?? [:]
-            if let url = try repository.audioURL(for: session.id), FileManager.default.fileExists(atPath: url.path) {
+            let url = try repository.audioURL(for: session.id)
+            audioDuration = nil
+            inlinePlayer.load(url)
+            if let url, FileManager.default.fileExists(atPath: url.path) {
                 if let audio = try? AVAudioFile(forReading: url) {
                     audioDuration = Double(audio.length) / audio.processingFormat.sampleRate
                 }
             }
+            audioRanges = PlaybackParagraph.make(source, timings: timings, duration: audioDuration ?? 0)
             if !loaded { mode = language.opposite.mode }
             loaded = true
         } catch { failure = "Could not load the saved text or translation. Reopen this session before trying again." }
@@ -408,6 +444,8 @@ struct LiveSpanishView: View {
     var bold = false
     var ruled = false
     var highContrast = false
+    var bookmarkedIDs: Set<UUID> = []
+    var bookmark: ((UUID) -> Void)? = nil
     @Environment(\.scenePhase) private var phase
     @State private var buffer = LiveTranslationBuffer()
     @State private var job: TranslationJob?
@@ -481,6 +519,10 @@ struct LiveSpanishView: View {
     // El UUID enlaza ambos textos. Cambiar la presentación no reinicia la cola ni el micrófono.
     private func paragraphPair(_ paragraph: ReviewParagraph) -> some View {
         VStack(alignment: .leading, spacing: 8) {
+            if let bookmark {
+                BookmarkToggleButton(marked: bookmarkedIDs.contains(paragraph.id)) { bookmark(paragraph.id) }
+                    .accessibilityIdentifier("liveBookmark-" + paragraph.id.uuidString)
+            }
             if display == .both || buffer.translated[paragraph.id] == nil {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Original \(language.name)").font(.caption.weight(.semibold))

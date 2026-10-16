@@ -57,6 +57,8 @@ struct CaptureOptionsView: View {
 @MainActor
 @Observable
 final class SessionPlayer {
+    var onFinish: (() -> Void)?
+    var onInterrupted: (() -> Void)?
     private var engine = AVAudioEngine()
     private var node = AVAudioPlayerNode()
     private var tempo = AVAudioUnitTimePitch()
@@ -115,7 +117,8 @@ final class SessionPlayer {
     }
     func toggle() {
         if playing { pause(); return }
-        guard let file else { return }
+        guard let file else { failure = "This recording could not be opened. The transcript is still available."; return }
+        failure = nil
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
             try AVAudioSession.sharedInstance().setActive(true)
@@ -133,7 +136,7 @@ final class SessionPlayer {
                 completionCallbackType: .dataPlayedBack) { [weak self] _ in
                 Task { @MainActor [weak self] in
                     guard let self, self.generation == token else { return }
-                    self.pause(); self.time = end
+                    self.pause(); self.time = end; self.onFinish?()
                 }
             }
             engine.prepare()
@@ -166,7 +169,7 @@ final class SessionPlayer {
     }
     func interrupt() {
         guard playing else { return }
-        pause(); interrupted = true
+        pause(); interrupted = true; onInterrupted?()
     }
     func pause() {
         updateTime(); generation = UUID()
@@ -217,6 +220,8 @@ struct SessionMediaView: View {
     private var compactPlayback: Bool { fullScreen || settings.focusedReading || verticalSizeClass == .compact }
     @State private var player = SessionPlayer()
     @State private var speech = TranslationSpeechPlayer()
+    @State private var sequence = ParagraphPlayback()
+    private var usesSequence: Bool { reading == .both || (reading == language.mode && audioURL == nil) }
     @State private var snapshot: TranslationSnapshot?
     @State private var listening: PlaybackAudio = .original
     @State private var originalStarted = false
@@ -226,18 +231,21 @@ struct SessionMediaView: View {
     private var language: CaptureLanguage { CaptureLanguage(rawValue: session.language) ?? .english }
     private var currentTranslation: Bool { snapshot?.language == language && snapshot?.isCurrent(reviewed) == true }
     private var audibleParagraphs: [ReviewParagraph] {
-        listening == .translation ? TranslationSpeechPlayer.paragraphs(snapshot: snapshot, source: reviewed) :
+        usesSequence ? reviewed : listening == .translation ? TranslationSpeechPlayer.paragraphs(snapshot: snapshot, source: reviewed) :
             reviewed.filter { paragraph in playbackParagraphs.contains { $0.id == paragraph.id } }
     }
-    private var isPlaying: Bool { listening == .original ? player.playing : speech.state == .speaking }
-    private var finished: Bool { listening == .original ? player.duration > 0 && player.time >= player.bounds.upperBound : speech.completedParagraphID != nil }
+    private var isPlaying: Bool { usesSequence ? sequence.state == .playing : listening == .original ? player.playing : speech.state == .speaking }
+    private var finished: Bool { usesSequence ? sequence.state == .completed : listening == .original ? player.duration > 0 && player.time >= player.bounds.upperBound : speech.completedParagraphID != nil }
     private var primaryLabel: String {
         if isPlaying { return "Pause" }
         if finished { return "Listen again" }
+        if usesSequence { return sequence.state == .paused ? "Resume" : "Play" }
         if listening == .translation { return speech.state == .paused ? "Resume" : "Play" }
         return originalStarted || player.interrupted ? "Resume" : "Play"
     }
     private var playbackStatus: String {
+        if usesSequence, let message = sequence.message { return message }
+        if usesSequence && isPlaying { return sequence.translated ? "Playing translation" : "Playing original" }
         if player.interrupted && listening == .original { return "Playback interrupted. Tap Resume." }
         if listening == .translation, let message = speech.message { return message }
         if finished { return atMyPace ? "Paragraph finished" : "Playback finished" }
@@ -261,9 +269,11 @@ struct SessionMediaView: View {
     @State private var selectedParagraphID: UUID?
     @State private var playbackParagraphs: [PlaybackParagraph] = []
     @AppStorage("playbackAtMyPace") private var atMyPace = false
+    @Query private var bookmarks: [CaptionBookmark]
     @Query private var favorites: [SessionFavorite]
     private var protected: Bool { favorites.contains { $0.sessionID == session.id } }
     private var activeParagraphID: UUID? {
+        if usesSequence { return sequence.paragraphID ?? selectedParagraphID }
         if listening == .translation { return speech.paragraphID ?? speech.completedParagraphID ?? selectedParagraphID }
         return atMyPace ? selectedParagraphID : currentCue?.paragraphID ?? selectedParagraphID
     }
@@ -319,9 +329,10 @@ struct SessionMediaView: View {
                 if settings.focusedReading && !atMyPace { settings.focusedReading = false }
                 if let id = activeParagraphID ?? audibleParagraphs.first?.id { selectParagraph(id) }
             }
+            .onChange(of: sequence.paragraphID) { _, id in if usesSequence, let id { selectedParagraphID = id } }
             .onChange(of: speech.paragraphID) { _, id in if let id { selectedParagraphID = id } }
             .onChange(of: player.time) { _, _ in
-                if listening == .original, !atMyPace, let id = currentCue?.paragraphID { selectedParagraphID = id }
+                if !usesSequence, listening == .original, !atMyPace, let id = currentCue?.paragraphID { selectedParagraphID = id }
             }
             .onChange(of: listening) { _, _ in
                 let id = selectedParagraphID
@@ -329,14 +340,16 @@ struct SessionMediaView: View {
                 selectParagraph(id ?? audibleParagraphs.first?.id)
             }
             .onChange(of: reading) { _, _ in
+                listening = reading == language.opposite.mode ? .translation : .original
+                selectParagraph(selectedParagraphID ?? reviewed.first?.id)
                 do { try rebuildCues() } catch { failure = error.localizedDescription }
             }
             .onChange(of: speed) { _, value in
-                player.speed = value
+                sequence.stop(); player.speed = value
                 if listening == .translation { speech.stop() }
             }
-            .onDisappear { player.stop(); speech.close(); exportTask?.cancel(); cleanup() }
-            .onChange(of: phase) { _, phase in if phase != .active { player.interrupt(); speech.interrupt() } }
+            .onDisappear { sequence.close(); player.stop(); speech.close(); exportTask?.cancel(); cleanup() }
+            .onChange(of: phase) { _, phase in if phase != .active { sequence.interrupt(); player.interrupt(); speech.interrupt() } }
             .sheet(isPresented: $showingPhrases) {
                 NavigationStack {
                     List(Array(audibleParagraphs.enumerated()), id: \.element.id) { index, paragraph in
@@ -410,21 +423,17 @@ struct SessionMediaView: View {
     private var sourceSelectors: some View {
         HStack {
             Menu {
-                Picker("Listen", selection: $listening) {
-                    Text("Original audio").tag(PlaybackAudio.original).disabled(audioURL == nil)
-                    Text("Translated voice").tag(PlaybackAudio.translation).disabled(!currentTranslation)
-                }
                 Picker("Reading speed", selection: $speed) {
                     ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }
             } label: {
-                Label { Text(listening == .original ? "Original audio · \(language.name)" : "Translated voice · \(language.opposite.name)") }
-                    icon: { Image(systemName: "speaker.wave.2") }
+                Label { Text(LocalizedStringKey(speed.rawValue)) }
+                    icon: { Image(systemName: "speedometer") }
                     .frame(minHeight: 44).contentShape(Rectangle())
             }.accessibilityIdentifier("playbackAudioMenu")
             Spacer()
             Menu {
-                Picker("Reading language", selection: $reading) {
+                Picker("Read and listen", selection: $reading) {
                     Text(LocalizedStringKey(language.name)).tag(language.mode)
                     if currentTranslation {
                         Text(LocalizedStringKey(language.opposite.name)).tag(language.opposite.mode)
@@ -434,7 +443,9 @@ struct SessionMediaView: View {
             } label: {
                 Label { Text(LocalizedStringKey(reading.rawValue)) } icon: { Image(systemName: "text.bubble") }
                     .frame(minHeight: 44).contentShape(Rectangle())
-            }.accessibilityIdentifier("playbackTextMenu")
+            }.accessibilityLabel("Read and listen")
+                .accessibilityValue(Text(LocalizedStringKey(reading.rawValue)))
+                .accessibilityIdentifier("playbackTextMenu")
         }.font(.subheadline).frame(minHeight: 44)
     }
     private var reader: some View {
@@ -459,6 +470,12 @@ struct SessionMediaView: View {
     private var playbackProgress: some View {
         VStack(spacing: 4) {
             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
+                if let activeParagraphID {
+                    BookmarkToggleButton(marked: bookmarks.contains { $0.sessionID == session.id && $0.segmentID == activeParagraphID }) {
+                        do { try repository.toggleBookmark(paragraphID: activeParagraphID, in: session) }
+                        catch { failure = error.localizedDescription }
+                    }.accessibilityIdentifier("playbackBookmarkButton")
+                }
                 if let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) {
                     Text("Paragraph \(index + 1) of \(reviewed.count)").accessibilityIdentifier("playbackParagraphPosition")
                 }
@@ -469,7 +486,7 @@ struct SessionMediaView: View {
                 .accessibilityIdentifier("playbackStatus")
             if !compactPlayback {
             VStack(spacing: 4) {
-            if listening == .original && audioURL != nil {
+            if !usesSequence && listening == .original && audioURL != nil {
                 Slider(value: Binding(get: { player.time }, set: { player.seek($0) }), in: player.bounds)
                     .accessibilityLabel("Playback position")
                 HStack {
@@ -479,7 +496,7 @@ struct SessionMediaView: View {
                 }.font(.caption).monospacedDigit()
             } else {
                 // Speech has no reliable audio duration: never borrow timestamps from the recording.
-                Text("Generated voice · translation only").font(.caption).foregroundStyle(.secondary)
+                Text(uiKey(reading == .both ? "Original, then translation · each paragraph" : reading == language.mode ? "Generated voice · original text" : "Generated voice · translation only")).font(.caption).foregroundStyle(.secondary)
                     .frame(maxHeight: .infinity)
             }
             }.frame(height: 56)
@@ -557,6 +574,7 @@ struct SessionMediaView: View {
             reading = translationLanguage.flatMap(TranscriptLanguage.init(rawValue:)) ??
                 (listening == .translation ? language.opposite.mode : language.mode)
             if !currentTranslation { reading = language.mode }
+            sequence.load(audioURL)
             try rebuildCues()
             selectParagraph(initialParagraphID ?? audibleParagraphs.first?.id ?? reviewed.first?.id)
             speech.observeInterruptions()
@@ -584,17 +602,28 @@ struct SessionMediaView: View {
     }
     /// Navigation selects silently; only the central button starts sound, in either language.
     private func selectParagraph(_ id: UUID?) {
-        pausePlayback(); speech.stop(); speech.message = nil; selectedParagraphID = id; originalStarted = false
+        sequence.stop(); sequence.message = nil; pausePlayback(); speech.stop(); speech.message = nil; selectedParagraphID = id; originalStarted = false
         if let paragraph = playbackParagraphs.first(where: { $0.id == id }) {
             player.select(range: atMyPace ? paragraph.start...paragraph.end : nil)
             player.seek(paragraph.start)
         }
     }
     private func pausePlayback() {
-        player.pause()
+        sequence.pause(); player.pause()
         if speech.state == .speaking { speech.togglePause() }
     }
     private func togglePlayback() {
+        if usesSequence {
+            player.pause(); speech.stop()
+            if sequence.state == .playing { sequence.pause(); return }
+            if sequence.state == .paused { sequence.resume(); return }
+            guard let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) else { return }
+            let values = atMyPace ? [reviewed[index]] : Array(reviewed[index...])
+            sequence.start(ParagraphAudioStep.make(source: values, translated: currentTranslation ? snapshot?.translated ?? [] : [],
+                language: language, mode: reading, ranges: playbackParagraphs), speed: speed)
+            return
+        }
+        sequence.stop()
         if listening == .original { speech.stop(); originalStarted = true; player.toggle(); return }
         player.pause()
         if speech.state != .idle { speech.togglePause(); return }
@@ -603,7 +632,7 @@ struct SessionMediaView: View {
         speech.start(values, language: language.opposite, speed: speed)
     }
     private func beginParagraphEdit(_ id: UUID) {
-        pausePlayback(); speech.stop(); selectedParagraphID = id
+        sequence.stop(); pausePlayback(); speech.stop(); selectedParagraphID = id
         do {
             if reading != language.mode && currentTranslation {
                 editingParagraph = try repository.translation(for: session.id)?.decoded().translated.first { $0.id == id }
@@ -625,7 +654,7 @@ struct SessionMediaView: View {
             reviewed = updated
         }
         edited = true
-        speech.stop()
+        sequence.stop(); speech.stop()
         try rebuildCues()
         if !currentTranslation {
             reading = language.mode

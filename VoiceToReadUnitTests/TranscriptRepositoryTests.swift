@@ -4,6 +4,31 @@ import SwiftData
 
 @MainActor
 final class TranscriptRepositoryTests: XCTestCase {
+    func testBookmarkFromSavedOrTranslatedParagraphUsesSameIDAndSurvivesReopening() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let id = try autoreleasepool { () throws -> UUID in
+            let repo = try TranscriptRepository(directory: directory)
+            let session = try repo.create(title: "Bookmark")
+            let segment = CaptionSegment(runID: UUID(), start: 0, end: 1, text: "Wrong word")
+            try repo.apply(.init(removedIDs: [], upserted: [segment]), to: session)
+            try repo.checkpoint(session, duration: 1, ended: true)
+            let corrected = [ReviewParagraph(id: segment.id, text: "Correct word")]
+            try repo.saveCorrections(corrected, for: session)
+            try repo.saveTranslation(TranslationSnapshot(source: corrected, generated: [.init(id: segment.id, text: "Palabra correcta")]), for: session)
+            try repo.toggleBookmark(paragraphID: segment.id, in: session)
+            XCTAssertEqual(try repo.bookmarks(for: session.id).first?.text, "Correct word")
+            return session.id
+        }
+        let repo = try TranscriptRepository(directory: directory)
+        let session = try XCTUnwrap(repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).first { $0.id == id })
+        let marker = try XCTUnwrap(repo.bookmarks(for: id).first)
+        XCTAssertEqual(marker.segmentID, session.captions.first?.id)
+        try repo.toggleBookmark(paragraphID: marker.segmentID, in: session)
+        XCTAssertTrue(try repo.bookmarks(for: id).isEmpty)
+        XCTAssertThrowsError(try repo.toggleBookmark(paragraphID: UUID(), in: session))
+    }
+
     func testV8MigrationTrashRestoreAndExpiryPreserveOriginalData() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent("Trash-\(UUID())")
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)

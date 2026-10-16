@@ -90,3 +90,7 @@ La web bilingüe se genera en `website/dist/`. La [guía de publicación y expli
 
 - [Escuchar traducciones: guía de uso inclusivo y desarrollo](translated-speech.md)
 - [Validación y pendientes de voz traducida](translated-speech-checkpoint.md)
+
+## Marcadores visibles y reproducción bilingüe
+
+[Guía de uso y desarrollo](bookmarks-and-bilingual-playback.md): un selector para leer y escuchar, original seguido de traducción, escucha directa en cada párrafo y marcadores compartidos por UUID. Incluye explicación paso a paso para estudiantes y límites de las pruebas.

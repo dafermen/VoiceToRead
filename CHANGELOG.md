@@ -1,3 +1,11 @@
+## VoiceToRead 1.0 — corrección de marcadores y escucha bilingüe
+
+- Hace visible Guardar/Quitar marcador en original, tarjetas bilingües, sesiones, traducción y reproductor; comparte identidad y persistencia.
+- Both/Ambos controla texto y audio: original seguido de traducción por párrafo; A mi ritmo espera tras ambos.
+- Escucha directa en párrafos de Traducción, con pausa/reanudar/detener y estado del idioma, sin abrir otra ventana.
+- Original sin grabación usa voz generada en la cola por párrafo. Cambiar selección o salir detiene la reproducción.
+- Guías de usuario, GitHub, arquitectura y estudiantes actualizadas: [detalle](docs/bookmarks-and-bilingual-playback.md), [verificación y entrega](docs/bookmarks-and-bilingual-playback-checkpoint.md).
+
 ## VoiceToRead 1.0 — reproducción unificada y traducción automática (2026-10-15)
 
 ## 2026-10-15 — opciones de accesibilidad y recuperación

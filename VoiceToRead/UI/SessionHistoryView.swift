@@ -344,7 +344,13 @@ struct SessionDetailView: View {
                 } else {
                     LazyVStack(alignment: .leading, spacing: 20) {
                         ForEach(Array(paragraphs.enumerated()), id: \.element.id) { index, paragraph in
-                            paragraphView(paragraph, index: index).id(paragraph.id)
+                            VStack(alignment: .leading, spacing: 4) {
+                                paragraphView(paragraph, index: index)
+                                BookmarkToggleButton(marked: bookmarks.contains { $0.segmentID == paragraph.id }) {
+                                    do { try repository.toggleBookmark(paragraphID: paragraph.id, in: session) }
+                                    catch { failure = error.localizedDescription }
+                                }.disabled(!canEdit).accessibilityIdentifier("savedBookmark-\(index)")
+                            }.id(paragraph.id)
                         }
                     }.scrollTargetLayout()
                 }
@@ -481,7 +487,7 @@ struct BookmarkListView: View {
                     Text("Saved corrections could not be loaded. Reopen this session.")
                 } else if bookmarks.isEmpty {
                     ContentUnavailableView("No bookmarks yet", systemImage: "bookmark",
-                        description: Text("Touch and hold a finished paragraph in Captions to save a phrase for later."))
+                        description: Text("Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again."))
                 }
                 if let corrections {
                     ForEach(bookmarks) { bookmark in
@@ -564,5 +570,18 @@ struct RecentlyDeletedView: View {
             do { try repository.restore(session) } catch { failure = error.localizedDescription }
         }.accessibilityIdentifier("restoreDeletedSession")
         Button("Delete permanently", systemImage: "trash", role: .destructive) { deleting = session }
+    }
+}
+
+
+struct BookmarkToggleButton: View {
+    let marked: Bool
+    let action: () -> Void
+    var body: some View {
+        Button(action: action) {
+            Label(uiKey(marked ? "Remove bookmark" : "Save bookmark"), systemImage: marked ? "bookmark.fill" : "bookmark")
+                .font(.caption).foregroundStyle(.tint).frame(minHeight: 44)
+        }.buttonStyle(.borderless)
+            .accessibilityValue(uiKey(marked ? "Bookmarked" : "Not bookmarked"))
     }
 }

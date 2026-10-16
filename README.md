@@ -25,7 +25,7 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 - Save/discard sessions, recover drafts, correct text, search transcripts, bookmark phrases and protect favorites from accidental deletion.
 - Replay continuously or one paragraph at a time with **At my pace**: previous, repeat and next; correct the selected phrase while paused. The caption reader fills the available height; secondary playback options collapse.
 - Export TXT/PDF, recorded audio and synchronized SRT/WebVTT subtitles. Timing after text edits is approximate.
-- Automatically translate finalized text after Stop on compatible devices, with progress and retry; Save/Discard remains your choice. **Listen to the corrected translation or original audio in one reader**, with matching controls, pause/resume and reading speed. Previous/Next select silently. Read original, translation or paired cards independently of the voice. Generated speech needs an available device voice.
+- Automatically translate finalized text after Stop on compatible devices, with progress and retry; Save/Discard remains your choice. **Listen to the corrected translation or original audio in one reader**, with matching controls, pause/resume and reading speed. Previous/Next select silently. One language choice controls text and sound: Both plays original then translation for each paragraph; At my pace stops after both. Translation paragraphs play inline, without opening another player. Generated speech needs an available device voice.
 - [Unified playback and automatic translation](docs/playback-unification.md): usage, student-oriented architecture and limitations; [validation checkpoint](docs/playback-unification-checkpoint.md).
 - Swipe left on a saved session (or use its actions button) for circular favorite/protect and delete controls. Protected sessions cannot be deleted; removing protection and deleting require separate confirmations.
 - Review bilingual text, practice phrases and compare temporary pronunciation recordings. Local word recognition is not pronunciation scoring.
@@ -65,3 +65,5 @@ The Mac script selects an available simulator, runs tests, builds Debug/Release 
 Responsible person: **Dario Fernando Meneses Ceron**. Support/privacy: **dariofernandomeneses@gmail.com**. Website: https://voicetoread.innovalogic.tech/ (Hostinger). Public privacy/support pages in both languages were verified over HTTPS on 2026-10-14. No open-source license has been granted; see LICENSE.
 
 Public release preparation: [submission kit](docs/store/submission-kit.md). Owner selected **free, no in-app purchases**, initially **United States and Colombia**. Nothing has been submitted to App Review.
+
+- [Visible bookmarks and bilingual paragraph playback: usage and developer guide](docs/bookmarks-and-bilingual-playback.md).

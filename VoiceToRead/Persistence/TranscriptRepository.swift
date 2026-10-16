@@ -230,6 +230,15 @@ final class TranscriptRepository {
         do { try context.save() } catch { context.rollback(); cacheSessionID = nil; throw error }
     }
 
+    /// A marker points to the stable original paragraph ID, even when created from a translation.
+    func toggleBookmark(paragraphID: UUID, in session: ConferenceSession) throws {
+        guard let paragraph = session.captions.first(where: { $0.id == paragraphID }),
+              try trash(for: session.id) == nil else { throw ReviewFailure.sessionChanged }
+        let text = try reviewedParagraphs(for: session).first { $0.id == paragraphID }?.text ?? paragraph.text
+        try toggleBookmark(CaptionSegment(id: paragraph.id, runID: paragraph.runID,
+            start: paragraph.start, end: paragraph.end, text: text), in: session)
+    }
+
     func removeBookmark(_ bookmark: CaptionBookmark) throws {
         context.delete(bookmark)
         do { try context.save() } catch { context.rollback(); cacheSessionID = nil; throw error }

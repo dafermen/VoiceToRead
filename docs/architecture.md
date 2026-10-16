@@ -2,7 +2,7 @@
 
 Actualización V9: [experiencia accesible, respuestas escritas y papelera recuperable](accessible-experience.md). La tabla `SessionTrash` se añade sin modificar los modelos históricos.
 
-Estado actual: **VoiceToRead 0.1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
+Estado actual: **VoiceToRead 1.0, esquema V9**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
 App -> AppRootView -> SessionCoordinator -> CaptionViewModel -> SpeechTranscribing.
 CaptionViewModel selects LegacySpeechTranscriber for Xcode 15.2 builds and older iOS versions. Swift 6.2+ builds select AppleSpeechTranscriber on iOS 26+. Both use AudioCaptureService and never fall back to server recognition. Modern conversion stays in its AudioConversion actor.
 MainActor owns observable UI state, capture/session control and SwiftData context. Conversion runs on its own actor.
@@ -90,4 +90,8 @@ CaptureLanguage is a persisted global default copied into the existing session l
 
 ## Actualización 23 — 2026-10-12
 
-El esquema actual es V8: SessionSchemaV7.models + SessionFavorite. El reproductor de sesiones usa segmentos de muestras limitados en AVAudioPlayerNode; el reproductor de práctica sigue separado. Ver [flujo y decisiones](at-my-pace.md).
+En aquel hito se usaba V8: SessionSchemaV7.models + SessionFavorite. El esquema actual V9 añade SessionTrash. El reproductor de sesiones usa segmentos de muestras limitados en AVAudioPlayerNode; el reproductor de práctica sigue separado. Ver [flujo y decisiones](at-my-pace.md).
+
+## Cola de escucha por idiomas y marcadores
+
+`ParagraphAudioStep` conserva UUID, idioma y rango opcional. `ParagraphPlayback` coordina finalizaciones de audio grabado y voz generada; las vistas comparten su orden original→traducción. La selección de idioma unifica lectura y escucha. Los marcadores de todas las vistas utilizan la misma identidad original y repositorio. No cambia V9. Ver [explicación para estudiantes](bookmarks-and-bilingual-playback.md).

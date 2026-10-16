@@ -186,10 +186,8 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["nextParagraphButton"].tap()
         XCTAssertEqual(play.label, "Play")
         XCTAssertEqual(app.staticTexts["playbackParagraphPosition"].label, "Paragraph 2 of 80")
-        let audioMenu = app.buttons["playbackAudioMenu"]
-        XCTAssertTrue(audioMenu.isEnabled)
-        audioMenu.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
-        app.buttons["Translated voice"].tap()
+        app.buttons["playbackTextMenu"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        app.buttons["Español"].tap()
         XCTAssertEqual(play.frame.size, original)
         XCTAssertEqual(reader.frame.height, originalHeight, accuracy: 2)
         XCTAssertEqual(play.label, "Play")
@@ -273,6 +271,28 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(row.waitForExistence(timeout: 2))
     }
 
+
+    @MainActor
+    func testVisibleBookmarksSaveRemoveAndReopen() throws {
+        let app = XCUIApplication(); app.launchArguments = ["--ui-test-review", "--ui-test-translation"]
+        app.launch(); XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap(); app.staticTexts["Review sample"].tap()
+        let mark = app.buttons["savedBookmark-0"]
+        XCTAssertTrue(mark.waitForExistence(timeout: 5))
+        if mark.label == "Remove bookmark" { mark.tap() }
+        mark.tap(); XCTAssertEqual(mark.label, "Remove bookmark")
+        app.buttons["Bookmarks"].tap()
+        XCTAssertFalse(app.staticTexts["No bookmarks yet"].exists)
+        app.buttons["Done"].tap()
+        app.buttons["sessionTranslationButton"].tap()
+        let translated = app.buttons["translationBookmark-0"]
+        XCTAssertTrue(translated.waitForExistence(timeout: 5)); XCTAssertEqual(translated.label, "Remove bookmark")
+        translated.tap(); XCTAssertEqual(translated.label, "Save bookmark")
+        app.navigationBars["Translation"].buttons["Done"].tap()
+        XCTAssertEqual(mark.label, "Save bookmark")
+        app.terminate()
+    }
+
     @MainActor
     func testTranslationSpeechWithoutRecordingEnglishToSpanish() throws { try checkTranslationSpeech(reverse: false) }
     @MainActor
@@ -287,23 +307,20 @@ final class HomeScreenTests: XCTestCase {
         app.tabBars.buttons["Sessions"].tap()
         app.staticTexts["Review sample"].tap()
         app.buttons["sessionTranslationButton"].tap()
-        XCTAssertTrue(app.buttons["speakTranslation-0"].waitForExistence(timeout: 8))
-        XCTAssertFalse(app.buttons["listenTranslated-0"].exists)
-        app.buttons["speakTranslation-0"].tap()
-        let play = app.buttons["recordingPlayButton"]
-        XCTAssertTrue(play.waitForExistence(timeout: 8))
-        XCTAssertEqual(play.label, "Play")
-        play.tap()
+        let play = app.buttons["playTranslationParagraph-0"]
+        XCTAssertTrue(play.waitForExistence(timeout: 8)); play.tap()
+        XCTAssertFalse(app.buttons["recordingPlayButton"].exists, "Inline listening must not open another player")
         XCTAssertEqual(play.label, "Pause")
-        play.tap()
-        XCTAssertEqual(play.label, "Resume")
+        play.tap(); XCTAssertEqual(play.label, "Resume")
+        app.buttons["stopTranslationParagraph-0"].tap()
+        XCTAssertEqual(play.label, "Listen to translation")
+        app.segmentedControls["translationLanguagePicker"].buttons["Both"].tap()
+        XCTAssertEqual(play.label, "Listen to both")
+        play.tap(); XCTAssertEqual(play.label, "Pause")
+        XCTAssertEqual(app.staticTexts["inlinePlaybackStatus"].label, "Playing original")
+        app.buttons["stopTranslationParagraph-0"].tap()
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        shot.name = reverse ? "Unified-translated-English" : "Unified-translated-Spanish"
-        shot.lifetime = .keepAlways; add(shot)
-        app.buttons["nextParagraphButton"].tap()
-        XCTAssertEqual(play.label, "Play", "Navigation must not auto-play")
-        app.buttons["previousParagraphButton"].tap()
-        XCTAssertFalse(app.buttons["previousParagraphButton"].isEnabled)
+        shot.name = "Inline-bilingual-paragraph"; shot.lifetime = .keepAlways; add(shot)
         app.terminate()
     }
 
@@ -338,6 +355,11 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.staticTexts[sourceID].exists, "Original and translation must remain paired by paragraph")
         XCTAssertTrue(translated.label.contains(spanish ? "Test translation" : "Traducción de prueba"))
         XCTAssertTrue(app.staticTexts[sourceID].label.contains(spanish ? "Párrafo" : "Paragraph"))
+        let bookmarkID = translated.identifier.replacingOccurrences(of: "liveTranslated-", with: "liveBookmark-")
+        let mark = app.buttons[bookmarkID]
+        XCTAssertTrue(mark.exists)
+        mark.tap(); XCTAssertEqual(mark.label, "Remove bookmark")
+        mark.tap(); XCTAssertEqual(mark.label, "Save bookmark")
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = spanish ? "Live-both-Spanish" : "Live-both-English"; shot.lifetime = .keepAlways; add(shot)
         selector.tap(); app.buttons[spanish ? "Translation English" : "Translation Español"].tap()
@@ -712,7 +734,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(paragraph.label.contains("Traducción revisada."))
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = "Spanish-translation-reader"; shot.lifetime = .keepAlways; add(shot)
-        app.buttons["listenTranslated-0"].tap()
+        app.buttons["translatedMediaButton"].tap()
         let play = app.buttons["recordingPlayButton"]
         XCTAssertTrue(play.waitForExistence(timeout: 5))
         play.tap()
@@ -1231,7 +1253,9 @@ final class HomeScreenTests: XCTestCase {
         // scroll value while SwiftUI is laying out the initial 320 paragraphs.
         let incoming = reader.staticTexts.matching(NSPredicate(
             format: "label CONTAINS %@", "New captions keep arriving while you read.")).firstMatch
-        XCTAssertTrue(incoming.waitForExistence(timeout: 20))
+        // The fixture inserts and persists 320 paragraphs before emitting this text.
+        // Wait for the actual result; this is not a production speech-latency assertion.
+        XCTAssertTrue(incoming.waitForExistence(timeout: 120))
         reader.swipeDown()
         XCTAssertTrue(app.buttons["backToLiveButton"].waitForExistence(timeout: 5))
         let visible = reader.staticTexts.allElementsBoundByIndex.first {
@@ -1246,9 +1270,11 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(paragraph.isHittable)
         XCTAssertEqual(paragraph.frame.minY, oldY, accuracy: 3)
         XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Pause")
-        paragraph.press(forDuration: 1.2)
-        XCTAssertTrue(app.buttons["Save bookmark"].waitForExistence(timeout: 5))
-        app.buttons["Save bookmark"].tap()
+        let markerID = paragraph.identifier.replacingOccurrences(of: "caption-", with: "liveBookmark-")
+        let saveMarker = app.buttons[markerID]
+        XCTAssertTrue(saveMarker.exists)
+        saveMarker.tap()
+        XCTAssertEqual(saveMarker.label, "Remove bookmark")
         app.buttons["sessionActionsButton"].tap()
         app.buttons["Bookmarks"].tap()
         XCTAssertTrue(app.staticTexts[label].waitForExistence(timeout: 5))

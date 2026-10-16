@@ -172,3 +172,7 @@ Ver [interfaz bilingüe y primera preparación](interface-and-onboarding.md). El
 Corrección: `beginParagraphEdit` pausa → `ParagraphEditorView` modifica un borrador con Undo/Redo → `saveParagraph` verifica que el párrafo todavía corresponde al texto almacenado → `saveCorrections` o `saveTranslation` persiste → `rebuildCues` actualiza lectura/exportación. No se reescribe el CAF.
 
 Protección: botón o swipe → `setFavorite` → fila única V8. Borrado de sesión o audio → `requireUnprotected` antes de cualquier efecto. Para quitar protección se confirma primero; borrar conserva su propia confirmación posterior. Los datos antiguos no se convierten automáticamente en favoritos.
+
+## Marcadores visibles y reproducción bilingüe
+
+[Guía de uso y desarrollo](bookmarks-and-bilingual-playback.md): un selector para leer y escuchar, original seguido de traducción, escucha directa en cada párrafo y marcadores compartidos por UUID. Incluye explicación paso a paso para estudiantes y límites de las pruebas.

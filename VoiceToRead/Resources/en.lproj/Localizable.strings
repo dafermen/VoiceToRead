@@ -688,3 +688,23 @@
 "Home" = "Home";
 
 "Listening paused. Microphone is off. Tap Resume recording to continue." = "Listening paused. Microphone is off. Tap Resume recording to continue.";
+
+"Read and listen" = "Read and listen";
+
+"Original, then translation · each paragraph" = "Original, then translation · each paragraph";
+
+"Generated voice · original text" = "Generated voice · original text";
+
+"Playing original" = "Playing original";
+
+"Playing translation" = "Playing translation";
+
+"Listen to both" = "Listen to both";
+
+"No playable text in this paragraph." = "No playable text in this paragraph.";
+
+"Playback interrupted. Tap Play to restart this paragraph." = "Playback interrupted. Tap Play to restart this paragraph.";
+
+"Not bookmarked" = "Not bookmarked";
+
+"Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again." = "Tap Save bookmark beside a finished paragraph in Captions, Sessions or Translation. Open Bookmarks to find it again.";

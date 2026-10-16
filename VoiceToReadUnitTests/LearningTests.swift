@@ -60,14 +60,19 @@ import AVFoundation
         XCTAssertNotNil(practice.message)
     }
     func testPracticeLatePermissionCannotStartRecordingAfterExit() async {
+        let requested = expectation(description: "Permission request started")
+        var permission: CheckedContinuation<Bool, Never>?
         let practice = PronunciationPractice(microphonePermission: {
-            try? await Task.sleep(for: .milliseconds(100))
-            return true
+            await withCheckedContinuation { continuation in
+                permission = continuation
+                requested.fulfill()
+            }
         })
         let pending = Task { await practice.startRecording() }
-        await Task.yield()
+        await fulfillment(of: [requested], timeout: 3)
         XCTAssertEqual(practice.activity, .permission)
         practice.close()
+        permission?.resume(returning: true)
         await pending.value
         XCTAssertEqual(practice.activity, .idle)
         XCTAssertNil(practice.take)
