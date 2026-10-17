@@ -7,11 +7,11 @@ Conversación (antes Hablar y traducir) permite pedir algo, hacer una pregunta y
 ## Uso: dos toques por turno
 
 1. Antes de empezar una grabación, abre el **icono de conversación**, junto al selector de subtítulos en vivo. También está en Ajustes y el inicio sencillo. No está disponible durante otra captura o traducción automática de sesión.
-2. Pulsa **Hablar en español**. Habla sin mantener pulsado el botón. Este cambia a **Terminar y reproducir en inglés**: púlsalo cuando acabes. La app finaliza el reconocimiento, traduce y reproduce en inglés automáticamente.
+2. Los dos botones están en la misma fila: **español a la izquierda e inglés a la derecha**. Pulsa **Hablar en español**. Habla sin mantener pulsado el botón. Este cambia a **Terminar y reproducir en inglés**: púlsalo cuando acabes. La app finaliza el reconocimiento, traduce y reproduce en inglés automáticamente.
 3. Para la respuesta, pulsa **Hablar en inglés**. Cuando la otra persona termine, pulsa el mismo botón, ahora **Terminar y reproducir en español**. Oirás la traducción española.
 4. Los dos botones permanecen visibles; el turno incompatible queda deshabilitado. El estado indica el idioma que está escuchando, traduciendo o reproduciendo. Original y traducción aparecen en tarjetas con etiquetas, colores y el mismo tamaño de lectura.
-5. **Detener audio** corta la voz y conserva el texto. **Reproducir en inglés/español** repite la última traducción. El siguiente turno siempre requiere una pulsación nueva; no cambia de persona automáticamente.
-6. Para corregir un error, pulsa **Corregir mensaje** y después **Traducir y reproducir**. **Escribir en su lugar** permite escoger español o inglés y escribir sin hablar. Cancelar el editor conserva el intercambio anterior. Si falla la traducción, puedes reintentar con **Traducir y reproducir** sin volver a hablar.
+5. **Reproducir** y **Corregir mensaje** comparten una fila debajo de las tarjetas. Se retira Escribir en su lugar para simplificar esta pantalla. **Detener audio** corta la voz y conserva el texto. **Reproducir en inglés/español** repite la última traducción. El siguiente turno siempre requiere una pulsación nueva; no cambia de persona automáticamente.
+6. Para corregir un error, pulsa **Corregir mensaje** y después **Traducir y reproducir**. Cancelar el editor conserva el intercambio anterior. Si falla la traducción, puedes reintentar con **Traducir y reproducir** sin volver a hablar.
 
 Cada turno conserva sus textos hasta iniciar otro, aplicar una edición o cerrar la pantalla. No hay historial de conversación guardado. El idioma del turno no cambia el idioma global de captura ni el idioma de los menús.
 
@@ -44,7 +44,7 @@ Conversación no guarda grabaciones ni sesiones y no cambia Guardar audio. Reuti
 
 ## Verificación
 
-Las pruebas unitarias cubren ambos sentidos, revisión final antes de voz, bloqueo de otra captura durante reproducción, errores/reintento, callbacks antiguos, interrupciones, cancelación, pausa automática y límites manuales. Las pruebas de interfaz recorren dos turnos, detener, reabrir, escribir, cancelar una corrección y recordar el modo.
+Las pruebas unitarias cubren ambos sentidos, revisión final antes de voz, bloqueo de otra captura durante reproducción, errores/reintento, callbacks antiguos, interrupciones, cancelación, pausa automática y límites manuales. Las pruebas de interfaz recorren dos turnos, detener, reabrir, cancelar una corrección y recordar el modo.
 
 Los dobles de micrófono, traducción y voz de las pruebas UI son explícitos y solo existen en DEBUG. Verifican el flujo, no la calidad de los servicios reales. Probar físicamente español → inglés y respuesta inglesa → español, permisos/descargas, ruido, auriculares, llamada/alarma, letra grande y VoiceOver antes de dar por validada la experiencia completa.
 

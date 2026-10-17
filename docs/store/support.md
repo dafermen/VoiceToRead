@@ -8,7 +8,7 @@ Website / Sitio: [innovalogic.tech](https://innovalogic.tech/), hosted with / al
 
 VoiceToRead ayuda a seguir conversaciones y practicar idiomas con subtítulos, traducción y grabaciones locales. Funciona en iPhone y iPad compatibles; la disponibilidad de modelos depende del dispositivo, idioma y sistema.
 
-- **Conversar en dos idiomas:** abre Conversación. Pulsa Hablar en español y luego Terminar y reproducir en inglés. Para la respuesta, Hablar en inglés y luego Terminar y reproducir en español. Detener audio conserva el texto; puedes repetir, corregir o escribir. Automático está en Opciones; el modo inicial es Por botón. No guarda esta conversación. Requiere los recursos de traducción y voz preparados.
+- **Conversar en dos idiomas:** abre Conversación. Pulsa Hablar en español y luego Terminar y reproducir en inglés. Para la respuesta, Hablar en inglés y luego Terminar y reproducir en español. Detener audio conserva el texto; puedes repetir o corregir. Automático está en Opciones; el modo inicial es Por botón. No guarda esta conversación. Requiere los recursos de traducción y voz preparados.
 - **No escucha:** revisa el permiso de micrófono y Preparación sin conexión en Ajustes. Descarga/prepara el idioma indicado mientras tienes Internet. El idioma de interfaz no cambia el idioma hablado.
 - **Se pausó por una alarma/llamada:** pulsa Reanudar cuando termine la interrupción. La app no reinicia el micrófono automáticamente.
 - **No hay audio para reproducir:** Guardar audio debe estar activado antes de comenzar. No se puede reconstruir una grabación que no se guardó.
@@ -25,7 +25,7 @@ Al escribir al soporte, indica versión/build, modelo, iOS/iPadOS y pasos para r
 
 VoiceToRead helps you follow conversations and practice a language using captions, translation and local recordings. Compatible iPhone and iPad devices are supported; models depend on device, language and OS.
 
-- **Two-way conversation:** open Conversation. Tap Speak Spanish, then Finish & play English. For the reply, tap Speak English, then Finish & play Spanish. Stop audio keeps the text; replay, correct or type instead. Automatic is under Options; By button is the default. This conversation is not saved. Prepared translation and voice resources are required.
+- **Two-way conversation:** open Conversation. Tap Speak Spanish, then Finish & play English. For the reply, tap Speak English, then Finish & play Spanish. Stop audio keeps the text; replay or correct. Automatic is under Options; By button is the default. This conversation is not saved. Prepared translation and voice resources are required.
 - **Not listening:** check microphone permission and Check preparation in Settings. Prepare the selected spoken language while online. Interface language and spoken language are separate choices.
 - **Alarm/call paused capture:** choose Resume after the interruption. The microphone never restarts automatically.
 - **No playback audio:** Save audio must be enabled before starting. Unsaved audio cannot be reconstructed.

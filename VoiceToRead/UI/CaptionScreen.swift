@@ -402,7 +402,7 @@ struct CaptionScreen: View {
     /// Same conversation entry as Settings, compact beside the live language selector.
     @ViewBuilder private var conversationButton: some View {
         if let speakAndTranslate {
-            Button("Conversation", systemImage: "bubble.left.and.bubble.right.fill", action: speakAndTranslate)
+            Button("Conversation", systemImage: "bubble.left.and.bubble.right", action: speakAndTranslate)
                 .labelStyle(AccessibleControlLabelStyle())
                 .font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
                 .help("Conversation").disabled(!canSpeakAndTranslate)

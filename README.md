@@ -38,7 +38,7 @@ See [accessible listening and reading](docs/translated-speech.md) for user steps
 
 ## Conversation: Spanish ↔ English
 
-Two taps per turn: **Speak Spanish → Finish & play English**, then **Speak English → Finish & play Spanish** for the reply. No need to hold a button or change global settings. Both texts remain in labeled cards; stop/replay audio, correct a message, or type instead. The microphone stays off during playback and each turn starts explicitly. **By button** is the default; Automatic pause detection is under Options. Conversations are temporary: no audio file or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
+Two taps per turn: **Speak Spanish → Finish & play English**, then **Speak English → Finish & play Spanish** for the reply. No need to hold a button or change global settings. Spanish and English controls share one row, and replay/correction share another. Both texts remain in labeled cards; stop/replay audio or correct a message. The microphone stays off during playback and each turn starts explicitly. **By button** is the default; Automatic pause detection is under Options. Conversations are temporary: no audio file or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
 
 ## Listening comfort
 

@@ -1,3 +1,13 @@
+# Ajuste visual de Conversación — 2026-10-16
+
+Español/inglés en una fila y reproducir/corregir en otra; Escribir en su lugar retirado; acceso con símbolo sin relleno. Se conserva el flujo de dos toques y la corrección del mensaje. La documentación de uso, desarrollo, soporte y revisión se actualiza con estos cambios. Verificación completada:
+
+- iPhone 15 / iOS 17.2: 2 pruebas UI aprobadas (`/private/tmp/vtr-compact-conversation.xcresult`): ambos sentidos, alineación horizontal, ausencia de Type instead, cancelación de corrección y persistencia de opciones.
+- iPad Air 5 / iOS 17.2: 1 prueba UI aprobada (`/private/tmp/vtr-compact-conversation-ipad.xcresult`).
+- Capturas: [iPhone](qa/speak-and-translate/compact-iphone.png), [iPad](qa/speak-and-translate/compact-ipad.png). Traducción/voz simuladas únicamente en DEBUG.
+- Compilación Debug, localización (724 claves + 2 permisos; 471 extraídas cubiertas), metadatos App Store, sitio de 10 páginas y diff comprobados. Paquetes web y textos App Store regenerados localmente. Publicación de Hostinger no realizada.
+- Sin cambios al reconocimiento, traducción o motor de voz. Distribución por Xcode Cloud se confirma aparte de la validación local.
+
 # Entrega: Conversación bilingüe — 2026-10-16
 
 ## Implementación actual

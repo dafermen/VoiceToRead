@@ -1,3 +1,10 @@
+## 2026-10-16 — controles de conversación más compactos
+
+- Español a la izquierda e inglés a la derecha en una fila, también en iPhone.
+- Reproducir y Corregir mensaje en una misma fila, con etiquetas que se ajustan al espacio.
+- Retira Escribir en su lugar; conserva la corrección del texto reconocido.
+- Icono de Conversación sin relleno, uniforme con las herramientas del lector.
+
 ## 2026-10-16 — conversación bilingüe en dos toques
 
 - Español → inglés e inglés → español con dos botones visibles: tocar para hablar y volver a tocar para terminar, traducir y reproducir.

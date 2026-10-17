@@ -190,7 +190,7 @@ struct SpeakTranslateEntry: View {
     let coordinator: SessionCoordinator
     @State private var showing = false
     var body: some View {
-        Button { showing = true } label: { Label("Conversation", systemImage: "bubble.left.and.bubble.right.fill") }
+        Button { showing = true } label: { Label("Conversation", systemImage: "bubble.left.and.bubble.right") }
             .accessibilityIdentifier("speakTranslateEntry")
             .disabled(coordinator.caption.state.active || coordinator.caption.state.busy ||
                       coordinator.caption.preparationPending || coordinator.automaticTranslationJob != nil)
@@ -210,8 +210,6 @@ struct SpeakTranslateView: View {
     let settings: AppSettings
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
-    @Environment(\.horizontalSizeClass) private var widthClass
-    @Environment(\.dynamicTypeSize) private var typeSize
     @State private var model = SpeakTranslateModel()
     // A new preference deliberately makes two-tap conversation the default for existing users too.
     @AppStorage("conversationTurnMode") private var savedMode = SpeakTranslateModel.Mode.byButton.rawValue
@@ -283,8 +281,8 @@ struct SpeakTranslateView: View {
     }
 
     private var turnControls: some View {
-        (widthClass == .regular && !typeSize.isAccessibilitySize
-            ? AnyLayout(HStackLayout(spacing: 12)) : AnyLayout(VStackLayout(spacing: 10))) {
+        // Stable left/right language positions; text wraps instead of shrinking.
+        HStack(spacing: 10) {
             turnButton(.spanish)
             turnButton(.english)
         }
@@ -294,16 +292,18 @@ struct SpeakTranslateView: View {
         return Button {
             if listening { model.finish() } else { model.start(language: language) }
         } label: {
-            HStack(spacing: 12) {
-                Image(systemName: listening ? "stop.fill" : "mic.fill").font(.title2)
-                VStack(alignment: .leading, spacing: 3) {
+            VStack(spacing: 4) {
+                Label {
                     Text(uiKey(listening
                         ? (language == .spanish ? "Finish & play English" : "Finish & play Spanish")
-                        : (language == .spanish ? "Speak Spanish" : "Speak English"))).font(.headline)
-                    Text(verbatim: language == .spanish ? "Español → English" : "English → Español").font(.subheadline)
-                }
-                Spacer(minLength: 0)
-            }.padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: 48).contentShape(Rectangle())
+                        : (language == .spanish ? "Speak Spanish" : "Speak English")))
+                } icon: {
+                    Image(systemName: listening ? "stop.fill" : "mic.fill")
+                }.font(.headline)
+                Text(verbatim: language == .spanish ? "Español → English" : "English → Español")
+                    .font(.caption)
+            }.multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                .padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: 48).contentShape(Rectangle())
         }.buttonStyle(.borderedProminent).tint(language == .spanish ? .blue : .indigo)
             .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported))
             .accessibilityIdentifier(language == .spanish ? "conversationSpanishTurn" : "conversationEnglishTurn")
@@ -322,27 +322,28 @@ struct SpeakTranslateView: View {
         }
     }
     private var secondaryActions: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        HStack(spacing: 10) {
             if !model.translated.isEmpty {
-                Button(uiKey(model.language == .spanish ? "Play English" : "Play Spanish"), systemImage: "speaker.wave.2.fill") { model.play() }
-                    .disabled(!model.canEdit).frame(minHeight: 44).accessibilityIdentifier("conversationPlay")
+                Button { model.play() } label: {
+                    Label(uiKey(model.language == .spanish ? "Play English" : "Play Spanish"), systemImage: "speaker.wave.2.fill")
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }.disabled(!model.canEdit).accessibilityIdentifier("conversationPlay")
+            } else if !model.source.isEmpty && model.canEdit {
+                Button { model.translate() } label: {
+                    Label("Translate and play", systemImage: "character.bubble")
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }.disabled(!TranslationJob.supported).accessibilityIdentifier("conversationTranslate")
             }
             if !model.source.isEmpty {
-                if model.translated.isEmpty && model.canEdit {
-                    Button("Translate and play", systemImage: "character.bubble") { model.translate() }
-                        .disabled(!TranslationJob.supported).frame(minHeight: 44)
-                        .accessibilityIdentifier("conversationTranslate")
-                }
-                Button("Correct message", systemImage: "pencil") {
+                Button {
                     editor = ConversationEdit(language: model.language, text: model.source)
-                }.disabled(!model.canEdit).frame(minHeight: 44).accessibilityIdentifier("conversationCorrect")
+                } label: {
+                    Label("Correct message", systemImage: "pencil")
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }.disabled(!model.canEdit).accessibilityIdentifier("conversationCorrect")
             }
-            Menu {
-                Button("Write in Spanish") { editor = ConversationEdit(language: .spanish, text: "") }
-                Button("Write in English") { editor = ConversationEdit(language: .english, text: "") }
-            } label: { Label("Type instead", systemImage: "keyboard").frame(minHeight: 44) }
-                .disabled(!model.canEdit || !TranslationJob.supported).accessibilityIdentifier("conversationType")
-        }.buttonStyle(.bordered)
+        }.buttonStyle(.bordered).multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
     }
     private var options: some View {
         NavigationStack {
