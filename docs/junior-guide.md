@@ -292,7 +292,7 @@ Las pruebas UI usan respuestas prefijadas dentro de `#if DEBUG`. Verifican parej
 
 ### Tarjetas bilingües (fuente 27)
 
-`LiveLanguageCard` es un `ViewModifier`: decora una vista sin cambiar sus datos ni la traducción. Recibe `CaptureLanguage`, por eso inglés siempre usa azul y español verde aunque se invierta la captura. `LiveSpanishView` aplica el mismo modifier al original, a la traducción pendiente y al provisional en modo Ambos. Los modos de un solo idioma conservan su presentación.
+`LiveLanguageCard` es un `ViewModifier`: decora una vista sin cambiar sus datos ni la traducción. Recibe la preferencia `LanguageColor` resuelta a partir de `CaptureLanguage`; azul/verde son los valores iniciales, personalizables aunque se invierta la captura. `LiveSpanishView` aplica el mismo modifier al original, a la traducción pendiente y al provisional en modo Ambos. Los modos de un solo idioma conservan su presentación.
 
 El contenido usa `ReaderParagraph`, que ya resuelve tamaño, interlineado, selección y renglones. Un fondo `RoundedRectangle` añade relleno, borde y sombra sin añadir elementos a VoiceOver. Las etiquetas de idioma evitan depender del color. La preferencia de alto contraste llega desde `CaptionScreen`; también se respeta el contraste aumentado del sistema. En esos casos el fondo es blanco/negro y el borde más marcado. `@ViewBuilder` permite devolver vistas distintas al activar/desactivar la tarjeta; no omitirlo en helpers condicionales (ver incidente de fuente 26).
 
@@ -349,3 +349,7 @@ Ejercicio: abre Texto y traducción, corrige un párrafo y luego entra en Audio 
 El editor trabaja sobre una copia: cancelar no borra las tarjetas. Un resultado de traducción se aplica solo al identificador de trabajo actual; así una respuesta tardía no habla después de Cancelar. Ejercicio: seguir un turno inglés desde el botón hasta la voz española, detenerla y comenzar uno español; observar que el idioma global y las sesiones no cambian. Consulta [el flujo, límites y pruebas](speak-and-translate.md).
 
 Ajuste visual de Conversación: dos `HStack` mantienen español/inglés y reproducir/corregir en sus respectivas filas, también en iPhone. Las etiquetas admiten varias líneas y conservan áreas de toque amplias. Se retiró el menú Escribir en su lugar; el editor sigue disponible para corregir un turno reconocido. El icono de acceso usa la variante de contorno del mismo símbolo.
+
+## Colores por idioma
+
+La paleta tiene una sola definición para botones y tarjetas. Los ajustes persisten como identificadores de color, independientes del idioma hablado y sin migrar sesiones. Alto contraste tiene prioridad. Consulta [uso, flujo de datos y pruebas](language-colors.md).

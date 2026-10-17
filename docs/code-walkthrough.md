@@ -205,3 +205,7 @@ Ejercicio: abre Texto y traducción, corrige un párrafo y luego entra en Audio 
 El editor trabaja sobre una copia: cancelar no borra las tarjetas. Un resultado de traducción se aplica solo al identificador de trabajo actual; así una respuesta tardía no habla después de Cancelar. Ejercicio: seguir un turno inglés desde el botón hasta la voz española, detenerla y comenzar uno español; observar que el idioma global y las sesiones no cambian. Consulta [el flujo, límites y pruebas](speak-and-translate.md).
 
 Ajuste visual de Conversación: dos `HStack` mantienen español/inglés y reproducir/corregir en sus respectivas filas, también en iPhone. Las etiquetas admiten varias líneas y conservan áreas de toque amplias. Se retiró el menú Escribir en su lugar; el editor sigue disponible para corregir un turno reconocido. El icono de acceso usa la variante de contorno del mismo símbolo.
+
+## Paleta compartida de idiomas
+
+`AppSettings.color(for:)` conecta la preferencia guardada con `LanguageButtonStyle` y `LiveLanguageCard`. `PlaybackTextCard` reutiliza esta decisión para original y traducción; `LiveSpanishView` recibe ambos colores desde el lector. Ver [arquitectura y prioridades de color](language-colors.md).

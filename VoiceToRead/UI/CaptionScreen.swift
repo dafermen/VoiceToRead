@@ -55,7 +55,8 @@ struct CaptionScreen: View {
                             ReviewParagraph(id: $0.id, text: $0.text)
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
-                           lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast)
+                           lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
+                           englishColor: settings.englishColor, spanishColor: settings.spanishColor)
                             .id(model.language)
                     } else { transcript }
                 }

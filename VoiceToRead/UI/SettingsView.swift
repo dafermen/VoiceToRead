@@ -26,6 +26,10 @@ struct SettingsView: View {
                 Text("Changes the app's menus and messages. It does not change speech recognition, recordings or translations.")
                     .font(.caption)
             }
+            Section("Language colors") {
+                NavigationLink("Language colors") { LanguageColorsView(settings: settings) }
+                    .accessibilityIdentifier("languageColorsLink")
+            }
             Section("Voice capture and captions") {
                 Picker("Spoken language", selection: $settings.captureLanguage) {
                     ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.name).tag($0) }
@@ -348,5 +352,47 @@ struct PracticeSessionPicker: View {
                     .disabled(coordinator.caption.state.active || coordinator.caption.state.busy)
             }
         }.navigationTitle("Language practice")
+    }
+}
+
+/// Changes presentation only: never reconfigure recognition or translation here.
+struct LanguageColorsView: View {
+    @Bindable var settings: AppSettings
+    var body: some View {
+        Form {
+            Section {
+                Text("Each language keeps its color in conversation buttons, bilingual captions and playback. This does not change the spoken language.")
+                colorPicker(.spanish, selection: $settings.spanishColor)
+                colorPicker(.english, selection: $settings.englishColor)
+            }
+            Section("Preview") {
+                PlaybackTextCard(text: "Hola", language: .spanish, translated: false,
+                                 settings: settings, identifier: "spanishColorPreview")
+                PlaybackTextCard(text: "Hello", language: .english, translated: true,
+                                 settings: settings, identifier: "englishColorPreview")
+                Text("Language names remain visible. High contrast takes priority over colored backgrounds. Reading paper changes the surrounding area, not these cards.").font(.caption)
+                if settings.spanishColor == settings.englishColor {
+                    Text("Both languages use the same color. Choose different colors if you want to distinguish them visually.").font(.caption)
+                }
+            }
+            Section {
+                Button("Restore default colors") { settings.restoreLanguageColors() }
+                    .accessibilityIdentifier("restoreLanguageColors")
+            }
+        }.navigationTitle("Language colors").navigationBarTitleDisplayMode(.inline)
+    }
+    private func colorPicker(_ language: CaptureLanguage, selection: Binding<LanguageColor>) -> some View {
+        Picker(selection: selection) {
+            ForEach(LanguageColor.allCases, id: \.self) { color in
+                Text(LocalizedStringKey(color.label)).tag(color)
+            }
+        } label: {
+            HStack {
+                Circle().fill(selection.wrappedValue.accent).frame(width: 12, height: 12).accessibilityHidden(true)
+                Text(verbatim: language.name)
+            }
+        }
+        .accessibilityValue(Text(LocalizedStringKey(selection.wrappedValue.label)))
+        .accessibilityIdentifier(language == .spanish ? "spanishColorPicker" : "englishColorPicker")
     }
 }

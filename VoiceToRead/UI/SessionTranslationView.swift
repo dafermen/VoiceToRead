@@ -416,6 +416,9 @@ struct LiveSpanishView: View {
     var bold = false
     var ruled = false
     var highContrast = false
+    var englishColor: LanguageColor = .blue
+    var spanishColor: LanguageColor = .green
+    private func color(for language: CaptureLanguage) -> LanguageColor { language == .english ? englishColor : spanishColor }
     @State private var buffer = LiveTranslationBuffer()
     @State private var job: TranslationJob?
     @State private var failure: String?
@@ -439,7 +442,7 @@ struct LiveSpanishView: View {
                                 Text("Live · may change").font(.caption).foregroundStyle(.secondary)
                                 readerText(provisionalText)
                                     .accessibilityIdentifier("liveBilingualProvisional")
-                            }.modifier(LiveLanguageCard(language: language, highContrast: highContrast))
+                            }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
                         }
                         Color.clear.frame(height: 1).id("translationBottom")
                     }.padding()
@@ -499,7 +502,7 @@ struct LiveSpanishView: View {
                     Text("Original \(language.name)").font(.caption.weight(.semibold))
                     readerText(paragraph.text)
                         .accessibilityIdentifier("liveOriginal-" + paragraph.id.uuidString)
-                }.modifier(LiveLanguageCard(language: language, highContrast: highContrast, enabled: display == .both))
+                }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast, enabled: display == .both))
             }
             if let translated = buffer.translated[paragraph.id] {
                 VStack(alignment: .leading, spacing: 4) {
@@ -508,14 +511,14 @@ struct LiveSpanishView: View {
                     }
                     readerText(translated)
                         .accessibilityIdentifier("liveTranslated-" + paragraph.id.uuidString)
-                }.modifier(LiveLanguageCard(language: language.opposite, highContrast: highContrast, enabled: display == .both))
+                }.modifier(LiveLanguageCard(color: color(for: language.opposite), highContrast: highContrast, enabled: display == .both))
             } else {
                 VStack(alignment: .leading, spacing: 4) {
                     if display == .both {
                         Text("Translation \(language.opposite.name)").font(.caption.weight(.semibold))
                     }
                     Text("Waiting for translation…").font(.caption).foregroundStyle(.secondary)
-                }.modifier(LiveLanguageCard(language: language.opposite, highContrast: highContrast, enabled: display == .both))
+                }.modifier(LiveLanguageCard(color: color(for: language.opposite), highContrast: highContrast, enabled: display == .both))
             }
         }.frame(maxWidth: .infinity, alignment: .leading)
             .accessibilityElement(children: .contain)
@@ -532,38 +535,26 @@ struct LiveSpanishView: View {
     }
 }
 
-/// El color pertenece al idioma, no al rol original/traducción: inglés siempre azul,
-/// español siempre verde. Las etiquetas siguen distinguiéndolos sin depender del color.
-/// El modifier conserva el texto seleccionable, sus renglones y los elementos de VoiceOver.
+/// The language palette is shared with conversation buttons and saved-session cards.
+/// Paper remains the reader background; it does not override language identity.
+/// Labels and high contrast remain usable without color perception.
 struct LiveLanguageCard: ViewModifier {
-    let language: CaptureLanguage
+    let color: LanguageColor
     let highContrast: Bool
     var enabled = true
-    var paper: ReaderPaper = .system
     @Environment(\.colorScheme) private var scheme
     @Environment(\.colorSchemeContrast) private var contrast
 
     private var strongContrast: Bool { highContrast || contrast == .increased }
-    private var accent: Color { language == .english ? .blue : .green }
-    private var fill: Color {
-        if strongContrast { return scheme == .dark ? .black : .white }
-        if paper != .system { return paper.color }
-        if scheme == .dark {
-            return language == .english
-                ? Color(red: 0.08, green: 0.16, blue: 0.24)
-                : Color(red: 0.08, green: 0.20, blue: 0.15)
-        }
-        return language == .english
-            ? Color(red: 0.89, green: 0.95, blue: 1)
-            : Color(red: 0.90, green: 0.97, blue: 0.91)
-    }
+    private var accent: Color { color.accent }
+    private var fill: Color { color.background(scheme, highContrast: strongContrast) }
 
     @ViewBuilder func body(content: Content) -> some View {
         if enabled {
             content
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(12)
-                .foregroundStyle(!strongContrast && paper != .system ? Color.black : Color.primary)
+                .foregroundStyle(Color.primary)
                 .background {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(fill)

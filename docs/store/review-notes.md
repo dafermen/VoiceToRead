@@ -34,3 +34,5 @@ Conversation (formerly Speak and translate): open the conversation icon beside l
 Navigation: completion buttons use a checkmark with the accessible name Done. Save/Discard remain explicit. Settings → Check preparation replaces the permanent Before a meeting or class banner; necessary permission/model warnings remain in Captions.
 
 Capture controls: Save audio, Reduce noise and Background show names and On/Off states before starting. Settings is the normal preferences entry; a separate shortcut remains in fullscreen. When rereading live captions, the circular down arrow returns to live text and resumes following; it has an accessible label.
+
+Language colors: Settings → Language colors provides independent English/Spanish palettes, live preview and reset. Defaults remain English blue/Spanish green in conversation controls, bilingual live cards and playback cards, regardless of translation direction. Names remain visible; high contrast overrides fills. Reading paper affects the surrounding area, not language card colors. This changes presentation only.

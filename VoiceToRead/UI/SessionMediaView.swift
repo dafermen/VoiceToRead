@@ -849,6 +849,7 @@ struct PlaybackTextCard: View {
     let settings: AppSettings
     var identifier = ""
     var speaking = false
+    @Environment(\.colorSchemeContrast) private var cardContrast
     @Environment(\.colorScheme) private var cardScheme
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     var body: some View {
@@ -859,10 +860,9 @@ struct PlaybackTextCard: View {
             ReaderParagraph(text: text, points: settings.captionSize * textScale, spacing: settings.lineSpacing,
                             bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                 .textSelection(.enabled).accessibilityIdentifier(identifier)
-        }.environment(\.colorScheme, !settings.highContrast && settings.readerPaper != .system ? .light : settings.colorScheme ?? cardScheme)
-         .modifier(LiveLanguageCard(language: language, highContrast: settings.highContrast,
-                                   paper: settings.readerPaper))
-         .overlay(RoundedRectangle(cornerRadius: 12).stroke(speaking ? Color.accentColor : .clear, lineWidth: 3))
+        }.environment(\.colorScheme, settings.colorScheme ?? cardScheme)
+         .modifier(LiveLanguageCard(color: settings.color(for: language), highContrast: settings.highContrast))
+         .overlay(RoundedRectangle(cornerRadius: 12).stroke(speaking ? (settings.highContrast || cardContrast == .increased ? Color.primary : settings.color(for: language).accent) : .clear, lineWidth: 3))
     }
 }
 

@@ -22,6 +22,54 @@ enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
     var mode: TranscriptLanguage { self == .english ? .english : .spanish }
 }
 
+/// Stable palette IDs are saved instead of platform color objects. Every language owns
+/// one color, regardless of whether it is currently the original or the translation.
+enum LanguageColor: String, CaseIterable, Sendable {
+    case blue, green, purple, orange
+    var label: String { rawValue.capitalized }
+    var accent: Color {
+        switch self { case .blue: .blue; case .green: .green; case .purple: .purple; case .orange: .orange }
+    }
+    func background(_ scheme: ColorScheme, highContrast: Bool = false) -> Color {
+        if highContrast { return scheme == .dark ? .black : .white }
+        switch (self, scheme) {
+        case (.blue, .dark): return Color(red: 0.08, green: 0.16, blue: 0.24)
+        case (.green, .dark): return Color(red: 0.08, green: 0.20, blue: 0.15)
+        case (.purple, .dark): return Color(red: 0.20, green: 0.12, blue: 0.26)
+        case (.orange, .dark): return Color(red: 0.25, green: 0.15, blue: 0.07)
+        case (.blue, _): return Color(red: 0.89, green: 0.95, blue: 1)
+        case (.green, _): return Color(red: 0.90, green: 0.97, blue: 0.91)
+        case (.purple, _): return Color(red: 0.95, green: 0.90, blue: 0.99)
+        case (.orange, _): return Color(red: 1, green: 0.94, blue: 0.85)
+        }
+    }
+}
+
+/// Same pale surface as the language card, with a persistent language label.
+/// Disabled controls retain the language color; accessibility still exposes disabled state.
+struct LanguageButtonStyle: ButtonStyle {
+    let color: LanguageColor
+    let highContrast: Bool
+    @Environment(\.colorScheme) private var scheme
+    @Environment(\.colorSchemeContrast) private var contrast
+    @Environment(\.isEnabled) private var enabled
+    func makeBody(configuration: Configuration) -> some View {
+        let strong = highContrast || contrast == .increased
+        configuration.label.padding(.horizontal, 10).padding(.vertical, 8)
+            .foregroundStyle(Color.primary)
+            .background(color.background(scheme, highContrast: strong), in: RoundedRectangle(cornerRadius: 12))
+            .overlay {
+                RoundedRectangle(cornerRadius: 12)
+                    .strokeBorder(strong ? Color.primary : color.accent.opacity(enabled ? 0.8 : 0.4), lineWidth: strong ? 2 : 1)
+                    .accessibilityHidden(true)
+            }
+            .overlay {
+                RoundedRectangle(cornerRadius: 12).fill(Color.primary.opacity(configuration.isPressed ? 0.08 : 0))
+                    .allowsHitTesting(false).accessibilityHidden(true)
+            }
+    }
+}
+
 enum ReaderPaper: String, CaseIterable {
     case system, yellow, blue, green, purple
     var label: String {
@@ -91,10 +139,16 @@ final class AppSettings {
     var pauseHaptics: Bool { didSet { defaults.set(pauseHaptics, forKey: "pauseHaptics") } }
     var focusedReading: Bool { didSet { defaults.set(focusedReading, forKey: "focusedReading") } }
     var preparationSeen: Bool { didSet { defaults.set(preparationSeen, forKey: "preparationSeen") } }
+    var englishColor: LanguageColor { didSet { defaults.set(englishColor.rawValue, forKey: "englishLanguageColor") } }
+    var spanishColor: LanguageColor { didSet { defaults.set(spanishColor.rawValue, forKey: "spanishLanguageColor") } }
+    func color(for language: CaptureLanguage) -> LanguageColor { language == .english ? englishColor : spanishColor }
+    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green }
     var transcriptionLanguage: String { captureLanguage.rawValue }
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        englishColor = LanguageColor(rawValue: defaults.string(forKey: "englishLanguageColor") ?? "") ?? .blue
+        spanishColor = LanguageColor(rawValue: defaults.string(forKey: "spanishLanguageColor") ?? "") ?? .green
         simpleMode = defaults.bool(forKey: "simpleMode")
         showButtonNames = defaults.bool(forKey: "showButtonNames")
         pauseHaptics = defaults.object(forKey: "pauseHaptics") as? Bool ?? true

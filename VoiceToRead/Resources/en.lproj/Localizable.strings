@@ -864,3 +864,14 @@
 "Play Spanish" = "Play Spanish";
 "Message" = "Message";
 "Stop audio" = "Stop audio";
+
+"Blue" = "Blue";
+"Green" = "Green";
+"Purple" = "Purple";
+"Orange" = "Orange";
+"Language colors" = "Language colors";
+"Preview" = "Preview";
+"Restore default colors" = "Restore default colors";
+"Each language keeps its color in conversation buttons, bilingual captions and playback. This does not change the spoken language." = "Each language keeps its color in conversation buttons, bilingual captions and playback. This does not change the spoken language.";
+"Language names remain visible. High contrast takes priority over colored backgrounds. Reading paper changes the surrounding area, not these cards." = "Language names remain visible. High contrast takes priority over colored backgrounds. Reading paper changes the surrounding area, not these cards.";
+"Both languages use the same color. Choose different colors if you want to distinguish them visually." = "Both languages use the same color. Choose different colors if you want to distinguish them visually.";

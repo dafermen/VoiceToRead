@@ -2,6 +2,55 @@ import XCTest
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
+    func testLanguageColorSettingsAndConversationLight() throws { try checkLanguageColors(dark: false) }
+    @MainActor
+    func testLanguageColorSettingsAndConversationDark() throws { try checkLanguageColors(dark: true) }
+
+    @MainActor
+    private func checkLanguageColors(dark: Bool) throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-live-translation", "--ui-test-conversation", "-appearance", dark ? "dark" : "light"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Settings"].tap()
+        let link = app.buttons["languageColorsLink"]
+        for _ in 0..<6 { if link.isHittable { break }; app.swipeUp() }
+        XCTAssertTrue(link.isHittable); link.tap()
+        app.buttons["spanishColorPicker"].tap(); app.buttons["Purple"].tap()
+        app.buttons["englishColorPicker"].tap(); app.buttons["Orange"].tap()
+        XCTAssertTrue(app.staticTexts["spanishColorPreview"].exists)
+        let preview = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        preview.name = dark ? "Language-colors-dark" : "Language-colors-light"; preview.lifetime = .keepAlways; add(preview)
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        if !link.isHittable { app.swipeDown() }
+        link.tap()
+        XCTAssertEqual(app.buttons["spanishColorPicker"].value as? String, "Purple")
+        XCTAssertEqual(app.buttons["englishColorPicker"].value as? String, "Orange")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.tabBars.buttons["Captions"].tap()
+        app.buttons["speakTranslateEntry"].tap()
+        let spanish = app.buttons["conversationSpanishTurn"]
+        spanish.tap()
+        expectation(for: NSPredicate(format: "label == %@", "Listening in Spanish…"), evaluatedWith: app.staticTexts["conversationStatus"])
+        waitForExpectations(timeout: 8)
+        spanish.tap()
+        XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 8))
+        app.buttons["conversationStopAudio"].tap()
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = dark ? "Language-conversation-dark" : "Language-conversation-light"; shot.lifetime = .keepAlways; add(shot)
+        app.navigationBars["Conversation"].buttons["Done"].tap()
+        app.tabBars.buttons["Settings"].tap()
+        if !link.isHittable { app.swipeDown() }
+        link.tap()
+        let restore = app.buttons["restoreLanguageColors"]
+        if !restore.isHittable { app.swipeUp() }
+        restore.tap()
+        XCTAssertEqual(app.buttons["spanishColorPicker"].value as? String, "Green")
+        XCTAssertEqual(app.buttons["englishColorPicker"].value as? String, "Blue")
+    }
+
+    @MainActor
     func testConversationTwoTapTurnsInBothDirections() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-live-translation", "--ui-test-conversation"]

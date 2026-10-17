@@ -1,3 +1,11 @@
+## 2026-10-16 — colores de idioma consistentes y personalizables
+
+- Español verde e inglés azul en botones y tarjetas, independientemente del sentido de traducción.
+- Ajustes → Colores por idioma: paleta azul/verde/morado/naranja, vista previa, guardado local y restauración.
+- Reproducir usa el idioma de destino; las tarjetas en vivo y de sesiones comparten preferencias.
+- Fondos claros/oscuros, etiquetas explícitas y prioridad de alto contraste. El papel se conserva como fondo exterior.
+- Documentación de usuario, desarrollo y soporte actualizada. [Guía](docs/language-colors.md).
+
 ## 2026-10-16 — controles de conversación más compactos
 
 - Español a la izquierda e inglés a la derecha en una fila, también en iPhone.

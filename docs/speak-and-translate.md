@@ -49,3 +49,7 @@ Las pruebas unitarias cubren ambos sentidos, revisión final antes de voz, bloqu
 Los dobles de micrófono, traducción y voz de las pruebas UI son explícitos y solo existen en DEBUG. Verifican el flujo, no la calidad de los servicios reales. Probar físicamente español → inglés y respuesta inglesa → español, permisos/descargas, ruido, auriculares, llamada/alarma, letra grande y VoiceOver antes de dar por validada la experiencia completa.
 
 [Estado de validación y entrega](speak-and-translate-checkpoint.md).
+
+## Identificación por color
+
+Botones de idioma y tarjetas comparten el color del idioma: español verde e inglés azul inicialmente. Ajustes → Colores por idioma permite cambiarlos, ver una muestra y restaurarlos. Reproducir usa el color del idioma de destino. [Detalles y accesibilidad](language-colors.md).

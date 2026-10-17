@@ -1,10 +1,50 @@
 import XCTest
 import UIKit
 import CoreText
+import SwiftUI
 @testable import VoiceToRead
 
 @MainActor
 final class AppSettingsTests: XCTestCase {
+    func testLanguageColorsPersistRestoreAndDoNotChangeLanguages() {
+        let name = UUID().uuidString
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults)
+        XCTAssertEqual(settings.color(for: .english), .blue)
+        XCTAssertEqual(settings.color(for: .spanish), .green)
+        settings.captureLanguage = .spanish; settings.interfaceLanguage = .english
+        settings.englishColor = .orange; settings.spanishColor = .purple
+        let restored = AppSettings(defaults: defaults)
+        XCTAssertEqual(restored.color(for: .english), .orange)
+        XCTAssertEqual(restored.color(for: .spanish), .purple)
+        XCTAssertEqual(restored.captureLanguage, .spanish)
+        XCTAssertEqual(restored.interfaceLanguage, .english)
+        restored.restoreLanguageColors()
+        XCTAssertEqual(AppSettings(defaults: defaults).englishColor, .blue)
+        XCTAssertEqual(AppSettings(defaults: defaults).spanishColor, .green)
+        XCTAssertEqual(restored.captureLanguage, .spanish)
+        defaults.set("obsolete-color", forKey: "englishLanguageColor")
+        defaults.set("obsolete-color", forKey: "spanishLanguageColor")
+        XCTAssertEqual(AppSettings(defaults: defaults).englishColor, .blue)
+        XCTAssertEqual(AppSettings(defaults: defaults).spanishColor, .green)
+    }
+
+    func testLanguagePaletteContrastWithBlackOrWhiteText() {
+        func luminance(_ color: Color) -> Double {
+            var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+            XCTAssertTrue(UIColor(color).getRed(&r, green: &g, blue: &b, alpha: &a))
+            func linear(_ c: CGFloat) -> Double { c <= 0.04045 ? Double(c) / 12.92 : pow((Double(c) + 0.055) / 1.055, 2.4) }
+            return 0.2126 * linear(r) + 0.7152 * linear(g) + 0.0722 * linear(b)
+        }
+        for color in LanguageColor.allCases {
+            XCTAssertGreaterThan((luminance(color.background(.light)) + 0.05) / 0.05, 7)
+            XCTAssertGreaterThan(1.05 / (luminance(color.background(.dark)) + 0.05), 7)
+            XCTAssertEqual(luminance(color.background(.light, highContrast: true)), 1, accuracy: 0.001)
+            XCTAssertEqual(luminance(color.background(.dark, highContrast: true)), 0, accuracy: 0.001)
+        }
+    }
+
     func testAccessiblePreferencesPersistWithoutChangingCaptureLanguage() {
         let name = UUID().uuidString
         let defaults = UserDefaults(suiteName: name)!

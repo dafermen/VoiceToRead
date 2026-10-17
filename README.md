@@ -22,7 +22,7 @@ A compact conversation icon opens Conversation beside live caption display. Prep
 ## Read, translate and review
 
 - English capture by default, optional Spanish; English/Spanish interface selected independently.
-- Live **Original / Translation / Both** modes. Both uses blue English cards and green Spanish cards with language labels, rounded borders and subtle shadows. Dark mode and high contrast are supported.
+- Live **Original / Translation / Both** modes. Both defaults to blue English cards and green Spanish cards with language labels, rounded borders and subtle shadows. Dark mode and high contrast are supported. Settings → Language colors customizes each language across conversation buttons and cards, with a preview and reset. [Color guide](docs/language-colors.md).
 - Fullscreen, portrait/landscape, larger or bold text, line spacing, light paper colors and notebook guides.
 - Pause/resume with a prominent interruption notice. Reread previous paragraphs without automatic scrolling; the circular down arrow returns to live text and resumes following.
 - Clearly labelled Save audio, Reduce noise and Background controls show On/Off before starting. Optional saved microphone audio, noise reduction and background continuation. Recording always starts explicitly; background capture is opt-in.

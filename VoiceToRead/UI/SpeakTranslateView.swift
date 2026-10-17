@@ -304,7 +304,7 @@ struct SpeakTranslateView: View {
                     .font(.caption)
             }.multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 .padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: 48).contentShape(Rectangle())
-        }.buttonStyle(.borderedProminent).tint(language == .spanish ? .blue : .indigo)
+        }.buttonStyle(LanguageButtonStyle(color: settings.color(for: language), highContrast: settings.highContrast))
             .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported))
             .accessibilityIdentifier(language == .spanish ? "conversationSpanishTurn" : "conversationEnglishTurn")
     }
@@ -327,7 +327,8 @@ struct SpeakTranslateView: View {
                 Button { model.play() } label: {
                     Label(uiKey(model.language == .spanish ? "Play English" : "Play Spanish"), systemImage: "speaker.wave.2.fill")
                         .frame(maxWidth: .infinity, minHeight: 44)
-                }.disabled(!model.canEdit).accessibilityIdentifier("conversationPlay")
+                }.buttonStyle(LanguageButtonStyle(color: settings.color(for: model.language.opposite), highContrast: settings.highContrast))
+                    .disabled(!model.canEdit).accessibilityIdentifier("conversationPlay")
             } else if !model.source.isEmpty && model.canEdit {
                 Button { model.translate() } label: {
                     Label("Translate and play", systemImage: "character.bubble")
