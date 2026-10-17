@@ -13,7 +13,7 @@ struct SettingsView: View {
             Section("Accessibility and ease of use") {
                 Toggle("Simple mode", isOn: $settings.simpleMode).disabled(coordinator.caption.state.active || coordinator.caption.state.busy).accessibilityIdentifier("simpleModeToggle")
                 Toggle("Show button names", isOn: $settings.showButtonNames).accessibilityIdentifier("buttonNamesToggle")
-                Text("Simple mode always shows action names. In the standard home, this option adds names below the icons.").font(.caption)
+                Text("Show or hide names on icon buttons in either mode. Language choices, navigation destinations and Save/Cancel keep their text.").font(.caption)
                 Toggle("Vibrate when listening pauses", isOn: $settings.pauseHaptics)
                 Toggle("Focused reading", isOn: $settings.focusedReading).accessibilityIdentifier("focusedReadingToggle")
                 Text("Simple mode keeps essential actions visible. Focused reading shows one paragraph at a time and waits for you to continue.").font(.caption)
@@ -272,9 +272,8 @@ struct WrittenResponseView: View {
         Form {
             Section {
                 Text("Write what you want to say. The voice reads exactly this text in the language you choose; it does not translate it.")
-                Picker("Voice language", selection: $language) {
-                    ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.name).tag($0) }
-                }.disabled(speech.state != .idle)
+                LanguagePickerControl(title: "Voice language", selection: $language, showRole: true)
+                    .disabled(speech.state != .idle)
                 Picker("Reading speed", selection: $speed) {
                     ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }.disabled(speech.state != .idle)
@@ -290,9 +289,9 @@ struct WrittenResponseView: View {
                     if speech.state == .idle { speech.start([ReviewParagraph(id: UUID(), text: text)], language: language, speed: speed) }
                     else { speech.togglePause() }
                 }.disabled(captureBusy || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    .accessibilityIdentifier("speakWrittenResponse").keyboardShortcut(.return, modifiers: .command)
-                Button("Stop", systemImage: "stop.fill") { speech.stop() }.disabled(speech.state == .idle)
-                Button("Clear response", systemImage: "eraser") { speech.stop(); text = "" }
+                    .labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("speakWrittenResponse").keyboardShortcut(.return, modifiers: .command)
+                Button("Stop", systemImage: "stop.fill") { speech.stop() }.labelStyle(AccessibleControlLabelStyle()).disabled(speech.state == .idle)
+                Button("Clear response", systemImage: "eraser") { speech.stop(); text = "" }.labelStyle(AccessibleControlLabelStyle())
                 if let message = speech.message {
                     Text(LocalizedStringKey(message == "Translation interrupted. Tap Play to restart this paragraph." ? "Speech interrupted. Tap Speak response to start again." : message))
                 }
@@ -321,15 +320,15 @@ struct SimpleHomeView: View {
             VStack(alignment: .leading, spacing: 12) {
                 Text("What would you like to do?").font(.title2.bold())
                 SpeakTranslateEntry(coordinator: coordinator)
-                NavigationLink { LiveCaptionView(coordinator: coordinator) } label: { Label("Listen now", systemImage: "mic") }
+                NavigationLink(value: HomeDestination.listen) { Label("Listen now", systemImage: "mic") }
                     .accessibilityIdentifier("simpleListenNow")
-                NavigationLink { SessionHistoryView(coordinator: coordinator) } label: { Label("My sessions", systemImage: "clock") }
+                NavigationLink(value: HomeDestination.sessions) { Label("My sessions", systemImage: "clock") }
                     .accessibilityIdentifier("simpleSessions")
-                NavigationLink { PracticeSessionPicker(coordinator: coordinator) } label: { Label("Language practice", systemImage: "book") }
+                NavigationLink(value: HomeDestination.practice) { Label("Language practice", systemImage: "book") }
                     .accessibilityIdentifier("simplePractice")
-                NavigationLink { WrittenResponseView(coordinator: coordinator) } label: { Label("Write and speak", systemImage: "keyboard") }
+                NavigationLink(value: HomeDestination.response) { Label("Write and speak", systemImage: "keyboard") }
                     .accessibilityIdentifier("simpleWriteResponse")
-                NavigationLink { OfflineReadinessView(coordinator: coordinator) } label: { Label("Prepare VoiceToRead", systemImage: "checkmark.shield") }
+                NavigationLink(value: HomeDestination.preparation) { Label("Prepare VoiceToRead", systemImage: "checkmark.shield") }
                     .accessibilityIdentifier("simplePreparation")
             }.buttonStyle(SimpleHomeActionStyle()).labelStyle(SimpleHomeLabelStyle()).font(.headline).padding()
         }.background(Color(uiColor: .systemGroupedBackground))
@@ -456,31 +455,45 @@ struct LanguagePairOptions: View {
                 Task { await model.checkReadiness() }
             }
     }
-    // Explicit menu labels keep native language names intact on small screens.
-    private var compactSourceMenu: some View {
-        Menu { sourcePicker } label: { compactLabel(settings.captureLanguage) }
-            .accessibilityLabel("Spoken language").accessibilityValue(Text(settings.captureLanguage.pickerLabel))
+    private var compactSourceMenu: some View { sourceControl(showRole: false) }
+    private var compactTargetMenu: some View { targetControl(showRole: false) }
+    private var sourcePicker: some View { sourceControl(showRole: true) }
+    private var targetPicker: some View { targetControl(showRole: true) }
+    private func sourceControl(showRole: Bool) -> some View {
+        LanguagePickerControl(title: "Spoken language", selection: $settings.captureLanguage, showRole: showRole)
             .accessibilityIdentifier("captureLanguagePicker")
     }
-    private var compactTargetMenu: some View {
-        Menu { targetPicker } label: { compactLabel(settings.translationLanguage) }
-            .accessibilityLabel("Translate to").accessibilityValue(Text(settings.translationLanguage.pickerLabel))
+    private func targetControl(showRole: Bool) -> some View {
+        LanguagePickerControl(title: "Translate to", selection: $settings.translationLanguage,
+            choices: CaptureLanguage.allCases.filter { $0 != settings.captureLanguage }, showRole: showRole)
             .accessibilityIdentifier("translationTargetPicker")
     }
-    private func compactLabel(_ language: CaptureLanguage) -> some View {
-        HStack(spacing: 6) {
-            Text(language.pickerLabel).fixedSize(horizontal: true, vertical: false)
-            Image(systemName: "chevron.down").font(.caption).accessibilityHidden(true)
-        }.frame(minHeight: 44).contentShape(Rectangle())
-    }
-    private var sourcePicker: some View {
-        Picker("Spoken language", selection: $settings.captureLanguage) {
-            ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.pickerLabel).tag($0) }
-        }.accessibilityIdentifier("captureLanguagePicker")
-    }
-    private var targetPicker: some View {
-        Picker("Translate to", selection: $settings.translationLanguage) {
-            ForEach(CaptureLanguage.allCases.filter { $0 != settings.captureLanguage }, id: \.self) { Text($0.pickerLabel).tag($0) }
-        }.accessibilityIdentifier("translationTargetPicker")
+}
+
+/// A single blue language selector for capture, conversation, saved translation and spoken replies.
+/// The selected language is essential information and is never hidden with button names.
+struct LanguagePickerControl: View {
+    let title: LocalizedStringKey
+    @Binding var selection: CaptureLanguage
+    var choices = CaptureLanguage.allCases
+    var showRole = false
+    @Environment(\.dynamicTypeSize) private var typeSize
+    var body: some View {
+        (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 6)) : AnyLayout(HStackLayout(spacing: 8))) {
+            if showRole { Text(title); if !typeSize.isAccessibilitySize { Spacer(minLength: 8) } }
+            Menu {
+                Picker(title, selection: $selection) {
+                    ForEach(choices, id: \.self) { Text($0.pickerLabel).tag($0) }
+                }
+            } label: {
+                HStack(spacing: 6) {
+                    Text(selection.pickerLabel).fixedSize(horizontal: false, vertical: true)
+                    Image(systemName: "chevron.down").font(.system(size: 12, weight: .semibold)).accessibilityHidden(true)
+                }.font(.body).padding(.horizontal, 10).frame(minHeight: 44)
+                    .foregroundStyle(Color.accentColor)
+                    .background(Color.accentColor.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
+                    .contentShape(RoundedRectangle(cornerRadius: 10))
+            }.buttonStyle(.plain).accessibilityLabel(title).accessibilityValue(Text(selection.pickerLabel))
+        }
     }
 }

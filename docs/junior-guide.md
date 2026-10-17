@@ -371,3 +371,9 @@ Los nombres históricos `LearningExpression.english/spanish` representan origina
 Consulta [las convenciones y su explicación SwiftUI](home-controls.md#convenciones-compartidas-de-presentación). El objetivo es que personas con baja visión, dificultades auditivas o del habla, estudiantes de idiomas y niños acompañados encuentren acciones previsibles sin aprender otra organización en cada pantalla.
 
 Al agregar una ventana de consulta, reutiliza `DoneToolbar`, no un `DoneButton` con ubicación implícita. Si hay un formulario con cambios pendientes, conserva Cancelar/Guardar. Un menú solo debe aparecer si hay acciones adicionales: coherencia no significa duplicar botones sin función. Las acciones secundarias de práctica reutilizan `PracticeActionStyle`; reproducción usa `PlaybackTransport`. Mantén separados el dibujo del símbolo, el texto visible y el nombre de accesibilidad. Prueba también nombres activados, español, letra grande y apariencia oscura; un círculo con un texto largo dentro no es un buen control adaptable.
+
+## Preferencias independientes y selectores compartidos
+
+Mostrar nombres y Modo sencillo son decisiones distintas. Evita expresiones como `showButtonNames || simpleMode`: hacen que el interruptor parezca roto. `AccessibleControlLabelStyle` y `PlaybackTransport` leen el objeto observable de ajustes del entorno, en lugar de abrir otra instancia de UserDefaults. Esto mantiene sincronizados controles de ventanas secundarias y las pruebas con preferencias aisladas.
+
+`LanguagePickerControl` reutiliza la apariencia azul para todos los idiomas hablados y de traducción. Su binding delega la selección al propietario; no mezcla la dirección de una sesión guardada con la de Conversación ni con el idioma de los menús. Consulta [la guía actualizada](home-controls.md#selectores-de-idioma-y-regreso-a-inicio).

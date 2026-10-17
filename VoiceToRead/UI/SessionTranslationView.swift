@@ -64,9 +64,9 @@ struct SessionTranslationView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                Picker("Translate to", selection: Binding(get: { target }, set: { selectTarget($0) })) {
-                    ForEach(CaptureLanguage.allCases.filter { $0 != language }, id: \.self) { Text($0.pickerLabel).tag($0) }
-                }.padding(.horizontal).disabled(!loaded || job != nil || preparing)
+                LanguagePickerControl(title: "Translate to", selection: Binding(get: { target }, set: { selectTarget($0) }),
+                    choices: CaptureLanguage.allCases.filter { $0 != language }, showRole: true)
+                    .padding(.horizontal).disabled(!loaded || job != nil || preparing)
                     .accessibilityIdentifier("sessionTranslationTarget")
                 Picker("Reading language", selection: Binding(get: { mode }, set: {
                     mode = $0; savedLanguage = PlaybackLanguagePreference(mode: $0, source: language).rawValue
@@ -113,7 +113,7 @@ struct SessionTranslationView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     if current {
                         Button("Edit \(target.name)", systemImage: "pencil") { editing = true }
-                            .disabled(job != nil || preparing).accessibilityIdentifier("editSpanishButton")
+                            .disabled(job != nil || preparing).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("editSpanishButton")
                     }
                 }
             }
@@ -208,15 +208,15 @@ struct SessionTranslationView: View {
             Button(uiKey(current ? "Translate again" : snapshot == nil ? "Translate to \(target.name)" : "Update changed paragraphs"), systemImage: "character.bubble") {
                 if current { replacing = true } else { start() }
             }.disabled(!canTranslate || !loaded || source.allSatisfy { $0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty } || job != nil || preparing)
-                .accessibilityIdentifier("translateSpanishButton")
+                .labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("translateSpanishButton")
             Spacer()
             if current {
                 Button("Audio & subtitles", systemImage: "captions.bubble") { playback = TranslationPlayback(paragraphID: nil) }
-                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                    .labelStyle(AccessibleControlLabelStyle()).frame(minWidth: 44, minHeight: 44)
                     .disabled(job != nil || preparing).accessibilityIdentifier("translatedMediaButton")
             }
             Button("Share", systemImage: "square.and.arrow.up") { exportMenu = true }
-                .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                .labelStyle(AccessibleControlLabelStyle()).frame(minWidth: 44, minHeight: 44)
                 .disabled(!loaded || displayed.isEmpty || job != nil || preparing)
                 .accessibilityIdentifier("shareTranslationButton")
 

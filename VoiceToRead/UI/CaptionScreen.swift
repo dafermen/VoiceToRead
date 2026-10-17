@@ -14,7 +14,6 @@ struct CaptionScreen: View {
     var speakAndTranslate: (() -> Void)? = nil
     var canSpeakAndTranslate = true
     var writeResponse: (() -> Void)? = nil
-    var returnHome: (() -> Void)? = nil
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .title) private var scaledSize: CGFloat = 28
@@ -33,7 +32,7 @@ struct CaptionScreen: View {
     @State private var showingActions = false
     @State private var followScrollTask: Task<Void, Never>?
 
-    private var showControlNames: Bool { settings.showButtonNames || settings.simpleMode }
+    private var showControlNames: Bool { settings.showButtonNames }
 
     private var readerLayout: some View {
         GeometryReader { geometry in
@@ -244,7 +243,7 @@ struct CaptionScreen: View {
                     .font(.headline).frame(maxWidth: .infinity, minHeight: 44)
             }.buttonStyle(.borderedProminent).accessibilityIdentifier("resumeCaptureButton")
             Button("Detalles", systemImage: "info.circle") { showingStatus = true }
-                .labelStyle(.iconOnly).font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
+                .labelStyle(AccessibleControlLabelStyle()).font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
         }
     }
 
@@ -331,26 +330,17 @@ struct CaptionScreen: View {
             HStack(spacing: 0) { utilityButtons }
         }
     }
-    /// Compact navigation in simple mode: a familiar back action and named menu, not a grid of tiles.
+    /// Simple mode reduces actions; the independent names preference still controls their labels.
     @ViewBuilder private func simpleUtilityButtons(vertical: Bool) -> some View {
-        if let returnHome {
-            Button(action: returnHome) { Label("Home", systemImage: "chevron.left") }
-                .frame(minHeight: 44).foregroundStyle(Color.accentColor)
-                .accessibilityIdentifier("readerHomeButton")
-                .disabled(model.state.active || model.state.busy)
-        }
         if model.state == .ended { newSessionButton }
         if !vertical { Spacer(minLength: 0) }
         Button { showingActions = true } label: {
             Label("Session actions", systemImage: "ellipsis.circle")
-                .fixedSize(horizontal: !vertical, vertical: true).frame(minHeight: 44)
+                .labelStyle(AccessibleControlLabelStyle())
+                .frame(minWidth: 44, minHeight: 44)
         }.foregroundStyle(Color.accentColor).accessibilityIdentifier("sessionActionsButton")
     }
     @ViewBuilder private var utilityButtons: some View {
-        if let returnHome {
-            Button(action: returnHome) { readerControlLabel("Home", symbol: "house") }
-                .accessibilityLabel("Home").accessibilityIdentifier("readerHomeButton").disabled(model.state.active || model.state.busy)
-        }
         if model.state == .ended { newSessionButton }
         if !settings.simpleMode {
             translationButton; conversationButton; fullScreenButton
@@ -614,7 +604,7 @@ struct CaptionScreen: View {
     }
 
     private var captureControls: some View {
-        (dynamicTypeSize.isAccessibilitySize && (settings.showButtonNames || settings.simpleMode) ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
+        (dynamicTypeSize.isAccessibilitySize && settings.showButtonNames ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
             primaryButton(iconOnly: true)
             stopButton(iconOnly: true)
             if !dynamicTypeSize.isAccessibilitySize { Spacer(minLength: 0) }
@@ -637,7 +627,7 @@ struct CaptionScreen: View {
             else { Task { await beginNewSession() } }
         } label: {
             NamedCircleControl(title: "New Session", symbol: "plus", prominent: true,
-                               names: settings.showButtonNames || settings.simpleMode)
+                               names: settings.showButtonNames)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("New Session").accessibilityIdentifier("primaryCaptionAction")
@@ -650,7 +640,7 @@ struct CaptionScreen: View {
                 Task { if model.state == .listening { await model.pause() } else { await model.start() } }
             } label: {
                 NamedCircleControl(title: primaryTitle, symbol: primaryIcon, prominent: true,
-                                   names: settings.showButtonNames || settings.simpleMode)
+                                   names: settings.showButtonNames)
             }
             .buttonStyle(.plain)
             .accessibilityLabel(LocalizedStringKey(primaryTitle))
@@ -663,7 +653,7 @@ struct CaptionScreen: View {
     private func stopButton(iconOnly: Bool) -> some View {
         Button { Task { await model.stop() } } label: {
             NamedCircleControl(title: "Stop", symbol: "stop.fill", prominent: false,
-                               names: settings.showButtonNames || settings.simpleMode)
+                               names: settings.showButtonNames)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Stop")
@@ -828,19 +818,22 @@ struct CaptionScreen: View {
 
 /// One recognizable return-to-bottom affordance for original and bilingual readers.
 struct ReturnToLiveButton: View {
+    @Environment(AppSettings.self) private var settings
     let action: () -> Void
     var body: some View {
         Button(action: action) {
-            Image(systemName: "arrow.down.circle.fill")
-                .font(.system(size: 32))
-                .symbolRenderingMode(.palette)
-                .foregroundStyle(Color.accentColor, Color(uiColor: .systemBackground))
-                .frame(width: 44, height: 44)
-        }
-        .buttonStyle(.plain)
-        .background(.regularMaterial, in: Circle())
-        .accessibilityLabel("Back to live text")
-        .help("Back to live text")
+            VStack(spacing: 2) {
+                Image(systemName: "arrow.down.circle.fill")
+                    .font(.system(size: 32)).symbolRenderingMode(.palette)
+                    .foregroundStyle(Color.accentColor, Color(uiColor: .systemBackground))
+                    .frame(width: 44, height: 44).background(.regularMaterial, in: Circle())
+                if settings.showButtonNames {
+                    Text("Back to live text").font(.caption).padding(4)
+                        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 6))
+                }
+            }
+        }.buttonStyle(.plain)
+            .accessibilityLabel("Back to live text").help("Back to live text")
     }
 }
 
@@ -861,8 +854,8 @@ struct DoneButton: View {
     let action: () -> Void
     var body: some View {
         Button(action: action) {
-            Image(systemName: "checkmark").font(.body.weight(.semibold))
-                .frame(minWidth: 44, minHeight: 44)
+            Label("Done", systemImage: "checkmark").font(.body.weight(.semibold))
+                .labelStyle(AccessibleControlLabelStyle()).frame(minWidth: 44, minHeight: 44)
         }.accessibilityLabel("Done").help("Done")
     }
 }

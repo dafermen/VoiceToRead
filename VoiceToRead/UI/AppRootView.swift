@@ -10,21 +10,22 @@ struct AppRootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var coordinator: SessionCoordinator?
     @State private var storageFailure = false
+    @State private var selectedTab = 0
+    @State private var homePath: [HomeDestination] = []
 
     var body: some View {
         Group {
             if let coordinator {
-                TabView {
-                    NavigationStack {
-                        if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
-                        else {
-                            LiveCaptionView(coordinator: coordinator)
-                        }
-                    }
+                TabView(selection: Binding(get: { selectedTab }, set: { tab in
+                    // Returning to Home resets navigation, not the ongoing capture or its data.
+                    if tab == 0 { homePath.removeAll() }
+                    selectedTab = tab
+                })) {
+                    homeNavigation(coordinator: coordinator).tag(0)
                     .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
-                    SessionLibraryView(coordinator: coordinator)
+                    SessionLibraryView(coordinator: coordinator).tag(1)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
-                    NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }
+                    NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }.tag(2)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
                 .safeAreaInset(edge: .bottom) {
@@ -41,7 +42,7 @@ struct AppRootView: View {
                                 }
                             }
                             Button(uiKey(coordinator.automaticTranslationJob == nil ? "Dismiss" : "Cancel translation"), systemImage: "xmark") { coordinator.cancelAutomaticTranslation() }
-                                .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                                .labelStyle(AccessibleControlLabelStyle()).frame(minWidth: 44, minHeight: 44)
                         }.font(.caption).padding(.horizontal).background(.regularMaterial)
                             .accessibilityIdentifier("automaticTranslationStatus")
                     }
@@ -89,6 +90,24 @@ struct AppRootView: View {
                 if let coordinator {
                     do { try coordinator.repository.purgeExpiredTrash() }
                     catch { coordinator.storageMessage = "Expired sessions could not be removed. Please retry from Recently deleted." }
+                }
+            }
+        }
+    }
+
+    private func homeNavigation(coordinator: SessionCoordinator) -> some View {
+        NavigationStack(path: $homePath) {
+            Group {
+                if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
+                else { LiveCaptionView(coordinator: coordinator) }
+            }
+            .navigationDestination(for: HomeDestination.self) { destination in
+                switch destination {
+                case .listen: LiveCaptionView(coordinator: coordinator)
+                case .sessions: SessionHistoryView(coordinator: coordinator)
+                case .practice: PracticeSessionPicker(coordinator: coordinator)
+                case .response: WrittenResponseView(coordinator: coordinator)
+                case .preparation: OfflineReadinessView(coordinator: coordinator)
                 }
             }
         }
@@ -255,8 +274,7 @@ struct LiveCaptionView: View {
                       speakAndTranslate: { showingConversation = true },
                       canSpeakAndTranslate: !coordinator.caption.state.active && !coordinator.caption.state.busy &&
                           !coordinator.caption.preparationPending && coordinator.automaticTranslationJob == nil,
-                      writeResponse: { showingResponse = true },
-                      returnHome: coordinator.settings.simpleMode ? { dismiss() } : nil)
+                      writeResponse: { showingResponse = true })
             .sheet(isPresented: $showingResponse) {
                 NavigationStack {
                     WrittenResponseView(coordinator: coordinator)
@@ -323,3 +341,6 @@ private final class ReaderPreviewSpeech: SpeechTranscribing {
     func cancel() async { producer?.cancel(); continuation?.finish() }
 }
 #endif
+
+/// Value routes let the Home tab return to its menu without resetting SessionCoordinator.
+enum HomeDestination: Hashable { case listen, sessions, practice, response, preparation }

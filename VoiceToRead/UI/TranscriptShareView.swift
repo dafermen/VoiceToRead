@@ -87,7 +87,7 @@ struct TranscriptShareView: View {
                 DoneToolbar { dismiss() }
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Edit", systemImage: "pencil") { showingEditor = true }
-                        .disabled(!canEdit || corrections == nil).accessibilityIdentifier("editFromPreview")
+                        .disabled(!canEdit || corrections == nil).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("editFromPreview")
                 }
             }
             .task(id: request) { await prepare() }

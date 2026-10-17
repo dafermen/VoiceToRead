@@ -35,7 +35,7 @@ struct TranscriptEditorView: View {
                         Button("Redo", systemImage: "arrow.uturn.forward") { history.redo() }
                             .disabled(!history.canRedo)
                     }
-                    .buttonStyle(.borderless).frame(minHeight: 44)
+                    .buttonStyle(.borderless).labelStyle(AccessibleControlLabelStyle()).frame(minHeight: 44)
                     Button("Find and replace", systemImage: "magnifyingglass") { showingFind = true }
                         .accessibilityIdentifier("findReplaceButton")
                     Button(uiKey(translation ? "Restore translation" : "Restore original"), systemImage: "clock.arrow.circlepath") { confirmingRestore = true }

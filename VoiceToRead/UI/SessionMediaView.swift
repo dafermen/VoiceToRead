@@ -326,7 +326,7 @@ struct SessionMediaView: View {
                     if !reviewed.isEmpty {
                         Button(uiKey(fullScreen ? "Exit full screen" : "Full screen"), systemImage: fullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
                             fullScreen.toggle()
-                        }
+                        }.labelStyle(AccessibleControlLabelStyle())
                     }
                 }
             }
@@ -440,17 +440,17 @@ struct SessionMediaView: View {
                     Button { beginParagraphEdit(activeParagraphID) } label: {
                         Label(editLabel, systemImage: "pencil")
                             .frame(minHeight: 44).contentShape(Rectangle())
-                    }.accessibilityIdentifier("editPlaybackParagraphButton")
+                    }.labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("editPlaybackParagraphButton")
                 }
                 Spacer()
                 Button { showingPhrases = true } label: {
-                    Label("Paragraphs", systemImage: "list.bullet").labelStyle(.iconOnly)
+                    Label("Paragraphs", systemImage: "list.bullet").labelStyle(AccessibleControlLabelStyle())
                         .frame(minWidth: 44, minHeight: 44).contentShape(Rectangle())
                 }.accessibilityIdentifier("openParagraphList")
                 Button { showingOptions = true } label: {
                     Label("Playback options", systemImage: "ellipsis.circle")
                         .frame(minHeight: 44).contentShape(Rectangle())
-                }.accessibilityIdentifier("playbackOptionsButton")
+                }.labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("playbackOptionsButton")
             }.font(.subheadline).frame(minHeight: 44)
         }
         .padding(.horizontal)
@@ -838,19 +838,18 @@ struct PlaybackTransport: View {
                 .disabled(!nextEnabled).accessibilityIdentifier("nextParagraphButton")
         }.buttonStyle(PlaybackButtonStyle()).frame(maxWidth: .infinity)
     }
-    @AppStorage("showButtonNames") private var names = false
-    @AppStorage("simpleMode") private var simple = false
+    @Environment(AppSettings.self) private var settings
 
     /// The colored circle contains only the symbol; visible names have their own space below it.
-    private func transportLabel(_ title: String, symbol: String, prominent: Bool = false) -> some View {
+    @MainActor private func transportLabel(_ title: String, symbol: String, prominent: Bool = false) -> some View {
         VStack(spacing: 6) {
             Image(systemName: symbol).font(.title2)
                 .frame(width: 56, height: 56)
                 .foregroundStyle(prominent ? Color.white : Color.accentColor)
                 .background(prominent ? Color.accentColor : Color.clear, in: Circle())
                 .accessibilityHidden(true)
-            if names || simple {
-                Text(LocalizedStringKey(title)).font(.caption)
+            if settings.showButtonNames {
+                Text(LocalizedStringKey(title)).font(.caption).accessibilityIdentifier("visibleControlName")
                     .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             }
         }.frame(maxWidth: .infinity).contentShape(Rectangle())

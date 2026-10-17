@@ -291,7 +291,7 @@ struct PronunciationPracticeView: View {
                         Button(uiKey(practice.activity == .example ? "Detener ejemplo" : "Escuchar ejemplo"),
                                systemImage: practice.activity == .example ? "stop.fill" : "speaker.wave.2.fill") {
                             if practice.activity == .example { practice.stopPlayback() } else { practice.listen(target, slow: slow) }
-                        }.buttonStyle(.bordered).disabled(busy).accessibilityIdentifier("pronunciationExample")
+                        }.buttonStyle(.bordered).disabled(busy).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("pronunciationExample")
                         Toggle("Más lento", isOn: $slow).disabled(busy).accessibilityIdentifier("pronunciationSlow")
                     }
                     VStack(alignment: .leading, spacing: 12) {
@@ -305,7 +305,7 @@ struct PronunciationPracticeView: View {
                                 .frame(maxWidth: .infinity).padding(.vertical, 6)
                         }.buttonStyle(.borderedProminent).controlSize(.large)
                             .disabled(practice.activity == .permission || practice.activity == .checking)
-                            .accessibilityIdentifier("pronunciationRecord")
+                            .labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("pronunciationRecord")
                         if practice.activity == .recording {
                             ProgressView(value: practice.level).accessibilityLabel("Nivel del micrófono")
                             Text("Grabando · \(Int(practice.elapsed)) / 15 s").monospacedDigit()
@@ -318,13 +318,13 @@ struct PronunciationPracticeView: View {
                             Button(uiKey(practice.activity == .playback ? "Detener mi voz" : "Escuchar mi voz"),
                                    systemImage: practice.activity == .playback ? "stop.fill" : "play.fill") {
                                 if practice.activity == .playback { practice.stopPlayback() } else { practice.listenToTake() }
-                            }.buttonStyle(.bordered).disabled(busy).accessibilityIdentifier("pronunciationReplay")
+                            }.buttonStyle(.bordered).disabled(busy).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("pronunciationReplay")
                             Text("Alterna entre el ejemplo y tu voz. Prueba despacio y luego a tu ritmo.").font(.subheadline)
                             if practice.activity == .checking { ProgressView("Reconociendo en el dispositivo…") }
                             else {
                                 Button(uiKey("¿Qué entendió el dispositivo?"), systemImage: "text.bubble") {
                                     Task { await practice.checkWords() }
-                                }.disabled(busy).accessibilityIdentifier("pronunciationCheck")
+                                }.disabled(busy).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("pronunciationCheck")
                             }
                             if let heard = practice.heard {
                                 Text(heard).font(.title3).accessibilityIdentifier("pronunciationHeard")

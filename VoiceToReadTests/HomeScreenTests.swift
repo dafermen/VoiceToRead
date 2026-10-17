@@ -157,9 +157,8 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.buttons["simpleWriteResponse"].label.contains("Write and speak"))
         for id in ids { XCTAssertEqual(app.buttons[id].frame.height, app.buttons["simpleListenNow"].frame.height, accuracy: 1) }
         app.buttons["simpleListenNow"].tap()
-        XCTAssertTrue(app.buttons["readerHomeButton"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.buttons["readerHomeButton"].frame.midY, app.buttons["sessionActionsButton"].frame.midY, accuracy: 2)
-        XCTAssertLessThanOrEqual(app.buttons["readerHomeButton"].frame.height, 48)
+        XCTAssertTrue(app.buttons["sessionActionsButton"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["readerHomeButton"].exists)
         let readerShot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         readerShot.name = "Simple-reader-navigation"; readerShot.lifetime = .keepAlways; add(readerShot)
         app.buttons["sessionActionsButton"].tap()
@@ -169,8 +168,84 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(close.waitForExistence(timeout: 5))
         XCTAssertGreaterThan(close.frame.midX, app.frame.midX)
         close.tap()
-        app.buttons["readerHomeButton"].tap()
+        app.tabBars.buttons["Home"].tap()
         XCTAssertTrue(app.buttons["simpleListenNow"].exists)
+    }
+
+    @MainActor
+    func testSimpleReaderNamesAndHomeTabReturn() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-live-translation", "--ui-test-session-flow"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["simpleModeToggle"])
+        app.tabBars.buttons["Home"].tap()
+        app.buttons["simpleListenNow"].tap()
+        let actions = app.buttons["sessionActionsButton"]
+        XCTAssertTrue(actions.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["readerHomeButton"].exists)
+        XCTAssertFalse(actions.staticTexts["visibleControlName"].exists)
+        XCTAssertEqual(actions.label, "Session actions")
+        let hidden = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        hidden.name = "Simple-reader-icons"; hidden.lifetime = .keepAlways; add(hidden)
+        // Re-selecting the current tab must return Home, not leave the reader stranded.
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 5))
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        app.tabBars.buttons["Home"].tap()
+        app.buttons["simpleListenNow"].tap()
+        XCTAssertTrue(actions.staticTexts["visibleControlName"].waitForExistence(timeout: 5))
+        let named = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        named.name = "Simple-reader-names"; named.lifetime = .keepAlways; add(named)
+        app.buttons["captureLanguagePicker"].tap()
+        app.buttons["French · Français"].tap()
+        XCTAssertTrue((app.buttons["captureLanguagePicker"].value as? String ?? "").contains("Français"))
+        app.buttons["translationTargetPicker"].tap()
+        app.buttons["Korean · 한국어"].tap()
+        XCTAssertTrue((app.buttons["translationTargetPicker"].value as? String ?? "").contains("한국어"))
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        app.tabBars.buttons["Home"].tap()
+        app.buttons["simpleListenNow"].tap()
+        XCTAssertFalse(actions.staticTexts["visibleControlName"].exists)
+        app.buttons["primaryCaptionAction"].tap()
+        let listening = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@", "Pause"), object: app.buttons["primaryCaptionAction"])
+        XCTAssertEqual(XCTWaiter.wait(for: [listening], timeout: 10), .completed)
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 5))
+        app.buttons["simpleListenNow"].tap()
+        XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Pause")
+        let count = Int((app.scrollViews["captionScrollView"].value as? String ?? "0").split(separator: " ").first ?? "0") ?? 0
+        XCTAssertGreaterThanOrEqual(count, 8)
+    }
+
+    @MainActor
+    func testPlaybackNamesIndependentOfSimpleMode() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation", "--ui-test-simple"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        app.staticTexts["Review sample"].tap()
+        app.buttons["sessionMediaButton"].tap()
+        let play = app.buttons["recordingPlayButton"]
+        XCTAssertTrue(play.waitForExistence(timeout: 5))
+        XCTAssertEqual(play.label, "Play")
+        XCTAssertFalse(play.staticTexts["visibleControlName"].exists)
+        app.buttons["playbackOptionsButton"].tap()
+        tapPreferenceSwitch(app.switches["Show button names"])
+        app.navigationBars["Playback options"].buttons["Done"].tap()
+        XCTAssertTrue(play.staticTexts["visibleControlName"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["playbackOptionsButton"].staticTexts["visibleControlName"].exists)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Playback-shared-names"; shot.lifetime = .keepAlways; add(shot)
+        app.buttons["playbackOptionsButton"].tap()
+        tapPreferenceSwitch(app.switches["Show button names"])
+        app.navigationBars["Playback options"].buttons["Done"].tap()
+        XCTAssertFalse(play.staticTexts["visibleControlName"].exists)
+        XCTAssertEqual(app.buttons["playbackOptionsButton"].label, "Playback options")
     }
 
     @MainActor
@@ -185,12 +260,13 @@ final class HomeScreenTests: XCTestCase {
         let home = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         home.name = "Home-dark-Spanish-large"; home.lifetime = .keepAlways; add(home)
         app.buttons["simpleListenNow"].tap()
-        XCTAssertTrue(app.buttons["readerHomeButton"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["sessionActionsButton"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["readerHomeButton"].exists)
         XCTAssertTrue(app.buttons["sessionActionsButton"].isHittable)
         XCTAssertLessThanOrEqual(app.buttons["sessionActionsButton"].frame.maxX, app.frame.maxX)
         let reader = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         reader.name = "Reader-dark-Spanish-large"; reader.lifetime = .keepAlways; add(reader)
-        app.buttons["readerHomeButton"].tap()
+        app.tabBars.buttons["Inicio"].tap()
         XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 5))
     }
 

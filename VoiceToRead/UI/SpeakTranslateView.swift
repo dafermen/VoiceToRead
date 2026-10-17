@@ -238,7 +238,7 @@ struct SpeakTranslateView: View {
                     if model.speaker.state != .idle {
                         Button("Stop audio", systemImage: "stop.circle.fill") { model.speaker.stop() }
                             .buttonStyle(.borderedProminent).controlSize(.large)
-                            .accessibilityIdentifier("conversationStopAudio")
+                            .labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationStopAudio")
                     } else if model.busy {
                         Button("Cancel", systemImage: "xmark.circle") { model.cancel() }
                             .disabled(model.phase == .cancelling).frame(minHeight: 44)
@@ -265,7 +265,7 @@ struct SpeakTranslateView: View {
                 DoneToolbar { model.cancel(); dismiss() }
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Conversation options", systemImage: "ellipsis.circle") { showingOptions = true }
-                        .disabled(!model.canEdit).accessibilityIdentifier("conversationOptions")
+                        .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
                 }
             }
             .sheet(isPresented: $showingOptions) { options }
@@ -299,7 +299,7 @@ struct SpeakTranslateView: View {
         }.disabled(!model.canEdit || model.capture.preparationPending)
     }
     private func conversationPicker(left: Bool) -> some View {
-        Picker(left ? "First language" : "Second language", selection: Binding(
+        LanguagePickerControl(title: left ? "First language" : "Second language", selection: Binding(
             get: { left ? first : second }, set: { selected in
                 // Selecting the other participant's language swaps the pair; never duplicate it.
                 if left {
@@ -310,9 +310,7 @@ struct SpeakTranslateView: View {
                     second = selected
                 }
                 model.selectLanguage(first, target: second)
-            })) {
-                ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.pickerLabel).tag($0) }
-            }.accessibilityIdentifier(left ? "conversationFirstLanguage" : "conversationSecondLanguage")
+            })).accessibilityIdentifier(left ? "conversationFirstLanguage" : "conversationSecondLanguage")
     }
 
     private var turnControls: some View {
@@ -334,7 +332,7 @@ struct SpeakTranslateView: View {
                     else { Text("Speak \(language.name)") }
                 } icon: {
                     Image(systemName: listening ? "stop.fill" : "mic.fill")
-                }.font(.headline)
+                }.font(.headline).labelStyle(AccessibleControlLabelStyle())
                 Text(verbatim: language.name + " → " + destination.name)
                     .font(.caption)
             }.multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
@@ -363,12 +361,12 @@ struct SpeakTranslateView: View {
                     Label("Play \(model.target.name)", systemImage: "speaker.wave.2.fill")
                         .frame(maxWidth: .infinity, minHeight: 44)
                 }.buttonStyle(LanguageButtonStyle(color: settings.color(for: model.target), highContrast: settings.highContrast))
-                    .disabled(!model.canEdit).accessibilityIdentifier("conversationPlay")
+                    .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationPlay")
             } else if !model.source.isEmpty && model.canEdit {
                 Button { model.translate() } label: {
                     Label("Translate and play", systemImage: "character.bubble")
                         .frame(maxWidth: .infinity, minHeight: 44)
-                }.disabled(!TranslationJob.supported).accessibilityIdentifier("conversationTranslate")
+                }.disabled(!TranslationJob.supported).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationTranslate")
             }
             if !model.source.isEmpty {
                 Button {
@@ -376,7 +374,7 @@ struct SpeakTranslateView: View {
                 } label: {
                     Label("Correct message", systemImage: "pencil")
                         .frame(maxWidth: .infinity, minHeight: 44)
-                }.disabled(!model.canEdit).accessibilityIdentifier("conversationCorrect")
+                }.disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationCorrect")
             }
         }.buttonStyle(.bordered).multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)

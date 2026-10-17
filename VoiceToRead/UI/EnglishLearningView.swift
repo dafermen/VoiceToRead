@@ -223,7 +223,7 @@ private struct LearningExpressionEditor: View {
 private struct PracticeActionStyle: ButtonStyle {
     @Environment(\.isEnabled) private var enabled
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label.font(.body).labelStyle(.titleAndIcon)
+        configuration.label.font(.body).labelStyle(AccessibleControlLabelStyle())
             .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
             .contentShape(Rectangle())
             .foregroundStyle(configuration.role == .destructive ? Color.red : Color.accentColor)

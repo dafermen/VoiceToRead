@@ -2,6 +2,8 @@
 
 Fecha: 2026-10-17. Proyecto VoiceToRead, bundle `com.innovalogic.voicetoread`.
 
+Esta revisión documenta el estado anterior a la retirada del botón Inicio superior. Consulta [la siguiente revisión](language-controls-checkpoint.md) para selectores compartidos y nombres independientes del modo sencillo.
+
 ## Alcance
 
 Inicio sencillo, barra de Escuchar ahora, transporte compartido de audio y práctica, acciones de aprendizaje y cierre de ventanas. Ver [guía](home-controls.md). Son cambios de presentación y navegación, sin migración, modificación de grabaciones, reconocimiento o traducción.

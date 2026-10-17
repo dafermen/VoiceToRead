@@ -129,7 +129,7 @@ struct SessionHistoryView: View {
                     NavigationLink { RecentlyDeletedView(repository: coordinator.repository) } label: {
                         Label("Recently deleted (\(trash.count))", systemImage: "trash")
                     }.accessibilityIdentifier("recentlyDeletedLink")
-                } label: { Label("Session library options", systemImage: "ellipsis.circle") }
+                } label: { Label("Session library options", systemImage: "ellipsis.circle").labelStyle(AccessibleControlLabelStyle()) }
                     .accessibilityIdentifier("sessionLibraryOptions")
             }
         }
@@ -222,9 +222,15 @@ struct SessionHistoryView: View {
             Button {
                 toggleProtection(session)
             } label: {
-                Image(systemName: isFavorite(session) ? "lock.fill" : "star")
-                    .font(.title3.weight(.semibold)).foregroundStyle(.black)
-                    .frame(width: 48, height: 48).background(.yellow, in: Circle())
+                VStack(spacing: 4) {
+                    Image(systemName: isFavorite(session) ? "lock.fill" : "star")
+                        .font(.title3.weight(.semibold)).foregroundStyle(.black)
+                        .frame(width: 48, height: 48).background(.yellow, in: Circle())
+                    if coordinator.settings.showButtonNames {
+                        Text(uiKey(isFavorite(session) ? "Remove protection" : "Favorite & protect")).font(.caption)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }.frame(maxWidth: 90)
             }
             .buttonStyle(.plain).disabled(draft)
             .accessibilityLabel(uiKey(isFavorite(session) ? "Remove protection" : "Favorite & protect"))
@@ -233,10 +239,13 @@ struct SessionHistoryView: View {
             Button {
                 requestDeletion(session)
             } label: {
-                Image(systemName: "trash")
-                    .font(.title3.weight(.semibold)).foregroundStyle(.white)
-                    .frame(width: 48, height: 48)
-                    .background(canDelete(session) ? Color.red : Color.gray, in: Circle())
+                VStack(spacing: 4) {
+                    Image(systemName: "trash")
+                        .font(.title3.weight(.semibold)).foregroundStyle(.white)
+                        .frame(width: 48, height: 48)
+                        .background(canDelete(session) ? Color.red : Color.gray, in: Circle())
+                    if coordinator.settings.showButtonNames { Text("Delete").font(.caption) }
+                }.frame(maxWidth: 90)
             }
             .buttonStyle(.plain).disabled(!canDelete(session))
             .accessibilityLabel("Delete")
@@ -244,8 +253,8 @@ struct SessionHistoryView: View {
             .accessibilityIdentifier("deleteSessionAction")
         } else {
             Button { revealActions(session.id) } label: {
-                Label("Session actions", systemImage: "ellipsis.circle").labelStyle(.iconOnly)
-                    .frame(width: 44, height: 44).contentShape(Rectangle())
+                Label("Session actions", systemImage: "ellipsis.circle").labelStyle(AccessibleControlLabelStyle())
+                    .frame(minWidth: 44, minHeight: 44).contentShape(Rectangle())
             }.buttonStyle(.borderless)
                 .accessibilityIdentifier("sessionActions-" + session.id.uuidString)
         }
@@ -415,9 +424,9 @@ struct SessionDetailView: View {
             ToolbarItemGroup(placement: .primaryAction) {
                 Button("Edit transcript", systemImage: "pencil") { showingEditor = true }
                     .disabled(!canEdit || corrections == nil || originals.isEmpty)
-                    .accessibilityIdentifier("editTranscriptButton")
+                    .labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("editTranscriptButton")
                 Button("Review & share", systemImage: "square.and.arrow.up") { showingShare = true }
-                    .disabled(corrections == nil).accessibilityIdentifier("reviewShareButton")
+                    .disabled(corrections == nil).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("reviewShareButton")
             }
         }
         .task(id: showingMedia) { refreshPlayableParagraphs() }

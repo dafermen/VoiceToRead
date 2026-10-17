@@ -1,3 +1,11 @@
+## 2026-10-17 — selectores de idioma y nombres independientes
+
+- Selector azul compartido en captura, Conversación, Ajustes, traducción guardada y voz de respuesta.
+- Se retira el regreso superior duplicado en Escuchar ahora; la pestaña Inicio devuelve al menú sin descartar la sesión.
+- Mostrar nombres funciona también en modo sencillo y utiliza la misma preferencia observable en controles, reproductores y ventanas secundarias.
+- Idiomas, navegación y decisiones de guardado conservan su texto. Nombres de accesibilidad siempre presentes.
+- [Guía de uso y desarrollo](docs/home-controls.md).
+
 ## 2026-10-17 — uniformidad visual de Inicio, práctica y ventanas
 
 - Inicio sencillo usa tarjetas blancas sobre fondo gris y colores semánticos para modo oscuro.

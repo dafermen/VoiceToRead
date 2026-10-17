@@ -259,12 +259,25 @@ struct NamedCircleControl: View {
     }
 }
 struct AccessibleControlLabelStyle: LabelStyle {
-    @AppStorage("showButtonNames") private var names = false
-    @AppStorage("simpleMode") private var simple = false
     func makeBody(configuration: Configuration) -> some View {
-        VStack(spacing: 4) {
-            configuration.icon
-            if names || simple { configuration.title.font(.caption).fixedSize(horizontal: false, vertical: true) }
+        PreferenceControlLabel(configuration: configuration)
+    }
+}
+
+/// View.body reads observable settings on the main actor; LabelStyle.makeBody itself is not isolated.
+private struct PreferenceControlLabel: View {
+    @Environment(AppSettings.self) private var settings
+    let configuration: LabelStyleConfiguration
+    var body: some View {
+        if settings.showButtonNames {
+            VStack(spacing: 4) {
+                configuration.icon
+                configuration.title.font(.caption).fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("visibleControlName")
+            }
+        } else {
+            // Native iconOnly retains the original Label title for assistive technologies.
+            Label { configuration.title } icon: { configuration.icon }.labelStyle(.iconOnly)
         }
     }
 }
