@@ -127,7 +127,7 @@ struct CaptionScreen: View {
                 Form { LanguagePairOptions(model: model, settings: settings); CaptureOptionsView(model: model, settings: settings) }
                     .navigationTitle("Capture preferences")
                     .navigationBarTitleDisplayMode(.inline)
-                    .toolbar { DoneButton { showingCaptureOptions = false } }
+                    .toolbar { DoneToolbar { showingCaptureOptions = false } }
             }
             .presentationDetents([.medium, .large])
         }
@@ -138,7 +138,7 @@ struct CaptionScreen: View {
         presentedReader
         .confirmationDialog("Session actions", isPresented: $showingActions, titleVisibility: .visible) {
             if let writeResponse { Button("Write and speak", action: writeResponse).disabled(model.state.active || model.state.busy) }
-            Button("Recording options") { showingOptions = true }
+            Button("Reading options") { showingOptions = true }
             Button("Capture preferences") { showingCaptureOptions = true }
             Button("Full screen") { isFullScreen.toggle() }
             if supportsLiveTranslation { Button("Reading language") { showingLiveDisplay = true } }
@@ -318,13 +318,33 @@ struct CaptionScreen: View {
 
     /// Named controls wrap into rows. Icon-only mode retains the compact toolbar.
     @ViewBuilder private var utilities: some View {
-        if showControlNames {
+        if settings.simpleMode {
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 12) { simpleUtilityButtons(vertical: false) }
+                VStack(alignment: .leading, spacing: 8) { simpleUtilityButtons(vertical: true) }
+            }.buttonStyle(.plain).tint(.accentColor)
+        } else if showControlNames {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: dynamicTypeSize.isAccessibilitySize ? 150 : 104), alignment: .top)], alignment: .leading, spacing: 8) {
                 utilityButtons
             }
         } else {
             HStack(spacing: 0) { utilityButtons }
         }
+    }
+    /// Compact navigation in simple mode: a familiar back action and named menu, not a grid of tiles.
+    @ViewBuilder private func simpleUtilityButtons(vertical: Bool) -> some View {
+        if let returnHome {
+            Button(action: returnHome) { Label("Home", systemImage: "chevron.left") }
+                .frame(minHeight: 44).foregroundStyle(Color.accentColor)
+                .accessibilityIdentifier("readerHomeButton")
+                .disabled(model.state.active || model.state.busy)
+        }
+        if model.state == .ended { newSessionButton }
+        if !vertical { Spacer(minLength: 0) }
+        Button { showingActions = true } label: {
+            Label("Session actions", systemImage: "ellipsis.circle")
+                .fixedSize(horizontal: !vertical, vertical: true).frame(minHeight: 44)
+        }.foregroundStyle(Color.accentColor).accessibilityIdentifier("sessionActionsButton")
     }
     @ViewBuilder private var utilityButtons: some View {
         if let returnHome {
@@ -683,7 +703,7 @@ struct CaptionScreen: View {
                 }
             }
             .navigationTitle("Reading options").navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { DoneButton { showingOptions = false } } }
+            .toolbar { DoneToolbar { showingOptions = false } }
         }
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
@@ -718,7 +738,7 @@ struct CaptionScreen: View {
                 }
             }
             .navigationTitle("Session information").navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .confirmationAction) { DoneButton { showingStatus = false } } }
+            .toolbar { DoneToolbar { showingStatus = false } }
         }
     }
 
@@ -844,5 +864,13 @@ struct DoneButton: View {
             Image(systemName: "checkmark").font(.body.weight(.semibold))
                 .frame(minWidth: 44, minHeight: 44)
         }.accessibilityLabel("Done").help("Done")
+    }
+}
+
+/// Every dismiss-only sheet uses the same trailing check. Editors keep explicit Cancel and Save.
+struct DoneToolbar: ToolbarContent {
+    let action: () -> Void
+    var body: some ToolbarContent {
+        ToolbarItem(placement: .confirmationAction) { DoneButton(action: action) }
     }
 }

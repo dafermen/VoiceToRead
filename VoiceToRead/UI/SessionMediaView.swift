@@ -321,8 +321,8 @@ struct SessionMediaView: View {
             }
             .navigationTitle("Audio & subtitles").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { DoneButton { dismiss() } }
-                ToolbarItem(placement: .primaryAction) {
+                DoneToolbar { dismiss() }
+                ToolbarItem(placement: .topBarLeading) {
                     if !reviewed.isEmpty {
                         Button(uiKey(fullScreen ? "Exit full screen" : "Full screen"), systemImage: fullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
                             fullScreen.toggle()
@@ -395,7 +395,7 @@ struct SessionMediaView: View {
                     }.overlay { if matchingPlaybackParagraphs.isEmpty && !paragraphQuery.isEmpty { Text("No matching paragraphs") } }
                         .searchable(text: $paragraphQuery, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search original or translation")
                         .navigationTitle("Paragraphs").navigationBarTitleDisplayMode(.inline)
-                        .toolbar { DoneButton { showingPhrases = false } }
+                        .toolbar { DoneToolbar { showingPhrases = false } }
                 }
             }
             .sheet(isPresented: $showingOptions, onDismiss: {
@@ -404,7 +404,7 @@ struct SessionMediaView: View {
                 NavigationStack {
                     playbackOptions
                         .navigationTitle("Playback options").navigationBarTitleDisplayMode(.inline)
-                        .toolbar { DoneButton { showingOptions = false } }
+                        .toolbar { DoneToolbar { showingOptions = false } }
                 }
             }
             .confirmationDialog(uiKey("Delete the recording permanently? Your text and subtitles will stay."), isPresented: $deleting, titleVisibility: .visible) {
@@ -824,23 +824,36 @@ struct PlaybackTransport: View {
     let toggle: () -> Void
     let next: () -> Void
     var body: some View {
-        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 16)) : AnyLayout(HStackLayout(spacing: 32))) {
-            Button("Previous", systemImage: "backward.end.fill", action: previous)
+        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 16)) : AnyLayout(HStackLayout(alignment: .top, spacing: 12))) {
+            Button(action: previous) { transportLabel("Previous", symbol: "backward.end.fill") }
                 .accessibilityLabel("Previous paragraph")
                 .keyboardShortcut(.leftArrow, modifiers: .command)
                 .disabled(!previousEnabled).accessibilityIdentifier("previousParagraphButton")
-            Button(LocalizedStringKey(title), systemImage: playing ? "pause.fill" : "play.fill", action: toggle)
+            Button(action: toggle) { transportLabel(title, symbol: playing ? "pause.fill" : "play.fill", prominent: true) }
                 .accessibilityLabel(LocalizedStringKey(title))
-                .frame(minWidth: 56, minHeight: 56)
-                .padding(.horizontal, 8)
-                .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 28)).foregroundStyle(.white)
                 .disabled(!enabled).accessibilityIdentifier("recordingPlayButton")
-            Button("Next", systemImage: "forward.end.fill", action: next)
+            Button(action: next) { transportLabel("Next", symbol: "forward.end.fill") }
                 .accessibilityLabel("Next paragraph")
                 .keyboardShortcut(.rightArrow, modifiers: .command)
                 .disabled(!nextEnabled).accessibilityIdentifier("nextParagraphButton")
-        }.labelStyle(AccessibleControlLabelStyle()).font(.title2).buttonStyle(PlaybackButtonStyle())
-            .frame(maxWidth: .infinity)
+        }.buttonStyle(PlaybackButtonStyle()).frame(maxWidth: .infinity)
+    }
+    @AppStorage("showButtonNames") private var names = false
+    @AppStorage("simpleMode") private var simple = false
+
+    /// The colored circle contains only the symbol; visible names have their own space below it.
+    private func transportLabel(_ title: String, symbol: String, prominent: Bool = false) -> some View {
+        VStack(spacing: 6) {
+            Image(systemName: symbol).font(.title2)
+                .frame(width: 56, height: 56)
+                .foregroundStyle(prominent ? Color.white : Color.accentColor)
+                .background(prominent ? Color.accentColor : Color.clear, in: Circle())
+                .accessibilityHidden(true)
+            if names || simple {
+                Text(LocalizedStringKey(title)).font(.caption)
+                    .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            }
+        }.frame(maxWidth: .infinity).contentShape(Rectangle())
     }
 }
 struct PlaybackTextCard: View {

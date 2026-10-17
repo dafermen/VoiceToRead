@@ -166,7 +166,7 @@ struct OfflineReadinessView: View {
             }
         }
         .sheet(isPresented: $demo) { AccessibilityDemoView() }
-        .toolbar { DoneButton { coordinator.settings.preparationSeen = true; dismiss() } }
+        .toolbar { DoneToolbar { coordinator.settings.preparationSeen = true; dismiss() } }
         .onDisappear { translationJob = nil }
         .task { await refresh() }
         .onChange(of: phase) { _, phase in
@@ -182,7 +182,7 @@ struct OfflineReadinessView: View {
                     Text("5. Repeat before attending a conference. If a check fails, prepare the device while online.")
                 }
                 .navigationTitle("Test Offline Mode")
-                .toolbar { DoneButton { instructions = false } }
+               .toolbar { DoneToolbar { instructions = false } }
             }
         }
     }
@@ -252,7 +252,7 @@ struct AccessibilityDemoView: View {
                     }.buttonStyle(.bordered).controlSize(.large)
                 }.padding()
             }.navigationTitle("Quick guide")
-                .toolbar { DoneButton { dismiss() } }
+               .toolbar { DoneToolbar { dismiss() } }
         }
     }
 }
@@ -300,7 +300,12 @@ struct WrittenResponseView: View {
             }
         }.navigationTitle("Write and speak")
             .toolbar(.visible, for: .navigationBar)
-            .toolbar { if typing { DoneButton { typing = false } } }
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done", systemImage: "keyboard.chevron.compact.down") { typing = false }
+                }
+            }
             .onAppear { language = coordinator.settings.captureLanguage; speech.observeInterruptions() }
             .onDisappear { speech.close(); text = "" }
             .onChange(of: phase) { _, phase in if phase != .active { speech.interrupt() } }
@@ -327,14 +332,16 @@ struct SimpleHomeView: View {
                 NavigationLink { OfflineReadinessView(coordinator: coordinator) } label: { Label("Prepare VoiceToRead", systemImage: "checkmark.shield") }
                     .accessibilityIdentifier("simplePreparation")
             }.buttonStyle(SimpleHomeActionStyle()).labelStyle(SimpleHomeLabelStyle()).font(.headline).padding()
-        }.navigationTitle("VoiceToRead")
+        }.background(Color(uiColor: .systemGroupedBackground))
+            .navigationTitle("VoiceToRead")
     }
 }
 
 struct SimpleHomeLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 12) {
-            configuration.icon.frame(width: 28)
+            // Decorative symbols stay inside their reserved column even at accessibility text sizes.
+            configuration.icon.font(.system(size: 24)).frame(width: 28)
             configuration.title.fixedSize(horizontal: false, vertical: true)
         }
     }
@@ -346,11 +353,11 @@ struct SimpleHomeActionStyle: ButtonStyle {
         HStack(spacing: 12) {
             configuration.label
             Spacer(minLength: 8)
-            Image(systemName: "chevron.right").font(.caption).accessibilityHidden(true)
+            Image(systemName: "chevron.right").font(.system(size: 14, weight: .semibold)).accessibilityHidden(true)
         }.padding(.horizontal, 16).padding(.vertical, 10)
             .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
             .contentShape(RoundedRectangle(cornerRadius: 12))
-            .background(Color.accentColor.opacity(configuration.isPressed ? 0.18 : 0.08), in: RoundedRectangle(cornerRadius: 12))
+            .background(Color(uiColor: configuration.isPressed ? .tertiarySystemGroupedBackground : .secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12))
     }
 }
 

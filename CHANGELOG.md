@@ -1,3 +1,11 @@
+## 2026-10-17 — uniformidad visual de Inicio, práctica y ventanas
+
+- Inicio sencillo usa tarjetas blancas sobre fondo gris y colores semánticos para modo oscuro.
+- Escuchar ahora presenta Inicio y Acciones de sesión en una barra compacta que se adapta a letra grande.
+- Reproducción comparte círculos con solo el símbolo; nombres fuera del círculo. Acciones de práctica sin sombreado desigual.
+- Check de cierre siempre a la derecha; acciones contextuales a la izquierda. Editores conservan Cancelar/Guardar y el teclado su control separado.
+- Opciones de lectura conserva el mismo nombre en menú y destino. [Uso y explicación para estudiantes](docs/home-controls.md), [validación](docs/visual-consistency-checkpoint.md).
+
 ## 2026-10-17 — Sesiones e idiomas
 
 - Biblioteca de guardadas primero, favoritas, borradores y papelera separados; barra lateral en iPad.

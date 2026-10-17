@@ -262,8 +262,8 @@ struct SpeakTranslateView: View {
             }
             .navigationTitle("Conversation").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { DoneButton { model.cancel(); dismiss() } }
-                ToolbarItem(placement: .primaryAction) {
+                DoneToolbar { model.cancel(); dismiss() }
+                ToolbarItem(placement: .topBarLeading) {
                     Button("Conversation options", systemImage: "ellipsis.circle") { showingOptions = true }
                         .disabled(!model.canEdit).accessibilityIdentifier("conversationOptions")
                 }
@@ -403,7 +403,7 @@ struct SpeakTranslateView: View {
                     Text("This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.")
                 }
             }.navigationTitle("Conversation options").navigationBarTitleDisplayMode(.inline)
-                .toolbar { DoneButton { showingOptions = false } }
+                .toolbar { DoneToolbar { showingOptions = false } }
         }
     }
     private var statusIcon: String {

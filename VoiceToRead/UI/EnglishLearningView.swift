@@ -95,10 +95,10 @@ struct EnglishLearningView: View {
                         }
                         Button("Practicar pronunciación", systemImage: "mic.badge.plus") {
                             player.stop(); pronunciation = unit
-                        }.buttonStyle(.bordered).accessibilityIdentifier("practicePronunciation")
+                        }.buttonStyle(PracticeActionStyle()).accessibilityIdentifier("practicePronunciation")
                         if let spanish = unit.spanish, !spanish.isEmpty {
                             Button(uiKey(revealed ? "Hide translation" : "Reveal translation"), systemImage: "eye") { revealed.toggle() }
-                                .accessibilityIdentifier("revealLearningSpanish")
+                                .buttonStyle(PracticeActionStyle()).accessibilityIdentifier("revealLearningSpanish")
                             if revealed {
                                 Text(spanish).font(.title3).accessibilityIdentifier("learningSpanish")
                                 Text("The translation is a study aid. Alignment within a phrase can be approximate.")
@@ -106,16 +106,16 @@ struct EnglishLearningView: View {
                             }
                         } else {
                             Text("No current translation for this phrase.").font(.caption)
-                            Button("Translate session", systemImage: "character.bubble") { player.stop(); translation = true }
+                            Button("Translate session", systemImage: "character.bubble") { player.stop(); translation = true }.buttonStyle(PracticeActionStyle())
                         }
                         if savedOnly {
                             DisclosureGroup("Original context (saved copy)") { Text(unit.context).textSelection(.enabled) }
                             Text("This copy does not change when you edit the transcript. Audio plays the surrounding phrase.")
                                 .font(.caption).foregroundStyle(.secondary)
-                            Button("Remove from learning", role: .destructive) { removeCurrent() }
+                            Button("Remove from learning", role: .destructive) { removeCurrent() }.buttonStyle(PracticeActionStyle())
                         } else {
-                            Button("Save expression", systemImage: "bookmark.badge.plus") { player.stop(); editing = unit }
-                                .accessibilityIdentifier("saveLearningExpression")
+                            Button("Save expression", systemImage: "text.badge.plus") { player.stop(); editing = unit }
+                                .buttonStyle(PracticeActionStyle()).accessibilityIdentifier("saveLearningExpression")
                         }
                     } else {
                         ContentUnavailableView(uiKey(savedOnly ? "No saved expressions" : "No phrases yet"),
@@ -124,7 +124,7 @@ struct EnglishLearningView: View {
                 }.padding()
             }
             .navigationTitle("Practicar idioma").navigationBarTitleDisplayMode(.inline)
-            .toolbar { DoneButton { dismiss() } }
+            .toolbar { DoneToolbar { dismiss() } }
             .task { load() }
             .sheet(item: $pronunciation) { unit in
                 PronunciationPracticeView(text: unit.english, language: language)
@@ -216,5 +216,17 @@ private struct LearningExpressionEditor: View {
             }
             .onAppear { english = String(unit.english.prefix(500)); spanish = unit.spanish ?? "" }
         }
+    }
+}
+
+/// Secondary learning actions share a quiet, full-width touch target without competing fills.
+private struct PracticeActionStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var enabled
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label.font(.body).labelStyle(.titleAndIcon)
+            .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+            .contentShape(Rectangle())
+            .foregroundStyle(configuration.role == .destructive ? Color.red : Color.accentColor)
+            .opacity(enabled ? (configuration.isPressed ? 0.5 : 1) : 0.3)
     }
 }

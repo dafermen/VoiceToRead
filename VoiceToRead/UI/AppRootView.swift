@@ -260,7 +260,7 @@ struct LiveCaptionView: View {
             .sheet(isPresented: $showingResponse) {
                 NavigationStack {
                     WrittenResponseView(coordinator: coordinator)
-                        .toolbar { DoneButton { showingResponse = false } }
+                        .toolbar { DoneToolbar { showingResponse = false } }
                 }
             }
             .sheet(isPresented: $showingConversation) {

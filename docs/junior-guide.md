@@ -365,3 +365,9 @@ Lee [la explicación para estudiantes](session-library-and-languages.md#para-est
 Ejercicio: crea una sesión francesa, tradúcela a coreano, corrige una frase, cambia a español y vuelve a coreano. La corrección debe conservarse. Después modifica el original: ambos destinos deben requerir actualización. Sigue el UUID del párrafo desde el reconocimiento hasta el snapshot y el paso de audio. Repite con un almacén V10 para comprobar que la migración añade datos sin destruirlos.
 
 Los nombres históricos `LearningExpression.english/spanish` representan original/nota; no se cambian sus columnas para conservar los almacenes anteriores. Su etiqueta visible es genérica, porque las notas históricas no incluyen un destino. Las nuevas traducciones sí guardan su destino explícitamente.
+
+## Uniformidad visual de controles (2026-10-17)
+
+Consulta [las convenciones y su explicación SwiftUI](home-controls.md#convenciones-compartidas-de-presentación). El objetivo es que personas con baja visión, dificultades auditivas o del habla, estudiantes de idiomas y niños acompañados encuentren acciones previsibles sin aprender otra organización en cada pantalla.
+
+Al agregar una ventana de consulta, reutiliza `DoneToolbar`, no un `DoneButton` con ubicación implícita. Si hay un formulario con cambios pendientes, conserva Cancelar/Guardar. Un menú solo debe aparecer si hay acciones adicionales: coherencia no significa duplicar botones sin función. Las acciones secundarias de práctica reutilizan `PracticeActionStyle`; reproducción usa `PlaybackTransport`. Mantén separados el dibujo del símbolo, el texto visible y el nombre de accesibilidad. Prueba también nombres activados, español, letra grande y apariencia oscura; un círculo con un texto largo dentro no es un buen control adaptable.

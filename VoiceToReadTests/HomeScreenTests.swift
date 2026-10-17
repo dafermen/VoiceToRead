@@ -158,8 +158,40 @@ final class HomeScreenTests: XCTestCase {
         for id in ids { XCTAssertEqual(app.buttons[id].frame.height, app.buttons["simpleListenNow"].frame.height, accuracy: 1) }
         app.buttons["simpleListenNow"].tap()
         XCTAssertTrue(app.buttons["readerHomeButton"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.buttons["readerHomeButton"].frame.midY, app.buttons["sessionActionsButton"].frame.midY, accuracy: 2)
+        XCTAssertLessThanOrEqual(app.buttons["readerHomeButton"].frame.height, 48)
+        let readerShot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        readerShot.name = "Simple-reader-navigation"; readerShot.lifetime = .keepAlways; add(readerShot)
+        app.buttons["sessionActionsButton"].tap()
+        XCTAssertTrue(app.buttons["Reading options"].waitForExistence(timeout: 5))
+        app.buttons["Reading options"].tap()
+        let close = app.navigationBars["Reading options"].buttons["Done"]
+        XCTAssertTrue(close.waitForExistence(timeout: 5))
+        XCTAssertGreaterThan(close.frame.midX, app.frame.midX)
+        close.tap()
         app.buttons["readerHomeButton"].tap()
         XCTAssertTrue(app.buttons["simpleListenNow"].exists)
+    }
+
+    @MainActor
+    func testSimpleHomeDarkSpanishAndLargeText() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-simple", "--ui-test-labels",
+            "-appearance", "dark", "-interfaceLanguage", "es",
+            "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 20))
+        let home = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        home.name = "Home-dark-Spanish-large"; home.lifetime = .keepAlways; add(home)
+        app.buttons["simpleListenNow"].tap()
+        XCTAssertTrue(app.buttons["readerHomeButton"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["sessionActionsButton"].isHittable)
+        XCTAssertLessThanOrEqual(app.buttons["sessionActionsButton"].frame.maxX, app.frame.maxX)
+        let reader = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        reader.name = "Reader-dark-Spanish-large"; reader.lifetime = .keepAlways; add(reader)
+        app.buttons["readerHomeButton"].tap()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 5))
     }
 
     @MainActor
@@ -1018,7 +1050,7 @@ final class HomeScreenTests: XCTestCase {
     @MainActor
     func testEnglishLearningRevealSaveAndReplay() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation"]
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation", "-showButtonNames", "YES"]
         app.launch()
         XCTAssertTrue(app.buttons["fullScreenButton"].waitForExistence(timeout: 20))
         XCTAssertFalse(app.buttons["capturePreferencesButton"].exists)
@@ -1033,6 +1065,16 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["learnEnglishButton"].tap()
         XCTAssertTrue(app.staticTexts["learningEnglish"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.staticTexts["learningSpanish"].exists)
+        let done = app.navigationBars["Language practice"].buttons["Done"]
+        XCTAssertGreaterThan(done.frame.midX, app.frame.midX)
+        XCTAssertTrue(app.buttons["recordingPlayButton"].isHittable)
+        let practiceShot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        practiceShot.name = "Practice-named-controls"; practiceShot.lifetime = .keepAlways; add(practiceShot)
+        app.buttons["practicePronunciation"].tap()
+        let pronunciationDone = app.navigationBars["Pronunciation"].buttons["Done"]
+        XCTAssertTrue(pronunciationDone.waitForExistence(timeout: 5))
+        XCTAssertGreaterThan(pronunciationDone.frame.midX, app.frame.midX)
+        pronunciationDone.tap()
         app.buttons["revealLearningSpanish"].tap()
         XCTAssertTrue(app.staticTexts["learningSpanish"].exists)
         app.buttons["learningSpeed"].tap()

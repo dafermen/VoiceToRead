@@ -109,10 +109,8 @@ struct SessionTranslationView: View {
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search original or translation")
             .navigationTitle("Text & translation").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    DoneButton { job = nil; dismiss() }
-                }
-                ToolbarItem(placement: .primaryAction) {
+                DoneToolbar { job = nil; dismiss() }
+                ToolbarItem(placement: .topBarLeading) {
                     if current {
                         Button("Edit \(target.name)", systemImage: "pencil") { editing = true }
                             .disabled(job != nil || preparing).accessibilityIdentifier("editSpanishButton")
@@ -254,7 +252,7 @@ struct SessionTranslationView: View {
                 Button("Copy text") { UIPasteboard.general.string = TranscriptReview.text(displayed); exportMenu = false }
             }
             .navigationTitle("Review & share").navigationBarTitleDisplayMode(.inline)
-            .toolbar { Button("Cancel") { exportMenu = false } }
+            .toolbar { DoneToolbar { exportMenu = false } }
             .onAppear { if cues.isEmpty { previewKind = "txt" } }
         }
     }

@@ -211,12 +211,12 @@ private struct FindReplaceView: View {
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Find and replace").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { DoneButton { dismiss() } }
+                DoneToolbar { dismiss() }
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
                     Button("Preview matches") { focused = nil }
                 }
-                ToolbarItem(placement: .confirmationAction) {
+                ToolbarItem(placement: .topBarLeading) {
                     Button("Replace all") { confirmingAll = true }.disabled(matches.isEmpty)
                 }
             }

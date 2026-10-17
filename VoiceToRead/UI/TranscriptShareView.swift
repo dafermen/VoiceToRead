@@ -84,8 +84,8 @@ struct TranscriptShareView: View {
             }
             .navigationTitle("Review & share").navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { DoneButton { dismiss() } }
-                ToolbarItem(placement: .confirmationAction) {
+                DoneToolbar { dismiss() }
+                ToolbarItem(placement: .topBarLeading) {
                     Button("Edit", systemImage: "pencil") { showingEditor = true }
                         .disabled(!canEdit || corrections == nil).accessibilityIdentifier("editFromPreview")
                 }

@@ -345,7 +345,7 @@ struct PronunciationPracticeView: View {
             }
             }
             .navigationTitle("Pronunciación").navigationBarTitleDisplayMode(.inline)
-            .toolbar { Button("Listo") { practice.close(); dismiss() } }
+            .toolbar { DoneToolbar { practice.close(); dismiss() } }
             .onAppear { practice.observeInterruptions() }
             .onChange(of: selection) { _, _ in practice.reset() }
             .onChange(of: phase) { _, value in
