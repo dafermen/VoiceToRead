@@ -139,3 +139,12 @@ For source 27 cards, inspect the retained bilingual screenshots in portrait and 
 - `testLongPlaybackParagraphScrollsAndPreviousRestoresIt` verifica desplazamiento de un párrafo largo y regreso a él con Anterior.
 - Evidencia local: `/private/tmp/vtr-font-range.xcresult`, `/private/tmp/vtr-font-range.log` (`TEST SUCCEEDED`). Localización EN/ES: 658 claves y 2 permisos coincidentes; 467 claves extraídas cubiertas.
 - Esta comprobación no sustituye la prueba física en el iPhone del usuario; la entrega en TestFlight requiere completar Xcode Cloud y el procesamiento de Apple.
+
+## Biblioteca y cuatro idiomas (2026-10-17)
+
+- Migrar un almacén V10 con traducción antigua a V11; conservar fuente, traducción, favoritas y audio.
+- Verificar doce pares origen/destino, correcciones por destino, restaurar idioma anterior y texto coreano en SRT.
+- En iPhone: guardadas primero, favoritas vacías, búsqueda sin resultados, borradores separados, papelera/restaurar. En iPad: categorías laterales y apertura de detalles.
+- Conversación: elegir francés/coreano, hablar en cada sentido, detener/cancelar y corregir; color y voz deben corresponder al idioma elegido.
+- Dispositivo real: comprobar idioma sin modelo, descarga aceptada/rechazada, modo avión, voces ausentes, interrupciones, VoiceOver, letras grandes y texto coreano largo. La fixture DEBUG no certifica reconocimiento/traducción reales.
+- Evidencia y estado: [checkpoint](session-library-languages-checkpoint.md).

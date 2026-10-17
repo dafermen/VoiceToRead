@@ -5,6 +5,106 @@ import SwiftData
 
 @MainActor
 final class TranslationTests: XCTestCase {
+
+    func testAllTwelveLanguageDirectionsKeepTextVoiceAndExportRoles() throws {
+        for sourceLanguage in CaptureLanguage.allCases {
+            for target in CaptureLanguage.allCases where target != sourceLanguage {
+                let source = [ReviewParagraph(id: UUID(), text: sourceLanguage.greeting)]
+                let translated = [ReviewParagraph(id: source[0].id, text: target.greeting)]
+                let plan = IncrementalTranslation(source: source, previous: nil, language: sourceLanguage, targetLanguage: target)
+                let snapshot = try plan.merging(translated)
+                XCTAssertEqual(snapshot.language, sourceLanguage)
+                XCTAssertEqual(snapshot.target, target)
+                XCTAssertEqual(snapshot.paragraphs(mode: sourceLanguage.mode), source)
+                XCTAssertEqual(snapshot.paragraphs(mode: target.mode), translated)
+                XCTAssertEqual(snapshot.fileSuffix(mode: .both), sourceLanguage.code + "-" + target.code)
+                let steps = ParagraphAudioStep.make(source: source, translated: translated, language: sourceLanguage,
+                    mode: .both, ranges: [], target: target)
+                XCTAssertEqual(steps.map(\.language), [sourceLanguage, target])
+                XCTAssertEqual(PlaybackLanguagePreference.translation.mode(source: sourceLanguage, hasTranslation: true, target: target), target.mode)
+                let old = TranslationSnapshot(source: source, generated: translated, sourceLocale: sourceLanguage.rawValue,
+                                              targetLocale: target.rawValue)
+                let newTarget = CaptureLanguage.allCases.first { $0 != sourceLanguage && $0 != target }!
+                XCTAssertEqual(IncrementalTranslation(source: source, previous: old, language: sourceLanguage,
+                    targetLanguage: newTarget).pending, source, "Never reuse another destination's text")
+            }
+        }
+    }
+
+    func testTranslationLibraryPreservesCorrectionsAcrossDestinationsAndReopen() throws {
+        let folder = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: folder) }
+        let id = try autoreleasepool { () throws -> UUID in
+            let repo = try TranscriptRepository(directory: folder)
+            let session = try repo.create(title: "French conversation", language: .french, target: .korean)
+            let segment = CaptionSegment(runID: UUID(), start: 0, end: 2, text: "Bonjour, merci.")
+            try repo.apply(.init(removedIDs: [], upserted: [segment]), to: session)
+            let source = try repo.reviewedParagraphs(for: session)
+            var korean = try IncrementalTranslation(source: source, previous: nil, language: .french, targetLanguage: .korean)
+                .merging([ReviewParagraph(id: segment.id, text: "안녕하세요. 감사합니다.")])
+            korean.edits[segment.id.uuidString] = "안녕하세요. 정말 감사합니다."
+            try repo.saveTranslation(korean, for: session)
+            let spanish = try IncrementalTranslation(source: source, previous: nil, language: .french, targetLanguage: .spanish)
+                .merging([ReviewParagraph(id: segment.id, text: "Hola, gracias.")])
+            try repo.saveTranslation(spanish, for: session)
+            XCTAssertEqual(try repo.translation(for: session.id)?.decoded().target, .spanish)
+            try repo.activateTranslation(for: session, target: .korean)
+            XCTAssertEqual(try repo.translationTarget(for: session), .korean)
+            XCTAssertEqual(try repo.translation(for: session.id)?.decoded().translated.first?.text, "안녕하세요. 정말 감사합니다.")
+            return session.id
+        }
+        let repo = try TranscriptRepository(directory: folder)
+        let record = try XCTUnwrap(repo.translation(for: id))
+        XCTAssertEqual(try record.library().snapshots.count, 2)
+        XCTAssertEqual(try record.decoded().target, .korean)
+        XCTAssertEqual(try record.decoded(target: .spanish)?.translated.first?.text, "Hola, gracias.")
+        let session = try XCTUnwrap(repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).first)
+        try repo.delete(session)
+        XCTAssertNil(try repo.languagePair(for: id))
+        XCTAssertNil(try repo.translation(for: id))
+    }
+
+    func testV10MigrationAndLegacyTranslationKeepHistoricalPair() throws {
+        let folder = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: folder) }
+        let id = try autoreleasepool { () throws -> UUID in
+            let schema = Schema(versionedSchema: SessionSchemaV10.self)
+            let config = ModelConfiguration("Sessions", schema: schema, url: folder.appendingPathComponent("Sessions.store"), cloudKitDatabase: .none)
+            let container = try ModelContainer(for: schema, configurations: [config])
+            let session = ConferenceSession(title: "Legacy")
+            container.mainContext.insert(session)
+            let paragraph = ReviewParagraph(id: UUID(), text: "Hello")
+            let payload = try JSONEncoder().encode(TranslationSnapshot(source: [paragraph], generated: [.init(id: paragraph.id, text: "Hola")]))
+            container.mainContext.insert(SessionTranslation(sessionID: session.id, payload: payload))
+            try container.mainContext.save()
+            return session.id
+        }
+        let repo = try TranscriptRepository(directory: folder)
+        let session = try XCTUnwrap(repo.container.mainContext.fetch(FetchDescriptor<ConferenceSession>()).first)
+        XCTAssertEqual(session.id, id)
+        XCTAssertEqual(try repo.translationTarget(for: session), .spanish)
+        XCTAssertEqual(try repo.translation(for: id)?.decoded().translated.first?.text, "Hola")
+        XCTAssertNil(try repo.languagePair(for: id), "Migration is additive, no destructive rewriting")
+    }
+
+    func testKoreanSubtitleExportKeepsAllTextAndLegacyVocabularyIsPairScoped() throws {
+        let paragraph = ReviewParagraph(id: UUID(), text: "Bonjour tout le monde")
+        let korean = "안녕하세요 여러분. 만나서 반갑습니다."
+        let snapshot = TranslationSnapshot(source: [paragraph], generated: [.init(id: paragraph.id, text: korean)],
+            sourceLocale: "fr-FR", targetLocale: "ko-KR")
+        let timing = [paragraph.id.uuidString: CaptionTiming(start: 0, end: 5, words: [])]
+        let cues = TranslatedSubtitles.cues(snapshot: snapshot, timings: timing, mode: .korean)
+        XCTAssertEqual(cues.map(\.text).joined(separator: " "), korean)
+        XCTAssertTrue(SubtitleExport.render(cues, format: .srt).contains(korean))
+        let name = UUID().uuidString; let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        defaults.set("hello = hola", forKey: PersonalVocabulary.key)
+        XCTAssertTrue(PersonalVocabulary.saved(for: .english, target: .korean, defaults: defaults).isEmpty)
+        XCTAssertTrue(PersonalVocabulary.saved(for: .french, target: .spanish, defaults: defaults).isEmpty)
+        XCTAssertEqual(PersonalVocabulary.saved(for: .english, target: .spanish, defaults: defaults).first?.target, "hola")
+    }
+
     func testGapCanPauseResumeAndCancelWithoutLateSpeech() async throws {
         let original = ReviewParagraph(id: UUID(), text: "Hello")
         let output = FakeTranslationSpeechOutput()

@@ -48,7 +48,7 @@ struct LearningUnit: Identifiable, Equatable {
     static func make(paragraphs: [ReviewParagraph], timings: [String: CaptionTiming],
                      translation: TranslationSnapshot?) -> [LearningUnit] {
         let current = translation?.isCurrent(paragraphs) == true ? translation : nil
-        let translatedCues = current.map { TranslatedSubtitles.cues(snapshot: $0, timings: timings, mode: $0.language.opposite.mode) } ?? []
+        let translatedCues = current.map { TranslatedSubtitles.cues(snapshot: $0, timings: timings, mode: $0.target.mode) } ?? []
         let spanishByCue = Dictionary(uniqueKeysWithValues: translatedCues.map { ($0.id, $0.text) })
         let spanishByParagraph = Dictionary(uniqueKeysWithValues: (current?.translated ?? []).map { ($0.id, $0.text) })
         let cues = Dictionary(grouping: SubtitleExport.cues(paragraphs: paragraphs, timings: timings), by: \.paragraphID)

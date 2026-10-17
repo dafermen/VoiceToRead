@@ -22,7 +22,7 @@ struct AppRootView: View {
                         }
                     }
                     .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
-                    NavigationStack { SessionHistoryView(coordinator: coordinator) }
+                    SessionLibraryView(coordinator: coordinator)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
@@ -134,7 +134,7 @@ struct AppRootView: View {
                 return
             }
             if ProcessInfo.processInfo.arguments.contains("--ui-test-review") {
-                for key in ["englishLanguageColor", "spanishLanguageColor", "conversationMode", "conversationTurnMode", "playbackAtMyPace", "playbackLanguagePreference", "playbackLanguageGap", "originalPlaybackSpeed", "translationSpeechSpeed"] {
+                for key in ["conversationFirstLanguage", "conversationSecondLanguage", "frenchLanguageColor", "koreanLanguageColor", "captureLanguage", "translationLanguage", "englishLanguageColor", "spanishLanguageColor", "conversationMode", "conversationTurnMode", "playbackAtMyPace", "playbackLanguagePreference", "playbackLanguageGap", "originalPlaybackSpeed", "translationSpeechSpeed"] {
                     UserDefaults.standard.removeObject(forKey: key)
                 }
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-simple"), forKey: "simpleMode")
@@ -188,6 +188,20 @@ struct AppRootView: View {
                         changed[0].text = "The English transcript changed."
                         try repository.saveCorrections(changed, for: sample)
                     }
+                }
+                if ProcessInfo.processInfo.arguments.contains("--ui-test-library") {
+                    _ = try repository.create(title: "Unfinished draft example", draft: true)
+                    let deleted = try repository.create(title: "Deleted example")
+                    try repository.checkpoint(deleted, duration: 1, ended: true)
+                    try repository.moveToTrash(deleted)
+                    let french = try repository.create(title: "French and Korean", language: .french, target: .korean)
+                    let segment = CaptionSegment(runID: UUID(), start: 0, end: 3, text: "Bonjour. Nous apprenons ensemble.")
+                    try repository.apply(.init(removedIDs: [], upserted: [segment]), to: french)
+                    try repository.checkpoint(french, duration: 3, ended: true)
+                    let source = try repository.reviewedParagraphs(for: french)
+                    try repository.saveTranslation(TranslationSnapshot(source: source,
+                        generated: [.init(id: segment.id, text: "안녕하세요. 우리는 함께 배웁니다.")],
+                        sourceLocale: "fr-FR", targetLocale: "ko-KR"), for: french)
                 }
                 coordinator = SessionCoordinator(repository: repository)
                 storageFailure = false

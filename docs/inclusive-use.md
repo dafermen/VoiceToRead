@@ -46,3 +46,7 @@ Referencias de implementación: [orientaciones UIKit](https://developer.apple.co
 ## Actualización build 21
 
 Ver [interfaz bilingüe y primera preparación](interface-and-onboarding.md). El idioma de menús es independiente del idioma hablado. Guardar audio está activado inicialmente solo en instalaciones nuevas; las elecciones anteriores se conservan. Los renglones se calculan con el texto de cada párrafo. Estado de entrega: [checkpoint](interface-checkpoint.md).
+
+## Biblioteca y selección de idiomas
+
+Separamos sesiones guardadas, borradores y papelera para reducir carga cognitiva. Se ofrecen inglés, español, francés y coreano según los recursos del dispositivo. Menús en español/inglés y voz son preferencias diferentes. Los nombres siempre acompañan los colores y las acciones tienen etiquetas para VoiceOver. Se mantiene el foco en apoyo a discapacidad auditiva/baja visión, personas que aprenden un idioma y niños acompañados por un adulto. [Uso detallado](session-library-and-languages.md).

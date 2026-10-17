@@ -1,10 +1,12 @@
 # VoiceToRead
 
+Nueva biblioteca e idiomas: [uso y arquitectura](docs/session-library-and-languages.md), [validación](docs/session-library-languages-checkpoint.md). Sesiones guardadas primero; borradores y papelera separados. Los menús siguen en inglés/español.
+
 Actualización de experiencia accesible: [guía de los ocho cambios](docs/accessible-experience.md) y [evidencia/pendientes](docs/accessible-experience-checkpoint.md).
 
 **Read what is being said.** Live captions, translation and language practice by InnovaLogic.
 
-VoiceToRead is a native iPhone/iPad app for following English or Spanish conversations, reviewing recordings and practicing a language. It offers reading support for people with hearing loss or low vision and adult-guided language activities for children. Captions and translations may contain errors; it is not a certified interpretation or medical service.
+VoiceToRead is a native iPhone/iPad app for following English, Spanish, French or Korean conversations (subject to on-device language availability), reviewing recordings and practicing a language. It offers reading support for people with hearing loss or low vision and adult-guided language activities for children. Captions and translations may contain errors; it is not a certified interpretation or medical service.
 
 ## New independent project
 

@@ -1,6 +1,82 @@
 import XCTest
+import UIKit
 
 final class HomeScreenTests: XCTestCase {
+    @MainActor
+    func testLibrarySavedFirstDraftsSeparateAndKoreanPlayback() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-library"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        XCTAssertTrue(app.staticTexts["Review sample"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["French and Korean"].exists)
+        XCTAssertFalse(app.staticTexts["Unfinished draft example"].exists)
+        XCTAssertFalse(app.staticTexts["Deleted example"].exists)
+        let main = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); main.name = "Library-saved-first"; main.lifetime = .keepAlways; add(main)
+        if app.buttons["reviewDraftsLink"].exists {
+            app.buttons["reviewDraftsLink"].tap()
+            XCTAssertTrue(app.staticTexts["Unfinished draft example"].waitForExistence(timeout: 5))
+            XCTAssertFalse(app.staticTexts["Review sample"].exists)
+            app.navigationBars.buttons.element(boundBy: 0).tap()
+        }
+        app.staticTexts["French and Korean"].tap()
+        app.buttons["Audio & subtitles"].tap()
+        XCTAssertTrue(app.buttons["playbackTextMenu"].waitForExistence(timeout: 5))
+        // SwiftUI Menu on iOS 17 exposes an invalid AX activation point inside a sheet.
+        // Use its visible center, as in the existing playback tests, then verify the real selection.
+        app.buttons["playbackTextMenu"].coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        app.buttons["Both"].tap()
+        XCTAssertTrue(app.staticTexts["Bonjour. Nous apprenons ensemble."].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["안녕하세요. 우리는 함께 배웁니다."].exists)
+        let bilingual = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); bilingual.name = "French-Korean-playback"; bilingual.lifetime = .keepAlways; add(bilingual)
+        app.terminate()
+    }
+
+    @MainActor
+    func testConversationFrenchAndKoreanPairAndColors() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launch()
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
+        app.buttons["speakTranslateEntry"].tap()
+        app.buttons["conversationFirstLanguage"].tap(); app.buttons["French · Français"].tap()
+        app.buttons["conversationSecondLanguage"].tap(); app.buttons["Korean · 한국어"].tap()
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == true"), object: app.buttons["conversationTurn-fr"])
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed)
+        XCTAssertTrue(app.buttons["conversationTurn-ko"].isHittable)
+        XCTAssertEqual(app.buttons["conversationTurn-fr"].frame.minY, app.buttons["conversationTurn-ko"].frame.minY, accuracy: 1)
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Conversation-French-Korean"; shot.lifetime = .keepAlways; add(shot)
+        app.buttons["conversationTurn-fr"].tap()
+        XCTAssertTrue(app.staticTexts["Listening in Français…"].waitForExistence(timeout: 10))
+        app.buttons["conversationTurn-fr"].tap()
+        XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 10))
+        app.buttons["conversationStopAudio"].tap()
+        XCTAssertTrue(app.buttons["conversationPlay"].label.contains("한국어"))
+        app.terminate()
+    }
+
+    @MainActor
+    func testTabletLibrarySidebarCategories() throws {
+        guard UIDevice.current.userInterfaceIdiom == .pad else { throw XCTSkip("Sidebar requires iPad") }
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-library"]
+        XCUIDevice.shared.orientation = .landscapeLeft
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        XCTAssertTrue(app.staticTexts["French and Korean"].waitForExistence(timeout: 5))
+        app.staticTexts["Recovery drafts (1)"].tap()
+        XCTAssertTrue(app.staticTexts["Unfinished draft example"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.staticTexts["French and Korean"].exists)
+        app.staticTexts["Saved sessions"].tap()
+        XCTAssertTrue(app.staticTexts["French and Korean"].waitForExistence(timeout: 5))
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Library-iPad-sidebar"; shot.lifetime = .keepAlways; add(shot)
+        app.terminate()
+    }
+
     /// SwiftUI exposes the whole Form row as a switch. Target the trailing thumb,
     /// inside its inset, rather than the label or the row's outer margin.
     @MainActor
@@ -32,7 +108,8 @@ final class HomeScreenTests: XCTestCase {
         let portrait = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         portrait.name = "Home-names-portrait"; portrait.lifetime = .keepAlways; add(portrait)
         XCUIDevice.shared.orientation = .landscapeLeft
-        XCTAssertTrue(app.buttons["readingOptionsButton"].isHittable)
+        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == true"), object: app.buttons["readingOptionsButton"])
+        XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 5), .completed)
         XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
         let landscape = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         landscape.name = "Home-names-landscape"; landscape.lifetime = .keepAlways; add(landscape)
@@ -311,12 +388,14 @@ final class HomeScreenTests: XCTestCase {
         sleep(1) // Wait for the restored row to finish its native List insertion animation.
         app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'sessionActions-'")).firstMatch.tap()
         app.buttons["deleteSessionAction"].tap(); app.buttons["confirmDeleteSession"].tap()
+        app.buttons["sessionLibraryOptions"].tap()
         app.buttons["recentlyDeletedLink"].tap()
         app.buttons["restoreDeletedSession"].tap()
         XCTAssertTrue(app.staticTexts["No deleted sessions"].waitForExistence(timeout: 5))
         app.navigationBars.buttons.element(boundBy: 0).tap()
         app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'sessionActions-'")).firstMatch.tap()
         app.buttons["deleteSessionAction"].tap(); app.buttons["confirmDeleteSession"].tap()
+        app.buttons["sessionLibraryOptions"].tap()
         app.buttons["recentlyDeletedLink"].tap()
         app.buttons["Delete permanently"].tap(); app.buttons["permanentlyDeleteSession"].tap()
         XCTAssertTrue(app.staticTexts["No deleted sessions"].waitForExistence(timeout: 5))

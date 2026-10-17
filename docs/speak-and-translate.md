@@ -53,3 +53,7 @@ Los dobles de micrófono, traducción y voz de las pruebas UI son explícitos y 
 ## Identificación por color
 
 Botones de idioma y tarjetas comparten el color del idioma: español verde e inglés azul inicialmente. Ajustes → Colores por idioma permite cambiarlos, ver una muestra y restaurarlos. Reproducir usa el color del idioma de destino. [Detalles y accesibilidad](language-colors.md).
+
+## Conversación con cuatro idiomas (2026-10-17)
+
+Los dos botones representan ahora el par elegido arriba (español/inglés inicialmente), seleccionable entre español, inglés, francés y coreano. La dirección del turno y la voz de salida son explícitas. El par no cambia durante escucha/traducción/reproducción. Los colores y nombres se comparten con subtítulos. [Detalles y límites](session-library-and-languages.md).

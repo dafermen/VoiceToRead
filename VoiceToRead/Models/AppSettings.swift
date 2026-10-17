@@ -15,11 +15,22 @@ enum AppAppearance: String, CaseIterable, Equatable, Hashable, Sendable {
 
 /// Persist a stable locale; unknown/older preferences retain English as the default.
 enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
-    case english = "en-US", spanish = "es-ES"
-    var name: String { self == .english ? "English" : "Español" }
-    var code: String { self == .english ? "en" : "es" }
-    var opposite: Self { self == .english ? .spanish : .english }
-    var mode: TranscriptLanguage { self == .english ? .english : .spanish }
+    case english = "en-US", spanish = "es-ES", french = "fr-FR", korean = "ko-KR"
+    var name: String {
+        switch self { case .english: "English"; case .spanish: "Español"; case .french: "Français"; case .korean: "한국어" }
+    }
+    var pickerLabel: LocalizedStringKey {
+        switch self { case .english: "English"; case .spanish: "Español"; case .french: "French · Français"; case .korean: "Korean · 한국어" }
+    }
+    var code: String { String(rawValue.prefix(2)) }
+    /// Used only to interpret old English/Spanish data and provide a safe first choice.
+    var defaultTarget: Self { self == .english ? .spanish : .english }
+    var mode: TranscriptLanguage {
+        switch self { case .english: .english; case .spanish: .spanish; case .french: .french; case .korean: .korean }
+    }
+    var greeting: String {
+        switch self { case .english: "Hello"; case .spanish: "Hola"; case .french: "Bonjour"; case .korean: "안녕하세요" }
+    }
 }
 
 /// Stable palette IDs are saved instead of platform color objects. Every language owns
@@ -131,7 +142,13 @@ final class AppSettings {
     var continueInBackground: Bool { didSet { defaults.set(continueInBackground, forKey: "continueInBackground") } }
     var appearance: AppAppearance { didSet { defaults.set(appearance.rawValue, forKey: "appearance") } }
     var interfaceLanguage: InterfaceLanguage { didSet { defaults.set(interfaceLanguage.rawValue, forKey: "interfaceLanguage") } }
-    var captureLanguage: CaptureLanguage { didSet { defaults.set(captureLanguage.rawValue, forKey: "captureLanguage") } }
+    var captureLanguage: CaptureLanguage {
+        didSet {
+            defaults.set(captureLanguage.rawValue, forKey: "captureLanguage")
+            if translationLanguage == captureLanguage { translationLanguage = captureLanguage.defaultTarget }
+        }
+    }
+    var translationLanguage: CaptureLanguage { didSet { defaults.set(translationLanguage.rawValue, forKey: "translationLanguage") } }
     var readerPaper: ReaderPaper { didSet { defaults.set(readerPaper.rawValue, forKey: "readerPaper") } }
     var ruledPaper: Bool { didSet { defaults.set(ruledPaper, forKey: "ruledPaper") } }
     var simpleMode: Bool { didSet { defaults.set(simpleMode, forKey: "simpleMode") } }
@@ -141,12 +158,18 @@ final class AppSettings {
     var preparationSeen: Bool { didSet { defaults.set(preparationSeen, forKey: "preparationSeen") } }
     var englishColor: LanguageColor { didSet { defaults.set(englishColor.rawValue, forKey: "englishLanguageColor") } }
     var spanishColor: LanguageColor { didSet { defaults.set(spanishColor.rawValue, forKey: "spanishLanguageColor") } }
-    func color(for language: CaptureLanguage) -> LanguageColor { language == .english ? englishColor : spanishColor }
-    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green }
+    var frenchColor: LanguageColor { didSet { defaults.set(frenchColor.rawValue, forKey: "frenchLanguageColor") } }
+    var koreanColor: LanguageColor { didSet { defaults.set(koreanColor.rawValue, forKey: "koreanLanguageColor") } }
+    func color(for language: CaptureLanguage) -> LanguageColor {
+        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor }
+    }
+    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green; frenchColor = .purple; koreanColor = .orange }
     var transcriptionLanguage: String { captureLanguage.rawValue }
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        frenchColor = LanguageColor(rawValue: defaults.string(forKey: "frenchLanguageColor") ?? "") ?? .purple
+        koreanColor = LanguageColor(rawValue: defaults.string(forKey: "koreanLanguageColor") ?? "") ?? .orange
         englishColor = LanguageColor(rawValue: defaults.string(forKey: "englishLanguageColor") ?? "") ?? .blue
         spanishColor = LanguageColor(rawValue: defaults.string(forKey: "spanishLanguageColor") ?? "") ?? .green
         simpleMode = defaults.bool(forKey: "simpleMode")
@@ -155,7 +178,10 @@ final class AppSettings {
         focusedReading = defaults.bool(forKey: "focusedReading")
         preparationSeen = defaults.bool(forKey: "preparationSeen")
         interfaceLanguage = InterfaceLanguage(rawValue: defaults.string(forKey: "interfaceLanguage") ?? "") ?? .english
-        captureLanguage = CaptureLanguage(rawValue: defaults.string(forKey: "captureLanguage") ?? "") ?? .english
+        let initialCapture = CaptureLanguage(rawValue: defaults.string(forKey: "captureLanguage") ?? "") ?? .english
+        captureLanguage = initialCapture
+        let savedTarget = CaptureLanguage(rawValue: defaults.string(forKey: "translationLanguage") ?? "")
+        translationLanguage = savedTarget != initialCapture ? (savedTarget ?? initialCapture.defaultTarget) : initialCapture.defaultTarget
         readerPaper = ReaderPaper(rawValue: defaults.string(forKey: "readerPaper") ?? "") ?? .system
         ruledPaper = defaults.bool(forKey: "ruledPaper")
         let storedSize = defaults.object(forKey: "captionSize") as? Double ?? CaptionTextSize.defaultValue

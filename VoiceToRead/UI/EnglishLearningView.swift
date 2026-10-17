@@ -53,6 +53,7 @@ struct EnglishLearningView: View {
     @State private var translation = false
     @State private var pronunciation: LearningUnit?
     @State private var failure: String?
+    @State private var target: CaptureLanguage = .spanish
     private var language: CaptureLanguage { CaptureLanguage(rawValue: session.language) ?? .english }
     private var choices: [LearningUnit] { savedOnly ? expressions.map(\.unit) : units }
     private var current: LearningUnit? { choices.indices.contains(selected) ? choices[selected] : nil }
@@ -96,7 +97,7 @@ struct EnglishLearningView: View {
                             player.stop(); pronunciation = unit
                         }.buttonStyle(.bordered).accessibilityIdentifier("practicePronunciation")
                         if let spanish = unit.spanish, !spanish.isEmpty {
-                            Button(uiKey(revealed ? "Hide translation" : "Reveal \(language.opposite.name)"), systemImage: "eye") { revealed.toggle() }
+                            Button(uiKey(revealed ? "Hide translation" : "Reveal translation"), systemImage: "eye") { revealed.toggle() }
                                 .accessibilityIdentifier("revealLearningSpanish")
                             if revealed {
                                 Text(spanish).font(.title3).accessibilityIdentifier("learningSpanish")
@@ -129,7 +130,7 @@ struct EnglishLearningView: View {
                 PronunciationPracticeView(text: unit.english, language: language)
             }
             .sheet(item: $editing) { unit in
-                LearningExpressionEditor(unit: unit, language: language) { english, spanish in
+                LearningExpressionEditor(unit: unit, language: language, target: target) { english, spanish in
                     try repository.saveLearningExpression(unit: unit, english: english, spanish: spanish, for: session)
                     expressions = try repository.learningExpressions(for: session.id)
                 }
@@ -149,6 +150,7 @@ struct EnglishLearningView: View {
     private func load() {
         player.close()
         do {
+            target = try repository.translationTarget(for: session)
             let source = try repository.reviewedParagraphs(for: session)
             units = LearningUnit.make(paragraphs: source,
                 timings: try repository.media(for: session.id)?.decodedTimings() ?? [:],
@@ -177,6 +179,7 @@ struct EnglishLearningView: View {
 private struct LearningExpressionEditor: View {
     let unit: LearningUnit
     var language: CaptureLanguage = .english
+    var target: CaptureLanguage = .spanish
     let save: (String, String) throws -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var english = ""
@@ -194,7 +197,7 @@ private struct LearningExpressionEditor: View {
                         .accessibilityIdentifier("learningExpressionEnglish")
                     Text("Keep the phrase or enter a word/expression from this fragment. Up to 500 characters.").font(.caption)
                 }
-                Section("\(language.opposite.name) note (optional)") {
+                Section("Translation note (optional)") {
                     TextField("Meaning in this context", text: $spanish, axis: .vertical)
                     Text("If you shorten the original, adjust this note to match it.").font(.caption)
                 }

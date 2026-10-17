@@ -10,7 +10,7 @@ Proposed policy page / Página propuesta: `https://voicetoread.innovalogic.tech/
 ## English
 
 ### What the app does
-VoiceToRead uses your iPhone or iPad microphone when you explicitly start listening, resume a session or record a pronunciation exercise. It creates English or Spanish captions using supported on-device recognition. VoiceToRead does not upload microphone recordings or transcripts to a developer server and has no remote recognition fallback.
+VoiceToRead uses your iPhone or iPad microphone when you explicitly start listening, resume a session or record a pronunciation exercise. It creates captions in English, Spanish, French or Korean when supported by on-device recognition. VoiceToRead does not upload microphone recordings or transcripts to a developer server and has no remote recognition fallback.
 
 Saving session audio is initially enabled on a new installation. You can turn it off before starting; existing choices are remembered. Saving and noise-reduction choices apply to the next session once recording has begun. Background continuation is initially off. If enabled, the microphone may remain active while the screen is locked or another app is open, until you pause, stop or the system interrupts it. The app captures nearby microphone sound, not other apps' internal audio.
 
@@ -48,7 +48,7 @@ Policy changes will be reflected in the updated date. Contact the publisher abov
 ## Español
 
 ### Qué hace la aplicación
-VoiceToRead usa el micrófono del iPhone o iPad cuando inicias la escucha, reanudas una sesión o grabas un ejercicio de pronunciación. Crea subtítulos en inglés o español mediante reconocimiento local compatible. VoiceToRead no sube grabaciones ni transcripciones a un servidor del desarrollador y no recurre al reconocimiento remoto.
+VoiceToRead usa el micrófono del iPhone o iPad cuando inicias la escucha, reanudas una sesión o grabas un ejercicio de pronunciación. Crea subtítulos en inglés, español, francés o coreano cuando el reconocimiento local es compatible. VoiceToRead no sube grabaciones ni transcripciones a un servidor del desarrollador y no recurre al reconocimiento remoto.
 
 Guardar audio está activado inicialmente en una instalación nueva. Puedes desactivarlo antes de empezar; las elecciones anteriores se conservan. Una vez iniciada la sesión, los cambios de guardado y reducción de ruido se aplican a la siguiente. Continuar en segundo plano está desactivado inicialmente. Al activarlo, el micrófono puede seguir funcionando con pantalla bloqueada u otra app abierta, hasta que pauses, detengas o el sistema interrumpa la escucha. Se capta sonido cercano por el micrófono, no el audio interno de otras apps.
 

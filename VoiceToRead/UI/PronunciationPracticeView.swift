@@ -257,7 +257,7 @@ struct PronunciationPracticeView: View {
     @State private var selection = 0
     @State private var slow = false
     private var prompts: [String] { PracticeRecognition.prompts(text) }
-    private var target: String { prompts.indices.contains(selection) ? prompts[selection] : (language == .english ? "Hello" : "Hola") }
+    private var target: String { prompts.indices.contains(selection) ? prompts[selection] : language.greeting }
     private var busy: Bool { practice.activity == .recording || practice.activity == .permission || practice.activity == .checking }
     var body: some View {
         NavigationStack {

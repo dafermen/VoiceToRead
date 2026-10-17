@@ -29,17 +29,7 @@ struct SettingsView: View {
                 NavigationLink("Language colors") { LanguageColorsView(settings: settings) }
                     .accessibilityIdentifier("languageColorsLink")
             }
-            Section("Voice capture and captions") {
-                Picker("Spoken language", selection: $settings.captureLanguage) {
-                    ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.name).tag($0) }
-                }.disabled(!coordinator.caption.canChooseCaptureOptions)
-                    .accessibilityIdentifier("captureLanguagePicker")
-                Text(uiKey(coordinator.caption.canChooseCaptureOptions
-                     ? "Elige el idioma que se habla. Inglés es el predeterminado; la traducción utiliza el otro idioma."
-                     : "Esta sesión conserva su idioma. Termina y guarda o descarta la sesión; crea una nueva para cambiarlo."))
-                    .font(.caption)
-                LabeledContent("Idioma de esta sesión", value: coordinator.caption.language.name)
-            }
+            LanguagePairOptions(model: coordinator.caption, settings: settings)
             Section("Offline preparation") {
                 NavigationLink("Check preparation") { OfflineReadinessView(coordinator: coordinator) }
                 NavigationLink("Microphone Check") { MicrophoneCheckView() }
@@ -71,7 +61,7 @@ struct SettingsView: View {
             }
         }
         .navigationTitle(Text(verbatim: InterfaceLocalization.string("Settings", language: settings.interfaceLanguage)))
-        .onChange(of: settings.captureLanguage) { _, _ in Task { await coordinator.changeCaptureLanguage() } }
+
     }
 }
 
@@ -99,7 +89,7 @@ struct OfflineReadinessView: View {
             }
             Section("Listening languages") {
                 LabeledContent("Capture language", value: InterfaceLocalization.string(coordinator.settings.captureLanguage.name, language: coordinator.settings.interfaceLanguage))
-                LabeledContent("Translation", value: InterfaceLocalization.string(coordinator.settings.captureLanguage.opposite.name, language: coordinator.settings.interfaceLanguage))
+                LabeledContent("Translation", value: InterfaceLocalization.string(coordinator.settings.translationLanguage.name, language: coordinator.settings.interfaceLanguage))
                 Text("Change the capture language in Settings before starting.").font(.caption)
                 ForEach(CaptureLanguage.allCases, id: \.self) { language in
                     LabeledContent(LocalizedStringKey(language.name)) {
@@ -149,8 +139,8 @@ struct OfflineReadinessView: View {
                 Text(LocalizedStringKey(translationMessage))
                 Text("Translation is optional. Captions and recordings work without it. Apple may ask to download the selected languages.").font(.caption)
                 Button("Prepare translation") {
-                    let source = [ReviewParagraph(id: UUID(), text: coordinator.settings.captureLanguage == .english ? "Hello" : "Hola")]
-                    translationJob = TranslationJob(plan: IncrementalTranslation(source: source, previous: nil, language: coordinator.settings.captureLanguage))
+                    let source = [ReviewParagraph(id: UUID(), text: coordinator.settings.captureLanguage.greeting)]
+                    translationJob = TranslationJob(plan: IncrementalTranslation(source: source, previous: nil, language: coordinator.settings.captureLanguage, targetLanguage: coordinator.settings.translationLanguage))
                     translationMessage = "Preparing translation…"
                 }.disabled(translationJob != nil || coordinator.caption.state.active || coordinator.caption.state.busy)
                 if translationJob != nil { ProgressView(); Button("Cancel") { translationJob = nil; translationMessage = "Not checked on this visit" } }
@@ -221,7 +211,7 @@ struct PersonalVocabularyView: View {
     var body: some View {
         Form {
             Section {
-                Text("One short name or term per line. Use English = español for preferred translations. The pair is reversed for Spanish sessions.")
+                Text("One short name or term per line. Use English = español. Preferred translations apply only between English and Spanish.")
                 Text("VoiceToRead\nmeeting = reunión\nOpenAI").font(.callout.monospaced()).foregroundStyle(.secondary)
                 TextEditor(text: $draft).frame(minHeight: 200).autocorrectionDisabled()
                     .accessibilityLabel("Personal vocabulary").accessibilityIdentifier("vocabularyEditor")
@@ -390,6 +380,8 @@ struct LanguageColorsView: View {
                 Text("Each language keeps its color in conversation buttons, bilingual captions and playback. This does not change the spoken language.")
                 colorPicker(.spanish, selection: $settings.spanishColor)
                 colorPicker(.english, selection: $settings.englishColor)
+                colorPicker(.french, selection: $settings.frenchColor)
+                colorPicker(.korean, selection: $settings.koreanColor)
             }
             Section("Preview") {
                 PlaybackTextCard(text: "Hola", language: .spanish, translated: false,
@@ -419,6 +411,69 @@ struct LanguageColorsView: View {
             }
         }
         .accessibilityValue(Text(LocalizedStringKey(selection.wrappedValue.label)))
-        .accessibilityIdentifier(language == .spanish ? "spanishColorPicker" : "englishColorPicker")
+        .accessibilityIdentifier(language == .spanish ? "spanishColorPicker" : language == .english ? "englishColorPicker" : language.code + "ColorPicker")
+    }
+}
+
+/// Menus and speech use independent settings. Lock the pair once a draft starts,
+/// so its original text, translated text and voice cannot silently change languages.
+@MainActor
+struct LanguagePairOptions: View {
+    @Bindable var model: CaptionViewModel
+    @Bindable var settings: AppSettings
+    var compact = false
+    @Environment(\.dynamicTypeSize) private var typeSize
+    var body: some View {
+        Group {
+            if compact {
+                ViewThatFits(in: .horizontal) {
+                    HStack {
+                        compactSourceMenu
+                        Image(systemName: "arrow.right").accessibilityHidden(true)
+                        compactTargetMenu
+                    }
+                    VStack(alignment: .leading) { compactSourceMenu; compactTargetMenu }
+                }.font(.subheadline).frame(minHeight: 44)
+            } else {
+                Section("Voice and translation languages") {
+                    sourcePicker
+                    targetPicker
+                    Text("Choose the spoken language and the translation language. These settings do not change menus. Your session keeps its language pair once listening starts.")
+                        .font(.caption)
+                }
+            }
+        }.disabled(!model.canChooseCaptureOptions)
+            .onChange(of: settings.captureLanguage) { _, value in
+                guard model.canChooseCaptureOptions else { return }
+                model.configureLanguage(value)
+                Task { await model.checkReadiness() }
+            }
+    }
+    // Explicit menu labels keep native language names intact on small screens.
+    private var compactSourceMenu: some View {
+        Menu { sourcePicker } label: { compactLabel(settings.captureLanguage) }
+            .accessibilityLabel("Spoken language").accessibilityValue(Text(settings.captureLanguage.pickerLabel))
+            .accessibilityIdentifier("captureLanguagePicker")
+    }
+    private var compactTargetMenu: some View {
+        Menu { targetPicker } label: { compactLabel(settings.translationLanguage) }
+            .accessibilityLabel("Translate to").accessibilityValue(Text(settings.translationLanguage.pickerLabel))
+            .accessibilityIdentifier("translationTargetPicker")
+    }
+    private func compactLabel(_ language: CaptureLanguage) -> some View {
+        HStack(spacing: 6) {
+            Text(language.pickerLabel).fixedSize(horizontal: true, vertical: false)
+            Image(systemName: "chevron.down").font(.caption).accessibilityHidden(true)
+        }.frame(minHeight: 44).contentShape(Rectangle())
+    }
+    private var sourcePicker: some View {
+        Picker("Spoken language", selection: $settings.captureLanguage) {
+            ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.pickerLabel).tag($0) }
+        }.accessibilityIdentifier("captureLanguagePicker")
+    }
+    private var targetPicker: some View {
+        Picker("Translate to", selection: $settings.translationLanguage) {
+            ForEach(CaptureLanguage.allCases.filter { $0 != settings.captureLanguage }, id: \.self) { Text($0.pickerLabel).tag($0) }
+        }.accessibilityIdentifier("translationTargetPicker")
     }
 }

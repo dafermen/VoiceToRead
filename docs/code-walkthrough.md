@@ -213,3 +213,7 @@ Ajuste visual de Conversación: dos `HStack` mantienen español/inglés y reprod
 ## Inicio y preferencias de accesibilidad (2026-10-17)
 
 [Guía de implementación](home-controls.md): etiquetas observables, cuadrícula adaptable, tamaños comunes y separación entre preferencias y acciones. Incluye la causa del espacio excesivo al cambiar HStack por VStack y cómo evitarla.
+
+## Biblioteca y cuatro idiomas
+
+[Recorrido actualizado](session-library-and-languages.md). `SessionLibraryView` elige navegación compacta o lateral. `SessionLanguagePair` y V11 congelan el destino por sesión. `TranslationLibrary` conserva versiones por destino y decodifica JSON antiguo. `IncrementalTranslation.compatiblePrevious` compara ambos idiomas antes de reutilizar párrafos. `TranslationRunner` consulta la disponibilidad del par antes de preparar recursos. Los nombres de idiomas son autónimos; los menús siguen usando catálogos en/es.

@@ -6,6 +6,27 @@ import SwiftUI
 
 @MainActor
 final class AppSettingsTests: XCTestCase {
+
+    func testFourLanguagesPersistSeparateFromInterfaceAndPreventSamePair() {
+        let name = UUID().uuidString; let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults)
+        XCTAssertEqual(settings.captureLanguage, .english)
+        XCTAssertEqual(settings.translationLanguage, .spanish)
+        settings.captureLanguage = .french; settings.translationLanguage = .korean
+        settings.frenchColor = .orange
+        let restored = AppSettings(defaults: defaults)
+        XCTAssertEqual(restored.captureLanguage, .french)
+        XCTAssertEqual(restored.translationLanguage, .korean)
+        XCTAssertEqual(restored.interfaceLanguage, .english)
+        XCTAssertEqual(restored.color(for: .french), .orange)
+        restored.captureLanguage = .korean
+        XCTAssertNotEqual(restored.captureLanguage, restored.translationLanguage)
+        defaults.set("ko-KR", forKey: "translationLanguage")
+        let repaired = AppSettings(defaults: defaults)
+        XCTAssertNotEqual(repaired.captureLanguage, repaired.translationLanguage)
+    }
+
     func testLanguageColorsPersistRestoreAndDoNotChangeLanguages() {
         let name = UUID().uuidString
         let defaults = UserDefaults(suiteName: name)!

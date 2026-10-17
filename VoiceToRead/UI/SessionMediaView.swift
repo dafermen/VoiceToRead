@@ -250,6 +250,7 @@ struct SessionMediaView: View {
     private var waitingForLanguage: Bool { usesSequence && sequence.waitingBetweenLanguages }
     private var highlightedCard: String { speakingTranslation ? "translation-card" : "original-card" }
     private var language: CaptureLanguage { CaptureLanguage(rawValue: session.language) ?? .english }
+    private var target: CaptureLanguage { snapshot?.target ?? language.defaultTarget }
     private var currentTranslation: Bool { snapshot?.language == language && snapshot?.isCurrent(reviewed) == true }
     private var audibleParagraphs: [ReviewParagraph] {
         usesSequence ? reviewed : listening == .translation ? TranslationSpeechPlayer.paragraphs(snapshot: snapshot, source: reviewed) :
@@ -364,7 +365,7 @@ struct SessionMediaView: View {
                 selectParagraph(id ?? audibleParagraphs.first?.id)
             }
             .onChange(of: reading) { _, value in
-                listening = reading == language.opposite.mode ? .translation : .original
+                listening = reading == target.mode ? .translation : .original
                 selectParagraph(selectedParagraphID ?? reviewed.first?.id)
                 do { try rebuildCues() } catch { failure = error.localizedDescription }
             }
@@ -474,7 +475,7 @@ struct SessionMediaView: View {
                 })) {
                     Text("Original").tag(language.mode)
                     if currentTranslation {
-                        Text("Translation").tag(language.opposite.mode)
+                        Text("Translation").tag(target.mode)
                         Text("Both").tag(TranscriptLanguage.both)
                     }
                 }
@@ -498,7 +499,7 @@ struct SessionMediaView: View {
                                     .id("original-card")
                             }
                             if reading != language.mode, let translated = snapshot?.translated.first(where: { $0.id == id }) {
-                                PlaybackTextCard(text: translated.text, language: language.opposite, translated: true, settings: settings,
+                                PlaybackTextCard(text: translated.text, language: target, translated: true, settings: settings,
                                     identifier: reading == .both ? "playbackTranslationCaption" : "playbackCaption",
                                     speaking: isPlaying && !waitingForLanguage && speakingTranslation).id("translation-card")
                             }
@@ -630,12 +631,12 @@ struct SessionMediaView: View {
             }
             listening = initialAudio == .translation && currentTranslation ? .translation : audioURL != nil ? .original : .translation
             reading = translationLanguage.flatMap(TranscriptLanguage.init(rawValue:)) ??
-                (listening == .translation ? language.opposite.mode : language.mode)
+                (listening == .translation ? target.mode : language.mode)
             if translationLanguage == nil, initialAudio == .original, let preference = PlaybackLanguagePreference(rawValue: savedLanguage) {
-                reading = preference.mode(source: language, hasTranslation: currentTranslation)
+                reading = preference.mode(source: language, hasTranslation: currentTranslation, target: target)
             }
             if !currentTranslation { reading = language.mode }
-            listening = reading == language.opposite.mode ? .translation : .original
+            listening = reading == target.mode ? .translation : .original
             sequence.load(audioURL)
             try rebuildCues()
             selectParagraph(initialParagraphID ?? audibleParagraphs.first?.id ?? reviewed.first?.id)
@@ -682,7 +683,7 @@ struct SessionMediaView: View {
             guard let index = reviewed.firstIndex(where: { $0.id == activeParagraphID }) else { return }
             let values = atMyPace ? [reviewed[index]] : Array(reviewed[index...])
             sequence.start(ParagraphAudioStep.make(source: values, translated: currentTranslation ? snapshot?.translated ?? [] : [],
-                language: language, mode: reading, ranges: playbackParagraphs), speed: speed, originalSpeed: originalSpeed, gapSeconds: languageGap)
+                language: language, mode: reading, ranges: playbackParagraphs, target: target), speed: speed, originalSpeed: originalSpeed, gapSeconds: languageGap)
             return
         }
         sequence.stop()
@@ -691,7 +692,7 @@ struct SessionMediaView: View {
         if speech.state != .idle { speech.togglePause(); return }
         guard let index = audibleParagraphs.firstIndex(where: { $0.id == activeParagraphID }) else { return }
         let values = atMyPace ? [audibleParagraphs[index]] : Array(audibleParagraphs[index...])
-        speech.start(values, language: language.opposite, speed: speed)
+        speech.start(values, language: target, speed: speed)
     }
     private func beginParagraphEdit(_ id: UUID) {
         sequence.stop(); pausePlayback(); speech.stop(); selectedParagraphID = id

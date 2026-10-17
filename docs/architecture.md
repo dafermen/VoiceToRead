@@ -99,3 +99,7 @@ En aquel hito se usaba V8: SessionSchemaV7.models + SessionFavorite. V9 añadió
 ## V10 — notas y comodidad de escucha
 
 `BookmarkNote` agrega una tabla sin modificar los modelos históricos. Las notas se eliminan con su marcador y se conservan en la papelera. La cola bilingüe usa finalización real y espera cancelable/token entre idiomas. Los controles comparten preferencias semánticas y velocidades independientes. [Explicación y límites](listening-comfort.md).
+
+## V11 — par de idiomas y biblioteca (2026-10-17)
+
+Nueva tabla `SessionLanguagePair`, migración ligera V10→V11. La fuente permanece en `ConferenceSession.language`. `SessionTranslation.payload` admite sobre `TranslationLibrary` con destinos independientes y lectura de snapshots antiguos. No editar esquemas V1–V10 ni borrar el almacén para resolver errores. [Detalle y compatibilidad](session-library-and-languages.md).

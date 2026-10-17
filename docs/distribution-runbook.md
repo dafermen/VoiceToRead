@@ -4,17 +4,17 @@ Actualización de experiencia accesible: [guía de los ocho cambios](accessible-
 
 Actualización 2026-10-15: [reproducción unificada y traducción al detener](playback-unification.md), con [evidencia y pendientes](playback-unification-checkpoint.md). Verificar en dispositivo descargas iniciales, permisos, auriculares/interrupciones, VoiceOver y lectura EN↔ES antes de enviar a revisión. La compilación local con Xcode 15.2 no ejecuta el traductor Apple de iOS 18+.
 
-Esta app es independiente. **Registro de Apple, workflow Cloud y TestFlight pendientes**. No reutilizar los identificadores o archivos firmados de la app anterior. Estado de validación: [identidad](project-identity.md).
+Esta app es independiente. **Registro de Apple y TestFlight configurados y probados por el titular; cada nueva entrega requiere verificar su build**. No reutilizar los identificadores o archivos firmados de la app anterior. Estado de validación: [identidad](project-identity.md).
 
 | Dato | Valor actual |
 |---|---|
 | Proyecto / esquema | VoiceToRead.xcodeproj / VoiceToRead |
 | Bundle ID | com.innovalogic.voicetoread |
 | Equipo configurado | 7799N4RYUG |
-| Versión / build fuente inicial | 0.1.0 / 1 |
+| Versión / build fuente | 1.0 / 1; Xcode Cloud gestiona su número de entrega |
 | Git | https://github.com/dafermen/VoiceToRead.git, rama main |
-| App Store Connect ID | Pendiente de creación |
-| Xcode Cloud / grupo TestFlight | Pendientes de configurar |
+| App Store Connect ID | 6822564230 |
+| Xcode Cloud / grupo TestFlight | Workflow Default / Dev, confirmados en capturas del titular |
 | Almacenamiento | Application Support/VoiceToRead/Sessions.store |
 
 ## Primera entrega
@@ -202,3 +202,7 @@ Incidente de capturas: los attachments de XCTest para iPhone 15/iOS 17.2 tuviero
 ## Lectura accesible y voz traducida — 2026-10-15
 
 Consultar el [checkpoint de síntesis/lectura](translated-speech-checkpoint.md) antes de distribuir esta entrega. Release local sin firma, 102 unitarias y recorridos UI en iPhone/iPad verificados. No confundir los primeros fallos de selectores/animaciones de XCTest (corregidos y repetidos) con un fallo de firma de Xcode Cloud. Confirmar commit, build distribuido y voces reales en el dispositivo; el SDK 15.2 local no comprueba el backend moderno de Translation.
+
+## Biblioteca e idiomas — 2026-10-17
+
+Estado y pruebas de la nueva entrega en [checkpoint](session-library-languages-checkpoint.md). GitHub no expuso checks/statuses del commit anterior durante esta revisión: no inferir éxito de Xcode Cloud ni disponibilidad en TestFlight desde una compilación local. Validar los caminos Translation/SpeechAnalyzer con el SDK reciente en Cloud y francés/coreano en dispositivo antes de App Review.

@@ -258,3 +258,9 @@ El check `115246510250` del SHA `01f566d` falló con `Branches have mismatching 
 Se añadió `@ViewBuilder` explícitamente en fuente 26. La vista y su selector no cambian. Verificar el check del SHA corregido antes de afirmar disponibilidad; el éxito local no cubre una rama eliminada por `#if canImport`. El fallo fue de compilación, no de firma ni configuración del usuario. No cambiar certificados ni modelos por este error. Cuatro advertencias de concurrencia/deprecación se reportaron aparte y no explican este fallo.
 
 Resultado de corrección 26: el SHA `2da928440decb7c7d4da2bdac58dcce2b5ae10b0` pasó Cloud con 0 errores y 4 advertencias, check `115263454589`. Esto confirma que @ViewBuilder resuelve el error de ramas con tipos distintos. Disponibilidad TestFlight separada; ver checkpoint bilingüe.
+
+## 2026-10-17 — Migración V11 y cuatro idiomas
+
+La prueba de compatibilidad encontró una diferencia entre `targetLocale == nil` (formato histórico) y `en-US` explícito para una fuente española. La igualdad ahora compara idiomas efectivos, además de fuente, generado y correcciones; no elimina metadatos ni reescribe sesiones antiguas. Las 42 pruebas de traducción/ajustes se repitieron correctamente.
+
+En las fixtures de interfaz, `moveToTrash` rechazó correctamente una sesión que todavía no tenía `endedAt`. Se finaliza la sesión ficticia antes de enviarla a papelera. Un chequeo inmediato de `isHittable` durante el cierre del Picker era prematuro; se espera brevemente la condición, manteniendo la prueba de pulsación real. Ver [checkpoint](session-library-languages-checkpoint.md). Los simuladores no validan modelos de francés/coreano ni el SDK Translation excluido por Xcode 15.2.

@@ -878,3 +878,44 @@
 
 "Write and speak" = "Write and speak";
 "Simple mode always shows action names. In the standard home, this option adds names below the icons." = "Simple mode always shows action names. In the standard home, this option adds names below the icons.";
+
+"Captions in your selected language, on your device." = "Captions in your selected language, on your device.";
+"Choose the spoken language and the translation language. These settings do not change menus. Your session keeps its language pair once listening starts." = "Choose the spoken language and the translation language. These settings do not change menus. Your session keeps its language pair once listening starts.";
+"Finish & play %@" = "Finish & play %@";
+"First language" = "First language";
+"Second language" = "Second language";
+"Listening in %@…" = "Listening in %@…";
+"No favorites" = "No favorites";
+"No recovery drafts" = "No recovery drafts";
+"Play %@" = "Play %@";
+"Preparing %@ recognition…" = "Preparing %@ recognition…";
+"Protect a saved session to find it here." = "Protect a saved session to find it here.";
+"Recently deleted (%lld)" = "Recently deleted (%lld)";
+"Recovery drafts (%lld)" = "Recovery drafts (%lld)";
+"Reveal translation" = "Reveal translation";
+"Search titles or content" = "Search titles or content";
+"Session library options" = "Session library options";
+"Speak %@" = "Speak %@";
+"Speaking %@ — microphone off" = "Speaking %@ — microphone off";
+"Today" = "Today";
+"Yesterday" = "Yesterday";
+"Translate to" = "Translate to";
+"Translating to %@…" = "Translating to %@…";
+"Translation note (optional)" = "Translation note (optional)";
+"Unfinished recordings will appear here." = "Unfinished recordings will appear here.";
+"Unsaved drafts: %lld · Review" = "Unsaved drafts: %lld · Review";
+"Voice and translation languages" = "Voice and translation languages";
+"Write in %@" = "Write in %@";
+"This language pair is not supported on this device. Choose another translation language." = "This language pair is not supported on this device. Choose another translation language.";
+"A voice for this language is unavailable. Download the selected language voice in device Settings → Accessibility → Spoken Content → Voices, then try again." = "A voice for this language is unavailable. Download the selected language voice in device Settings → Accessibility → Spoken Content → Voices, then try again.";
+"Français" = "French";
+"한국어" = "Korean";
+"VoiceToRead uses your microphone only when you choose to listen or practice pronunciation. Speech in supported languages is processed on your device. VoiceToRead does not upload microphone audio. Saving session audio is initially on for a new installation and can be turned off before starting. Audio and background preferences are remembered for future sessions; recording starts only when you choose to listen or practice pronunciation. If enabled, audio stays on this device until you export or delete it." = "VoiceToRead uses your microphone only when you choose to listen or practice pronunciation. Speech in supported languages is processed on your device. VoiceToRead does not upload microphone audio. Saving session audio is initially on for a new installation and can be turned off before starting. Audio and background preferences are remembered for future sessions; recording starts only when you choose to listen or practice pronunciation. If enabled, audio stays on this device until you export or delete it.";
+
+"French · Français" = "French · Français";
+"Korean · 한국어" = "Korean · 한국어";
+"Recorded audio" = "Recorded audio";
+
+"Apple may ask to download the selected languages first. Downloaded languages allow on-device translation without internet." = "Apple may ask to download the selected languages first. Downloaded languages allow on-device translation without internet.";
+
+"One short name or term per line. Use English = español. Preferred translations apply only between English and Spanish." = "One short name or term per line. Use English = español. Preferred translations apply only between English and Spanish.";

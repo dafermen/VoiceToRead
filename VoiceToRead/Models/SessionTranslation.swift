@@ -10,24 +10,35 @@ struct TranslationSnapshot: Codable, Equatable, Sendable {
 
     // Optional for compatibility: payloads written before build 20 imply English source.
     var sourceLocale: String? = nil
+    var targetLocale: String? = nil
+    var target: CaptureLanguage { CaptureLanguage(rawValue: targetLocale ?? "") ?? language.defaultTarget }
     var language: CaptureLanguage { CaptureLanguage(rawValue: sourceLocale ?? "en-US") ?? .english }
-    var english: [ReviewParagraph] { language == .english ? source : translated }
-    var spanish: [ReviewParagraph] { language == .spanish ? source : translated }
+    var english: [ReviewParagraph] { paragraphs(mode: .english) }
+    var spanish: [ReviewParagraph] { paragraphs(mode: .spanish) }
     var translated: [ReviewParagraph] {
         TranscriptReview.paragraphs(originals: generated, corrections: edits)
     }
+    /// Legacy nil locales and their explicit replacements represent the same document.
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.source == rhs.source && lhs.generated == rhs.generated && lhs.edits == rhs.edits &&
+        lhs.language == rhs.language && lhs.target == rhs.target
+    }
     func isCurrent(_ paragraphs: [ReviewParagraph]) -> Bool { source == paragraphs }
     func paragraphs(mode: TranscriptLanguage) -> [ReviewParagraph] {
-        switch mode {
-        case .english: return english
-        case .spanish: return spanish
-        case .both:
-            return zip(source, translated).map {
-                ReviewParagraph(id: $0.id, text: $0.text + "\n" + $1.text)
-            }
+        if mode == language.mode { return source }
+        if mode == target.mode { return translated }
+        if mode == .both {
+            return zip(source, translated).map { ReviewParagraph(id: $0.id, text: $0.text + "\n" + $1.text) }
         }
+        return []
     }
+    func fileSuffix(mode: TranscriptLanguage) -> String {
+        mode == .both ? language.code + "-" + target.code : mode.fileSuffix
+    }
+
     func validate() throws {
+        if let targetLocale, CaptureLanguage(rawValue: targetLocale) == nil { throw TranslationFailure.incomplete }
+        guard language != target else { throw TranslationFailure.incomplete }
         if let sourceLocale, CaptureLanguage(rawValue: sourceLocale) == nil { throw TranslationFailure.incomplete }
         guard !source.isEmpty, Set(source.map(\.id)).count == source.count,
               source.map(\.id) == generated.map(\.id),
@@ -40,15 +51,18 @@ struct TranslationSnapshot: Codable, Equatable, Sendable {
 }
 
 enum TranscriptLanguage: String, CaseIterable, Identifiable {
-    case english = "English", spanish = "Español", both = "Both"
+    case english = "English", spanish = "Español", french = "Français", korean = "한국어", both = "Both"
     var id: Self { self }
-    var fileSuffix: String { self == .english ? "en" : self == .spanish ? "es" : "en-es" }
+    var fileSuffix: String {
+        switch self { case .english: "en"; case .spanish: "es"; case .french: "fr"; case .korean: "ko"; case .both: "bilingual" }
+    }
 }
 
 enum TranslationFailure: LocalizedError {
-    case incomplete, sourceChanged, unsupported
+    case incomplete, sourceChanged, unsupported, unsupportedPair
     var errorDescription: String? {
         switch self {
+        case .unsupportedPair: return "This language pair is not supported on this device. Choose another translation language."
         case .incomplete: return "The translation is incomplete. Please try again. Your saved text is unchanged."
         case .sourceChanged: return "The source transcript changed. Reopen Translation and translate again."
         case .unsupported: return "Translation requires iOS 18 or later and a compatible app build. Saved translations remain available."
@@ -61,11 +75,31 @@ final class SessionTranslation {
     @Attribute(.unique) var sessionID: UUID
     var payload: Data
     init(sessionID: UUID, payload: Data) { self.sessionID = sessionID; self.payload = payload }
+    /// New payloads keep every destination. Legacy payloads decode as a one-item library.
+    func library() throws -> TranslationLibrary {
+        if let library = try? JSONDecoder().decode(TranslationLibrary.self, from: payload) {
+            guard !library.snapshots.isEmpty, library.snapshots.contains(where: { $0.target == library.activeTarget }) else { throw TranslationFailure.incomplete }
+            for snapshot in library.snapshots { try snapshot.validate() }
+            return library
+        }
+        let old = try JSONDecoder().decode(TranslationSnapshot.self, from: payload)
+        try old.validate()
+        return TranslationLibrary(activeTarget: old.target, snapshots: [old])
+    }
     func decoded() throws -> TranslationSnapshot {
-        let result = try JSONDecoder().decode(TranslationSnapshot.self, from: payload)
-        try result.validate()
+        let library = try library()
+        guard let result = library.snapshots.first(where: { $0.target == library.activeTarget }) else { throw TranslationFailure.incomplete }
         return result
     }
+    func decoded(target: CaptureLanguage) throws -> TranslationSnapshot? {
+        try library().snapshots.first { $0.target == target }
+    }
+
+}
+
+struct TranslationLibrary: Codable {
+    var activeTarget: CaptureLanguage
+    var snapshots: [TranslationSnapshot]
 }
 
 enum SessionSchemaV6: VersionedSchema {
@@ -83,6 +117,7 @@ enum TranslatedSubtitles {
                      mode: TranscriptLanguage) -> [SubtitleCue] {
         let original = SubtitleExport.cues(paragraphs: snapshot.source, timings: timings)
         guard mode != snapshot.language.mode else { return original }
+        guard mode == snapshot.target.mode || mode == .both else { return [] }
         let spanish = Dictionary(uniqueKeysWithValues: snapshot.translated.map { ($0.id, $0.text) })
         let grouped = Dictionary(grouping: original, by: \.paragraphID)
         var result: [SubtitleCue] = []
@@ -114,7 +149,9 @@ struct IncrementalTranslation {
     let source: [ReviewParagraph]
     let previous: TranslationSnapshot?
     var language: CaptureLanguage = .english
-    private var compatiblePrevious: TranslationSnapshot? { previous?.language == language ? previous : nil }
+    var targetLanguage: CaptureLanguage? = nil
+    var target: CaptureLanguage { targetLanguage ?? language.defaultTarget }
+    private var compatiblePrevious: TranslationSnapshot? { previous?.language == language && previous?.target == target ? previous : nil }
     var pending: [ReviewParagraph] {
         source.filter { paragraph in
             compatiblePrevious?.source.contains(paragraph) != true
@@ -132,7 +169,7 @@ struct IncrementalTranslation {
             return old
         }
         let result = TranslationSnapshot(source: source, generated: generated,
-            edits: compatiblePrevious?.edits.filter { retained.contains($0.key) } ?? [:], sourceLocale: language.rawValue)
+            edits: compatiblePrevious?.edits.filter { retained.contains($0.key) } ?? [:], sourceLocale: language.rawValue, targetLocale: target.rawValue)
         try result.validate()
         return result
     }
@@ -159,7 +196,9 @@ enum PersonalVocabulary {
     static func saved(defaults: UserDefaults = .standard) -> [Term] {
         terms(defaults.string(forKey: key) ?? "")
     }
-    static func saved(for language: CaptureLanguage, defaults: UserDefaults = .standard) -> [Term] {
+    static func saved(for language: CaptureLanguage, target: CaptureLanguage? = nil, defaults: UserDefaults = .standard) -> [Term] {
+        // The existing personal dictionary is explicitly English/Spanish. Never apply it to another pair.
+        guard Set([language, target ?? language.defaultTarget]) == Set([CaptureLanguage.english, .spanish]) else { return [] }
         let entries = saved(defaults: defaults)
         guard language == .spanish else { return entries }
         var seen = Set<String>()

@@ -84,7 +84,7 @@ enum SessionSchemaV2: VersionedSchema {
 }
 
 enum SessionMigrationPlan: SchemaMigrationPlan {
-    static var schemas: [any VersionedSchema.Type] { [SessionSchemaV1.self, SessionSchemaV2.self, SessionSchemaV3.self, SessionSchemaV4.self, SessionSchemaV5.self, SessionSchemaV6.self, SessionSchemaV7.self, SessionSchemaV8.self, SessionSchemaV9.self, SessionSchemaV10.self] }
+    static var schemas: [any VersionedSchema.Type] { [SessionSchemaV1.self, SessionSchemaV2.self, SessionSchemaV3.self, SessionSchemaV4.self, SessionSchemaV5.self, SessionSchemaV6.self, SessionSchemaV7.self, SessionSchemaV8.self, SessionSchemaV9.self, SessionSchemaV10.self, SessionSchemaV11.self] }
     static var stages: [MigrationStage] {
         [.lightweight(fromVersion: SessionSchemaV1.self, toVersion: SessionSchemaV2.self),
          .lightweight(fromVersion: SessionSchemaV2.self, toVersion: SessionSchemaV3.self),
@@ -94,7 +94,8 @@ enum SessionMigrationPlan: SchemaMigrationPlan {
          .lightweight(fromVersion: SessionSchemaV6.self, toVersion: SessionSchemaV7.self),
          .lightweight(fromVersion: SessionSchemaV7.self, toVersion: SessionSchemaV8.self),
          .lightweight(fromVersion: SessionSchemaV8.self, toVersion: SessionSchemaV9.self),
-         .lightweight(fromVersion: SessionSchemaV9.self, toVersion: SessionSchemaV10.self)]
+         .lightweight(fromVersion: SessionSchemaV9.self, toVersion: SessionSchemaV10.self),
+         .lightweight(fromVersion: SessionSchemaV10.self, toVersion: SessionSchemaV11.self)]
     }
 }
 
@@ -167,4 +168,17 @@ final class BookmarkNote {
 enum SessionSchemaV10: VersionedSchema {
     static var versionIdentifier: Schema.Version { Schema.Version(10, 0, 0) }
     static var models: [any PersistentModel.Type] { SessionSchemaV9.models + [BookmarkNote.self] }
+}
+
+/// An additive table freezes the target at recording creation without changing old models.
+/// A missing row means the historical English/Spanish direction, never today's Settings.
+@Model
+final class SessionLanguagePair {
+    @Attribute(.unique) var sessionID: UUID
+    var targetLocale: String
+    init(sessionID: UUID, target: CaptureLanguage) { self.sessionID = sessionID; targetLocale = target.rawValue }
+}
+enum SessionSchemaV11: VersionedSchema {
+    static var versionIdentifier: Schema.Version { Schema.Version(11, 0, 0) }
+    static var models: [any PersistentModel.Type] { SessionSchemaV10.models + [SessionLanguagePair.self] }
 }

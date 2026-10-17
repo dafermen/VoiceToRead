@@ -35,3 +35,7 @@ La prioridad visual es: alto contraste → fondo blanco/negro; en otro caso → 
 - Capturas: [predeterminados](qa/language-colors/defaults.png), [ajustes](qa/language-colors/Language-colors-light.png), [conversación clara](qa/language-colors/Language-conversation-light.png), [oscura](qa/language-colors/Language-conversation-dark.png) e [iPad](qa/language-colors/ipad.png).
 
 Estas pruebas usan servicios ficticios DEBUG para voz/traducción; el cambio visual no modifica esos motores. La disponibilidad en TestFlight depende de la compilación, distribución y procesamiento de Apple y se confirma por separado.
+
+## Cuatro idiomas
+
+Además de inglés azul/español verde, francés inicia morado y coreano naranja. Ajustes conserva una preferencia independiente por idioma. Restaurar restablece los cuatro. Alto contraste y nombres visibles siguen teniendo prioridad sobre color.

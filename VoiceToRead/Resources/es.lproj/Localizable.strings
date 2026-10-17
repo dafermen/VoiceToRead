@@ -878,3 +878,44 @@
 
 "Write and speak" = "Escribir y hablar";
 "Simple mode always shows action names. In the standard home, this option adds names below the icons." = "El modo sencillo siempre muestra los nombres. En el inicio normal, esta opción añade nombres debajo de los iconos.";
+
+"Captions in your selected language, on your device." = "Subtítulos en el idioma que elijas, en tu dispositivo.";
+"Choose the spoken language and the translation language. These settings do not change menus. Your session keeps its language pair once listening starts." = "Elige el idioma hablado y el de traducción. Estas opciones no cambian los menús. La sesión conserva sus idiomas desde que comienza la escucha.";
+"Finish & play %@" = "Terminar y reproducir en %@";
+"First language" = "Primer idioma";
+"Second language" = "Segundo idioma";
+"Listening in %@…" = "Escuchando en %@…";
+"No favorites" = "No hay favoritas";
+"No recovery drafts" = "No hay borradores";
+"Play %@" = "Reproducir en %@";
+"Preparing %@ recognition…" = "Preparando reconocimiento en %@…";
+"Protect a saved session to find it here." = "Protege una sesión guardada para encontrarla aquí.";
+"Recently deleted (%lld)" = "Eliminadas recientemente (%lld)";
+"Recovery drafts (%lld)" = "Borradores de recuperación (%lld)";
+"Reveal translation" = "Mostrar traducción";
+"Search titles or content" = "Buscar títulos o contenido";
+"Session library options" = "Opciones de la biblioteca";
+"Speak %@" = "Hablar en %@";
+"Speaking %@ — microphone off" = "Reproduciendo en %@ — micrófono apagado";
+"Today" = "Hoy";
+"Yesterday" = "Ayer";
+"Translate to" = "Traducir a";
+"Translating to %@…" = "Traduciendo a %@…";
+"Translation note (optional)" = "Nota de traducción (opcional)";
+"Unfinished recordings will appear here." = "Las grabaciones sin guardar aparecerán aquí.";
+"Unsaved drafts: %lld · Review" = "Borradores sin guardar: %lld · Revisar";
+"Voice and translation languages" = "Idiomas de voz y traducción";
+"Write in %@" = "Escribir en %@";
+"This language pair is not supported on this device. Choose another translation language." = "Este par de idiomas no está disponible en este dispositivo. Elige otro idioma de traducción.";
+"A voice for this language is unavailable. Download the selected language voice in device Settings → Accessibility → Spoken Content → Voices, then try again." = "No hay una voz disponible para este idioma. Descárgala en Ajustes del dispositivo → Accesibilidad → Contenido leído → Voces e inténtalo de nuevo.";
+"Français" = "Francés";
+"한국어" = "Coreano";
+"VoiceToRead uses your microphone only when you choose to listen or practice pronunciation. Speech in supported languages is processed on your device. VoiceToRead does not upload microphone audio. Saving session audio is initially on for a new installation and can be turned off before starting. Audio and background preferences are remembered for future sessions; recording starts only when you choose to listen or practice pronunciation. If enabled, audio stays on this device until you export or delete it." = "VoiceToRead usa el micrófono solo cuando eliges escuchar o practicar pronunciación. La voz en idiomas compatibles se procesa en tu dispositivo. VoiceToRead no sube el audio del micrófono. Guardar audio está activado inicialmente en una instalación nueva y puede desactivarse antes de empezar. Las preferencias de audio y segundo plano se recuerdan para futuras sesiones; la grabación comienza solo cuando eliges escuchar o practicar. Si está activado, el audio permanece en este dispositivo hasta que lo exportes o elimines.";
+
+"French · Français" = "Francés · Français";
+"Korean · 한국어" = "Coreano · 한국어";
+"Recorded audio" = "Audio grabado";
+
+"Apple may ask to download the selected languages first. Downloaded languages allow on-device translation without internet." = "Apple puede pedir que descargues primero los idiomas seleccionados. Una vez descargados, puedes traducir en el dispositivo sin internet.";
+
+"One short name or term per line. Use English = español. Preferred translations apply only between English and Spanish." = "Un nombre o término breve por línea. Usa English = español. Las traducciones preferidas solo se aplican entre inglés y español.";

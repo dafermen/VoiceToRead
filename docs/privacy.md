@@ -13,8 +13,8 @@ Source data-flow description updated for optional recording and subtitles; statu
 | Preferences | Caption size, wake, appearance, paper/rules, selected capture language, remembered audio/background choices | App's UserDefaults domain |
 | Disk capacity | Checked for storage readiness and low-storage safeguard | Local value, not transmitted |
 | Export / Copy / Share | Only after user action | Destination chosen by user; may transmit or sync text, audio and subtitle files |
-| Translation speech | Explicit playback of corrected saved destination text; in Speak and translate, automatic English speech after a user-started Spanish turn or Translate and speak action. Playback uses Apple AVSpeechSynthesizer; no recording/export of synthesized audio | Device voice; availability/download managed by Apple; no developer server |
-| Temporary conversation | Spanish recognition, text editing, translation and English speech; no recorded file or saved session; cleared when the view is closed | Device memory and Apple language/voice resources |
+| Translation speech | Explicit playback of corrected saved destination text; in Speak and translate, speech in the selected target after a user-started turn or Translate and speak action. Playback uses Apple AVSpeechSynthesizer; no recording/export of synthesized audio | Device voice; availability/download managed by Apple; no developer server |
+| Temporary conversation | Recognition in the selected source, text editing, translation and speech in the selected target; no recorded file or saved session; cleared when the view is closed | Device memory and Apple language/voice resources |
 | Diagnostics | Microphone check shows volume only | Device memory |
 
 No account, analytics, advertising, tracking, OpenAI key, server endpoint or custom network client exists.
@@ -80,3 +80,7 @@ Build 23 añade el marcador local SessionFavorite (V8) y la preferencia local pl
 ## Accessible recovery and written responses (2026-10-15)
 
 V9 adds a separate SessionTrash marker. Moving a completed saved session to Recently deleted retains all its existing local files for 30 days. Restore removes only the marker. Explicit permanent deletion or expiry at launch/foreground deletes associated data through the existing repository deletion path. Draft discard and audio-only removal remain permanent. Written responses are view-memory text, spoken only by explicit action, never added to the session database or exported as audio. Leaving their screen clears the text; backgrounding interrupts speech.
+
+## Four-language support (2026-10-17)
+
+English, Spanish, French and Korean are selectable subject to local resource availability. Interface remains en/es. V11 adds a local session-target table; the translation payload retains separate destinations and edits. The migration adds no remote processing or telemetry. Delete/purge removes all destination copies and the pair record. Historical paragraphs above describe earlier builds.

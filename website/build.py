@@ -16,7 +16,7 @@ OUT = HERE / 'dist'
 BASE = 'https://voicetoread.innovalogic.tech'
 EMAIL = 'dariofernandomeneses@gmail.com'
 OWNER = 'Dario Fernando Meneses Ceron'
-DATE = '2026-10-16'
+DATE = '2026-10-17'
 PAGES = ('home', 'privacy', 'support', 'security', 'accessibility')
 COPY = {
     'es': {
@@ -34,7 +34,7 @@ COPY = {
         'translated': 'Tómate tu tiempo. Podemos leer esto juntos.',
         'exampleNote': 'El texto original y su traducción se distinguen con etiquetas y color.',
         'section': 'Más espacio para comprender.',
-        'features': [('01', 'Lee con comodidad', 'Amplía el texto, ajusta el contraste o usa pantalla completa. Elige un fondo suave y guías de lectura.'), ('02', 'Escucha a tu ritmo', 'Reproduce un párrafo, repítelo y corrige sus palabras antes de pasar al siguiente. Tú decides cuándo avanzar.'), ('03', 'Practica un idioma', 'Escucha una frase y compara tu pronunciación. Usa inglés o español sin cambiar el idioma de los menús.')],
+        'features': [('01', 'Lee con comodidad', 'Amplía el texto, ajusta el contraste o usa pantalla completa. Elige un fondo suave y guías de lectura.'), ('02', 'Escucha a tu ritmo', 'Reproduce un párrafo, repítelo y corrige sus palabras antes de pasar al siguiente. Tú decides cuándo avanzar.'), ('03', 'Practica un idioma', 'Escucha una frase y compara tu pronunciación. Elige inglés, español, francés o coreano según los recursos del dispositivo, sin cambiar los menús.')],
         'privacyTitle': 'Tus conversaciones, en tu dispositivo.',
         'privacyText': 'La app no envía tus grabaciones ni transcripciones a un servidor del desarrollador. Tú decides qué guardar, borrar y compartir.',
         'privacyNote': 'Las sesiones no forman parte del respaldo del dispositivo. Exporta lo importante antes de desinstalar.',
@@ -42,7 +42,7 @@ COPY = {
         'accessText': 'Herramientas de lectura para apoyar a personas con dificultades auditivas o baja visión, y práctica de idiomas con acompañamiento adulto para niños. La disponibilidad de funciones depende del dispositivo y los modelos instalados.',
         'accessLink': 'Explora las opciones de accesibilidad',
         'limits': 'Los subtítulos y las traducciones pueden contener errores. Comprueba la información importante. VoiceToRead no sustituye la interpretación profesional ni los servicios de accesibilidad que necesites.',
-        'updated': 'Actualizado el 16 de octubre de 2026', 'onPage': 'En esta página',
+        'updated': 'Actualizado el 17 de octubre de 2026', 'onPage': 'En esta página',
         'privacyIntro': 'Qué información utiliza VoiceToRead, dónde permanece y qué puedes hacer con ella.',
         'supportIntro': 'Respuestas claras para empezar, recuperar una sesión y leer a tu ritmo.',
         'securityIntro': 'Cómo cuidar tus grabaciones y comunicar un problema de seguridad.',
@@ -74,7 +74,7 @@ COPY = {
         'accessText': 'Reading tools to support people with hearing loss or low vision, plus language practice for children with adult guidance. Feature availability depends on your device and installed models.',
         'accessLink': 'Explore accessibility options',
         'limits': 'Captions and translations may contain errors. Check important information. VoiceToRead does not replace professional interpretation or the accessibility services you need.',
-        'updated': 'Updated October 16, 2026', 'onPage': 'On this page',
+        'updated': 'Updated October 17, 2026', 'onPage': 'On this page',
         'privacyIntro': 'What information VoiceToRead uses, where it stays and the choices you have.',
         'supportIntro': 'Clear answers to help you start, recover a session and read at your own pace.',
         'securityIntro': 'How to look after your recordings and report a security concern.',
@@ -124,7 +124,7 @@ VoiceToRead ofrece texto grande o en negrita, ajustes de interlineado, contraste
 En las sesiones guardadas, «A mi ritmo» reproduce un párrafo y espera a que elijas el siguiente. Puedes repetirlo, corregirlo y volver a leer sin avanzar automáticamente.
 
 ### Dos idiomas, claramente separados
-Elige inglés o español para capturar voz. Esta elección es independiente del idioma de la interfaz. Durante la lectura en vivo, Original, Traducción o Ambos permiten elegir qué ver. Las tarjetas bilingües tienen etiquetas de idioma, además de colores distintos.
+Elige inglés, español, francés o coreano para capturar voz, según los recursos disponibles en el dispositivo. Esta elección es independiente del idioma de la interfaz. Durante la lectura en vivo, Original, Traducción o Ambos permiten elegir qué ver. Las tarjetas bilingües tienen etiquetas de idioma, además de colores distintos.
 
 ### Una ayuda, con límites claros
 La app puede apoyar la lectura a personas con dificultades auditivas o baja visión. No se garantiza que responda a todas las necesidades de accesibilidad. Las transcripciones y traducciones pueden equivocarse; comprueba datos importantes. No sustituye servicios profesionales de interpretación ni debe usarse como único recurso en una emergencia.
@@ -148,7 +148,7 @@ VoiceToRead offers larger or bold text, line spacing, high contrast, light backg
 In saved sessions, At my pace plays one paragraph and waits for you to choose the next. You can repeat it, correct it and reread without automatically advancing.
 
 ### Two languages, clearly separated
-Choose English or Spanish for speech capture, independently of the interface language. During live reading, Original, Translation or Both lets you choose what to see. Bilingual cards have language labels as well as different colors.
+Choose English, Spanish, French or Korean for speech capture when supported on your device, independently of the interface language. During live reading, Original, Translation or Both lets you choose what to see. Bilingual cards have language labels as well as different colors.
 
 ### Support with clear limits
 The app can support reading for people with hearing loss or low vision. It is not guaranteed to meet every accessibility need. Captions and translations can be wrong; verify important details. It does not replace professional interpretation and should not be your only resource in an emergency.

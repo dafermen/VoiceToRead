@@ -57,10 +57,10 @@ struct CaptionScreen: View {
                         LiveSpanishView(paragraphs: model.transcript.finalized.suffix(40).map {
                             ReviewParagraph(id: $0.id, text: $0.text)
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
-                           language: model.language, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
+                           language: model.language, target: settings.translationLanguage, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
-                           englishColor: settings.englishColor, spanishColor: settings.spanishColor)
-                            .id(model.language)
+                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor)
+                            .id(model.language.rawValue + settings.translationLanguage.rawValue)
                     } else { transcript }
                 }
                     .frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
@@ -72,7 +72,7 @@ struct CaptionScreen: View {
                     resolutionControls.padding(.horizontal, 16).padding(.vertical, 4)
                 }
                 if model.canChooseCaptureOptions {
-                    quickPreferences.padding(.horizontal, 16)
+                    VStack(spacing: 0) { LanguagePairOptions(model: model, settings: settings, compact: true); quickPreferences }.padding(.horizontal, 16)
                 }
                 if isFullScreen || compact || model.state != .ended {
                     Divider()
@@ -124,7 +124,7 @@ struct CaptionScreen: View {
         .sheet(isPresented: $showingOptions) { readingOptions }
         .sheet(isPresented: $showingCaptureOptions) {
             NavigationStack {
-                Form { CaptureOptionsView(model: model, settings: settings) }
+                Form { LanguagePairOptions(model: model, settings: settings); CaptureOptionsView(model: model, settings: settings) }
                     .navigationTitle("Capture preferences")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar { DoneButton { showingCaptureOptions = false } }
@@ -372,11 +372,11 @@ struct CaptionScreen: View {
                     .foregroundStyle(liveDisplay == .original ? Color.primary : Color.accentColor)
             }
             .accessibilityLabel("Live caption display")
-            .accessibilityValue(Text(uiKey(liveDisplay == .original ? "Original \(model.language.name)" : liveDisplay == .translation ? "Translation \(model.language.opposite.name)" : "Both")))
+            .accessibilityValue(Text(uiKey(liveDisplay == .original ? "Original \(model.language.name)" : liveDisplay == .translation ? "Translation \(settings.translationLanguage.name)" : "Both")))
             .accessibilityIdentifier("liveSpanishButton")
             .confirmationDialog("Live caption display", isPresented: $showingLiveDisplay, titleVisibility: .visible) {
                 Button("Original \(model.language.name)") { liveDisplay = .original }
-                Button("Translation \(model.language.opposite.name)") { liveDisplay = .translation }
+                Button("Translation \(settings.translationLanguage.name)") { liveDisplay = .translation }
                 Button("Both") { liveDisplay = .both }
                 Button("Cancel", role: .cancel) { }
             }

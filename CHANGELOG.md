@@ -1,3 +1,10 @@
+## 2026-10-17 — Sesiones e idiomas
+
+- Biblioteca de guardadas primero, favoritas, borradores y papelera separados; barra lateral en iPad.
+- Francés/coreano, par explícito de captura y traducción, selectores próximos al micrófono y dos participantes en Conversación.
+- Destinos y correcciones independientes, migración V11, reproducción y exportación con idioma correcto.
+- Colores para cuatro idiomas y documentación de disponibilidad local y pruebas.
+
 ## 2026-10-17 — Inicio coherente con accesibilidad y Ajustes
 
 - Mostrar nombres añade etiquetas a todas las herramientas de Inicio y usa una cuadrícula adaptable, sin el espacio flexible que desajustaba la cabecera vertical.

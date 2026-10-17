@@ -44,7 +44,7 @@ final class AppleTranslationSpeechOutput: NSObject, TranslationSpeechOutput, AVS
 enum TranslationSpeechFailure: LocalizedError {
     case voiceUnavailable
     var errorDescription: String? {
-        "A voice for this language is unavailable. Download an English or Spanish voice in device Settings → Accessibility → Spoken Content → Voices, then try again."
+        "A voice for this language is unavailable. Download the selected language voice in device Settings → Accessibility → Spoken Content → Voices, then try again."
     }
 }
 
@@ -186,7 +186,7 @@ struct ParagraphAudioStep: Equatable {
     let recording: ClosedRange<Double>?
 
     static func make(source: [ReviewParagraph], translated: [ReviewParagraph], language: CaptureLanguage,
-                     mode: TranscriptLanguage, ranges: [PlaybackParagraph]) -> [Self] {
+                     mode: TranscriptLanguage, ranges: [PlaybackParagraph], target: CaptureLanguage? = nil) -> [Self] {
         source.flatMap { original -> [Self] in
             var result: [Self] = []
             if mode == language.mode || mode == .both, !original.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -194,9 +194,9 @@ struct ParagraphAudioStep: Equatable {
                 result.append(Self(paragraph: original, language: language, translated: false,
                                    recording: range.map { $0.start...$0.end }))
             }
-            if mode != language.mode, let text = translated.first(where: { $0.id == original.id }),
+            if mode == (target ?? language.defaultTarget).mode || mode == .both, let text = translated.first(where: { $0.id == original.id }),
                !text.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                result.append(Self(paragraph: text, language: language.opposite, translated: true, recording: nil))
+                result.append(Self(paragraph: text, language: target ?? language.defaultTarget, translated: true, recording: nil))
             }
             return result
         }
@@ -337,8 +337,8 @@ enum PlaybackLanguagePreference: String {
     init(mode: TranscriptLanguage, source: CaptureLanguage) {
         self = mode == .both ? .both : mode == source.mode ? .original : .translation
     }
-    func mode(source: CaptureLanguage, hasTranslation: Bool) -> TranscriptLanguage {
+    func mode(source: CaptureLanguage, hasTranslation: Bool, target: CaptureLanguage? = nil) -> TranscriptLanguage {
         guard hasTranslation else { return source.mode }
-        return self == .both ? .both : self == .translation ? source.opposite.mode : source.mode
+        return self == .both ? .both : self == .translation ? (target ?? source.defaultTarget).mode : source.mode
     }
 }

@@ -1,4 +1,12 @@
-# Traducción y revisión — build 17
+# Traducción y revisión
+
+## Comportamiento actual — 2026-10-17
+
+[Guía vigente de cuatro idiomas](session-library-and-languages.md): origen y destino explícitos, menú Original/Traducción/Ambos, traducciones conservadas por destino y comprobación de disponibilidad. Texto y traducción permite editar/exportar; Audio y subtítulos centraliza reproducción. Al detener se intenta traducción automática. Menús en español/inglés independientes de inglés/español/francés/coreano para voz.
+
+## Historial de implementación (build 17 en adelante)
+
+Las secciones siguientes documentan decisiones anteriores; para controles actuales usar la guía enlazada arriba.
 
 > Actualización 2026-10-16: la interfaz de marcadores de frases y la reproducción inline en Traducción se retiraron. Consulta [la navegación actual](simplified-navigation.md); las referencias anteriores describen el historial de implementación.
 

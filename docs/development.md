@@ -45,3 +45,7 @@ El script crea un archivo firmado si la cuenta está preparada y no lo sube. El 
 El contenedor nuevo utiliza `Application Support/VoiceToRead/Sessions.store`, con esquema V8 y migraciones internas V1→V8. Estas migraciones no transportan datos entre aplicaciones con Bundle IDs distintos. No borrar/recrear automáticamente un almacén que falle al abrirse. Guías: [junior](junior-guide.md), [recorrido del código](code-walkthrough.md) y [arquitectura](architecture.md).
 
 Registrar cada resultado con commit, toolchain, dispositivo, bundle y número efectivo. Los reports/checkpoints heredados describen la base histórica y no demuestran una entrega de VoiceToRead.
+
+## Idiomas y migración V11
+
+[Guía de implementación](session-library-and-languages.md). Ejecutar pruebas de traducción, repositorio, ajustes y conversación, además de recorridos iPhone/iPad. Xcode 15.2 permite validar iOS 17 y lógica local, pero excluye `canImport(Translation)` y `compiler(>=6.2)`: Xcode Cloud con SDK reciente y dispositivos físicos deben validar esos caminos antes de publicar. No confundir fixture multilingüe con traducción real.

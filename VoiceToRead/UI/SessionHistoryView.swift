@@ -6,12 +6,17 @@ import UIKit
 @MainActor
 struct SessionHistoryView: View {
     let coordinator: SessionCoordinator
+    var recoveryOnly = false
+    var favoritesOnly = false
+    var showsFilters = true
     @Query(sort: \ConferenceSession.createdAt, order: .reverse) private var sessions: [ConferenceSession]
     @Query private var reviews: [SessionReview]
     @Query private var drafts: [SessionDraft]
     @Query private var translations: [SessionTranslation]
     @Query private var favorites: [SessionFavorite]
     @Query private var trash: [SessionTrash]
+    @Query private var languagePairs: [SessionLanguagePair]
+    @Query private var media: [SessionMedia]
     @State private var lastDeletedID: UUID?
     @State private var onlyFavorites = false
     @State private var actionsSessionID: UUID?
@@ -29,17 +34,25 @@ struct SessionHistoryView: View {
         let spanish = snapshot?.isCurrent(english) == true ? snapshot?.translated ?? [] : []
         return (english + spanish).filter { $0.text.localizedStandardContains(query) }
     }
+    private var recoverySessions: [ConferenceSession] {
+        sessions.filter { session in drafts.contains { $0.sessionID == session.id } && !trash.contains { $0.sessionID == session.id } }
+    }
     private var filtered: [ConferenceSession] {
-        let visible = sessions.filter { session in !trash.contains { $0.sessionID == session.id } }
-        let sessions = onlyFavorites ? visible.filter { isFavorite($0) } : visible
+        let visible = sessions.filter { session in
+            !trash.contains { $0.sessionID == session.id } &&
+            drafts.contains { $0.sessionID == session.id } == recoveryOnly
+        }
+        let sessions = (onlyFavorites || favoritesOnly) ? visible.filter { isFavorite($0) } : visible
         guard !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return sessions }
         return sessions.filter { $0.title.localizedStandardContains(query) || !matches($0).isEmpty }
     }
 
+    private var days: [Date] {
+        Array(Set(filtered.map { Calendar.current.startOfDay(for: $0.createdAt) })).sorted(by: >)
+    }
+
     var body: some View {
         List {
-            NavigationLink("Recently deleted") { RecentlyDeletedView(repository: coordinator.repository) }
-                .accessibilityIdentifier("recentlyDeletedLink")
             if let id = lastDeletedID, trash.contains(where: { $0.sessionID == id }), let lastDeleted = sessions.first(where: { $0.id == id }) {
                 HStack {
                     Text("Moved to Recently deleted")
@@ -50,26 +63,38 @@ struct SessionHistoryView: View {
                     }.accessibilityIdentifier("undoSessionDeletion")
                 }
             }
-            Picker("Show sessions", selection: $onlyFavorites) {
-                Text("All sessions").tag(false)
-                Text("Favorites").tag(true)
-            }.pickerStyle(.segmented).accessibilityIdentifier("sessionFavoritesFilter")
-            Text("Swipe left on a session, or tap its actions button, to protect or delete it.")
-                .font(.caption).foregroundStyle(.secondary)
-            if onlyFavorites {
-                Text("Favorites protect sessions and audio from accidental deletion. They are not backups; export a copy to keep elsewhere.")
-                    .font(.caption).foregroundStyle(.secondary)
+            if !recoveryOnly && showsFilters {
+                Picker("Show sessions", selection: $onlyFavorites) {
+                    Text("All sessions").tag(false)
+                    Text("Favorites").tag(true)
+                }.pickerStyle(.segmented).accessibilityIdentifier("sessionFavoritesFilter")
+                if !recoverySessions.isEmpty && !onlyFavorites && query.isEmpty {
+                    NavigationLink {
+                        SessionHistoryView(coordinator: coordinator, recoveryOnly: true)
+                    } label: {
+                        Label("Unsaved drafts: \(recoverySessions.count) · Review", systemImage: "doc.badge.clock")
+                            .font(.subheadline)
+                    }.accessibilityIdentifier("reviewDraftsLink")
+                }
             }
             if filtered.isEmpty {
-                ContentUnavailableView("No sessions", systemImage: "text.bubble",
-                                       description: Text("Saved sessions will appear here."))
+                if !query.isEmpty { ContentUnavailableView.search(text: query) }
+                else if recoveryOnly {
+                    ContentUnavailableView("No recovery drafts", systemImage: "doc.badge.clock",
+                        description: Text("Unfinished recordings will appear here."))
+                } else if onlyFavorites || favoritesOnly {
+                    ContentUnavailableView("No favorites", systemImage: "star",
+                        description: Text("Protect a saved session to find it here."))
+                } else {
+                    ContentUnavailableView("No sessions", systemImage: "text.bubble",
+                        description: Text("Saved sessions will appear here."))
+                }
             }
-            let draftIDs = Set(drafts.map(\.sessionID))
-            if filtered.contains(where: { draftIDs.contains($0.id) }) {
-                Section("Recovery drafts") {
+            if recoveryOnly {
+                Section {
                     Text("Saved automatically for recovery. Choose Save to keep a session or Discard to delete its text and audio.")
                         .font(.caption).foregroundStyle(.secondary)
-                    ForEach(filtered.filter { draftIDs.contains($0.id) }) { session in
+                    ForEach(filtered) { session in
                         sessionLink(session)
                         HStack {
                             Button("Save Session", systemImage: "square.and.arrow.down") { saveDraft(session) }
@@ -77,18 +102,37 @@ struct SessionHistoryView: View {
                             Spacer()
                             Button("Discard", systemImage: "trash", role: .destructive) { deleting = session }
                                 .accessibilityIdentifier("discardDraft-" + session.id.uuidString)
-                        }
-                        .buttonStyle(.borderless)
-                        .disabled(coordinator.currentSession?.id == session.id && coordinator.caption.state != .ended)
+                        }.buttonStyle(.borderless)
+                            .disabled(coordinator.currentSession?.id == session.id && coordinator.caption.state != .ended)
+                    }
+                }
+            } else {
+                ForEach(days, id: \.self) { day in
+                    Section {
+                        ForEach(filtered.filter { Calendar.current.isDate($0.createdAt, inSameDayAs: day) }) { session in sessionLink(session) }
+                    } header: {
+                        if Calendar.current.isDateInToday(day) { Text("Today") }
+                        else if Calendar.current.isDateInYesterday(day) { Text("Yesterday") }
+                        else { Text(day, style: .date) }
                     }
                 }
             }
-            Section("Saved sessions") {
-                ForEach(filtered.filter { !draftIDs.contains($0.id) }) { session in sessionLink(session) }
+        }
+        .searchable(text: $query, prompt: "Search titles or content")
+        .navigationTitle(uiKey(recoveryOnly ? "Recovery drafts" : favoritesOnly ? "Favorites" : "Sessions"))
+        .toolbar {
+            if !recoveryOnly && showsFilters {
+                Menu {
+                    NavigationLink { SessionHistoryView(coordinator: coordinator, recoveryOnly: true) } label: {
+                        Label("Recovery drafts (\(recoverySessions.count))", systemImage: "doc.badge.clock")
+                    }
+                    NavigationLink { RecentlyDeletedView(repository: coordinator.repository) } label: {
+                        Label("Recently deleted (\(trash.count))", systemImage: "trash")
+                    }.accessibilityIdentifier("recentlyDeletedLink")
+                } label: { Label("Session library options", systemImage: "ellipsis.circle") }
+                    .accessibilityIdentifier("sessionLibraryOptions")
             }
         }
-        .searchable(text: $query, prompt: "Titles, English or Spanish")
-        .navigationTitle("Sessions")
         .onChange(of: onlyFavorites) { _, _ in actionsSessionID = nil }
         .onChange(of: query) { _, _ in actionsSessionID = nil }
         .confirmationDialog(uiKey("Remove favorite protection?"), isPresented: Binding(
@@ -160,7 +204,15 @@ struct SessionHistoryView: View {
                 if !query.isEmpty, let match = matches(session).first {
                     Text(match.text).font(.subheadline).lineLimit(3)
                 }
-                Text(session.createdAt, style: .date).font(.subheadline)
+                let source = CaptureLanguage(rawValue: session.language) ?? .english
+                let target = languagePairs.first { $0.sessionID == session.id }.flatMap { CaptureLanguage(rawValue: $0.targetLocale) } ?? source.defaultTarget
+                Text(verbatim: source.name + " → " + target.name).font(.caption).foregroundStyle(.secondary)
+                HStack {
+                    Text(session.createdAt, style: .time)
+                    if media.contains(where: { $0.sessionID == session.id && $0.audioName != nil }) {
+                        Label("Recorded audio", systemImage: "waveform").labelStyle(.iconOnly)
+                    }
+                }.font(.caption)
                 (session.endedAt == nil ? Text("Unfinished or interrupted session") : Text(verbatim: SessionClock.format(session.duration))).font(.caption)
             }
         }
@@ -490,5 +542,34 @@ struct RecentlyDeletedView: View {
             do { try repository.restore(session) } catch { failure = error.localizedDescription }
         }.accessibilityIdentifier("restoreDeletedSession")
         Button("Delete permanently", systemImage: "trash", role: .destructive) { deleting = session }
+    }
+}
+
+@MainActor
+struct SessionLibraryView: View {
+    let coordinator: SessionCoordinator
+    @Environment(\.horizontalSizeClass) private var sizeClass
+    @State private var category: String? = "saved"
+    @Query private var drafts: [SessionDraft]
+    @Query private var trash: [SessionTrash]
+    var body: some View {
+        if sizeClass == .regular {
+            NavigationSplitView {
+                List(selection: $category) {
+                    Label("Saved sessions", systemImage: "text.bubble").tag("saved")
+                    Label("Favorites", systemImage: "star").tag("favorites")
+                    Label("Recovery drafts (\(drafts.count))", systemImage: "doc.badge.clock").tag("drafts")
+                    Label("Recently deleted (\(trash.count))", systemImage: "trash").tag("trash")
+                }.navigationTitle("Sessions")
+            } detail: {
+                NavigationStack {
+                    if category == "trash" { RecentlyDeletedView(repository: coordinator.repository) }
+                    else {
+                        SessionHistoryView(coordinator: coordinator, recoveryOnly: category == "drafts",
+                            favoritesOnly: category == "favorites", showsFilters: false).id(category)
+                    }
+                }
+            }
+        } else { NavigationStack { SessionHistoryView(coordinator: coordinator) } }
     }
 }

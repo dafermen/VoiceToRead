@@ -68,3 +68,7 @@ Para comunicarte en español y escuchar inglés, abre **Hablar y traducir** ante
 ## Navegación actual — 2026-10-16
 
 Texto y traducción permite corregir/exportar; Audio y subtítulos es el único reproductor de sesiones. Ya no se ofrecen marcadores de frases ni exportación de marcadores. Favoritos de sesiones completas siguen protegidos. En Subtítulos, Hablar y traducir está junto al selector en vivo; Comprobar preparación está en Ajustes y los avisos necesarios siguen en el lector. [Guía completa](simplified-navigation.md).
+
+## Biblioteca actual (2026-10-17)
+
+Sesiones guardadas es la vista inicial, con Todas/Favoritas y grupos por fecha. Los borradores se abren desde su aviso o menú, y la papelera desde el menú. iPad amplio usa categorías laterales. [Flujo e idiomas](session-library-and-languages.md).

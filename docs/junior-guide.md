@@ -357,3 +357,11 @@ La paleta tiene una sola definición para botones y tarjetas. Los ajustes persis
 ## Inicio y preferencias de accesibilidad (2026-10-17)
 
 [Guía de implementación](home-controls.md): etiquetas observables, cuadrícula adaptable, tamaños comunes y separación entre preferencias y acciones. Incluye la causa del espacio excesivo al cambiar HStack por VStack y cómo evitarla.
+
+## Biblioteca e idiomas explícitos (2026-10-17)
+
+Lee [la explicación para estudiantes](session-library-and-languages.md#para-estudiantes-de-programación). Antes `opposite` asumía inglés/español; ahora cada trabajo lleva origen y destino. No basta con agregar dos valores a un Picker: hay que revisar persistencia, caché, reproducción, nombres de archivos, práctica y mensajes.
+
+Ejercicio: crea una sesión francesa, tradúcela a coreano, corrige una frase, cambia a español y vuelve a coreano. La corrección debe conservarse. Después modifica el original: ambos destinos deben requerir actualización. Sigue el UUID del párrafo desde el reconocimiento hasta el snapshot y el paso de audio. Repite con un almacén V10 para comprobar que la migración añade datos sin destruirlos.
+
+Los nombres históricos `LearningExpression.english/spanish` representan original/nota; no se cambian sus columnas para conservar los almacenes anteriores. Su etiqueta visible es genérica, porque las notas históricas no incluyen un destino. Las nuevas traducciones sí guardan su destino explícitamente.

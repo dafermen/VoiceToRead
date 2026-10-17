@@ -48,7 +48,7 @@ final class SessionCoordinator {
             }
             if self.currentSession == nil {
                 self.suggestedTitle = SessionTitle.suggested()
-                self.currentSession = try self.repository.create(title: self.sessionTitle, draft: true, language: self.caption.language)
+                self.currentSession = try self.repository.create(title: self.sessionTitle, draft: true, language: self.caption.language, target: self.settings.translationLanguage)
                 self.currentIsDraft = true
             }
             if self.caption.saveAudio, !self.caption.recordingPrepared, let session = self.currentSession {
@@ -99,7 +99,7 @@ final class SessionCoordinator {
         guard currentSession != nil || caption.startedAt != nil || !caption.transcript.finalized.isEmpty else { return true }
         do {
             if currentSession == nil {
-                currentSession = try repository.create(title: sessionTitle, draft: true, language: caption.language)
+                currentSession = try repository.create(title: sessionTitle, draft: true, language: caption.language, target: settings.translationLanguage)
                 currentIsDraft = true
             }
             guard let currentSession else { return false }
@@ -188,7 +188,7 @@ final class SessionCoordinator {
             if previous?.isCurrent(source) == true { automaticTranslationMessage = "Translation saved"; advanceAutomaticTranslation(); return }
             guard translationSupported() else { throw TranslationFailure.unsupported }
             automaticTranslationJob = TranslationJob(plan: IncrementalTranslation(source: source, previous: previous,
-                language: CaptureLanguage(rawValue: session.language) ?? .english))
+                language: CaptureLanguage(rawValue: session.language) ?? .english, targetLanguage: try repository.translationTarget(for: session)))
             automaticTranslationMessage = nil
         } catch { automaticTranslationMessage = error.localizedDescription }
     }

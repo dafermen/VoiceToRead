@@ -15,7 +15,7 @@ final class TranscriptRepository {
     let storageURL: URL?
 
     init(inMemory: Bool = false, directory: URL? = nil) throws {
-        let schema = Schema(versionedSchema: SessionSchemaV10.self)
+        let schema = Schema(versionedSchema: SessionSchemaV11.self)
         let configuration: ModelConfiguration
         if inMemory {
             storageURL = nil
@@ -40,10 +40,11 @@ final class TranscriptRepository {
         context.autosaveEnabled = false
     }
 
-    func create(title: String, draft: Bool = false, language: CaptureLanguage = .english) throws -> ConferenceSession {
+    func create(title: String, draft: Bool = false, language: CaptureLanguage = .english, target: CaptureLanguage? = nil) throws -> ConferenceSession {
         let session = ConferenceSession(title: title)
         session.language = language.rawValue
         context.insert(session)
+        context.insert(SessionLanguagePair(sessionID: session.id, target: target == language ? language.defaultTarget : (target ?? language.defaultTarget)))
         if draft { context.insert(SessionDraft(sessionID: session.id)) }
         do { try context.save() } catch { context.rollback(); cacheSessionID = nil; throw error }
         currentCaptions = [:]
@@ -189,6 +190,7 @@ final class TranscriptRepository {
         let savedReview = try review(for: identifier)
         let savedMedia = try media(for: identifier)
         let savedDraft = try draft(for: identifier)
+        let savedPair = try languagePair(for: identifier)
         let savedTranslation = try translation(for: identifier)
         let savedExpressions = try learningExpressions(for: identifier)
         let audioURL = try audioURL(for: identifier)
@@ -198,6 +200,7 @@ final class TranscriptRepository {
         if let savedMedia { context.delete(savedMedia) }
         if let savedDraft { context.delete(savedDraft) }
         if let savedTranslation { context.delete(savedTranslation) }
+        if let savedPair { context.delete(savedPair) }
         for expression in savedExpressions { context.delete(expression) }
         // Explicit deletion also covers iOS 17 stores where cascade propagation
         // can leave registered caption objects behind in the context.
@@ -365,10 +368,33 @@ final class TranscriptRepository {
         do { try context.save() } catch { context.rollback(); throw error }
     }
 
+    func languagePair(for sessionID: UUID) throws -> SessionLanguagePair? {
+        var request = FetchDescriptor<SessionLanguagePair>(predicate: #Predicate { $0.sessionID == sessionID })
+        request.fetchLimit = 1
+        return try context.fetch(request).first
+    }
+    func translationTarget(for session: ConferenceSession) throws -> CaptureLanguage {
+        let source = CaptureLanguage(rawValue: session.language) ?? .english
+        if let record = try languagePair(for: session.id), let target = CaptureLanguage(rawValue: record.targetLocale), target != source { return target }
+        return try translation(for: session.id)?.decoded().target ?? source.defaultTarget
+    }
+
     func translation(for sessionID: UUID) throws -> SessionTranslation? {
         var request = FetchDescriptor<SessionTranslation>(predicate: #Predicate { $0.sessionID == sessionID })
         request.fetchLimit = 1
         return try context.fetch(request).first
+    }
+
+    /// Activate an already saved destination without translating again or replacing its edits.
+    func activateTranslation(for session: ConferenceSession, target: CaptureLanguage) throws {
+        guard let record = try translation(for: session.id) else { return }
+        var library = try record.library()
+        guard library.snapshots.contains(where: { $0.target == target }) else { return }
+        library.activeTarget = target
+        let encoded = try JSONEncoder().encode(library)
+        let pair = try languagePair(for: session.id) ?? SessionLanguagePair(sessionID: session.id, target: target)
+        context.insert(pair); pair.targetLocale = target.rawValue; record.payload = encoded
+        do { try context.save() } catch { context.rollback(); throw error }
     }
 
     func reviewedParagraphs(for session: ConferenceSession) throws -> [ReviewParagraph] {
@@ -388,10 +414,17 @@ final class TranscriptRepository {
         guard try draft(for: session.id) == nil || (allowCompletedDraft && session.endedAt != nil),
               snapshot.language.rawValue == session.language,
               snapshot.isCurrent(try reviewedParagraphs(for: session)) else { throw TranslationFailure.sourceChanged }
-        let encoded = try JSONEncoder().encode(snapshot)
-        let record = try translation(for: session.id) ?? SessionTranslation(sessionID: session.id, payload: encoded)
+        let existing = try translation(for: session.id)
+        var library = try existing?.library() ?? TranslationLibrary(activeTarget: snapshot.target, snapshots: [])
+        library.snapshots.removeAll { $0.target == snapshot.target }
+        library.snapshots.append(snapshot)
+        library.activeTarget = snapshot.target
+        let encoded = try JSONEncoder().encode(library)
+        let record = existing ?? SessionTranslation(sessionID: session.id, payload: encoded)
         context.insert(record)
         record.payload = encoded
+        let pair = try languagePair(for: session.id) ?? SessionLanguagePair(sessionID: session.id, target: snapshot.target)
+        context.insert(pair); pair.targetLocale = snapshot.target.rawValue
         do { try context.save() } catch { context.rollback(); cacheSessionID = nil; throw error }
     }
 

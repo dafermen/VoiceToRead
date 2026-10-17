@@ -56,3 +56,11 @@ Decisión del titular (2026-10-14): gratuita, sin compras dentro de la app, Esta
 - [ ] Deslizar izquierda: círculos de protección/eliminar; favorita bloquea borrar sesión/audio; quitar protección conserva datos y borrar exige confirmación aparte.
 - [ ] Recorrer controles con VoiceOver/Voice Control y probar con personas con discapacidad auditiva/baja visión, aprendices y adultos que acompañen a niños. No declarar accesibilidad integral solo por XCTest.
 - [ ] Nueva compilación Cloud y disponibilidad real en TestFlight; verificar la versión instalada antes de atribuir resultados a este cambio.
+
+## Gate adicional: cuatro idiomas y V11
+
+- [ ] Validar francés/coreano en dispositivos físicos y traducciones en los sentidos disponibles.
+- [ ] Verificar migración con una copia real de la biblioteca de TestFlight sin borrar datos.
+- [ ] Compilar y ejecutar los caminos de Translation/SpeechAnalyzer con SDK reciente; Xcode 15.2 local los excluye.
+- [ ] Revisar con usuarios de VoiceOver y hablantes nativos la navegación, lectura y práctica.
+- [ ] Confirmar que el nuevo build llegó a TestFlight; una compilación local no lo acredita.
