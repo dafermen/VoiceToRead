@@ -7,7 +7,7 @@ Actualización de experiencia accesible: [guía de los ocho cambios](accessible-
 Consulta [el recorrido por eventos, cola, estados y persistencia](playback-unification.md#para-estudiantes-cómo-está-construido). Se separan seleccionar un párrafo, iniciar sonido, elegir texto visible y guardar la sesión. Esto apoya lectura a distintos ritmos, discapacidad auditiva/baja visión y aprendizaje infantil acompañado.
 
 
-Estado actual: **VoiceToRead 1.0 (1), esquema V8**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
+Estado actual: **VoiceToRead 1.0 (1), esquema V11**. Los números de build de las secciones heredadas indican hitos del código base. Ver [A mi ritmo y favoritas](at-my-pace.md) y [entrega/verificación](pace-checkpoint.md). Las secciones con otros números describen etapas anteriores.
 
 ## Lectura accesible de traducciones (15 de octubre de 2026)
 
@@ -34,9 +34,9 @@ Ejercicio: crear sesión en español, pausar, intentar cambiar idioma, reanudar 
 
 ## 1. Qué problema resuelve
 
-VoiceToRead convierte voz en inglés o español captada por el micrófono del iPhone/iPad en texto legible. Está pensada para clases, reuniones, conferencias y otras situaciones en las que conviene leer lo que se escucha.
+VoiceToRead ayuda a comunicarse mediante texto, traducción y voz en iPhone/iPad. Abre directamente en Conversar; Escuchar conserva las reuniones, clases y conferencias. Permite elegir inglés, español, francés o coreano según la disponibilidad de modelos locales. Está orientada a personas con dificultades auditivas o del habla, baja visión, personas que usan un nuevo idioma y aprendizaje infantil acompañado.
 
-El usuario puede ampliar la lectura, girar el teléfono, pausar, guardar una sesión, marcar frases y corregir palabras antes de compartir. Si activa la grabación antes de empezar, también puede conservar audio, reproducirlo y exportar subtítulos.
+El usuario puede ampliar la lectura, girar el teléfono, pausar, guardar una sesión, protegerla como favorita y corregir palabras antes de compartir. Si activa la grabación antes de empezar, también puede conservar audio, reproducirlo y exportar subtítulos.
 
 La app usa el reconocimiento de Apple en el dispositivo. No implementa un servidor propio ni una alternativa de reconocimiento en la nube. La disponibilidad del modelo de inglés y la precisión dependen del dispositivo y deben probarse. Descargar inicialmente un modelo puede necesitar Internet.
 
@@ -377,3 +377,16 @@ Al agregar una ventana de consulta, reutiliza `DoneToolbar`, no un `DoneButton` 
 Mostrar nombres y Modo sencillo son decisiones distintas. Evita expresiones como `showButtonNames || simpleMode`: hacen que el interruptor parezca roto. `AccessibleControlLabelStyle` y `PlaybackTransport` leen el objeto observable de ajustes del entorno, en lugar de abrir otra instancia de UserDefaults. Esto mantiene sincronizados controles de ventanas secundarias y las pruebas con preferencias aisladas.
 
 `LanguagePickerControl` reutiliza la apariencia azul para todos los idiomas hablados y de traducción. Su binding delega la selección al propietario; no mezcla la dirección de una sesión guardada con la de Conversación ni con el idioma de los menús. Consulta [la guía actualizada](home-controls.md#selectores-de-idioma-y-regreso-a-inicio).
+
+
+## Comunicación primero: presentación, estado y reversibilidad
+
+Ver [decisión y recuperación](conversation-first.md). `AppSettings.conversationHome` elige entre dos presentaciones; su valor predeterminado es true cuando aún no hay preferencia. No cambia `SessionCoordinator` ni el esquema de SwiftData. Así podemos probar otra entrada sin migrar o borrar sesiones.
+
+`CommunicationHomeView` tiene un selector local y posee el modelo de conversación. Lo pasa a `SpeakTranslateView` en modo integrado; el inicio anterior puede seguir abriendo la misma vista como ventana. Compartir el modelo mantiene un único estado del turno y evita crear un segundo micrófono al cambiar la presentación. El cambio de modo se bloquea mientras hay captura, finalización o voz en curso. Salir de Conversación cancela sus operaciones temporales; salir de Escuchar conserva la política existente de sesiones.
+
+El modo sin traducción es una ruta real del modelo: no basta con ocultar la tarjeta traducida. Debe permitir capturar sin el framework de traducción, terminar y mostrar el original sin iniciar un trabajo de traducción ni repetir automáticamente la voz captada. Leer en voz alta es una acción explícita; una respuesta escrita puede reutilizarla. Cambiar una preferencia no debe iniciar audio por sorpresa ni borrar texto al volver a la pantalla.
+
+Un tag Git conserva código, no las grabaciones privadas del usuario. La opción de inicio anterior es una comparación reversible; una reversión de TestFlight requiere volver a compilar con un número nuevo, nunca borrar sesiones ni reescribir main con force push.
+
+Con tamaños de letra de accesibilidad, los botones de turno se apilan dentro del área desplazable. En tamaños normales permanecen junto al borde inferior. Mantener una barra fija con texto enorme puede ocultar toda la conversación: por eso una prueba de que el botón existe no basta; también revisamos capturas y comprobamos que su altura no ocupe la pantalla completa.

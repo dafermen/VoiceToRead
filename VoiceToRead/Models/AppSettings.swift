@@ -151,6 +151,7 @@ final class AppSettings {
     var translationLanguage: CaptureLanguage { didSet { defaults.set(translationLanguage.rawValue, forKey: "translationLanguage") } }
     var readerPaper: ReaderPaper { didSet { defaults.set(readerPaper.rawValue, forKey: "readerPaper") } }
     var ruledPaper: Bool { didSet { defaults.set(ruledPaper, forKey: "ruledPaper") } }
+    var conversationHome: Bool { didSet { defaults.set(conversationHome, forKey: "conversationHome") } }
     var simpleMode: Bool { didSet { defaults.set(simpleMode, forKey: "simpleMode") } }
     var showButtonNames: Bool { didSet { defaults.set(showButtonNames, forKey: "showButtonNames") } }
     var pauseHaptics: Bool { didSet { defaults.set(pauseHaptics, forKey: "pauseHaptics") } }
@@ -172,8 +173,9 @@ final class AppSettings {
         koreanColor = LanguageColor(rawValue: defaults.string(forKey: "koreanLanguageColor") ?? "") ?? .orange
         englishColor = LanguageColor(rawValue: defaults.string(forKey: "englishLanguageColor") ?? "") ?? .blue
         spanishColor = LanguageColor(rawValue: defaults.string(forKey: "spanishLanguageColor") ?? "") ?? .green
+        conversationHome = defaults.object(forKey: "conversationHome") as? Bool ?? true
         simpleMode = defaults.bool(forKey: "simpleMode")
-        showButtonNames = defaults.bool(forKey: "showButtonNames")
+        showButtonNames = defaults.object(forKey: "showButtonNames") as? Bool ?? true
         pauseHaptics = defaults.object(forKey: "pauseHaptics") as? Bool ?? true
         focusedReading = defaults.bool(forKey: "focusedReading")
         preparationSeen = defaults.bool(forKey: "preparationSeen")

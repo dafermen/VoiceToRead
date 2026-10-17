@@ -10,6 +10,14 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
+            Section("Home experience") {
+                Picker("Home experience", selection: $settings.conversationHome) {
+                    Text("Conversation first").tag(true)
+                    Text("Previous home").tag(false)
+                }.accessibilityIdentifier("homeExperiencePicker")
+                    .disabled(coordinator.caption.state.active || coordinator.caption.state.busy)
+                Text("You can return to the previous home without deleting your saved sessions.").font(.caption)
+            }
             Section("Accessibility and ease of use") {
                 Toggle("Simple mode", isOn: $settings.simpleMode).disabled(coordinator.caption.state.active || coordinator.caption.state.busy).accessibilityIdentifier("simpleModeToggle")
                 Toggle("Show button names", isOn: $settings.showButtonNames).accessibilityIdentifier("buttonNamesToggle")
@@ -477,10 +485,11 @@ struct LanguagePickerControl: View {
     @Binding var selection: CaptureLanguage
     var choices = CaptureLanguage.allCases
     var showRole = false
+    var stackedRole = false
     @Environment(\.dynamicTypeSize) private var typeSize
     var body: some View {
-        (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 6)) : AnyLayout(HStackLayout(spacing: 8))) {
-            if showRole { Text(title); if !typeSize.isAccessibilitySize { Spacer(minLength: 8) } }
+        (typeSize.isAccessibilitySize || stackedRole ? AnyLayout(VStackLayout(alignment: .leading, spacing: 6)) : AnyLayout(HStackLayout(spacing: 8))) {
+            if showRole { Text(title); if !typeSize.isAccessibilitySize && !stackedRole { Spacer(minLength: 8) } }
             Menu {
                 Picker(title, selection: $selection) {
                     ForEach(choices, id: \.self) { Text($0.pickerLabel).tag($0) }

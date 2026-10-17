@@ -17,11 +17,13 @@ VoiceToRead is a native iPhone/iPad app for following English, Spanish, French o
 - Repository: [dafermen/VoiceToRead](https://github.com/dafermen/VoiceToRead), branch `main`. App Store Connect record **6822564230** is confirmed by the owner’s screenshot (1.0, Prepare for Submission). The owner confirmed VoiceToRead runs on iPhone through internal TestFlight. Source version is now 1.0; an App Store-eligible archive and final device acceptance remain pending.
 - Current setup and validation: [project identity](docs/project-identity.md). Older build numbers in inherited reports describe the code base, not releases of this new app.
 
-## Simplified navigation
+## Conversation-first home
 
-A compact conversation icon opens Conversation beside live caption display. Preparation is in Settings → Check preparation; required permission/model notices remain visible. Completion uses an accessible ✓, and session playback stays in Audio & subtitles. [User and student guide](docs/simplified-navigation.md).
+VoiceToRead now opens directly in **Converse**, with visible speaking actions, language roles (Me / Other person) and a large message area. Turn off **Translate conversation** to read speech in one language without automatically echoing it aloud. **Write a reply** lets people communicate without speaking: translate and play, or read the original aloud when translation is off. Conversations are temporary; no audio or session is saved.
 
-Show button names adds labels below Home icons in an adaptive grid. Simple mode always shows six matching action cards with icons and names, white on a grouped gray background in light appearance. Listen now keeps Session actions and returns through the bottom Home tab, without a duplicate back button. Show button names works independently of Simple mode across icon controls; language selections, navigation destinations and Save/Cancel remain explicit. Capture, conversation and saved translation share the same blue language selector. Dismiss-only sheets consistently place ✓ at the top right, while editors retain Cancel / Save. Playback names sit below their circular icons; language-practice actions share a plain style. **Write and speak**, available from Simple home or Captions → Session actions, reads typed text aloud without translating or saving it; leaving clears it. Conversation and Write and speak are Home actions, not Settings shortcuts. [Home consistency guide](docs/home-controls.md).
+Switch to **Listen** for meetings, classes and conferences; existing recording, review and export tools remain there. **Saved** contains recordings and language practice. **Settings → Home experience → Previous home** restores the prior interface without deleting data. The GitHub tag `before-conversation-home-2026-10-17` preserves the previous source. [Design, recovery and validation](docs/conversation-first.md).
+
+New installations show button names by default; existing explicit choices remain. Primary conversation actions always retain short labels. Language colors supplement text, and VoiceOver labels remain available. This redesign supports people with hearing or speech difficulties, low vision, language learners and adult-guided practice for children; real-user acceptance remains necessary.
 
 ## Read, translate and review
 

@@ -3,6 +3,145 @@ import UIKit
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
+    func testCommunicationHomeTablet() throws {
+        guard UIDevice.current.userInterfaceIdiom == .pad else { throw XCTSkip("Tablet layout") }
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        XCUIDevice.shared.orientation = .landscapeLeft
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        let mode = app.segmentedControls["communicationMode"]
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].isHittable)
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].isHittable)
+        XCTAssertTrue(app.buttons["conversationWriteReply"].isHittable)
+        let home = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); home.name = "Communication-iPad"; home.lifetime = .keepAlways; add(home)
+        mode.buttons["Listen"].tap()
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
+        app.tabBars.buttons["Saved"].tap()
+        XCTAssertTrue(app.staticTexts["Review sample"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
+    func testCommunicationMeetingCaptureOwnsMicrophone() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launch()
+        let mode = app.segmentedControls["communicationMode"]
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Listen"].tap()
+        let capture = app.buttons["primaryCaptionAction"]
+        XCTAssertTrue(capture.waitForExistence(timeout: 5))
+        capture.tap()
+        let active = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@", "Pause"), object: capture)
+        XCTAssertEqual(XCTWaiter.wait(for: [active], timeout: 10), .completed)
+        XCTAssertFalse(mode.buttons["Converse"].isEnabled)
+        app.tabBars.buttons["Settings"].tap()
+        XCTAssertFalse(app.buttons["homeExperiencePicker"].isEnabled)
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertEqual(capture.label, "Pause")
+        capture.tap()
+        let idle = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: mode.buttons["Converse"])
+        XCTAssertEqual(XCTWaiter.wait(for: [idle], timeout: 10), .completed)
+        mode.buttons["Converse"].tap()
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].waitForExistence(timeout: 5))
+        mode.buttons["Listen"].tap()
+        XCTAssertEqual(capture.label, "Resume")
+    }
+
+    @MainActor
+    func testCommunicationHomeTwoWayAndWrittenReply() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        XCTAssertTrue(app.segmentedControls["communicationMode"].waitForExistence(timeout: 20))
+        XCTAssertFalse(app.buttons["speakTranslateEntry"].exists)
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].label.contains("Speak"))
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].isHittable)
+        let home = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); home.name = "Communication-home"; home.lifetime = .keepAlways; add(home)
+        app.buttons["conversationEnglishTurn"].tap()
+        XCTAssertTrue(app.staticTexts["Listening in English…"].waitForExistence(timeout: 8))
+        XCTAssertFalse(app.segmentedControls["communicationMode"].buttons["Listen"].isEnabled)
+        app.buttons["conversationEnglishTurn"].tap()
+        XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 8))
+        app.buttons["conversationStopAudio"].tap()
+        let reply = app.buttons["conversationWriteReply"]
+        if !reply.isHittable { app.swipeUp() }
+        reply.tap()
+        let input = app.textViews["conversationSource"]
+        XCTAssertTrue(input.waitForExistence(timeout: 5))
+        input.typeText("Gracias")
+        app.buttons["conversationApply"].tap()
+        XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 8))
+        app.buttons["conversationStopAudio"].tap()
+        XCTAssertTrue(app.buttons["conversationPlay"].label.contains("English"), "My written reply must use my language, not the previous speaker's direction")
+        XCTAssertEqual(app.staticTexts["conversationSourceText"].label, "Gracias")
+        let written = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); written.name = "Communication-written-reply"; written.lifetime = .keepAlways; add(written)
+        app.tabBars.buttons["Saved"].tap()
+        XCTAssertTrue(app.staticTexts["Review sample"].waitForExistence(timeout: 5))
+        app.buttons["savedLanguagePractice"].tap()
+        XCTAssertTrue(app.navigationBars["Language practice"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
+    func testCommunicationReadingOnlyAndReversibleHome() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-labels"]
+        app.launch()
+        let translation = app.switches["conversationTranslationToggle"]
+        XCTAssertTrue(translation.waitForExistence(timeout: 20))
+        tapPreferenceSwitch(translation)
+        XCTAssertFalse(app.buttons["conversationSecondLanguage"].exists)
+        let listen = app.buttons["conversationSpanishTurn"]
+        XCTAssertTrue(listen.isEnabled)
+        listen.tap()
+        XCTAssertTrue(app.staticTexts["Listening in Español…"].waitForExistence(timeout: 8))
+        listen.tap()
+        XCTAssertTrue(app.buttons["conversationReadAloud"].waitForExistence(timeout: 8))
+        XCTAssertFalse(app.buttons["conversationStopAudio"].exists)
+        XCTAssertFalse(app.staticTexts["conversationTranslation"].exists)
+        let reading = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); reading.name = "Communication-read-only"; reading.lifetime = .keepAlways; add(reading)
+        app.segmentedControls["communicationMode"].buttons["Listen"].tap()
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["speakTranslateEntry"].exists)
+        app.tabBars.buttons["Settings"].tap()
+        app.buttons["homeExperiencePicker"].tap()
+        app.buttons["Previous home"].tap()
+        app.tabBars.buttons["Captions"].tap()
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 5))
+        app.tabBars.buttons["Sessions"].tap()
+        XCTAssertTrue(app.staticTexts["Review sample"].waitForExistence(timeout: 5))
+        app.tabBars.buttons["Settings"].tap()
+        app.buttons["homeExperiencePicker"].tap()
+        app.buttons["Conversation first"].tap()
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(app.switches["conversationTranslationToggle"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.switches["conversationTranslationToggle"].value as? String, "0")
+    }
+
+    @MainActor
+    func testCommunicationHomeSpanishLargeText() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-interfaceLanguage", "es", "-appearance", "dark", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        XCTAssertTrue(app.segmentedControls["communicationMode"].waitForExistence(timeout: 20))
+        for id in ["conversationSpanishTurn", "conversationEnglishTurn"] {
+            let button = app.buttons[id]
+            if !button.isHittable { app.swipeUp() }
+            XCTAssertTrue(button.isHittable)
+            XCTAssertGreaterThanOrEqual(button.frame.minX, app.frame.minX)
+            XCTAssertLessThanOrEqual(button.frame.maxX, app.frame.maxX)
+            XCTAssertLessThan(button.frame.height, app.frame.height * 0.5, "A single action must not consume the reading screen")
+        }
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); shot.name = "Communication-Spanish-large"; shot.lifetime = .keepAlways; add(shot)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let wide = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); wide.name = "Communication-Spanish-landscape"; wide.lifetime = .keepAlways; add(wide)
+        XCUIDevice.shared.orientation = .portrait
+    }
+
+    @MainActor
     func testLibrarySavedFirstDraftsSeparateAndKoreanPlayback() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-library"]
@@ -301,7 +440,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["speakTranslateEntry"].tap()
         let spanish = app.buttons["conversationSpanishTurn"]
         spanish.tap()
-        expectation(for: NSPredicate(format: "label == %@", "Listening in Spanish…"), evaluatedWith: app.staticTexts["conversationStatus"])
+        expectation(for: NSPredicate(format: "label == %@", "Listening in Español…"), evaluatedWith: app.staticTexts["conversationStatus"])
         waitForExpectations(timeout: 8)
         spanish.tap()
         XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 8))
@@ -335,7 +474,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.buttons["conversationType"].exists)
         spanish.tap()
         let status = app.staticTexts["conversationStatus"]
-        expectation(for: NSPredicate(format: "label == %@", "Listening in Spanish…"), evaluatedWith: status)
+        expectation(for: NSPredicate(format: "label == %@", "Listening in Español…"), evaluatedWith: status)
         waitForExpectations(timeout: 8)
         XCTAssertFalse(english.isEnabled)
         spanish.tap()
@@ -349,7 +488,7 @@ final class HomeScreenTests: XCTestCase {
         expectation(for: NSPredicate(format: "label == %@", "Listening in English…"), evaluatedWith: status)
         waitForExpectations(timeout: 8)
         english.tap()
-        expectation(for: NSPredicate(format: "label == %@", "Speaking Spanish — microphone off"), evaluatedWith: status)
+        expectation(for: NSPredicate(format: "label == %@", "Speaking Español — microphone off"), evaluatedWith: status)
         waitForExpectations(timeout: 8)
         XCTAssertTrue(app.staticTexts["conversationTranslation"].label.contains("Traducción de prueba"))
         let play = app.buttons["conversationPlay"]

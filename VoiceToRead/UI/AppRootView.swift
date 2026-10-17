@@ -22,9 +22,9 @@ struct AppRootView: View {
                     selectedTab = tab
                 })) {
                     homeNavigation(coordinator: coordinator).tag(0)
-                    .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
+                    .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.conversationHome || coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
                     SessionLibraryView(coordinator: coordinator).tag(1)
-                        .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
+                        .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.conversationHome ? "Saved" : "Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }.tag(2)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
@@ -98,7 +98,8 @@ struct AppRootView: View {
     private func homeNavigation(coordinator: SessionCoordinator) -> some View {
         NavigationStack(path: $homePath) {
             Group {
-                if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
+                if coordinator.settings.conversationHome { CommunicationHomeView(coordinator: coordinator) }
+                else if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
                 else { LiveCaptionView(coordinator: coordinator) }
             }
             .navigationDestination(for: HomeDestination.self) { destination in
@@ -156,6 +157,8 @@ struct AppRootView: View {
                 for key in ["conversationFirstLanguage", "conversationSecondLanguage", "frenchLanguageColor", "koreanLanguageColor", "captureLanguage", "translationLanguage", "englishLanguageColor", "spanishLanguageColor", "conversationMode", "conversationTurnMode", "playbackAtMyPace", "playbackLanguagePreference", "playbackLanguageGap", "originalPlaybackSpeed", "translationSpeechSpeed"] {
                     UserDefaults.standard.removeObject(forKey: key)
                 }
+                UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-communication"), forKey: "conversationHome")
+                UserDefaults.standard.removeObject(forKey: "conversationTranslationEnabled")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-simple"), forKey: "simpleMode")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-labels"), forKey: "showButtonNames")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-focus"), forKey: "focusedReading")
@@ -234,6 +237,8 @@ struct AppRootView: View {
                     UserDefaults.standard.removeObject(forKey: "liveCaptionDisplay")
                     if ProcessInfo.processInfo.arguments.contains("--ui-test-spanish") { settings.captureLanguage = .spanish }
                 }
+                settings.conversationHome = ProcessInfo.processInfo.arguments.contains("--ui-test-communication")
+                settings.showButtonNames = false
                 settings.saveAudio = false
                 coordinator = SessionCoordinator(repository: try TranscriptRepository(inMemory: true),
                     caption: CaptionViewModel(microphone: ReaderPreviewMicrophone(), speech: ReaderPreviewSpeech()),
@@ -258,6 +263,7 @@ struct AppRootView: View {
 struct LiveCaptionView: View {
     @Environment(\.dismiss) private var dismiss
     let coordinator: SessionCoordinator
+    var showConversationShortcut = true
     @State private var showingConversation = false
     @State private var showingResponse = false
 
@@ -271,7 +277,7 @@ struct LiveCaptionView: View {
                       discardSession: { await coordinator.discardCurrent() },
                       needsSessionDecision: coordinator.needsSessionDecision,
                       sessionTitle: Binding(get: { coordinator.sessionTitle }, set: { coordinator.sessionTitle = $0 }),
-                      speakAndTranslate: { showingConversation = true },
+                      speakAndTranslate: showConversationShortcut ? { showingConversation = true } : nil,
                       canSpeakAndTranslate: !coordinator.caption.state.active && !coordinator.caption.state.busy &&
                           !coordinator.caption.preparationPending && coordinator.automaticTranslationJob == nil,
                       writeResponse: { showingResponse = true })
@@ -344,3 +350,33 @@ private final class ReaderPreviewSpeech: SpeechTranscribing {
 
 /// Value routes let the Home tab return to its menu without resetting SessionCoordinator.
 enum HomeDestination: Hashable { case listen, sessions, practice, response, preparation }
+
+/// New entry point; the meeting coordinator and ephemeral conversation remain independent.
+/// The mode selector cannot switch owners while either audio workflow is active.
+@MainActor
+struct CommunicationHomeView: View {
+    let coordinator: SessionCoordinator
+    @State private var listening = false
+    @State private var conversation = SpeakTranslateModel()
+    private var audioBusy: Bool {
+        !conversation.canEdit || coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending
+    }
+    var body: some View {
+        VStack(spacing: 0) {
+            Picker("What would you like to do?", selection: $listening) {
+                Text("Converse").tag(false)
+                Text("Listen").tag(true)
+            }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
+                .disabled(audioBusy).accessibilityIdentifier("communicationMode")
+            if listening {
+                Text("Meetings, classes and conferences").font(.caption).foregroundStyle(.secondary)
+                LiveCaptionView(coordinator: coordinator, showConversationShortcut: false)
+            } else {
+                SpeakTranslateView(settings: coordinator.settings, embedded: true, model: conversation)
+            }
+        }
+        .onAppear {
+            if coordinator.caption.state.active || coordinator.caption.state.busy { listening = true }
+        }
+    }
+}

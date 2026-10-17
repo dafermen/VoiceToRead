@@ -31,6 +31,15 @@ final class SpeakTranslateModel {
     private(set) var mode: Mode = .byButton
     private(set) var language: CaptureLanguage = .spanish
     private(set) var target: CaptureLanguage = .english
+    private(set) var translationEnabled = true
+    func setTranslationEnabled(_ enabled: Bool) {
+        guard canEdit, enabled != translationEnabled else { return }
+        translationEnabled = enabled; translated = ""; message = nil
+    }
+    func playOriginal() {
+        guard canEdit, !source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        speaker.start([ReviewParagraph(id: UUID(), text: source)], language: language, speed: .normal)
+    }
     var pauseSeconds: Double = 3
     // Capture the output policy when a job starts; late callbacks cannot start another turn.
     private var speakWhenComplete = false
@@ -79,7 +88,7 @@ final class SpeakTranslateModel {
         }
     }
     func start(language: CaptureLanguage = .spanish, target: CaptureLanguage? = nil) {
-        guard canEdit, !capture.preparationPending, supported() else { return }
+        guard canEdit, !capture.preparationPending, !translationEnabled || supported() else { return }
         let destination = target ?? language.defaultTarget
         guard language != destination else { return }
         self.target = destination
@@ -150,11 +159,13 @@ final class SpeakTranslateModel {
                 return
             }
             source = final
-            translate(speakWhenDone: speakWhenDone)
+            if translationEnabled { translate(speakWhenDone: speakWhenDone) }
         }
     }
     func translate(speakWhenDone: Bool = true) {
-        guard canEdit, supported(), !source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        guard canEdit, !source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        if !translationEnabled { if speakWhenDone { playOriginal() }; return }
+        guard supported() else { return }
         message = nil; translated = ""
         speakWhenComplete = speakWhenDone
         job = TranslationJob(plan: IncrementalTranslation(
@@ -209,7 +220,9 @@ struct SpeakTranslateEntry: View {
 private struct ConversationEdit: Identifiable {
     let id = UUID()
     let language: CaptureLanguage
+    let target: CaptureLanguage
     let text: String
+    var translate = true
 }
 
 @MainActor
@@ -217,7 +230,14 @@ struct SpeakTranslateView: View {
     let settings: AppSettings
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
-    @State private var model = SpeakTranslateModel()
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    let embedded: Bool
+    @State private var model: SpeakTranslateModel
+    @AppStorage("conversationTranslationEnabled") private var translationEnabled = true
+    init(settings: AppSettings, embedded: Bool = false, model: SpeakTranslateModel? = nil) {
+        self.settings = settings; self.embedded = embedded
+        _model = State(initialValue: model ?? SpeakTranslateModel())
+    }
     // A new preference deliberately makes two-tap conversation the default for existing users too.
     @AppStorage("conversationTurnMode") private var savedMode = SpeakTranslateModel.Mode.byButton.rawValue
     @State private var showingOptions = false
@@ -226,15 +246,43 @@ struct SpeakTranslateView: View {
     @AppStorage("conversationSecondLanguage") private var second: CaptureLanguage = .english
 
     var body: some View {
-        NavigationStack {
+        Group {
+            if embedded { content }
+            else { NavigationStack { content } }
+        }
+        .background {
+            if let job = model.job {
+                TranslationRunner(job: job, progress: { _ in }) { model.complete(job, result: $0) }.id(job.id)
+            }
+        }
+        .task {
+            if first == second { second = first.defaultTarget }
+            model.setTranslationEnabled(translationEnabled)
+            if model.source.isEmpty { model.selectLanguage(first, target: second) }
+            model.selectMode(SpeakTranslateModel.Mode(rawValue: savedMode) ?? .byButton)
+            model.speaker.observeInterruptions()
+            await model.capture.checkReadiness()
+        }
+        .onChange(of: model.mode) { _, mode in savedMode = mode.rawValue }
+        .onDisappear { model.cancel(); model.speaker.close() }
+        .onChange(of: scenePhase) { _, phase in if phase == .background { model.cancel() } }
+    }
+
+    private var content: some View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Choose who speaks. Tap again to finish and play the translation.")
+                    if embedded && dynamicTypeSize.isAccessibilitySize { turnControls }
+                    Text(uiKey(translationEnabled ? "Choose who speaks. Tap again to finish and play the translation." : "Tap Listen to read what is said. Tap Finish when the person is done."))
                         .font(.subheadline).foregroundStyle(.secondary)
                     Label(status, systemImage: statusIcon)
                         .font(.headline).accessibilityIdentifier("conversationStatus")
+                    Group {
+                        Toggle("Translate conversation", isOn: Binding(get: { translationEnabled }, set: {
+                            translationEnabled = $0; model.setTranslationEnabled($0)
+                        })).disabled(!model.canEdit).accessibilityIdentifier("conversationTranslationToggle")
+                    }
                     pairControls
-                    turnControls
+                    if !embedded { turnControls }
                     if model.speaker.state != .idle {
                         Button("Stop audio", systemImage: "stop.circle.fill") { model.speaker.stop() }
                             .buttonStyle(.borderedProminent).controlSize(.large)
@@ -248,21 +296,33 @@ struct SpeakTranslateView: View {
                         Label(LocalizedStringKey(message), systemImage: "info.circle")
                             .accessibilityIdentifier("conversationMessage")
                     }
-                    if !TranslationJob.supported {
+                    if translationEnabled && !TranslationJob.supported {
                         Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription))
                             .foregroundStyle(.secondary)
                     }
                     messageCards
                     secondaryActions
+                    if embedded {
+                        Button {
+                            editor = ConversationEdit(language: first, target: second, text: "", translate: translationEnabled)
+                        } label: { Label("Write a reply", systemImage: "keyboard") }
+                        .frame(minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("conversationWriteReply")
+                        Text("Temporary conversation · not saved").font(.caption).foregroundStyle(.secondary)
+                    }
                     if model.capture.readiness == .missingAssets && model.canEdit {
                         Button("Install speech model") { Task { await model.capture.installAssets() } }
                             .disabled(model.capture.preparationPending)
                     }
                 }.padding()
             }
-            .navigationTitle("Conversation").navigationBarTitleDisplayMode(.inline)
+            .safeAreaInset(edge: .bottom) {
+                if embedded && !dynamicTypeSize.isAccessibilitySize {
+                    turnControls.padding(.horizontal).padding(.vertical, 8).background(.regularMaterial)
+                }
+            }
+            .navigationTitle(uiKey(embedded ? "VoiceToRead" : "Conversation")).navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                DoneToolbar { model.cancel(); dismiss() }
+                if !embedded { DoneToolbar { model.cancel(); dismiss() } }
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Conversation options", systemImage: "ellipsis.circle") { showingOptions = true }
                         .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
@@ -271,35 +331,19 @@ struct SpeakTranslateView: View {
             .sheet(isPresented: $showingOptions) { options }
             .sheet(item: $editor) { request in
                 ConversationMessageEditor(request: request) { text in
-                    model.selectLanguage(request.language, target: model.target); model.edit(text); model.translate()
+                    model.selectLanguage(request.language, target: request.target); model.edit(text); model.translate()
                 }
             }
-        }
-        .background {
-            if let job = model.job {
-                TranslationRunner(job: job, progress: { _ in }) { model.complete(job, result: $0) }.id(job.id)
-            }
-        }
-        .task {
-            if first == second { second = first.defaultTarget }
-            model.selectLanguage(first, target: second)
-            model.selectMode(SpeakTranslateModel.Mode(rawValue: savedMode) ?? .byButton)
-            model.speaker.observeInterruptions()
-            await model.capture.checkReadiness()
-        }
-        .onChange(of: model.mode) { _, mode in savedMode = mode.rawValue }
-        .onDisappear { model.cancel(); model.speaker.close() }
-        .onChange(of: scenePhase) { _, phase in if phase == .background { model.cancel() } }
     }
 
     private var pairControls: some View {
         ViewThatFits(in: .horizontal) {
-            HStack { conversationPicker(left: true); Image(systemName: "arrow.left.arrow.right").accessibilityHidden(true); conversationPicker(left: false) }
-            VStack { conversationPicker(left: true); conversationPicker(left: false) }
+            HStack { conversationPicker(left: true); if translationEnabled { Image(systemName: "arrow.left.arrow.right").accessibilityHidden(true); conversationPicker(left: false) } }
+            VStack { conversationPicker(left: true); if translationEnabled { conversationPicker(left: false) } }
         }.disabled(!model.canEdit || model.capture.preparationPending)
     }
     private func conversationPicker(left: Bool) -> some View {
-        LanguagePickerControl(title: left ? "First language" : "Second language", selection: Binding(
+        LanguagePickerControl(title: embedded ? (translationEnabled ? (left ? "Me" : "Other person") : "Spoken language") : (left ? "First language" : "Second language"), selection: Binding(
             get: { left ? first : second }, set: { selected in
                 // Selecting the other participant's language swaps the pair; never duplicate it.
                 if left {
@@ -310,14 +354,16 @@ struct SpeakTranslateView: View {
                     second = selected
                 }
                 model.selectLanguage(first, target: second)
-            })).accessibilityIdentifier(left ? "conversationFirstLanguage" : "conversationSecondLanguage")
+            }), showRole: embedded, stackedRole: embedded).accessibilityIdentifier(left ? "conversationFirstLanguage" : "conversationSecondLanguage")
     }
 
     private var turnControls: some View {
-        // Stable left/right language positions; text wraps instead of shrinking.
-        HStack(spacing: 10) {
+        // Large accessibility text uses full-width rows in the scrollable content.
+        // A fixed bottom bar at these sizes would hide the conversation entirely.
+        let layout = dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 10)) : AnyLayout(HStackLayout(spacing: 10))
+        return layout {
             turnButton(first)
-            turnButton(second)
+            if translationEnabled { turnButton(second) }
         }.fixedSize(horizontal: false, vertical: true)
     }
     private func turnButton(_ language: CaptureLanguage) -> some View {
@@ -328,17 +374,18 @@ struct SpeakTranslateView: View {
         } label: {
             VStack(spacing: 4) {
                 Label {
-                    if listening { Text("Finish & play \(destination.name)") }
+                    if listening { Text(uiKey(translationEnabled ? "Finish and translate" : "Finish listening")) }
+                    else if !translationEnabled { Text("Listen") }
                     else { Text("Speak \(language.name)") }
                 } icon: {
                     Image(systemName: listening ? "stop.fill" : "mic.fill")
-                }.font(.headline).labelStyle(AccessibleControlLabelStyle())
-                Text(verbatim: language.name + " → " + destination.name)
+                }.font(.headline).labelStyle(.titleAndIcon)
+                Text(verbatim: translationEnabled ? language.name + " → " + destination.name : language.name)
                     .font(.caption)
             }.multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 .padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: 64, maxHeight: .infinity).contentShape(Rectangle())
         }.buttonStyle(LanguageButtonStyle(color: settings.color(for: language), highContrast: settings.highContrast))
-            .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported))
+            .disabled(!listening && (!model.canEdit || model.capture.preparationPending || (translationEnabled && !TranslationJob.supported)))
             .accessibilityIdentifier(language == .spanish ? "conversationSpanishTurn" : language == .english ? "conversationEnglishTurn" : "conversationTurn-" + language.code)
     }
     @ViewBuilder private var messageCards: some View {
@@ -346,17 +393,23 @@ struct SpeakTranslateView: View {
             PlaybackTextCard(text: model.source, language: model.language, translated: false,
                              settings: settings, identifier: "conversationSourceText")
         } else if !model.busy {
-            Text("Your last exchange will appear here in both languages.")
+            Text(uiKey(translationEnabled ? "Your last exchange will appear here in both languages." : "What is said will appear here. You can also write a reply."))
                 .foregroundStyle(.secondary).frame(maxWidth: .infinity, minHeight: 100)
         }
-        if !model.translated.isEmpty {
+        if translationEnabled && !model.translated.isEmpty {
             PlaybackTextCard(text: model.translated, language: model.target, translated: true,
                              settings: settings, identifier: "conversationTranslation", speaking: model.speaker.state == .speaking)
         }
     }
     private var secondaryActions: some View {
         HStack(spacing: 10) {
-            if !model.translated.isEmpty {
+            if !translationEnabled && !model.source.isEmpty {
+                Button { model.playOriginal() } label: {
+                    Label("Read aloud", systemImage: "speaker.wave.2.fill")
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }.buttonStyle(LanguageButtonStyle(color: settings.color(for: model.language), highContrast: settings.highContrast))
+                    .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationReadAloud")
+            } else if !model.translated.isEmpty {
                 Button { model.play() } label: {
                     Label("Play \(model.target.name)", systemImage: "speaker.wave.2.fill")
                         .frame(maxWidth: .infinity, minHeight: 44)
@@ -370,7 +423,7 @@ struct SpeakTranslateView: View {
             }
             if !model.source.isEmpty {
                 Button {
-                    editor = ConversationEdit(language: model.language, text: model.source)
+                    editor = ConversationEdit(language: model.language, target: model.target, text: model.source, translate: translationEnabled)
                 } label: {
                     Label("Correct message", systemImage: "pencil")
                         .frame(maxWidth: .infinity, minHeight: 44)
@@ -410,7 +463,7 @@ struct SpeakTranslateView: View {
     }
     private var status: LocalizedStringKey {
         if model.speaker.state != .idle {
-            return "Speaking \(model.target.name) — microphone off"
+            return "Speaking \(translationEnabled ? model.target.name : model.language.name) — microphone off"
         }
         switch model.phase {
         case .ready: return "Ready for the next turn"
@@ -444,7 +497,7 @@ private struct ConversationMessageEditor: View {
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("Translate and play") { apply(text); dismiss() }
+                        Button(uiKey(request.translate ? "Translate and play" : "Read aloud")) { apply(text); dismiss() }
                             .disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                             .accessibilityIdentifier("conversationApply")
                     }

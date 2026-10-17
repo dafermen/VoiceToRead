@@ -1,3 +1,11 @@
+## 2026-10-17 — comunicación como entrada principal (reversible)
+
+- Inicio directo en Conversar, selector visible Conversar/Escuchar y biblioteca Guardado con acceso a práctica.
+- Lectura de conversaciones sin traducción ni reproducción automática de lo captado; respuesta escrita con voz y traducción opcional.
+- Acciones principales con nombres explícitos y nombres activados por defecto sin reemplazar elecciones guardadas.
+- Inicio anterior conservado en Ajustes; tag de recuperación respaldado en GitHub antes de modificar.
+- Sin cambios del esquema de almacenamiento ni eliminación de sesiones. [Plan y recuperación](docs/conversation-first.md).
+
 ## 2026-10-17 — selectores de idioma y nombres independientes
 
 - Selector azul compartido en captura, Conversación, Ajustes, traducción guardada y voz de respuesta.

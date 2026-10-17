@@ -53,6 +53,11 @@ struct SessionHistoryView: View {
 
     var body: some View {
         List {
+            if coordinator.settings.conversationHome && !recoveryOnly && !favoritesOnly {
+                NavigationLink { PracticeSessionPicker(coordinator: coordinator) } label: {
+                    Label("Language practice", systemImage: "book")
+                }.accessibilityIdentifier("savedLanguagePractice")
+            }
             if let id = lastDeletedID, trash.contains(where: { $0.sessionID == id }), let lastDeleted = sessions.first(where: { $0.id == id }) {
                 HStack {
                     Text("Moved to Recently deleted")

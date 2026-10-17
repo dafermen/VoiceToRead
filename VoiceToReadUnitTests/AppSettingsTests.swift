@@ -7,6 +7,24 @@ import SwiftUI
 @MainActor
 final class AppSettingsTests: XCTestCase {
 
+    func testConversationHomeDefaultsAndReversiblePreferencePreserveCaptureSettings() {
+        let name = UUID().uuidString; let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults)
+        XCTAssertTrue(settings.conversationHome)
+        XCTAssertTrue(settings.showButtonNames)
+        settings.captureLanguage = .korean
+        settings.showButtonNames = false
+        settings.conversationHome = false
+        let restored = AppSettings(defaults: defaults)
+        XCTAssertFalse(restored.conversationHome)
+        XCTAssertFalse(restored.showButtonNames)
+        XCTAssertEqual(restored.captureLanguage, .korean)
+        restored.conversationHome = true
+        XCTAssertTrue(AppSettings(defaults: defaults).conversationHome)
+        XCTAssertEqual(restored.captureLanguage, .korean)
+    }
+
     func testFourLanguagesPersistSeparateFromInterfaceAndPreventSamePair() {
         let name = UUID().uuidString; let defaults = UserDefaults(suiteName: name)!
         defer { defaults.removePersistentDomain(forName: name) }
@@ -71,7 +89,7 @@ final class AppSettingsTests: XCTestCase {
         let defaults = UserDefaults(suiteName: name)!
         defer { defaults.removePersistentDomain(forName: name) }
         let settings = AppSettings(defaults: defaults)
-        XCTAssertFalse(settings.simpleMode); XCTAssertFalse(settings.showButtonNames)
+        XCTAssertFalse(settings.simpleMode); XCTAssertTrue(settings.showButtonNames)
         settings.simpleMode = true; settings.showButtonNames = true
         settings.focusedReading = true; settings.pauseHaptics = false; settings.preparationSeen = true
         let restored = AppSettings(defaults: defaults)

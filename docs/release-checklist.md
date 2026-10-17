@@ -64,3 +64,14 @@ Decisión del titular (2026-10-14): gratuita, sin compras dentro de la app, Esta
 - [ ] Compilar y ejecutar los caminos de Translation/SpeechAnalyzer con SDK reciente; Xcode 15.2 local los excluye.
 - [ ] Revisar con usuarios de VoiceOver y hablantes nativos la navegación, lectura y práctica.
 - [ ] Confirmar que el nuevo build llegó a TestFlight; una compilación local no lo acredita.
+
+
+## Nueva orientación de comunicación — 2026-10-17
+
+- [ ] Validar Conversar / Escuchar con personas nuevas sin explicar el recorrido.
+- [ ] Verificar turnos, respuesta escrita y lectura sin traducción con micrófono, voz y modelos reales.
+- [ ] Revisar VoiceOver, letra grande, iPad y regreso al Inicio anterior sin pérdida de sesiones.
+- [ ] Regenerar capturas de App Store: las existentes representan la navegación anterior.
+- [ ] Confirmar el SHA exacto y disponibilidad TestFlight antes de anunciar entrega.
+
+Punto de recuperación: `before-conversation-home-2026-10-17`. [Procedimiento y alcance](conversation-first.md).

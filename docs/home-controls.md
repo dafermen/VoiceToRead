@@ -1,3 +1,5 @@
+> Nueva entrada predeterminada: [Conversación primero](conversation-first.md). Las secciones de Inicio sencillo describen el **Inicio anterior**, conservado en Ajustes para comparación y recuperación.
+
 # Inicio coherente y acciones fáciles de encontrar
 
 Actualizado: 2026-10-17.

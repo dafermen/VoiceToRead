@@ -921,3 +921,20 @@
 "One short name or term per line. Use English = español. Preferred translations apply only between English and Spanish." = "Un nombre o término breve por línea. Usa English = español. Las traducciones preferidas solo se aplican entre inglés y español.";
 
 "Show or hide names on icon buttons in either mode. Language choices, navigation destinations and Save/Cancel keep their text." = "Muestra u oculta los nombres de los botones con icono en ambos modos. Los idiomas, destinos de navegación y Guardar/Cancelar conservan su texto.";
+
+"Home experience" = "Experiencia de inicio";
+"Conversation first" = "Conversación primero";
+"Previous home" = "Inicio anterior";
+"You can return to the previous home without deleting your saved sessions." = "Puedes volver al inicio anterior sin borrar tus sesiones guardadas.";
+"Converse" = "Conversar";
+"Meetings, classes and conferences" = "Reuniones, clases y conferencias";
+"Translate conversation" = "Traducir conversación";
+"Me" = "Yo";
+"Other person" = "Otra persona";
+"Tap Listen to read what is said. Tap Finish when the person is done." = "Pulsa Escuchar para leer lo que se dice. Pulsa Terminar cuando la persona acabe.";
+"Write a reply" = "Escribir respuesta";
+"Temporary conversation · not saved" = "Conversación temporal · no se guarda";
+"Finish and translate" = "Terminar y traducir";
+"Finish listening" = "Terminar escucha";
+"What is said will appear here. You can also write a reply." = "Lo que se diga aparecerá aquí. También puedes escribir una respuesta.";
+"Read aloud" = "Leer en voz alta";
