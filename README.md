@@ -19,7 +19,7 @@ VoiceToRead is a native iPhone/iPad app for following English, Spanish, French o
 
 ## Conversation-first home
 
-VoiceToRead now opens directly in **Converse**, with visible speaking actions, language roles (Me / Other person) and a large message area. Turn off **Translate conversation** to read speech in one language without automatically echoing it aloud. **Write a reply** lets people communicate without speaking: translate and play, or read the original aloud when translation is off. Conversations are temporary; no audio or session is saved.
+VoiceToRead now opens directly in **Converse**, with visible speaking actions, language roles (Me / Other person) and a large message area. Translation is always enabled in Converse. **Write a reply** lets people communicate without speaking: translate and play in the other person’s language. Converse and Listen share language columns, a status row, a central reading area and bottom voice controls. Conversations are temporary; no audio or session is saved.
 
 Switch to **Listen** for meetings, classes and conferences; existing recording, review and export tools remain there. **Saved** contains recordings and language practice. **Settings → Home experience → Previous home** restores the prior interface without deleting data. The GitHub tag `before-conversation-home-2026-10-17` preserves the previous source. [Design, recovery and validation](docs/conversation-first.md).
 
@@ -44,7 +44,7 @@ See [accessible listening and reading](docs/translated-speech.md) for user steps
 
 ## Conversation: Spanish ↔ English
 
-Two taps per turn: **Speak Spanish → Finish & play English**, then **Speak English → Finish & play Spanish** for the reply. No need to hold a button or change global settings. Spanish and English controls share one row, and replay/correction share another. Both texts remain in labeled cards; stop/replay audio or correct a message. The microphone stays off during playback and each turn starts explicitly. **By button** is the default; Automatic pause detection is under Options. Conversations are temporary: no audio file or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
+Two taps per turn: **Speak Spanish → Finish & play English**, then **Speak English → Finish & play Spanish** for the reply. No need to hold a button or change global settings. Speaker controls share one row. Both texts remain in labeled cards; stop/replay audio, speak again or write a new reply. Conversation has no correction button; saved transcripts remain editable. The microphone stays off during playback and each turn starts explicitly. **By button** is the default; Automatic pause detection is under Options. Conversations are temporary: no audio file or session is saved. Requires a compatible iOS/iPadOS 18+ build and prepared Apple models/voices. [User and student guide](docs/speak-and-translate.md).
 
 ## Listening comfort
 

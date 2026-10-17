@@ -25,13 +25,14 @@ final class HomeScreenTests: XCTestCase {
     @MainActor
     func testCommunicationMeetingCaptureOwnsMicrophone() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         app.launch()
         let mode = app.segmentedControls["communicationMode"]
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
         mode.buttons["Listen"].tap()
         let capture = app.buttons["primaryCaptionAction"]
         XCTAssertTrue(capture.waitForExistence(timeout: 5))
+        let ready = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); ready.name = "Aligned-Listen-ready"; ready.lifetime = .keepAlways; add(ready)
         capture.tap()
         let active = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@", "Pause"), object: capture)
         XCTAssertEqual(XCTWaiter.wait(for: [active], timeout: 10), .completed)
@@ -85,26 +86,54 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
-    func testCommunicationReadingOnlyAndReversibleHome() throws {
+    func testCommunicationAlignedModesAndAlwaysTranslation() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-labels"]
+        // The review fixture writes the obsolete translation preference as false.
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         app.launch()
-        let translation = app.switches["conversationTranslationToggle"]
-        XCTAssertTrue(translation.waitForExistence(timeout: 20))
-        tapPreferenceSwitch(translation)
-        XCTAssertFalse(app.buttons["conversationSecondLanguage"].exists)
-        let listen = app.buttons["conversationSpanishTurn"]
-        XCTAssertTrue(listen.isEnabled)
-        listen.tap()
+        let mode = app.segmentedControls["communicationMode"]
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        XCTAssertFalse(app.switches["conversationTranslationToggle"].exists)
+        XCTAssertTrue(app.buttons["conversationSecondLanguage"].exists)
+        let modeFrame = mode.frame
+        let sourceFrame = app.buttons["conversationFirstLanguage"].frame
+        let targetFrame = app.buttons["conversationSecondLanguage"].frame
+        let initial = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); initial.name = "Aligned-Converse"; initial.lifetime = .keepAlways; add(initial)
+        mode.buttons["Listen"].tap()
+        let source = app.buttons["captureLanguagePicker"]
+        XCTAssertTrue(source.waitForExistence(timeout: 5))
+        XCTAssertEqual(mode.frame.minY, modeFrame.minY, accuracy: 2)
+        XCTAssertEqual(source.frame.minY, sourceFrame.minY, accuracy: 2)
+        XCTAssertEqual(source.frame.minX, sourceFrame.minX, accuracy: 2)
+        XCTAssertEqual(app.buttons["translationTargetPicker"].frame.minX, targetFrame.minX, accuracy: 2)
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
+        let listenShot = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); listenShot.name = "Aligned-Listen"; listenShot.lifetime = .keepAlways; add(listenShot)
+        app.buttons["sessionActionsButton"].tap()
+        app.buttons["Reading language"].tap()
+        XCTAssertTrue(app.buttons["Both"].waitForExistence(timeout: 5))
+        app.buttons["Both"].tap()
+        mode.buttons["Converse"].tap()
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            XCUIDevice.shared.orientation = .landscapeLeft
+            let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in app.frame.width > app.frame.height }, object: nil)
+            XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 5), .completed)
+            let landscapeSource = app.buttons["conversationFirstLanguage"].frame
+            let wide = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); wide.name = "Aligned-Converse-landscape"; wide.lifetime = .keepAlways; add(wide)
+            mode.buttons["Listen"].tap()
+            XCTAssertEqual(app.buttons["captureLanguagePicker"].frame.minY, landscapeSource.minY, accuracy: 2)
+            let listeningWide = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); listeningWide.name = "Aligned-Listen-landscape"; listeningWide.lifetime = .keepAlways; add(listeningWide)
+            mode.buttons["Converse"].tap()
+            XCUIDevice.shared.orientation = .portrait
+            let upright = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in app.frame.height > app.frame.width }, object: nil)
+            XCTAssertEqual(XCTWaiter.wait(for: [upright], timeout: 5), .completed)
+        }
+        app.buttons["conversationSpanishTurn"].tap()
         XCTAssertTrue(app.staticTexts["Listening in Español…"].waitForExistence(timeout: 8))
-        listen.tap()
-        XCTAssertTrue(app.buttons["conversationReadAloud"].waitForExistence(timeout: 8))
-        XCTAssertFalse(app.buttons["conversationStopAudio"].exists)
-        XCTAssertFalse(app.staticTexts["conversationTranslation"].exists)
-        let reading = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); reading.name = "Communication-read-only"; reading.lifetime = .keepAlways; add(reading)
-        app.segmentedControls["communicationMode"].buttons["Listen"].tap()
-        XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
-        XCTAssertFalse(app.buttons["speakTranslateEntry"].exists)
+        app.buttons["conversationSpanishTurn"].tap()
+        XCTAssertTrue(app.buttons["conversationStopAudio"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["conversationTranslation"].exists)
+        XCTAssertFalse(app.buttons["conversationCorrect"].exists)
+        app.buttons["conversationStopAudio"].tap()
         app.tabBars.buttons["Settings"].tap()
         app.buttons["homeExperiencePicker"].tap()
         app.buttons["Previous home"].tap()
@@ -116,8 +145,8 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["homeExperiencePicker"].tap()
         app.buttons["Conversation first"].tap()
         app.tabBars.buttons["Home"].tap()
-        XCTAssertTrue(app.switches["conversationTranslationToggle"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.switches["conversationTranslationToggle"].value as? String, "0")
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.switches["conversationTranslationToggle"].exists)
     }
 
     @MainActor
@@ -491,9 +520,8 @@ final class HomeScreenTests: XCTestCase {
         expectation(for: NSPredicate(format: "label == %@", "Speaking Español — microphone off"), evaluatedWith: status)
         waitForExpectations(timeout: 8)
         XCTAssertTrue(app.staticTexts["conversationTranslation"].label.contains("Traducción de prueba"))
-        let play = app.buttons["conversationPlay"]
-        let correct = app.buttons["conversationCorrect"]
-        XCTAssertEqual(play.frame.midY, correct.frame.midY, accuracy: 2)
+        XCTAssertTrue(app.buttons["conversationPlay"].exists)
+        XCTAssertFalse(app.buttons["conversationCorrect"].exists)
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = "Two-way-conversation"; shot.lifetime = .keepAlways; add(shot)
         app.buttons["conversationStopAudio"].tap()
@@ -504,7 +532,7 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
-    func testConversationCorrectionAndAutomaticOptions() throws {
+    func testConversationWrittenReplyCancelAndAutomaticOptions() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-live-translation", "--ui-test-conversation"]
         app.launch()
@@ -520,9 +548,10 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["conversationStopAudio"].tap()
         let original = app.staticTexts["conversationSourceText"]
         XCTAssertEqual(original.label, "Would you like cold water?")
-        let correct = app.buttons["conversationCorrect"]
-        if !correct.isHittable { app.swipeUp() }
-        correct.tap()
+        XCTAssertFalse(app.buttons["conversationCorrect"].exists)
+        let reply = app.buttons["conversationWriteReply"]
+        if !reply.isHittable { app.swipeUp() }
+        reply.tap()
         XCTAssertTrue(input.waitForExistence(timeout: 5))
         input.tap(); input.typeText(" Discard this.")
         app.navigationBars.buttons["Cancel"].tap()

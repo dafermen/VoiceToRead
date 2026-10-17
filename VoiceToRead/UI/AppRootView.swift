@@ -158,7 +158,7 @@ struct AppRootView: View {
                     UserDefaults.standard.removeObject(forKey: key)
                 }
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-communication"), forKey: "conversationHome")
-                UserDefaults.standard.removeObject(forKey: "conversationTranslationEnabled")
+                UserDefaults.standard.set(false, forKey: "conversationTranslationEnabled")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-simple"), forKey: "simpleMode")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-labels"), forKey: "showButtonNames")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-focus"), forKey: "focusedReading")
@@ -238,7 +238,7 @@ struct AppRootView: View {
                     if ProcessInfo.processInfo.arguments.contains("--ui-test-spanish") { settings.captureLanguage = .spanish }
                 }
                 settings.conversationHome = ProcessInfo.processInfo.arguments.contains("--ui-test-communication")
-                settings.showButtonNames = false
+                settings.showButtonNames = ProcessInfo.processInfo.arguments.contains("--ui-test-labels")
                 settings.saveAudio = false
                 coordinator = SessionCoordinator(repository: try TranscriptRepository(inMemory: true),
                     caption: CaptionViewModel(microphone: ReaderPreviewMicrophone(), speech: ReaderPreviewSpeech()),
@@ -264,6 +264,7 @@ struct LiveCaptionView: View {
     @Environment(\.dismiss) private var dismiss
     let coordinator: SessionCoordinator
     var showConversationShortcut = true
+    var communicationLayout = false
     @State private var showingConversation = false
     @State private var showingResponse = false
 
@@ -280,7 +281,7 @@ struct LiveCaptionView: View {
                       speakAndTranslate: showConversationShortcut ? { showingConversation = true } : nil,
                       canSpeakAndTranslate: !coordinator.caption.state.active && !coordinator.caption.state.busy &&
                           !coordinator.caption.preparationPending && coordinator.automaticTranslationJob == nil,
-                      writeResponse: { showingResponse = true })
+                      writeResponse: { showingResponse = true }, communicationLayout: communicationLayout)
             .sheet(isPresented: $showingResponse) {
                 NavigationStack {
                     WrittenResponseView(coordinator: coordinator)
@@ -369,8 +370,7 @@ struct CommunicationHomeView: View {
             }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
                 .disabled(audioBusy).accessibilityIdentifier("communicationMode")
             if listening {
-                Text("Meetings, classes and conferences").font(.caption).foregroundStyle(.secondary)
-                LiveCaptionView(coordinator: coordinator, showConversationShortcut: false)
+                LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)
             } else {
                 SpeakTranslateView(settings: coordinator.settings, embedded: true, model: conversation)
             }

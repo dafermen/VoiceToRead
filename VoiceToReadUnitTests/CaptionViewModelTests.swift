@@ -596,46 +596,6 @@ final class SpeakTranslateTests: XCTestCase {
         model.cancel()
         await eventually { model.phase == .ready }
     }
-    func testReadingWithoutTranslationWorksWithoutTranslatorAndDoesNotEcho() async throws {
-        let speech = MockSpeech(); speech.finalText = "Hola, quiero leer."
-        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
-        let output = ConversationTestOutput()
-        let model = SpeakTranslateModel(capture: capture,
-            speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { false })
-        model.setTranslationEnabled(false)
-        model.start(language: .spanish)
-        await eventually { model.phase == .listening }
-        model.setTranslationEnabled(true)
-        XCTAssertFalse(model.translationEnabled, "Cannot change mode while the microphone is active")
-        model.finish()
-        await eventually { model.phase == .ready }
-        XCTAssertEqual(model.source, "Hola, quiero leer.")
-        XCTAssertNil(model.job)
-        XCTAssertTrue(output.spoken.isEmpty, "Recognition-only never automatically echoes a captured voice")
-        XCTAssertEqual(capture.state, .ended)
-        model.edit("Mi respuesta escrita")
-        model.translate()
-        XCTAssertEqual(output.spoken, ["Mi respuesta escrita"])
-        XCTAssertEqual(output.language, .spanish)
-        XCTAssertNil(model.job)
-        model.cancel()
-        await eventually { model.phase == .ready }
-    }
-
-    func testReapplyingTranslationPreferenceDoesNotEraseLastReply() throws {
-        let model = SpeakTranslateModel(supported: { true })
-        model.edit("Hola"); model.translate(speakWhenDone: false)
-        let job = try XCTUnwrap(model.job)
-        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Hello") }))
-        model.setTranslationEnabled(true)
-        XCTAssertEqual(model.translated, "Hello")
-        model.setTranslationEnabled(false)
-        XCTAssertEqual(model.source, "Hola")
-        XCTAssertTrue(model.translated.isEmpty)
-        model.setTranslationEnabled(true)
-        XCTAssertNil(model.job, "Switching mode must not speak or translate without a user action")
-    }
-
     func testUnsupportedDeviceDoesNotStartCaptureOrTranslation() {
         let speech = MockSpeech()
         let model = SpeakTranslateModel(capture: CaptionViewModel(microphone: CaptionMicrophone(), speech: speech), supported: { false })

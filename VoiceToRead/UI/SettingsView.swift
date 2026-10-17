@@ -436,10 +436,20 @@ struct LanguagePairOptions: View {
     @Bindable var model: CaptionViewModel
     @Bindable var settings: AppSettings
     var compact = false
+    var homeLayout = false
     @Environment(\.dynamicTypeSize) private var typeSize
     var body: some View {
         Group {
-            if compact {
+            if homeLayout {
+                CommunicationLanguagePair(symbol: "arrow.right") {
+                    LanguagePickerControl(title: "Spoken language", selection: $settings.captureLanguage, showRole: true, stackedRole: true)
+                        .accessibilityIdentifier("captureLanguagePicker")
+                } right: {
+                    LanguagePickerControl(title: "Translate to", selection: $settings.translationLanguage,
+                        choices: CaptureLanguage.allCases.filter { $0 != settings.captureLanguage }, showRole: true, stackedRole: true)
+                        .accessibilityIdentifier("translationTargetPicker")
+                }
+            } else if compact {
                 ViewThatFits(in: .horizontal) {
                     HStack {
                         compactSourceMenu
@@ -486,10 +496,11 @@ struct LanguagePickerControl: View {
     var choices = CaptureLanguage.allCases
     var showRole = false
     var stackedRole = false
+    @Environment(\.verticalSizeClass) private var verticalSize
     @Environment(\.dynamicTypeSize) private var typeSize
     var body: some View {
         (typeSize.isAccessibilitySize || stackedRole ? AnyLayout(VStackLayout(alignment: .leading, spacing: 6)) : AnyLayout(HStackLayout(spacing: 8))) {
-            if showRole { Text(title); if !typeSize.isAccessibilitySize && !stackedRole { Spacer(minLength: 8) } }
+            if showRole && !(stackedRole && verticalSize == .compact && !typeSize.isAccessibilitySize) { Text(title).font(stackedRole ? .caption : .body); if !typeSize.isAccessibilitySize && !stackedRole { Spacer(minLength: 8) } }
             Menu {
                 Picker(title, selection: $selection) {
                     ForEach(choices, id: \.self) { Text($0.pickerLabel).tag($0) }
@@ -504,5 +515,48 @@ struct LanguagePickerControl: View {
                     .contentShape(RoundedRectangle(cornerRadius: 10))
             }.buttonStyle(.plain).accessibilityLabel(title).accessibilityValue(Text(selection.pickerLabel))
         }
+    }
+}
+
+/// Both Home modes keep the same language columns, margins and status slot.
+/// Accessibility sizes stack rather than truncate roles or language names.
+struct CommunicationLanguagePair<Left: View, Right: View>: View {
+    let symbol: String
+    @ViewBuilder let left: () -> Left
+    @ViewBuilder let right: () -> Right
+    @Environment(\.dynamicTypeSize) private var size
+    var body: some View {
+        if size.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: 12) { left(); right() }
+        } else {
+            HStack(alignment: .bottom, spacing: 12) {
+                left().frame(maxWidth: .infinity, alignment: .leading)
+                Image(systemName: symbol).frame(width: 24, height: 44).accessibilityHidden(true)
+                right().frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+}
+
+struct CommunicationHeader<Languages: View, Status: View>: View {
+    @ViewBuilder let languages: () -> Languages
+    @ViewBuilder let status: () -> Status
+    @Environment(\.verticalSizeClass) private var verticalSize
+    @Environment(\.dynamicTypeSize) private var typeSize
+    var body: some View {
+        Group {
+            if verticalSize == .compact && !typeSize.isAccessibilitySize {
+                HStack(spacing: 16) {
+                    languages()
+                    status().frame(maxWidth: 220, alignment: .leading)
+                }
+            } else {
+                VStack(alignment: .leading, spacing: 12) {
+                    languages()
+                    status().frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                }
+            }
+        }.padding(.horizontal, 16).padding(.top, 8).padding(.bottom, 8)
+        Divider()
     }
 }

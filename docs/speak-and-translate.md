@@ -1,5 +1,7 @@
 # Conversación: español e inglés por turnos
 
+**Actualización vigente:** Conversar siempre traduce; ya no ofrece desactivar traducción ni corregir el turno. Usa volver a hablar o Escribir respuesta. Comparte estructura con Escuchar. Ver [flujo actual y validación](conversation-first.md). Los recorridos anteriores de esta guía son históricos.
+
 ## Para comunicarse en situaciones cotidianas
 
 Conversación (antes Hablar y traducir) permite pedir algo, hacer una pregunta y entender la respuesta en el otro idioma. Es una ayuda para personas que no dominan el idioma, personas con dificultades auditivas o del habla y niños que practican acompañados por un adulto. Las tarjetas, el tamaño de lectura compartido y los controles etiquetados apoyan también a personas con baja visión. No garantiza traducción exacta ni sustituye interpretación profesional.

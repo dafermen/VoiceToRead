@@ -1,3 +1,10 @@
+## 2026-10-17 — Conversar y Escuchar coherentes
+
+- Cabecera, columnas de idiomas, estado y controles inferiores alineados en ambos modos; se evita el salto por ocultar la navegación.
+- Conversar siempre traduce, incluso si la preferencia retirada estaba desactivada.
+- Se retira Corregir mensaje de Conversar; se mantiene Escribir respuesta y la edición de sesiones guardadas.
+- Acciones de sesión conserva las herramientas de Escuchar y el selector Original/Traducción/Ambos.
+
 ## 2026-10-17 — comunicación como entrada principal (reversible)
 
 - Inicio directo en Conversar, selector visible Conversar/Escuchar y biblioteca Guardado con acceso a práctica.

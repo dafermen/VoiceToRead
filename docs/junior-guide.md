@@ -348,7 +348,7 @@ Ejercicio: abre Texto y traducción, corrige un párrafo y luego entra en Audio 
 
 El editor trabaja sobre una copia: cancelar no borra las tarjetas. Un resultado de traducción se aplica solo al identificador de trabajo actual; así una respuesta tardía no habla después de Cancelar. Ejercicio: seguir un turno inglés desde el botón hasta la voz española, detenerla y comenzar uno español; observar que el idioma global y las sesiones no cambian. Consulta [el flujo, límites y pruebas](speak-and-translate.md).
 
-Ajuste visual de Conversación: dos `HStack` mantienen español/inglés y reproducir/corregir en sus respectivas filas, también en iPhone. Las etiquetas admiten varias líneas y conservan áreas de toque amplias. Se retiró el menú Escribir en su lugar; el editor sigue disponible para corregir un turno reconocido. El icono de acceso usa la variante de contorno del mismo símbolo.
+Histórico (sustituido por el ajuste descrito en [Comunicación primero](conversation-first.md)): dos `HStack` mantienen español/inglés y reproducir/corregir en sus respectivas filas, también en iPhone. Las etiquetas admiten varias líneas y conservan áreas de toque amplias. Se retiró el menú Escribir en su lugar; el editor sigue disponible para corregir un turno reconocido. El icono de acceso usa la variante de contorno del mismo símbolo.
 
 ## Colores por idioma
 
@@ -385,8 +385,12 @@ Ver [decisión y recuperación](conversation-first.md). `AppSettings.conversatio
 
 `CommunicationHomeView` tiene un selector local y posee el modelo de conversación. Lo pasa a `SpeakTranslateView` en modo integrado; el inicio anterior puede seguir abriendo la misma vista como ventana. Compartir el modelo mantiene un único estado del turno y evita crear un segundo micrófono al cambiar la presentación. El cambio de modo se bloquea mientras hay captura, finalización o voz en curso. Salir de Conversación cancela sus operaciones temporales; salir de Escuchar conserva la política existente de sesiones.
 
-El modo sin traducción es una ruta real del modelo: no basta con ocultar la tarjeta traducida. Debe permitir capturar sin el framework de traducción, terminar y mostrar el original sin iniciar un trabajo de traducción ni repetir automáticamente la voz captada. Leer en voz alta es una acción explícita; una respuesta escrita puede reutilizarla. Cambiar una preferencia no debe iniciar audio por sorpresa ni borrar texto al volver a la pantalla.
+Conversar siempre traduce. Se retiraron la preferencia `conversationTranslationEnabled`, su rama sin traductor y la corrección del turno. Un valor false guardado por una versión anterior ya no puede desactivar el flujo. El editor solo crea respuestas escritas nuevas; la edición de sesiones guardadas sigue en sus propias pantallas. Las pruebas incluyen una instalación con aquella clave antigua en false y verifican que terminar el turno produce texto traducido y voz.
+
+`CommunicationHeader` y `CommunicationLanguagePair` comparten márgenes, columnas y espacio de estado. Antes, ocultar la barra de navegación solo en Escuchar desplazaba también el selector de modos. Ahora ambos muestran el mismo título y colocan los idiomas arriba. Las herramientas de Escuchar se agrupan en Acciones de sesión; su diálogo de idioma de lectura vive en la raíz de la pantalla para seguir funcionando aunque el botón de la barra no esté visible.
 
 Un tag Git conserva código, no las grabaciones privadas del usuario. La opción de inicio anterior es una comparación reversible; una reversión de TestFlight requiere volver a compilar con un número nuevo, nunca borrar sesiones ni reescribir main con force push.
 
 Con tamaños de letra de accesibilidad, los botones de turno se apilan dentro del área desplazable. En tamaños normales permanecen junto al borde inferior. Mantener una barra fija con texto enorme puede ocultar toda la conversación: por eso una prueba de que el botón existe no basta; también revisamos capturas y comprobamos que su altura no ocupe la pantalla completa.
+
+En horizontal, `CommunicationHeader` coloca idiomas y estado en una fila; las etiquetas de rol se omiten visualmente para ahorrar alto, pero los menús conservan su nombre accesible. En iPad detectamos que el diálogo de Acciones de sesión anclado al lector solo exponía la primera acción. La cabecera nueva usa `Menu` nativo con las mismas acciones; el selector de idioma de lectura conserva su diálogo propio. Comprobar que todos los destinos siguen alcanzables es tan importante como alinear los botones.

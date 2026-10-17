@@ -6,7 +6,7 @@ Fecha: 2026-10-17. Decisión autorizada por el titular después de observar difi
 
 VoiceToRead abre en Conversación para ayudar a comunicarse: personas con dificultades auditivas o del habla, baja visión, personas que usan un nuevo idioma y aprendizaje acompañado. No se solicita declarar una discapacidad. No se promete reconocimiento o traducción perfectos.
 
-Inicio ofrece Conversar / Escuchar. Conversar presenta idiomas, mensajes y acciones claras. Escuchar conserva captura continua para reuniones, clases y conferencias. Guardado conserva biblioteca y acceso a práctica. Traducción opcional permite leer una conversación en el mismo idioma; Escribir respuesta permite comunicar sin hablar. Los nombres de acciones se muestran por defecto cuando no existe una elección previa. No cambia la captura de audio de otras apps ni añade acceso al audio interno de Zoom/Teams.
+Inicio ofrece Conversar / Escuchar. Conversar presenta idiomas, mensajes y acciones claras. Escuchar conserva captura continua para reuniones, clases y conferencias. Guardado conserva biblioteca y acceso a práctica. Conversar siempre traduce; Escribir respuesta permite comunicar sin hablar. Escuchar conserva la lectura del original sin traducción. Los nombres de acciones se muestran por defecto cuando no existe una elección previa. No cambia la captura de audio de otras apps ni añade acceso al audio interno de Zoom/Teams.
 
 ## Recuperación antes de modificar
 
@@ -26,14 +26,26 @@ También se conserva Ajustes → Experiencia de inicio → Inicio anterior como 
 ## Criterios de aceptación
 
 - Abrir y empezar a conversar sin menú de seis destinos ni ventana adicional.
-- Terminar un turno, ver ambos textos y escuchar el destino; repetir y corregir cuando existe mensaje.
-- Desactivar traducción y leer sin descargar un traductor ni reproducir inesperadamente lo captado.
+- Terminar un turno, ver ambos textos y escuchar el destino; repetir audio o volver a hablar; Escribir respuesta crea un mensaje nuevo.
+- Conversar no ofrece desactivar traducción ni corregir el turno; una preferencia antigua en false no impide traducir. Escuchar conserva Original/Traducción/Ambos.
 - Escribir una respuesta y reproducirla; texto temporal claramente diferenciado de sesiones guardadas.
 - Cambiar a Escuchar sin dos micrófonos activos; conservar sesiones, recuperación y exportación.
 - Inicio anterior reversible; nombres accesibles, texto grande, idiomas EN/ES y colores sin depender solo del color.
 - Prueba posterior con personas nuevas: conversar, responder por escrito y pasar a una reunión sin explicación. Registrar dudas antes de retirar el inicio anterior.
 
-## Validación
+## Ajuste de coherencia visual y simplificación
+
+Conversar y Escuchar usan el mismo título, selector de modos, márgenes, columnas de idioma y espacio de estado. La lectura queda en el centro y el transporte al pie. En letra de accesibilidad el contenido permite desplazamiento. Escuchar conserva captura, pausa, guardar/descartar y sus herramientas en Acciones de sesión (esquina superior izquierda).
+
+Se retiraron el interruptor Traducir conversación y Corregir mensaje. La traducción sigue siendo parte obligatoria de Conversar: finalizar → traducir → reproducir. Escribir respuesta crea una respuesta nueva; Cancelar conserva el intercambio anterior. Repetir audio sigue disponible. No cambia la edición de sesiones guardadas ni los modelos, colores o idiomas elegidos.
+
+Validación de este ajuste: 26 pruebas unitarias y cinco recorridos de iPhone aprobados en la primera pasada. La prueba de iPad detectó un menú que solo exponía la primera acción; se sustituyó por un menú nativo. La repetición final pasó en iPad (alineación, menú de lectura, traducción obligatoria e inicio anterior) y en iPhone (alineación vertical/horizontal y exclusión mutua del micrófono). El recorrido general de iPad también pasó. La cabecera horizontal coloca idiomas y estado en una fila para conservar área de lectura.
+
+Resultados locales: `build/home-refinement/iphone.xcresult`, `iphone-final.xcresult`, `ipad.xcresult` y `ipad-final.xcresult`. El primer resultado de iPad conserva el fallo del menú para diagnóstico; `ipad-final` verifica la corrección. Se revisaron visualmente las capturas finales y se validaron 790 claves de interfaz, 2 de permisos y 498 claves extraídas por el compilador, además de las 10 páginas del sitio. Los recorridos de voz/traducción usan dobles de prueba: queda la comprobación física con los recursos de Apple en TestFlight.
+
+Evidencia vigente: [Conversar en iPhone](qa/home-refinement/iphone/Aligned-Converse.png), [Escuchar listo](qa/home-refinement/iphone/Aligned-Listen-ready.png), [horizontal](qa/home-refinement/iphone/Aligned-Converse-landscape.png), [Conversar en iPad](qa/home-refinement/ipad/Aligned-Converse.png) y [Escuchar en iPad](qa/home-refinement/ipad/Aligned-Listen.png). Las capturas de la primera entrega muestran opciones hoy retiradas; se conservan como evidencia histórica, no como interfaz vigente.
+
+## Validación de la primera entrega (2743c60)
 
 Se han aprobado 28 pruebas unitarias de preferencias y conversación, y los recorridos UI de conversación integrada, respuesta escrita, lectura sin traducción, regreso al inicio anterior, exclusión mutua del micrófono e idiomas francés/coreano. La conversación anterior también pasó después de corregir una expectativa obsoleta del test (Spanish → Español). La revisión visual detectó y corrigió botones demasiado altos con letra de accesibilidad: ahora se apilan dentro del contenido desplazable; la barra fija se reserva para tamaños normales. La repetición de las pruebas de letra máxima y lectura sin traducción/inicio anterior pasó después de ese ajuste.
 

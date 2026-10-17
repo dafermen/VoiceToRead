@@ -75,3 +75,10 @@ Decisión del titular (2026-10-14): gratuita, sin compras dentro de la app, Esta
 - [ ] Confirmar el SHA exacto y disponibilidad TestFlight antes de anunciar entrega.
 
 Punto de recuperación: `before-conversation-home-2026-10-17`. [Procedimiento y alcance](conversation-first.md).
+
+## Coherencia Conversar / Escuchar
+
+- [ ] En dispositivo físico, comprobar el cambio de modos con nombres activados/desactivados, letra grande y rotación.
+- [ ] Verificar traducción de ambos participantes tras actualizar desde una instalación que tenía la opción desactivada.
+- [ ] Confirmar que Escribir respuesta crea un mensaje nuevo y Cancelar conserva el anterior.
+- [ ] Probar Acciones de sesión → Preferencias de captura / Idioma de lectura / Pantalla completa; guardar y editar sesiones sigue disponible.

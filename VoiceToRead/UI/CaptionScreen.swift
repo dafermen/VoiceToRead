@@ -14,6 +14,7 @@ struct CaptionScreen: View {
     var speakAndTranslate: (() -> Void)? = nil
     var canSpeakAndTranslate = true
     var writeResponse: (() -> Void)? = nil
+    var communicationLayout = false
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .title) private var scaledSize: CGFloat = 28
@@ -36,10 +37,15 @@ struct CaptionScreen: View {
 
     private var readerLayout: some View {
         GeometryReader { geometry in
-            let compact = geometry.size.width > geometry.size.height && !dynamicTypeSize.isAccessibilitySize && !showControlNames
+            let compact = !communicationLayout && geometry.size.width > geometry.size.height && !dynamicTypeSize.isAccessibilitySize && !showControlNames
             AccessibilityScrollingContent {
             VStack(spacing: 0) {
-                if !compact && !isFullScreen {
+                if communicationLayout && !isFullScreen {
+                    CommunicationHeader {
+                        LanguagePairOptions(model: model, settings: settings, homeLayout: true)
+                    } status: { status }
+                }
+                if !communicationLayout && !compact && !isFullScreen {
                     Group {
                         if dynamicTypeSize.isAccessibilitySize || showControlNames {
                             VStack(alignment: .leading, spacing: 8) { status; utilities }
@@ -70,10 +76,10 @@ struct CaptionScreen: View {
                     Divider()
                     resolutionControls.padding(.horizontal, 16).padding(.vertical, 4)
                 }
-                if model.canChooseCaptureOptions {
+                if model.canChooseCaptureOptions && !communicationLayout {
                     VStack(spacing: 0) { LanguagePairOptions(model: model, settings: settings, compact: true); quickPreferences }.padding(.horizontal, 16)
                 }
-                if isFullScreen || compact || model.state != .ended {
+                if communicationLayout || isFullScreen || compact || model.state != .ended {
                     Divider()
                     Group {
                         if isFullScreen && (showControlNames || dynamicTypeSize.isAccessibilitySize) {
@@ -100,13 +106,14 @@ struct CaptionScreen: View {
                                     fullScreenButton
                                 } else {
                                     if compact { status; Spacer(minLength: 0) }
-                                    if model.state != .ended { captureControls }
+                                    if communicationLayout || model.state != .ended { captureControls }
                                     if compact { utilities }
                                 }
                             }
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 6)
+                    .padding(.horizontal, 16).padding(.vertical, communicationLayout ? 8 : 6)
+                    .frame(minHeight: communicationLayout && !isFullScreen ? 100 : nil)
                     .background(.bar)
                 }
             }
@@ -117,7 +124,17 @@ struct CaptionScreen: View {
     private var presentedReader: some View {
         readerLayout
         .navigationTitle("VoiceToRead")
-        .toolbar(.hidden, for: .navigationBar)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(communicationLayout && !isFullScreen ? .visible : .hidden, for: .navigationBar)
+        .toolbar {
+            if communicationLayout && !isFullScreen {
+                ToolbarItem(placement: .topBarLeading) {
+                    Menu { sessionActionButtons } label: {
+                        Label("Session actions", systemImage: "ellipsis.circle")
+                    }.labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("sessionActionsButton")
+                }
+            }
+        }
         .toolbar(isFullScreen ? .hidden : .visible, for: .tabBar)
         .statusBarHidden(isFullScreen)
         .sheet(isPresented: $showingOptions) { readingOptions }
@@ -135,22 +152,14 @@ struct CaptionScreen: View {
 
     var body: some View {
         presentedReader
+            .confirmationDialog("Live caption display", isPresented: $showingLiveDisplay, titleVisibility: .visible) {
+                Button("Original \(model.language.name)") { liveDisplay = .original }
+                Button("Translation \(settings.translationLanguage.name)") { liveDisplay = .translation }
+                Button("Both") { liveDisplay = .both }
+                Button("Cancel", role: .cancel) { }
+            }
         .confirmationDialog("Session actions", isPresented: $showingActions, titleVisibility: .visible) {
-            if let writeResponse { Button("Write and speak", action: writeResponse).disabled(model.state.active || model.state.busy) }
-            Button("Reading options") { showingOptions = true }
-            Button("Capture preferences") { showingCaptureOptions = true }
-            Button("Full screen") { isFullScreen.toggle() }
-            if supportsLiveTranslation { Button("Reading language") { showingLiveDisplay = true } }
-            if let saveSession {
-                Button("Save Session", action: saveSession)
-                    .disabled(model.state != .ended || !needsSessionDecision)
-            }
-            if model.state == .ended && needsSessionDecision {
-                Button("Discard Session", role: .destructive) { confirmDiscard = true }
-            }
-            Button("New Session") { Task { await beginNewSession() } }
-                .disabled(model.state.active || model.state.busy || model.preparationPending || needsSessionDecision)
-            Button("Session information") { showingStatus = true }
+            sessionActionButtons
             Button("Cancel", role: .cancel) { }
         } message: {
             Text("Recovery drafts stay on this device until you save or discard them.")
@@ -183,6 +192,24 @@ struct CaptionScreen: View {
         .onChange(of: settings.keepAwake) { _, _ in applyWakePreference() }
         .onAppear { applyWakePreference() }
         .onDisappear { followScrollTask?.cancel(); UIApplication.shared.isIdleTimerDisabled = false }
+    }
+
+    @ViewBuilder private var sessionActionButtons: some View {
+            if let writeResponse { Button("Write and speak", action: writeResponse).disabled(model.state.active || model.state.busy) }
+            Button("Reading options") { showingOptions = true }
+            Button("Capture preferences") { showingCaptureOptions = true }
+            Button("Full screen") { isFullScreen.toggle() }
+            if supportsLiveTranslation { Button("Reading language") { showingLiveDisplay = true } }
+            if let saveSession {
+                Button("Save Session", action: saveSession)
+                    .disabled(model.state != .ended || !needsSessionDecision)
+            }
+            if model.state == .ended && needsSessionDecision {
+                Button("Discard Session", role: .destructive) { confirmDiscard = true }
+            }
+            Button("New Session") { Task { await beginNewSession() } }
+                .disabled(model.state.active || model.state.busy || model.preparationPending || needsSessionDecision)
+            Button("Session information") { showingStatus = true }
     }
 
     private var needsPreparation: Bool {
@@ -384,12 +411,7 @@ struct CaptionScreen: View {
             .accessibilityLabel("Live caption display")
             .accessibilityValue(Text(uiKey(liveDisplay == .original ? "Original \(model.language.name)" : liveDisplay == .translation ? "Translation \(settings.translationLanguage.name)" : "Both")))
             .accessibilityIdentifier("liveSpanishButton")
-            .confirmationDialog("Live caption display", isPresented: $showingLiveDisplay, titleVisibility: .visible) {
-                Button("Original \(model.language.name)") { liveDisplay = .original }
-                Button("Translation \(settings.translationLanguage.name)") { liveDisplay = .translation }
-                Button("Both") { liveDisplay = .both }
-                Button("Cancel", role: .cancel) { }
-            }
+
         }
     }
 
@@ -605,9 +627,9 @@ struct CaptionScreen: View {
 
     private var captureControls: some View {
         (dynamicTypeSize.isAccessibilitySize && settings.showButtonNames ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
-            primaryButton(iconOnly: true)
-            stopButton(iconOnly: true)
-            if !dynamicTypeSize.isAccessibilitySize { Spacer(minLength: 0) }
+            primaryButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
+            stopButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
+            if !dynamicTypeSize.isAccessibilitySize && !communicationLayout { Spacer(minLength: 0) }
         }
     }
 
