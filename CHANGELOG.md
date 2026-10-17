@@ -1,3 +1,10 @@
+## 2026-10-17 — Inicio coherente con accesibilidad y Ajustes
+
+- Mostrar nombres añade etiquetas a todas las herramientas de Inicio y usa una cuadrícula adaptable, sin el espacio flexible que desajustaba la cabecera vertical.
+- Modo sencillo unifica las seis acciones con icono, nombre, altura mínima y estilo comunes; siempre muestra nombres.
+- Retira Conversación y Escribir una respuesta de Ajustes. Escribir y hablar sigue disponible desde Inicio sencillo y Acciones de sesión: voz para texto escrito, sin traducción ni guardado.
+- Guías de usuario, soporte y desarrollo actualizadas. [Detalles](docs/home-controls.md).
+
 ## 2026-10-16 — colores de idioma consistentes y personalizables
 
 - Español verde e inglés azul en botones y tarjetas, independientemente del sentido de traducción.

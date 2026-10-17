@@ -6,7 +6,7 @@ Conversación (antes Hablar y traducir) permite pedir algo, hacer una pregunta y
 
 ## Uso: dos toques por turno
 
-1. Antes de empezar una grabación, abre el **icono de conversación**, junto al selector de subtítulos en vivo. También está en Ajustes y el inicio sencillo. No está disponible durante otra captura o traducción automática de sesión.
+1. Antes de empezar una grabación, abre el **icono de conversación**, junto al selector de subtítulos en vivo. También está en el inicio sencillo; Ajustes contiene preferencias, no un acceso duplicado a Conversación. No está disponible durante otra captura o traducción automática de sesión.
 2. Los dos botones están en la misma fila: **español a la izquierda e inglés a la derecha**. Pulsa **Hablar en español**. Habla sin mantener pulsado el botón. Este cambia a **Terminar y reproducir en inglés**: púlsalo cuando acabes. La app finaliza el reconocimiento, traduce y reproduce en inglés automáticamente.
 3. Para la respuesta, pulsa **Hablar en inglés**. Cuando la otra persona termine, pulsa el mismo botón, ahora **Terminar y reproducir en español**. Oirás la traducción española.
 4. Los dos botones permanecen visibles; el turno incompatible queda deshabilitado. El estado indica el idioma que está escuchando, traduciendo o reproduciendo. Original y traducción aparecen en tarjetas con etiquetas, colores y el mismo tamaño de lectura.

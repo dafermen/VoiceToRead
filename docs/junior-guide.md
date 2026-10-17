@@ -353,3 +353,7 @@ Ajuste visual de Conversación: dos `HStack` mantienen español/inglés y reprod
 ## Colores por idioma
 
 La paleta tiene una sola definición para botones y tarjetas. Los ajustes persisten como identificadores de color, independientes del idioma hablado y sin migrar sesiones. Alto contraste tiene prioridad. Consulta [uso, flujo de datos y pruebas](language-colors.md).
+
+## Inicio y preferencias de accesibilidad (2026-10-17)
+
+[Guía de implementación](home-controls.md): etiquetas observables, cuadrícula adaptable, tamaños comunes y separación entre preferencias y acciones. Incluye la causa del espacio excesivo al cambiar HStack por VStack y cómo evitarla.

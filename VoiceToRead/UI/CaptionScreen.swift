@@ -33,18 +33,21 @@ struct CaptionScreen: View {
     @State private var showingActions = false
     @State private var followScrollTask: Task<Void, Never>?
 
+    private var showControlNames: Bool { settings.showButtonNames || settings.simpleMode }
+
     private var readerLayout: some View {
         GeometryReader { geometry in
-            let compact = geometry.size.width > geometry.size.height && !dynamicTypeSize.isAccessibilitySize
+            let compact = geometry.size.width > geometry.size.height && !dynamicTypeSize.isAccessibilitySize && !showControlNames
             AccessibilityScrollingContent {
             VStack(spacing: 0) {
                 if !compact && !isFullScreen {
-                    ((dynamicTypeSize.isAccessibilitySize || settings.showButtonNames) ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout())) {
-                        status
-                        Spacer(minLength: 8)
-                        utilities
-                    }
-                    .padding(.horizontal, 16)
+                    Group {
+                        if dynamicTypeSize.isAccessibilitySize || showControlNames {
+                            VStack(alignment: .leading, spacing: 8) { status; utilities }
+                        } else {
+                            HStack { status; Spacer(minLength: 8); utilities }
+                        }
+                    }.padding(.horizontal, 16)
                 }
                 if model.canResume { resumePanel }
                 else if needsPreparation { preparationPanel }
@@ -73,19 +76,35 @@ struct CaptionScreen: View {
                 }
                 if isFullScreen || compact || model.state != .ended {
                     Divider()
-                    (dynamicTypeSize.isAccessibilitySize && isFullScreen ? AnyLayout(VStackLayout(spacing: 8)) : AnyLayout(HStackLayout(spacing: 8))) {
-                        if isFullScreen {
-                            status
-                            Spacer(minLength: 0)
-                            primaryButton(iconOnly: true)
-                            if model.state != .ended { stopButton(iconOnly: true) }
-                            translationButton
-                            capturePreferencesButton
-                            fullScreenButton
+                    Group {
+                        if isFullScreen && (showControlNames || dynamicTypeSize.isAccessibilitySize) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack(alignment: .top, spacing: 12) {
+                                    status
+                                    Spacer(minLength: 0)
+                                    primaryButton(iconOnly: true)
+                                    if model.state != .ended { stopButton(iconOnly: true) }
+                                }
+                                LazyVGrid(columns: [GridItem(.adaptive(minimum: dynamicTypeSize.isAccessibilitySize ? 150 : 104))], alignment: .leading) {
+                                    translationButton; capturePreferencesButton; fullScreenButton
+                                }
+                            }
                         } else {
-                            if compact { status; Spacer(minLength: 0) }
-                            if model.state != .ended { captureControls }
-                            if compact { utilities }
+                            HStack(spacing: 8) {
+                                if isFullScreen {
+                                    status
+                                    Spacer(minLength: 0)
+                                    primaryButton(iconOnly: true)
+                                    if model.state != .ended { stopButton(iconOnly: true) }
+                                    translationButton
+                                    capturePreferencesButton
+                                    fullScreenButton
+                                } else {
+                                    if compact { status; Spacer(minLength: 0) }
+                                    if model.state != .ended { captureControls }
+                                    if compact { utilities }
+                                }
+                            }
                         }
                     }
                     .padding(.horizontal, 16).padding(.vertical, 6)
@@ -118,7 +137,7 @@ struct CaptionScreen: View {
     var body: some View {
         presentedReader
         .confirmationDialog("Session actions", isPresented: $showingActions, titleVisibility: .visible) {
-            if let writeResponse { Button("Write a response", action: writeResponse).disabled(model.state.active || model.state.busy) }
+            if let writeResponse { Button("Write and speak", action: writeResponse).disabled(model.state.active || model.state.busy) }
             Button("Recording options") { showingOptions = true }
             Button("Capture preferences") { showingCaptureOptions = true }
             Button("Full screen") { isFullScreen.toggle() }
@@ -297,26 +316,43 @@ struct CaptionScreen: View {
         .frame(minHeight: 44)
     }
 
-    private var utilities: some View {
-        HStack(spacing: 0) {
-            if let returnHome {
-                Button("Home", systemImage: "house", action: returnHome)
-                    .labelStyle(.iconOnly).font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
-                    .disabled(model.state.active || model.state.busy)
+    /// Named controls wrap into rows. Icon-only mode retains the compact toolbar.
+    @ViewBuilder private var utilities: some View {
+        if showControlNames {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: dynamicTypeSize.isAccessibilitySize ? 150 : 104), alignment: .top)], alignment: .leading, spacing: 8) {
+                utilityButtons
             }
-            if model.state == .ended { newSessionButton }
-            if !settings.simpleMode { translationButton; conversationButton; fullScreenButton }
-            if !settings.simpleMode { Button { showingOptions = true } label: {
-                Image(systemName: "textformat.size").font(.system(size: 22)).frame(width: 44, height: 44)
-            }
-            .accessibilityLabel("Reading options")
-            .accessibilityIdentifier("readingOptionsButton") }
-            Button { showingActions = true } label: {
-                Image(systemName: "ellipsis.circle").font(.system(size: 22)).frame(width: 44, height: 44)
-            }
-            .accessibilityLabel("Session actions")
-            .accessibilityIdentifier("sessionActionsButton")
+        } else {
+            HStack(spacing: 0) { utilityButtons }
         }
+    }
+    @ViewBuilder private var utilityButtons: some View {
+        if let returnHome {
+            Button(action: returnHome) { readerControlLabel("Home", symbol: "house") }
+                .accessibilityLabel("Home").accessibilityIdentifier("readerHomeButton").disabled(model.state.active || model.state.busy)
+        }
+        if model.state == .ended { newSessionButton }
+        if !settings.simpleMode {
+            translationButton; conversationButton; fullScreenButton
+            Button { showingOptions = true } label: { readerControlLabel("Reading options", symbol: "textformat.size") }
+                .accessibilityLabel("Reading options").accessibilityIdentifier("readingOptionsButton")
+        }
+        Button { showingActions = true } label: { readerControlLabel("Session actions", symbol: "ellipsis.circle") }
+            .accessibilityLabel("Session actions").accessibilityIdentifier("sessionActionsButton")
+    }
+    /// Read the observable settings instance, rather than a second global UserDefaults binding.
+    private func readerControlLabel(_ title: String, symbol: String) -> some View {
+        VStack(spacing: 4) {
+            Image(systemName: symbol).font(.system(size: 22)).frame(height: 26)
+            if showControlNames {
+                Text(LocalizedStringKey(title)).font(.caption)
+                    .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("controlName-" + title)
+            }
+        }.padding(.top, showControlNames ? 8 : 0)
+            .frame(maxWidth: showControlNames ? .infinity : nil, minHeight: showControlNames ? 72 : 44,
+                   alignment: showControlNames ? .top : .center)
+            .frame(minWidth: 44).contentShape(Rectangle())
     }
 
     private var supportsLiveTranslation: Bool {
@@ -332,7 +368,7 @@ struct CaptionScreen: View {
     @ViewBuilder private var translationButton: some View {
         if supportsLiveTranslation {
             Button { showingLiveDisplay = true } label: {
-                Image(systemName: "character.bubble").font(.system(size: 22)).frame(width: 44, height: 44)
+                readerControlLabel("Live caption display", symbol: "character.bubble")
                     .foregroundStyle(liveDisplay == .original ? Color.primary : Color.accentColor)
             }
             .accessibilityLabel("Live caption display")
@@ -349,8 +385,8 @@ struct CaptionScreen: View {
 
     private var fullScreenButton: some View {
         Button { isFullScreen.toggle() } label: {
-            Image(systemName: isFullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
-                .font(.system(size: 22)).frame(width: 44, height: 44)
+            readerControlLabel(isFullScreen ? "Exit full screen" : "Full screen",
+                               symbol: isFullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
         }
         .accessibilityLabel(uiKey(isFullScreen ? "Exit full screen" : "Full screen"))
         .accessibilityIdentifier("fullScreenButton")
@@ -400,12 +436,11 @@ struct CaptionScreen: View {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    /// Same conversation entry as Settings, compact beside the live language selector.
+    /// Home entry, beside the live language selector.
     @ViewBuilder private var conversationButton: some View {
         if let speakAndTranslate {
-            Button("Conversation", systemImage: "bubble.left.and.bubble.right", action: speakAndTranslate)
-                .labelStyle(AccessibleControlLabelStyle())
-                .font(.system(size: 22)).frame(minWidth: 44, minHeight: 44)
+            Button(action: speakAndTranslate) { readerControlLabel("Conversation", symbol: "bubble.left.and.bubble.right") }
+                .accessibilityLabel("Conversation")
                 .help("Conversation").disabled(!canSpeakAndTranslate)
                 .accessibilityIdentifier("speakTranslateEntry")
         }
@@ -562,13 +597,13 @@ struct CaptionScreen: View {
         (dynamicTypeSize.isAccessibilitySize && (settings.showButtonNames || settings.simpleMode) ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
             primaryButton(iconOnly: true)
             stopButton(iconOnly: true)
-            Spacer(minLength: 0)
+            if !dynamicTypeSize.isAccessibilitySize { Spacer(minLength: 0) }
         }
     }
 
     private var capturePreferencesButton: some View {
             Button { showingCaptureOptions = true } label: {
-                Image(systemName: "slider.horizontal.3").font(.system(size: 22))
+                readerControlLabel("Capture preferences", symbol: "slider.horizontal.3")
             }
             .frame(minWidth: 44, minHeight: 44)
             .accessibilityLabel("Capture preferences")

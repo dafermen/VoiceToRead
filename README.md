@@ -19,6 +19,8 @@ VoiceToRead is a native iPhone/iPad app for following English or Spanish convers
 
 A compact conversation icon opens Conversation beside live caption display. Preparation is in Settings → Check preparation; required permission/model notices remain visible. Completion uses an accessible ✓, and session playback stays in Audio & subtitles. [User and student guide](docs/simplified-navigation.md).
 
+Show button names adds labels below Home icons in an adaptive grid. Simple mode always shows six matching action cards with icons and names. **Write and speak**, available from Simple home or Captions → Session actions, reads typed text aloud without translating or saving it; leaving clears it. Conversation and Write and speak are Home actions, not Settings shortcuts. [Home consistency guide](docs/home-controls.md).
+
 ## Read, translate and review
 
 - English capture by default, optional Spanish; English/Spanish interface selected independently.

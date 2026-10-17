@@ -1,6 +1,90 @@
 import XCTest
 
 final class HomeScreenTests: XCTestCase {
+    /// SwiftUI exposes the whole Form row as a switch. Target the trailing thumb,
+    /// inside its inset, rather than the label or the row's outer margin.
+    @MainActor
+    private func tapPreferenceSwitch(_ control: XCUIElement) {
+        control.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: control.frame.width - 40, dy: control.frame.height / 2)).tap()
+    }
+
+    @MainActor
+    func testHomeButtonNamesToggleAndRotate() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-live-translation"]
+        XCUIDevice.shared.orientation = .portrait
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Settings"].tap()
+        XCTAssertFalse(app.buttons["speakTranslateEntry"].exists)
+        XCTAssertFalse(app.buttons["Write and speak"].exists)
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        XCTAssertEqual(app.switches["buttonNamesToggle"].value as? String, "1")
+        app.tabBars.buttons["Captions"].tap()
+        for name in ["Live caption display", "Conversation", "Full screen", "Reading options", "Session actions"] {
+            XCTAssertTrue(app.staticTexts["controlName-" + name].exists, name)
+        }
+        for id in ["liveSpanishButton", "speakTranslateEntry", "fullScreenButton", "readingOptionsButton", "sessionActionsButton"] {
+            XCTAssertTrue(app.buttons[id].isHittable, id)
+        }
+        let portrait = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        portrait.name = "Home-names-portrait"; portrait.lifetime = .keepAlways; add(portrait)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        XCTAssertTrue(app.buttons["readingOptionsButton"].isHittable)
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
+        let landscape = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        landscape.name = "Home-names-landscape"; landscape.lifetime = .keepAlways; add(landscape)
+        app.buttons["fullScreenButton"].tap()
+        XCTAssertTrue(app.staticTexts["controlName-Exit full screen"].exists)
+        XCTAssertTrue(app.staticTexts["controlName-Capture preferences"].exists)
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
+        app.buttons["fullScreenButton"].tap()
+        XCUIDevice.shared.orientation = .portrait
+        app.buttons["sessionActionsButton"].tap()
+        app.buttons["Write and speak"].tap()
+        XCTAssertTrue(app.textViews["writtenResponseText"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Write what you want to say. The voice reads exactly this text in the language you choose; it does not translate it."].exists)
+        app.buttons["Done"].tap()
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        app.tabBars.buttons["Captions"].tap()
+        XCTAssertFalse(app.staticTexts["controlName-Reading options"].exists)
+        XCTAssertEqual(app.buttons["readingOptionsButton"].frame.width, 44, accuracy: 1)
+    }
+
+    @MainActor
+    func testSimpleHomeUniformActionsWithEitherNamePreference() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["simpleModeToggle"])
+        XCTAssertEqual(app.switches["simpleModeToggle"].value as? String, "1")
+        app.tabBars.buttons["Home"].tap()
+        let ids = ["speakTranslateEntry", "simpleListenNow", "simpleSessions", "simplePractice", "simpleWriteResponse", "simplePreparation"]
+        for id in ids {
+            let button = app.buttons[id]
+            XCTAssertTrue(button.exists, id)
+            XCTAssertEqual(button.frame.width, app.buttons["simpleListenNow"].frame.width, accuracy: 1)
+            XCTAssertEqual(button.frame.height, app.buttons["simpleListenNow"].frame.height, accuracy: 1)
+        }
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Home-simple-uniform"; shot.lifetime = .keepAlways; add(shot)
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(app.buttons["simpleWriteResponse"].label.contains("Write and speak"))
+        for id in ids { XCTAssertEqual(app.buttons[id].frame.height, app.buttons["simpleListenNow"].frame.height, accuracy: 1) }
+        app.buttons["simpleListenNow"].tap()
+        XCTAssertTrue(app.buttons["readerHomeButton"].waitForExistence(timeout: 5))
+        app.buttons["readerHomeButton"].tap()
+        XCTAssertTrue(app.buttons["simpleListenNow"].exists)
+    }
+
     @MainActor
     func testLanguageColorSettingsAndConversationLight() throws { try checkLanguageColors(dark: false) }
     @MainActor
@@ -193,7 +277,7 @@ final class HomeScreenTests: XCTestCase {
         app.launchArguments = ["--ui-test-review", "--ui-test-simple", "--ui-test-labels"]
         app.launch()
         XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 20))
-        app.buttons["Write a response"].tap()
+        app.buttons["Write and speak"].tap()
         let editor = app.textViews["writtenResponseText"]
         XCTAssertTrue(editor.waitForExistence(timeout: 5))
         editor.tap(); editor.typeText("Please speak slowly. I am reading your words. Thank you for waiting while I write my response.")
@@ -203,7 +287,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(app.buttons["speakWrittenResponse"].label, "Resume")
         app.buttons["Stop"].tap()
         app.navigationBars.buttons.element(boundBy: 0).tap()
-        app.buttons["Write a response"].tap()
+        app.buttons["Write and speak"].tap()
         XCTAssertEqual(app.textViews["writtenResponseText"].value as? String, "")
         app.navigationBars.buttons.element(boundBy: 0).tap()
         app.buttons["Prepare VoiceToRead"].tap()
@@ -1401,7 +1485,9 @@ final class HomeScreenTests: XCTestCase {
     @MainActor
     func testFullScreenKeepsListeningAndRestoresTabsAfterRotation() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-reader"]
+        // Use a scrollable short history, then live arrivals every two seconds.
+        // The 320-paragraph stress fixture races snapshot queries while it loads.
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow"]
         XCUIDevice.shared.orientation = .portrait
         defer { XCUIDevice.shared.orientation = .portrait }
         app.launch()
@@ -1409,6 +1495,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(reader.waitForExistence(timeout: 15))
         app.buttons["primaryCaptionAction"].tap()
         XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
+        XCTAssertTrue(reader.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Paragraph 8.")).firstMatch.waitForExistence(timeout: 15))
         let originalHeight = reader.frame.height
         app.buttons["fullScreenButton"].tap()
         XCTAssertEqual(app.buttons["primaryCaptionAction"].label, "Pause")
@@ -1428,7 +1515,11 @@ final class HomeScreenTests: XCTestCase {
             expectation(for: NSPredicate { _, _ in
                 let count = (reader.value as? String ?? "").components(separatedBy: " ").first ?? ""
                 let latest = reader.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Paragraph \(count).")).firstMatch
-                return latest.exists && latest.isHittable
+                // This is noninteractive text moving as new captions arrive. XCTest can
+                // reject its activation point during scrolling; visibility is the contract.
+                guard latest.exists else { return false }
+                let visible = reader.frame.intersection(latest.frame)
+                return !visible.isNull && visible.height > 0 && visible.width > 0
             }, evaluatedWith: reader)
             waitForExpectations(timeout: 8)
             let capture = XCTAttachment(screenshot: XCUIScreen.main.screenshot())

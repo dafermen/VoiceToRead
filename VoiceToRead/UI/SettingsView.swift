@@ -13,11 +13,10 @@ struct SettingsView: View {
             Section("Accessibility and ease of use") {
                 Toggle("Simple mode", isOn: $settings.simpleMode).disabled(coordinator.caption.state.active || coordinator.caption.state.busy).accessibilityIdentifier("simpleModeToggle")
                 Toggle("Show button names", isOn: $settings.showButtonNames).accessibilityIdentifier("buttonNamesToggle")
+                Text("Simple mode always shows action names. In the standard home, this option adds names below the icons.").font(.caption)
                 Toggle("Vibrate when listening pauses", isOn: $settings.pauseHaptics)
                 Toggle("Focused reading", isOn: $settings.focusedReading).accessibilityIdentifier("focusedReadingToggle")
                 Text("Simple mode keeps essential actions visible. Focused reading shows one paragraph at a time and waits for you to continue.").font(.caption)
-                NavigationLink("Write a response") { WrittenResponseView(coordinator: coordinator) }
-                SpeakTranslateEntry(coordinator: coordinator)
             }
             Section("App interface") {
                 Picker("Menus and buttons", selection: $settings.interfaceLanguage) {
@@ -309,7 +308,7 @@ struct WrittenResponseView: View {
                 }
                 if speech.completedParagraphID != nil { Text("Response finished") }
             }
-        }.navigationTitle("Write a response")
+        }.navigationTitle("Write and speak")
             .toolbar(.visible, for: .navigationBar)
             .toolbar { if typing { DoneButton { typing = false } } }
             .onAppear { language = coordinator.settings.captureLanguage; speech.observeInterruptions() }
@@ -324,17 +323,44 @@ struct SimpleHomeView: View {
     let coordinator: SessionCoordinator
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 12) {
                 Text("What would you like to do?").font(.title2.bold())
                 SpeakTranslateEntry(coordinator: coordinator)
-                NavigationLink { LiveCaptionView(coordinator: coordinator) } label: { Label("Listen now", systemImage: "mic.fill").frame(maxWidth: .infinity, minHeight: 60) }
+                NavigationLink { LiveCaptionView(coordinator: coordinator) } label: { Label("Listen now", systemImage: "mic") }
                     .accessibilityIdentifier("simpleListenNow")
-                NavigationLink { SessionHistoryView(coordinator: coordinator) } label: { Label("My sessions", systemImage: "clock").frame(maxWidth: .infinity, minHeight: 60) }
-                NavigationLink { PracticeSessionPicker(coordinator: coordinator) } label: { Label("Language practice", systemImage: "book").frame(maxWidth: .infinity, minHeight: 60) }
-                NavigationLink("Write a response") { WrittenResponseView(coordinator: coordinator) }
-                NavigationLink("Prepare VoiceToRead") { OfflineReadinessView(coordinator: coordinator) }
-            }.buttonStyle(.bordered).font(.headline).padding()
+                NavigationLink { SessionHistoryView(coordinator: coordinator) } label: { Label("My sessions", systemImage: "clock") }
+                    .accessibilityIdentifier("simpleSessions")
+                NavigationLink { PracticeSessionPicker(coordinator: coordinator) } label: { Label("Language practice", systemImage: "book") }
+                    .accessibilityIdentifier("simplePractice")
+                NavigationLink { WrittenResponseView(coordinator: coordinator) } label: { Label("Write and speak", systemImage: "keyboard") }
+                    .accessibilityIdentifier("simpleWriteResponse")
+                NavigationLink { OfflineReadinessView(coordinator: coordinator) } label: { Label("Prepare VoiceToRead", systemImage: "checkmark.shield") }
+                    .accessibilityIdentifier("simplePreparation")
+            }.buttonStyle(SimpleHomeActionStyle()).labelStyle(SimpleHomeLabelStyle()).font(.headline).padding()
         }.navigationTitle("VoiceToRead")
+    }
+}
+
+struct SimpleHomeLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 12) {
+            configuration.icon.frame(width: 28)
+            configuration.title.fixedSize(horizontal: false, vertical: true)
+        }
+    }
+}
+
+/// One shared size and alignment for every simple-home action. Names are always visible.
+struct SimpleHomeActionStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 12) {
+            configuration.label
+            Spacer(minLength: 8)
+            Image(systemName: "chevron.right").font(.caption).accessibilityHidden(true)
+        }.padding(.horizontal, 16).padding(.vertical, 10)
+            .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
+            .contentShape(RoundedRectangle(cornerRadius: 12))
+            .background(Color.accentColor.opacity(configuration.isPressed ? 0.18 : 0.08), in: RoundedRectangle(cornerRadius: 12))
     }
 }
 

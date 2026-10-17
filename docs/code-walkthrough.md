@@ -209,3 +209,7 @@ Ajuste visual de Conversación: dos `HStack` mantienen español/inglés y reprod
 ## Paleta compartida de idiomas
 
 `AppSettings.color(for:)` conecta la preferencia guardada con `LanguageButtonStyle` y `LiveLanguageCard`. `PlaybackTextCard` reutiliza esta decisión para original y traducción; `LiveSpanishView` recibe ambos colores desde el lector. Ver [arquitectura y prioridades de color](language-colors.md).
+
+## Inicio y preferencias de accesibilidad (2026-10-17)
+
+[Guía de implementación](home-controls.md): etiquetas observables, cuadrícula adaptable, tamaños comunes y separación entre preferencias y acciones. Incluye la causa del espacio excesivo al cambiar HStack por VStack y cómo evitarla.
