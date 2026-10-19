@@ -266,7 +266,7 @@ struct SessionMediaView: View {
         if listening == .translation { return speech.state == .paused ? "Resume" : "Play" }
         return originalStarted || player.interrupted ? "Resume" : "Play"
     }
-    private var playbackStatus: String {
+    private var playbackStatus: String? {
         if usesSequence, let message = sequence.message { return message }
         if waitingForLanguage && isPlaying { return "Pause between languages" }
         if usesSequence && isPlaying { return sequence.translated ? "Playing translation" : "Playing original" }
@@ -274,7 +274,7 @@ struct SessionMediaView: View {
         if listening == .translation, let message = speech.message { return message }
         if finished { return atMyPace ? "Paragraph finished" : "Playback finished" }
         if isPlaying { return "Playing" }
-        return primaryLabel == "Resume" ? "Paused · tap Resume" : "Ready · tap Play"
+        return primaryLabel == "Resume" ? "Paused · tap Resume" : nil
     }
     @State private var audioURL: URL?
     @State private var cues: [SubtitleCue] = []
@@ -528,9 +528,11 @@ struct SessionMediaView: View {
                 VStack(alignment: .leading) { speedSummary }
             }.font(.caption).foregroundStyle(.secondary)
             Text(uiKey(atMyPace ? "At my pace" : "Continuous")).font(.caption)
-            Text(LocalizedStringKey(playbackStatus)).font(.caption.weight(.semibold))
-                .accessibilityIdentifier("playbackStatus")
-            if !compactPlayback {
+            if let playbackStatus {
+                Text(LocalizedStringKey(playbackStatus)).font(.caption.weight(.semibold))
+                    .accessibilityIdentifier("playbackStatus")
+            }
+            if !compactPlayback && reading != .both {
             VStack(spacing: 4) {
             if !usesSequence && listening == .original && audioURL != nil {
                 Slider(value: Binding(get: { player.time }, set: { player.seek($0) }), in: player.bounds)
@@ -542,7 +544,7 @@ struct SessionMediaView: View {
                 }.font(.caption).monospacedDigit()
             } else {
                 // Speech has no reliable audio duration: never borrow timestamps from the recording.
-                Text(uiKey(reading == .both ? "Original, then translation · each paragraph" : reading == language.mode ? "Generated voice · original text" : "Generated voice · translation only")).font(.caption).foregroundStyle(.secondary)
+                Text(uiKey(reading == language.mode ? "Generated voice · original text" : "Generated voice · translation only")).font(.caption).foregroundStyle(.secondary)
                     .frame(maxHeight: .infinity)
             }
             }.frame(height: 56)
@@ -583,8 +585,9 @@ struct SessionMediaView: View {
                 Text("For long paragraphs, choose At my pace to finish reading before moving on. You can also scroll the text.").font(.caption)
                 Toggle("Bold captions", isOn: $settings.boldCaptions)
                 Toggle("High contrast", isOn: $settings.highContrast)
+                Toggle("Renglones de cuaderno", isOn: $settings.ruledPaper)
+                    .accessibilityIdentifier("ruledPaperToggle")
             }
-            ReaderPaperOptions(settings: settings)
             if audioURL == nil {
                 Text("No audio saved for this session. Enable Save audio before starting your next session.")
             }
@@ -903,16 +906,22 @@ struct PlaybackPreferenceControls: View {
     @AppStorage("translationSpeechSpeed") private var translation = TranslationSpeechSpeed.normal
     @AppStorage("playbackLanguageGap") private var gap = 0
     var body: some View {
-        Picker("Original speed", selection: $original) {
-            ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        Section("Original speed") {
+            Picker("Original speed", selection: $original) {
+                ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+            }
         }
-        Picker("Translation speed", selection: $translation) {
-            ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        Section("Translation speed") {
+            Picker("Translation speed", selection: $translation) {
+                ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+            }
         }
-        Picker("Pause between languages", selection: $gap) {
-            Text("No pause").tag(0)
-            Text("1 second").tag(1)
-            Text("2 seconds").tag(2)
+        Section("Pause between languages") {
+            Picker("Pause between languages", selection: $gap) {
+                Text("No pause").tag(0)
+                Text("1 second").tag(1)
+                Text("2 seconds").tag(2)
+            }
         }
     }
 }
