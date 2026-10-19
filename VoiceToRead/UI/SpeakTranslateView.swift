@@ -228,7 +228,9 @@ struct SpeakTranslateView: View {
     }
     // A new preference deliberately makes two-tap conversation the default for existing users too.
     @AppStorage("conversationTurnMode") private var savedMode = SpeakTranslateModel.Mode.byButton.rawValue
+    @Environment(\.colorScheme) private var scheme
     @State private var showingOptions = false
+    @State private var fullScreen = false
     @State private var editor: ConversationEdit?
     @AppStorage("conversationFirstLanguage") private var first: CaptureLanguage = .spanish
     @AppStorage("conversationSecondLanguage") private var second: CaptureLanguage = .english
@@ -258,13 +260,15 @@ struct SpeakTranslateView: View {
     private var content: some View {
         AccessibilityScrollingContent {
             VStack(spacing: 0) {
-                if dynamicTypeSize.isAccessibilitySize { turnControls.padding() }
+                if dynamicTypeSize.isAccessibilitySize && !fullScreen { turnControls.padding() }
+                if !fullScreen {
                 CommunicationHeader {
                     pairControls
                 } status: {
                     Label(status, systemImage: statusIcon)
                         .font(.subheadline.weight(.semibold))
                         .accessibilityIdentifier("conversationStatus")
+                }
                 }
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
@@ -308,21 +312,28 @@ struct SpeakTranslateView: View {
                     }.padding()
                 }.frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil, maxHeight: .infinity)
                     .accessibilityIdentifier("conversationReadingArea")
+                    .background(ReaderSurface(settings: settings))
+                    .environment(\.colorScheme, settings.readerPaper != .system && !settings.highContrast ? .light : (settings.colorScheme ?? scheme))
+                if !fullScreen {
                 Text("Temporary conversation · not saved").font(.caption).foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 16).padding(.vertical, 8)
-                if !dynamicTypeSize.isAccessibilitySize {
+                }
+                if !dynamicTypeSize.isAccessibilitySize || fullScreen {
                     turnControls.padding(.horizontal).padding(.vertical, 8)
-                        .frame(minHeight: 100).background(.bar)
+                        .frame(minHeight: fullScreen ? nil : 100).background(.bar)
                 }
             }
         }
         .navigationTitle(uiKey(embedded ? "VoiceToRead" : "Conversation")).navigationBarTitleDisplayMode(.inline)
-        .toolbar(.visible, for: .navigationBar)
+        .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
+        .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
+        .statusBarHidden(fullScreen)
+        .preference(key: CommunicationFullScreenKey.self, value: fullScreen)
         .toolbar {
             if !embedded { DoneToolbar { model.cancel(); dismiss() } }
             ToolbarItem(placement: .topBarLeading) {
-                Button("Conversation options", systemImage: "ellipsis.circle") { showingOptions = true }
+                Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
                     .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
             }
         }
@@ -363,6 +374,14 @@ struct SpeakTranslateView: View {
         return layout {
             turnButton(first)
             turnButton(second)
+            if fullScreen {
+                Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
+                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                    .disabled(!model.canEdit).accessibilityIdentifier("conversationOptions")
+                Button("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left") { fullScreen = false }
+                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                    .accessibilityIdentifier("conversationFullScreenButton")
+            }
         }.fixedSize(horizontal: false, vertical: true)
     }
     private func turnButton(_ language: CaptureLanguage) -> some View {
@@ -377,11 +396,13 @@ struct SpeakTranslateView: View {
                     else { Text("Speak \(language.name)") }
                 } icon: {
                     Image(systemName: listening ? "stop.fill" : "mic.fill")
-                }.font(.headline).labelStyle(.titleAndIcon)
-                Text(verbatim: language.name + " → " + destination.name)
-                    .font(.caption)
+                }.font(fullScreen ? .subheadline : .headline).labelStyle(.titleAndIcon)
+                if !fullScreen {
+                    Text(verbatim: language.name + " → " + destination.name)
+                        .font(.caption)
+                }
             }.multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
-                .padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: 64, maxHeight: .infinity).contentShape(Rectangle())
+                .padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: fullScreen ? 44 : 64, maxHeight: .infinity).contentShape(Rectangle())
         }.buttonStyle(LanguageButtonStyle(color: settings.color(for: language), highContrast: settings.highContrast))
             .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported))
             .accessibilityIdentifier(language == .spanish ? "conversationSpanishTurn" : language == .english ? "conversationEnglishTurn" : "conversationTurn-" + language.code)
@@ -418,6 +439,7 @@ struct SpeakTranslateView: View {
     private var options: some View {
         NavigationStack {
             Form {
+                HomeReadingMenu(settings: settings, fullScreen: $fullScreen) { showingOptions = false }
                 Section {
                     Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {
                         Text("By button").tag(SpeakTranslateModel.Mode.byButton)
@@ -436,7 +458,7 @@ struct SpeakTranslateView: View {
                     Text("Each turn lasts up to one minute. At the manual time limit, review the text and tap Play before it speaks.")
                     Text("This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.")
                 }
-            }.navigationTitle("Conversation options").navigationBarTitleDisplayMode(.inline)
+            }.navigationTitle("Reading options").navigationBarTitleDisplayMode(.inline)
                 .toolbar { DoneToolbar { showingOptions = false } }
         }
     }

@@ -612,3 +612,34 @@ struct HomeCaptureButtonStyle: ButtonStyle {
         }
     }
 }
+
+/// Presentation state only; switching display mode never changes the active audio model.
+struct CommunicationFullScreenKey: PreferenceKey {
+    static var defaultValue = false
+    static func reduce(value: inout Bool, nextValue: () -> Bool) { value = value || nextValue() }
+}
+
+struct HomeReadingMenu: View {
+    @Bindable var settings: AppSettings
+    @Binding var fullScreen: Bool
+    var close: () -> Void
+    var body: some View {
+        Section {
+            Button(uiKey(fullScreen ? "Exit full screen" : "Full screen"), systemImage: fullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
+                fullScreen.toggle(); close()
+            }
+        }
+        Section("Text size") { CaptionSizeControl(size: $settings.captionSize) }
+        Section("Reading style") {
+            Toggle("Bold text", isOn: $settings.boldCaptions)
+            Toggle("High contrast", isOn: $settings.highContrast)
+            Slider(value: $settings.lineSpacing, in: 0...16, step: 2) { Text("Line spacing") }
+                .accessibilityLabel("Line spacing")
+                .accessibilityValue("\(Int(settings.lineSpacing)) points")
+        }
+        ReaderPaperOptions(settings: settings)
+        Section("Language colors") {
+            NavigationLink("Language colors") { LanguageColorsView(settings: settings) }
+        }
+    }
+}

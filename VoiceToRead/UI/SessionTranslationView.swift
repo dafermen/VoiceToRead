@@ -444,6 +444,7 @@ struct LiveSpanishView: View {
     var koreanColor: LanguageColor = .orange
     var japaneseColor: LanguageColor = .purple
     var chineseColor: LanguageColor = .orange
+    var compact = false
     var emptyHint: LocalizedStringKey? = "Tap Start Recording to begin."
     private func color(for language: CaptureLanguage) -> LanguageColor {
         switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
@@ -454,7 +455,7 @@ struct LiveSpanishView: View {
     @State private var follow = true
     var body: some View {
         VStack(spacing: 4) {
-            if !buffer.source.isEmpty || !provisionalText.isEmpty {
+            if !compact && (!buffer.source.isEmpty || !provisionalText.isEmpty) {
             HStack {
                 Text(display == .both ? "\(language.name) → \(target.name)" : "\(target.name)").font(.caption)
                 Spacer()
@@ -501,7 +502,7 @@ struct LiveSpanishView: View {
             if let failure {
                 Text(LocalizedStringKey(failure)).font(.caption).padding(.horizontal)
                 Button("Retry translation") { self.failure = nil; schedule() }
-            } else {
+            } else if !compact {
                 Text(uiKey(job == nil ? "After stopping, choose Save Session to keep the original. Live translation preview is not saved." : "Translating confirmed text…"))
                     .font(.caption).foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)

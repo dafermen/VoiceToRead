@@ -68,7 +68,7 @@ struct CaptionScreen: View {
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, target: settings.translationLanguage, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
-                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, emptyHint: model.state == .idle ? initialInstruction : nil)
+                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, compact: isFullScreen, emptyHint: model.state == .idle ? initialInstruction : nil)
                             .id(model.language.rawValue + settings.translationLanguage.rawValue)
                     } else {
                         transcript.overlay(alignment: .topLeading) {
@@ -83,49 +83,40 @@ struct CaptionScreen: View {
                            maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
                     .background(ReaderSurface(settings: settings))
                     .environment(\.colorScheme, settings.readerPaper != .system && !settings.highContrast ? .light : colorScheme)
-                if communicationLayout && (!supportsLiveTranslation || liveDisplay == .original) {
+                if communicationLayout && !isFullScreen && (!supportsLiveTranslation || liveDisplay == .original) {
                     Text("After stopping, choose Save Session to keep this session.")
                         .font(.caption).foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 16).padding(.vertical, 8)
                 }
-                if model.state == .ended && needsSessionDecision {
+                if model.state == .ended && needsSessionDecision && !isFullScreen {
                     Divider()
                     resolutionControls.padding(.horizontal, 16).padding(.vertical, 4)
                 }
-                if model.canChooseCaptureOptions && !communicationLayout {
+                if model.canChooseCaptureOptions && !communicationLayout && !isFullScreen {
                     VStack(spacing: 0) { LanguagePairOptions(model: model, settings: settings, compact: true); quickPreferences }.padding(.horizontal, 16)
                 }
                 if communicationLayout || isFullScreen || compact || model.state != .ended {
                     Divider()
                     Group {
-                        if isFullScreen && (showControlNames || dynamicTypeSize.isAccessibilitySize) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                HStack(alignment: .top, spacing: 12) {
-                                    status
-                                    Spacer(minLength: 0)
-                                    primaryButton(iconOnly: true)
-                                    if model.state != .ended { stopButton(iconOnly: true) }
-                                }
-                                LazyVGrid(columns: [GridItem(.adaptive(minimum: dynamicTypeSize.isAccessibilitySize ? 150 : 104))], alignment: .leading) {
-                                    translationButton; capturePreferencesButton; fullScreenButton
-                                }
+                        if isFullScreen {
+                            (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 4)) : AnyLayout(HStackLayout(spacing: 8))) {
+                                primaryButton(iconOnly: true)
+                                if model.state != .ended { stopButton(iconOnly: true) }
+                                Spacer(minLength: 0)
+                                Menu { sessionActionButtons } label: {
+                                    Image(systemName: "ellipsis.circle").frame(minWidth: 44, minHeight: 44)
+                                }.accessibilityLabel("Session actions").accessibilityIdentifier("sessionActionsButton")
+                                Button { isFullScreen = false } label: {
+                                    Label("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left")
+                                        .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                                }.accessibilityIdentifier("fullScreenButton")
                             }
                         } else {
                             HStack(spacing: 8) {
-                                if isFullScreen {
-                                    status
-                                    Spacer(minLength: 0)
-                                    primaryButton(iconOnly: true)
-                                    if model.state != .ended { stopButton(iconOnly: true) }
-                                    translationButton
-                                    capturePreferencesButton
-                                    fullScreenButton
-                                } else {
-                                    if compact { status; Spacer(minLength: 0) }
-                                    if communicationLayout || model.state != .ended { captureControls }
-                                    if compact { utilities }
-                                }
+                                if compact { status; Spacer(minLength: 0) }
+                                if communicationLayout || model.state != .ended { captureControls }
+                                if compact { utilities }
                             }
                         }
                     }
@@ -154,6 +145,7 @@ struct CaptionScreen: View {
         }
         .toolbar(isFullScreen ? .hidden : .visible, for: .tabBar)
         .statusBarHidden(isFullScreen)
+        .preference(key: CommunicationFullScreenKey.self, value: isFullScreen)
         .sheet(isPresented: $showingOptions) { readingOptions }
         .sheet(isPresented: $showingCaptureOptions) {
             NavigationStack {
@@ -215,7 +207,7 @@ struct CaptionScreen: View {
             if let writeResponse { Button("Write and speak", action: writeResponse).disabled(model.state.active || model.state.busy) }
             Button("Reading options") { showingOptions = true }
             Button("Capture preferences") { showingCaptureOptions = true }
-            Button("Full screen") { isFullScreen.toggle() }
+            Button(uiKey(isFullScreen ? "Exit full screen" : "Full screen")) { isFullScreen.toggle() }
             if supportsLiveTranslation { Button("Reading language") { showingLiveDisplay = true } }
             if let saveSession {
                 Button("Save Session", action: saveSession)
@@ -651,7 +643,10 @@ struct CaptionScreen: View {
     }
 
     @ViewBuilder private func captureActionLabel(_ title: String, symbol: String, prominent: Bool) -> some View {
-        if communicationLayout && !isFullScreen {
+        if isFullScreen {
+            Label(LocalizedStringKey(title), systemImage: symbol).labelStyle(.titleAndIcon)
+                .font(.subheadline).frame(minWidth: 44, minHeight: 44)
+        } else if communicationLayout {
             Label(LocalizedStringKey(title), systemImage: symbol)
                 .labelStyle(.titleAndIcon).font(.headline)
                 .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
@@ -717,22 +712,7 @@ struct CaptionScreen: View {
     private var readingOptions: some View {
         NavigationStack {
             Form {
-                Section("Text size") {
-                    Text("Make every word easy to read.")
-                        .font(captionFont)
-                        .lineSpacing(settings.lineSpacing)
-                    CaptionSizeControl(size: $settings.captionSize)
-                }
-                Section("Reading style") {
-                    Slider(value: $settings.lineSpacing, in: 0...16, step: 2) {
-                        Text("Line spacing")
-                    }
-                    .accessibilityLabel("Line spacing")
-                    .accessibilityValue("\(Int(settings.lineSpacing)) points")
-                    Toggle("Bold text", isOn: $settings.boldCaptions)
-                    Toggle("High contrast", isOn: $settings.highContrast)
-                }
-                ReaderPaperOptions(settings: settings)
+                HomeReadingMenu(settings: settings, fullScreen: $isFullScreen) { showingOptions = false }
                 CaptureOptionsView(model: model, settings: settings)
                 Section {
                     Toggle("Follow live captions", isOn: followBinding)

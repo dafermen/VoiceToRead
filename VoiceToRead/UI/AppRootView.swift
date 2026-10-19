@@ -12,6 +12,7 @@ struct AppRootView: View {
     @State private var storageFailure = false
     @State private var selectedTab = 0
     @State private var homePath: [HomeDestination] = []
+    @State private var translationConfirmationVisible = false
 
     var body: some View {
         Group {
@@ -29,7 +30,7 @@ struct AppRootView: View {
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
                 .safeAreaInset(edge: .bottom) {
-                    if coordinator.automaticTranslationJob != nil || coordinator.automaticTranslationMessage != nil {
+                    if coordinator.automaticTranslationJob != nil || (coordinator.automaticTranslationMessage != nil && (coordinator.automaticTranslationMessage != "Translation saved" || translationConfirmationVisible)) {
                         HStack {
                             if let job = coordinator.automaticTranslationJob {
                                 ProgressView()
@@ -41,11 +42,19 @@ struct AppRootView: View {
                                     Button("Retry translation") { coordinator.retryAutomaticTranslation() }
                                 }
                             }
-                            Button(uiKey(coordinator.automaticTranslationJob == nil ? "Dismiss" : "Cancel translation"), systemImage: "xmark") { coordinator.cancelAutomaticTranslation() }
-                                .labelStyle(AccessibleControlLabelStyle()).frame(minWidth: 44, minHeight: 44)
+                            if coordinator.automaticTranslationJob != nil || coordinator.automaticTranslationMessage != "Translation saved" {
+                                Button(uiKey(coordinator.automaticTranslationJob == nil ? "Dismiss" : "Cancel translation"), systemImage: "xmark") { coordinator.cancelAutomaticTranslation() }
+                                    .labelStyle(AccessibleControlLabelStyle()).frame(minWidth: 44, minHeight: 44)
+                            }
                         }.font(.caption).padding(.horizontal).background(.regularMaterial)
                             .accessibilityIdentifier("automaticTranslationStatus")
                     }
+                }
+                .task(id: coordinator.automaticTranslationMessage) {
+                    translationConfirmationVisible = coordinator.automaticTranslationMessage == "Translation saved"
+                    guard translationConfirmationVisible else { return }
+                    do { try await Task.sleep(for: .seconds(3)) } catch { return }
+                    translationConfirmationVisible = false
                 }
                 .background {
                     if let job = coordinator.automaticTranslationJob {
@@ -358,23 +367,27 @@ enum HomeDestination: Hashable { case listen, sessions, practice, response, prep
 struct CommunicationHomeView: View {
     let coordinator: SessionCoordinator
     @State private var listening = false
+    @State private var fullScreen = false
     @State private var conversation = SpeakTranslateModel()
     private var audioBusy: Bool {
         !conversation.canEdit || coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending
     }
     var body: some View {
         VStack(spacing: 0) {
+            if !fullScreen {
             Picker("What would you like to do?", selection: $listening) {
                 Text("Converse").tag(false)
                 Text("Listen").tag(true)
             }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
                 .disabled(audioBusy).accessibilityIdentifier("communicationMode")
+            }
             if listening {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)
             } else {
                 SpeakTranslateView(settings: coordinator.settings, embedded: true, model: conversation)
             }
         }
+        .onPreferenceChange(CommunicationFullScreenKey.self) { fullScreen = $0 }
         .onAppear {
             if coordinator.caption.state.active || coordinator.caption.state.busy { listening = true }
         }

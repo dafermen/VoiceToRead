@@ -203,6 +203,29 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testConversationFullScreenKeepsControlsAndRestoresHome() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launch()
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
+        app.buttons["speakTranslateEntry"].tap()
+        app.buttons["conversationOptions"].tap()
+        XCTAssertTrue(app.buttons["Full screen"].waitForExistence(timeout: 5))
+        app.buttons["Full screen"].tap()
+        let exit = app.buttons["conversationFullScreenButton"]
+        XCTAssertTrue(exit.waitForExistence(timeout: 8))
+        XCTAssertFalse(app.segmentedControls["communicationMode"].exists)
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].exists)
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].exists)
+        app.buttons["conversationOptions"].tap()
+        XCTAssertTrue(app.sliders.firstMatch.waitForExistence(timeout: 5))
+        app.navigationBars["Reading options"].buttons["Done"].tap()
+        exit.tap()
+        XCTAssertTrue(app.buttons["conversationFirstLanguage"].waitForExistence(timeout: 5))
+        XCTAssertFalse(exit.exists)
+    }
+
+    @MainActor
     func testJapaneseAndChineseConversationSelectors() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
@@ -576,12 +599,12 @@ final class HomeScreenTests: XCTestCase {
         let modes = app.segmentedControls["conversationMode"]
         XCTAssertTrue(modes.buttons["By button"].isSelected)
         modes.buttons["Automatic"].tap()
-        app.navigationBars["Conversation options"].buttons["Done"].tap()
+        app.navigationBars["Reading options"].buttons["Done"].tap()
         app.navigationBars["Conversation"].buttons["Done"].tap()
         app.buttons["speakTranslateEntry"].tap()
         app.buttons["conversationOptions"].tap()
         XCTAssertTrue(modes.buttons["Automatic"].isSelected)
-        app.navigationBars["Conversation options"].buttons["Done"].tap()
+        app.navigationBars["Reading options"].buttons["Done"].tap()
         XCTAssertFalse(app.staticTexts["conversationTranslation"].exists)
     }
 
