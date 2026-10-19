@@ -970,3 +970,9 @@
 "After stopping, choose Save Session to keep this session." = "After stopping, choose Save Session to keep this session.";
 
 "After stopping, choose Save Session to keep the original. Live translation preview is not saved." = "After stopping, choose Save Session to keep the original. Live translation preview is not saved.";
+
+"New conversation" = "New conversation";
+
+"Start a new conversation?" = "Start a new conversation?";
+
+"This clears the original and translation. Your languages and settings will stay unchanged." = "This clears the original and translation. Your languages and settings will stay unchanged.";

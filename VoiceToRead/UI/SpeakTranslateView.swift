@@ -68,6 +68,15 @@ final class SpeakTranslateModel {
         guard canEdit else { return }
         source = String(text.prefix(4000)); translated = ""; message = nil
     }
+    /// Clear only this temporary turn; the chosen direction and preferences stay intact.
+    func newConversation() {
+        guard canEdit else { return }
+        token = UUID()
+        source = ""; translated = ""; message = nil
+        speaker.message = nil
+        speakWhenComplete = false
+    }
+
     /// Changing direction is explicit and never modifies the session capture preference.
     func selectLanguage(_ language: CaptureLanguage, target: CaptureLanguage? = nil) {
         guard canEdit else { return }
@@ -230,6 +239,8 @@ struct SpeakTranslateView: View {
     @AppStorage("conversationTurnMode") private var savedMode = SpeakTranslateModel.Mode.byButton.rawValue
     @Environment(\.colorScheme) private var scheme
     @State private var showingOptions = false
+    @State private var pendingNewConversation = false
+    @State private var confirmNewConversation = false
     @State private var fullScreen = false
     @State private var editor: ConversationEdit?
     @AppStorage("conversationFirstLanguage") private var first: CaptureLanguage = .spanish
@@ -337,7 +348,20 @@ struct SpeakTranslateView: View {
                     .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
             }
         }
-        .sheet(isPresented: $showingOptions) { options }
+        .sheet(isPresented: $showingOptions, onDismiss: {
+            guard pendingNewConversation else { return }
+            pendingNewConversation = false
+            guard model.canEdit else { return }
+            if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
+            else { model.newConversation() }
+        }) { options }
+        .confirmationDialog("Start a new conversation?", isPresented: $confirmNewConversation, titleVisibility: .visible) {
+            Button("New conversation", role: .destructive) { model.newConversation() }
+                .accessibilityIdentifier("confirmNewConversation")
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text("This clears the original and translation. Your languages and settings will stay unchanged.")
+        }
         .sheet(item: $editor) { request in
             ConversationMessageEditor(request: request) { text in
                 model.selectLanguage(request.language, target: request.target); model.edit(text); model.translate()
@@ -439,6 +463,12 @@ struct SpeakTranslateView: View {
     private var options: some View {
         NavigationStack {
             Form {
+                Section {
+                    Button("New conversation", systemImage: "plus.bubble") {
+                        pendingNewConversation = true
+                        showingOptions = false
+                    }.disabled(!model.canEdit).accessibilityIdentifier("newConversationButton")
+                }
                 HomeReadingMenu(settings: settings, fullScreen: $fullScreen) { showingOptions = false }
                 Section {
                     Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {

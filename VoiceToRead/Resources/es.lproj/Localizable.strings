@@ -970,3 +970,9 @@
 "After stopping, choose Save Session to keep this session." = "Después de detener, elige Guardar sesión para conservar esta sesión.";
 
 "After stopping, choose Save Session to keep the original. Live translation preview is not saved." = "Después de detener, elige Guardar sesión para conservar el original. La traducción en vivo no se guarda.";
+
+"New conversation" = "Nueva conversación";
+
+"Start a new conversation?" = "¿Empezar una nueva conversación?";
+
+"This clears the original and translation. Your languages and settings will stay unchanged." = "Se borrarán el original y la traducción. Tus idiomas y ajustes se conservarán.";

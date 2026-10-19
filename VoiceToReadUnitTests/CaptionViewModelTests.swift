@@ -515,6 +515,36 @@ final class SpeakTranslateTests: XCTestCase {
         model.cancel()
         await eventually { model.phase == .ready }
     }
+    func testNewConversationClearsTextAndKeepsDirectionAndPreferences() throws {
+        let output = ConversationTestOutput()
+        let model = SpeakTranslateModel(speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
+        model.selectLanguage(.japanese, target: .chinese)
+        model.selectMode(.automatic); model.pauseSeconds = 5
+        model.edit("こんにちは"); model.translate(speakWhenDone: false)
+        let job = try XCTUnwrap(model.job)
+        model.newConversation()
+        XCTAssertEqual(model.phase, .translating, "An active operation must not be cleared")
+        XCTAssertEqual(model.source, "こんにちは")
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "你好") }))
+        XCTAssertEqual(model.translated, "你好")
+        model.message = "Old notice"
+        model.speaker.message = "Old speech notice"
+        model.newConversation()
+        XCTAssertTrue(model.source.isEmpty)
+        XCTAssertTrue(model.translated.isEmpty)
+        XCTAssertNil(model.message)
+        XCTAssertNil(model.speaker.message)
+        XCTAssertEqual(model.language, .japanese)
+        XCTAssertEqual(model.target, .chinese)
+        XCTAssertEqual(model.mode, .automatic)
+        XCTAssertEqual(model.pauseSeconds, 5)
+        XCTAssertTrue(model.canEdit)
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Late result") }))
+        XCTAssertTrue(model.translated.isEmpty)
+        model.newConversation()
+        XCTAssertTrue(output.spoken.isEmpty)
+    }
+
     func testEditingManualTranslationInvalidatesPreviousSpeech() throws {
         let output = ConversationTestOutput()
         let model = SpeakTranslateModel(speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
