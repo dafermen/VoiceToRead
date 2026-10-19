@@ -33,6 +33,10 @@ struct CaptionScreen: View {
     @State private var showingActions = false
     @State private var followScrollTask: Task<Void, Never>?
 
+    private var initialInstruction: LocalizedStringKey {
+        settings.saveAudio ? "Tap Start Recording to begin." : "Tap Start Listening to begin."
+    }
+
     private var showControlNames: Bool { settings.showButtonNames }
 
     private var readerLayout: some View {
@@ -64,14 +68,27 @@ struct CaptionScreen: View {
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, target: settings.translationLanguage, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
-                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor)
+                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, emptyHint: model.state == .idle ? initialInstruction : nil)
                             .id(model.language.rawValue + settings.translationLanguage.rawValue)
-                    } else { transcript }
+                    } else {
+                        transcript.overlay(alignment: .topLeading) {
+                            if communicationLayout && model.state == .idle && !hasCaptions {
+                                CommunicationEmptyHint(title: initialInstruction)
+                                    .padding(16).allowsHitTesting(false)
+                            }
+                        }
+                    }
                 }
                     .frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
                            maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
                     .background(ReaderSurface(settings: settings))
                     .environment(\.colorScheme, settings.readerPaper != .system && !settings.highContrast ? .light : colorScheme)
+                if communicationLayout && (!supportsLiveTranslation || liveDisplay == .original) {
+                    Text("After stopping, choose Save Session to keep this session.")
+                        .font(.caption).foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 16).padding(.vertical, 8)
+                }
                 if model.state == .ended && needsSessionDecision {
                     Divider()
                     resolutionControls.padding(.horizontal, 16).padding(.vertical, 4)
@@ -324,7 +341,7 @@ struct CaptionScreen: View {
                   systemImage: model.isRecordingAudio ? "record.circle.fill" : (model.state == .listening ? "mic.fill" : "mic"))
                 .foregroundStyle(model.isRecordingAudio ? Color.red : Color.primary)
                 .font(.subheadline.weight(.semibold))
-                .accessibilityLabel(uiKey(model.isRecordingAudio ? "Recording audio and captions" : (model.state == .listening ? "Transcribing without saving audio" : LocalizedStringKey(model.state.title))))
+                .accessibilityLabel(uiKey(model.isRecordingAudio ? "Recording audio and captions" : (model.state == .listening ? "Transcribing without saving audio" : LocalizedStringKey(statusTitle))))
                 .accessibilityIdentifier("listeningStatus")
             TimelineView(.periodic(from: Date(), by: 1)) { context in
                 HStack(spacing: 6) {
@@ -626,10 +643,23 @@ struct CaptionScreen: View {
     }
 
     private var captureControls: some View {
-        (dynamicTypeSize.isAccessibilitySize && settings.showButtonNames ? AnyLayout(VStackLayout(spacing: 12)) : AnyLayout(HStackLayout(spacing: 12))) {
+        (dynamicTypeSize.isAccessibilitySize && (communicationLayout || settings.showButtonNames) ? AnyLayout(VStackLayout(spacing: 10)) : AnyLayout(HStackLayout(spacing: communicationLayout ? 10 : 12))) {
             primaryButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
             stopButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
             if !dynamicTypeSize.isAccessibilitySize && !communicationLayout { Spacer(minLength: 0) }
+        }.fixedSize(horizontal: false, vertical: true)
+    }
+
+    @ViewBuilder private func captureActionLabel(_ title: String, symbol: String, prominent: Bool) -> some View {
+        if communicationLayout && !isFullScreen {
+            Label(LocalizedStringKey(title), systemImage: symbol)
+                .labelStyle(.titleAndIcon).font(.headline)
+                .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                .padding(.vertical, 6)
+                .frame(maxWidth: .infinity, minHeight: 64, maxHeight: .infinity)
+                .contentShape(Rectangle())
+        } else {
+            NamedCircleControl(title: title, symbol: symbol, prominent: prominent, names: settings.showButtonNames)
         }
     }
 
@@ -648,10 +678,10 @@ struct CaptionScreen: View {
             if needsSessionDecision { confirmNewSession = true }
             else { Task { await beginNewSession() } }
         } label: {
-            NamedCircleControl(title: "New Session", symbol: "plus", prominent: true,
-                               names: settings.showButtonNames)
+            captureActionLabel("New Session", symbol: "plus", prominent: true)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(HomeCaptureButtonStyle(active: communicationLayout && !isFullScreen,
+            color: settings.color(for: settings.captureLanguage), highContrast: settings.highContrast))
         .accessibilityLabel("New Session").accessibilityIdentifier("primaryCaptionAction")
     }
 
@@ -661,10 +691,10 @@ struct CaptionScreen: View {
             Button {
                 Task { if model.state == .listening { await model.pause() } else { await model.start() } }
             } label: {
-                NamedCircleControl(title: primaryTitle, symbol: primaryIcon, prominent: true,
-                                   names: settings.showButtonNames)
+                captureActionLabel(primaryTitle, symbol: primaryIcon, prominent: true)
             }
-            .buttonStyle(.plain)
+            .buttonStyle(HomeCaptureButtonStyle(active: communicationLayout && !isFullScreen,
+                color: settings.color(for: settings.captureLanguage), highContrast: settings.highContrast))
             .accessibilityLabel(LocalizedStringKey(primaryTitle))
             .accessibilityIdentifier("primaryCaptionAction")
             .keyboardShortcut("r", modifiers: .command)
@@ -674,10 +704,10 @@ struct CaptionScreen: View {
 
     private func stopButton(iconOnly: Bool) -> some View {
         Button { Task { await model.stop() } } label: {
-            NamedCircleControl(title: "Stop", symbol: "stop.fill", prominent: false,
-                               names: settings.showButtonNames)
+            captureActionLabel("Stop", symbol: "stop.fill", prominent: false)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(HomeCaptureButtonStyle(active: communicationLayout && !isFullScreen,
+            color: settings.color(for: settings.captureLanguage), highContrast: settings.highContrast, stop: true))
         .accessibilityLabel("Stop")
         .accessibilityIdentifier("stopCaptionAction")
         .keyboardShortcut(".", modifiers: .command)
@@ -778,7 +808,7 @@ struct CaptionScreen: View {
 
     private var statusTitle: String {
         switch model.state {
-        case .idle: return "Ready"
+        case .idle: return communicationLayout ? "Ready to listen" : "Ready"
         case .preparing: return "Preparing"
         case .listening: return "Transcribing"
         case .stopping: return "Finishing"

@@ -267,7 +267,7 @@ struct SpeakTranslateView: View {
                         .accessibilityIdentifier("conversationStatus")
                 }
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 12) {
                         if model.speaker.state != .idle {
                             Button { model.speaker.stop() } label: {
                                 Label("Stop audio", systemImage: "stop.circle.fill")
@@ -301,7 +301,6 @@ struct SpeakTranslateView: View {
                             editor = ConversationEdit(language: first, target: second, text: "")
                         } label: { Label("Write a reply", systemImage: "keyboard") }
                         .frame(minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("conversationWriteReply")
-                        Text("Temporary conversation · not saved").font(.caption).foregroundStyle(.secondary)
                         if model.capture.readiness == .missingAssets && model.canEdit {
                             Button("Install speech model") { Task { await model.capture.installAssets() } }
                                 .disabled(model.capture.preparationPending)
@@ -309,6 +308,9 @@ struct SpeakTranslateView: View {
                     }.padding()
                 }.frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil, maxHeight: .infinity)
                     .accessibilityIdentifier("conversationReadingArea")
+                Text("Temporary conversation · not saved").font(.caption).foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 16).padding(.vertical, 8)
                 if !dynamicTypeSize.isAccessibilitySize {
                     turnControls.padding(.horizontal).padding(.vertical, 8)
                         .frame(minHeight: 100).background(.bar)
@@ -389,8 +391,7 @@ struct SpeakTranslateView: View {
             PlaybackTextCard(text: model.source, language: model.language, translated: false,
                              settings: settings, identifier: "conversationSourceText")
         } else if !model.busy {
-            Text("Choose who speaks. Tap again to finish and play the translation.")
-                .foregroundStyle(.secondary).frame(maxWidth: .infinity, minHeight: 100)
+            CommunicationEmptyHint(title: "Choose who speaks to begin.")
         }
         if !model.translated.isEmpty {
             PlaybackTextCard(text: model.translated, language: model.target, translated: true,
@@ -441,14 +442,14 @@ struct SpeakTranslateView: View {
     }
     private var statusIcon: String {
         if model.speaker.state != .idle { return "speaker.wave.2.fill" }
-        return model.phase == .listening ? "mic.fill" : "bubble.left.and.bubble.right"
+        return model.phase == .listening ? "mic.fill" : "mic"
     }
     private var status: LocalizedStringKey {
         if model.speaker.state != .idle {
             return "Speaking \(model.target.name) — microphone off"
         }
         switch model.phase {
-        case .ready: return "Ready for the next turn"
+        case .ready: return "Ready to converse"
         case .preparing: return "Preparing \(model.language.name) recognition…"
         case .listening: return "Listening in \(model.language.name)…"
         case .finishing: return "Finishing your message…"

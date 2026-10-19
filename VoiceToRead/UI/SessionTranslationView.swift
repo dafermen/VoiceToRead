@@ -444,6 +444,7 @@ struct LiveSpanishView: View {
     var koreanColor: LanguageColor = .orange
     var japaneseColor: LanguageColor = .purple
     var chineseColor: LanguageColor = .orange
+    var emptyHint: LocalizedStringKey? = "Tap Start Recording to begin."
     private func color(for language: CaptureLanguage) -> LanguageColor {
         switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
     }
@@ -453,19 +454,24 @@ struct LiveSpanishView: View {
     @State private var follow = true
     var body: some View {
         VStack(spacing: 4) {
+            if !buffer.source.isEmpty || !provisionalText.isEmpty {
             HStack {
                 Text(display == .both ? "\(language.name) → \(target.name)" : "\(target.name)").font(.caption)
                 Spacer()
 
             }.padding(.horizontal)
+            }
             ScrollViewReader { proxy in
                 ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 18) {
+                    LazyVStack(alignment: .leading, spacing: 12) {
+                        if buffer.source.isEmpty && provisionalText.isEmpty, let emptyHint {
+                            CommunicationEmptyHint(title: emptyHint)
+                        }
                         ForEach(buffer.source) { paragraph in
                             paragraphPair(paragraph).id(paragraph.id)
                         }
                         if display == .both && !provisionalText.isEmpty {
-                            VStack(alignment: .leading, spacing: 4) {
+                            VStack(alignment: .leading, spacing: 8) {
                                 Text("Original \(language.name)").font(.caption.weight(.semibold))
                                 Text("Live · may change").font(.caption).foregroundStyle(.secondary)
                                 readerText(provisionalText)
@@ -496,8 +502,10 @@ struct LiveSpanishView: View {
                 Text(LocalizedStringKey(failure)).font(.caption).padding(.horizontal)
                 Button("Retry translation") { self.failure = nil; schedule() }
             } else {
-                Text(uiKey(job == nil ? "Live preview is not saved. Translate the saved session to export." : "Translating confirmed text…"))
-                    .font(.caption).foregroundStyle(.secondary).padding(.horizontal)
+                Text(uiKey(job == nil ? "After stopping, choose Save Session to keep the original. Live translation preview is not saved." : "Translating confirmed text…"))
+                    .font(.caption).foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 16).padding(.vertical, 8)
             }
         }
         .background {
@@ -526,14 +534,14 @@ struct LiveSpanishView: View {
     private func paragraphPair(_ paragraph: ReviewParagraph) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             if display == .both || buffer.translated[paragraph.id] == nil {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 8) {
                     Text("Original \(language.name)").font(.caption.weight(.semibold))
                     readerText(paragraph.text)
                         .accessibilityIdentifier("liveOriginal-" + paragraph.id.uuidString)
                 }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast, enabled: display == .both))
             }
             if let translated = buffer.translated[paragraph.id] {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 8) {
                     if display == .both {
                         Text("Translation \(target.name)").font(.caption.weight(.semibold))
                     }
@@ -541,7 +549,7 @@ struct LiveSpanishView: View {
                         .accessibilityIdentifier("liveTranslated-" + paragraph.id.uuidString)
                 }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast, enabled: display == .both))
             } else {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 8) {
                     if display == .both {
                         Text("Translation \(target.name)").font(.caption.weight(.semibold))
                     }

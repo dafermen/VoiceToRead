@@ -956,3 +956,17 @@
 "Translation 简体中文" = "Translation in 简体中文";
 
 "Background color applies to the reading area in Home → Listen. Language cards keep their own colors." = "Background color applies to the reading area in Home → Listen. Language cards keep their own colors.";
+
+"Ready to converse" = "Ready to converse";
+
+"Ready to listen" = "Ready to listen";
+
+"Choose who speaks to begin." = "Choose who speaks to begin.";
+
+"Tap Start Recording to begin." = "Tap Start Recording to begin.";
+
+"Tap Start Listening to begin." = "Tap Start Listening to begin.";
+
+"After stopping, choose Save Session to keep this session." = "After stopping, choose Save Session to keep this session.";
+
+"After stopping, choose Save Session to keep the original. Live translation preview is not saved." = "After stopping, choose Save Session to keep the original. Live translation preview is not saved.";

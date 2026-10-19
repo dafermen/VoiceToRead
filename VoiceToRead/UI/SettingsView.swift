@@ -572,3 +572,43 @@ struct CommunicationHeader<Languages: View, Status: View>: View {
         Divider()
     }
 }
+
+/// Home instructions share placement and typography without affecting capture state.
+struct CommunicationEmptyHint: View {
+    let title: LocalizedStringKey
+    var body: some View {
+        Text(title).font(.body).foregroundStyle(.secondary)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, minHeight: 100, alignment: .leading)
+    }
+}
+
+/// Presentation only: capture actions, identifiers and enabled rules stay with their buttons.
+struct HomeCaptureButtonStyle: ButtonStyle {
+    let active: Bool
+    let color: LanguageColor
+    let highContrast: Bool
+    var stop = false
+    @Environment(\.isEnabled) private var enabled
+    @Environment(\.colorScheme) private var scheme
+    @Environment(\.colorSchemeContrast) private var contrast
+    func makeBody(configuration: Configuration) -> some View {
+        if !active {
+            configuration.label
+        } else {
+            let strong = highContrast || contrast == .increased
+            let stopInk: Color = enabled ? (scheme == .dark ? Color(red: 1, green: 0.65, blue: 0.65) : Color(red: 0.65, green: 0.05, blue: 0.08)) : .secondary
+            let ink: Color = stop ? stopInk : .primary
+            let fill = stop ? Color(uiColor: .secondarySystemBackground) : color.background(scheme, highContrast: strong)
+            let border: Color = stop ? stopInk : (strong ? .primary : color.accent.opacity(enabled ? 0.8 : 0.4))
+            configuration.label.padding(.horizontal, 10).padding(.vertical, 8)
+                .foregroundStyle(ink)
+                .background(fill, in: RoundedRectangle(cornerRadius: 12))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 12).strokeBorder(border, lineWidth: strong ? 2 : 1)
+                        .accessibilityHidden(true)
+                }
+                .opacity(configuration.isPressed ? 0.8 : 1)
+        }
+    }
+}
