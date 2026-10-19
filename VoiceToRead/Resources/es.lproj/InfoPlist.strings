@@ -1,2 +1,2 @@
 "NSMicrophoneUsageDescription" = "VoiceToRead usa el micrófono cuando inicias la escucha o la práctica de pronunciación. El audio de la sesión se guarda solo si Guardar audio está activado. Las tomas de práctica son temporales.";
-"NSSpeechRecognitionUsageDescription" = "VoiceToRead reconoce voz en inglés o español en tu dispositivo para subtítulos y reconocimiento opcional de palabras en la práctica. Se requiere compatibilidad local; la aplicación no envía audio a un servidor.";
+"NSSpeechRecognitionUsageDescription" = "VoiceToRead reconoce voz en el idioma compatible que elijas en tu dispositivo para subtítulos y reconocimiento opcional de palabras en la práctica. Se requiere compatibilidad local; la aplicación no envía audio a un servidor.";

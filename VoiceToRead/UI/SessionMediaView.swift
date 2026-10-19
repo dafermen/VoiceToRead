@@ -864,8 +864,8 @@ struct PlaybackTextCard: View {
     @Environment(\.colorScheme) private var cardScheme
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .top) {
+        VStack(alignment: .leading, spacing: edit == nil ? 8 : 4) {
+            HStack(alignment: .center) {
                 Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
                     .font(.caption.weight(.semibold))
                 Spacer(minLength: 8)
@@ -874,6 +874,7 @@ struct PlaybackTextCard: View {
                         Image(systemName: "pencil")
                             .frame(minWidth: 44, minHeight: 44)
                             .contentShape(Rectangle())
+                            .padding(.vertical, -8)
                     }
                     .buttonStyle(.plain)
                     .foregroundStyle(Color.accentColor)

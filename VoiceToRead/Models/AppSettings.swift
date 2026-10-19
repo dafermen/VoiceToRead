@@ -15,21 +15,21 @@ enum AppAppearance: String, CaseIterable, Equatable, Hashable, Sendable {
 
 /// Persist a stable locale; unknown/older preferences retain English as the default.
 enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
-    case english = "en-US", spanish = "es-ES", french = "fr-FR", korean = "ko-KR"
+    case english = "en-US", spanish = "es-ES", french = "fr-FR", korean = "ko-KR", japanese = "ja-JP", chinese = "zh-CN"
     var name: String {
-        switch self { case .english: "English"; case .spanish: "Español"; case .french: "Français"; case .korean: "한국어" }
+        switch self { case .english: "English"; case .spanish: "Español"; case .french: "Français"; case .korean: "한국어"; case .japanese: "日本語"; case .chinese: "简体中文" }
     }
     var pickerLabel: LocalizedStringKey {
-        switch self { case .english: "English"; case .spanish: "Español"; case .french: "French · Français"; case .korean: "Korean · 한국어" }
+        switch self { case .english: "English"; case .spanish: "Español"; case .french: "French · Français"; case .korean: "Korean · 한국어"; case .japanese: "Japanese · 日本語"; case .chinese: "Mandarin · 简体中文" }
     }
-    var code: String { String(rawValue.prefix(2)) }
+    var code: String { self == .chinese ? "zh-Hans" : String(rawValue.prefix(2)) }
     /// Used only to interpret old English/Spanish data and provide a safe first choice.
     var defaultTarget: Self { self == .english ? .spanish : .english }
     var mode: TranscriptLanguage {
-        switch self { case .english: .english; case .spanish: .spanish; case .french: .french; case .korean: .korean }
+        switch self { case .english: .english; case .spanish: .spanish; case .french: .french; case .korean: .korean; case .japanese: .japanese; case .chinese: .chinese }
     }
     var greeting: String {
-        switch self { case .english: "Hello"; case .spanish: "Hola"; case .french: "Bonjour"; case .korean: "안녕하세요" }
+        switch self { case .english: "Hello"; case .spanish: "Hola"; case .french: "Bonjour"; case .korean: "안녕하세요"; case .japanese: "こんにちは"; case .chinese: "你好" }
     }
 }
 
@@ -161,14 +161,18 @@ final class AppSettings {
     var spanishColor: LanguageColor { didSet { defaults.set(spanishColor.rawValue, forKey: "spanishLanguageColor") } }
     var frenchColor: LanguageColor { didSet { defaults.set(frenchColor.rawValue, forKey: "frenchLanguageColor") } }
     var koreanColor: LanguageColor { didSet { defaults.set(koreanColor.rawValue, forKey: "koreanLanguageColor") } }
+    var japaneseColor: LanguageColor { didSet { defaults.set(japaneseColor.rawValue, forKey: "japaneseLanguageColor") } }
+    var chineseColor: LanguageColor { didSet { defaults.set(chineseColor.rawValue, forKey: "chineseLanguageColor") } }
     func color(for language: CaptureLanguage) -> LanguageColor {
-        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor }
+        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
     }
-    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green; frenchColor = .purple; koreanColor = .orange }
+    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green; frenchColor = .purple; koreanColor = .orange; japaneseColor = .purple; chineseColor = .orange }
     var transcriptionLanguage: String { captureLanguage.rawValue }
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        japaneseColor = LanguageColor(rawValue: defaults.string(forKey: "japaneseLanguageColor") ?? "") ?? .purple
+        chineseColor = LanguageColor(rawValue: defaults.string(forKey: "chineseLanguageColor") ?? "") ?? .orange
         frenchColor = LanguageColor(rawValue: defaults.string(forKey: "frenchLanguageColor") ?? "") ?? .purple
         koreanColor = LanguageColor(rawValue: defaults.string(forKey: "koreanLanguageColor") ?? "") ?? .orange
         englishColor = LanguageColor(rawValue: defaults.string(forKey: "englishLanguageColor") ?? "") ?? .blue

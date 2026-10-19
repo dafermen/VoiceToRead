@@ -154,7 +154,7 @@ struct AppRootView: View {
                 return
             }
             if ProcessInfo.processInfo.arguments.contains("--ui-test-review") {
-                for key in ["conversationFirstLanguage", "conversationSecondLanguage", "frenchLanguageColor", "koreanLanguageColor", "captureLanguage", "translationLanguage", "englishLanguageColor", "spanishLanguageColor", "conversationMode", "conversationTurnMode", "playbackAtMyPace", "playbackLanguagePreference", "playbackLanguageGap", "originalPlaybackSpeed", "translationSpeechSpeed"] {
+                for key in ["conversationFirstLanguage", "conversationSecondLanguage", "frenchLanguageColor", "koreanLanguageColor", "japaneseLanguageColor", "chineseLanguageColor", "captureLanguage", "translationLanguage", "englishLanguageColor", "spanishLanguageColor", "conversationMode", "conversationTurnMode", "playbackAtMyPace", "playbackLanguagePreference", "playbackLanguageGap", "originalPlaybackSpeed", "translationSpeechSpeed"] {
                     UserDefaults.standard.removeObject(forKey: key)
                 }
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-communication"), forKey: "conversationHome")

@@ -203,6 +203,22 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testJapaneseAndChineseConversationSelectors() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launch()
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
+        app.buttons["speakTranslateEntry"].tap()
+        app.buttons["conversationFirstLanguage"].tap()
+        app.buttons["Japanese · 日本語"].tap()
+        app.buttons["conversationSecondLanguage"].tap()
+        app.buttons["Mandarin · 简体中文"].tap()
+        XCTAssertTrue(app.buttons["conversationTurn-ja"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["conversationTurn-zh-Hans"].exists)
+        app.terminate()
+    }
+
+    @MainActor
     func testConversationFrenchAndKoreanPairAndColors() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]

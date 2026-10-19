@@ -6,6 +6,23 @@ import SwiftUI
 
 @MainActor
 final class AppSettingsTests: XCTestCase {
+    func testJapaneseAndSimplifiedChineseSettingsSurviveReopening() {
+        let name = UUID().uuidString
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults)
+        settings.captureLanguage = .japanese
+        settings.translationLanguage = .chinese
+        settings.japaneseColor = .green
+        settings.chineseColor = .blue
+        let reopened = AppSettings(defaults: defaults)
+        XCTAssertEqual(reopened.captureLanguage, .japanese)
+        XCTAssertEqual(reopened.translationLanguage, .chinese)
+        XCTAssertEqual(reopened.color(for: .japanese), .green)
+        XCTAssertEqual(reopened.color(for: .chinese), .blue)
+        XCTAssertEqual(reopened.interfaceLanguage, settings.interfaceLanguage)
+    }
+
 
     func testConversationHomeDefaultsAndReversiblePreferencePreserveCaptureSettings() {
         let name = UUID().uuidString; let defaults = UserDefaults(suiteName: name)!

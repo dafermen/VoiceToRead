@@ -64,7 +64,7 @@ struct CaptionScreen: View {
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, target: settings.translationLanguage, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
-                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor)
+                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor)
                             .id(model.language.rawValue + settings.translationLanguage.rawValue)
                     } else { transcript }
                 }

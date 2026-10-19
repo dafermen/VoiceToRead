@@ -442,8 +442,10 @@ struct LiveSpanishView: View {
     var spanishColor: LanguageColor = .green
     var frenchColor: LanguageColor = .purple
     var koreanColor: LanguageColor = .orange
+    var japaneseColor: LanguageColor = .purple
+    var chineseColor: LanguageColor = .orange
     private func color(for language: CaptureLanguage) -> LanguageColor {
-        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor }
+        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
     }
     @State private var buffer = LiveTranslationBuffer()
     @State private var job: TranslationJob?

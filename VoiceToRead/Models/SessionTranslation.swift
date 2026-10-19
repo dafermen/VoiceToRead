@@ -51,10 +51,10 @@ struct TranslationSnapshot: Codable, Equatable, Sendable {
 }
 
 enum TranscriptLanguage: String, CaseIterable, Identifiable {
-    case english = "English", spanish = "Español", french = "Français", korean = "한국어", both = "Both"
+    case english = "English", spanish = "Español", french = "Français", korean = "한국어", japanese = "日本語", chinese = "简体中文", both = "Both"
     var id: Self { self }
     var fileSuffix: String {
-        switch self { case .english: "en"; case .spanish: "es"; case .french: "fr"; case .korean: "ko"; case .both: "bilingual" }
+        switch self { case .english: "en"; case .spanish: "es"; case .french: "fr"; case .korean: "ko"; case .japanese: "ja"; case .chinese: "zh-Hans"; case .both: "bilingual" }
     }
 }
 
@@ -123,15 +123,17 @@ enum TranslatedSubtitles {
         var result: [SubtitleCue] = []
         for paragraph in snapshot.source {
             let cues = grouped[paragraph.id] ?? []
-            let words = (spanish[paragraph.id] ?? "").split(whereSeparator: \.isWhitespace)
-            let total = cues.reduce(0) { $0 + $1.text.split(whereSeparator: \.isWhitespace).count }
+            let translatedText = spanish[paragraph.id] ?? ""
+            let words = SubtitleExport.textUnits(translatedText)
+            let separator = SubtitleExport.containsUnspacedScript(translatedText) ? "" : " "
+            let total = cues.reduce(0) { $0 + SubtitleExport.textUnits($1.text).count }
             guard total > 0 else { continue }
             var offset = 0
             for cue in cues {
                 let start = offset * words.count / total
-                offset += cue.text.split(whereSeparator: \.isWhitespace).count
+                offset += SubtitleExport.textUnits(cue.text).count
                 let end = offset * words.count / total
-                let translated = words[start..<end].joined(separator: " ")
+                let translated = words[start..<end].joined(separator: separator)
                 let text = mode == .both ? cue.text + (translated.isEmpty ? "" : "\n" + translated) : translated
                 guard !text.isEmpty else { continue }
                 result.append(SubtitleCue(id: cue.id, paragraphID: cue.paragraphID,

@@ -5,8 +5,31 @@ import SwiftData
 
 @MainActor
 final class TranslationTests: XCTestCase {
+    func testJapaneseAndChineseSubtitlesPreserveUnspacedTextAcrossCues() throws {
+        for language in [CaptureLanguage.japanese, .chinese] {
+            let text = String(repeating: language == .japanese ? "日本語の字幕を読みます。" : "我们一起阅读中文字幕。", count: 12)
+            let paragraph = ReviewParagraph(id: UUID(), text: text)
+            let timings = [paragraph.id.uuidString: CaptionTiming(start: 0, end: 18, words: [])]
+            let cues = SubtitleExport.cues(paragraphs: [paragraph], timings: timings)
+            XCTAssertGreaterThan(cues.count, 1)
+            XCTAssertEqual(cues.map(\.text).joined().replacingOccurrences(of: "\n", with: ""), text)
+            XCTAssertTrue(cues.allSatisfy { $0.end > $0.start && $0.text.count <= 77 })
+            for pair in zip(cues, cues.dropFirst()) { XCTAssertLessThanOrEqual(pair.0.end, pair.1.start) }
+            let translation = String(repeating: "你好。こんにちは。", count: 9)
+            let snapshot = TranslationSnapshot(source: [paragraph], generated: [.init(id: paragraph.id, text: translation)],
+                sourceLocale: language.rawValue, targetLocale: language == .japanese ? "zh-CN" : "ja-JP")
+            let translated = TranslatedSubtitles.cues(snapshot: snapshot, timings: timings, mode: snapshot.target.mode)
+            XCTAssertEqual(translated.map(\.text).joined(), translation)
+            XCTAssertTrue(SubtitleExport.render(translated, format: .vtt).hasPrefix("WEBVTT"))
+        }
+        XCTAssertEqual(CaptureLanguage.chinese.code, "zh-Hans")
+        XCTAssertEqual(CaptureLanguage.chinese.rawValue, "zh-CN")
+        XCTAssertEqual(CaptureLanguage.japanese.code, "ja")
+        XCTAssertEqual(PracticeRecognition.words("こんにちは 世界"), PracticeRecognition.words("こんにちは世界"))
+    }
 
-    func testAllTwelveLanguageDirectionsKeepTextVoiceAndExportRoles() throws {
+
+    func testAllLanguageDirectionsKeepTextVoiceAndExportRoles() throws {
         for sourceLanguage in CaptureLanguage.allCases {
             for target in CaptureLanguage.allCases where target != sourceLanguage {
                 let source = [ReviewParagraph(id: UUID(), text: sourceLanguage.greeting)]

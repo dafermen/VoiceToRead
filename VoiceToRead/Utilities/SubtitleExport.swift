@@ -13,6 +13,17 @@ enum SubtitleFormat: String, CaseIterable { case srt, vtt }
 /// Funciones puras: transforman párrafos revisados y tiempos en cues/archivos sin acceder al disco.
 /// No inventan sincronización para sesiones antiguas que no tienen tiempos guardados.
 enum SubtitleExport {
+    /// Character units preserve scripts without word spaces, including punctuation.
+    static func containsUnspacedScript(_ text: String) -> Bool {
+        text.unicodeScalars.contains {
+            (0x3040...0x30FF).contains($0.value) || (0x3400...0x9FFF).contains($0.value) ||
+            (0xF900...0xFAFF).contains($0.value) || (0x20000...0x3134F).contains($0.value)
+        }
+    }
+    static func textUnits(_ text: String) -> [String] {
+        containsUnspacedScript(text) ? text.map { String($0) } : text.split(whereSeparator: \.isWhitespace).map(String.init)
+    }
+
     /// Corrected text keeps its paragraph audio range. Word timing is retained
     /// when words match; inserted/replaced words are distributed over that range.
     static func cues(paragraphs: [ReviewParagraph], timings: [String: CaptionTiming]) -> [SubtitleCue] {
@@ -20,13 +31,14 @@ enum SubtitleExport {
         for paragraph in paragraphs {
             guard let timing = timings[paragraph.id.uuidString], timing.start.isFinite, timing.end.isFinite,
                   timing.start >= 0, timing.end > timing.start else { continue }
-            let tokens = paragraph.text.split(whereSeparator: \.isWhitespace).map(String.init)
+            let tokens = textUnits(paragraph.text)
+            let separator = containsUnspacedScript(paragraph.text) ? "" : " "
             guard !tokens.isEmpty else { continue }
             let native = timing.words.filter {
                 $0.start.isFinite && $0.end.isFinite && $0.end > $0.start &&
                 $0.start >= timing.start && $0.end <= timing.end + 0.05
             }.flatMap { word -> [TimedWord] in
-                let pieces = word.text.split(whereSeparator: \.isWhitespace).map(String.init)
+                let pieces = textUnits(word.text)
                 return pieces.enumerated().map { index, text in
                     let step = (word.end - word.start) / Double(pieces.count)
                     return TimedWord(text: text, start: word.start + Double(index) * step,
@@ -47,14 +59,14 @@ enum SubtitleExport {
             var group: [TimedWord] = []
             func emit() {
                 guard let first = group.first, let last = group.last else { return }
-                let text = wrapped(group.map(\.text).joined(separator: " "))
+                let text = wrapped(group.map(\.text).joined(separator: separator))
                 result.append(SubtitleCue(id: result.count, paragraphID: paragraph.id,
                     start: first.start, end: max(first.start + 0.001, last.end), text: text))
                 group = []
             }
             for word in words {
                 if let first = group.first, let last = group.last,
-                   group.map(\.text).joined(separator: " ").count + word.text.count + 1 > 76 ||
+                   group.map(\.text).joined(separator: separator).count + word.text.count + 1 > 76 ||
                    word.end - first.start > 5 || word.start - last.end > 0.8 { emit() }
                 group.append(word)
             }
@@ -93,6 +105,11 @@ enum SubtitleExport {
             .replacingOccurrences(of: "<", with: "&lt;").replacingOccurrences(of: ">", with: "&gt;")
     }
     private static func wrapped(_ text: String) -> String {
+        if containsUnspacedScript(text) {
+            guard text.count > 40 else { return text }
+            let split = text.index(text.startIndex, offsetBy: 40)
+            return String(text[..<split]) + "\n" + String(text[split...])
+        }
         let words = text.split(separator: " ")
         var lines = [""]
         for word in words {

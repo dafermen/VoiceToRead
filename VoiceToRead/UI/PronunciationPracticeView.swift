@@ -5,7 +5,10 @@ import Speech
 /// A text match describes recognition, never pronunciation quality or a phoneme score.
 enum PracticeRecognition {
     static func words(_ text: String) -> [String] {
-        text.lowercased().replacingOccurrences(of: "’", with: "'")
+        if SubtitleExport.containsUnspacedScript(text) {
+            return text.lowercased().filter { $0.isLetter || $0.isNumber }.map { String($0) }
+        }
+        return text.lowercased().replacingOccurrences(of: "’", with: "'")
             .split(whereSeparator: { !$0.isLetter && !$0.isNumber && $0 != "'" }).map(String.init)
     }
     static func matches(_ heard: String, target: String) -> Bool {
@@ -14,10 +17,11 @@ enum PracticeRecognition {
     }
     /// Short chunks avoid a long, tiring recording. Single words are also selectable.
     static func prompts(_ text: String) -> [String] {
-        let words = text.split(whereSeparator: \.isWhitespace).map(String.init)
+        let words = SubtitleExport.textUnits(text)
+        let separator = SubtitleExport.containsUnspacedScript(text) ? "" : " "
         var values: [String] = []
         for start in stride(from: 0, to: words.count, by: 8) {
-            values.append(words[start..<min(start + 8, words.count)].joined(separator: " "))
+            values.append(words[start..<min(start + 8, words.count)].joined(separator: separator))
         }
         values += words.map { $0.trimmingCharacters(in: .punctuationCharacters) }.filter { !$0.isEmpty }
         var seen = Set<String>()
