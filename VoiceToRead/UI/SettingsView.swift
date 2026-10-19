@@ -501,7 +501,7 @@ struct LanguagePickerControl: View {
     @Environment(\.verticalSizeClass) private var verticalSize
     @Environment(\.dynamicTypeSize) private var typeSize
     var body: some View {
-        (typeSize.isAccessibilitySize || stackedRole ? AnyLayout(VStackLayout(alignment: .leading, spacing: 6)) : AnyLayout(HStackLayout(spacing: 8))) {
+        (typeSize.isAccessibilitySize || stackedRole ? AnyLayout(VStackLayout(alignment: stackedRole ? .center : .leading, spacing: 6)) : AnyLayout(HStackLayout(spacing: 8))) {
             if showRole && !(stackedRole && verticalSize == .compact && !typeSize.isAccessibilitySize) { Text(title).font(stackedRole ? .caption : .body); if !typeSize.isAccessibilitySize && !stackedRole { Spacer(minLength: 8) } }
             Menu {
                 Picker(title, selection: $selection) {
@@ -510,14 +510,24 @@ struct LanguagePickerControl: View {
             } label: {
                 HStack(spacing: 6) {
                     Text(selection.pickerLabel).fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(stackedRole ? .center : .leading)
                     Image(systemName: "chevron.down").font(.system(size: 12, weight: .semibold)).accessibilityHidden(true)
                 }.font(.body).padding(.horizontal, 10).frame(minHeight: 44)
+                    .frame(maxWidth: stackedRole ? .infinity : nil)
                     .foregroundStyle(Color.accentColor)
                     .background(Color.accentColor.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
                     .contentShape(RoundedRectangle(cornerRadius: 10))
             }.buttonStyle(.plain).accessibilityLabel(title).accessibilityValue(Text(selection.pickerLabel))
+                .alignmentGuide(.languagePickerCenter) { $0[VerticalAlignment.center] }
         }
     }
+}
+
+private extension VerticalAlignment {
+    enum LanguagePickerCenter: AlignmentID {
+        static func defaultValue(in dimensions: ViewDimensions) -> CGFloat { dimensions[VerticalAlignment.center] }
+    }
+    static let languagePickerCenter = VerticalAlignment(LanguagePickerCenter.self)
 }
 
 /// Both Home modes keep the same language columns, margins and status slot.
@@ -531,10 +541,10 @@ struct CommunicationLanguagePair<Left: View, Right: View>: View {
         if size.isAccessibilitySize {
             VStack(alignment: .leading, spacing: 12) { left(); right() }
         } else {
-            HStack(alignment: .bottom, spacing: 12) {
-                left().frame(maxWidth: .infinity, alignment: .leading)
+            HStack(alignment: .languagePickerCenter, spacing: 12) {
+                left().frame(maxWidth: .infinity, alignment: .center)
                 Image(systemName: symbol).frame(width: 24, height: 44).accessibilityHidden(true)
-                right().frame(maxWidth: .infinity, alignment: .leading)
+                right().frame(maxWidth: .infinity, alignment: .center)
             }
         }
     }

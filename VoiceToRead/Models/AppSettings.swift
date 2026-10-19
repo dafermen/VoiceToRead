@@ -242,6 +242,8 @@ struct ReaderPaperOptions: View {
             }.accessibilityIdentifier("readerPaperPicker")
             Toggle("Renglones de cuaderno", isOn: $settings.ruledPaper)
                 .accessibilityIdentifier("ruledPaperToggle")
+            Text("Background color applies to the reading area in Home → Listen. Language cards keep their own colors.")
+                .font(.caption).foregroundStyle(.secondary)
             Text("Los colores claros usan texto oscuro. Alto contraste tiene prioridad y oculta los renglones.")
                 .font(.caption).foregroundStyle(.secondary)
         }
