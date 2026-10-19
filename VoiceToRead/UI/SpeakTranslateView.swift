@@ -239,7 +239,6 @@ struct SpeakTranslateView: View {
     @AppStorage("conversationTurnMode") private var savedMode = SpeakTranslateModel.Mode.byButton.rawValue
     @Environment(\.colorScheme) private var scheme
     @State private var showingOptions = false
-    @State private var pendingNewConversation = false
     @State private var confirmNewConversation = false
     @State private var fullScreen = false
     @State private var editor: ConversationEdit?
@@ -312,10 +311,16 @@ struct SpeakTranslateView: View {
                         }
                         messageCards
                         secondaryActions
-                        Button {
-                            editor = ConversationEdit(language: first, target: second, text: "")
-                        } label: { Label("Write a reply", systemImage: "keyboard") }
-                        .frame(minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("conversationWriteReply")
+                        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(alignment: .top, spacing: 16))) {
+                            Button {
+                                editor = ConversationEdit(language: first, target: second, text: "")
+                            } label: { Label("Write a reply", systemImage: "keyboard") }
+                            .frame(minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("conversationWriteReply")
+                            Button("New conversation", systemImage: "plus.bubble") {
+                                if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
+                                else { model.newConversation() }
+                            }.frame(minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("newConversationButton")
+                        }
                         if model.capture.readiness == .missingAssets && model.canEdit {
                             Button("Install speech model") { Task { await model.capture.installAssets() } }
                                 .disabled(model.capture.preparationPending)
@@ -348,13 +353,7 @@ struct SpeakTranslateView: View {
                     .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
             }
         }
-        .sheet(isPresented: $showingOptions, onDismiss: {
-            guard pendingNewConversation else { return }
-            pendingNewConversation = false
-            guard model.canEdit else { return }
-            if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
-            else { model.newConversation() }
-        }) { options }
+        .sheet(isPresented: $showingOptions) { options }
         .confirmationDialog("Start a new conversation?", isPresented: $confirmNewConversation, titleVisibility: .visible) {
             Button("New conversation", role: .destructive) { model.newConversation() }
                 .accessibilityIdentifier("confirmNewConversation")
@@ -463,12 +462,6 @@ struct SpeakTranslateView: View {
     private var options: some View {
         NavigationStack {
             Form {
-                Section {
-                    Button("New conversation", systemImage: "plus.bubble") {
-                        pendingNewConversation = true
-                        showingOptions = false
-                    }.disabled(!model.canEdit).accessibilityIdentifier("newConversationButton")
-                }
                 HomeReadingMenu(settings: settings, fullScreen: $fullScreen) { showingOptions = false }
                 Section {
                     Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {
