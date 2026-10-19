@@ -208,6 +208,7 @@ struct PlaybackParagraph: Identifiable, Equatable {
 private struct ParagraphEditRequest: Identifiable {
     let id = UUID()
     let paragraph: ReviewParagraph
+    let translation: Bool
 }
 
 @MainActor
@@ -341,8 +342,8 @@ struct SessionMediaView: View {
             }
             .sheet(item: $editingParagraph, onDismiss: { editingParagraph = nil }) { request in
                 ParagraphEditorView(paragraph: request.paragraph, savesImmediately: true,
-                    translation: reading != language.mode && currentTranslation) { text in
-                    try saveParagraph(request.paragraph, text: text)
+                    translation: request.translation) { text in
+                    try saveParagraph(request.paragraph, text: text, translation: request.translation)
                     // Clear the presenting item after a successful save so the same
                     // paragraph can open again, even when its stable UUID is unchanged.
                     editingParagraph = nil
@@ -436,12 +437,6 @@ struct SessionMediaView: View {
                 enabled: !audibleParagraphs.isEmpty,
                 previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) })
             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout())) {
-                if let activeParagraphID {
-                    Button { beginParagraphEdit(activeParagraphID) } label: {
-                        Label(editLabel, systemImage: "pencil")
-                            .frame(minHeight: 44).contentShape(Rectangle())
-                    }.labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("editPlaybackParagraphButton")
-                }
                 Spacer()
                 Button { showingPhrases = true } label: {
                     Label("Paragraphs", systemImage: "list.bullet").labelStyle(AccessibleControlLabelStyle())
@@ -456,9 +451,6 @@ struct SessionMediaView: View {
         .padding(.horizontal)
     }
 
-    private var editLabel: LocalizedStringKey {
-        uiKey(reading != language.mode && currentTranslation ? "Edit translation" : "Correct paragraph")
-    }
     private var sourceSelectors: some View {
         HStack {
             Menu {
@@ -495,13 +487,15 @@ struct SessionMediaView: View {
                         if let id = activeParagraphID, let original = reviewed.first(where: { $0.id == id }) {
                             if reading == language.mode || reading == .both {
                                 PlaybackTextCard(text: original.text, language: language, translated: false, settings: settings,
-                                    identifier: "playbackCaption", speaking: isPlaying && !waitingForLanguage && !speakingTranslation)
+                                    identifier: "playbackCaption", speaking: isPlaying && !waitingForLanguage && !speakingTranslation,
+                                    edit: { beginParagraphEdit(id, translation: false) })
                                     .id("original-card")
                             }
                             if reading != language.mode, let translated = snapshot?.translated.first(where: { $0.id == id }) {
                                 PlaybackTextCard(text: translated.text, language: target, translated: true, settings: settings,
                                     identifier: reading == .both ? "playbackTranslationCaption" : "playbackCaption",
-                                    speaking: isPlaying && !waitingForLanguage && speakingTranslation).id("translation-card")
+                                    speaking: isPlaying && !waitingForLanguage && speakingTranslation,
+                                    edit: { beginParagraphEdit(id, translation: true) }).id("translation-card")
                             }
                         } else { Text("Choose a paragraph, then tap Play.").padding() }
                     }.frame(maxWidth: .infinity, alignment: .leading).padding(4)
@@ -694,19 +688,19 @@ struct SessionMediaView: View {
         let values = atMyPace ? [audibleParagraphs[index]] : Array(audibleParagraphs[index...])
         speech.start(values, language: target, speed: speed)
     }
-    private func beginParagraphEdit(_ id: UUID) {
+    private func beginParagraphEdit(_ id: UUID, translation: Bool) {
         sequence.stop(); pausePlayback(); speech.stop(); selectedParagraphID = id
         do {
             let paragraph: ReviewParagraph?
-            if reading != language.mode && currentTranslation {
+            if translation {
                 paragraph = try repository.translation(for: session.id)?.decoded().translated.first { $0.id == id }
             } else { paragraph = reviewed.first { $0.id == id } }
-            editingParagraph = paragraph.map { ParagraphEditRequest(paragraph: $0) }
+            editingParagraph = paragraph.map { ParagraphEditRequest(paragraph: $0, translation: translation) }
         } catch { failure = error.localizedDescription }
     }
     /// Guardar corrige texto por UUID, conserva audio y selección, y nunca reinicia la reproducción.
-    private func saveParagraph(_ paragraph: ReviewParagraph, text: String) throws {
-        if reading != language.mode && currentTranslation {
+    private func saveParagraph(_ paragraph: ReviewParagraph, text: String, translation: Bool) throws {
+        if translation {
             guard var snapshot = try repository.translation(for: session.id)?.decoded(),
                   snapshot.translated.contains(paragraph) else { throw ReviewFailure.sessionChanged }
             snapshot.edits[paragraph.id.uuidString] = text
@@ -862,13 +856,28 @@ struct PlaybackTextCard: View {
     let settings: AppSettings
     var identifier = ""
     var speaking = false
+    var edit: (() -> Void)? = nil
     @Environment(\.colorSchemeContrast) private var cardContrast
     @Environment(\.colorScheme) private var cardScheme
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
-                .font(.caption.weight(.semibold))
+            HStack(alignment: .top) {
+                Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
+                    .font(.caption.weight(.semibold))
+                Spacer(minLength: 8)
+                if let edit {
+                    Button(action: edit) {
+                        Image(systemName: "pencil")
+                            .frame(minWidth: 44, minHeight: 44)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(Color.accentColor)
+                    .accessibilityLabel(uiKey(translated ? "Edit translation" : "Correct paragraph"))
+                    .accessibilityIdentifier(translated ? "editPlaybackTranslationButton" : "editPlaybackOriginalButton")
+                }
+            }
             if speaking { Label("Listening now", systemImage: "speaker.wave.2.fill").font(.caption.weight(.bold)) }
             ReaderParagraph(text: text, points: settings.captionSize * textScale, spacing: settings.lineSpacing,
                             bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)

@@ -1027,7 +1027,7 @@ final class HomeScreenTests: XCTestCase {
         waitForExpectations(timeout: 8)
         let caption = app.staticTexts["playbackCaption"]
         XCTAssertTrue(caption.label.contains("Acmee"), "Finished paragraphs must stay visible")
-        app.buttons["editPlaybackParagraphButton"].tap()
+        app.buttons["editPlaybackOriginalButton"].tap()
         let editor = app.textViews["paragraphEditor"]
         XCTAssertTrue(editor.waitForExistence(timeout: 5))
         editor.tap(); editor.typeText(" Reviewed at my pace.")
@@ -1048,7 +1048,7 @@ final class HomeScreenTests: XCTestCase {
         XCUIDevice.shared.orientation = .landscapeLeft
         defer { XCUIDevice.shared.orientation = .portrait }
         expectation(for: NSPredicate { _, _ in
-            app.frame.width > app.frame.height && app.buttons["editPlaybackParagraphButton"].isHittable
+            app.frame.width > app.frame.height && app.buttons["editPlaybackOriginalButton"].isHittable
         }, evaluatedWith: app)
         waitForExpectations(timeout: 12)
         let landscape = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
@@ -1373,6 +1373,24 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["translatedMediaButton"].tap()
         let play = app.buttons["recordingPlayButton"]
         XCTAssertTrue(play.waitForExistence(timeout: 5))
+        app.buttons["playbackTextMenu"].tap()
+        app.buttons["Both"].tap()
+        for mode in ["Continuous", "At my pace"] {
+            app.buttons[mode].tap()
+            XCTAssertTrue(app.buttons["editPlaybackOriginalButton"].isHittable)
+            XCTAssertTrue(app.buttons["editPlaybackTranslationButton"].isHittable)
+            app.buttons["editPlaybackOriginalButton"].tap()
+            let originalEditor = app.textViews["paragraphEditor"]
+            XCTAssertTrue(originalEditor.waitForExistence(timeout: 5))
+            XCTAssertTrue((originalEditor.value as? String ?? "").contains("Acmee"))
+            XCTAssertFalse((originalEditor.value as? String ?? "").contains("Hola mundo"))
+            app.buttons["Cancel"].tap()
+            expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: originalEditor)
+            waitForExpectations(timeout: 8)
+        }
+        app.buttons["Continuous"].tap()
+        app.buttons["playbackTextMenu"].tap()
+        app.buttons["Translation"].tap()
         play.tap()
         expectation(for: NSPredicate(format: "label == 'Pause'"), evaluatedWith: play)
         waitForExpectations(timeout: 8)
@@ -1386,7 +1404,7 @@ final class HomeScreenTests: XCTestCase {
         let firstPlaybackParagraph = app.buttons["listenPlaybackParagraph-0"]
         XCTAssertTrue(firstPlaybackParagraph.waitForExistence(timeout: 8))
         firstPlaybackParagraph.tap()
-        app.buttons["editPlaybackParagraphButton"].tap()
+        app.buttons["editPlaybackTranslationButton"].tap()
         let playbackEditor = app.textViews["paragraphEditor"]
         XCTAssertTrue(playbackEditor.waitForExistence(timeout: 5))
         playbackEditor.tap(); playbackEditor.typeText(" Corrección durante audio.")
@@ -1395,7 +1413,7 @@ final class HomeScreenTests: XCTestCase {
         // Wait for the editor to leave before trying to reopen it.
         expectation(for: NSPredicate(format: "exists == false"), evaluatedWith: playbackEditor)
         waitForExpectations(timeout: 8)
-        let reopen = app.buttons["editPlaybackParagraphButton"]
+        let reopen = app.buttons["editPlaybackTranslationButton"]
         expectation(for: NSPredicate(format: "hittable == true"), evaluatedWith: reopen)
         waitForExpectations(timeout: 8)
         XCTAssertTrue(app.staticTexts["playbackCaption"].label.contains("Corrección durante audio."))
