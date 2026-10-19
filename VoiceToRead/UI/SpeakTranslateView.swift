@@ -269,9 +269,19 @@ struct SpeakTranslateView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 16) {
                         if model.speaker.state != .idle {
-                            Button("Stop audio", systemImage: "stop.circle.fill") { model.speaker.stop() }
-                                .buttonStyle(.borderedProminent).controlSize(.large)
-                                .labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationStopAudio")
+                            Button { model.speaker.stop() } label: {
+                                Label("Stop audio", systemImage: "stop.circle.fill")
+                                    .labelStyle(.titleAndIcon)
+                                    .font(.subheadline.weight(.semibold))
+                                    .foregroundStyle(Color.primary)
+                                    .padding(.horizontal, 16)
+                                    .frame(minHeight: 44)
+                                    .background(Color(uiColor: .secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
+                                    .contentShape(RoundedRectangle(cornerRadius: 12))
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityIdentifier("conversationStopAudio")
+                            .frame(maxWidth: .infinity, alignment: .center)
                         } else if model.busy {
                             Button("Cancel", systemImage: "xmark.circle") { model.cancel() }
                                 .disabled(model.phase == .cancelling).frame(minHeight: 44)
