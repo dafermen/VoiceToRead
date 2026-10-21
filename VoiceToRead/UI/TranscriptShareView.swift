@@ -79,6 +79,7 @@ struct TranscriptShareView: View {
                     Spacer()
                     Button("Share", systemImage: "square.and.arrow.up") { share() }
                 }
+                .labelStyle(InlinePreferenceLabelStyle())
                 .font(.subheadline).frame(minHeight: 50).padding(.horizontal)
                 .disabled(prepared == nil || preparedRequest != request || preparing || !hasText)
             }

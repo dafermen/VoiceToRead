@@ -255,6 +255,33 @@ final class CaptionViewModelTests: XCTestCase {
         XCTAssertTrue(model.permissionDenied)
     }
 
+    func testLateReadinessCannotUndoSuccessfulInstallation() async {
+        let speech = MockSpeech(); speech.status = .missingAssets; speech.delayReadiness = true
+        let model = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let oldCheck = Task { await model.checkReadiness() }
+        while speech.pendingReadiness == nil { await Task.yield() }
+        await model.installAssets()
+        XCTAssertEqual(model.readiness, .ready)
+        speech.pendingReadiness?.resume(returning: .missingAssets); speech.pendingReadiness = nil
+        await oldCheck.value
+        XCTAssertEqual(model.readiness, .ready)
+        XCTAssertEqual(speech.starts, 0)
+        XCTAssertFalse(model.preparationPending)
+    }
+
+    func testIncompleteInstallationShowsProblemAndCanBeRetried() async {
+        let speech = MockSpeech(); speech.status = .missingAssets; speech.installationCompletes = false
+        let model = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        await model.installAssets()
+        guard case .problem = model.readiness else { return XCTFail("An incomplete installation must explain the problem") }
+        XCTAssertFalse(model.preparationPending)
+        speech.installationCompletes = true
+        await model.installAssets()
+        XCTAssertEqual(model.readiness, .ready)
+        XCTAssertEqual(speech.installations, 2)
+        XCTAssertEqual(speech.starts, 0)
+    }
+
     func testMissingModelNeverStartsCaptureOrInstallsImplicitly() async {
         let speech = MockSpeech()
         speech.status = .missingAssets
@@ -324,6 +351,10 @@ private final class MockSpeech: SpeechTranscribing {
     var status: SpeechReadiness = .ready
     var starts = 0
     var installations = 0
+    var installedLanguages: [CaptureLanguage] = []
+    var installationCompletes = true
+    var delayReadiness = false
+    var pendingReadiness: CheckedContinuation<SpeechReadiness, Never>?
     var cancellations = 0
     var delayStart = false
     var finalText = "Final sentence."
@@ -332,8 +363,17 @@ private final class MockSpeech: SpeechTranscribing {
     private var output: AsyncThrowingStream<TranscriptionUpdate, Error>.Continuation?
     private var runID = UUID()
 
-    func readiness() async -> SpeechReadiness { status }
-    func installAssets() async throws { installations += 1; status = .ready }
+    func readiness() async -> SpeechReadiness {
+        if delayReadiness {
+            delayReadiness = false
+            return await withCheckedContinuation { pendingReadiness = $0 }
+        }
+        return status
+    }
+    func installAssets() async throws {
+        installations += 1; installedLanguages.append(language)
+        if installationCompletes { status = .ready }
+    }
     func start() async throws -> AsyncThrowingStream<TranscriptionUpdate, Error> {
         starts += 1
         if delayStart { await withCheckedContinuation { pendingStart = $0 } }
@@ -361,6 +401,32 @@ private final class MockSpeech: SpeechTranscribing {
 
 @MainActor
 final class SpeakTranslateTests: XCTestCase {
+    func testExplicitModelPreparationUsesSelectedLanguageAndKeepsConversation() async throws {
+        let speech = MockSpeech()
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        await capture.start(); await capture.stop()
+        XCTAssertEqual(capture.state, .ended)
+        let model = SpeakTranslateModel(capture: capture, speaker: TranslationSpeechPlayer(output: ConversationTestOutput(), activate: {}, deactivate: {}), supported: { true })
+        model.selectLanguage(.french, target: .korean)
+        model.edit("Bonjour"); model.translate(speakWhenDone: false)
+        let job = try XCTUnwrap(model.job)
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "안녕하세요") }))
+        speech.status = .missingAssets
+        model.prepareSpeechModel()
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(capture.language, .french)
+        XCTAssertEqual(capture.readiness, .missingAssets)
+        XCTAssertEqual(speech.installations, 0, "Preparation does not silently download a model")
+        model.prepareSpeechModel(install: true)
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(speech.installedLanguages, [.french])
+        XCTAssertEqual(capture.readiness, .ready)
+        XCTAssertEqual(model.source, "Bonjour")
+        XCTAssertEqual(model.translated, "안녕하세요")
+        XCTAssertEqual(model.target, .korean)
+        XCTAssertEqual(speech.starts, 1, "Installing must not start another microphone run")
+    }
+
     func testPauseRequiresRecognizedTextQuietAndStableWords() {
         var detector = ConversationPause()
         XCTAssertFalse(detector.shouldFinish(text: "", level: 0, now: 100, delay: 3))

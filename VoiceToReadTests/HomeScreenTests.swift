@@ -203,6 +203,33 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testConversationActionNamesFollowSettingAndKeepAccessibleTitles() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-conversation"]
+        app.launch()
+        let entry = app.buttons["speakTranslateEntry"]
+        XCTAssertTrue(entry.waitForExistence(timeout: 20)); entry.tap()
+        let write = app.buttons["conversationWriteReply"]
+        XCTAssertTrue(write.waitForExistence(timeout: 5))
+        XCTAssertFalse(write.staticTexts["visibleControlName"].exists)
+        XCTAssertEqual(write.label, "Write a reply")
+        XCTAssertEqual(app.buttons["newConversationButton"].label, "New conversation")
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].exists)
+        app.navigationBars["Conversation"].buttons["Done"].tap()
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        app.tabBars.buttons["Home"].tap(); entry.tap()
+        XCTAssertTrue(write.staticTexts["visibleControlName"].waitForExistence(timeout: 5))
+        app.navigationBars["Conversation"].buttons["Done"].tap()
+        app.tabBars.buttons["Settings"].tap()
+        tapPreferenceSwitch(app.switches["buttonNamesToggle"])
+        app.tabBars.buttons["Home"].tap(); entry.tap()
+        XCTAssertTrue(write.waitForExistence(timeout: 5))
+        XCTAssertFalse(write.staticTexts["visibleControlName"].exists)
+        XCTAssertEqual(write.label, "Write a reply")
+    }
+
+    @MainActor
     func testConversationFullScreenKeepsControlsAndRestoresHome() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
@@ -913,20 +940,23 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
         app.tabBars.buttons["Sessions"].tap()
         let row = app.staticTexts["Review sample"]
-        row.swipeLeft()
-        let protect = app.buttons["protectSessionAction"]
+        row.swipeRight()
+        let protect = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeFavoriteSession-")).firstMatch
         XCTAssertTrue(protect.waitForExistence(timeout: 5))
-        let delete = app.buttons["deleteSessionAction"]
-        XCTAssertTrue(delete.isEnabled)
         protect.tap()
-        XCTAssertFalse(delete.isEnabled)
-        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
-        shot.name = "Protected-circular-actions"; shot.lifetime = .keepAlways; add(shot)
+        XCTAssertTrue(row.exists)
+        row.swipeLeft()
+        let delete = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeDeleteSession-")).firstMatch
+        XCTAssertFalse(delete.exists, "A protected favorite cannot be deleted")
+        row.swipeRight()
+        XCTAssertTrue(protect.waitForExistence(timeout: 5))
         protect.tap()
         app.buttons["confirmRemoveSessionProtection"].tap()
-        XCTAssertTrue(delete.isEnabled)
         XCTAssertTrue(row.exists, "Removing protection must preserve the session")
+        row.swipeLeft()
+        XCTAssertTrue(delete.waitForExistence(timeout: 5))
         delete.tap()
+        XCTAssertTrue(row.exists, "Deletion waits for confirmation")
         app.buttons["confirmDeleteSession"].tap()
         XCTAssertFalse(row.waitForExistence(timeout: 2))
     }

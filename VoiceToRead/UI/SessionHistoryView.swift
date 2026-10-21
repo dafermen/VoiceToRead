@@ -192,7 +192,7 @@ struct SessionHistoryView: View {
         }
     }
 
-    /// A horizontal gesture only reveals actions: deleting always needs a separate tap and confirmation.
+    /// Native swipes reveal actions; neither direction commits on a full swipe.
     /// The actions button and VoiceOver actions offer the same path without requiring a swipe.
     private func sessionLink(_ session: ConferenceSession) -> some View {
         HStack(spacing: 8) {
@@ -265,11 +265,19 @@ struct SessionHistoryView: View {
         }
         }
         .contentShape(Rectangle())
-        .simultaneousGesture(DragGesture(minimumDistance: 25).onEnded { value in
-            guard abs(value.translation.width) > abs(value.translation.height) * 1.5 else { return }
-            if value.translation.width < -40 { revealActions(session.id) }
-            else if value.translation.width > 40 { revealActions(nil) }
-        })
+        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+            if !drafts.contains(where: { $0.sessionID == session.id }) {
+                Button(uiKey(isFavorite(session) ? "Remove protection" : "Favorite & protect"), systemImage: isFavorite(session) ? "star.slash" : "star.fill") {
+                    toggleProtection(session)
+                }.tint(.yellow).accessibilityIdentifier("swipeFavoriteSession-" + session.id.uuidString)
+            }
+        }
+        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+            if canDelete(session) {
+                Button("Delete", systemImage: "trash") { requestDeletion(session) }
+                    .tint(.red).accessibilityIdentifier("swipeDeleteSession-" + session.id.uuidString)
+            }
+        }
         .accessibilityElement(children: .contain)
         .accessibilityActions {
             Button("Session actions") { revealActions(session.id) }
@@ -389,7 +397,7 @@ struct SessionDetailView: View {
                             do { try repository.setFavorite(true, for: session) }
                             catch { failure = "Could not update favorite protection. Please try again." }
                         }
-                    }.accessibilityIdentifier("favoriteSessionButton")
+                    }.labelStyle(InlinePreferenceLabelStyle()).accessibilityIdentifier("favoriteSessionButton")
                     if protected { Text("Remove protection before deleting the session or its audio.").font(.caption) }
                 }
                 Button("Audio & subtitles", systemImage: "waveform") { playbackParagraphID = nil; showingMedia = true }

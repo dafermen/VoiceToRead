@@ -299,3 +299,22 @@ struct AccessibilityScrollingContent<Content: View>: View {
         else { content() }
     }
 }
+
+/// Preserve inline labels when names are on; icon-only labels keep their accessible title.
+struct InlinePreferenceLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        InlinePreferenceLabel(configuration: configuration)
+    }
+}
+private struct InlinePreferenceLabel: View {
+    @Environment(AppSettings.self) private var settings
+    let configuration: LabelStyleConfiguration
+    var body: some View {
+        if settings.showButtonNames {
+            Label { configuration.title.accessibilityIdentifier("visibleControlName") } icon: { configuration.icon }
+                .labelStyle(.titleAndIcon)
+        } else {
+            Label { configuration.title } icon: { configuration.icon }.labelStyle(.iconOnly)
+        }
+    }
+}

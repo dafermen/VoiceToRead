@@ -644,11 +644,11 @@ struct CaptionScreen: View {
 
     @ViewBuilder private func captureActionLabel(_ title: String, symbol: String, prominent: Bool) -> some View {
         if isFullScreen {
-            Label(LocalizedStringKey(title), systemImage: symbol).labelStyle(.titleAndIcon)
+            Label(LocalizedStringKey(title), systemImage: symbol).labelStyle(InlinePreferenceLabelStyle())
                 .font(.subheadline).frame(minWidth: 44, minHeight: 44)
         } else if communicationLayout {
             Label(LocalizedStringKey(title), systemImage: symbol)
-                .labelStyle(.titleAndIcon).font(.headline)
+                .labelStyle(InlinePreferenceLabelStyle()).font(.headline)
                 .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 .padding(.vertical, 6)
                 .frame(maxWidth: .infinity, minHeight: 64, maxHeight: .infinity)

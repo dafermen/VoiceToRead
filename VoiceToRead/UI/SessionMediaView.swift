@@ -507,7 +507,7 @@ struct SessionMediaView: View {
                 if !followingSpeech {
                     Button("Follow audio", systemImage: "arrow.down.to.line") {
                         followingSpeech = true; proxy.scrollTo(highlightedCard, anchor: .top)
-                    }.frame(minHeight: 44).accessibilityIdentifier("followPlaybackAudio")
+                    }.labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44).accessibilityIdentifier("followPlaybackAudio")
                 }
             }
         }.frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,

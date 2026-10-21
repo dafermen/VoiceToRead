@@ -112,7 +112,7 @@ struct EnglishLearningView: View {
                             DisclosureGroup("Original context (saved copy)") { Text(unit.context).textSelection(.enabled) }
                             Text("This copy does not change when you edit the transcript. Audio plays the surrounding phrase.")
                                 .font(.caption).foregroundStyle(.secondary)
-                            Button("Remove from learning", role: .destructive) { removeCurrent() }.buttonStyle(PracticeActionStyle())
+                            Button("Remove from learning", systemImage: "bookmark.slash", role: .destructive) { removeCurrent() }.buttonStyle(PracticeActionStyle())
                         } else {
                             Button("Save expression", systemImage: "text.badge.plus") { player.stop(); editing = unit }
                                 .buttonStyle(PracticeActionStyle()).accessibilityIdentifier("saveLearningExpression")

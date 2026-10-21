@@ -976,3 +976,9 @@
 "Start a new conversation?" = "Start a new conversation?";
 
 "This clears the original and translation. Your languages and settings will stay unchanged." = "This clears the original and translation. Your languages and settings will stay unchanged.";
+
+"Speech model: %@" = "Speech model: %@";
+
+"Preparing selected speech model…" = "Preparing selected speech model…";
+
+"The speech model is still unavailable. Check your internet connection and free storage, then refresh preparation." = "The speech model is still unavailable. Check your internet connection and free storage, then refresh preparation.";

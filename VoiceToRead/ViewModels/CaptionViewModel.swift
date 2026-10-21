@@ -84,6 +84,7 @@ final class CaptionViewModel {
         guard canChooseCaptureOptions, self.language != language else { return }
         self.language = language
         speech.configure(language: language)
+        readinessCheckID = UUID()
         readiness = .checking
     }
 
@@ -108,19 +109,36 @@ final class CaptionViewModel {
         await checkReadiness()
     }
 
+    private var readinessCheckID = UUID()
+    private var installingSpeechAssets = false
+
     func checkReadiness() async {
+        // A foreground refresh must not replace installation progress or a newer result.
+        guard !installingSpeechAssets else { return }
         let selected = language
+        let request = UUID(); readinessCheckID = request
         let result = await speech.readiness()
-        if selected == language { readiness = result }
+        if selected == language && readinessCheckID == request { readiness = result }
     }
 
     func installAssets() async {
         guard !state.active, !state.busy, !preparationPending, readiness != .downloading else { return }
         preparationPending = true
-        defer { preparationPending = false }
+        installingSpeechAssets = true
+        readinessCheckID = UUID()
+        defer { installingSpeechAssets = false; preparationPending = false }
         readiness = .downloading
-        do { try await speech.installAssets(); await checkReadiness() }
-        catch { readiness = .problem(error.localizedDescription) }
+        do {
+            try await speech.installAssets()
+            installingSpeechAssets = false
+            await checkReadiness()
+            if readiness == .missingAssets {
+                readiness = .problem("The speech model is still unavailable. Check your internet connection and free storage, then refresh preparation.")
+            }
+        } catch {
+            readinessCheckID = UUID()
+            readiness = .problem(error.localizedDescription)
+        }
     }
 
     /// Cada intento recibe una generación. Tras un await, esa identidad evita aplicar respuestas
