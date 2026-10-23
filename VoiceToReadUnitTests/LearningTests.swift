@@ -276,3 +276,72 @@ extension LearningTests {
         XCTAssertTrue(TrainingComparison.compare(expected: "", heard: "").expected.isEmpty)
     }
 }
+
+
+extension LearningTests {
+    func testTrainingRoundCountsLatestRecognizedAttemptOncePerPhrase() {
+        let a = UUID(), b = UUID(), c = UUID()
+        var round = EnglishTrainingRound(phraseIDs: [a, b, c])
+        XCTAssertEqual(round.unattemptedCount, 3)
+        round.record(phraseID: a, expected: "Hello, WORLD!", heard: "hello world")
+        round.record(phraseID: b, expected: "I went to school", heard: "I went home")
+        XCTAssertEqual(round.matchedCount, 1)
+        XCTAssertEqual(round.differentIDs, [b])
+        XCTAssertEqual(round.unattemptedCount, 1)
+        round.record(phraseID: a, expected: "Hello world", heard: "Hello world")
+        XCTAssertEqual(round.matchedCount, 1, "Revisiting a phrase must not inflate counts")
+        round.record(phraseID: b, expected: "I went to school", heard: "I went to school.")
+        XCTAssertEqual(round.matchedCount, 2)
+        XCTAssertTrue(round.differentIDs.isEmpty)
+        XCTAssertEqual(round.unattemptedCount, 1)
+        round.record(phraseID: a, expected: "Hello world", heard: "Hello")
+        XCTAssertEqual(round.matchedCount, 1)
+        XCTAssertEqual(round.differentIDs, [a], "Latest valid attempt replaces the previous result")
+    }
+
+    func testTrainingRoundDoesNotTreatMissingRecognitionAsIncorrect() {
+        let a = UUID(), b = UUID()
+        var round = EnglishTrainingRound(phraseIDs: [a, b])
+        round.record(phraseID: a, expected: "Hello", heard: "   ")
+        round.record(phraseID: b, expected: "Hello", heard: "!!!")
+        round.record(phraseID: UUID(), expected: "Hello", heard: "Hello")
+        round.record(phraseID: a, expected: "", heard: "Hello")
+        XCTAssertTrue(round.results.isEmpty)
+        XCTAssertEqual(round.unattemptedCount, 2)
+        XCTAssertTrue(round.differentIDs.isEmpty)
+        round.record(phraseID: a, expected: "Hello", heard: "Goodbye")
+        round.clearResult(for: a)
+        XCTAssertTrue(round.results.isEmpty, "A fresh recorded take must not retain a stale check")
+        XCTAssertEqual(round.unattemptedCount, 2)
+    }
+
+    func testTrainingReviewRoundContainsOnlyDifferencesInOriginalOrder() {
+        let ids = [UUID(), UUID(), UUID(), UUID()]
+        var round = EnglishTrainingRound(phraseIDs: ids)
+        round.record(phraseID: ids[2], expected: "Hello", heard: "Goodbye")
+        round.record(phraseID: ids[0], expected: "Hello", heard: "Goodbye")
+        round.record(phraseID: ids[1], expected: "Hello", heard: "Hello")
+        XCTAssertEqual(round.differentIDs, [ids[0], ids[2]])
+        let review = EnglishTrainingRound(phraseIDs: round.differentIDs)
+        XCTAssertEqual(review.phraseIDs, [ids[0], ids[2]])
+        XCTAssertTrue(review.results.isEmpty)
+        XCTAssertEqual(review.unattemptedCount, 2)
+        XCTAssertEqual(review.matchedCount, 0)
+    }
+
+    func testTrainingRoundDoesNotPersistResultsOrChangeSavedPhrases() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        let training = try XCTUnwrap(store.trainings.first)
+        let file = directory.appendingPathComponent("trainings.json")
+        let before = try Data(contentsOf: file)
+        var round = EnglishTrainingRound(phraseIDs: training.phrases.map(\.id))
+        round.record(phraseID: training.phrases[0].id, expected: "Hello", heard: "Hello")
+        round.record(phraseID: training.phrases[1].id, expected: "Hello", heard: "Goodbye")
+        XCTAssertEqual(round.matchedCount, 1)
+        XCTAssertEqual(round.differentIDs.count, 1)
+        XCTAssertEqual(try Data(contentsOf: file), before)
+        XCTAssertEqual(try EnglishTrainingStore(directory: directory).trainings, store.trainings)
+    }
+}

@@ -1034,3 +1034,21 @@
 
 // Independent Spanish-to-English training
 "Practice" = "Práctica";
+
+// Compact actions and temporary training rounds
+"Train" = "Entrenar";
+"Write" = "Escribir";
+"New" = "Nueva";
+"Trainings stay on this device. Round results are temporary." = "Los entrenamientos se guardan en este dispositivo. Los resultados de cada ronda son temporales.";
+"%lld phrases" = "%lld frases";
+"Editing a Spanish phrase clears only that phrase's English. Unchanged phrases keep their corrections." = "Al editar una frase en español, se borra solo su inglés. Las frases que no cambies conservan sus correcciones.";
+"Stop attempt" = "Detener intento";
+"Stop example" = "Detener ejemplo";
+"The words match!" = "¡Las palabras coinciden!";
+"Review the underlined words and try again." = "Revisa las palabras subrayadas y vuelve a intentarlo.";
+"%lld matched" = "%lld coincidencias";
+"%lld with differences" = "%lld con diferencias";
+"%lld without a recognized attempt" = "%lld sin intento reconocido";
+"Results describe recognized words, not pronunciation quality. Only this round is counted; results are not saved." = "Los resultados describen las palabras reconocidas, no la calidad de la pronunciación. Solo se cuenta esta ronda; los resultados no se guardan.";
+"Phrases with differences" = "Frases con diferencias";
+"Review these phrases" = "Repasar estas frases";

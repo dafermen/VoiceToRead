@@ -171,3 +171,21 @@ enum TrainingComparison {
                 b.enumerated().map { Word(text: $0.element, matched: matchedB.contains($0.offset)) })
     }
 }
+
+
+/// In-memory results for one round. No history, self-assessment or session writes.
+struct EnglishTrainingRound {
+    let phraseIDs: [UUID]
+    private(set) var results: [UUID: Bool] = [:]
+    var matchedCount: Int { results.values.filter { $0 }.count }
+    var differentIDs: [UUID] { phraseIDs.filter { results[$0] == false } }
+    var unattemptedCount: Int { phraseIDs.count - results.count }
+
+    mutating func record(phraseID: UUID, expected: String, heard: String) {
+        guard phraseIDs.contains(phraseID), !PracticeRecognition.words(heard).isEmpty,
+              !PracticeRecognition.words(expected).isEmpty else { return }
+        // Revisiting/retrying a phrase replaces its result rather than adding a count.
+        results[phraseID] = PracticeRecognition.matches(heard, target: expected)
+    }
+    mutating func clearResult(for phraseID: UUID) { results.removeValue(forKey: phraseID) }
+}

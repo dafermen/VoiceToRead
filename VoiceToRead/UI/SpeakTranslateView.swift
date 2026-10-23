@@ -340,15 +340,26 @@ struct SpeakTranslateView: View {
                         }
                         messageCards
                         secondaryActions
-                        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(alignment: .top, spacing: 16))) {
+                        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(alignment: .center, spacing: 8))) {
+                            NavigationLink { EnglishTrainingLibraryView() } label: {
+                                Label("Train", systemImage: "book.closed")
+                            }
+                            .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
+                            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
+                            .disabled(!model.canEdit || model.capture.preparationPending)
+                            .accessibilityLabel("Train English").accessibilityIdentifier("englishTrainingEntry")
                             Button {
                                 editor = ConversationEdit(language: first, target: second, text: "")
-                            } label: { Label("Write a reply", systemImage: "keyboard") }
-                            .labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("conversationWriteReply")
-                            Button("New conversation", systemImage: "plus.bubble") {
+                            } label: { Label("Write", systemImage: "keyboard") }
+                            .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
+                            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
+                            .accessibilityLabel("Write a reply").accessibilityIdentifier("conversationWriteReply")
+                            Button("New", systemImage: "plus.bubble") {
                                 if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
                                 else { model.newConversation() }
-                            }.labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44).disabled(!model.canEdit).accessibilityIdentifier("newConversationButton")
+                            }.labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
+                            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
+                            .accessibilityLabel("New conversation").accessibilityIdentifier("newConversationButton")
                         }
                         speechPreparation
                     }.padding()

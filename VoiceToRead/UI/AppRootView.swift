@@ -380,12 +380,6 @@ struct CommunicationHomeView: View {
                 Text("Listen").tag(true)
             }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
                 .disabled(audioBusy).accessibilityIdentifier("communicationMode")
-                NavigationLink(value: HomeDestination.englishTraining) {
-                    Label("Train English", systemImage: "book.closed")
-                }
-                .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
-                .frame(minHeight: 44).disabled(audioBusy)
-                .accessibilityIdentifier("englishTrainingEntry")
             }
             if listening {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)

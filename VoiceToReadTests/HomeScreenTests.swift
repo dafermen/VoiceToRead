@@ -37,7 +37,7 @@ final class HomeScreenTests: XCTestCase {
         let active = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@", "Pause"), object: capture)
         XCTAssertEqual(XCTWaiter.wait(for: [active], timeout: 10), .completed)
         XCTAssertFalse(mode.buttons["Converse"].isEnabled)
-        XCTAssertFalse(app.buttons["englishTrainingEntry"].isEnabled)
+        XCTAssertFalse(app.buttons["englishTrainingEntry"].exists, "Training belongs to the conversation action row, not active Listen")
         app.tabBars.buttons["Settings"].tap()
         XCTAssertFalse(app.buttons["homeExperiencePicker"].isEnabled)
         app.tabBars.buttons["Home"].tap()
@@ -1311,7 +1311,7 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
-    func testIndependentEnglishTrainingSeedReviewAndProgress() throws {
+    func testIndependentEnglishTrainingSeedReviewAndTemporaryRound() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training", "--ui-test-labels"]
         app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
@@ -1337,16 +1337,26 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.alerts.firstMatch.exists, "Opening training must not request microphone access")
         app.buttons["revealTrainingResponse"].tap()
         XCTAssertTrue(app.staticTexts["trainingExpected"].exists)
-        let comfortable = app.buttons["I feel comfortable"]
-        if !comfortable.isHittable { app.swipeUp() }
-        comfortable.tap()
-        if !app.staticTexts["trainingPrompt"].isHittable { app.swipeDown() }
-        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Pero cuando llegué, el colegio estaba completamente cerrado.")
+        XCTAssertFalse(app.staticTexts["How did this phrase feel?"].exists)
+        XCTAssertFalse(app.buttons["Needs practice"].exists)
+        XCTAssertFalse(app.buttons["I feel comfortable"].exists)
+        for _ in 0..<20 {
+            let next = app.buttons["trainingNext"]
+            if !next.isHittable { app.swipeUp() }
+            next.tap()
+        }
+        XCTAssertTrue(app.staticTexts["trainingRoundSummary"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.descendants(matching: .any)["trainingUnattemptedCount"].firstMatch.label.contains("20"))
+        XCTAssertTrue(app.descendants(matching: .any)["trainingMatchedCount"].firstMatch.label.contains("0"))
+        XCTAssertTrue(app.descendants(matching: .any)["trainingDifferentCount"].firstMatch.label.contains("0"))
+        XCTAssertFalse(app.buttons["trainingReviewDifferences"].exists)
         app.terminate(); app.launch()
+        XCTAssertTrue(app.buttons["englishTrainingEntry"].waitForExistence(timeout: 20))
         app.buttons["englishTrainingEntry"].tap()
         app.staticTexts["Una mañana en el colegio"].tap()
-        app.buttons["Review phrases to practise"].tap()
-        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Pero cuando llegué, el colegio estaba completamente cerrado.")
+        XCTAssertFalse(app.buttons["Review phrases to practise"].exists)
+        app.buttons["startEnglishTraining"].tap()
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Yo había ido al colegio ayer por la mañana.")
     }
 
     @MainActor
@@ -1356,6 +1366,14 @@ final class HomeScreenTests: XCTestCase {
         app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
         app.launch()
         XCTAssertTrue(app.buttons["englishTrainingEntry"].waitForExistence(timeout: 20))
+        let train = app.buttons["englishTrainingEntry"]
+        let write = app.buttons["conversationWriteReply"]
+        let new = app.buttons["newConversationButton"]
+        XCTAssertEqual(train.label, "Train English")
+        XCTAssertEqual(write.label, "Write a reply")
+        XCTAssertEqual(new.label, "New conversation")
+        XCTAssertEqual(train.frame.midY, write.frame.midY, accuracy: 2)
+        XCTAssertEqual(write.frame.midY, new.frame.midY, accuracy: 2)
         app.buttons["englishTrainingEntry"].tap()
         app.buttons["newEnglishTraining"].tap()
         app.textFields["trainingTitle"].tap(); app.textFields["trainingTitle"].typeText("Travel")

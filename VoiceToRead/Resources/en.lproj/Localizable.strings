@@ -1034,3 +1034,21 @@
 
 // Independent Spanish-to-English training
 "Practice" = "Practice";
+
+// Compact actions and temporary training rounds
+"Train" = "Train";
+"Write" = "Write";
+"New" = "New";
+"Trainings stay on this device. Round results are temporary." = "Trainings stay on this device. Round results are temporary.";
+"%lld phrases" = "%lld phrases";
+"Editing a Spanish phrase clears only that phrase's English. Unchanged phrases keep their corrections." = "Editing a Spanish phrase clears only that phrase's English. Unchanged phrases keep their corrections.";
+"Stop attempt" = "Stop attempt";
+"Stop example" = "Stop example";
+"The words match!" = "The words match!";
+"Review the underlined words and try again." = "Review the underlined words and try again.";
+"%lld matched" = "%lld matched";
+"%lld with differences" = "%lld with differences";
+"%lld without a recognized attempt" = "%lld without a recognized attempt";
+"Results describe recognized words, not pronunciation quality. Only this round is counted; results are not saved." = "Results describe recognized words, not pronunciation quality. Only this round is counted; results are not saved.";
+"Phrases with differences" = "Phrases with differences";
+"Review these phrases" = "Review these phrases";
