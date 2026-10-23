@@ -205,6 +205,30 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testPlaybackVoiceSettingsOffersSampleWithoutStartingMicrophone() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Settings"].tap()
+        let link = app.buttons["playbackVoiceSettingsLink"]
+        for _ in 0..<3 where !link.isHittable { app.swipeUp() }
+        XCTAssertTrue(link.isHittable); link.tap()
+        XCTAssertTrue(app.buttons["playbackVoiceLanguage"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["playbackVoicePicker"].exists)
+        XCTAssertFalse(app.alerts.firstMatch.exists, "Opening voices must not request microphone permission")
+        let sample = app.buttons["playbackVoiceSample"]
+        if sample.isEnabled {
+            sample.tap()
+            XCTAssertFalse(app.alerts.firstMatch.exists)
+        }
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(app.staticTexts["conversationStatus"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["conversationStatus"].label, "Ready")
+    }
+
+    @MainActor
     func testConversationActionNamesFollowSettingAndKeepAccessibleTitles() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-conversation"]

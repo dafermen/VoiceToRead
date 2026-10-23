@@ -126,7 +126,7 @@ final class PronunciationPractice {
 
     func listen(_ text: String, slow: Bool) {
         stopActivity(); message = nil; needsSettings = false
-        guard let voice = AVSpeechSynthesisVoice(language: language.rawValue) else {
+        guard let voice = PlaybackVoicePreference.voice(for: language) else {
             needsSettings = true
             message = "No hay una voz para este idioma disponible. Revisa las voces del idioma elegido en Ajustes del dispositivo."; return
         }

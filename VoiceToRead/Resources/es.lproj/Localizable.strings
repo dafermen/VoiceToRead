@@ -1083,3 +1083,23 @@
 "Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each." = "Escribe un título de hasta 100 caracteres y entre 1 y 200 frases de origen, una por línea, de hasta 1.000 caracteres cada una.";
 "The translated responses are incomplete. Review the phrases and try again." = "Las respuestas traducidas están incompletas. Revisa las frases e inténtalo de nuevo.";
 "Languages" = "Idiomas";
+
+// Playback voice selection
+"Playback voice" = "Voz de reproducción";
+"Playback language" = "Idioma de reproducción";
+"Voice" = "Voz";
+"Male voice" = "Voz masculina";
+"Female voice" = "Voz femenina";
+"Unspecified voice" = "Voz sin género especificado";
+"Premium voice" = "Calidad superior";
+"Enhanced voice" = "Calidad mejorada";
+"Standard voice" = "Calidad estándar";
+"Saved voice unavailable · automatic fallback" = "Voz guardada no disponible · alternativa automática";
+"Current voice: %@" = "Voz actual: %@";
+"No voice is available for this language." = "No hay una voz disponible para este idioma.";
+"Automatic Spanish playback prioritizes a male voice from Mexico when available. A voice you choose manually takes priority." = "La reproducción automática en español prioriza una voz masculina de México cuando está disponible. Si eliges una voz manualmente, se respetará tu elección.";
+"This changes synthesized playback only. Recognition, translations and saved recordings stay unchanged." = "Esto cambia solo la voz de reproducción. El reconocimiento, las traducciones y las grabaciones guardadas se conservan.";
+"Listen to sample" = "Escuchar muestra";
+"Stop sample" = "Detener muestra";
+"Refresh voices" = "Actualizar voces";
+"Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version." = "Solo se muestran las voces disponibles para esta app en este dispositivo. Para añadir voces, revisa Ajustes del dispositivo → Accesibilidad → Contenido leído → Voces; después vuelve y actualiza. Los nombres pueden variar según la versión de iOS.";

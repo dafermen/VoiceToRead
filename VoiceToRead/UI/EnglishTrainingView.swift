@@ -421,7 +421,7 @@ private struct TrainingPracticeView: View {
         practice.reset(); revealed = false; index = max(0, value)
     }
     private func refreshLanguageSupport() {
-        voiceAvailable = AVSpeechSynthesisVoice(language: targetLanguage.rawValue) != nil
+        voiceAvailable = PlaybackVoicePreference.voice(for: targetLanguage) != nil
         localRecognitionAvailable = SFSpeechRecognizer(locale: Locale(identifier: targetLanguage.rawValue))?.supportsOnDeviceRecognition == true
     }
     private var roundSummary: some View {

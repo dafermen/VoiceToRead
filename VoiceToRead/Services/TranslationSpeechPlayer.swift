@@ -20,7 +20,7 @@ final class AppleTranslationSpeechOutput: NSObject, TranslationSpeechOutput, AVS
 
     override init() { super.init(); synthesizer.delegate = self }
     func speak(_ text: String, language: CaptureLanguage, rate: Float, token: UUID) throws {
-        guard let voice = AVSpeechSynthesisVoice(language: language.rawValue) else { throw TranslationSpeechFailure.voiceUnavailable }
+        guard let voice = PlaybackVoicePreference.voice(for: language) else { throw TranslationSpeechFailure.voiceUnavailable }
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = voice
         utterance.rate = rate
@@ -340,5 +340,90 @@ enum PlaybackLanguagePreference: String {
     func mode(source: CaptureLanguage, hasTranslation: Bool, target: CaptureLanguage? = nil) -> TranscriptLanguage {
         guard hasTranslation else { return source.mode }
         return self == .both ? .both : self == .translation ? (target ?? source.defaultTarget).mode : source.mode
+    }
+}
+
+
+/// A value-only catalog lets selection rules be tested without installed speech assets.
+struct PlaybackVoiceChoice: Equatable, Identifiable {
+    enum Gender: String { case male = "Male voice", female = "Female voice", unspecified = "Unspecified voice" }
+    let id: String
+    let name: String
+    let locale: String
+    let gender: Gender
+    var quality = 1
+}
+
+@MainActor
+enum PlaybackVoicePreference {
+    static func key(_ language: CaptureLanguage) -> String { "playbackVoiceIdentifier." + language.rawValue }
+    static func saved(for language: CaptureLanguage, defaults: UserDefaults = .standard) -> String {
+        defaults.string(forKey: key(language)) ?? ""
+    }
+    static func save(_ identifier: String, for language: CaptureLanguage, defaults: UserDefaults = .standard) {
+        if identifier.isEmpty { defaults.removeObject(forKey: key(language)) }
+        else { defaults.set(identifier, forKey: key(language)) }
+    }
+    static func compatible(_ voice: PlaybackVoiceChoice, with language: CaptureLanguage) -> Bool {
+        let locale = voice.locale.replacingOccurrences(of: "_", with: "-").lowercased()
+        let base = String(language.rawValue.prefix(2))
+        guard locale == base || locale.hasPrefix(base + "-") else { return false }
+        // The app's Chinese option is Mandarin, not Cantonese (zh-HK).
+        return language != .chinese || !locale.hasPrefix("zh-hk")
+    }
+    static func choices(for language: CaptureLanguage, in voices: [PlaybackVoiceChoice]) -> [PlaybackVoiceChoice] {
+        voices.filter { compatible($0, with: language) }.sorted {
+            if $0.name != $1.name { return $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
+            if $0.locale != $1.locale { return $0.locale < $1.locale }
+            if $0.quality != $1.quality { return $0.quality > $1.quality }
+            return $0.id < $1.id
+        }
+    }
+    static func identifier(for language: CaptureLanguage, voices: [PlaybackVoiceChoice], saved: String,
+                           systemDefault: String?) -> String? {
+        let available = choices(for: language, in: voices)
+        if let chosen = available.first(where: { $0.id == saved }) { return chosen.id }
+        if language == .spanish {
+            return available.sorted {
+                let a = spanishPriority($0), b = spanishPriority($1)
+                if a != b { return a < b }
+                if $0.quality != $1.quality { return $0.quality > $1.quality }
+                return $0.id < $1.id
+            }.first?.id
+        }
+        if let systemDefault, available.contains(where: { $0.id == systemDefault }) { return systemDefault }
+        return available.first?.id
+    }
+    private static func spanishPriority(_ voice: PlaybackVoiceChoice) -> Int {
+        let parts = voice.locale.replacingOccurrences(of: "_", with: "-").uppercased().split(separator: "-")
+        let mexico = parts.dropFirst().contains("MX")
+        let spain = parts.count == 1 || parts.dropFirst().contains("ES")
+        if mexico && voice.gender == .male { return 0 }
+        if !spain && voice.gender == .male { return 1 }
+        if mexico { return 2 }
+        return spain ? 4 : 3
+    }
+    static func catalog() -> [PlaybackVoiceChoice] {
+        AVSpeechSynthesisVoice.speechVoices().map {
+            let gender: PlaybackVoiceChoice.Gender = $0.gender == .male ? .male : $0.gender == .female ? .female : .unspecified
+            return PlaybackVoiceChoice(id: $0.identifier, name: $0.name, locale: $0.language,
+                                       gender: gender, quality: Int($0.quality.rawValue))
+        }
+    }
+    static func voice(for language: CaptureLanguage) -> AVSpeechSynthesisVoice? {
+        let fallback = AVSpeechSynthesisVoice(language: language.rawValue)
+        let identifier = identifier(for: language, voices: catalog(), saved: saved(for: language), systemDefault: fallback?.identifier)
+        if let identifier, let voice = AVSpeechSynthesisVoice(identifier: identifier) { return voice }
+        return fallback
+    }
+    static func sample(for language: CaptureLanguage) -> String {
+        switch language {
+        case .spanish: "Hola. Esta es la voz que usaré para leer los textos en español."
+        case .english: "Hello. This is the voice I will use to read English text."
+        case .french: "Bonjour. Voici la voix que j’utiliserai pour lire les textes en français."
+        case .korean: "안녕하세요. 한국어 문장을 읽을 때 사용할 목소리입니다."
+        case .japanese: "こんにちは。日本語の文章を読むときに使う声です。"
+        case .chinese: "你好。这是我朗读中文时使用的声音。"
+        }
     }
 }

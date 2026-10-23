@@ -1083,3 +1083,23 @@
 "Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each." = "Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each.";
 "The translated responses are incomplete. Review the phrases and try again." = "The translated responses are incomplete. Review the phrases and try again.";
 "Languages" = "Languages";
+
+// Playback voice selection
+"Playback voice" = "Playback voice";
+"Playback language" = "Playback language";
+"Voice" = "Voice";
+"Male voice" = "Male voice";
+"Female voice" = "Female voice";
+"Unspecified voice" = "Unspecified voice";
+"Premium voice" = "Premium voice";
+"Enhanced voice" = "Enhanced voice";
+"Standard voice" = "Standard voice";
+"Saved voice unavailable · automatic fallback" = "Saved voice unavailable · automatic fallback";
+"Current voice: %@" = "Current voice: %@";
+"No voice is available for this language." = "No voice is available for this language.";
+"Automatic Spanish playback prioritizes a male voice from Mexico when available. A voice you choose manually takes priority." = "Automatic Spanish playback prioritizes a male voice from Mexico when available. A voice you choose manually takes priority.";
+"This changes synthesized playback only. Recognition, translations and saved recordings stay unchanged." = "This changes synthesized playback only. Recognition, translations and saved recordings stay unchanged.";
+"Listen to sample" = "Listen to sample";
+"Stop sample" = "Stop sample";
+"Refresh voices" = "Refresh voices";
+"Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version." = "Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version.";

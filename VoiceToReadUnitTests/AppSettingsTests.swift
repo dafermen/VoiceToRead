@@ -275,3 +275,57 @@ final class AppSettingsTests: XCTestCase {
         XCTAssertTrue(StorageReadiness(availableBytes: StorageReadiness.minimumBytes).ready)
     }
 }
+
+
+extension AppSettingsTests {
+    private func voice(_ id: String, _ locale: String, _ gender: PlaybackVoiceChoice.Gender, quality: Int = 1) -> PlaybackVoiceChoice {
+        PlaybackVoiceChoice(id: id, name: id, locale: locale, gender: gender, quality: quality)
+    }
+    func testAutomaticSpanishPrioritizesMexicanMaleAndThenQuality() {
+        let voices = [voice("Spain", "es-ES", .female, quality: 3), voice("MexicoWoman", "es-MX", .female, quality: 3),
+                      voice("MexicoMan", "es-MX", .male), voice("MexicoManEnhanced", "es-MX", .male, quality: 2),
+                      voice("USMan", "es-US", .male, quality: 3)]
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .spanish, voices: voices, saved: "", systemDefault: "Spain"), "MexicoManEnhanced")
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .spanish, voices: Array(voices.reversed()), saved: "", systemDefault: "Spain"), "MexicoManEnhanced")
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .spanish, voices: voices, saved: "Spain", systemDefault: "Spain"), "Spain", "An explicit choice must override the automatic preference")
+    }
+    func testVoiceFallbackNeverUsesAnotherLanguageAndKeepsOtherSystemDefaults() {
+        let voices = [voice("Spain", "es-ES", .female), voice("Mexico", "es_MX", .male),
+                      voice("EnglishUS", "en-US", .male, quality: 3), voice("EnglishUK", "en-GB", .female)]
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .spanish, voices: voices, saved: "EnglishUS", systemDefault: "Spain"), "Mexico")
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .spanish, voices: voices, saved: "Removed", systemDefault: "Spain"), "Mexico")
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .english, voices: voices, saved: "", systemDefault: "EnglishUK"), "EnglishUK")
+        XCTAssertEqual(PlaybackVoicePreference.identifier(for: .english, voices: voices, saved: "EnglishUS", systemDefault: "EnglishUK"), "EnglishUS")
+        XCTAssertNil(PlaybackVoicePreference.identifier(for: .french, voices: voices, saved: "EnglishUS", systemDefault: "EnglishUS"))
+        XCTAssertNil(PlaybackVoicePreference.identifier(for: .spanish, voices: [], saved: "Mexico", systemDefault: nil))
+    }
+    func testVoiceChoicesStayWithinSupportedLanguageAndMandarinExcludesCantonese() {
+        let voices = [voice("CN", "zh-CN", .female), voice("TW", "zh-TW", .male), voice("HK", "zh-HK", .female),
+                      voice("Yue", "yue-HK", .male), voice("JP", "ja-JP", .female), voice("FR", "fr-CA", .male)]
+        XCTAssertEqual(Set(PlaybackVoicePreference.choices(for: .chinese, in: voices).map(\.id)), Set(["CN", "TW"]))
+        XCTAssertEqual(PlaybackVoicePreference.choices(for: .japanese, in: voices).map(\.id), ["JP"])
+        XCTAssertEqual(PlaybackVoicePreference.choices(for: .french, in: voices).map(\.id), ["FR"])
+    }
+    func testVoicePreferencePersistsPerLanguageWithoutChangingCaptureOrTranslation() {
+        let name = UUID().uuidString
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults)
+        settings.captureLanguage = .spanish; settings.translationLanguage = .japanese
+        let before = defaults.dictionaryRepresentation()
+        PlaybackVoicePreference.save("chosen-mexican-voice", for: .spanish, defaults: defaults)
+        PlaybackVoicePreference.save("chosen-french-voice", for: .french, defaults: defaults)
+        XCTAssertEqual(PlaybackVoicePreference.saved(for: .spanish, defaults: UserDefaults(suiteName: name)!), "chosen-mexican-voice")
+        XCTAssertEqual(PlaybackVoicePreference.saved(for: .french, defaults: defaults), "chosen-french-voice")
+        let reopened = AppSettings(defaults: defaults)
+        XCTAssertEqual(reopened.captureLanguage, .spanish); XCTAssertEqual(reopened.translationLanguage, .japanese)
+        for (key, value) in before {
+            XCTAssertEqual(defaults.object(forKey: key) as? NSObject, value as? NSObject, "Voice selection changed unrelated preference: \(key)")
+        }
+        _ = PlaybackVoicePreference.identifier(for: .spanish, voices: [], saved: PlaybackVoicePreference.saved(for: .spanish, defaults: defaults), systemDefault: nil)
+        XCTAssertEqual(PlaybackVoicePreference.saved(for: .spanish, defaults: defaults), "chosen-mexican-voice", "A removed voice must not erase the saved choice")
+        PlaybackVoicePreference.save("", for: .spanish, defaults: defaults)
+        XCTAssertNil(defaults.object(forKey: PlaybackVoicePreference.key(.spanish)))
+        XCTAssertEqual(PlaybackVoicePreference.saved(for: .french, defaults: defaults), "chosen-french-voice")
+    }
+}

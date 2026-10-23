@@ -33,6 +33,11 @@ struct SettingsView: View {
                 Text("Changes the app's menus and messages. It does not change speech recognition, recordings or translations.")
                     .font(.caption)
             }
+            Section("Playback voice") {
+                NavigationLink("Playback voice") { PlaybackVoiceSettingsView(coordinator: coordinator) }
+                    .disabled(coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending)
+                    .accessibilityIdentifier("playbackVoiceSettingsLink")
+            }
             Section("Language colors") {
                 NavigationLink("Language colors") { LanguageColorsView(settings: settings) }
                     .accessibilityIdentifier("languageColorsLink")
@@ -101,7 +106,7 @@ struct OfflineReadinessView: View {
                 Text("Change the capture language in Settings before starting.").font(.caption)
                 ForEach(CaptureLanguage.allCases, id: \.self) { language in
                     LabeledContent(LocalizedStringKey(language.name)) {
-                        Text(uiKey(AVSpeechSynthesisVoice(language: language.rawValue) == nil ? "Voice unavailable" : "Voice available"))
+                        Text(uiKey(PlaybackVoicePreference.voice(for: language) == nil ? "Voice unavailable" : "Voice available"))
                     }
                 }
                 Text("If a voice is unavailable, open device Settings → Accessibility → Spoken Content → Voices to download it. Test playback before your meeting.").font(.caption)
@@ -624,5 +629,88 @@ struct HomeReadingMenu: View {
         Section("Language colors") {
             NavigationLink("Language colors") { LanguageColorsView(settings: settings) }
         }
+    }
+}
+
+
+@MainActor
+struct PlaybackVoiceSettingsView: View {
+    let coordinator: SessionCoordinator
+    @Environment(\.locale) private var locale
+    @Environment(\.scenePhase) private var phase
+    @State private var language: CaptureLanguage = .spanish
+    @State private var selectedID = ""
+    @State private var voices: [PlaybackVoiceChoice] = []
+    @State private var systemDefault: String?
+    @State private var sample = TranslationSpeechPlayer()
+    private var captureBusy: Bool {
+        coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending
+    }
+    private var available: [PlaybackVoiceChoice] { PlaybackVoicePreference.choices(for: language, in: voices) }
+    private var currentVoice: PlaybackVoiceChoice? {
+        let id = PlaybackVoicePreference.identifier(for: language, voices: voices, saved: selectedID, systemDefault: systemDefault)
+        return available.first { $0.id == id }
+    }
+    var body: some View {
+        Form {
+            Section("Playback language") {
+                Picker("Playback language", selection: $language) {
+                    ForEach(CaptureLanguage.allCases, id: \.self) { Text($0.pickerLabel).tag($0) }
+                }.accessibilityIdentifier("playbackVoiceLanguage")
+            }
+            Section("Voice") {
+                Picker("Voice", selection: Binding(get: { selectedID }, set: { id in
+                    sample.stop(); selectedID = id; PlaybackVoicePreference.save(id, for: language)
+                })) {
+                    Text("Automatic").tag("")
+                    ForEach(available) { voice in Text(verbatim: label(voice)).tag(voice.id) }
+                    if !selectedID.isEmpty && !available.contains(where: { $0.id == selectedID }) {
+                        Text("Saved voice unavailable · automatic fallback").tag(selectedID)
+                    }
+                }.accessibilityIdentifier("playbackVoicePicker")
+                if let voice = currentVoice {
+                    Text("Current voice: \(label(voice))").font(.caption).accessibilityIdentifier("currentPlaybackVoice")
+                } else { Text("No voice is available for this language.").font(.caption) }
+                Text("Automatic Spanish playback prioritizes a male voice from Mexico when available. A voice you choose manually takes priority.")
+                    .font(.caption).foregroundStyle(.secondary)
+                Text("This changes synthesized playback only. Recognition, translations and saved recordings stay unchanged.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
+            Section {
+                Button(uiKey(sample.state == .idle ? "Listen to sample" : "Stop sample"),
+                       systemImage: sample.state == .idle ? "speaker.wave.2" : "stop.circle") {
+                    if sample.state != .idle { sample.stop() }
+                    else { sample.start([ReviewParagraph(id: UUID(), text: PlaybackVoicePreference.sample(for: language))], language: language, speed: .normal) }
+                }.buttonStyle(.borderedProminent).labelStyle(InlinePreferenceLabelStyle())
+                    .disabled(currentVoice == nil).accessibilityIdentifier("playbackVoiceSample")
+                if let message = sample.message { Text(LocalizedStringKey(message)).foregroundStyle(.secondary) }
+                Button("Refresh voices", systemImage: "arrow.clockwise") { refresh() }
+                    .labelStyle(InlinePreferenceLabelStyle()).accessibilityIdentifier("refreshPlaybackVoices")
+                Text("Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
+        }
+        .disabled(captureBusy)
+        .navigationTitle("Playback voice").navigationBarTitleDisplayMode(.inline)
+        .onAppear { sample.observeInterruptions(); refresh() }
+        .onChange(of: language) { _, _ in refresh() }
+        .onChange(of: captureBusy) { _, busy in if busy { sample.stop() } }
+        .onChange(of: phase) { _, value in
+            if value == .background { sample.close() }
+            else if value == .active { sample.observeInterruptions(); refresh() }
+        }
+        .onDisappear { sample.close() }
+    }
+    private func refresh() {
+        sample.stop()
+        voices = PlaybackVoicePreference.catalog()
+        systemDefault = AVSpeechSynthesisVoice(language: language.rawValue)?.identifier
+        selectedID = PlaybackVoicePreference.saved(for: language)
+    }
+    private func label(_ voice: PlaybackVoiceChoice) -> String {
+        let region = locale.localizedString(forIdentifier: voice.locale) ?? voice.locale
+        let gender = InterfaceLocalization.string(voice.gender.rawValue, language: coordinator.settings.interfaceLanguage)
+        let quality = InterfaceLocalization.string(voice.quality >= 3 ? "Premium voice" : voice.quality == 2 ? "Enhanced voice" : "Standard voice", language: coordinator.settings.interfaceLanguage)
+        return "\(voice.name) · \(region) · \(gender) · \(quality)"
     }
 }
