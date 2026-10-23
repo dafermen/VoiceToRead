@@ -297,20 +297,15 @@ struct SpeakTranslateView: View {
     }
 
     private var content: some View {
-        AccessibilityScrollingContent {
+        Group {
             VStack(spacing: 0) {
-                if dynamicTypeSize.isAccessibilitySize && !fullScreen { turnControls.padding() }
                 if !fullScreen {
-                CommunicationHeader {
-                    pairControls
-                } status: {
-                    Label(status, systemImage: statusIcon)
-                        .font(.subheadline.weight(.semibold))
-                        .accessibilityIdentifier("conversationStatus")
+                    pairControls.padding(.horizontal, 16).padding(.vertical, 8)
                 }
-                }
+                conversationBar
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
+                        if dynamicTypeSize.isAccessibilitySize && !fullScreen { turnControls }
                         if model.speaker.state != .idle {
                             Button { model.speaker.stop() } label: {
                                 Label("Stop audio", systemImage: "stop.circle.fill")
@@ -340,30 +335,9 @@ struct SpeakTranslateView: View {
                         }
                         messageCards
                         secondaryActions
-                        (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(alignment: .center, spacing: 8))) {
-                            NavigationLink { EnglishTrainingLibraryView() } label: {
-                                Label("Train", systemImage: "book.closed")
-                            }
-                            .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
-                            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
-                            .disabled(!model.canEdit || model.capture.preparationPending)
-                            .accessibilityLabel("Train English").accessibilityIdentifier("englishTrainingEntry")
-                            Button {
-                                editor = ConversationEdit(language: first, target: second, text: "")
-                            } label: { Label("Write", systemImage: "keyboard") }
-                            .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
-                            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
-                            .accessibilityLabel("Write a reply").accessibilityIdentifier("conversationWriteReply")
-                            Button("New", systemImage: "plus.bubble") {
-                                if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
-                                else { model.newConversation() }
-                            }.labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
-                            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
-                            .accessibilityLabel("New conversation").accessibilityIdentifier("newConversationButton")
-                        }
                         speechPreparation
                     }.padding()
-                }.frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil, maxHeight: .infinity)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .accessibilityIdentifier("conversationReadingArea")
                     .background(ReaderSurface(settings: settings))
                     .environment(\.colorScheme, settings.readerPaper != .system && !settings.highContrast ? .light : (settings.colorScheme ?? scheme))
@@ -402,6 +376,64 @@ struct SpeakTranslateView: View {
             ConversationMessageEditor(request: request) { text in
                 model.selectLanguage(request.language, target: request.target); model.edit(text); model.translate()
             }
+        }
+    }
+
+    // Outside the reader ScrollView: actions and status stay visible while reading.
+    private var conversationBar: some View {
+        VStack(spacing: 0) {
+            Group {
+                if dynamicTypeSize.isAccessibilitySize {
+                    expandedConversationBar
+                } else {
+                    ViewThatFits(in: .horizontal) {
+                        HStack(spacing: 8) {
+                            conversationStatus
+                            conversationActions
+                        }.fixedSize(horizontal: true, vertical: false)
+                        expandedConversationBar
+                    }
+                }
+            }.frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 16).padding(.vertical, 4)
+            Divider()
+        }.background(.bar).accessibilityIdentifier("conversationActionBar")
+    }
+
+    private var expandedConversationBar: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            conversationStatus
+            conversationActions
+        }
+    }
+
+    private var conversationStatus: some View {
+        Label(status, systemImage: statusIcon)
+            .font(.caption.weight(.semibold)).fixedSize(horizontal: false, vertical: true)
+            .accessibilityIdentifier("conversationStatus")
+    }
+
+    private var conversationActions: some View {
+        HStack(alignment: .center, spacing: 8) {
+            NavigationLink { EnglishTrainingLibraryView() } label: {
+                Label("Train", systemImage: "book.closed")
+            }
+            .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
+            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
+            .disabled(!model.canEdit || model.capture.preparationPending)
+            .accessibilityLabel("Train English").accessibilityIdentifier("englishTrainingEntry")
+            Button {
+                editor = ConversationEdit(language: first, target: second, text: "")
+            } label: { Label("Write", systemImage: "keyboard") }
+            .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
+            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
+            .accessibilityLabel("Write a reply").accessibilityIdentifier("conversationWriteReply")
+            Button("New", systemImage: "plus.bubble") {
+                if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
+                else { model.newConversation() }
+            }.labelStyle(InlinePreferenceLabelStyle()).font(.caption)
+            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
+            .accessibilityLabel("New conversation").accessibilityIdentifier("newConversationButton")
         }
     }
 
@@ -557,16 +589,14 @@ struct SpeakTranslateView: View {
         return model.phase == .listening ? "mic.fill" : "mic"
     }
     private var status: LocalizedStringKey {
-        if model.speaker.state != .idle {
-            return "Speaking \(model.target.name) — microphone off"
-        }
+        if model.speaker.state != .idle { return "Playing" }
         switch model.phase {
-        case .ready: return "Ready to converse"
-        case .preparing: return "Preparing \(model.language.name) recognition…"
-        case .listening: return "Listening in \(model.language.name)…"
-        case .finishing: return "Finishing your message…"
-        case .translating: return "Translating to \(model.target.name)…"
-        case .cancelling: return "Stopping…"
+        case .ready: return "Ready"
+        case .preparing: return "Preparing"
+        case .listening: return "Listening"
+        case .finishing: return "Finishing"
+        case .translating: return "Translating"
+        case .cancelling: return "Stopping"
         }
     }
 }
