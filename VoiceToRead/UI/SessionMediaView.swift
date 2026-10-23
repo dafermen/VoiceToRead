@@ -860,11 +860,15 @@ struct PlaybackTextCard: View {
     var identifier = ""
     var speaking = false
     var edit: (() -> Void)? = nil
+    var playback: (() -> Void)? = nil
+    var playbackEnabled = true
+    var playbackIdentifier = ""
+    var showsSpeakingLabel = true
     @Environment(\.colorSchemeContrast) private var cardContrast
     @Environment(\.colorScheme) private var cardScheme
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     var body: some View {
-        VStack(alignment: .leading, spacing: edit == nil ? 8 : 4) {
+        VStack(alignment: .leading, spacing: edit == nil && playback == nil ? 8 : 4) {
             HStack(alignment: .center) {
                 Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
                     .font(.caption.weight(.semibold))
@@ -881,8 +885,20 @@ struct PlaybackTextCard: View {
                     .accessibilityLabel(uiKey(translated ? "Edit translation" : "Correct paragraph"))
                     .accessibilityIdentifier(translated ? "editPlaybackTranslationButton" : "editPlaybackOriginalButton")
                 }
+                if let playback {
+                    Button(action: playback) {
+                        Image(systemName: speaking ? "stop.fill" : "play.fill")
+                            .frame(minWidth: 44, minHeight: 44).contentShape(Rectangle())
+                    }.buttonStyle(.plain).foregroundStyle(Color.accentColor)
+                        .disabled(!playbackEnabled)
+                        .accessibilityLabel(uiKey(speaking
+                            ? (translated ? "Stop translation" : "Stop original")
+                            : (translated ? "Play translation" : "Play original")))
+                        .accessibilityValue(Text(verbatim: language.name))
+                        .accessibilityIdentifier(playbackIdentifier)
+                }
             }
-            if speaking { Label("Listening now", systemImage: "speaker.wave.2.fill").font(.caption.weight(.bold)) }
+            if speaking && showsSpeakingLabel { Label("Listening now", systemImage: "speaker.wave.2.fill").font(.caption.weight(.bold)) }
             ReaderParagraph(text: text, points: settings.captionSize * textScale, spacing: settings.lineSpacing,
                             bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                 .textSelection(.enabled).accessibilityIdentifier(identifier)

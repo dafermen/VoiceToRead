@@ -408,7 +408,7 @@ final class SpeakTranslateTests: XCTestCase {
         XCTAssertEqual(capture.state, .ended)
         let model = SpeakTranslateModel(capture: capture, speaker: TranslationSpeechPlayer(output: ConversationTestOutput(), activate: {}, deactivate: {}), supported: { true })
         model.selectLanguage(.french, target: .korean)
-        model.edit("Bonjour"); model.translate(speakWhenDone: false)
+        model.edit("Bonjour"); model.translate()
         let job = try XCTUnwrap(model.job)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "안녕하세요") }))
         speech.status = .missingAssets
@@ -437,7 +437,7 @@ final class SpeakTranslateTests: XCTestCase {
         XCTAssertFalse(detector.shouldFinish(text: "Quiero agua fría", level: 0, now: 107, delay: 3))
         XCTAssertFalse(detector.shouldFinish(text: "Quiero agua fría", level: 0, now: 200, delay: 0))
     }
-    func testFinalizesMicrophoneBeforeTranslatingAndSpeaksOnlyOnce() async throws {
+    func testFinalizesMicrophoneBeforeTranslatingAndWaitsForManualPlayback() async throws {
         let speech = MockSpeech()
         let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
         let output = ConversationTestOutput()
@@ -457,6 +457,8 @@ final class SpeakTranslateTests: XCTestCase {
         let reply = job.source.map { ReviewParagraph(id: $0.id, text: "A glass of water, please.") }
         model.complete(job, result: .success(reply))
         model.complete(job, result: .success(reply))
+        XCTAssertTrue(output.spoken.isEmpty)
+        model.togglePlayback(.translation)
         XCTAssertEqual(output.spoken, ["A glass of water, please."])
         XCTAssertEqual(output.language, .english)
         XCTAssertEqual(speech.starts, 1, "Playback never reopens the microphone")
@@ -553,7 +555,7 @@ final class SpeakTranslateTests: XCTestCase {
         XCTAssertEqual(capture.state, .idle)
         XCTAssertNil(model.job)
     }
-    func testByButtonDoesNotFinishOnPauseAndFinishPlaysImmediately() async throws {
+    func testByButtonDoesNotFinishOnPauseAndFinishWaitsForManualAudio() async throws {
         let speech = MockSpeech(); speech.finalText = "Un café, por favor."
         let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
         let output = ConversationTestOutput()
@@ -573,6 +575,8 @@ final class SpeakTranslateTests: XCTestCase {
         XCTAssertEqual(model.mode, .byButton, "Changing mode cannot alter a pending turn")
         let job = try XCTUnwrap(model.job)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "A coffee, please.") }))
+        XCTAssertTrue(output.spoken.isEmpty)
+        model.togglePlayback(.translation)
         XCTAssertEqual(output.spoken, ["A coffee, please."])
         XCTAssertEqual(capture.state, .ended)
         XCTAssertEqual(model.translated, "A coffee, please.")
@@ -586,7 +590,7 @@ final class SpeakTranslateTests: XCTestCase {
         let model = SpeakTranslateModel(speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
         model.selectLanguage(.japanese, target: .chinese)
         model.selectMode(.automatic); model.pauseSeconds = 5
-        model.edit("こんにちは"); model.translate(speakWhenDone: false)
+        model.edit("こんにちは"); model.translate()
         let job = try XCTUnwrap(model.job)
         model.newConversation()
         XCTAssertEqual(model.phase, .translating, "An active operation must not be cleared")
@@ -614,10 +618,10 @@ final class SpeakTranslateTests: XCTestCase {
     func testEditingManualTranslationInvalidatesPreviousSpeech() throws {
         let output = ConversationTestOutput()
         let model = SpeakTranslateModel(speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
-        model.selectMode(.byButton); model.edit("Hola"); model.translate(speakWhenDone: false)
+        model.selectMode(.byButton); model.edit("Hola"); model.translate()
         let job = try XCTUnwrap(model.job)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Hello") }))
-        model.edit("Adiós"); model.play()
+        model.edit("Adiós"); model.togglePlayback(.translation)
         XCTAssertTrue(model.translated.isEmpty)
         XCTAssertTrue(output.spoken.isEmpty)
     }
@@ -638,6 +642,8 @@ final class SpeakTranslateTests: XCTestCase {
         let job = try XCTUnwrap(model.job)
         XCTAssertEqual(job.plan.language, .english)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "¿Quieres agua fría?") }))
+        XCTAssertTrue(output.spoken.isEmpty)
+        model.togglePlayback(.translation)
         XCTAssertEqual(output.language, .spanish)
         XCTAssertEqual(output.spoken, ["¿Quieres agua fría?"])
         model.start(language: .spanish)
@@ -667,9 +673,11 @@ final class SpeakTranslateTests: XCTestCase {
         model.complete(first, result: .success(first.source.map { .init(id: $0.id, text: "Old") }))
         XCTAssertTrue(output.spoken.isEmpty)
         model.complete(retry, result: .success(retry.source.map { .init(id: $0.id, text: "¿En qué puedo ayudarte?") }))
+        XCTAssertTrue(output.spoken.isEmpty)
+        model.togglePlayback(.translation)
         XCTAssertEqual(output.language, .spanish)
         model.speaker.stop()
-        model.play()
+        model.togglePlayback(.translation)
         XCTAssertEqual(output.spoken.count, 2, "Replay reuses the translation without recognition")
         model.speaker.stop()
     }
@@ -687,7 +695,7 @@ final class SpeakTranslateTests: XCTestCase {
         let job = try XCTUnwrap(model.job)
         model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Un minuto de voz.") }))
         XCTAssertTrue(output.spoken.isEmpty)
-        model.play()
+        model.togglePlayback(.translation)
         XCTAssertEqual(output.language, .spanish)
         model.cancel()
         await eventually { model.phase == .ready }
@@ -714,10 +722,74 @@ private final class ConversationTestOutput: TranslationSpeechOutput {
     var onFinish: ((UUID) -> Void)?
     var spoken: [String] = []
     var language: CaptureLanguage?
+    var tokens: [UUID] = []
+    var stopCount = 0
     func speak(_ text: String, language: CaptureLanguage, rate: Float, token: UUID) throws {
-        spoken.append(text); self.language = language
+        spoken.append(text); self.language = language; tokens.append(token)
     }
     func pause() -> Bool { true }
     func resume() -> Bool { true }
-    func stop() {}
+    func stop() { stopCount += 1 }
+}
+
+
+extension CaptionViewModelTests {
+    func testConversationCardPlaybackSwitchesOriginalAndTranslationAndRejectsStaleCompletion() throws {
+        let output = ConversationTestOutput()
+        let player = TranslationSpeechPlayer(output: output, activate: {}, deactivate: {})
+        let model = SpeakTranslateModel(speaker: player, supported: { true })
+        model.selectLanguage(.french, target: .korean)
+        model.edit("Bonjour"); model.translate()
+        let job = try XCTUnwrap(model.job)
+        model.togglePlayback(.original)
+        XCTAssertTrue(output.spoken.isEmpty, "Playback must wait until translation/capture finishes")
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "안녕하세요") }))
+        XCTAssertTrue(output.spoken.isEmpty, "Written replies translate without starting audio")
+        model.togglePlayback(.original)
+        XCTAssertEqual(output.spoken, ["Bonjour"]); XCTAssertEqual(output.language, .french)
+        XCTAssertTrue(model.isPlaying(.original)); XCTAssertFalse(model.isPlaying(.translation))
+        let oldToken = try XCTUnwrap(output.tokens.last)
+        let stops = output.stopCount
+        model.togglePlayback(.translation)
+        XCTAssertGreaterThan(output.stopCount, stops, "Switching cards must stop the previous utterance")
+        XCTAssertEqual(output.spoken.last, "안녕하세요"); XCTAssertEqual(output.language, .korean)
+        XCTAssertFalse(model.isPlaying(.original)); XCTAssertTrue(model.isPlaying(.translation))
+        output.onFinish?(oldToken)
+        XCTAssertTrue(model.isPlaying(.translation), "A cancelled original cannot end translation playback")
+        let translatedToken = try XCTUnwrap(output.tokens.last)
+        output.onFinish?(translatedToken)
+        XCTAssertFalse(model.isPlaying(.original)); XCTAssertFalse(model.isPlaying(.translation))
+        XCTAssertEqual(player.state, .idle)
+        model.togglePlayback(.translation)
+        let count = output.spoken.count
+        model.togglePlayback(.translation)
+        XCTAssertEqual(output.spoken.count, count, "Pressing an active card stops instead of replaying it")
+        XCTAssertEqual(player.state, .idle)
+        XCTAssertEqual(model.source, "Bonjour"); XCTAssertEqual(model.translated, "안녕하세요")
+    }
+
+    func testAutomaticConversationTranslatesAfterPauseWithoutSpeaking() async throws {
+        let speech = MockSpeech(); speech.finalText = "Hola"
+        let output = ConversationTestOutput()
+        let model = SpeakTranslateModel(capture: CaptionViewModel(microphone: CaptionMicrophone(), speech: speech),
+            speaker: TranslationSpeechPlayer(output: output, activate: {}, deactivate: {}), supported: { true })
+        model.selectMode(.automatic)
+        model.start(language: .spanish)
+        await eventually { model.phase == .listening }
+        speech.emitPartial("Hola")
+        await eventually { !model.capture.transcript.partial.isEmpty }
+        let now = ProcessInfo.processInfo.systemUptime
+        model.poll(now: now); model.poll(now: now + 4)
+        await eventually { model.phase == .translating }
+        let job = try XCTUnwrap(model.job)
+        model.complete(job, result: .success(job.source.map { .init(id: $0.id, text: "Hello") }))
+        XCTAssertEqual(model.source, "Hola"); XCTAssertEqual(model.translated, "Hello")
+        XCTAssertTrue(output.spoken.isEmpty)
+        XCTAssertEqual(model.speaker.state, .idle)
+        XCTAssertTrue(model.canEdit)
+        model.togglePlayback(.original)
+        XCTAssertEqual(output.spoken.last, "Hola"); XCTAssertEqual(output.language, .spanish)
+        XCTAssertEqual(speech.starts, 1, "Manual audio must not reopen the microphone")
+        model.cancel(); await eventually { model.phase == .ready }
+    }
 }

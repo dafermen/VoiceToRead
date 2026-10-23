@@ -21,6 +21,7 @@ struct ConversationPause {
 final class SpeakTranslateModel {
     enum Mode: String, CaseIterable { case automatic, byButton }
     enum Phase: Equatable { case ready, preparing, listening, finishing, translating, cancelling }
+    enum AudioCard: Equatable { case original, translation }
     let capture: CaptionViewModel
     let speaker: TranslationSpeechPlayer
     private(set) var phase: Phase = .ready
@@ -32,8 +33,8 @@ final class SpeakTranslateModel {
     private(set) var language: CaptureLanguage = .spanish
     private(set) var target: CaptureLanguage = .english
     var pauseSeconds: Double = 3
-    // Capture the output policy when a job starts; late callbacks cannot start another turn.
-    private var speakWhenComplete = false
+    private let originalAudioID = UUID()
+    private let translationAudioID = UUID()
     func selectMode(_ mode: Mode) {
         guard canEdit else { return }
         self.mode = mode
@@ -74,7 +75,6 @@ final class SpeakTranslateModel {
         token = UUID()
         source = ""; translated = ""; message = nil
         speaker.message = nil
-        speakWhenComplete = false
     }
 
     /// Changing direction is explicit and never modifies the session capture preference.
@@ -162,14 +162,14 @@ final class SpeakTranslateModel {
         }
         if detector.shouldFinish(text: source, level: capture.inputLevel, now: now, delay: mode == .automatic ? pauseSeconds : 0) ||
             now - listeningSince >= 60 || source.count >= 4000 {
-            // A safety limit ends manual capture without speaking unexpectedly.
-            finish(speakWhenDone: mode == .automatic)
+            // Both automatic pauses and manual limits translate without starting audio.
+            finish()
         } else if source.isEmpty && now - listeningSince >= 15 {
             cancel()
             message = "No speech detected. Choose a language to try again."
         }
     }
-    func finish(speakWhenDone: Bool = true) {
+    func finish() {
         guard phase == .listening else { return }
         monitor?.cancel(); phase = .finishing
         let request = token
@@ -185,14 +185,13 @@ final class SpeakTranslateModel {
                 return
             }
             source = final
-            translate(speakWhenDone: speakWhenDone)
+            translate()
         }
     }
-    func translate(speakWhenDone: Bool = true) {
+    func translate() {
         guard canEdit, !source.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         guard supported() else { return }
         message = nil; translated = ""
-        speakWhenComplete = speakWhenDone
         job = TranslationJob(plan: IncrementalTranslation(
             source: [ReviewParagraph(id: UUID(), text: source)], previous: nil, language: language, targetLanguage: target))
         phase = .translating
@@ -203,14 +202,21 @@ final class SpeakTranslateModel {
         do {
             let snapshot = try completed.plan.merging(result.get())
             translated = snapshot.translated.map(\.text).joined(separator: "\n")
-            if speakWhenComplete { play() }
         } catch {
             message = "Translation could not finish. Check language downloads and try translating again."
         }
     }
-    func play() {
-        guard !busy, !translated.isEmpty else { return }
-        speaker.start([ReviewParagraph(id: UUID(), text: translated)], language: target, speed: .normal)
+    func isPlaying(_ card: AudioCard) -> Bool {
+        speaker.state != .idle && speaker.paragraphID == (card == .original ? originalAudioID : translationAudioID)
+    }
+    func togglePlayback(_ card: AudioCard) {
+        guard !busy, !capture.state.active, !capture.state.busy, !capture.preparationPending else { return }
+        if isPlaying(card) { speaker.stop(); return }
+        let text = card == .original ? source : translated
+        guard !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        // start() stops the previous utterance and invalidates its callbacks first.
+        speaker.start([ReviewParagraph(id: card == .original ? originalAudioID : translationAudioID, text: text)],
+                      language: card == .original ? language : target, speed: .normal)
     }
     /// Invalidate synchronously; then serialize cleanup after any in-flight finalization.
     func cancel() {
@@ -306,21 +312,7 @@ struct SpeakTranslateView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
                         if dynamicTypeSize.isAccessibilitySize && !fullScreen { turnControls }
-                        if model.speaker.state != .idle {
-                            Button { model.speaker.stop() } label: {
-                                Label("Stop audio", systemImage: "stop.circle.fill")
-                                    .labelStyle(InlinePreferenceLabelStyle())
-                                    .font(.subheadline.weight(.semibold))
-                                    .foregroundStyle(Color.primary)
-                                    .padding(.horizontal, 16)
-                                    .frame(minHeight: 44)
-                                    .background(Color(uiColor: .secondarySystemBackground), in: RoundedRectangle(cornerRadius: 12))
-                                    .contentShape(RoundedRectangle(cornerRadius: 12))
-                            }
-                            .buttonStyle(.plain)
-                            .accessibilityIdentifier("conversationStopAudio")
-                            .frame(maxWidth: .infinity, alignment: .center)
-                        } else if model.busy {
+                        if model.busy {
                             Button("Cancel", systemImage: "xmark.circle") { model.cancel() }
                                 .disabled(model.phase == .cancelling).frame(minHeight: 44)
                                 .accessibilityIdentifier("conversationCancel")
@@ -334,7 +326,7 @@ struct SpeakTranslateView: View {
                                 .foregroundStyle(.secondary)
                         }
                         messageCards
-                        secondaryActions
+                        translationRetry
                         speechPreparation
                     }.padding()
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -532,31 +524,28 @@ struct SpeakTranslateView: View {
     @ViewBuilder private var messageCards: some View {
         if !model.source.isEmpty {
             PlaybackTextCard(text: model.source, language: model.language, translated: false,
-                             settings: settings, identifier: "conversationSourceText")
+                             settings: settings, identifier: "conversationSourceText", speaking: model.isPlaying(.original),
+                             playback: { model.togglePlayback(.original) }, playbackEnabled: !model.busy,
+                             playbackIdentifier: "conversationOriginalPlayback", showsSpeakingLabel: false)
         } else if !model.busy {
             CommunicationEmptyHint(title: "Choose who speaks to begin.")
         }
         if !model.translated.isEmpty {
             PlaybackTextCard(text: model.translated, language: model.target, translated: true,
-                             settings: settings, identifier: "conversationTranslation", speaking: model.speaker.state == .speaking)
+                             settings: settings, identifier: "conversationTranslation", speaking: model.isPlaying(.translation),
+                             playback: { model.togglePlayback(.translation) }, playbackEnabled: !model.busy,
+                             playbackIdentifier: "conversationTranslationPlayback", showsSpeakingLabel: false)
         }
     }
-    private var secondaryActions: some View {
-        HStack(spacing: 10) {
-            if !model.translated.isEmpty {
-                Button { model.play() } label: {
-                    Label("Play \(model.target.name)", systemImage: "speaker.wave.2.fill")
-                        .frame(maxWidth: .infinity, minHeight: 44)
-                }.buttonStyle(LanguageButtonStyle(color: settings.color(for: model.target), highContrast: settings.highContrast))
-                    .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationPlay")
-            } else if !model.source.isEmpty && model.canEdit {
-                Button { model.translate() } label: {
-                    Label("Translate and play", systemImage: "character.bubble")
-                        .frame(maxWidth: .infinity, minHeight: 44)
-                }.disabled(!TranslationJob.supported).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationTranslate")
-            }
-        }.buttonStyle(.bordered).multilineTextAlignment(.center)
+    @ViewBuilder private var translationRetry: some View {
+        if model.translated.isEmpty && !model.source.isEmpty && model.canEdit {
+            Button { model.translate() } label: {
+                Label("Translate", systemImage: "character.bubble")
+                    .frame(maxWidth: .infinity, minHeight: 44)
+            }.disabled(!TranslationJob.supported).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationTranslate")
+            .buttonStyle(.bordered).multilineTextAlignment(.center)
             .fixedSize(horizontal: false, vertical: true)
+        }
     }
     private var options: some View {
         NavigationStack {
@@ -567,17 +556,17 @@ struct SpeakTranslateView: View {
                         Text("By button").tag(SpeakTranslateModel.Mode.byButton)
                         Text("Automatic").tag(SpeakTranslateModel.Mode.automatic)
                     }.pickerStyle(.segmented).accessibilityIdentifier("conversationMode")
-                    Text("By button: choose a language, speak, then tap Finish to translate and play. You do not need to hold the button.")
+                    Text("By button: choose a language, speak, then tap Finish to translate. Tap a card's play icon to listen. You do not need to hold the button.")
                     if model.mode == .automatic {
                         Picker("Finish after a pause", selection: $model.pauseSeconds) {
                             Text("3 seconds").tag(3.0)
                             Text("5 seconds").tag(5.0)
                         }
-                        Text("Automatic: a quiet pause ends the turn and plays the translation. You can also finish with the button.")
+                        Text("Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button.")
                     }
                 }
                 Section {
-                    Text("Each turn lasts up to one minute. At the manual time limit, review the text and tap Play before it speaks.")
+                    Text("Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen.")
                     Text("This conversation is temporary. No audio recording or session is saved. Check the translation before relying on it.")
                 }
             }.navigationTitle("Reading options").navigationBarTitleDisplayMode(.inline)
@@ -622,7 +611,7 @@ private struct ConversationMessageEditor: View {
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("Translate and play") { apply(text); dismiss() }
+                        Button("Translate") { apply(text); dismiss() }
                             .disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                             .accessibilityIdentifier("conversationApply")
                     }

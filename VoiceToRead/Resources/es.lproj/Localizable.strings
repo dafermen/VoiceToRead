@@ -1103,3 +1103,12 @@
 "Stop sample" = "Detener muestra";
 "Refresh voices" = "Actualizar voces";
 "Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version." = "Solo se muestran las voces disponibles para esta app en este dispositivo. Para añadir voces, revisa Ajustes del dispositivo → Accesibilidad → Contenido leído → Voces; después vuelve y actualiza. Los nombres pueden variar según la versión de iOS.";
+
+// Manual conversation card audio
+"Stop original" = "Detener original";
+"Play translation" = "Reproducir traducción";
+"Play original" = "Reproducir original";
+"By button: choose a language, speak, then tap Finish to translate. Tap a card's play icon to listen. You do not need to hold the button." = "Por botón: elige un idioma, habla y pulsa Terminar para traducir. Pulsa el icono de reproducción de una tarjeta para escucharla. No necesitas mantener pulsado el botón.";
+"Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button." = "Automático: una pausa termina el turno y lo traduce. El audio se reproduce solo al pulsar el icono de una tarjeta. También puedes terminar con el botón.";
+"Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen." = "Cada turno dura hasta un minuto. Revisa el texto y pulsa el icono de una tarjeta cuando quieras escucharla.";
+"Translate" = "Traducir";

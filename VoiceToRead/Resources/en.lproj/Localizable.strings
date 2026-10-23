@@ -1103,3 +1103,12 @@
 "Stop sample" = "Stop sample";
 "Refresh voices" = "Refresh voices";
 "Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version." = "Only voices available to this app on this device are listed. To add voices, check device Settings → Accessibility → Spoken Content → Voices, then return and refresh. Names may vary by iOS version.";
+
+// Manual conversation card audio
+"Stop original" = "Stop original";
+"Play translation" = "Play translation";
+"Play original" = "Play original";
+"By button: choose a language, speak, then tap Finish to translate. Tap a card's play icon to listen. You do not need to hold the button." = "By button: choose a language, speak, then tap Finish to translate. Tap a card's play icon to listen. You do not need to hold the button.";
+"Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button." = "Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button.";
+"Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen." = "Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen.";
+"Translate" = "Translate";
