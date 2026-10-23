@@ -1054,3 +1054,32 @@
 "Review these phrases" = "Repasar estas frases";
 
 "Translating" = "Traduciendo";
+
+// Multilingual training
+"Training" = "Entrenar";
+"Training unavailable" = "Entrenamiento no disponible";
+"Choose the source and practice languages, write one phrase per line, then review the translations before practising." = "Elige los idiomas de origen y de práctica, escribe una frase por línea y revisa las traducciones antes de practicar.";
+"Source language" = "Idioma de origen";
+"Practice language" = "Idioma de práctica";
+"Choose different source and practice languages." = "Elige idiomas diferentes para el origen y la práctica.";
+"Changing the source language does not convert your existing phrases. Review and edit them in the selected source language." = "Cambiar el idioma de origen no convierte las frases existentes. Revísalas y edítalas en el idioma de origen seleccionado.";
+"Source phrases · one phrase per line" = "Frases de origen · una por línea";
+"Editing a source phrase clears only its translation. Unchanged phrases keep their corrections unless you change languages." = "Al editar una frase de origen, se borra solo su traducción. Las frases que no cambies conservan sus correcciones, salvo que cambies los idiomas.";
+"Change training languages?" = "¿Cambiar los idiomas del entrenamiento?";
+"Save and translate" = "Guardar y traducir";
+"Changing either language replaces all translations and corrections. Review your source phrases before continuing. They will be translated again after saving." = "Cambiar cualquiera de los idiomas reemplaza todas las traducciones y correcciones. Revisa las frases de origen antes de continuar. Se volverán a traducir después de guardar.";
+"to" = "a";
+"Review the translations before practising. You can correct the automatic translation." = "Revisa las traducciones antes de practicar. Puedes corregir la traducción automática.";
+"Translated response" = "Respuesta traducida";
+"Review translations" = "Revisar traducciones";
+"Edit phrases and languages" = "Editar frases e idiomas";
+"Prepare translations" = "Preparar traducciones";
+"Translate all phrases again?" = "¿Volver a traducir todas las frases?";
+"Replace translations" = "Reemplazar traducciones";
+"All translations and manual corrections will be replaced only if translation finishes successfully. Your source phrases stay unchanged." = "Todas las traducciones y correcciones manuales se reemplazarán solo si la traducción termina correctamente. Las frases de origen se conservarán.";
+"Try saying this in %@ before revealing the response." = "Intenta decir esta frase en %@ antes de mostrar la respuesta.";
+"No example voice is installed for the practice language. Check the voices in device Settings." = "No hay una voz de ejemplo instalada para el idioma de práctica. Revisa las voces en los Ajustes del dispositivo.";
+"Local recognition is unavailable for the practice language. You can still record, listen and compare; no automatic check will be counted." = "El reconocimiento local no está disponible para el idioma de práctica. Puedes grabarte, escucharte y comparar; no se contará un resultado automático.";
+"Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each." = "Escribe un título de hasta 100 caracteres y entre 1 y 200 frases de origen, una por línea, de hasta 1.000 caracteres cada una.";
+"The translated responses are incomplete. Review the phrases and try again." = "Las respuestas traducidas están incompletas. Revisa las frases e inténtalo de nuevo.";
+"Languages" = "Idiomas";

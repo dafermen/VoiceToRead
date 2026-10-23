@@ -3,6 +3,7 @@ import Observation
 
 struct EnglishTrainingPhrase: Codable, Equatable, Identifiable {
     var id = UUID()
+    // Keep the original JSON keys: these hold source/translated text for any language pair.
     var spanish: String
     var english = ""
     var reviewed = false
@@ -14,26 +15,56 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
     var title: String
     var phrases: [EnglishTrainingPhrase]
     var updatedAt = Date()
+    var sourceLanguage: CaptureLanguage = .spanish
+    var targetLanguage: CaptureLanguage = .english
+
+    init(id: UUID = UUID(), title: String, phrases: [EnglishTrainingPhrase], updatedAt: Date = Date(),
+         sourceLanguage: CaptureLanguage = .spanish, targetLanguage: CaptureLanguage = .english) {
+        self.id = id; self.title = title; self.phrases = phrases; self.updatedAt = updatedAt
+        self.sourceLanguage = sourceLanguage; self.targetLanguage = targetLanguage
+    }
+    private enum CodingKeys: String, CodingKey { case id, title, phrases, updatedAt, sourceLanguage, targetLanguage }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(UUID.self, forKey: .id)
+        title = try values.decode(String.self, forKey: .title)
+        phrases = try values.decode([EnglishTrainingPhrase].self, forKey: .phrases)
+        updatedAt = try values.decode(Date.self, forKey: .updatedAt)
+        // Existing installations have no language keys. Keep their phrases and corrections.
+        sourceLanguage = try values.decodeIfPresent(CaptureLanguage.self, forKey: .sourceLanguage) ?? .spanish
+        targetLanguage = try values.decodeIfPresent(CaptureLanguage.self, forKey: .targetLanguage) ?? .english
+    }
     var ready: Bool { !phrases.isEmpty && phrases.allSatisfy { !$0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty } }
     var source: [ReviewParagraph] { phrases.map { ReviewParagraph(id: $0.id, text: $0.spanish) } }
     var valid: Bool {
+        sourceLanguage != targetLanguage &&
         !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && title.count <= 100 &&
         !phrases.isEmpty && phrases.count <= 200 && Set(phrases.map(\.id)).count == phrases.count &&
         phrases.allSatisfy { !$0.spanish.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && $0.spanish.count <= 1000 && $0.english.count <= 1000 }
     }
 
-    static func edited(title: String, text: String, previous: Self? = nil) throws -> Self {
+    static func edited(title: String, text: String, previous: Self? = nil,
+                       sourceLanguage: CaptureLanguage? = nil, targetLanguage: CaptureLanguage? = nil) throws -> Self {
+        let sourceLanguage = sourceLanguage ?? previous?.sourceLanguage ?? .spanish
+        let targetLanguage = targetLanguage ?? previous?.targetLanguage ?? .english
+        guard sourceLanguage != targetLanguage else { throw EnglishTrainingFailure.sameLanguage }
+        let changedPair = previous.map { $0.sourceLanguage != sourceLanguage || $0.targetLanguage != targetLanguage } ?? false
         let title = title.trimmingCharacters(in: .whitespacesAndNewlines)
         let lines = text.components(separatedBy: .newlines).map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
         guard !title.isEmpty, title.count <= 100, !lines.isEmpty, lines.count <= 200,
               lines.allSatisfy({ $0.count <= 1000 }) else { throw EnglishTrainingFailure.invalidInput }
         var retained = previous?.phrases ?? []
         let phrases = lines.map { line -> EnglishTrainingPhrase in
-            if let index = retained.firstIndex(where: { $0.spanish == line }) { return retained.remove(at: index) }
+            if let index = retained.firstIndex(where: { $0.spanish == line }) {
+                var phrase = retained.remove(at: index)
+                if changedPair { phrase.english = ""; phrase.reviewed = false; phrase.needsPractice = true }
+                return phrase
+            }
             return EnglishTrainingPhrase(spanish: line)
         }
         var result = previous ?? Self(title: title, phrases: [])
         result.title = title; result.phrases = phrases; result.updatedAt = Date()
+        result.sourceLanguage = sourceLanguage; result.targetLanguage = targetLanguage
         return result
     }
 
@@ -62,13 +93,14 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
 }
 
 enum EnglishTrainingFailure: LocalizedError {
-    case invalidInput, changed, invalidTranslation, unsupportedFile
+    case invalidInput, changed, invalidTranslation, unsupportedFile, sameLanguage
     var errorDescription: String? {
         switch self {
-        case .invalidInput: "Use a title of up to 100 characters and 1–200 Spanish phrases, one per line, up to 1,000 characters each."
+        case .invalidInput: "Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each."
         case .changed: "This training changed. Reopen it and try again. Your saved phrases are unchanged."
-        case .invalidTranslation: "The English responses are incomplete. Review the phrases and try again."
+        case .invalidTranslation: "The translated responses are incomplete. Review the phrases and try again."
         case .unsupportedFile: "The training file could not be opened. It has not been replaced or deleted."
+        case .sameLanguage: "Choose different source and practice languages."
         }
     }
 }
@@ -76,7 +108,7 @@ enum EnglishTrainingFailure: LocalizedError {
 /// Separate local storage: never opens, migrates, deletes or rewrites the session database.
 @MainActor @Observable
 final class EnglishTrainingStore {
-    private struct Archive: Codable { var version = 1; var trainings: [EnglishTraining] }
+    private struct Archive: Codable { var version = 2; var trainings: [EnglishTraining] }
     private(set) var trainings: [EnglishTraining]
     private let file: URL
 
@@ -91,7 +123,7 @@ final class EnglishTrainingStore {
         if FileManager.default.fileExists(atPath: file.path) {
             do {
                 let archive = try JSONDecoder().decode(Archive.self, from: Data(contentsOf: file))
-                guard archive.version == 1, Set(archive.trainings.map(\.id)).count == archive.trainings.count,
+                guard [1, 2].contains(archive.version), Set(archive.trainings.map(\.id)).count == archive.trainings.count,
                       archive.trainings.allSatisfy(\.valid) else {
                     throw EnglishTrainingFailure.unsupportedFile
                 }
@@ -114,8 +146,10 @@ final class EnglishTrainingStore {
         else { values.append(training) }
         try persist(values); trainings = values
     }
-    func saveEnglish(_ id: UUID, source: [ReviewParagraph], values: [UUID: String]) throws {
-        guard var training = training(id), training.source == source else { throw EnglishTrainingFailure.changed }
+    func saveEnglish(_ id: UUID, source: [ReviewParagraph], values: [UUID: String],
+                     language: CaptureLanguage = .spanish, targetLanguage: CaptureLanguage = .english) throws {
+        guard var training = training(id), training.source == source,
+              training.sourceLanguage == language, training.targetLanguage == targetLanguage else { throw EnglishTrainingFailure.changed }
         guard Set(values.keys) == Set(training.phrases.map(\.id)), values.values.allSatisfy({ $0.count <= 1000 }) else { throw EnglishTrainingFailure.invalidTranslation }
         for index in training.phrases.indices {
             let text = values[training.phrases[index].id]!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -126,12 +160,19 @@ final class EnglishTrainingStore {
         }
         training.updatedAt = Date(); try save(training)
     }
-    func acceptTranslation(_ id: UUID, source: [ReviewParagraph], responses: [ReviewParagraph]) throws {
-        guard var training = training(id), Set(source.map(\.id)).count == source.count else { throw EnglishTrainingFailure.changed }
+    func acceptTranslation(_ id: UUID, source: [ReviewParagraph], responses: [ReviewParagraph],
+                           language: CaptureLanguage = .spanish, targetLanguage: CaptureLanguage = .english,
+                           replacing snapshot: EnglishTraining? = nil) throws {
+        guard var training = training(id), Set(source.map(\.id)).count == source.count,
+              training.sourceLanguage == language, training.targetLanguage == targetLanguage else { throw EnglishTrainingFailure.changed }
+        if let snapshot {
+            guard training == snapshot, source == training.source else { throw EnglishTrainingFailure.changed }
+        }
         guard source.map(\.id) == responses.map(\.id), responses.allSatisfy({ !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && $0.text.count <= 1000 }) else { throw EnglishTrainingFailure.invalidTranslation }
         for (original, translated) in zip(source, responses) {
-            guard let index = training.phrases.firstIndex(where: { $0.id == original.id && $0.spanish == original.text && $0.english.isEmpty }) else { throw EnglishTrainingFailure.changed }
+            guard let index = training.phrases.firstIndex(where: { $0.id == original.id && $0.spanish == original.text && ($0.english.isEmpty || snapshot != nil) }) else { throw EnglishTrainingFailure.changed }
             training.phrases[index].english = translated.text.trimmingCharacters(in: .whitespacesAndNewlines)
+            training.phrases[index].reviewed = false; training.phrases[index].needsPractice = true
         }
         training.updatedAt = Date(); try save(training)
     }
@@ -144,10 +185,11 @@ final class EnglishTrainingStore {
 
 /// Word differences describe recognition, not pronunciation quality or translation validity.
 enum TrainingComparison {
-    struct Word: Equatable { let text: String; let matched: Bool }
+    struct Word: Equatable { let text: String; let matched: Bool; var separator = " " }
     static func compare(expected: String, heard: String) -> (expected: [Word], heard: [Word]) {
-        let a = expected.split(whereSeparator: \.isWhitespace).map(String.init)
-        let b = heard.split(whereSeparator: \.isWhitespace).map(String.init)
+        let unspaced = SubtitleExport.containsUnspacedScript(expected) || SubtitleExport.containsUnspacedScript(heard)
+        let a = unspaced ? expected.map(String.init) : expected.split(whereSeparator: \.isWhitespace).map(String.init)
+        let b = unspaced ? heard.map(String.init) : heard.split(whereSeparator: \.isWhitespace).map(String.init)
         let ka = a.map { PracticeRecognition.words($0).joined(separator: " ") }
         let kb = b.map { PracticeRecognition.words($0).joined(separator: " ") }
         let width = b.count + 1
@@ -167,8 +209,8 @@ enum TrainingComparison {
             else if lengths[(i + 1) * width + j] >= lengths[i * width + j + 1] { i += 1 }
             else { j += 1 }
         }
-        return (a.enumerated().map { Word(text: $0.element, matched: matchedA.contains($0.offset)) },
-                b.enumerated().map { Word(text: $0.element, matched: matchedB.contains($0.offset)) })
+        return (a.enumerated().map { Word(text: $0.element, matched: ka[$0.offset].isEmpty || matchedA.contains($0.offset), separator: unspaced ? "" : " ") },
+                b.enumerated().map { Word(text: $0.element, matched: kb[$0.offset].isEmpty || matchedB.contains($0.offset), separator: unspaced ? "" : " ") })
     }
 }
 

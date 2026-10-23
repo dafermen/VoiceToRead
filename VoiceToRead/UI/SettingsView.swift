@@ -332,7 +332,7 @@ struct SimpleHomeView: View {
                     .accessibilityIdentifier("simpleListenNow")
                 NavigationLink(value: HomeDestination.sessions) { Label("My sessions", systemImage: "clock") }
                     .accessibilityIdentifier("simpleSessions")
-                NavigationLink(value: HomeDestination.englishTraining) { Label("Train English", systemImage: "book.closed") }
+                NavigationLink(value: HomeDestination.englishTraining) { Label("Training", systemImage: "book.closed") }
                     .accessibilityIdentifier("simpleEnglishTraining")
                 NavigationLink(value: HomeDestination.response) { Label("Write and speak", systemImage: "keyboard") }
                     .accessibilityIdentifier("simpleWriteResponse")

@@ -421,7 +421,7 @@ struct SpeakTranslateView: View {
             .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
             .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
             .disabled(!model.canEdit || model.capture.preparationPending)
-            .accessibilityLabel("Train English").accessibilityIdentifier("englishTrainingEntry")
+            .accessibilityLabel("Training").accessibilityIdentifier("englishTrainingEntry")
             Button {
                 editor = ConversationEdit(language: first, target: second, text: "")
             } label: { Label("Write", systemImage: "keyboard") }

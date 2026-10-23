@@ -1054,3 +1054,32 @@
 "Review these phrases" = "Review these phrases";
 
 "Translating" = "Translating";
+
+// Multilingual training
+"Training" = "Training";
+"Training unavailable" = "Training unavailable";
+"Choose the source and practice languages, write one phrase per line, then review the translations before practising." = "Choose the source and practice languages, write one phrase per line, then review the translations before practising.";
+"Source language" = "Source language";
+"Practice language" = "Practice language";
+"Choose different source and practice languages." = "Choose different source and practice languages.";
+"Changing the source language does not convert your existing phrases. Review and edit them in the selected source language." = "Changing the source language does not convert your existing phrases. Review and edit them in the selected source language.";
+"Source phrases · one phrase per line" = "Source phrases · one phrase per line";
+"Editing a source phrase clears only its translation. Unchanged phrases keep their corrections unless you change languages." = "Editing a source phrase clears only its translation. Unchanged phrases keep their corrections unless you change languages.";
+"Change training languages?" = "Change training languages?";
+"Save and translate" = "Save and translate";
+"Changing either language replaces all translations and corrections. Review your source phrases before continuing. They will be translated again after saving." = "Changing either language replaces all translations and corrections. Review your source phrases before continuing. They will be translated again after saving.";
+"to" = "to";
+"Review the translations before practising. You can correct the automatic translation." = "Review the translations before practising. You can correct the automatic translation.";
+"Translated response" = "Translated response";
+"Review translations" = "Review translations";
+"Edit phrases and languages" = "Edit phrases and languages";
+"Prepare translations" = "Prepare translations";
+"Translate all phrases again?" = "Translate all phrases again?";
+"Replace translations" = "Replace translations";
+"All translations and manual corrections will be replaced only if translation finishes successfully. Your source phrases stay unchanged." = "All translations and manual corrections will be replaced only if translation finishes successfully. Your source phrases stay unchanged.";
+"Try saying this in %@ before revealing the response." = "Try saying this in %@ before revealing the response.";
+"No example voice is installed for the practice language. Check the voices in device Settings." = "No example voice is installed for the practice language. Check the voices in device Settings.";
+"Local recognition is unavailable for the practice language. You can still record, listen and compare; no automatic check will be counted." = "Local recognition is unavailable for the practice language. You can still record, listen and compare; no automatic check will be counted.";
+"Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each." = "Use a title of up to 100 characters and 1–200 source phrases, one per line, up to 1,000 characters each.";
+"The translated responses are incomplete. Review the phrases and try again." = "The translated responses are incomplete. Review the phrases and try again.";
+"Languages" = "Languages";

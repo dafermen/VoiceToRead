@@ -1406,6 +1406,63 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testMultilingualTrainingLanguagesConfirmationAndRetranslation() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training", "--ui-test-labels"]
+        app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launch()
+        XCTAssertTrue(app.buttons["englishTrainingEntry"].waitForExistence(timeout: 20))
+        app.buttons["englishTrainingEntry"].tap()
+        app.buttons["newEnglishTraining"].tap()
+        app.textFields["trainingTitle"].tap(); app.textFields["trainingTitle"].typeText("My languages")
+        app.buttons["trainingSourceLanguage"].tap(); app.buttons["English"].tap()
+        XCTAssertFalse(app.buttons["saveEnglishTraining"].isEnabled, "Identical languages cannot be saved")
+        app.buttons["trainingTargetLanguage"].tap(); app.buttons["French · Français"].tap()
+        app.textViews["trainingSpanishInput"].tap(); app.textViews["trainingSpanishInput"].typeText("Hello\nThanks")
+        app.buttons["saveEnglishTraining"].tap()
+        app.staticTexts["My languages"].tap()
+        app.buttons["prepareTrainingEnglish"].tap()
+        let start = app.buttons["startEnglishTraining"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
+        app.buttons["reviewTrainingEnglish"].tap()
+        let translated = app.textFields.matching(NSPredicate(format: "identifier BEGINSWITH %@", "trainingEnglish-")).firstMatch
+        XCTAssertTrue(translated.waitForExistence(timeout: 5))
+        XCTAssertEqual(translated.value as? String, "Bonjour")
+        translated.tap(); translated.typeText(" corrected")
+        let correction = translated.value as? String
+        app.buttons["saveTrainingEnglish"].tap()
+        app.buttons["retranslateTraining"].tap()
+        XCTAssertTrue(app.buttons["confirmTrainingRetranslation"].waitForExistence(timeout: 5))
+        app.buttons["Cancel"].lastMatch.tap()
+        app.buttons["reviewTrainingEnglish"].tap()
+        XCTAssertEqual(translated.value as? String, correction, "Cancelling retranslation must retain manual corrections")
+        app.navigationBars["Review translations"].buttons["Cancel"].tap()
+        app.buttons["editTrainingSource"].tap()
+        app.buttons["trainingTargetLanguage"].tap(); app.buttons["Japanese · 日本語"].tap()
+        app.buttons["saveEnglishTraining"].tap()
+        XCTAssertTrue(app.buttons["confirmTrainingLanguages"].waitForExistence(timeout: 5))
+        app.buttons["Cancel"].lastMatch.tap()
+        app.navigationBars["Edit training"].buttons["Cancel"].tap()
+        app.buttons["reviewTrainingEnglish"].tap()
+        XCTAssertEqual(translated.value as? String, correction)
+        app.navigationBars["Review translations"].buttons["Cancel"].tap()
+        app.buttons["editTrainingSource"].tap()
+        app.buttons["trainingTargetLanguage"].tap(); app.buttons["Japanese · 日本語"].tap()
+        app.buttons["saveEnglishTraining"].tap(); app.buttons["confirmTrainingLanguages"].tap()
+        let translatedAgain = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
+        XCTAssertEqual(XCTWaiter.wait(for: [translatedAgain], timeout: 10), .completed)
+        app.buttons["reviewTrainingEnglish"].tap()
+        XCTAssertEqual(translated.value as? String, "こんにちは")
+        app.buttons["saveTrainingEnglish"].tap()
+        start.tap()
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hello")
+        XCTAssertTrue(app.staticTexts["Try saying this in 日本語 before revealing the response."].exists)
+        app.buttons["revealTrainingResponse"].tap()
+        XCTAssertEqual(app.staticTexts["trainingExpected"].label, "こんにちは")
+    }
+
+    @MainActor
     func testCreateSeparateEnglishTrainingAndRetireSessionPractice() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training", "--ui-test-labels"]
@@ -1415,7 +1472,7 @@ final class HomeScreenTests: XCTestCase {
         let train = app.buttons["englishTrainingEntry"]
         let write = app.buttons["conversationWriteReply"]
         let new = app.buttons["newConversationButton"]
-        XCTAssertEqual(train.label, "Train English")
+        XCTAssertEqual(train.label, "Training")
         XCTAssertEqual(write.label, "Write a reply")
         XCTAssertEqual(new.label, "New conversation")
         XCTAssertEqual(train.frame.midY, write.frame.midY, accuracy: 2)

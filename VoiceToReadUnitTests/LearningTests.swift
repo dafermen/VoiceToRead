@@ -345,3 +345,115 @@ extension LearningTests {
         XCTAssertEqual(try EnglishTrainingStore(directory: directory).trainings, store.trainings)
     }
 }
+
+
+extension LearningTests {
+    func testLegacyTrainingArchiveDefaultsLanguagesWithoutRewritingOrLosingCorrections() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        var original = try EnglishTraining.edited(title: "Existing training", text: "Hola\nGracias")
+        original.phrases[0].english = "My corrected greeting"
+        original.phrases[0].reviewed = true; original.phrases[0].needsPractice = false
+        var legacy = try XCTUnwrap(JSONSerialization.jsonObject(with: JSONEncoder().encode(original)) as? [String: Any])
+        legacy.removeValue(forKey: "sourceLanguage"); legacy.removeValue(forKey: "targetLanguage")
+        let bytes = try JSONSerialization.data(withJSONObject: ["version": 1, "trainings": [legacy]])
+        let file = directory.appendingPathComponent("trainings.json")
+        try bytes.write(to: file)
+        let store = try EnglishTrainingStore(directory: directory)
+        let saved = try XCTUnwrap(store.training(original.id))
+        XCTAssertEqual(saved, original)
+        XCTAssertEqual(saved.sourceLanguage, .spanish); XCTAssertEqual(saved.targetLanguage, .english)
+        XCTAssertEqual(try Data(contentsOf: file), bytes, "Opening legacy data must not rewrite it")
+        try store.save(EnglishTraining.edited(title: "French", text: "Hello", sourceLanguage: .english, targetLanguage: .french))
+        let reopened = try EnglishTrainingStore(directory: directory)
+        XCTAssertEqual(reopened.training(original.id), original)
+        XCTAssertEqual(reopened.trainings.count, 2)
+        let archive = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: file)) as? [String: Any])
+        XCTAssertEqual(archive["version"] as? Int, 2)
+    }
+
+    func testTrainingSupportsEveryDistinctCurrentLanguagePairAndRejectsIdenticalLanguages() throws {
+        var pairs = 0
+        for source in CaptureLanguage.allCases {
+            for target in CaptureLanguage.allCases {
+                if source == target {
+                    XCTAssertThrowsError(try EnglishTraining.edited(title: "Invalid", text: source.greeting, sourceLanguage: source, targetLanguage: target))
+                } else {
+                    let training = try EnglishTraining.edited(title: "Pair", text: source.greeting, sourceLanguage: source, targetLanguage: target)
+                    XCTAssertTrue(training.valid)
+                    let decoded = try JSONDecoder().decode(EnglishTraining.self, from: JSONEncoder().encode(training))
+                    XCTAssertEqual(decoded.sourceLanguage, source); XCTAssertEqual(decoded.targetLanguage, target)
+                    XCTAssertEqual(decoded.phrases, training.phrases)
+                    pairs += 1
+                }
+            }
+        }
+        XCTAssertEqual(pairs, 30)
+    }
+
+    func testTrainingLanguageChangesInvalidateOnlyTranslationsAndPreserveSourceIDs() throws {
+        var old = try EnglishTraining.edited(title: "Example", text: "Hola\nGracias")
+        old.phrases[0].english = "Corrected hello"; old.phrases[1].english = "Thanks"
+        let unchanged = try EnglishTraining.edited(title: "Renamed", text: "Hola\nGracias", previous: old)
+        XCTAssertEqual(unchanged.phrases, old.phrases)
+        for (source, target) in [(CaptureLanguage.french, CaptureLanguage.english), (.spanish, .japanese), (.chinese, .korean)] {
+            let changed = try EnglishTraining.edited(title: "New pair", text: "Hola\nGracias", previous: old, sourceLanguage: source, targetLanguage: target)
+            XCTAssertEqual(changed.phrases.map(\.id), old.phrases.map(\.id))
+            XCTAssertEqual(changed.source, old.source)
+            XCTAssertTrue(changed.phrases.allSatisfy { $0.english.isEmpty })
+            XCTAssertFalse(changed.ready)
+            XCTAssertEqual(changed.sourceLanguage, source); XCTAssertEqual(changed.targetLanguage, target)
+            XCTAssertEqual(old.phrases[0].english, "Corrected hello", "Building an edit must not mutate saved data before confirmation")
+        }
+    }
+
+    func testTrainingRetranslationKeepsCorrectionsUntilCompleteAndRejectsStaleSnapshots() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        var training = try EnglishTraining.edited(title: "French", text: "Hello\nThanks", sourceLanguage: .english, targetLanguage: .french)
+        training.phrases[0].english = "Bonjour corrigé"; training.phrases[1].english = "Merci corrigé"
+        try store.save(training)
+        let responses = zip(training.source, ["Bonjour", "Merci"]).map { ReviewParagraph(id: $0.0.id, text: $0.1) }
+        let file = directory.appendingPathComponent("trainings.json")
+        let bytes = try Data(contentsOf: file)
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: Array(responses.prefix(1)), language: .english, targetLanguage: .french, replacing: training))
+        XCTAssertEqual(try Data(contentsOf: file), bytes)
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: responses, language: .english, targetLanguage: .japanese, replacing: training))
+        XCTAssertEqual(store.training(training.id), training)
+        let edits = Dictionary(uniqueKeysWithValues: zip(training.phrases.map(\.id), ["Salut", "Merci"]))
+        try store.saveEnglish(training.id, source: training.source, values: edits, language: .english, targetLanguage: .french)
+        let updated = try XCTUnwrap(store.training(training.id))
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: responses, language: .english, targetLanguage: .french, replacing: training))
+        XCTAssertEqual(store.training(training.id), updated)
+        try store.acceptTranslation(training.id, source: updated.source, responses: responses, language: .english, targetLanguage: .french, replacing: updated)
+        XCTAssertEqual(store.training(training.id)?.phrases.map(\.english), ["Bonjour", "Merci"])
+        XCTAssertEqual(try EnglishTrainingStore(directory: directory).training(training.id)?.targetLanguage, .french)
+    }
+
+    func testTrainingMissingTranslationsAndManualEditsRequireMatchingLanguages() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        let training = try EnglishTraining.edited(title: "Japanese", text: "Hello", sourceLanguage: .english, targetLanguage: .japanese)
+        try store.save(training)
+        let response = ReviewParagraph(id: training.phrases[0].id, text: "こんにちは")
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: [response]))
+        XCTAssertThrowsError(try store.saveEnglish(training.id, source: training.source, values: [response.id: response.text]))
+        try store.acceptTranslation(training.id, source: training.source, responses: [response], language: .english, targetLanguage: .japanese)
+        XCTAssertEqual(store.training(training.id)?.phrases[0].english, "こんにちは")
+    }
+
+    func testTrainingComparisonPreservesUnspacedScriptAndMarksCharacterDifferences() {
+        let japanese = TrainingComparison.compare(expected: "私は学校へ行きます。", heard: "私は学校に行きます")
+        XCTAssertEqual(japanese.expected.filter { !$0.matched }.map(\.text), ["へ"])
+        XCTAssertEqual(japanese.heard.filter { !$0.matched }.map(\.text), ["に"])
+        XCTAssertTrue(japanese.expected.allSatisfy { $0.separator.isEmpty })
+        XCTAssertEqual(japanese.expected.map(\.text).joined(), "私は学校へ行きます。")
+        let chinese = TrainingComparison.compare(expected: "我喜欢 apple。", heard: "我喜欢 apple")
+        XCTAssertTrue(chinese.expected.allSatisfy(\.matched))
+        XCTAssertTrue(chinese.heard.allSatisfy(\.matched))
+        XCTAssertTrue(PracticeRecognition.matches("你好", target: "你好。"))
+    }
+}
