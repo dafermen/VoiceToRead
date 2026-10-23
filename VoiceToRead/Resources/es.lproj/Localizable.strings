@@ -1112,3 +1112,7 @@
 "Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button." = "Automático: una pausa termina el turno y lo traduce. El audio se reproduce solo al pulsar el icono de una tarjeta. También puedes terminar con el botón.";
 "Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen." = "Cada turno dura hasta un minuto. Revisa el texto y pulsa el icono de una tarjeta cuando quieras escucharla.";
 "Translate" = "Traducir";
+
+// Compact session swipe actions
+"Favorite" = "Favorita";
+"Unprotect" = "Desproteger";

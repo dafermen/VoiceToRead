@@ -1112,3 +1112,7 @@
 "Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button." = "Automatic: a quiet pause ends the turn and translates it. Audio plays only when you tap a card's play icon. You can also finish with the button.";
 "Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen." = "Each turn lasts up to one minute. Review the text and tap a card's play icon when you want to listen.";
 "Translate" = "Translate";
+
+// Compact session swipe actions
+"Favorite" = "Favorite";
+"Unprotect" = "Unprotect";

@@ -1055,27 +1055,74 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
         app.tabBars.buttons["Sessions"].tap()
         let row = app.staticTexts["Review sample"]
-        row.swipeRight()
+        let cell = app.cells.containing(.staticText, identifier: "Review sample").firstMatch
         let protect = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeFavoriteSession-")).firstMatch
+        let delete = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeDeleteSession-")).firstMatch
+        cell.swipeRight()
+        XCTAssertFalse(protect.exists); XCTAssertFalse(delete.exists)
+        cell.swipeLeft()
         XCTAssertTrue(protect.waitForExistence(timeout: 5))
+        XCTAssertTrue(delete.exists)
+        XCTAssertEqual(protect.label, "Favorite")
         protect.tap()
         XCTAssertTrue(row.exists)
-        row.swipeLeft()
-        let delete = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeDeleteSession-")).firstMatch
+        cell.swipeLeft()
         XCTAssertFalse(delete.exists, "A protected favorite cannot be deleted")
-        row.swipeRight()
-        XCTAssertTrue(protect.waitForExistence(timeout: 5))
+        XCTAssertTrue(protect.exists); XCTAssertEqual(protect.label, "Unprotect")
         protect.tap()
+        XCTAssertTrue(app.buttons["confirmRemoveSessionProtection"].waitForExistence(timeout: 5))
+        app.buttons["Cancel"].tap()
+        XCTAssertTrue(app.staticTexts["Protected favorite"].exists, "Cancelling must retain protection")
+        cell.swipeLeft(); protect.tap()
         app.buttons["confirmRemoveSessionProtection"].tap()
         XCTAssertTrue(row.exists, "Removing protection must preserve the session")
-        row.swipeLeft()
-        XCTAssertTrue(delete.waitForExistence(timeout: 5))
-        delete.tap()
+        cell.swipeLeft()
+        XCTAssertTrue(delete.waitForExistence(timeout: 5)); delete.tap()
+        XCTAssertTrue(app.buttons["confirmDeleteSession"].waitForExistence(timeout: 5))
         XCTAssertTrue(row.exists, "Deletion waits for confirmation")
-        app.buttons["confirmDeleteSession"].tap()
+        app.buttons["Cancel"].tap()
+        XCTAssertTrue(row.exists, "Cancelling deletion must preserve the session")
+        cell.swipeLeft(); delete.tap(); app.buttons["confirmDeleteSession"].tap()
         XCTAssertFalse(row.waitForExistence(timeout: 2))
+        XCTAssertTrue(app.buttons["undoSessionDeletion"].exists)
     }
 
+    @MainActor
+    func testSessionSwipeClosesAndMenuDoesNotExpandOrDuplicateRowActions() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-labels"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap()
+        let cell = app.cells.containing(.staticText, identifier: "Review sample").firstMatch
+        let height = cell.frame.height
+        let favorites = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeFavoriteSession-"))
+        let deletes = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "swipeDeleteSession-"))
+        cell.swipeLeft()
+        XCTAssertTrue(deletes.firstMatch.waitForExistence(timeout: 5))
+        XCTAssertEqual(favorites.count, 1); XCTAssertEqual(deletes.count, 1)
+        XCTAssertFalse(app.buttons["protectSessionAction"].exists)
+        XCTAssertFalse(app.buttons["deleteSessionAction"].exists)
+        cell.swipeRight()
+        let closed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: deletes.firstMatch)
+        XCTAssertEqual(XCTWaiter.wait(for: [closed], timeout: 5), .completed)
+        XCTAssertEqual(cell.frame.height, height, accuracy: 2)
+        let menu = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "sessionActions-")).firstMatch
+        XCTAssertEqual(menu.label, "Session actions")
+        menu.tap()
+        XCTAssertTrue(app.buttons["protectSessionAction"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.buttons.matching(identifier: "protectSessionAction").count, 1)
+        XCTAssertEqual(app.buttons.matching(identifier: "deleteSessionAction").count, 1)
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.12)).tap()
+        XCTAssertTrue(menu.isHittable)
+        XCTAssertEqual(cell.frame.height, height, accuracy: 2, "The menu must not leave expanded controls in the row")
+        menu.tap()
+        app.buttons["protectSessionAction"].tap()
+        menu.tap()
+        XCTAssertFalse(app.buttons["deleteSessionAction"].isEnabled)
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.12)).tap()
+        XCTAssertTrue(menu.isHittable, "The native menu must dismiss when tapping outside")
+    }
 
     @MainActor
     func testReadersRetireBookmarksAndKeepSessionFavorites() throws {
