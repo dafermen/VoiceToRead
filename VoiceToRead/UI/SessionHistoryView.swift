@@ -120,15 +120,17 @@ struct SessionHistoryView: View {
         .navigationTitle(uiKey(recoveryOnly ? "Recovery drafts" : favoritesOnly ? "Favorites" : "Sessions"))
         .toolbar {
             if !recoveryOnly && showsFilters {
-                Menu {
-                    NavigationLink { SessionHistoryView(coordinator: coordinator, recoveryOnly: true) } label: {
-                        Label("Recovery drafts (\(recoverySessions.count))", systemImage: "doc.badge.clock")
-                    }
-                    NavigationLink { RecentlyDeletedView(repository: coordinator.repository) } label: {
-                        Label("Recently deleted (\(trash.count))", systemImage: "trash")
-                    }.accessibilityIdentifier("recentlyDeletedLink")
-                } label: { Label("Session library options", systemImage: "ellipsis.circle").labelStyle(AccessibleControlLabelStyle()) }
-                    .accessibilityIdentifier("sessionLibraryOptions")
+                ToolbarItem(placement: .topBarLeading) {
+                    Menu {
+                        NavigationLink { SessionHistoryView(coordinator: coordinator, recoveryOnly: true) } label: {
+                            Label("Recovery drafts (\(recoverySessions.count))", systemImage: "doc.badge.clock")
+                        }
+                        NavigationLink { RecentlyDeletedView(repository: coordinator.repository) } label: {
+                            Label("Recently deleted (\(trash.count))", systemImage: "trash")
+                        }.accessibilityIdentifier("recentlyDeletedLink")
+                    } label: { Label("Session library options", systemImage: "ellipsis.circle").labelStyle(AccessibleControlLabelStyle()) }
+                        .accessibilityIdentifier("sessionLibraryOptions")
+                }
             }
         }
         .confirmationDialog(uiKey("Remove favorite protection?"), isPresented: Binding(

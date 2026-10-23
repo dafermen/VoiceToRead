@@ -349,6 +349,7 @@ struct SpeakTranslateView: View {
         .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
         .statusBarHidden(fullScreen)
         .preference(key: CommunicationFullScreenKey.self, value: fullScreen)
+        .modifier(HomeFullScreenSource(selection: $fullScreen, hosted: embedded, identifier: "conversationFullScreenButton"))
         .toolbar {
             if !embedded { DoneToolbar { model.cancel(); dismiss() } }
             ToolbarItem(placement: .topBarLeading) {
@@ -485,6 +486,11 @@ struct SpeakTranslateView: View {
         return layout {
             turnButton(first)
             turnButton(second)
+            if !embedded && !fullScreen {
+                Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") { fullScreen = true }
+                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                    .accessibilityIdentifier("conversationFullScreenButton")
+            }
             if fullScreen {
                 Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
                     .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
@@ -550,7 +556,7 @@ struct SpeakTranslateView: View {
     private var options: some View {
         NavigationStack {
             Form {
-                HomeReadingMenu(settings: settings, fullScreen: $fullScreen) { showingOptions = false }
+                HomeReadingMenu(settings: settings)
                 Section {
                     Picker("Conversation mode", selection: Binding(get: { model.mode }, set: { model.selectMode($0) })) {
                         Text("By button").tag(SpeakTranslateModel.Mode.byButton)

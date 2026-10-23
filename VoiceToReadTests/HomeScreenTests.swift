@@ -11,6 +11,40 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(button.label, "Stop translation")
     }
 
+
+    @MainActor
+    func testHomeFullScreenAccessoryAndLeadingLibraryMenu() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launch()
+        let mode = app.segmentedControls["communicationMode"]
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        let conversation = app.buttons["conversationFullScreenButton"]
+        XCTAssertTrue(conversation.isHittable)
+        conversation.tap()
+        XCTAssertFalse(mode.exists)
+        XCTAssertEqual(conversation.label, "Exit full screen")
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].isHittable)
+        conversation.tap()
+        XCTAssertTrue(mode.waitForExistence(timeout: 5))
+        mode.buttons["Listen"].tap()
+        let listening = app.buttons["fullScreenButton"]
+        XCTAssertTrue(listening.waitForExistence(timeout: 5))
+        XCTAssertFalse(conversation.exists)
+        listening.tap()
+        XCTAssertEqual(listening.label, "Exit full screen")
+        XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
+        listening.tap()
+        XCTAssertTrue(mode.waitForExistence(timeout: 5))
+        app.tabBars.buttons["Saved"].tap()
+        let library = app.buttons["sessionLibraryOptions"]
+        XCTAssertTrue(library.waitForExistence(timeout: 5))
+        XCTAssertLessThan(library.frame.midX, app.frame.midX)
+        XCTAssertFalse(listening.exists)
+        library.tap()
+        XCTAssertTrue(app.buttons["recentlyDeletedLink"].waitForExistence(timeout: 5))
+    }
+
     @MainActor
     func testCommunicationHomeTablet() throws {
         guard UIDevice.current.userInterfaceIdiom == .pad else { throw XCTSkip("Tablet layout") }
@@ -314,9 +348,10 @@ final class HomeScreenTests: XCTestCase {
         app.launch()
         XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
         app.buttons["speakTranslateEntry"].tap()
-        app.buttons["conversationOptions"].tap()
-        XCTAssertTrue(app.buttons["Full screen"].waitForExistence(timeout: 5))
-        app.buttons["Full screen"].tap()
+        let expand = app.buttons["conversationFullScreenButton"]
+        XCTAssertTrue(expand.waitForExistence(timeout: 5))
+        XCTAssertEqual(expand.label, "Full screen")
+        expand.tap()
         let exit = app.buttons["conversationFullScreenButton"]
         XCTAssertTrue(exit.waitForExistence(timeout: 8))
         XCTAssertTrue(app.buttons["conversationWriteReply"].isHittable)
@@ -330,7 +365,7 @@ final class HomeScreenTests: XCTestCase {
         app.navigationBars["Reading options"].buttons["Done"].tap()
         exit.tap()
         XCTAssertTrue(app.buttons["conversationFirstLanguage"].waitForExistence(timeout: 5))
-        XCTAssertFalse(exit.exists)
+        XCTAssertEqual(exit.label, "Full screen")
     }
 
     @MainActor
@@ -414,7 +449,7 @@ final class HomeScreenTests: XCTestCase {
         tapPreferenceSwitch(app.switches["buttonNamesToggle"])
         XCTAssertEqual(app.switches["buttonNamesToggle"].value as? String, "1")
         app.tabBars.buttons["Captions"].tap()
-        for name in ["Live caption display", "Conversation", "Full screen", "Reading options", "Session actions"] {
+        for name in ["Live caption display", "Conversation", "Reading options", "Session actions"] {
             XCTAssertTrue(app.staticTexts["controlName-" + name].exists, name)
         }
         for id in ["liveSpanishButton", "speakTranslateEntry", "fullScreenButton", "readingOptionsButton", "sessionActionsButton"] {
@@ -429,8 +464,8 @@ final class HomeScreenTests: XCTestCase {
         let landscape = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         landscape.name = "Home-names-landscape"; landscape.lifetime = .keepAlways; add(landscape)
         app.buttons["fullScreenButton"].tap()
-        XCTAssertTrue(app.staticTexts["controlName-Exit full screen"].exists)
-        XCTAssertTrue(app.staticTexts["controlName-Capture preferences"].exists)
+        XCTAssertEqual(app.buttons["fullScreenButton"].label, "Exit full screen")
+        XCTAssertTrue(app.buttons["sessionActionsButton"].isHittable)
         XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
         app.buttons["fullScreenButton"].tap()
         XCUIDevice.shared.orientation = .portrait
@@ -2089,13 +2124,14 @@ final class HomeScreenTests: XCTestCase {
         slider.adjust(toNormalizedSliderPosition: 14.0 / 46.0)
         app.buttons["Done"].tap()
         app.buttons["sessionActionsButton"].tap()
-        XCTAssertTrue(app.buttons["New Session"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Reading options"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["New Session"].exists)
+        XCTAssertFalse(app.buttons["Session information"].exists)
+        XCTAssertFalse(app.buttons["Full screen"].exists)
         // iOS may omit disabled actions from a confirmation dialog.
         let save = app.buttons["Save Session"]
         if save.exists { XCTAssertFalse(save.isEnabled) }
-        app.buttons["Session information"].tap()
-        XCTAssertTrue(app.navigationBars["Session information"].waitForExistence(timeout: 5))
-        app.buttons["Done"].tap()
+        app.buttons["Cancel"].tap()
         XCTAssertTrue(reader.waitForExistence(timeout: 5))
     }
 

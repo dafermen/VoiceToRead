@@ -609,14 +609,7 @@ struct CommunicationFullScreenKey: PreferenceKey {
 
 struct HomeReadingMenu: View {
     @Bindable var settings: AppSettings
-    @Binding var fullScreen: Bool
-    var close: () -> Void
     var body: some View {
-        Section {
-            Button(uiKey(fullScreen ? "Exit full screen" : "Full screen"), systemImage: fullScreen ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
-                fullScreen.toggle(); close()
-            }
-        }
         Section("Text size") { CaptionSizeControl(size: $settings.captionSize) }
         Section("Reading style") {
             Toggle("Bold text", isOn: $settings.boldCaptions)
@@ -712,5 +705,38 @@ struct PlaybackVoiceSettingsView: View {
         let gender = InterfaceLocalization.string(voice.gender.rawValue, language: coordinator.settings.interfaceLanguage)
         let quality = InterfaceLocalization.string(voice.quality >= 3 ? "Premium voice" : voice.quality == 2 ? "Enhanced voice" : "Standard voice", language: coordinator.settings.interfaceLanguage)
         return "\(voice.name) · \(region) · \(gender) · \(quality)"
+    }
+}
+
+// Presentation only: the visible Home reader owns its existing full-screen state.
+struct HomeFullScreenControl: Equatable {
+    let id: UUID
+    let isFullScreen: Bool
+    let identifier: String
+    let selection: Binding<Bool>
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id && lhs.isFullScreen == rhs.isFullScreen && lhs.identifier == rhs.identifier
+    }
+}
+
+struct HomeFullScreenControlKey: PreferenceKey {
+    static var defaultValue: HomeFullScreenControl? = nil
+    static func reduce(value: inout HomeFullScreenControl?, nextValue: () -> HomeFullScreenControl?) {
+        if let next = nextValue() { value = next }
+    }
+}
+
+struct HomeFullScreenSource: ViewModifier {
+    @Binding var selection: Bool
+    let hosted: Bool
+    let identifier: String
+    @State private var visible = false
+    @State private var id = UUID()
+    func body(content: Content) -> some View {
+        content
+            .preference(key: HomeFullScreenControlKey.self, value: hosted && visible
+                ? HomeFullScreenControl(id: id, isFullScreen: selection, identifier: identifier, selection: $selection) : nil)
+            .onAppear { visible = true }
+            .onDisappear { visible = false }
     }
 }

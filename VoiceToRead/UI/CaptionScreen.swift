@@ -15,6 +15,7 @@ struct CaptionScreen: View {
     var canSpeakAndTranslate = true
     var writeResponse: (() -> Void)? = nil
     var communicationLayout = false
+    var hostedFullScreen = false
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @ScaledMetric(relativeTo: .title) private var scaledSize: CGFloat = 28
@@ -146,6 +147,7 @@ struct CaptionScreen: View {
         .toolbar(isFullScreen ? .hidden : .visible, for: .tabBar)
         .statusBarHidden(isFullScreen)
         .preference(key: CommunicationFullScreenKey.self, value: isFullScreen)
+        .modifier(HomeFullScreenSource(selection: $isFullScreen, hosted: hostedFullScreen, identifier: "fullScreenButton"))
         .sheet(isPresented: $showingOptions) { readingOptions }
         .sheet(isPresented: $showingCaptureOptions) {
             NavigationStack {
@@ -207,7 +209,6 @@ struct CaptionScreen: View {
             if let writeResponse { Button("Write and speak", action: writeResponse).disabled(model.state.active || model.state.busy) }
             Button("Reading options") { showingOptions = true }
             Button("Capture preferences") { showingCaptureOptions = true }
-            Button(uiKey(isFullScreen ? "Exit full screen" : "Full screen")) { isFullScreen.toggle() }
             if supportsLiveTranslation { Button("Reading language") { showingLiveDisplay = true } }
             if let saveSession {
                 Button("Save Session", action: saveSession)
@@ -216,9 +217,6 @@ struct CaptionScreen: View {
             if model.state == .ended && needsSessionDecision {
                 Button("Discard Session", role: .destructive) { confirmDiscard = true }
             }
-            Button("New Session") { Task { await beginNewSession() } }
-                .disabled(model.state.active || model.state.busy || model.preparationPending || needsSessionDecision)
-            Button("Session information") { showingStatus = true }
     }
 
     private var needsPreparation: Bool {
@@ -369,6 +367,7 @@ struct CaptionScreen: View {
     /// Simple mode reduces actions; the independent names preference still controls their labels.
     @ViewBuilder private func simpleUtilityButtons(vertical: Bool) -> some View {
         if model.state == .ended { newSessionButton }
+        if !hostedFullScreen { fullScreenButton }
         if !vertical { Spacer(minLength: 0) }
         Button { showingActions = true } label: {
             Label("Session actions", systemImage: "ellipsis.circle")
@@ -379,7 +378,8 @@ struct CaptionScreen: View {
     @ViewBuilder private var utilityButtons: some View {
         if model.state == .ended { newSessionButton }
         if !settings.simpleMode {
-            translationButton; conversationButton; fullScreenButton
+            translationButton; conversationButton
+            if !hostedFullScreen { fullScreenButton }
             Button { showingOptions = true } label: { readerControlLabel("Reading options", symbol: "textformat.size") }
                 .accessibilityLabel("Reading options").accessibilityIdentifier("readingOptionsButton")
         }
@@ -712,7 +712,7 @@ struct CaptionScreen: View {
     private var readingOptions: some View {
         NavigationStack {
             Form {
-                HomeReadingMenu(settings: settings, fullScreen: $isFullScreen) { showingOptions = false }
+                HomeReadingMenu(settings: settings)
                 CaptureOptionsView(model: model, settings: settings)
                 Section {
                     Toggle("Follow live captions", isOn: followBinding)

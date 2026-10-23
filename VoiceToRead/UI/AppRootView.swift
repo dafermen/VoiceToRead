@@ -11,6 +11,8 @@ struct AppRootView: View {
     @State private var coordinator: SessionCoordinator?
     @State private var storageFailure = false
     @State private var selectedTab = 0
+    @State private var fullScreenControl: HomeFullScreenControl?
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var homePath: [HomeDestination] = []
     @State private var translationConfirmationVisible = false
 
@@ -28,6 +30,20 @@ struct AppRootView: View {
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.conversationHome ? "Saved" : "Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }.tag(2)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
+                }
+                .onPreferenceChange(HomeFullScreenControlKey.self) { fullScreenControl = $0 }
+                .overlay(alignment: .bottomTrailing) {
+                    if #available(iOS 26.0, *), !dynamicTypeSize.isAccessibilitySize {
+                        homeFullScreenButton.padding(.trailing, 8).padding(.bottom, 4)
+                    }
+                }
+                .safeAreaInset(edge: .bottom, spacing: 0) {
+                    if #available(iOS 26.0, *), !dynamicTypeSize.isAccessibilitySize {
+                        EmptyView()
+                    } else {
+                        // Reserve space on older tab bars and with large text; never cover a tab.
+                        HStack { Spacer(); homeFullScreenButton }.padding(.horizontal, 12)
+                    }
                 }
                 .safeAreaInset(edge: .bottom) {
                     if coordinator.automaticTranslationJob != nil || (coordinator.automaticTranslationMessage != nil && (coordinator.automaticTranslationMessage != "Translation saved" || translationConfirmationVisible)) {
@@ -101,6 +117,19 @@ struct AppRootView: View {
                     catch { coordinator.storageMessage = "Expired sessions could not be removed. Please retry from Recently deleted." }
                 }
             }
+        }
+    }
+
+    @ViewBuilder private var homeFullScreenButton: some View {
+        if selectedTab == 0, let control = fullScreenControl, !control.isFullScreen {
+            Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") {
+                control.selection.wrappedValue = true
+            }
+            .labelStyle(.iconOnly).font(.title3)
+            .frame(width: 44, height: 44)
+            .background(.regularMaterial, in: Circle())
+            .contentShape(Circle())
+            .accessibilityIdentifier(control.identifier)
         }
     }
 
@@ -290,7 +319,7 @@ struct LiveCaptionView: View {
                       speakAndTranslate: showConversationShortcut ? { showingConversation = true } : nil,
                       canSpeakAndTranslate: !coordinator.caption.state.active && !coordinator.caption.state.busy &&
                           !coordinator.caption.preparationPending && coordinator.automaticTranslationJob == nil,
-                      writeResponse: { showingResponse = true }, communicationLayout: communicationLayout)
+                      writeResponse: { showingResponse = true }, communicationLayout: communicationLayout, hostedFullScreen: true)
             .sheet(isPresented: $showingResponse) {
                 NavigationStack {
                     WrittenResponseView(coordinator: coordinator)
