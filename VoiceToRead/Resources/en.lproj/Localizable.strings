@@ -982,3 +982,55 @@
 "Preparing selected speech model…" = "Preparing selected speech model…";
 
 "The speech model is still unavailable. Check your internet connection and free storage, then refresh preparation." = "The speech model is still unavailable. Check your internet connection and free storage, then refresh preparation.";
+
+// Independent Spanish-to-English training
+"Train English" = "Train English";
+"Create your Spanish phrases, review the English, then try saying each phrase from memory." = "Create your Spanish phrases, review the English, then try saying each phrase from memory.";
+"Trainings and progress stay on this device. Export is not included in this version." = "Trainings and progress stay on this device. Export is not included in this version.";
+"%lld phrases · %lld reviewed" = "%lld phrases · %lld reviewed";
+"New training" = "New training";
+"Edit training" = "Edit training";
+"English training unavailable" = "English training unavailable";
+"Opening trainings…" = "Opening trainings…";
+"Training name" = "Training name";
+"Spanish · one phrase per line" = "Spanish · one phrase per line";
+"Editing a Spanish phrase clears only that phrase's English and progress. Unchanged phrases keep their corrections." = "Editing a Spanish phrase clears only that phrase's English and progress. Unchanged phrases keep their corrections.";
+"Review the English before practising. You can correct the automatic translation." = "Review the English before practising. You can correct the automatic translation.";
+"English response" = "English response";
+"Review English" = "Review English";
+"Edit Spanish phrases" = "Edit Spanish phrases";
+"Prepare English" = "Prepare English";
+"Start practice" = "Start practice";
+"Review phrases to practise" = "Review phrases to practise";
+"Phrases" = "Phrases";
+"Needs practice" = "Needs practice";
+"Reviewed" = "Reviewed";
+"This training is no longer available." = "This training is no longer available.";
+"Phrase %lld of %lld" = "Phrase %lld of %lld";
+"Try saying this in English before revealing the response." = "Try saying this in English before revealing the response.";
+"Hide response" = "Hide response";
+"Show response" = "Show response";
+"Listen to example" = "Listen to example";
+"Slow example" = "Slow example";
+"%lld / 15 seconds" = "%lld / 15 seconds";
+"Stop recording" = "Stop recording";
+"Record my attempt" = "Record my attempt";
+"Checking recognized words…" = "Checking recognized words…";
+"Waiting for microphone permission…" = "Waiting for microphone permission…";
+"Listen to my attempt" = "Listen to my attempt";
+"Retry word recognition" = "Retry word recognition";
+"What was understood" = "What was understood";
+"Expected response" = "Expected response";
+"Underlined words differ from recognition. Noise, recognition errors and other valid translations can explain differences. This is not a pronunciation score." = "Underlined words differ from recognition. Noise, recognition errors and other valid translations can explain differences. This is not a pronunciation score.";
+"How did this phrase feel?" = "How did this phrase feel?";
+"I feel comfortable" = "I feel comfortable";
+"Your attempt is temporary. It is deleted when you repeat, change phrase, leave this screen or put the app in the background." = "Your attempt is temporary. It is deleted when you repeat, change phrase, leave this screen or put the app in the background.";
+"Round complete" = "Round complete";
+"Review the phrases you marked as needing practice, or return to your trainings." = "Review the phrases you marked as needing practice, or return to your trainings.";
+"Use a title of up to 100 characters and 1–200 Spanish phrases, one per line, up to 1,000 characters each." = "Use a title of up to 100 characters and 1–200 Spanish phrases, one per line, up to 1,000 characters each.";
+"This training changed. Reopen it and try again. Your saved phrases are unchanged." = "This training changed. Reopen it and try again. Your saved phrases are unchanged.";
+"The English responses are incomplete. Review the phrases and try again." = "The English responses are incomplete. Review the phrases and try again.";
+"The training file could not be opened. It has not been replaced or deleted." = "The training file could not be opened. It has not been replaced or deleted.";
+
+// Independent Spanish-to-English training
+"Practice" = "Practice";

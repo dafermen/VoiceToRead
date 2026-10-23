@@ -115,7 +115,7 @@ struct AppRootView: View {
                 switch destination {
                 case .listen: LiveCaptionView(coordinator: coordinator)
                 case .sessions: SessionHistoryView(coordinator: coordinator)
-                case .practice: PracticeSessionPicker(coordinator: coordinator)
+                case .englishTraining: EnglishTrainingLibraryView()
                 case .response: WrittenResponseView(coordinator: coordinator)
                 case .preparation: OfflineReadinessView(coordinator: coordinator)
                 }
@@ -359,7 +359,7 @@ private final class ReaderPreviewSpeech: SpeechTranscribing {
 #endif
 
 /// Value routes let the Home tab return to its menu without resetting SessionCoordinator.
-enum HomeDestination: Hashable { case listen, sessions, practice, response, preparation }
+enum HomeDestination: Hashable { case listen, sessions, englishTraining, response, preparation }
 
 /// New entry point; the meeting coordinator and ephemeral conversation remain independent.
 /// The mode selector cannot switch owners while either audio workflow is active.
@@ -380,6 +380,12 @@ struct CommunicationHomeView: View {
                 Text("Listen").tag(true)
             }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
                 .disabled(audioBusy).accessibilityIdentifier("communicationMode")
+                NavigationLink(value: HomeDestination.englishTraining) {
+                    Label("Train English", systemImage: "book.closed")
+                }
+                .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
+                .frame(minHeight: 44).disabled(audioBusy)
+                .accessibilityIdentifier("englishTrainingEntry")
             }
             if listening {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)

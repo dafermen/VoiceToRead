@@ -982,3 +982,55 @@
 "Preparing selected speech model…" = "Preparando el modelo de voz seleccionado…";
 
 "The speech model is still unavailable. Check your internet connection and free storage, then refresh preparation." = "El modelo de voz sigue sin estar disponible. Comprueba la conexión a Internet y el espacio libre y después actualiza la preparación.";
+
+// Independent Spanish-to-English training
+"Train English" = "Entrenar inglés";
+"Create your Spanish phrases, review the English, then try saying each phrase from memory." = "Crea tus frases en español, revisa el inglés e intenta decir cada frase de memoria.";
+"Trainings and progress stay on this device. Export is not included in this version." = "Los entrenamientos y el progreso se guardan en este dispositivo. Esta versión no incluye exportación.";
+"%lld phrases · %lld reviewed" = "%lld frases · %lld repasadas";
+"New training" = "Nuevo entrenamiento";
+"Edit training" = "Editar entrenamiento";
+"English training unavailable" = "Entrenamientos no disponibles";
+"Opening trainings…" = "Abriendo entrenamientos…";
+"Training name" = "Nombre del entrenamiento";
+"Spanish · one phrase per line" = "Español · una frase por línea";
+"Editing a Spanish phrase clears only that phrase's English and progress. Unchanged phrases keep their corrections." = "Al editar una frase en español, se borra solo su inglés y progreso. Las frases que no cambies conservan sus correcciones.";
+"Review the English before practising. You can correct the automatic translation." = "Revisa el inglés antes de practicar. Puedes corregir la traducción automática.";
+"English response" = "Respuesta en inglés";
+"Review English" = "Revisar inglés";
+"Edit Spanish phrases" = "Editar frases en español";
+"Prepare English" = "Preparar inglés";
+"Start practice" = "Comenzar práctica";
+"Review phrases to practise" = "Repasar frases pendientes";
+"Phrases" = "Frases";
+"Needs practice" = "Necesito practicar";
+"Reviewed" = "Repasada";
+"This training is no longer available." = "Este entrenamiento ya no está disponible.";
+"Phrase %lld of %lld" = "Frase %lld de %lld";
+"Try saying this in English before revealing the response." = "Intenta decir esta frase en inglés antes de mostrar la respuesta.";
+"Hide response" = "Ocultar respuesta";
+"Show response" = "Mostrar respuesta";
+"Listen to example" = "Escuchar ejemplo";
+"Slow example" = "Ejemplo lento";
+"%lld / 15 seconds" = "%lld / 15 segundos";
+"Stop recording" = "Detener grabación";
+"Record my attempt" = "Grabar mi intento";
+"Checking recognized words…" = "Reconociendo palabras…";
+"Waiting for microphone permission…" = "Esperando permiso del micrófono…";
+"Listen to my attempt" = "Escuchar mi intento";
+"Retry word recognition" = "Reintentar reconocimiento";
+"What was understood" = "Lo que se entendió";
+"Expected response" = "Respuesta de referencia";
+"Underlined words differ from recognition. Noise, recognition errors and other valid translations can explain differences. This is not a pronunciation score." = "Las palabras subrayadas difieren del reconocimiento. El ruido, los errores de reconocimiento y otras traducciones válidas pueden explicar las diferencias. No es una puntuación de pronunciación.";
+"How did this phrase feel?" = "¿Cómo te fue con esta frase?";
+"I feel comfortable" = "Me siento seguro";
+"Your attempt is temporary. It is deleted when you repeat, change phrase, leave this screen or put the app in the background." = "Tu intento es temporal. Se elimina al repetir, cambiar de frase, salir de esta pantalla o enviar la app al segundo plano.";
+"Round complete" = "Repaso terminado";
+"Review the phrases you marked as needing practice, or return to your trainings." = "Repasa las frases que marcaste como pendientes o vuelve a tus entrenamientos.";
+"Use a title of up to 100 characters and 1–200 Spanish phrases, one per line, up to 1,000 characters each." = "Escribe un título de hasta 100 caracteres y entre 1 y 200 frases en español, una por línea, de hasta 1.000 caracteres cada una.";
+"This training changed. Reopen it and try again. Your saved phrases are unchanged." = "Este entrenamiento cambió. Ábrelo de nuevo e inténtalo otra vez. Tus frases guardadas no se han modificado.";
+"The English responses are incomplete. Review the phrases and try again." = "Las respuestas en inglés están incompletas. Revisa las frases e inténtalo de nuevo.";
+"The training file could not be opened. It has not been replaced or deleted." = "No se pudo abrir el archivo de entrenamientos. No se ha reemplazado ni eliminado.";
+
+// Independent Spanish-to-English training
+"Practice" = "Práctica";

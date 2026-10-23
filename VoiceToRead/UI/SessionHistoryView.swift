@@ -53,11 +53,6 @@ struct SessionHistoryView: View {
 
     var body: some View {
         List {
-            if coordinator.settings.conversationHome && !recoveryOnly && !favoritesOnly {
-                NavigationLink { PracticeSessionPicker(coordinator: coordinator) } label: {
-                    Label("Language practice", systemImage: "book")
-                }.accessibilityIdentifier("savedLanguagePractice")
-            }
             if let id = lastDeletedID, trash.contains(where: { $0.sessionID == id }), let lastDeleted = sessions.first(where: { $0.id == id }) {
                 HStack {
                     Text("Moved to Recently deleted")
@@ -323,7 +318,6 @@ struct SessionDetailView: View {
     @State private var playableParagraphIDs: Set<UUID> = []
     @Query private var reviews: [SessionReview]
     @State private var showingTranslation = false
-    @State private var showingLearning = false
     @State private var showingEditor = false
     @State private var showingShare = false
     @State private var renaming = false
@@ -405,9 +399,6 @@ struct SessionDetailView: View {
                 Button("Text & translation", systemImage: "character.bubble") { showingTranslation = true }
                     .disabled(!canEdit || !canPlay || corrections == nil || paragraphs.isEmpty)
                     .accessibilityIdentifier("sessionTranslationButton")
-                Button("Practicar idioma", systemImage: "book") { showingLearning = true }
-                    .disabled(!canEdit || !canPlay || corrections == nil || paragraphs.isEmpty)
-                    .accessibilityIdentifier("learnEnglishButton")
                 if !canPlay { Text("Stop listening before opening audio and subtitles.").font(.caption) }
                 if corrections == nil {
                     ContentUnavailableView("Corrections unavailable", systemImage: "exclamationmark.triangle",
@@ -454,9 +445,6 @@ struct SessionDetailView: View {
         .sheet(isPresented: $showingMedia) {
             SessionMediaView(session: session, repository: repository, paragraphs: paragraphs,
                              hasCorrections: !(corrections ?? [:]).isEmpty, initialParagraphID: playbackParagraphID)
-        }
-        .sheet(isPresented: $showingLearning) {
-            EnglishLearningView(session: session, repository: repository)
         }
         .sheet(isPresented: $showingTranslation) {
             SessionTranslationView(session: session, repository: repository, searchQuery: initialSearch)

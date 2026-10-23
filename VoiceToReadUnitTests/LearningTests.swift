@@ -174,3 +174,105 @@ import AVFoundation
         player.play(unit); XCTAssertFalse(player.playing)
     }
 }
+
+
+extension LearningTests {
+    func testIndependentTrainingSeedsTwentyPhrasesOnlyOnce() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        let first = try XCTUnwrap(store.trainings.first)
+        XCTAssertEqual(first.title, "Una mañana en el colegio")
+        XCTAssertEqual(first.phrases.count, 20)
+        XCTAssertEqual(first.phrases.first?.spanish, "Yo había ido al colegio ayer por la mañana.")
+        XCTAssertEqual(first.phrases.last?.spanish, "Aprendí que siempre es mejor mantener la calma y decir la verdad.")
+        XCTAssertFalse(first.ready)
+        let sibling = directory.appendingPathComponent("legacy-data.txt")
+        try Data("preserve".utf8).write(to: sibling)
+        let second = try EnglishTraining.edited(title: "Otro entrenamiento", text: "Buenos días.\nGracias.")
+        try store.save(second)
+        let reopened = try EnglishTrainingStore(directory: directory)
+        XCTAssertEqual(reopened.trainings, store.trainings)
+        XCTAssertEqual(reopened.trainings.count, 2)
+        XCTAssertEqual(try Data(contentsOf: sibling), Data("preserve".utf8))
+    }
+
+    func testTrainingEditsKeepUnchangedCorrectionsAndIndependentDuplicates() throws {
+        var old = try EnglishTraining.edited(title: "Example", text: "Hola\nHola\nAdiós")
+        old.phrases[0].english = "Hello"; old.phrases[0].reviewed = true; old.phrases[0].needsPractice = false
+        old.phrases[1].english = "Hi"
+        let edited = try EnglishTraining.edited(title: "Renamed", text: "\nHola\nHasta luego\nHola\n", previous: old)
+        XCTAssertEqual(edited.id, old.id)
+        XCTAssertEqual(edited.phrases[0], old.phrases[0])
+        XCTAssertEqual(edited.phrases[2], old.phrases[1])
+        XCTAssertNotEqual(edited.phrases[1].id, old.phrases[2].id)
+        XCTAssertTrue(edited.phrases[1].english.isEmpty)
+        XCTAssertTrue(edited.phrases[1].needsPractice)
+        XCTAssertFalse(edited.phrases[1].reviewed)
+        XCTAssertThrowsError(try EnglishTraining.edited(title: " ", text: "Hola"))
+        XCTAssertThrowsError(try EnglishTraining.edited(title: "Example", text: "\n "))
+        XCTAssertThrowsError(try EnglishTraining.edited(title: "Example", text: Array(repeating: "Hola", count: 201).joined(separator: "\n")))
+        XCTAssertThrowsError(try EnglishTraining.edited(title: "Example", text: String(repeating: "x", count: 1001)))
+    }
+
+    func testTrainingTranslationIsAtomicAndRejectsStaleOrOverwritingResponses() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        let training = try EnglishTraining.edited(title: "Example", text: "Hola\nGracias")
+        try store.save(training)
+        let responses = zip(training.source, ["Hello", "Thank you"]).map { ReviewParagraph(id: $0.0.id, text: $0.1) }
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: Array(responses.reversed())))
+        XCTAssertEqual(store.training(training.id), training)
+        try store.acceptTranslation(training.id, source: training.source, responses: responses)
+        XCTAssertTrue(try XCTUnwrap(store.training(training.id)).ready)
+        let translated = store.training(training.id)
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: responses))
+        XCTAssertEqual(store.training(training.id), translated)
+        var changed = training; changed.phrases[1].spanish = "Otra frase"
+        try store.save(changed)
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: training.source, responses: responses))
+        XCTAssertEqual(store.training(training.id), changed, "Earlier responses must not be partly persisted")
+        XCTAssertThrowsError(try store.saveEnglish(training.id, source: training.source, values: Dictionary(uniqueKeysWithValues: responses.map { ($0.id, $0.text) })))
+    }
+
+    func testTrainingCorrectionAndSelfAssessmentPersistWithoutClearingOtherProgress() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        let training = try EnglishTraining.edited(title: "Example", text: "Hola\nGracias")
+        try store.save(training)
+        let ids = training.phrases.map(\.id)
+        try store.saveEnglish(training.id, source: training.source, values: [ids[0]: "Hello", ids[1]: "Thanks"])
+        for id in ids { try store.mark(training.id, phraseID: id, needsPractice: false) }
+        try store.saveEnglish(training.id, source: training.source, values: [ids[0]: "Good morning", ids[1]: "Thanks"])
+        let reopened = try EnglishTrainingStore(directory: directory)
+        let saved = try XCTUnwrap(reopened.training(training.id))
+        XCTAssertFalse(saved.phrases[0].reviewed); XCTAssertTrue(saved.phrases[0].needsPractice)
+        XCTAssertTrue(saved.phrases[1].reviewed); XCTAssertFalse(saved.phrases[1].needsPractice)
+        XCTAssertEqual(saved.phrases[0].english, "Good morning")
+    }
+
+    func testUnreadableTrainingFileIsNeverReplacedWithSeed() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        let file = directory.appendingPathComponent("trainings.json")
+        for bytes in [Data("broken file".utf8), Data(#"{"version":99,"trainings":[]}"#.utf8)] {
+            try bytes.write(to: file)
+            XCTAssertThrowsError(try EnglishTrainingStore(directory: directory))
+            XCTAssertEqual(try Data(contentsOf: file), bytes)
+        }
+    }
+
+    func testTrainingComparisonHandlesMissingExtraAndNormalizedWords() {
+        let exact = TrainingComparison.compare(expected: "Hello, WORLD!", heard: "hello world")
+        XCTAssertTrue(exact.expected.allSatisfy(\.matched)); XCTAssertTrue(exact.heard.allSatisfy(\.matched))
+        let missing = TrainingComparison.compare(expected: "I went to school", heard: "I went school yesterday")
+        XCTAssertEqual(missing.expected.filter { !$0.matched }.map(\.text), ["to"])
+        XCTAssertEqual(missing.heard.filter { !$0.matched }.map(\.text), ["yesterday"])
+        XCTAssertTrue(TrainingComparison.compare(expected: "Hello", heard: "").expected.allSatisfy { !$0.matched })
+        XCTAssertTrue(TrainingComparison.compare(expected: "", heard: "Hello").heard.allSatisfy { !$0.matched })
+        XCTAssertTrue(TrainingComparison.compare(expected: "", heard: "").expected.isEmpty)
+    }
+}

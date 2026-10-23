@@ -332,8 +332,8 @@ struct SimpleHomeView: View {
                     .accessibilityIdentifier("simpleListenNow")
                 NavigationLink(value: HomeDestination.sessions) { Label("My sessions", systemImage: "clock") }
                     .accessibilityIdentifier("simpleSessions")
-                NavigationLink(value: HomeDestination.practice) { Label("Language practice", systemImage: "book") }
-                    .accessibilityIdentifier("simplePractice")
+                NavigationLink(value: HomeDestination.englishTraining) { Label("Train English", systemImage: "book.closed") }
+                    .accessibilityIdentifier("simpleEnglishTraining")
                 NavigationLink(value: HomeDestination.response) { Label("Write and speak", systemImage: "keyboard") }
                     .accessibilityIdentifier("simpleWriteResponse")
                 NavigationLink(value: HomeDestination.preparation) { Label("Prepare VoiceToRead", systemImage: "checkmark.shield") }
@@ -365,23 +365,6 @@ struct SimpleHomeActionStyle: ButtonStyle {
             .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
             .contentShape(RoundedRectangle(cornerRadius: 12))
             .background(Color(uiColor: configuration.isPressed ? .tertiarySystemGroupedBackground : .secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12))
-    }
-}
-
-@MainActor
-struct PracticeSessionPicker: View {
-    let coordinator: SessionCoordinator
-    @Query(sort: \ConferenceSession.createdAt, order: .reverse) private var sessions: [ConferenceSession]
-    @Query private var drafts: [SessionDraft]
-    @Query private var trash: [SessionTrash]
-    var body: some View {
-        List {
-            Text("Choose a saved session to practise its phrases. First record and save a session if your library is empty.")
-            ForEach(sessions.filter { s in !drafts.contains { $0.sessionID == s.id } && !trash.contains { $0.sessionID == s.id } }) { session in
-                NavigationLink(session.title) { EnglishLearningView(session: session, repository: coordinator.repository) }
-                    .disabled(coordinator.caption.state.active || coordinator.caption.state.busy)
-            }
-        }.navigationTitle("Language practice")
     }
 }
 
