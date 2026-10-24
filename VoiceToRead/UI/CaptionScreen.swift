@@ -682,7 +682,7 @@ struct CaptionScreen: View {
     }
 
     private var headerSessionAction: some View {
-        let stopping = model.state.active || model.state == .paused || model.canResume || isProblem
+        let stopping = model.state.active || model.state == .stopping || model.state == .paused || model.canResume || isProblem
         let title: LocalizedStringKey = model.state == .ended ? "New Session" : stopping ? "Stop" : (settings.saveAudio ? "Start Recording" : "Start Listening")
         return HomeCircleAction(title: title, symbol: model.state == .ended ? "plus" : stopping ? "stop.fill" : "mic.fill", stopping: stopping) {
             if model.state == .ended {
