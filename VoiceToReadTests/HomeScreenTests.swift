@@ -1566,7 +1566,7 @@ final class HomeScreenTests: XCTestCase {
         app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
-        app.staticTexts["Una mañana en el colegio"].tap()
+        app.staticTexts["Los tres cerditos"].tap()
         let start = app.buttons["startEnglishTraining"]
         XCTAssertTrue(start.waitForExistence(timeout: 5))
         XCTAssertFalse(start.isEnabled)
@@ -1580,7 +1580,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["saveTrainingEnglish"].tap()
         start.tap()
         XCTAssertTrue(app.staticTexts["trainingPrompt"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Yo había ido al colegio ayer por la mañana.")
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Había una vez tres cerditos.")
         XCTAssertFalse(app.staticTexts["trainingExpected"].exists)
         XCTAssertFalse(app.alerts.firstMatch.exists, "Opening training must not request microphone access")
         app.buttons["revealTrainingResponse"].tap()
@@ -1601,10 +1601,10 @@ final class HomeScreenTests: XCTestCase {
         app.terminate(); app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
-        app.staticTexts["Una mañana en el colegio"].tap()
+        app.staticTexts["Los tres cerditos"].tap()
         XCTAssertFalse(app.buttons["Review phrases to practise"].exists)
         app.buttons["startEnglishTraining"].tap()
-        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Yo había ido al colegio ayer por la mañana.")
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Había una vez tres cerditos.")
     }
 
     @MainActor
@@ -1690,7 +1690,7 @@ final class HomeScreenTests: XCTestCase {
         app.textViews["trainingSpanishInput"].tap(); app.textViews["trainingSpanishInput"].typeText("Buenos días.\nNecesito un taxi.")
         app.buttons["saveEnglishTraining"].tap()
         XCTAssertTrue(app.staticTexts["Travel"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["Una mañana en el colegio"].exists)
+        XCTAssertTrue(app.staticTexts["Los tres cerditos"].exists)
         app.tabBars.buttons["Saved"].tap()
         XCTAssertFalse(app.buttons["savedLanguagePractice"].exists)
         app.staticTexts["Review sample"].tap()

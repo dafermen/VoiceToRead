@@ -68,27 +68,28 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
         return result
     }
 
+    // A short original retelling for beginners. Used only when creating a new library.
     static let firstText = """
-    Yo había ido al colegio ayer por la mañana.
-    Pero cuando llegué, el colegio estaba completamente cerrado.
-    Yo intenté hablar con la secretaria para explicarle por qué llegué tarde.
-    Pero ella no me quiso creer y me miró con desconfianza.
-    Así que ella me envió directamente a la oficina del rector.
-    El rector me miró fijamente y me preguntó sobre lo ocurrido.
-    Yo le dije que mi autobús se había averiado en el camino.
-    Mientras yo intentaba explicarme, él revisaba unos documentos en su escritorio.
-    Él me respondió que esa no era una excusa válida para faltar a clase.
-    Sin embargo, yo insistí en que tenía una nota firmada por mi madre.
-    El rector decidió llamar a mi madre para verificar la información.
-    Desafortunadamente, la línea telefónica estaba ocupada en ese momento.
-    Así que me pidió que me sentara a esperar en el pasillo.
-    Mientras yo esperaba afuera, vi a otros estudiantes que también habían llegado tarde.
-    Unos minutos después, la secretaria salió y me llamó de nuevo.
-    Ella me dijo que mi madre finalmente había contestado la llamada.
-    Mi madre le confirmó todo lo que yo le había explicado antes.
-    El rector me pidiό disculpas por no haberme creído al principio.
-    Finalmente, me dio un permiso firmado para poder entrar a la clase de inglés.
-    Aprendí que siempre es mejor mantener la calma y decir la verdad.
+    Había una vez tres cerditos.
+    Los tres hermanos vivían cerca de un bosque.
+    Un día, cada cerdito decidió construir una casa.
+    El primer cerdito hizo una casa de paja.
+    El segundo cerdito hizo una casa de madera.
+    El tercer cerdito hizo una casa de ladrillos.
+    Los dos primeros terminaron pronto y salieron a jugar.
+    El tercer cerdito trabajó un poco más.
+    Una mañana, un lobo llegó a la casa de paja.
+    El cerdito cerró la puerta.
+    El lobo sopló y la casa se cayó.
+    El cerdito corrió a la casa de su hermano.
+    El lobo llegó a la casa de madera y sopló otra vez.
+    La casa de madera también se cayó.
+    Los dos cerditos corrieron a la casa de ladrillos.
+    Su hermano abrió la puerta y los dejó entrar.
+    El lobo sopló con fuerza, pero la casa no se cayó.
+    Al final, el lobo se cansó y se fue.
+    Los tres hermanos se quedaron juntos en la casa segura.
+    Los cerditos aprendieron a trabajar con cuidado y a ayudarse.
     """
 }
 
@@ -130,7 +131,7 @@ final class EnglishTrainingStore {
                 trainings = archive.trainings
             } catch { throw EnglishTrainingFailure.unsupportedFile }
         } else {
-            trainings = [try EnglishTraining.edited(title: "Una mañana en el colegio", text: EnglishTraining.firstText)]
+            trainings = [try EnglishTraining.edited(title: "Los tres cerditos", text: EnglishTraining.firstText)]
             try persist(trainings)
         }
     }

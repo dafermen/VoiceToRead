@@ -396,7 +396,7 @@ struct SpeakTranslateView: View {
             }.frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 16).padding(.vertical, 8)
             Divider()
-        }.background(.bar).accessibilityIdentifier("conversationActionBar")
+        }.background(Color(uiColor: .systemBackground)).accessibilityIdentifier("conversationActionBar")
     }
 
     private var expandedConversationBar: some View {

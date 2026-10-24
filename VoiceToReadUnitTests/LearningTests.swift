@@ -182,10 +182,10 @@ extension LearningTests {
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = try EnglishTrainingStore(directory: directory)
         let first = try XCTUnwrap(store.trainings.first)
-        XCTAssertEqual(first.title, "Una mañana en el colegio")
+        XCTAssertEqual(first.title, "Los tres cerditos")
         XCTAssertEqual(first.phrases.count, 20)
-        XCTAssertEqual(first.phrases.first?.spanish, "Yo había ido al colegio ayer por la mañana.")
-        XCTAssertEqual(first.phrases.last?.spanish, "Aprendí que siempre es mejor mantener la calma y decir la verdad.")
+        XCTAssertEqual(first.phrases.first?.spanish, "Había una vez tres cerditos.")
+        XCTAssertEqual(first.phrases.last?.spanish, "Los cerditos aprendieron a trabajar con cuidado y a ayudarse.")
         XCTAssertFalse(first.ready)
         let sibling = directory.appendingPathComponent("legacy-data.txt")
         try Data("preserve".utf8).write(to: sibling)
