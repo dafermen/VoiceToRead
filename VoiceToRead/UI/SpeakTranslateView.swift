@@ -355,7 +355,7 @@ struct SpeakTranslateView: View {
         .toolbar {
             if !embedded { DoneToolbar { model.cancel(); dismiss() } }
             if !fullScreen {
-                ToolbarItem(placement: .topBarTrailing) { newConversationAction }
+                HomeCircleToolbarItem { newConversationAction }
             }
             ToolbarItem(placement: .topBarLeading) {
                 Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
@@ -387,13 +387,14 @@ struct SpeakTranslateView: View {
                     ViewThatFits(in: .horizontal) {
                         HStack(spacing: 8) {
                             conversationStatus
-                            conversationActions
-                        }.fixedSize(horizontal: true, vertical: false)
+                            Spacer(minLength: 16)
+                            conversationActions.fixedSize(horizontal: true, vertical: false)
+                        }
                         expandedConversationBar
                     }
                 }
             }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 16).padding(.vertical, 4)
+                .padding(.horizontal, 16).padding(.vertical, 8)
             Divider()
         }.background(.bar).accessibilityIdentifier("conversationActionBar")
     }
@@ -401,13 +402,14 @@ struct SpeakTranslateView: View {
     private var expandedConversationBar: some View {
         VStack(alignment: .leading, spacing: 4) {
             conversationStatus
-            conversationActions
+            conversationActions.frame(maxWidth: .infinity, alignment: .trailing)
         }
     }
 
     private var conversationStatus: some View {
         Label(status, systemImage: statusIcon)
-            .font(.caption.weight(.semibold)).fixedSize(horizontal: false, vertical: true)
+            .font(.subheadline.weight(.semibold)).fixedSize(horizontal: false, vertical: true)
+            .frame(minHeight: 48, alignment: .leading)
             .accessibilityIdentifier("conversationStatus")
     }
 
@@ -418,7 +420,7 @@ struct SpeakTranslateView: View {
                     Label("Train", systemImage: "book.closed")
                 }
                 .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
-                .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
+                .frame(minWidth: 44, minHeight: 44)
                 .disabled(!model.canEdit || model.capture.preparationPending)
                 .accessibilityLabel("Training").accessibilityIdentifier("englishTrainingEntry")
             }
@@ -426,7 +428,7 @@ struct SpeakTranslateView: View {
                 editor = ConversationEdit(language: first, target: second, text: "")
             } label: { Label("Write", systemImage: "keyboard") }
             .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
-            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
+            .frame(minWidth: 44, minHeight: 44).disabled(!model.canEdit)
             .accessibilityLabel("Write a reply").accessibilityIdentifier("conversationWriteReply")
             if fullScreen { newConversationAction }
         }

@@ -64,6 +64,7 @@ final class HomeScreenTests: XCTestCase {
         let primary = app.buttons["primaryCaptionAction"]
         XCTAssertTrue(primary.waitForExistence(timeout: 5))
         XCTAssertLessThan(primary.frame.midY, mode.frame.midY)
+        let headerSize = primary.frame.size
         let fullScreen = app.buttons["fullScreenButton"]
         let anchor = fullScreen.frame.midY
         primary.tap()
@@ -72,6 +73,8 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(mode.buttons["Train"].isEnabled)
         let stop = app.buttons["stopCaptionAction"]
         XCTAssertTrue(stop.isHittable)
+        XCTAssertEqual(stop.frame.width, headerSize.width, accuracy: 1)
+        XCTAssertEqual(stop.frame.height, headerSize.height, accuracy: 1)
         XCTAssertLessThan(stop.frame.midY, mode.frame.midY)
         primary.tap()
         let resume = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Resume'"), object: primary)
@@ -357,6 +360,8 @@ final class HomeScreenTests: XCTestCase {
         let status = app.staticTexts["conversationStatus"]
         XCTAssertTrue(write.waitForExistence(timeout: 20))
         XCTAssertEqual(status.label, "Ready")
+        XCTAssertGreaterThan(write.frame.midX, app.frame.midX)
+        XCTAssertLessThan(status.frame.midX, write.frame.midX)
         XCTAssertTrue(write.isHittable); XCTAssertTrue(new.isHittable); XCTAssertTrue(train.isHittable)
         write.tap()
         let input = app.textViews["conversationSource"]
@@ -1674,8 +1679,13 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(new.label, "New conversation")
         XCTAssertLessThan(new.frame.midY, train.frame.midY)
         XCTAssertLessThan(train.frame.midY, write.frame.midY)
+        let newConversationSize = new.frame.size
         trainingEntry(in: app).tap()
-        app.buttons["newEnglishTraining"].tap()
+        let newTraining = app.buttons["newEnglishTraining"]
+        XCTAssertTrue(newTraining.waitForExistence(timeout: 5))
+        XCTAssertEqual(newTraining.frame.width, newConversationSize.width, accuracy: 1)
+        XCTAssertEqual(newTraining.frame.height, newConversationSize.height, accuracy: 1)
+        newTraining.tap()
         app.textFields["trainingTitle"].tap(); app.textFields["trainingTitle"].typeText("Travel")
         app.textViews["trainingSpanishInput"].tap(); app.textViews["trainingSpanishInput"].typeText("Buenos días.\nNecesito un taxi.")
         app.buttons["saveEnglishTraining"].tap()

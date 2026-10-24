@@ -754,10 +754,38 @@ struct HomeCircleAction: View {
     let action: () -> Void
     var body: some View {
         Button(action: action) {
-            Image(systemName: symbol).font(.system(size: 21, weight: .semibold))
-                .foregroundStyle(.white).frame(width: 48, height: 48)
-                .background(stopping ? Color.red : Color.blue, in: Circle())
+            ZStack {
+                Circle().fill(stopping ? Color.red : Color.blue)
+                Image(systemName: symbol).font(.system(size: 21, weight: .semibold))
+                    .foregroundStyle(.white).frame(width: 24, height: 24)
+                    .contentTransition(.identity)
+            }.frame(width: 48, height: 48).fixedSize()
                 .contentShape(Circle())
-        }.buttonStyle(.plain).accessibilityLabel(Text(title))
+        }
+        .buttonStyle(HomeCirclePressStyle())
+        .frame(width: 48, height: 48).fixedSize()
+        .transaction { $0.animation = nil; $0.disablesAnimations = true }
+        .accessibilityLabel(Text(title))
+    }
+}
+
+/// Press feedback changes opacity only; the hit target, circle and symbol never scale.
+private struct HomeCirclePressStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var enabled
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label.opacity(!enabled ? 0.45 : configuration.isPressed ? 0.8 : 1)
+    }
+}
+
+/// Custom circular actions already draw their own background; avoid a second glass circle on iOS 26.
+struct HomeCircleToolbarItem<Content: View>: ToolbarContent {
+    @ViewBuilder let content: () -> Content
+    @ToolbarContentBuilder var body: some ToolbarContent {
+        if #available(iOS 26.0, *) {
+            ToolbarItem(placement: .topBarTrailing) { content() }
+                .sharedBackgroundVisibility(.hidden)
+        } else {
+            ToolbarItem(placement: .topBarTrailing) { content() }
+        }
     }
 }

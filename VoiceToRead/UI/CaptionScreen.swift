@@ -147,7 +147,7 @@ struct CaptionScreen: View {
         .toolbar(communicationLayout && !isFullScreen ? .visible : .hidden, for: .navigationBar)
         .toolbar {
             if communicationLayout && !isFullScreen {
-                ToolbarItem(placement: .topBarTrailing) { headerSessionAction }
+                HomeCircleToolbarItem { headerSessionAction }
                 ToolbarItem(placement: .topBarLeading) {
                     Menu { sessionActionButtons } label: {
                         Label("Session actions", systemImage: "ellipsis.circle")

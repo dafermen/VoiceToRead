@@ -28,8 +28,10 @@ struct EnglishTrainingLibraryView: View {
                     }
                 }
                 .toolbar {
-                    Button("New training", systemImage: "plus") { creating = true }
-                        .accessibilityIdentifier("newEnglishTraining")
+                    HomeCircleToolbarItem {
+                        HomeCircleAction(title: "New training", symbol: "plus") { creating = true }
+                            .accessibilityIdentifier("newEnglishTraining")
+                    }
                 }
                 .sheet(isPresented: $creating) {
                     TrainingSourceEditor { training in try store.save(training) }
