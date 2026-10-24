@@ -4,7 +4,7 @@ Estado e identidad vigentes: [inicio del proyecto](project-identity.md). Versió
 
 ## Preparar el entorno
 
-Abrir `VoiceToRead.xcodeproj`, esquema compartido `VoiceToRead`. Hay tres targets: app, `VoiceToReadUnitTests` y `VoiceToReadTests`. Xcode 15.2 permite verificar compatibilidad iOS 17; no compila las ramas de Speech/Translation que necesitan SDK modernos. Esas ramas deben validarse con un Xcode compatible antes de distribuir. No añadir npm, CocoaPods ni scripts de otros proyectos: esta app es nativa.
+Abrir `VoiceToRead.xcodeproj`, esquema compartido `VoiceToRead`. Hay tres targets: app, `VoiceToReadUnitTests` y `VoiceToReadTests`. Desde el bloque de Inicio del 2026-10-24 el mínimo es iOS/iPadOS 18 y se requiere Xcode con SDK compatible. Xcode 15.2 solo documenta verificaciones históricas de iOS 17; no valida esta entrega. Esas ramas deben validarse con un Xcode compatible antes de distribuir. No añadir npm, CocoaPods ni scripts de otros proyectos: esta app es nativa.
 
 Cuando sea necesario escoger la instalación local:
 
@@ -48,4 +48,4 @@ Registrar cada resultado con commit, toolchain, dispositivo, bundle y número ef
 
 ## Idiomas y migración V11
 
-[Guía de implementación](session-library-and-languages.md). Ejecutar pruebas de traducción, repositorio, ajustes y conversación, además de recorridos iPhone/iPad. Xcode 15.2 permite validar iOS 17 y lógica local, pero excluye `canImport(Translation)` y `compiler(>=6.2)`: Xcode Cloud con SDK reciente y dispositivos físicos deben validar esos caminos antes de publicar. No confundir fixture multilingüe con traducción real.
+[Guía de implementación](session-library-and-languages.md). Ejecutar pruebas de traducción, repositorio, ajustes y conversación, además de recorridos iPhone/iPad. Las verificaciones históricas con Xcode 15.2 excluían `canImport(Translation)` y `compiler(>=6.2)`: Xcode Cloud con SDK reciente y dispositivos físicos deben validar esos caminos antes de publicar. No confundir fixture multilingüe con traducción real.

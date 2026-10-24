@@ -32,11 +32,6 @@ struct AppRootView: View {
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
                 .onPreferenceChange(HomeFullScreenControlKey.self) { fullScreenControl = $0 }
-                .overlay(alignment: .bottomTrailing) {
-                    if #available(iOS 26.0, *), !dynamicTypeSize.isAccessibilitySize {
-                        homeFullScreenButton.padding(.trailing, 8).padding(.bottom, 4)
-                    }
-                }
                 .safeAreaInset(edge: .bottom, spacing: 0) {
                     if #available(iOS 26.0, *), !dynamicTypeSize.isAccessibilitySize {
                         EmptyView()
@@ -64,6 +59,13 @@ struct AppRootView: View {
                             }
                         }.font(.caption).padding(.horizontal).background(.regularMaterial)
                             .accessibilityIdentifier("automaticTranslationStatus")
+                    }
+                }
+                // Anchor outside the transient translation inset: status changes cannot move this control.
+                .overlay(alignment: .bottomTrailing) {
+                    if #available(iOS 26.0, *), !dynamicTypeSize.isAccessibilitySize {
+                        homeFullScreenButton.padding(.trailing, 8).padding(.bottom, 4)
+                            .transaction { $0.animation = nil }
                     }
                 }
                 .task(id: coordinator.automaticTranslationMessage) {
@@ -395,7 +397,8 @@ enum HomeDestination: Hashable { case listen, sessions, englishTraining, respons
 @MainActor
 struct CommunicationHomeView: View {
     let coordinator: SessionCoordinator
-    @State private var listening = false
+    private enum Module: Hashable { case talk, listen, train }
+    @State private var module: Module = .talk
     @State private var fullScreen = false
     @State private var conversation = SpeakTranslateModel()
     private var audioBusy: Bool {
@@ -404,13 +407,16 @@ struct CommunicationHomeView: View {
     var body: some View {
         VStack(spacing: 0) {
             if !fullScreen {
-            Picker("What would you like to do?", selection: $listening) {
-                Text("Converse").tag(false)
-                Text("Listen").tag(true)
-            }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
-                .disabled(audioBusy).accessibilityIdentifier("communicationMode")
+                Picker("What would you like to do?", selection: $module) {
+                    Text("Talk").tag(Module.talk)
+                    Text("Listen").tag(Module.listen)
+                    Text("Train").tag(Module.train)
+                }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
+                    .disabled(audioBusy).accessibilityIdentifier("communicationMode")
             }
-            if listening {
+            if module == .train {
+                EnglishTrainingLibraryView()
+            } else if module == .listen {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)
             } else {
                 SpeakTranslateView(settings: coordinator.settings, embedded: true, model: conversation)
@@ -418,7 +424,7 @@ struct CommunicationHomeView: View {
         }
         .onPreferenceChange(CommunicationFullScreenKey.self) { fullScreen = $0 }
         .onAppear {
-            if coordinator.caption.state.active || coordinator.caption.state.busy { listening = true }
+            if coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending { module = .listen }
         }
     }
 }

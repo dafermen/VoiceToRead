@@ -6,6 +6,19 @@ import SwiftUI
 
 @MainActor
 final class AppSettingsTests: XCTestCase {
+    func testParticipantActionsUseTheirLanguageWithoutChangingStoredIdentifiers() {
+        XCTAssertEqual(CaptureLanguage.spanish.rawValue, "es-ES")
+        XCTAssertEqual(CaptureLanguage.chinese.code, "zh-Hans")
+        XCTAssertEqual(CaptureLanguage.spanish.speakAction, "Hablar en español")
+        XCTAssertEqual(CaptureLanguage.spanish.finishAction, "Terminar y traducir")
+        XCTAssertEqual(CaptureLanguage.english.speakAction, "Speak English")
+        XCTAssertEqual(CaptureLanguage.french.speakAction, "Parler français")
+        for language in CaptureLanguage.allCases {
+            XCTAssertFalse(language.speakAction.isEmpty)
+            XCTAssertFalse(language.finishAction.isEmpty)
+        }
+    }
+
     func testJapaneseAndSimplifiedChineseSettingsSurviveReopening() {
         let name = UUID().uuidString
         let defaults = UserDefaults(suiteName: name)!

@@ -7,6 +7,7 @@ enum InterfaceLanguage: String, CaseIterable {
     case english = "en", spanish = "es"
     var name: String { self == .english ? "English" : "Español" }
     var locale: Locale { Locale(identifier: rawValue) }
+    var pickerLabel: LocalizedStringKey { self == .english ? "English" : "Spanish · Español" }
 }
 
 enum AppAppearance: String, CaseIterable, Equatable, Hashable, Sendable {
@@ -20,7 +21,28 @@ enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
         switch self { case .english: "English"; case .spanish: "Español"; case .french: "Français"; case .korean: "한국어"; case .japanese: "日本語"; case .chinese: "简体中文" }
     }
     var pickerLabel: LocalizedStringKey {
-        switch self { case .english: "English"; case .spanish: "Español"; case .french: "French · Français"; case .korean: "Korean · 한국어"; case .japanese: "Japanese · 日本語"; case .chinese: "Mandarin · 简体中文" }
+        switch self { case .english: "English"; case .spanish: "Spanish · Español"; case .french: "French · Français"; case .korean: "Korean · 한국어"; case .japanese: "Japanese · 日本語"; case .chinese: "Mandarin · 简体中文" }
+    }
+    /// Participant-facing controls use the language of the person who presses them.
+    var speakAction: String {
+        switch self {
+        case .english: "Speak English"
+        case .spanish: "Hablar en español"
+        case .french: "Parler français"
+        case .korean: "한국어로 말하기"
+        case .japanese: "日本語で話す"
+        case .chinese: "说普通话"
+        }
+    }
+    var finishAction: String {
+        switch self {
+        case .english: "Finish and translate"
+        case .spanish: "Terminar y traducir"
+        case .french: "Terminer et traduire"
+        case .korean: "말하기를 마치고 번역"
+        case .japanese: "終了して翻訳"
+        case .chinese: "结束并翻译"
+        }
     }
     var code: String { self == .chinese ? "zh-Hans" : String(rawValue.prefix(2)) }
     /// Used only to interpret old English/Spanish data and provide a safe first choice.

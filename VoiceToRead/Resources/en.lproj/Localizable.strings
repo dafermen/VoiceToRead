@@ -1116,3 +1116,19 @@
 // Compact session swipe actions
 "Favorite" = "Favorite";
 "Unprotect" = "Unprotect";
+
+"Talk" = "Talk";
+
+"Spanish · Español" = "Spanish · Español";
+
+"Compatibility" = "Compatibility";
+
+"Requires iOS 18 or later. Speech recognition and translation also depend on this device and the selected languages." = "Requires iOS 18 or later. Speech recognition and translation also depend on this device and the selected languages.";
+
+"Download language resources while online before using the app offline. Readiness checks never start the microphone." = "Download language resources while online before using the app offline. Readiness checks never start the microphone.";
+
+"These translation languages need a download. Connect to the Internet and accept Apple's download prompt when translating." = "These translation languages need a download. Connect to the Internet and accept Apple's download prompt when translating.";
+
+"Translation availability could not be checked. Try selecting the languages again." = "Translation availability could not be checked. Try selecting the languages again.";
+
+"This app build does not include the translation engine. Install the latest version from TestFlight or the App Store." = "This app build does not include the translation engine. Install the latest version from TestFlight or the App Store.";

@@ -123,7 +123,7 @@
 "Elige el idioma que se habla. Inglés es el predeterminado; la traducción utiliza el otro idioma." = "Elige el idioma que se habla. Inglés es el predeterminado; la traducción utiliza el otro idioma. Esto no cambia los menús.";
 "Empty paragraph" = "Párrafo vacío";
 "Enable speech recognition" = "Activar reconocimiento de voz";
-"English" = "English";
+"English" = "Inglés · English";
 "English or Spanish captions, on your device." = "Subtítulos en inglés o español, en tu dispositivo.";
 "Escucha en pausa · Micrófono apagado" = "Escucha en pausa · Micrófono apagado";
 "Escucha · Pronuncia · Compara" = "Escucha · Pronuncia · Compara";
@@ -1116,3 +1116,19 @@
 // Compact session swipe actions
 "Favorite" = "Favorita";
 "Unprotect" = "Desproteger";
+
+"Talk" = "Conversar";
+
+"Spanish · Español" = "Español";
+
+"Compatibility" = "Compatibilidad";
+
+"Requires iOS 18 or later. Speech recognition and translation also depend on this device and the selected languages." = "Requiere iOS 18 o posterior. El reconocimiento de voz y la traducción también dependen del dispositivo y de los idiomas seleccionados.";
+
+"Download language resources while online before using the app offline. Readiness checks never start the microphone." = "Descarga los recursos de idiomas con conexión a Internet antes de usar la app sin conexión. Las comprobaciones nunca activan el micrófono.";
+
+"These translation languages need a download. Connect to the Internet and accept Apple's download prompt when translating." = "Estos idiomas de traducción necesitan una descarga. Conéctate a Internet y acepta la solicitud de descarga de Apple al traducir.";
+
+"Translation availability could not be checked. Try selecting the languages again." = "No se pudo comprobar la disponibilidad de traducción. Intenta seleccionar los idiomas de nuevo.";
+
+"This app build does not include the translation engine. Install the latest version from TestFlight or the App Store." = "Esta compilación no incluye el motor de traducción. Instala la versión más reciente desde TestFlight o App Store.";

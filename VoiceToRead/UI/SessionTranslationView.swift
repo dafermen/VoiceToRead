@@ -607,3 +607,49 @@ struct LiveLanguageCard: ViewModifier {
         }
     }
 }
+
+/// Check before opening the microphone. A supported pair may still need Apple's consent/download sheet.
+@MainActor
+struct TranslationCompatibilityNotice: View {
+    let source: CaptureLanguage
+    let target: CaptureLanguage
+    @Binding var available: Bool
+    @State private var message: String?
+    var body: some View {
+        Group {
+            if let message {
+                Label(LocalizedStringKey(message), systemImage: "info.circle")
+                    .font(.caption).foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityIdentifier("translationCompatibilityNotice")
+            }
+        }
+        .task(id: source.rawValue + target.rawValue) {
+            message = nil
+            available = false
+            #if DEBUG
+            if ProcessInfo.processInfo.arguments.contains("--ui-test-live-translation") {
+                available = true
+                return
+            }
+            #endif
+            #if canImport(Translation)
+            let status = await LanguageAvailability().status(
+                from: Locale.Language(identifier: source.code), to: Locale.Language(identifier: target.code))
+            guard !Task.isCancelled else { return }
+            switch status {
+            case .installed: available = true
+            case .supported:
+                available = true
+                message = "These translation languages need a download. Connect to the Internet and accept Apple's download prompt when translating."
+            case .unsupported:
+                message = "This language pair is not supported on this device. Choose another translation language."
+            @unknown default:
+                message = "Translation availability could not be checked. Try selecting the languages again."
+            }
+            #else
+            message = "This app build does not include the translation engine. Install the latest version from TestFlight or the App Store."
+            #endif
+        }
+    }
+}

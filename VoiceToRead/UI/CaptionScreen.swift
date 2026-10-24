@@ -32,6 +32,7 @@ struct CaptionScreen: View {
     @State private var confirmDiscard = false
     @State private var showingStatus = false
     @State private var showingActions = false
+    @State private var translationAvailable = true
     @State private var followScrollTask: Task<Void, Never>?
 
     private var initialInstruction: LocalizedStringKey {
@@ -58,6 +59,10 @@ struct CaptionScreen: View {
                             HStack { status; Spacer(minLength: 8); utilities }
                         }
                     }.padding(.horizontal, 16)
+                }
+                if communicationLayout && !isFullScreen && supportsLiveTranslation && liveDisplay != .original {
+                    TranslationCompatibilityNotice(source: model.language, target: settings.translationLanguage, available: $translationAvailable)
+                        .padding(.horizontal, 16)
                 }
                 if model.canResume { resumePanel }
                 else if needsPreparation { preparationPanel }
@@ -97,13 +102,18 @@ struct CaptionScreen: View {
                 if model.canChooseCaptureOptions && !communicationLayout && !isFullScreen {
                     VStack(spacing: 0) { LanguagePairOptions(model: model, settings: settings, compact: true); quickPreferences }.padding(.horizontal, 16)
                 }
-                if communicationLayout || isFullScreen || compact || model.state != .ended {
+                if (communicationLayout && (isFullScreen || model.state == .listening || model.canResume)) || (!communicationLayout && (isFullScreen || compact || model.state != .ended)) {
                     Divider()
                     Group {
                         if isFullScreen {
                             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 4)) : AnyLayout(HStackLayout(spacing: 8))) {
-                                primaryButton(iconOnly: true)
-                                if model.state != .ended { stopButton(iconOnly: true) }
+                                if communicationLayout {
+                                    headerSessionAction
+                                    if model.state == .listening || model.canResume { primaryButton(iconOnly: true) }
+                                } else {
+                                    primaryButton(iconOnly: true)
+                                    if model.state != .ended { stopButton(iconOnly: true) }
+                                }
                                 Spacer(minLength: 0)
                                 Menu { sessionActionButtons } label: {
                                     Image(systemName: "ellipsis.circle").frame(minWidth: 44, minHeight: 44)
@@ -137,6 +147,7 @@ struct CaptionScreen: View {
         .toolbar(communicationLayout && !isFullScreen ? .visible : .hidden, for: .navigationBar)
         .toolbar {
             if communicationLayout && !isFullScreen {
+                ToolbarItem(placement: .topBarTrailing) { headerSessionAction }
                 ToolbarItem(placement: .topBarLeading) {
                     Menu { sessionActionButtons } label: {
                         Label("Session actions", systemImage: "ellipsis.circle")
@@ -636,8 +647,10 @@ struct CaptionScreen: View {
 
     private var captureControls: some View {
         (dynamicTypeSize.isAccessibilitySize && (communicationLayout || settings.showButtonNames) ? AnyLayout(VStackLayout(spacing: 10)) : AnyLayout(HStackLayout(spacing: communicationLayout ? 10 : 12))) {
-            primaryButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
-            stopButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
+            if !communicationLayout || model.state == .listening || model.canResume {
+                primaryButton(iconOnly: true).frame(maxWidth: communicationLayout ? .infinity : nil)
+            }
+            if !communicationLayout { stopButton(iconOnly: true) }
             if !dynamicTypeSize.isAccessibilitySize && !communicationLayout { Spacer(minLength: 0) }
         }.fixedSize(horizontal: false, vertical: true)
     }
@@ -666,6 +679,24 @@ struct CaptionScreen: View {
             .accessibilityLabel("Capture preferences")
             .accessibilityValue(Text(uiKey(model.saveAudio ? "Audio on" : "Audio off")) + Text(". Background: ") + Text(uiKey(model.continueInBackground ? "On" : "Off")))
             .accessibilityIdentifier("capturePreferencesButton")
+    }
+
+    private var headerSessionAction: some View {
+        let stopping = model.state.active || model.state == .paused || model.canResume || isProblem
+        let title: LocalizedStringKey = model.state == .ended ? "New Session" : stopping ? "Stop" : (settings.saveAudio ? "Start Recording" : "Start Listening")
+        return HomeCircleAction(title: title, symbol: model.state == .ended ? "plus" : stopping ? "stop.fill" : "mic.fill", stopping: stopping) {
+            if model.state == .ended {
+                if needsSessionDecision { confirmNewSession = true }
+                else { Task { await beginNewSession() } }
+            } else if stopping {
+                Task { await model.stop() }
+            } else {
+                Task { await model.start() }
+            }
+        }
+        .disabled(model.state.busy || model.preparationPending)
+        .keyboardShortcut(stopping ? "." : "r", modifiers: .command)
+        .accessibilityIdentifier(stopping ? "stopCaptionAction" : "primaryCaptionAction")
     }
 
     private var newSessionButton: some View {

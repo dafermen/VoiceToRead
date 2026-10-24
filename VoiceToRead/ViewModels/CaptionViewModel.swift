@@ -1,4 +1,5 @@
 import Foundation
+import Speech
 import Observation
 
 enum CaptionState: Equatable {
@@ -71,7 +72,7 @@ final class CaptionViewModel {
     convenience init() {
         let audio = AudioCaptureService()
         #if compiler(>=6.2)
-        if #available(iOS 26.0, *) {
+        if #available(iOS 26.0, *), SpeechTranscriber.isAvailable {
             self.init(microphone: audio, speech: AppleSpeechTranscriber(audio: audio))
             return
         }

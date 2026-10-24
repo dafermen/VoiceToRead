@@ -10,6 +10,11 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
+            Section("Compatibility") {
+                Text("Requires iOS 18 or later. Speech recognition and translation also depend on this device and the selected languages.")
+                Text("Download language resources while online before using the app offline. Readiness checks never start the microphone.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
             Section("Home experience") {
                 Picker("Home experience", selection: $settings.conversationHome) {
                     Text("Conversation first").tag(true)
@@ -28,7 +33,7 @@ struct SettingsView: View {
             }
             Section("App interface") {
                 Picker("Menus and buttons", selection: $settings.interfaceLanguage) {
-                    ForEach(InterfaceLanguage.allCases, id: \.self) { Text($0.name).tag($0) }
+                    ForEach(InterfaceLanguage.allCases, id: \.self) { Text($0.pickerLabel).tag($0) }
                 }.accessibilityIdentifier("interfaceLanguagePicker")
                 Text("Changes the app's menus and messages. It does not change speech recognition, recordings or translations.")
                     .font(.caption)
@@ -738,5 +743,21 @@ struct HomeFullScreenSource: ViewModifier {
                 ? HomeFullScreenControl(id: id, isFullScreen: selection, identifier: identifier, selection: $selection) : nil)
             .onAppear { visible = true }
             .onDisappear { visible = false }
+    }
+}
+
+/// Shared symbol-only primary action. The accessible name always describes the current action.
+struct HomeCircleAction: View {
+    let title: LocalizedStringKey
+    let symbol: String
+    var stopping = false
+    let action: () -> Void
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: symbol).font(.system(size: 21, weight: .semibold))
+                .foregroundStyle(.white).frame(width: 48, height: 48)
+                .background(stopping ? Color.red : Color.blue, in: Circle())
+                .contentShape(Circle())
+        }.buttonStyle(.plain).accessibilityLabel(Text(title))
     }
 }

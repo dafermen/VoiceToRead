@@ -273,6 +273,7 @@ struct SpeakTranslateView: View {
     @State private var showingOptions = false
     @State private var confirmNewConversation = false
     @State private var fullScreen = false
+    @State private var translationAvailable = true
     @State private var editor: ConversationEdit?
     @AppStorage("conversationFirstLanguage") private var first: CaptureLanguage = .spanish
     @AppStorage("conversationSecondLanguage") private var second: CaptureLanguage = .english
@@ -325,6 +326,7 @@ struct SpeakTranslateView: View {
                             Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription))
                                 .foregroundStyle(.secondary)
                         }
+                        TranslationCompatibilityNotice(source: first, target: second, available: $translationAvailable)
                         messageCards
                         translationRetry
                         speechPreparation
@@ -352,6 +354,9 @@ struct SpeakTranslateView: View {
         .modifier(HomeFullScreenSource(selection: $fullScreen, hosted: embedded, identifier: "conversationFullScreenButton"))
         .toolbar {
             if !embedded { DoneToolbar { model.cancel(); dismiss() } }
+            if !fullScreen {
+                ToolbarItem(placement: .topBarTrailing) { newConversationAction }
+            }
             ToolbarItem(placement: .topBarLeading) {
                 Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
                     .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
@@ -408,26 +413,31 @@ struct SpeakTranslateView: View {
 
     private var conversationActions: some View {
         HStack(alignment: .center, spacing: 8) {
-            NavigationLink { EnglishTrainingLibraryView() } label: {
-                Label("Train", systemImage: "book.closed")
+            if !embedded {
+                NavigationLink { EnglishTrainingLibraryView() } label: {
+                    Label("Train", systemImage: "book.closed")
+                }
+                .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
+                .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
+                .disabled(!model.canEdit || model.capture.preparationPending)
+                .accessibilityLabel("Training").accessibilityIdentifier("englishTrainingEntry")
             }
-            .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
-            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44)
-            .disabled(!model.canEdit || model.capture.preparationPending)
-            .accessibilityLabel("Training").accessibilityIdentifier("englishTrainingEntry")
             Button {
                 editor = ConversationEdit(language: first, target: second, text: "")
             } label: { Label("Write", systemImage: "keyboard") }
             .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
             .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
             .accessibilityLabel("Write a reply").accessibilityIdentifier("conversationWriteReply")
-            Button("New", systemImage: "plus.bubble") {
-                if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
-                else { model.newConversation() }
-            }.labelStyle(InlinePreferenceLabelStyle()).font(.caption)
-            .frame(minWidth: 44, maxWidth: .infinity, minHeight: 44).disabled(!model.canEdit)
-            .accessibilityLabel("New conversation").accessibilityIdentifier("newConversationButton")
+            if fullScreen { newConversationAction }
         }
+    }
+
+    private var newConversationAction: some View {
+        HomeCircleAction(title: "New conversation", symbol: "plus") {
+            if !model.source.isEmpty || !model.translated.isEmpty { confirmNewConversation = true }
+            else { model.newConversation() }
+        }.disabled(!model.canEdit || model.capture.preparationPending)
+            .accessibilityIdentifier("newConversationButton")
     }
 
     @ViewBuilder private var speechPreparation: some View {
@@ -510,8 +520,8 @@ struct SpeakTranslateView: View {
             VStack(spacing: 4) {
                 Label {
                     if !settings.showButtonNames { Text(language.pickerLabel) }
-                    else if listening { Text("Finish and translate") }
-                    else { Text("Speak \(language.name)") }
+                    else if listening { Text(verbatim: language.finishAction) }
+                    else { Text(verbatim: language.speakAction) }
                 } icon: {
                     Image(systemName: listening ? "stop.fill" : "mic.fill")
                 }.font(fullScreen ? .subheadline : .headline).labelStyle(.titleAndIcon)
@@ -522,8 +532,8 @@ struct SpeakTranslateView: View {
             }.multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 .padding(.vertical, 6).frame(maxWidth: .infinity, minHeight: fullScreen ? 44 : 64, maxHeight: .infinity).contentShape(Rectangle())
         }.buttonStyle(LanguageButtonStyle(color: settings.color(for: language), highContrast: settings.highContrast))
-            .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported))
-            .accessibilityLabel(uiKey(listening ? "Finish and translate" : "Speak \(language.name)"))
+            .disabled(!listening && (!model.canEdit || model.capture.preparationPending || !TranslationJob.supported || !translationAvailable))
+            .accessibilityLabel(Text(verbatim: listening ? language.finishAction : language.speakAction))
             .accessibilityValue(Text(verbatim: language.name + " → " + destination.name))
             .accessibilityIdentifier(language == .spanish ? "conversationSpanishTurn" : language == .english ? "conversationEnglishTurn" : "conversationTurn-" + language.code)
     }
