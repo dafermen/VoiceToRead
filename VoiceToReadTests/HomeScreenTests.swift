@@ -1570,6 +1570,7 @@ final class HomeScreenTests: XCTestCase {
         let start = app.buttons["startEnglishTraining"]
         XCTAssertTrue(start.waitForExistence(timeout: 5))
         XCTAssertFalse(start.isEnabled)
+        XCTAssertLessThan(start.frame.midY, app.buttons["editTrainingSource"].frame.midY)
         app.buttons["prepareTrainingEnglish"].tap()
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)

@@ -66,6 +66,9 @@ final class PronunciationPractice {
     private var recorder: AVAudioRecorder?
     private var player: AVAudioPlayer?
     private var synthesizer = AVSpeechSynthesizer()
+    private let exampleObserver = TrainingExampleSpeechObserver()
+    private let highlightExampleWords: Bool
+    private(set) var exampleProgress = TrainingSpokenWordProgress()
     private var recognizer: SFSpeechRecognizer?
     private var recognition: SFSpeechRecognitionTask?
     private var ticker: Task<Void, Never>?
@@ -75,9 +78,22 @@ final class PronunciationPractice {
     let language: CaptureLanguage
     private let microphonePermission: () async -> Bool
 
-    init(language: CaptureLanguage = .english, microphonePermission: @escaping () async -> Bool = { await AVAudioApplication.requestRecordPermission() }) {
+    init(language: CaptureLanguage = .english, highlightExampleWords: Bool = false,
+         microphonePermission: @escaping () async -> Bool = { await AVAudioApplication.requestRecordPermission() }) {
         self.language = language
         self.microphonePermission = microphonePermission
+        self.highlightExampleWords = highlightExampleWords
+        if highlightExampleWords {
+            synthesizer.delegate = exampleObserver
+            exampleObserver.onWord = { [weak self] range, token in
+                guard let self, self.activity == .example else { return }
+                self.exampleProgress.receive(range, token: token)
+            }
+            exampleObserver.onFinish = { [weak self] token in
+                guard let self, self.activity == .example, self.generation == token else { return }
+                self.stopActivity()
+            }
+        }
     }
     func observeInterruptions() {
         guard observers.isEmpty else { return }
@@ -108,6 +124,8 @@ final class PronunciationPractice {
         recognition?.cancel(); recognition = nil; recognizer = nil
         recorder?.stop(); recorder = nil
         player?.stop(); player = nil
+        exampleObserver.current = nil
+        exampleProgress.reset()
         synthesizer.stopSpeaking(at: .immediate)
         activity = .idle; level = 0
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
@@ -134,7 +152,12 @@ final class PronunciationPractice {
             try activate(.playback, mode: .spokenAudio)
             let utterance = AVSpeechUtterance(string: text)
             utterance.voice = voice; utterance.rate = slow ? 0.35 : AVSpeechUtteranceDefaultSpeechRate
-            synthesizer.speak(utterance); activity = .example
+            if highlightExampleWords {
+                exampleProgress.begin(text: text, token: generation)
+                exampleObserver.current = (utterance, generation)
+            }
+            activity = .example
+            synthesizer.speak(utterance)
             let token = generation
             ticker = Task { @MainActor [weak self] in
                 // Give the speech engine time to start before checking completion.
@@ -356,6 +379,55 @@ struct PronunciationPracticeView: View {
                 if value == .background { practice.reset(); practice.message = "Práctica pausada al salir de la app. Puedes empezar otra vez cuando quieras." }
             }
             .onDisappear { practice.close() }
+        }
+    }
+}
+
+/// UTF-16 ranges come directly from AVSpeechSynthesizer; never split words with a timer.
+/// Tokens prevent a previous example from highlighting a new phrase or a recorded attempt.
+struct TrainingSpokenWordProgress: Equatable {
+    private(set) var text = ""
+    private(set) var range: NSRange?
+    private var token: UUID?
+    mutating func begin(text: String, token: UUID) {
+        self.text = text; self.token = token; range = nil
+    }
+    mutating func receive(_ range: NSRange, token: UUID) {
+        guard self.token == token, range.location != NSNotFound, range.length > 0,
+              range.location >= 0, range.location <= text.utf16.count,
+              range.length <= text.utf16.count - range.location,
+              Range(range, in: text) != nil else { return }
+        self.range = range
+    }
+    mutating func reset() { text = ""; range = nil; token = nil }
+}
+
+/// Only the Training example opts in. No delegates or state change for the legacy practice view.
+@MainActor
+private final class TrainingExampleSpeechObserver: NSObject, AVSpeechSynthesizerDelegate {
+    var current: (utterance: AVSpeechUtterance, token: UUID)?
+    var onWord: ((NSRange, UUID) -> Void)?
+    var onFinish: ((UUID) -> Void)?
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+        willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        let identity = ObjectIdentifier(utterance)
+        Task { @MainActor [weak self] in
+            guard let self, let current = self.current, ObjectIdentifier(current.utterance) == identity else { return }
+            self.onWord?(characterRange, current.token)
+        }
+    }
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        complete(utterance)
+    }
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        complete(utterance)
+    }
+    nonisolated private func complete(_ utterance: AVSpeechUtterance) {
+        let identity = ObjectIdentifier(utterance)
+        Task { @MainActor [weak self] in
+            guard let self, let current = self.current, ObjectIdentifier(current.utterance) == identity else { return }
+            self.current = nil
+            self.onFinish?(current.token)
         }
     }
 }

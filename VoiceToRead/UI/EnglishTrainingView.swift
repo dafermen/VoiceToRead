@@ -202,6 +202,13 @@ private struct EnglishTrainingDetailView: View {
         Group {
             if let training {
                 List {
+                    Section("Practice") {
+                        NavigationLink {
+                            TrainingPracticeView(store: store, trainingID: trainingID, phraseIDs: training.phrases.map(\.id))
+                                .id(training.updatedAt)
+                        } label: { Label("Start practice", systemImage: "mic") }
+                            .disabled(!training.ready || job != nil).accessibilityIdentifier("startEnglishTraining")
+                    }
                     Section {
                         TrainingLanguagePair(training: training)
                         Button("Edit phrases and languages", systemImage: "pencil") { editingSource = true }
@@ -222,13 +229,6 @@ private struct EnglishTrainingDetailView: View {
                         }
                         if let failure { Text(LocalizedStringKey(failure)).foregroundStyle(.red) }
                         Text("Review the translations before practising. You can correct the automatic translation.").font(.caption).foregroundStyle(.secondary)
-                    }
-                    Section("Practice") {
-                        NavigationLink {
-                            TrainingPracticeView(store: store, trainingID: trainingID, phraseIDs: training.phrases.map(\.id))
-                                .id(training.updatedAt)
-                        } label: { Label("Start practice", systemImage: "mic") }
-                            .disabled(!training.ready || job != nil).accessibilityIdentifier("startEnglishTraining")
                     }
                     Section("Phrases") {
                         ForEach(training.phrases) { phrase in
@@ -304,7 +304,7 @@ private struct TrainingPracticeView: View {
         _round = State(initialValue: EnglishTrainingRound(phraseIDs: phraseIDs))
         let language = store.training(trainingID)?.targetLanguage ?? .english
         targetLanguage = language
-        _practice = State(initialValue: PronunciationPractice(language: language))
+        _practice = State(initialValue: PronunciationPractice(language: language, highlightExampleWords: true))
     }
     private var current: EnglishTrainingPhrase? {
         guard round.phraseIDs.indices.contains(index) else { return nil }
@@ -312,87 +312,94 @@ private struct TrainingPracticeView: View {
     }
     private var busy: Bool { practice.activity == .recording || practice.activity == .permission || practice.activity == .checking }
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                if let phrase = current {
-                    Text("Phrase \(index + 1) of \(round.phraseIDs.count)").font(.caption).foregroundStyle(.secondary)
-                    Text("Try saying this in \(targetLanguage.name) before revealing the response.").font(.subheadline)
-                    if !voiceAvailable {
-                        Text("No example voice is installed for the practice language. Check the voices in device Settings.").font(.caption).foregroundStyle(.secondary)
-                    }
-                    if !localRecognitionAvailable {
-                        Text("Local recognition is unavailable for the practice language. You can still record, listen and compare; no automatic check will be counted.").font(.caption).foregroundStyle(.secondary)
-                    }
-                    Text(phrase.spanish).font(.title2).textSelection(.enabled).accessibilityIdentifier("trainingPrompt")
-                    HStack {
-                        Button(uiKey(revealed ? "Hide response" : "Show response"), systemImage: "eye") { revealed.toggle() }
-                            .disabled(busy).accessibilityIdentifier("revealTrainingResponse")
-                        Button(uiKey(practice.activity == .example ? "Stop example" : "Listen to example"),
-                               systemImage: practice.activity == .example ? "stop.circle" : "speaker.wave.2") {
-                            if practice.activity == .example { practice.stopPlayback() }
-                            else { revealed = true; practice.listen(phrase.english, slow: slow) }
-                        }.disabled(busy)
-                    }.labelStyle(InlinePreferenceLabelStyle()).frame(minHeight: 44)
-                    Toggle("Slow example", isOn: $slow).disabled(busy)
-                    if revealed {
-                        Text(phrase.english).font(.title3).textSelection(.enabled).accessibilityIdentifier("trainingExpected")
-                    }
-                    if let message = practice.message { Text(LocalizedStringKey(message)).foregroundStyle(.secondary) }
-                    if practice.needsSettings {
-                        Button("Open Settings") {
-                            if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    if let phrase = current {
+                        Text("Phrase \(index + 1) of \(round.phraseIDs.count)").font(.caption).foregroundStyle(.secondary)
+                        Text("Try saying this in \(targetLanguage.name) before revealing the response.").font(.subheadline)
+                        if !voiceAvailable {
+                            Text("No example voice is installed for the practice language. Check the voices in device Settings.").font(.caption).foregroundStyle(.secondary)
                         }
-                    }
-                    if practice.activity == .recording {
-                        Text("\(Int(practice.elapsed)) / 15 seconds").monospacedDigit()
-                        Button("Stop recording", systemImage: "stop.fill") { practice.finishRecording() }
-                            .buttonStyle(.borderedProminent).accessibilityIdentifier("stopTrainingAttempt")
-                    } else {
-                        Button("Record my attempt", systemImage: "mic.fill") { Task { await practice.startRecording() } }
-                            .buttonStyle(.borderedProminent).disabled(practice.activity != .idle)
-                            .accessibilityIdentifier("recordTrainingAttempt")
-                    }
-                    if practice.activity == .checking { ProgressView("Checking recognized words…") }
-                    if practice.activity == .permission { ProgressView("Waiting for microphone permission…") }
-                    if practice.take != nil {
-                        Button(uiKey(practice.activity == .playback ? "Stop attempt" : "Listen to my attempt"),
-                               systemImage: practice.activity == .playback ? "stop.circle" : "play.circle") {
-                            if practice.activity == .playback { practice.stopPlayback() }
-                            else { practice.listenToTake() }
-                        }.disabled(busy).accessibilityIdentifier("trainingAttemptPlayback")
-                        if practice.heard == nil {
-                            Button("Retry word recognition", systemImage: "arrow.clockwise") { Task { await practice.checkWords() } }.disabled(busy)
+                        if !localRecognitionAvailable {
+                            Text("Local recognition is unavailable for the practice language. You can still record, listen and compare; no automatic check will be counted.").font(.caption).foregroundStyle(.secondary)
                         }
-                    }
-                    if let heard = practice.heard {
-                        let comparison = TrainingComparison.compare(expected: phrase.english, heard: heard)
-                        if PracticeRecognition.matches(heard, target: phrase.english) {
-                            Label("The words match!", systemImage: "checkmark.circle.fill")
-                                .font(.headline).foregroundStyle(.green).accessibilityIdentifier("trainingMatch")
+                        Text(phrase.spanish).font(.title2).textSelection(.enabled).accessibilityIdentifier("trainingPrompt")
+                        HStack {
+                            Button(uiKey(revealed ? "Hide response" : "Show response"), systemImage: "eye") { revealed.toggle() }
+                                .disabled(busy).accessibilityIdentifier("revealTrainingResponse")
+                            Button(uiKey(practice.activity == .example ? "Stop example" : "Listen to example"),
+                                   systemImage: practice.activity == .example ? "stop.circle" : "speaker.wave.2") {
+                                if practice.activity == .example { practice.stopPlayback() }
+                                else { revealed = true; practice.listen(phrase.english, slow: slow) }
+                            }.disabled(busy)
+                        }.labelStyle(InlinePreferenceLabelStyle()).frame(minHeight: 44)
+                        Toggle("Slow example", isOn: $slow).disabled(busy)
+                        if revealed {
+                            TrainingSpokenText(text: phrase.english, progress: practice.exampleProgress)
+                                .font(.title3).textSelection(.enabled).accessibilityIdentifier("trainingExpected")
+                                .id("trainingExpected")
+                        }
+                        if let message = practice.message { Text(LocalizedStringKey(message)).foregroundStyle(.secondary) }
+                        if practice.needsSettings {
+                            Button("Open Settings") {
+                                if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+                            }
+                        }
+                        if practice.activity == .recording {
+                            Text("\(Int(practice.elapsed)) / 15 seconds").monospacedDigit()
+                            Button("Stop recording", systemImage: "stop.fill") { practice.finishRecording() }
+                                .buttonStyle(.borderedProminent).accessibilityIdentifier("stopTrainingAttempt")
                         } else {
-                            Label("Review the underlined words and try again.", systemImage: "arrow.clockwise")
-                                .font(.headline).accessibilityIdentifier("trainingDifference")
+                            Button("Record my attempt", systemImage: "mic.fill") { Task { await practice.startRecording() } }
+                                .buttonStyle(.borderedProminent).disabled(practice.activity != .idle)
+                                .accessibilityIdentifier("recordTrainingAttempt")
                         }
-                        Text("What was understood").font(.headline)
-                        differenceText(comparison.heard).font(.title3).textSelection(.enabled).accessibilityIdentifier("trainingHeard")
-                        Text("Expected response").font(.headline)
-                        differenceText(comparison.expected).font(.title3).textSelection(.enabled)
-                        Text("Underlined words differ from recognition. Noise, recognition errors and other valid translations can explain differences. This is not a pronunciation score.")
+                        if practice.activity == .checking { ProgressView("Checking recognized words…") }
+                        if practice.activity == .permission { ProgressView("Waiting for microphone permission…") }
+                        if practice.take != nil {
+                            Button(uiKey(practice.activity == .playback ? "Stop attempt" : "Listen to my attempt"),
+                                   systemImage: practice.activity == .playback ? "stop.circle" : "play.circle") {
+                                if practice.activity == .playback { practice.stopPlayback() }
+                                else { practice.listenToTake() }
+                            }.disabled(busy).accessibilityIdentifier("trainingAttemptPlayback")
+                            if practice.heard == nil {
+                                Button("Retry word recognition", systemImage: "arrow.clockwise") { Task { await practice.checkWords() } }.disabled(busy)
+                            }
+                        }
+                        if let heard = practice.heard {
+                            let comparison = TrainingComparison.compare(expected: phrase.english, heard: heard)
+                            if PracticeRecognition.matches(heard, target: phrase.english) {
+                                Label("The words match!", systemImage: "checkmark.circle.fill")
+                                    .font(.headline).foregroundStyle(.green).accessibilityIdentifier("trainingMatch")
+                            } else {
+                                Label("Review the underlined words and try again.", systemImage: "arrow.clockwise")
+                                    .font(.headline).accessibilityIdentifier("trainingDifference")
+                            }
+                            Text("What was understood").font(.headline)
+                            differenceText(comparison.heard).font(.title3).textSelection(.enabled).accessibilityIdentifier("trainingHeard")
+                            Text("Expected response").font(.headline)
+                            differenceText(comparison.expected).font(.title3).textSelection(.enabled)
+                            Text("Underlined words differ from recognition. Noise, recognition errors and other valid translations can explain differences. This is not a pronunciation score.")
+                                .font(.caption).foregroundStyle(.secondary)
+                        }
+                        Divider()
+                        HStack {
+                            Button("Previous", systemImage: "backward.end") { move(to: index - 1) }.disabled(index == 0 || busy)
+                            Spacer()
+                            Button("Next", systemImage: "forward.end") { move(to: index + 1) }
+                                .disabled(busy).accessibilityIdentifier("trainingNext")
+                        }
+                        Text("Your attempt is temporary. It is deleted when you repeat, change phrase, leave this screen or put the app in the background.")
                             .font(.caption).foregroundStyle(.secondary)
+                    } else {
+                        roundSummary
                     }
-                    Divider()
-                    HStack {
-                        Button("Previous", systemImage: "backward.end") { move(to: index - 1) }.disabled(index == 0 || busy)
-                        Spacer()
-                        Button("Next", systemImage: "forward.end") { move(to: index + 1) }
-                            .disabled(busy).accessibilityIdentifier("trainingNext")
-                    }
-                    Text("Your attempt is temporary. It is deleted when you repeat, change phrase, leave this screen or put the app in the background.")
-                        .font(.caption).foregroundStyle(.secondary)
-                } else {
-                    roundSummary
-                }
-            }.padding()
+                }.padding()
+            }
+            .onChange(of: practice.activity) { _, activity in
+                if activity == .example { proxy.scrollTo("trainingExpected", anchor: .center) }
+            }
         }
         .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
         .onAppear {
@@ -462,5 +469,23 @@ private struct TrainingPracticeView: View {
             let word = Text(item.element.text).underline(!item.element.matched)
             return result + Text(item.offset == 0 ? "" : item.element.separator) + word
         }
+    }
+}
+
+/// Attributes change only the active spoken range: font metrics and wrapping remain unchanged.
+private struct TrainingSpokenText: View {
+    let text: String
+    let progress: TrainingSpokenWordProgress
+    private var attributed: AttributedString {
+        var result = AttributedString(text)
+        if progress.text == text, let spoken = progress.range,
+           let range = Range<AttributedString.Index>(spoken, in: result) {
+            result[range].backgroundColor = Color(red: 1, green: 0.9, blue: 0.4)
+            result[range].foregroundColor = .black
+        }
+        return result
+    }
+    var body: some View {
+        Text(attributed)
     }
 }

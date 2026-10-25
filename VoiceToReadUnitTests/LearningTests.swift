@@ -4,6 +4,44 @@ import AVFoundation
 @testable import VoiceToRead
 
 @MainActor final class LearningTests: XCTestCase {
+    func testSpokenTrainingWordsRespectUTF16AndRejectInvalidRanges() {
+        var progress = TrainingSpokenWordProgress()
+        let token = UUID()
+        let text = "Hola 👋 mundo. 日本語"
+        progress.begin(text: text, token: token)
+        let word = (text as NSString).range(of: "mundo")
+        progress.receive(word, token: token)
+        XCTAssertEqual(progress.range, word)
+        for invalid in [NSRange(location: NSNotFound, length: 1), NSRange(location: -1, length: 2),
+                        NSRange(location: 0, length: 0), NSRange(location: 0, length: Int.max),
+                        NSRange(location: text.utf16.count, length: 1), NSRange(location: 5, length: 1)] {
+            progress.receive(invalid, token: token)
+            XCTAssertEqual(progress.range, word, "Invalid or partial-surrogate ranges cannot change the highlighted word")
+        }
+        let japanese = (text as NSString).range(of: "日本語")
+        progress.receive(japanese, token: token)
+        XCTAssertEqual(progress.range, japanese)
+    }
+
+    func testSpokenTrainingWordTokensIgnoreStoppedAndPreviousExamples() {
+        var progress = TrainingSpokenWordProgress()
+        let first = UUID(), next = UUID()
+        progress.begin(text: "go go", token: first)
+        progress.receive(NSRange(location: 3, length: 2), token: first)
+        XCTAssertEqual(progress.range?.location, 3, "Repeated words must follow the spoken offset")
+        progress.reset()
+        progress.receive(NSRange(location: 0, length: 2), token: first)
+        XCTAssertNil(progress.range)
+        XCTAssertTrue(progress.text.isEmpty)
+        progress.begin(text: "Hola", token: next)
+        progress.receive(NSRange(location: 0, length: 2), token: first)
+        XCTAssertNil(progress.range)
+        progress.receive(NSRange(location: 0, length: 4), token: next)
+        XCTAssertEqual(progress.range?.length, 4)
+        progress.reset()
+        XCTAssertNil(progress.range)
+    }
+
     func testPracticeRecognitionMatchesWordsNotSubstringsOrEmptyAudio() {
         XCTAssertTrue(PracticeRecognition.matches("Hello, WORLD!", target: "hello world"))
         XCTAssertTrue(PracticeRecognition.matches("I’m here.", target: "I'm here"))
