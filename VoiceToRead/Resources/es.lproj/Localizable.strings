@@ -1132,3 +1132,67 @@
 "Translation availability could not be checked. Try selecting the languages again." = "No se pudo comprobar la disponibilidad de traducción. Intenta seleccionar los idiomas de nuevo.";
 
 "This app build does not include the translation engine. Install the latest version from TestFlight or the App Store." = "Esta compilación no incluye el motor de traducción. Instala la versión más reciente desde TestFlight o App Store.";
+
+"Stories" = "Cuentos";
+
+"New story" = "Nuevo cuento";
+
+"No stories yet" = "Todavía no hay cuentos";
+
+"Use + to add a story." = "Pulsa + para agregar un cuento.";
+
+"Choose a story to read and listen. An adult can add stories and review their translations." = "Elige un cuento para leer y escuchar. Un adulto puede agregar cuentos y revisar sus traducciones.";
+
+"Stories stay on this device. No microphone or recording is used." = "Los cuentos se guardan en este dispositivo. No se utiliza el micrófono ni se graba audio.";
+
+"Story library unavailable" = "Biblioteca de cuentos no disponible";
+
+"Opening stories…" = "Abriendo cuentos…";
+
+"Story preparation · for adults" = "Preparar cuento · para adultos";
+
+"Story title" = "Título del cuento";
+
+"Story text" = "Texto del cuento";
+
+"Write the story in the source language, with one paragraph per line. Review the translated story before a child listens." = "Escribe el cuento en el idioma de origen, con un párrafo por línea. Revisa la traducción antes de que un niño la escuche.";
+
+"Edit story" = "Editar cuento";
+
+"Replace this story's translation?" = "¿Reemplazar la traducción de este cuento?";
+
+"Changing the text or languages clears this story's translation and review. Other stories stay unchanged." = "Cambiar el texto o los idiomas elimina la traducción y revisión de este cuento. Los demás cuentos no cambian.";
+
+"The translation needs an adult's review before listening." = "La traducción necesita la revisión de un adulto antes de escucharla.";
+
+"Story options" = "Opciones del cuento";
+
+"Delete story" = "Eliminar cuento";
+
+"Delete this story?" = "¿Eliminar este cuento?";
+
+"This deletes only this story and its translation. Sessions and trainings are kept." = "Solo se elimina este cuento y su traducción. Las sesiones y los entrenamientos se conservan.";
+
+"The current translation and corrections are replaced only after translation succeeds. An adult must review the new version." = "La traducción y las correcciones actuales solo se reemplazan cuando la traducción finaliza correctamente. Un adulto debe revisar la nueva versión.";
+
+"This story is no longer available." = "Este cuento ya no está disponible.";
+
+"Slow reading" = "Lectura lenta";
+
+"Review the meaning and language before a child listens. Save when the translated story is ready." = "Revisa el significado y el idioma antes de que un niño lo escuche. Guarda cuando la traducción del cuento esté lista.";
+
+"Translated paragraph" = "Párrafo traducido";
+
+"Use a title of up to 100 characters and a story of up to 20,000 characters, with different source and translation languages. Each paragraph can have up to 1,000 characters." = "Usa un título de hasta 100 caracteres y un cuento de hasta 20.000 caracteres, con idiomas de origen y traducción diferentes. Cada párrafo admite hasta 1.000 caracteres.";
+
+"This story changed. Reopen it and try again. Your saved story is unchanged." = "Este cuento cambió. Ábrelo de nuevo e inténtalo otra vez. Tu cuento guardado no cambió.";
+
+"The story library could not be opened. Its files have not been replaced or deleted." = "No se pudo abrir la biblioteca de cuentos. Sus archivos no se reemplazaron ni eliminaron.";
+
+"Story audio could not start. Please try again." = "No se pudo iniciar el audio del cuento. Inténtalo de nuevo.";
+
+"Story narration was interrupted. Tap Play to start again." = "La narración del cuento se interrumpió. Pulsa Reproducir para comenzar de nuevo.";
+
+"Discard changes?" = "¿Descartar cambios?";
+
+"Save changes" = "Guardar cambios";

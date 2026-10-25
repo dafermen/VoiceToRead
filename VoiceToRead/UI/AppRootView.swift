@@ -397,24 +397,52 @@ enum HomeDestination: Hashable { case listen, sessions, englishTraining, respons
 @MainActor
 struct CommunicationHomeView: View {
     let coordinator: SessionCoordinator
-    private enum Module: Hashable { case talk, listen, train }
+    private enum Module: Hashable { case talk, listen, train, stories }
     @State private var module: Module = .talk
+    @Environment(\.dynamicTypeSize) private var typeSize
     @State private var fullScreen = false
     @State private var conversation = SpeakTranslateModel()
     private var audioBusy: Bool {
         !conversation.canEdit || coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending
     }
+    private var modulePicker: some View {
+        Picker("What would you like to do?", selection: $module) {
+            Text("Talk").tag(Module.talk)
+            Text("Listen").tag(Module.listen)
+            Text("Train").tag(Module.train)
+            Text("Stories").tag(Module.stories)
+        }.pickerStyle(.segmented).accessibilityIdentifier("communicationMode")
+    }
+    private var moduleGrid: some View {
+        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 6) {
+            moduleButton("Talk", .talk); moduleButton("Listen", .listen)
+            moduleButton("Train", .train); moduleButton("Stories", .stories)
+        }.accessibilityElement(children: .contain).accessibilityIdentifier("communicationModeGrid")
+    }
+    private func moduleButton(_ title: LocalizedStringKey, _ selection: Module) -> some View {
+        Button { module = selection } label: {
+            Text(title).font(.subheadline.weight(.semibold)).multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true).padding(8)
+                .frame(maxWidth: .infinity, minHeight: 44)
+                .background(module == selection ? Color.accentColor.opacity(0.15) : Color.secondary.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+        }.buttonStyle(.plain).accessibilityAddTraits(module == selection ? .isSelected : [])
+    }
     var body: some View {
         VStack(spacing: 0) {
             if !fullScreen {
-                Picker("What would you like to do?", selection: $module) {
-                    Text("Talk").tag(Module.talk)
-                    Text("Listen").tag(Module.listen)
-                    Text("Train").tag(Module.train)
-                }.pickerStyle(.segmented).padding(.horizontal).padding(.vertical, 8)
-                    .disabled(audioBusy).accessibilityIdentifier("communicationMode")
+                Group {
+                    if typeSize.isAccessibilitySize { moduleGrid }
+                    else {
+                        ViewThatFits(in: .horizontal) {
+                            modulePicker.fixedSize(horizontal: true, vertical: false)
+                            moduleGrid
+                        }.frame(maxWidth: .infinity)
+                    }
+                }.padding(.horizontal).padding(.vertical, 8).disabled(audioBusy)
             }
-            if module == .train {
+            if module == .stories {
+                StoryLibraryView()
+            } else if module == .train {
                 EnglishTrainingLibraryView()
             } else if module == .listen {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)

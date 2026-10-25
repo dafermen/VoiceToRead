@@ -3,8 +3,13 @@ import UIKit
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
+    private func communicationMode(in app: XCUIApplication) -> XCUIElement {
+        app.descendants(matching: .any).matching(NSPredicate(format: "identifier == %@ OR identifier == %@", "communicationMode", "communicationModeGrid")).firstMatch
+    }
+
+    @MainActor
     private func trainingEntry(in app: XCUIApplication) -> XCUIElement {
-        let module = app.segmentedControls["communicationMode"].buttons["Train"]
+        let module = communicationMode(in: app).buttons["Train"]
         return module.exists ? module : app.buttons["englishTrainingEntry"]
     }
 
@@ -23,7 +28,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation"]
         app.launch()
-        let mode = app.segmentedControls["communicationMode"]
+        let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
         let conversation = app.buttons["conversationFullScreenButton"]
         XCTAssertTrue(conversation.isHittable)
@@ -56,7 +61,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         app.launch()
-        let mode = app.segmentedControls["communicationMode"]
+        let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
         XCTAssertTrue(mode.buttons["Talk"].exists)
         XCTAssertTrue(mode.buttons["Train"].exists)
@@ -97,6 +102,52 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testStoriesIndependentCreationReviewAndDeleteConfirmation() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-stories"]
+        app.launchEnvironment["STORIES_TEST_ID"] = UUID().uuidString
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        let stories = mode.buttons["Stories"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: stories)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
+        stories.tap()
+        let add = app.buttons["newStory"]
+        XCTAssertTrue(add.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["fullScreenButton"].exists)
+        add.tap()
+        app.textFields["storyTitle"].tap(); app.textFields["storyTitle"].typeText("Our first story")
+        let input = app.textViews["storySourceInput"]
+        input.tap(); input.typeText("Hola.\nGracias.")
+        app.buttons["saveStory"].tap()
+        XCTAssertTrue(app.staticTexts["Our first story"].waitForExistence(timeout: 5))
+        app.staticTexts["Our first story"].tap()
+        let reader = app.textViews["storyReadingText"]
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        XCTAssertTrue((reader.value as? String ?? "").contains("Hola"))
+        app.buttons["storyOptions"].tap(); app.buttons["translateStory"].tap()
+        app.buttons["storyOptions"].tap()
+        let review = app.buttons["reviewStory"]
+        let translated = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: review)
+        XCTAssertEqual(XCTWaiter.wait(for: [translated], timeout: 10), .completed)
+        review.tap()
+        XCTAssertTrue(app.buttons["saveStoryReview"].waitForExistence(timeout: 5))
+        app.buttons["saveStoryReview"].tap()
+        app.buttons["storyReadingLanguage"].tap(); app.buttons["English"].tap()
+        XCTAssertTrue((reader.value as? String ?? "").contains("Test translation"))
+        app.buttons["storyOptions"].tap(); app.buttons["Delete story"].tap()
+        XCTAssertTrue(app.buttons["confirmDeleteStory"].waitForExistence(timeout: 5))
+        app.buttons["Cancel"].tap()
+        XCTAssertTrue(reader.exists)
+        app.buttons["storyOptions"].tap(); app.buttons["Delete story"].tap()
+        app.buttons["confirmDeleteStory"].tap()
+        XCTAssertTrue(add.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.staticTexts["Our first story"].exists)
+        XCTAssertTrue(app.staticTexts["Los tres cerditos"].exists)
+    }
+
+    @MainActor
     func testCommunicationHomeTablet() throws {
         guard UIDevice.current.userInterfaceIdiom == .pad else { throw XCTSkip("Tablet layout") }
         let app = XCUIApplication()
@@ -104,7 +155,7 @@ final class HomeScreenTests: XCTestCase {
         XCUIDevice.shared.orientation = .landscapeLeft
         defer { XCUIDevice.shared.orientation = .portrait }
         app.launch()
-        let mode = app.segmentedControls["communicationMode"]
+        let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
         XCTAssertTrue(app.buttons["conversationSpanishTurn"].isHittable)
         XCTAssertTrue(app.buttons["conversationEnglishTurn"].isHittable)
@@ -121,7 +172,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         app.launch()
-        let mode = app.segmentedControls["communicationMode"]
+        let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
         mode.buttons["Listen"].tap()
         let capture = app.buttons["primaryCaptionAction"]
@@ -151,14 +202,14 @@ final class HomeScreenTests: XCTestCase {
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         XCUIDevice.shared.orientation = .portrait
         app.launch()
-        XCTAssertTrue(app.segmentedControls["communicationMode"].waitForExistence(timeout: 20))
+        XCTAssertTrue(communicationMode(in: app).waitForExistence(timeout: 20))
         XCTAssertFalse(app.buttons["speakTranslateEntry"].exists)
         XCTAssertEqual(app.buttons["conversationSpanishTurn"].label, "Hablar en español")
         XCTAssertTrue(app.buttons["conversationEnglishTurn"].isHittable)
         let home = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); home.name = "Communication-home"; home.lifetime = .keepAlways; add(home)
         app.buttons["conversationEnglishTurn"].tap()
         XCTAssertTrue(app.staticTexts["Listening"].waitForExistence(timeout: 8))
-        XCTAssertFalse(app.segmentedControls["communicationMode"].buttons["Listen"].isEnabled)
+        XCTAssertFalse(communicationMode(in: app).buttons["Listen"].isEnabled)
         app.buttons["conversationEnglishTurn"].tap()
         playConversationTranslation(app, timeout: 8)
         app.buttons["conversationTranslationPlayback"].tap()
@@ -187,7 +238,7 @@ final class HomeScreenTests: XCTestCase {
         // The review fixture writes the obsolete translation preference as false.
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         app.launch()
-        let mode = app.segmentedControls["communicationMode"]
+        let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
         XCTAssertFalse(app.switches["conversationTranslationToggle"].exists)
         XCTAssertTrue(app.buttons["conversationSecondLanguage"].exists)
@@ -251,7 +302,7 @@ final class HomeScreenTests: XCTestCase {
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-interfaceLanguage", "es", "-appearance", "dark", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
         XCUIDevice.shared.orientation = .portrait
         app.launch()
-        XCTAssertTrue(app.segmentedControls["communicationMode"].waitForExistence(timeout: 20))
+        XCTAssertTrue(communicationMode(in: app).waitForExistence(timeout: 20))
         for id in ["conversationSpanishTurn", "conversationEnglishTurn"] {
             let button = app.buttons[id]
             if !button.isHittable { app.swipeUp() }
@@ -410,7 +461,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.buttons["conversationWriteReply"].isHittable)
         XCTAssertTrue(app.buttons["newConversationButton"].isHittable)
         XCTAssertTrue(trainingEntry(in: app).isHittable)
-        XCTAssertFalse(app.segmentedControls["communicationMode"].exists)
+        XCTAssertFalse(communicationMode(in: app).exists)
         XCTAssertTrue(app.buttons["conversationSpanishTurn"].exists)
         XCTAssertTrue(app.buttons["conversationEnglishTurn"].exists)
         app.buttons["conversationOptions"].tap()

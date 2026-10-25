@@ -1132,3 +1132,67 @@
 "Translation availability could not be checked. Try selecting the languages again." = "Translation availability could not be checked. Try selecting the languages again.";
 
 "This app build does not include the translation engine. Install the latest version from TestFlight or the App Store." = "This app build does not include the translation engine. Install the latest version from TestFlight or the App Store.";
+
+"Stories" = "Stories";
+
+"New story" = "New story";
+
+"No stories yet" = "No stories yet";
+
+"Use + to add a story." = "Use + to add a story.";
+
+"Choose a story to read and listen. An adult can add stories and review their translations." = "Choose a story to read and listen. An adult can add stories and review their translations.";
+
+"Stories stay on this device. No microphone or recording is used." = "Stories stay on this device. No microphone or recording is used.";
+
+"Story library unavailable" = "Story library unavailable";
+
+"Opening stories…" = "Opening stories…";
+
+"Story preparation · for adults" = "Story preparation · for adults";
+
+"Story title" = "Story title";
+
+"Story text" = "Story text";
+
+"Write the story in the source language, with one paragraph per line. Review the translated story before a child listens." = "Write the story in the source language, with one paragraph per line. Review the translated story before a child listens.";
+
+"Edit story" = "Edit story";
+
+"Replace this story's translation?" = "Replace this story's translation?";
+
+"Changing the text or languages clears this story's translation and review. Other stories stay unchanged." = "Changing the text or languages clears this story's translation and review. Other stories stay unchanged.";
+
+"The translation needs an adult's review before listening." = "The translation needs an adult's review before listening.";
+
+"Story options" = "Story options";
+
+"Delete story" = "Delete story";
+
+"Delete this story?" = "Delete this story?";
+
+"This deletes only this story and its translation. Sessions and trainings are kept." = "This deletes only this story and its translation. Sessions and trainings are kept.";
+
+"The current translation and corrections are replaced only after translation succeeds. An adult must review the new version." = "The current translation and corrections are replaced only after translation succeeds. An adult must review the new version.";
+
+"This story is no longer available." = "This story is no longer available.";
+
+"Slow reading" = "Slow reading";
+
+"Review the meaning and language before a child listens. Save when the translated story is ready." = "Review the meaning and language before a child listens. Save when the translated story is ready.";
+
+"Translated paragraph" = "Translated paragraph";
+
+"Use a title of up to 100 characters and a story of up to 20,000 characters, with different source and translation languages. Each paragraph can have up to 1,000 characters." = "Use a title of up to 100 characters and a story of up to 20,000 characters, with different source and translation languages. Each paragraph can have up to 1,000 characters.";
+
+"This story changed. Reopen it and try again. Your saved story is unchanged." = "This story changed. Reopen it and try again. Your saved story is unchanged.";
+
+"The story library could not be opened. Its files have not been replaced or deleted." = "The story library could not be opened. Its files have not been replaced or deleted.";
+
+"Story audio could not start. Please try again." = "Story audio could not start. Please try again.";
+
+"Story narration was interrupted. Tap Play to start again." = "Story narration was interrupted. Tap Play to start again.";
+
+"Discard changes?" = "Discard changes?";
+
+"Save changes" = "Save changes";
