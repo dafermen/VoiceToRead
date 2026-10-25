@@ -7,8 +7,8 @@ final class StoryTests: XCTestCase {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = try StoryStore(directory: directory)
-        XCTAssertEqual(store.stories.count, 1)
-        XCTAssertEqual(store.stories.first?.title, "Los tres cerditos")
+        XCTAssertEqual(store.stories.count, 11)
+        XCTAssertEqual(store.stories.first?.title, "Caperucita Roja")
         XCTAssertFalse(try XCTUnwrap(store.stories.first).translatedReady)
         let sibling = directory.appendingPathComponent("trainings.json")
         try Data("existing training".utf8).write(to: sibling)
@@ -17,7 +17,49 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(try StoryStore(directory: directory).stories, store.stories)
         try store.delete(story)
         XCTAssertEqual(try Data(contentsOf: sibling), Data("existing training".utf8))
-        XCTAssertEqual(try StoryStore(directory: directory).stories.count, 1)
+        XCTAssertEqual(try StoryStore(directory: directory).stories.count, 11)
+    }
+
+    func testCatalogIsValidAndDeletedExamplesStayDeleted() throws {
+        XCTAssertEqual(StoryExampleCatalog.entries.count, 11)
+        XCTAssertEqual(Set(StoryExampleCatalog.entries.map(\.id)).count, 11)
+        for entry in StoryExampleCatalog.entries {
+            let story = try entry.document()
+            XCTAssertTrue(story.valid)
+            XCTAssertEqual(story.id, entry.id)
+            XCTAssertGreaterThan(story.paragraphs.count, 10)
+        }
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try StoryStore(directory: directory)
+        let deleted = try XCTUnwrap(store.stories.first)
+        try store.delete(deleted)
+        let reopened = try StoryStore(directory: directory)
+        XCTAssertEqual(reopened.stories.count, 10)
+        XCTAssertNil(reopened.story(deleted.id))
+    }
+
+    func testOldLibraryKeepsCorrectedStoriesAndAddsCatalogOnlyOnce() throws {
+        struct OldArchive: Codable { var version = 1; var stories: [StoryDocument] }
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        var pigs = try StoryDocument.edited(title: "Los tres cerditos", text: "Mi versión corregida.", source: .spanish, target: .english)
+        let translated = pigs.paragraphs.map { ReviewParagraph(id: $0.id, text: "My corrected version.") }
+        var snapshot = TranslationSnapshot(source: pigs.paragraphs, generated: translated)
+        snapshot.sourceLocale = CaptureLanguage.spanish.rawValue
+        snapshot.targetLocale = CaptureLanguage.english.rawValue
+        pigs.translation = snapshot; pigs.translationReviewed = true
+        let custom = try StoryDocument.edited(title: "Mi cuento", text: "Un texto propio.", source: .spanish, target: .french)
+        let file = directory.appendingPathComponent("stories.json")
+        try JSONEncoder().encode(OldArchive(stories: [pigs, custom])).write(to: file)
+        let store = try StoryStore(directory: directory)
+        XCTAssertEqual(store.stories.count, 12)
+        XCTAssertEqual(store.story(pigs.id), pigs)
+        XCTAssertEqual(store.story(custom.id), custom)
+        XCTAssertTrue(try XCTUnwrap(store.story(pigs.id)).translatedReady)
+        XCTAssertEqual(store.stories.filter { $0.title == pigs.title }.count, 1)
+        XCTAssertEqual(try StoryStore(directory: directory).stories, store.stories)
     }
 
     func testTranslationNeedsReviewAndSourceChangesInvalidateOnlyThisStory() throws {

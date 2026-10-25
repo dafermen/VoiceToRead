@@ -11,3 +11,22 @@ Preparación para adultos: traducción Apple existente y revisión editable por 
 La voz se detiene y limpia resaltado al salir, cambiar texto/idioma, entrar en segundo plano o recibir interrupciones de audio. Se rechazan callbacks tardíos. Se preservan pausas, selección manual y voces de los otros módulos.
 
 Verificación: pruebas XCTest de almacenamiento independiente, archivo corrupto, traducciones incompletas/obsoletas, revisión, pausa y callbacks tardíos; recorrido UI de creación/traducción/revisión/borrado. En Windows no se ejecutan XCTest ni la narración real: pasar compilación Xcode Cloud y probar en iPhone/iPad, incluyendo párrafos largos, idiomas asiáticos, auriculares y Dynamic Type. Archive correcto no acredita disponibilidad TestFlight ni lectura física validada.
+
+
+## Included catalog update
+
+The library includes eleven Spanish beginner texts: Caperucita Roja, Rapunzel,
+Los tres cerditos, El patito feo, Pinocho, Blancanieves, Cenicienta,
+Hansel y Gretel, El gato con botas, El flautista de Hamelín, and
+El principito · Resumen breve. These are short original retellings; the last
+entry is only an original brief summary, not the book. Default translation is
+English; the existing language selection and adult translation review remain.
+Stories are listed alphabetically.
+
+Stable catalog IDs and optional installation markers extend the version-1
+archive compatibly. Existing matching titles/aliases are kept byte-for-byte as
+documents, including corrected translations and IDs. Missing examples are added
+once; deleting an installed example does not restore it on reopening. Custom
+stories, training archives and sessions are untouched. XCTest coverage includes
+old-archive migration, corrections, repeated opening and deletion persistence.
+XCTest/audio interaction require Xcode and an iPhone; not executed on Windows.

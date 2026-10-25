@@ -121,6 +121,7 @@ final class HomeScreenTests: XCTestCase {
         let input = app.textViews["storySourceInput"]
         input.tap(); input.typeText("Hola.\nGracias.")
         app.buttons["saveStory"].tap()
+        for _ in 0..<6 where !app.staticTexts["Our first story"].isHittable { app.swipeUp() }
         XCTAssertTrue(app.staticTexts["Our first story"].waitForExistence(timeout: 5))
         app.staticTexts["Our first story"].tap()
         let reader = app.textViews["storyReadingText"]
@@ -144,7 +145,8 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["confirmDeleteStory"].tap()
         XCTAssertTrue(add.waitForExistence(timeout: 5))
         XCTAssertFalse(app.staticTexts["Our first story"].exists)
-        XCTAssertTrue(app.staticTexts["Los tres cerditos"].exists)
+        for _ in 0..<6 where !app.staticTexts["Blancanieves"].isHittable { app.swipeDown() }
+        XCTAssertTrue(app.staticTexts["Blancanieves"].exists)
     }
 
     @MainActor

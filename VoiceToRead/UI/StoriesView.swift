@@ -19,7 +19,7 @@ struct StoryLibraryView: View {
                     if store.stories.isEmpty {
                         ContentUnavailableView("No stories yet", systemImage: "book.closed", description: Text("Use + to add a story."))
                     }
-                    ForEach(store.stories.sorted { $0.updatedAt > $1.updatedAt }) { story in
+                    ForEach(store.stories.sorted { $0.title.localizedStandardCompare($1.title) == .orderedAscending }) { story in
                         NavigationLink { StoryReaderView(store: store, storyID: story.id) } label: {
                             VStack(alignment: .leading, spacing: 6) {
                                 Text(verbatim: story.title).font(.headline)
