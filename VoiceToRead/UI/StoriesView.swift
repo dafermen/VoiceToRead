@@ -152,7 +152,7 @@ private struct StoryReaderView: View {
     @State private var narrator = StoryNarrator()
     @State private var translationTarget: CaptureLanguage?
     @State private var translated = false
-    @State private var slow = false
+    @State private var slow = true
     @State private var editing = false
     @State private var reviewing = false
     @State private var options = false
@@ -167,17 +167,26 @@ private struct StoryReaderView: View {
         Group {
             if let story {
                 VStack(spacing: 0) {
-                    LanguagePickerControl(title: "Reading language", selection: Binding(
-                        get: { translated && story.translatedReady ? story.targetLanguage : story.sourceLanguage },
-                        set: { narrator.stop(); translated = $0 == story.targetLanguage && story.translatedReady }),
-                        choices: story.translatedReady ? [story.sourceLanguage, story.targetLanguage] : [story.sourceLanguage], showRole: true)
-                        .padding().accessibilityIdentifier("storyReadingLanguage")
-                    LanguagePickerControl(title: "Translate to", selection: Binding(
-                        get: { translationTarget ?? story.targetLanguage },
-                        set: { narrator.stop(); translated = false; translationTarget = $0 }),
-                        choices: CaptureLanguage.allCases.filter { $0 != story.sourceLanguage }, showRole: true)
-                        .disabled(job != nil).padding(.horizontal).padding(.bottom, 8)
-                        .accessibilityIdentifier("storyTranslationTarget")
+                    CommunicationLanguagePair(symbol: "arrow.right") {
+                        LanguagePickerControl(title: "Original language", selection: .constant(story.sourceLanguage),
+                            choices: [story.sourceLanguage], showRole: true, stackedRole: true)
+                            .disabled(true).accessibilityIdentifier("storyOriginalLanguage")
+                    } right: {
+                        LanguagePickerControl(title: "Translate to", selection: Binding(
+                            get: { translationTarget ?? story.targetLanguage },
+                            set: { narrator.stop(); translated = false; translationTarget = $0 }),
+                            choices: CaptureLanguage.allCases.filter { $0 != story.sourceLanguage },
+                            showRole: true, stackedRole: true)
+                            .disabled(job != nil).accessibilityIdentifier("storyTranslationTarget")
+                    }.padding(.horizontal).padding(.top, 8).padding(.bottom, 8)
+                    if story.translatedReady {
+                        Picker("Reading language", selection: $translated) {
+                            Text("Original").tag(false)
+                            Text("Translation").tag(true)
+                        }.pickerStyle(.segmented).disabled(job != nil)
+                            .padding(.horizontal).padding(.bottom, 8)
+                            .accessibilityIdentifier("storyReadingVersion")
+                    }
                     preparation(story)
                     if let message = failure ?? narrator.message {
                         Text(LocalizedStringKey(message)).font(.caption).foregroundStyle(.secondary).padding(.horizontal)
@@ -286,6 +295,7 @@ private struct StoryReaderView: View {
     private func controls(_ story: StoryDocument) -> some View {
         VStack(spacing: 8) {
             Toggle("Slow reading", isOn: $slow).disabled(narrator.state != .idle).font(.subheadline)
+                .accessibilityIdentifier("storySlowReading")
             (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 8)) : AnyLayout(HStackLayout(spacing: 12))) {
                 Button {
                     if narrator.state == .idle {

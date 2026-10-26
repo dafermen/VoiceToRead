@@ -57,3 +57,17 @@ then require a fresh review and approval. Original narration stays available
 before preparation; the existing translation-in-progress busy guard is unchanged.
 Focused XCTest coverage checks failed/successful target replacement and persistence;
 UI coverage checks the destination selector. Tests require Xcode (not run on Windows).
+
+
+## Reader header alignment and slow default
+
+Stories reuse CommunicationLanguagePair and stacked LanguagePickerControl roles
+for Original language → Translate to, including the existing accessibility-size
+stacked layout. The original is fixed in this reader; Edit story retains source
+editing and its reset confirmation. An approved translation exposes a compact
+Original / Translation selector for reading and listening. No translation or
+approval requirement is bypassed. Slow reading starts enabled whenever a reader
+opens and remains adjustable while idle. Storage and other modules are unchanged.
+The UI workflow covers the initial slow toggle, language alignment, absence of
+the version selector before approval and switching both reading versions.
+XCTest requires Xcode and was not run on Windows.
