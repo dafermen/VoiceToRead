@@ -113,7 +113,7 @@ private struct StorySourceEditor: View {
                     Button("Save") {
                         do {
                             let result = try StoryDocument.edited(title: title, text: text, source: source, target: target, previous: previous)
-                            if let previous, previous.translation != nil, result.translation == nil { confirmingReset = true }
+                            if let previous, previous.hasTranslations, !result.hasTranslations { confirmingReset = true }
                             else { save(result) }
                         } catch { failure = error.localizedDescription }
                     }.disabled(title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || source == target)
@@ -128,7 +128,7 @@ private struct StorySourceEditor: View {
                     catch { failure = error.localizedDescription }
                 }
                 Button("Cancel", role: .cancel) { }
-            } message: { Text("Changing the text or languages clears this story's translation and review. Other stories stay unchanged.") }
+            } message: { Text("Changing the original text or its language clears all translations and approvals for this story. Other stories stay unchanged.") }
             .confirmationDialog("Discard changes?", isPresented: $confirmingDiscard, titleVisibility: .visible) {
                 Button("Discard", role: .destructive) { dismiss() }
                 Button("Cancel", role: .cancel) { }
@@ -150,7 +150,6 @@ private struct StoryReaderView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dynamicTypeSize) private var typeSize
     @State private var narrator = StoryNarrator()
-    @State private var translationTarget: CaptureLanguage?
     @State private var translated = false
     @State private var slow = true
     @State private var editing = false
@@ -173,8 +172,12 @@ private struct StoryReaderView: View {
                             .disabled(true).accessibilityIdentifier("storyOriginalLanguage")
                     } right: {
                         LanguagePickerControl(title: "Translate to", selection: Binding(
-                            get: { translationTarget ?? story.targetLanguage },
-                            set: { narrator.stop(); translated = false; translationTarget = $0 }),
+                            get: { story.targetLanguage },
+                            set: { target in
+                                narrator.stop(); translated = false
+                                do { try store.selectTarget(story, target: target) }
+                                catch { failure = error.localizedDescription }
+                            }),
                             choices: CaptureLanguage.allCases.filter { $0 != story.sourceLanguage },
                             showRole: true, stackedRole: true)
                             .disabled(job != nil).accessibilityIdentifier("storyTranslationTarget")
@@ -230,14 +233,14 @@ private struct StoryReaderView: View {
                 .confirmationDialog("Translate all phrases again?", isPresented: $confirmingTranslation, titleVisibility: .visible) {
                     Button("Replace translations", role: .destructive) { translate(story) }
                     Button("Cancel", role: .cancel) { }
-                } message: { Text("The current translation and corrections are replaced only after translation succeeds. An adult must review the new version.") }
+                } message: { Text("Only the selected language's translation and corrections are replaced after translation succeeds. Other languages are kept. An adult must review the new version.") }
                 .confirmationDialog("Delete this story?", isPresented: $confirmingDelete, titleVisibility: .visible) {
                     Button("Delete story", role: .destructive) {
                         do { try store.delete(story); dismiss() } catch { failure = error.localizedDescription }
                     }.accessibilityIdentifier("confirmDeleteStory")
                     Button("Cancel", role: .cancel) { }
                 } message: { Text("This deletes only this story and its translation. Sessions and trainings are kept.") }
-                .onChange(of: story) { _, _ in narrator.stop(); translationTarget = nil; if !story.translatedReady { translated = false } }
+                .onChange(of: story) { _, _ in narrator.stop(); if !story.translatedReady { translated = false } }
             } else { Text("This story is no longer available.") }
         }
         .onChange(of: translated) { _, _ in narrator.stop() }
@@ -266,7 +269,7 @@ private struct StoryReaderView: View {
                     Button("Cancel translation") { self.job = nil; snapshot = nil }
                         .frame(minHeight: 44).accessibilityIdentifier("storyCancelTranslation")
                 }
-            } else if story.translation == nil || (translationTarget ?? story.targetLanguage) != story.targetLanguage {
+            } else if story.translation == nil {
                 Text("Choose the language you want to translate the story into, then press Translate.")
                     .accessibilityIdentifier("storyPreparationStatus")
                 Button("Translate", systemImage: "character.bubble") { requestTranslation(story) }
@@ -317,7 +320,7 @@ private struct StoryReaderView: View {
     }
     private func translate(_ story: StoryDocument) {
         guard TranslationJob.supported, job == nil else { return }
-        let target = translationTarget ?? story.targetLanguage
+        let target = story.targetLanguage
         guard target != story.sourceLanguage else { return }
         failure = nil; progress = 0; snapshot = story
         job = TranslationJob(plan: IncrementalTranslation(source: story.paragraphs, previous: nil,

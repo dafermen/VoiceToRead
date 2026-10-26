@@ -1214,3 +1214,7 @@
 "Review and approve" = "Revisar y aprobar";
 
 "Original language" = "Idioma original";
+
+"Changing the original text or its language clears all translations and approvals for this story. Other stories stay unchanged." = "Cambiar el texto original o su idioma elimina todas las traducciones y aprobaciones de este cuento. Los demás cuentos no cambian.";
+
+"Only the selected language's translation and corrections are replaced after translation succeeds. Other languages are kept. An adult must review the new version." = "Solo se reemplazan la traducción y las correcciones del idioma seleccionado cuando termina la traducción. Los demás idiomas se conservan. Un adulto debe revisar la nueva versión.";

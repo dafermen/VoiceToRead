@@ -116,6 +116,52 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(try StoryStore(directory: directory).story(original.id), replacement)
     }
 
+    func testTranslationsSurviveSwitchingReopeningAndSingleLanguageReplacement() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try StoryStore(directory: directory)
+        let original = try StoryDocument.edited(title: "Multilingual", text: "Hola", source: .spanish, target: .english)
+        try store.save(original)
+        let id = original.id, paragraphID = original.paragraphs[0].id
+        try store.acceptTranslation(original, responses: [ReviewParagraph(id: paragraphID, text: "Hello")])
+        try store.review(XCTUnwrap(store.story(id)), corrections: [paragraphID: "Hello, friend!"])
+        let english = try XCTUnwrap(store.story(id))
+        // Legacy archives contain only the active translation, without a cache field.
+        let encoded = try JSONEncoder().encode(english)
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: encoded) as? [String: Any])
+        json.removeValue(forKey: "savedTranslations")
+        let legacy = try JSONDecoder().decode(StoryDocument.self, from: JSONSerialization.data(withJSONObject: json))
+        XCTAssertEqual(legacy.translation, english.translation)
+        try store.save(legacy, replacing: english)
+        try store.selectTarget(legacy, target: .french)
+        let pendingFrench = try XCTUnwrap(store.story(id))
+        XCTAssertNil(pendingFrench.translation)
+        XCTAssertFalse(pendingFrench.translatedReady)
+        try store.acceptTranslation(pendingFrench, responses: [ReviewParagraph(id: paragraphID, text: "Bonjour")])
+        let french = try XCTUnwrap(store.story(id))
+        XCTAssertFalse(french.translatedReady)
+        try store.selectTarget(french, target: .english)
+        let restored = try XCTUnwrap(store.story(id))
+        XCTAssertTrue(restored.translatedReady)
+        XCTAssertEqual(restored.translation, english.translation)
+        XCTAssertEqual(restored.translatedText, "Hello, friend!")
+        let reopened = try StoryStore(directory: directory)
+        try reopened.selectTarget(XCTUnwrap(reopened.story(id)), target: .french)
+        XCTAssertEqual(reopened.story(id)?.translation, french.translation)
+        XCTAssertFalse(try XCTUnwrap(reopened.story(id)).translatedReady)
+        try reopened.acceptTranslation(XCTUnwrap(reopened.story(id)), responses: [ReviewParagraph(id: paragraphID, text: "Salut")])
+        try reopened.selectTarget(XCTUnwrap(reopened.story(id)), target: .english)
+        let kept = try XCTUnwrap(reopened.story(id))
+        XCTAssertEqual(kept.translation, english.translation)
+        XCTAssertTrue(kept.translatedReady)
+        let renamed = try StoryDocument.edited(title: "Renamed", text: kept.sourceText, source: .spanish, target: .french, previous: kept)
+        XCTAssertEqual(renamed.translatedText, "Salut")
+        XCTAssertTrue(renamed.hasTranslations)
+        let edited = try StoryDocument.edited(title: kept.title, text: "Otro texto", source: .spanish, target: .english, previous: kept)
+        XCTAssertFalse(edited.hasTranslations)
+        XCTAssertNil(edited.savedTranslations)
+    }
+
     func testCorruptStoryArchiveIsPreservedAndInvalidInputCannotBeSaved() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }

@@ -1,6 +1,11 @@
 import Foundation
 import Observation
 
+struct SavedStoryTranslation: Codable, Equatable {
+    var snapshot: TranslationSnapshot
+    var reviewed: Bool
+}
+
 struct StoryDocument: Identifiable, Codable, Equatable {
     var id = UUID()
     var title: String
@@ -9,6 +14,24 @@ struct StoryDocument: Identifiable, Codable, Equatable {
     var paragraphs: [ReviewParagraph]
     var translation: TranslationSnapshot?
     var translationReviewed = false
+    // Optional so archives written before multilingual storage still decode unchanged.
+    var savedTranslations: [String: SavedStoryTranslation]? = nil
+    var hasTranslations: Bool { translation != nil || !(savedTranslations ?? [:]).isEmpty }
+    mutating func rememberTranslation() {
+        if let translation {
+            var saved = savedTranslations ?? [:]
+            saved[targetLanguage.rawValue] = SavedStoryTranslation(snapshot: translation, reviewed: translationReviewed)
+            savedTranslations = saved
+        }
+    }
+    mutating func selectTarget(_ target: CaptureLanguage) {
+        guard target != targetLanguage else { return }
+        rememberTranslation()
+        targetLanguage = target
+        let saved = savedTranslations?[target.rawValue]
+        translation = saved?.snapshot
+        translationReviewed = saved?.reviewed ?? false
+    }
     var updatedAt = Date()
     var sourceText: String { paragraphs.map(\.text).joined(separator: "\n\n") }
     var translatedText: String { translation?.translated.map(\.text).joined(separator: "\n\n") ?? "" }
@@ -24,17 +47,25 @@ struct StoryDocument: Identifiable, Codable, Equatable {
                   translation.translated.allSatisfy({ $0.text.count <= 2_000 }) else { return false }
             do { try translation.validate() } catch { return false }
         } else if translationReviewed { return false }
+        for (locale, saved) in savedTranslations ?? [:] {
+            guard let target = CaptureLanguage(rawValue: locale), target != sourceLanguage,
+                  saved.snapshot.language == sourceLanguage, saved.snapshot.target == target,
+                  saved.snapshot.isCurrent(paragraphs),
+                  saved.snapshot.translated.allSatisfy({ $0.text.count <= 2_000 }) else { return false }
+            do { try saved.snapshot.validate() } catch { return false }
+        }
         return true
     }
     static func edited(title: String, text: String, source: CaptureLanguage, target: CaptureLanguage,
                        previous: Self? = nil) throws -> Self {
         let lines = text.components(separatedBy: .newlines).map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
         var result = previous ?? Self(title: title, sourceLanguage: source, targetLanguage: target, paragraphs: [])
-        let changed = previous.map { $0.paragraphs.map(\.text) != lines || $0.sourceLanguage != source || $0.targetLanguage != target } ?? true
+        let changed = previous.map { $0.paragraphs.map(\.text) != lines || $0.sourceLanguage != source } ?? true
         if changed {
             result.paragraphs = lines.map { ReviewParagraph(id: UUID(), text: $0) }
-            result.translation = nil; result.translationReviewed = false
+            result.translation = nil; result.translationReviewed = false; result.savedTranslations = nil
         }
+        if !changed { result.selectTarget(target) }
         result.title = title.trimmingCharacters(in: .whitespacesAndNewlines)
         result.sourceLanguage = source; result.targetLanguage = target; result.updatedAt = Date()
         guard result.valid else { throw StoryFailure.invalid }
@@ -106,10 +137,20 @@ final class StoryStore {
         else { values.append(story) }
         try persist(values); stories = values
     }
+    func selectTarget(_ previous: StoryDocument, target: CaptureLanguage) throws {
+        guard target != previous.sourceLanguage else { throw StoryFailure.invalid }
+        guard story(previous.id) == previous else { throw StoryFailure.changed }
+        guard target != previous.targetLanguage else { return }
+        var result = previous
+        result.selectTarget(target)
+        result.updatedAt = Date()
+        try save(result, replacing: previous)
+    }
     func acceptTranslation(_ previous: StoryDocument, responses: [ReviewParagraph], target: CaptureLanguage? = nil) throws {
         guard story(previous.id) == previous else { throw StoryFailure.changed }
         var result = previous
-        // Keep the saved translation until the replacement has succeeded and validated.
+        // Preserve every other language, including legacy single-translation archives.
+        result.rememberTranslation()
         result.targetLanguage = target ?? previous.targetLanguage
         guard result.targetLanguage != previous.sourceLanguage else { throw StoryFailure.invalid }
         var snapshot = TranslationSnapshot(source: previous.paragraphs, generated: responses)

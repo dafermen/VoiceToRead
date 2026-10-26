@@ -159,6 +159,13 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.buttons["Replace translations"].waitForExistence(timeout: 5))
         app.buttons["Cancel"].tap()
         XCTAssertTrue(app.staticTexts["storyPreparationStatus"].label.contains("All set"))
+        app.buttons["storyTranslationTarget"].tap(); app.buttons["French · Français"].tap()
+        XCTAssertTrue(app.buttons["storyTranslateAction"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["Replace translations"].exists)
+        app.buttons["storyTranslationTarget"].tap(); app.buttons["English"].tap()
+        XCTAssertTrue(app.staticTexts["storyPreparationStatus"].label.contains("All set"))
+        XCTAssertFalse(app.buttons["storyTranslateAction"].exists)
+        XCTAssertFalse(app.buttons["Replace translations"].exists)
         let versions = app.segmentedControls["storyReadingVersion"]
         XCTAssertTrue(versions.waitForExistence(timeout: 5))
         versions.buttons["Translation"].tap()

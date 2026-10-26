@@ -71,3 +71,18 @@ opens and remains adjustable while idle. Storage and other modules are unchanged
 The UI workflow covers the initial slow toggle, language alignment, absence of
 the version selector before approval and switching both reading versions.
 XCTest requires Xcode and was not run on Windows.
+
+
+## Per-language translations
+
+Each story retains translations, manual corrections and approval separately for
+each destination. The optional savedTranslations field preserves compatibility
+with archives containing only the active translation. Switching destinations
+saves the active version and restores the requested version without translation
+or a replacement prompt. New destinations start untranslated. Translate again
+confirms replacement of only the selected destination; other versions survive.
+Source text/language edits retain their confirmation and clear all now-outdated
+translations; title/destination-only edits preserve them. Atomic writes and stale
+snapshot guards remain. Tests cover legacy decoding, switching, corrections,
+approvals, reopening, replacement isolation and source invalidation. XCTest was
+not executed on Windows; localization validation is run locally.
