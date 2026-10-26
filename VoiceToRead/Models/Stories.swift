@@ -106,11 +106,14 @@ final class StoryStore {
         else { values.append(story) }
         try persist(values); stories = values
     }
-    func acceptTranslation(_ previous: StoryDocument, responses: [ReviewParagraph]) throws {
+    func acceptTranslation(_ previous: StoryDocument, responses: [ReviewParagraph], target: CaptureLanguage? = nil) throws {
         guard story(previous.id) == previous else { throw StoryFailure.changed }
         var result = previous
+        // Keep the saved translation until the replacement has succeeded and validated.
+        result.targetLanguage = target ?? previous.targetLanguage
+        guard result.targetLanguage != previous.sourceLanguage else { throw StoryFailure.invalid }
         var snapshot = TranslationSnapshot(source: previous.paragraphs, generated: responses)
-        snapshot.sourceLocale = previous.sourceLanguage.rawValue; snapshot.targetLocale = previous.targetLanguage.rawValue
+        snapshot.sourceLocale = previous.sourceLanguage.rawValue; snapshot.targetLocale = result.targetLanguage.rawValue
         try snapshot.validate()
         result.translation = snapshot; result.translationReviewed = false; result.updatedAt = Date()
         try save(result, replacing: previous)

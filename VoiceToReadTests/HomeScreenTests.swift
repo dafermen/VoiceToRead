@@ -129,7 +129,12 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue((reader.value as? String ?? "").contains("Hola"))
         XCTAssertTrue(app.buttons["storyPlay"].isEnabled, "The original remains available before translation")
         XCTAssertTrue(app.buttons["storyTranslateAction"].isHittable)
-        XCTAssertTrue(app.staticTexts["storyPreparationStatus"].label.contains("First translate"))
+        XCTAssertTrue(app.buttons["storyTranslationTarget"].isHittable)
+        app.buttons["storyTranslationTarget"].tap()
+        XCTAssertTrue(app.buttons["French · Français"].exists)
+        XCTAssertTrue(app.buttons["Japanese · 日本語"].exists)
+        app.buttons["English"].tap()
+        XCTAssertTrue(app.staticTexts["storyPreparationStatus"].label.contains("Choose the language"))
         app.buttons["storyTranslateAction"].tap()
         let review = app.buttons["storyReviewAction"]
         XCTAssertTrue(review.waitForExistence(timeout: 10))

@@ -44,3 +44,16 @@ replacement confirmation. Editing, deletion and discard confirmations remain.
 The existing UI workflow test covers these visible steps, original playback
 availability and cancellation of translation replacement. XCTest requires Xcode;
 it has not been executed locally on Windows.
+
+
+## Visible destination language
+
+Reading language and Translate to are separate controls. Translate to offers
+all current app languages except the story's source language. Selecting a new
+destination changes only the pending request: saved translations/corrections
+survive cancellation and failure. Replacement requires the existing confirmation.
+The completed translation and its destination are validated and saved atomically,
+then require a fresh review and approval. Original narration stays available
+before preparation; the existing translation-in-progress busy guard is unchanged.
+Focused XCTest coverage checks failed/successful target replacement and persistence;
+UI coverage checks the destination selector. Tests require Xcode (not run on Windows).

@@ -90,6 +90,32 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(store.story(story.id), edited)
     }
 
+    func testTargetReplacementIsAtomicAndNeedsNewApproval() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try StoryStore(directory: directory)
+        let original = try StoryDocument.edited(title: "Target change", text: "Hola", source: .spanish, target: .english)
+        try store.save(original)
+        let english = original.paragraphs.map { ReviewParagraph(id: $0.id, text: "Hello") }
+        try store.acceptTranslation(original, responses: english)
+        let generated = try XCTUnwrap(store.story(original.id))
+        try store.review(generated, corrections: [original.paragraphs[0].id: "Hello!"])
+        let approved = try XCTUnwrap(store.story(original.id))
+        XCTAssertThrowsError(try store.acceptTranslation(approved, responses: [], target: .french))
+        XCTAssertEqual(store.story(original.id), approved)
+        XCTAssertThrowsError(try store.acceptTranslation(approved, responses: english, target: .spanish))
+        XCTAssertEqual(try StoryStore(directory: directory).story(original.id), approved)
+        let french = original.paragraphs.map { ReviewParagraph(id: $0.id, text: "Bonjour") }
+        try store.acceptTranslation(approved, responses: french, target: .french)
+        let replacement = try XCTUnwrap(store.story(original.id))
+        XCTAssertEqual(replacement.sourceText, original.sourceText)
+        XCTAssertEqual(replacement.targetLanguage, .french)
+        XCTAssertEqual(replacement.translation?.target, .french)
+        XCTAssertFalse(replacement.translatedReady)
+        XCTAssertEqual(replacement.translatedText, "Bonjour")
+        XCTAssertEqual(try StoryStore(directory: directory).story(original.id), replacement)
+    }
+
     func testCorruptStoryArchiveIsPreservedAndInvalidInputCannotBeSaved() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
