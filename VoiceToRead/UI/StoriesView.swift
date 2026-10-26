@@ -171,16 +171,7 @@ private struct StoryReaderView: View {
                         set: { narrator.stop(); translated = $0 == story.targetLanguage && story.translatedReady }),
                         choices: story.translatedReady ? [story.sourceLanguage, story.targetLanguage] : [story.sourceLanguage], showRole: true)
                         .padding().accessibilityIdentifier("storyReadingLanguage")
-                    if !story.translatedReady {
-                        Text("The translation needs an adult's review before listening.")
-                            .font(.caption).foregroundStyle(.secondary).padding(.horizontal).padding(.bottom, 8)
-                    }
-                    if let job {
-                        HStack {
-                            ProgressView(value: Double(progress), total: Double(max(1, job.source.count)))
-                            Button("Cancel translation") { self.job = nil; snapshot = nil }
-                        }.padding(.horizontal)
-                    }
+                    preparation(story)
                     if let message = failure ?? narrator.message {
                         Text(LocalizedStringKey(message)).font(.caption).foregroundStyle(.secondary).padding(.horizontal)
                     }
@@ -199,9 +190,8 @@ private struct StoryReaderView: View {
                         Menu {
                             Button("Edit story", systemImage: "pencil") { narrator.stop(); editing = true }
                                 .disabled(job != nil).accessibilityIdentifier("editStory")
-                            Button("Prepare translations", systemImage: "character.bubble") {
-                                narrator.stop()
-                                if story.translation != nil { confirmingTranslation = true } else { translate(story) }
+                            Button(uiKey(story.translation == nil ? "Translate" : "Translate again"), systemImage: "character.bubble") {
+                                requestTranslation(story)
                             }.disabled(job != nil || !TranslationJob.supported).accessibilityIdentifier("translateStory")
                             Button("Review translations", systemImage: "text.badge.checkmark") { narrator.stop(); reviewing = true }
                                 .disabled(job != nil || story.translation == nil).accessibilityIdentifier("reviewStory")
@@ -249,6 +239,43 @@ private struct StoryReaderView: View {
             }
         }
     }
+    /// Keep the next preparation step visible without hiding the original narration.
+    private func preparation(_ story: StoryDocument) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            if let job {
+                Text("Translating the story…")
+                    .accessibilityIdentifier("storyPreparationStatus")
+                HStack {
+                    ProgressView(value: Double(progress), total: Double(max(1, job.source.count)))
+                    Button("Cancel translation") { self.job = nil; snapshot = nil }
+                        .frame(minHeight: 44).accessibilityIdentifier("storyCancelTranslation")
+                }
+            } else if story.translation == nil {
+                Text(String(format: NSLocalizedString("First translate the story to %@ to listen in that language.", comment: "Story preparation, target language"), story.targetLanguage.pickerLabel))
+                    .accessibilityIdentifier("storyPreparationStatus")
+                Button("Translate", systemImage: "character.bubble") { requestTranslation(story) }
+                    .buttonStyle(.bordered).controlSize(.small).frame(minHeight: 44)
+                    .disabled(!TranslationJob.supported).accessibilityIdentifier("storyTranslateAction")
+            } else if !story.translatedReady {
+                Text("Translation ready. An adult must review and approve it before listening.")
+                    .accessibilityIdentifier("storyPreparationStatus")
+                Button("Review", systemImage: "text.badge.checkmark") { narrator.stop(); reviewing = true }
+                    .buttonStyle(.bordered).controlSize(.small).frame(minHeight: 44)
+                    .accessibilityIdentifier("storyReviewAction")
+            } else {
+                Text("All set. Select the reading language and press Play.")
+                    .accessibilityIdentifier("storyPreparationStatus")
+            }
+        }
+        .font(.caption).foregroundStyle(.secondary)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal).padding(.bottom, 8)
+    }
+    private func requestTranslation(_ story: StoryDocument) {
+        narrator.stop()
+        if story.translation != nil { confirmingTranslation = true } else { translate(story) }
+    }
+
     private func controls(_ story: StoryDocument) -> some View {
         VStack(spacing: 8) {
             Toggle("Slow reading", isOn: $slow).disabled(narrator.state != .idle).font(.subheadline)
@@ -310,7 +337,7 @@ private struct StoryTranslationReview: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { if dirty { confirmingDiscard = true } else { dismiss() } } }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") { do { try store.review(story, corrections: values); dismiss() } catch { failure = error.localizedDescription } }
+                    Button("Approve") { do { try store.review(story, corrections: values); dismiss() } catch { failure = error.localizedDescription } }
                         .disabled(story.paragraphs.contains { (values[$0.id] ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty })
                         .accessibilityIdentifier("saveStoryReview")
                 }

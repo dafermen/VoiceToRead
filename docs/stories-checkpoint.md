@@ -30,3 +30,17 @@ once; deleting an installed example does not restore it on reopening. Custom
 stories, training archives and sessions are untouched. XCTest coverage includes
 old-archive migration, corrections, repeated opening and deletion persistence.
 XCTest/audio interaction require Xcode and an iPhone; not executed on Windows.
+
+
+## Visible translation steps
+
+The reader now shows a compact next step under the language selector: Translate
+(with target-language guidance), translating progress and cancellation, Review,
+or ready-to-play guidance. Review explicitly ends with Approve; it calls the same
+existing review save operation. Original playback remains available before
+translation and review, with the existing busy guard during translation.
+The options menu labels repeat translation as Translate again and keeps its
+replacement confirmation. Editing, deletion and discard confirmations remain.
+The existing UI workflow test covers these visible steps, original playback
+availability and cancellation of translation replacement. XCTest requires Xcode;
+it has not been executed locally on Windows.

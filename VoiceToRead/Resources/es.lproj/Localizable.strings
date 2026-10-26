@@ -1196,3 +1196,15 @@
 "Discard changes?" = "¿Descartar cambios?";
 
 "Save changes" = "Guardar cambios";
+
+"First translate the story to %@ to listen in that language." = "Primero traduce el cuento a %@ para escucharlo en ese idioma.";
+
+"Translating the story…" = "Traduciendo el cuento…";
+
+"Translation ready. An adult must review and approve it before listening." = "Traducción lista. Un adulto debe revisarla y aprobarla antes de escucharla.";
+
+"All set. Select the reading language and press Play." = "Todo listo. Selecciona el idioma de lectura y pulsa Reproducir.";
+
+"Review" = "Revisar";
+
+"Approve" = "Aprobar";
