@@ -251,7 +251,7 @@ private struct StoryReaderView: View {
                         .frame(minHeight: 44).accessibilityIdentifier("storyCancelTranslation")
                 }
             } else if story.translation == nil {
-                Text(String(format: NSLocalizedString("First translate the story to %@ to listen in that language.", comment: "Story preparation, target language"), story.targetLanguage.pickerLabel))
+                Text("First translate the story to \(Text(story.targetLanguage.pickerLabel)) to listen in that language.")
                     .accessibilityIdentifier("storyPreparationStatus")
                 Button("Translate", systemImage: "character.bubble") { requestTranslation(story) }
                     .buttonStyle(.bordered).controlSize(.small).frame(minHeight: 44)
