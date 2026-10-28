@@ -1,0 +1,114 @@
+{
+  "text": "The interviewer asked me to discuss my strengths, so I explained that I’m a quick learner and adaptable.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 11,
+      "start": 0.36000001430511475,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.0199999809265137,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.2799999713897705,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.5800000429153442,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.180000066757202,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.180000066757202,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 39,
+      "length": 9,
+      "start": 2.5799999237060547,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.4800000190734863,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 53,
+      "length": 1,
+      "start": 3.5399999618530273,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 55,
+      "length": 9,
+      "start": 3.880000114440918,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 4.260000228881836,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 4.599999904632568,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 74,
+      "length": 1,
+      "start": 4.760000228881836,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 4.900000095367432,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 82,
+      "length": 7,
+      "start": 5.179999828338623,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 5.519999980926514,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 94,
+      "length": 9,
+      "start": 6.039999961853027,
+      "end": 6.659999847412109
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "The interviewer asked if I had ever faced conflicts at work, and I honestly shared an example.",
+  "duration": 6.690000057220459,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 4,
+      "length": 11,
+      "start": 0.3400000035762787,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 0.9599999785423279,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.2999999523162842,
+      "end": 1.5
+    },
+    {
+      "location": 25,
+      "length": 1,
+      "start": 1.5,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 1.6399999856948853,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 1.8200000524520874,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.240000009536743,
+      "end": 2.5
+    },
+    {
+      "location": 42,
+      "length": 9,
+      "start": 2.5,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 3.0399999618530273,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.319999933242798,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 4.139999866485596,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 65,
+      "length": 1,
+      "start": 4.159999847412109,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 67,
+      "length": 8,
+      "start": 4.380000114440918,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 4.78000020980835,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.099999904632568,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 86,
+      "length": 7,
+      "start": 5.420000076293945,
+      "end": 5.679999828338623
+    }
+  ]
+}

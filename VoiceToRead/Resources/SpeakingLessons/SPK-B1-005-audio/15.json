@@ -1,0 +1,90 @@
+{
+  "text": "I felt relieved to know that I am not expected to know everything immediately.",
+  "duration": 6.739999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.5600000023841858,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 7,
+      "length": 8,
+      "start": 0.9399999976158142,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.6799999475479126,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 2.259999990463257,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.4800000190734863,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.700000047683716,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.819999933242798,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 3.0199999809265137,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 3.319999933242798,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.940000057220459,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 55,
+      "length": 10,
+      "start": 4.559999942779541,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 66,
+      "length": 11,
+      "start": 5.28000020980835,
+      "end": 6.099999904632568
+    }
+  ]
+}

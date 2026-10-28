@@ -1,0 +1,108 @@
+{
+  "text": "By the time I started this plan, I had already noticed that my confidence had improved slightly.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.4399999976158142,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.6600000262260437,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.9800000190734863,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.2799999713897705,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.6200000047683716,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 1.9600000381469727,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 33,
+      "length": 1,
+      "start": 3.0199999809265137,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 3.0999999046325684,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 39,
+      "length": 7,
+      "start": 3.380000114440918,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 47,
+      "length": 7,
+      "start": 4.019999980926514,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.440000057220459,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.880000114440918,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 63,
+      "length": 10,
+      "start": 5.159999847412109,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.659999847412109,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 6.039999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 87,
+      "length": 8,
+      "start": 6.539999961853027,
+      "end": 7.119999885559082
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "She suggested scheduling a follow-up appointment after the test results were available to discuss next steps.",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 4,
+      "length": 9,
+      "start": 0.5199999809265137,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 14,
+      "length": 10,
+      "start": 1.1399999856948853,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 25,
+      "length": 1,
+      "start": 1.7400000095367432,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.1600000858306885,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.3399999141693115,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 37,
+      "length": 11,
+      "start": 2.559999942779541,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.0399999618530273,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 3.8399999141693115,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.199999809265137,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 4.460000038146973,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 4.739999771118164,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 77,
+      "length": 9,
+      "start": 5.039999961853027,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.460000038146973,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 90,
+      "length": 7,
+      "start": 6.179999828338623,
+      "end": 6.5
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 6.5,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 6.960000038146973,
+      "end": 7.239999771118164
+    }
+  ]
+}

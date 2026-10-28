@@ -1,0 +1,84 @@
+{
+  "text": "When asked about weaknesses, I honestly mentioned my need to improve public speaking.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.3799999952316284,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 0.9399999976158142,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 17,
+      "length": 10,
+      "start": 1.4800000190734863,
+      "end": 2.0
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.880000114440918,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 31,
+      "length": 8,
+      "start": 3.319999933242798,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 40,
+      "length": 9,
+      "start": 3.880000114440918,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 4.559999942779541,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 5.400000095367432,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 5.659999847412109,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 61,
+      "length": 7,
+      "start": 6.420000076293945,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 6.440000057220459,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 76,
+      "length": 8,
+      "start": 7.159999847412109,
+      "end": 7.460000038146973
+    }
+  ]
+}

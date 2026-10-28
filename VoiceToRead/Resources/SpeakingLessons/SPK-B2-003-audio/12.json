@@ -1,0 +1,120 @@
+{
+  "text": "I explain that I would rather confirm the preparation with the clinic than rely on something I read online.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.5400000214576721,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.9599999785423279,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 15,
+      "length": 1,
+      "start": 1.340000033378601,
+      "end": 1.5
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 1.5,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 1.7000000476837158,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 30,
+      "length": 7,
+      "start": 2.119999885559082,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.8399999141693115,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 42,
+      "length": 11,
+      "start": 3.2200000286102295,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.680000066757202,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.260000228881836,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.579999923706055,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 5.619999885559082,
+      "end": 6.0
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 6.0,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 83,
+      "length": 9,
+      "start": 6.380000114440918,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 93,
+      "length": 1,
+      "start": 6.659999847412109,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 95,
+      "length": 4,
+      "start": 6.960000038146973,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 100,
+      "length": 6,
+      "start": 7.139999866485596,
+      "end": 7.639999866485596
+    }
+  ]
+}

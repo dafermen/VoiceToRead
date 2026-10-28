@@ -1,0 +1,78 @@
+{
+  "text": "I didn't have online meetings before because my job was more independent.",
+  "duration": 5.519999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.3400000035762787,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.7200000286102295,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 14,
+      "length": 6,
+      "start": 1.100000023841858,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 21,
+      "length": 8,
+      "start": 1.5399999618530273,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 1.940000057220459,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.4200000762939453,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 2.859999895095825,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.200000047683716,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.4800000190734863,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.759999990463257,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 61,
+      "length": 11,
+      "start": 4.099999904632568,
+      "end": 4.519999980926514
+    }
+  ]
+}

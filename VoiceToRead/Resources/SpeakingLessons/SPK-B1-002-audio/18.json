@@ -1,0 +1,96 @@
+{
+  "text": "Balancing my responsibilities and habits takes time, but it makes me feel more in control.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.7200000286102295,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 13,
+      "length": 16,
+      "start": 1.2599999904632568,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.0399999618530273,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.640000104904175,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 2.9000000953674316,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.3399999141693115,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 4.699999809265137,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.920000076293945,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 5.619999885559082,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 6.079999923706055,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 6.440000057220459,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 7.019999980926514,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 82,
+      "length": 7,
+      "start": 7.460000038146973,
+      "end": 7.760000228881836
+    }
+  ]
+}

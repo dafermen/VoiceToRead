@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-003",
+  "number": 3,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "At the Doctor’s Office",
+    "es": "En la consulta médica"
+  },
+  "category": {
+    "en": "Health and Everyday Life",
+    "es": "Salud y vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Describing health concerns, asking for clarification, and confirming understanding during a routine appointment.",
+    "es": "Describir preocupaciones de salud, pedir aclaraciones y confirmar la comprensión durante una cita rutinaria."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Paciente adulto hablando con el médico en una consulta, ambiente tranquilo y profesional, ilustración realista en 16:9.",
+    "prompt": "Realistic illustration of an adult patient talking to a doctor in a calm medical office, professional setting, clean and warm, 16:9 ratio",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una preocupación médica de manera clara y sencilla.",
+    "Hacer preguntas para aclarar información durante la consulta.",
+    "Confirmar que se ha entendido bien lo explicado por el médico.",
+    "Practicar vocabulario y frases comunes en la consulta médica.",
+    "Mejorar la fluidez y naturalidad en situaciones médicas cotidianas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today I have a routine appointment with my doctor to discuss a concern I've had for a few days.",
+      "es": "Hoy tengo una cita rutinaria con mi médico para hablar sobre una preocupación que he tenido durante unos días."
+    },
+    {
+      "number": 2,
+      "function": "symptom_description",
+      "en": "I've noticed a persistent mild headache and some occasional dizziness that worries me.",
+      "es": "He notado un dolor de cabeza leve y persistente, además de mareos ocasionales que me preocupan."
+    },
+    {
+      "number": 3,
+      "function": "doctor_greeting",
+      "en": "When I arrive, the nurse asks me to wait in the examination room before the doctor comes in.",
+      "es": "Cuando llego, la enfermera me pide que espere en la sala de consulta antes de que entre el médico."
+    },
+    {
+      "number": 4,
+      "function": "doctor_entry",
+      "en": "The doctor introduces herself and asks me to explain what brought me to the office today.",
+      "es": "La doctora se presenta y me pide que explique qué me trae a la consulta hoy."
+    },
+    {
+      "number": 5,
+      "function": "patient_concern",
+      "en": "I tell her I've had a mild headache for three days, and sometimes I feel dizzy when I stand up quickly.",
+      "es": "Le digo que tengo un dolor de cabeza leve desde hace tres días, y a veces me siento mareado cuando me levanto rápido."
+    },
+    {
+      "number": 6,
+      "function": "doctor_question",
+      "en": "She asks if I have noticed any other symptoms, like fever or nausea.",
+      "es": "Ella pregunta si he notado otros síntomas, como fiebre o náuseas."
+    },
+    {
+      "number": 7,
+      "function": "patient_answer",
+      "en": "I say no, I don't have fever or nausea, just the headache and dizziness.",
+      "es": "Respondo que no, no tengo fiebre ni náuseas, solo el dolor de cabeza y los mareos."
+    },
+    {
+      "number": 8,
+      "function": "doctor_followup",
+      "en": "The doctor wants to know if I have taken any medication or done anything to relieve the symptoms.",
+      "es": "La doctora quiere saber si he tomado algún medicamento o hecho algo para aliviar los síntomas."
+    },
+    {
+      "number": 9,
+      "function": "patient_reply",
+      "en": "I explain that I asked for this appointment because I wanted to describe the problem clearly.",
+      "es": "Explico que pedí esta cita porque quería describir el problema con claridad."
+    },
+    {
+      "number": 10,
+      "function": "doctor_clarification",
+      "en": "She asks me to describe the headache more: is it sharp, throbbing, or constant?",
+      "es": "Me pide que describa el dolor de cabeza: ¿es punzante, palpitante o constante?"
+    },
+    {
+      "number": 11,
+      "function": "patient_description",
+      "en": "I say it's a dull, constant pain, mostly around my forehead and temples.",
+      "es": "Digo que es un dolor sordo y constante, principalmente alrededor de la frente y las sienes."
+    },
+    {
+      "number": 12,
+      "function": "doctor_recommendation",
+      "en": "I ask her to explain the next steps in simple words because some medical terms are new to me.",
+      "es": "Le pido que explique los siguientes pasos con palabras sencillas porque algunos términos médicos son nuevos para mí."
+    },
+    {
+      "number": 13,
+      "function": "patient_question",
+      "en": "I ask if it is necessary to have any tests or if this is a common issue.",
+      "es": "Pregunto si es necesario hacerme alguna prueba o si esto es un problema común."
+    },
+    {
+      "number": 14,
+      "function": "doctor_answer",
+      "en": "The doctor explains each step clearly and gives me time to ask questions about anything I do not understand.",
+      "es": "La médica explica cada paso con claridad y me da tiempo para preguntar sobre lo que no entiendo."
+    },
+    {
+      "number": 15,
+      "function": "patient_confirmation",
+      "en": "I confirm I understand and will monitor my condition carefully over the next few days.",
+      "es": "Confirmo que entiendo y que vigilaré mi condición con atención durante los próximos días."
+    },
+    {
+      "number": 16,
+      "function": "doctor_instruction",
+      "en": "I ask for the information in writing so that I can check the details after I leave.",
+      "es": "Pido la información por escrito para poder comprobar los detalles después de irme."
+    },
+    {
+      "number": 17,
+      "function": "patient_closing_question",
+      "en": "I ask if I can continue my normal activities and if exercise is okay.",
+      "es": "Pregunto si puedo continuar con mis actividades normales y si está bien hacer ejercicio."
+    },
+    {
+      "number": 18,
+      "function": "doctor_response",
+      "en": "She answers my questions and reminds me that I can contact the clinic if I need clarification.",
+      "es": "Ella responde a mis preguntas y me recuerda que puedo contactar con la clínica si necesito una aclaración."
+    },
+    {
+      "number": 19,
+      "function": "patient_thanks",
+      "en": "I thank the doctor for her time and clear explanations before leaving the office.",
+      "es": "Agradezco a la doctora por su tiempo y explicaciones claras antes de salir de la consulta."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "After the appointment, I feel reassured and plan to follow her advice carefully.",
+      "es": "Después de la cita, me siento tranquilo y planeo seguir cuidadosamente sus consejos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect",
+      "source_paragraph": 1,
+      "example_en": "Today I have a routine appointment with my doctor to discuss a concern I've had for a few days.",
+      "explanation_es": "Have had conecta una situación iniciada antes con el momento actual."
+    },
+    {
+      "name": "Present simple",
+      "source_paragraph": 3,
+      "example_en": "When I arrive, the nurse asks me to wait in the examination room before the doctor comes in.",
+      "explanation_es": "Arrive, asks y comes presentan la secuencia de esta visita en presente."
+    },
+    {
+      "name": "Indirect questions",
+      "source_paragraph": 6,
+      "example_en": "She asks if I have noticed any other symptoms, like fever or nausea.",
+      "explanation_es": "Después de asks if se mantiene el orden de una afirmación: I have noticed."
+    },
+    {
+      "name": "Past simple",
+      "source_paragraph": 9,
+      "example_en": "I explain that I asked for this appointment because I wanted to describe the problem clearly.",
+      "explanation_es": "Asked sitúa la petición en un momento anterior."
+    },
+    {
+      "name": "Ask someone to",
+      "source_paragraph": 4,
+      "example_en": "The doctor introduces herself and asks me to explain what brought me to the office today.",
+      "explanation_es": "Asks me to explain combina ask, la persona y un infinitivo para comunicar una petición."
+    },
+    {
+      "name": "Gerund after before",
+      "source_paragraph": 19,
+      "example_en": "I thank the doctor for her time and clear explanations before leaving the office.",
+      "explanation_es": "Después de la preposición before se usa leaving, una forma en -ing."
+    },
+    {
+      "name": "Can for permission",
+      "source_paragraph": 17,
+      "example_en": "I ask if I can continue my normal activities and if exercise is okay.",
+      "explanation_es": "Can se usa aquí para preguntar por permiso o por lo que es posible hacer."
+    },
+    {
+      "name": "Future with will",
+      "source_paragraph": 15,
+      "example_en": "I confirm I understand and will monitor my condition carefully over the next few days.",
+      "explanation_es": "Will monitor expresa una intención o compromiso para los próximos días."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "routine appointment",
+      "meaning_es": "cita habitual",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "for a few days",
+      "meaning_es": "desde hace unos días",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "wait in the examination room",
+      "meaning_es": "esperar en la sala de consulta",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "explain what brought me to the office",
+      "meaning_es": "explicar el motivo de mi visita a la consulta",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "in simple words",
+      "meaning_es": "con palabras sencillas",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "ask questions",
+      "meaning_es": "hacer preguntas",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "in writing",
+      "meaning_es": "por escrito",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "need clarification",
+      "meaning_es": "necesitar una aclaración",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Today I have a routine",
+              "appointment with my doctor to",
+              "discuss a concern I've had",
+              "for a few days."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I say no, I",
+              "don't have fever or",
+              "nausea, just the headache",
+              "and dizziness."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "I confirm I understand",
+              "and will monitor my",
+              "condition carefully over the",
+              "next few days."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-003",
+    "number": "003",
+    "title_en": "At the Doctor’s Office",
+    "title_es": "En la consulta médica",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Salud y vida cotidiana",
+    "main_topic_es": "Describir preocupaciones médicas y confirmar comprensión",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect",
+      "Present simple",
+      "Indirect questions",
+      "Past simple",
+      "Ask someone to",
+      "Gerund after before",
+      "Can for permission",
+      "Future with will"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

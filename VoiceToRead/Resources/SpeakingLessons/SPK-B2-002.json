@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-002",
+  "number": 2,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "My Daily Routine",
+    "es": "Mi rutina diaria"
+  },
+  "category": {
+    "en": "Daily Life and Personal Growth",
+    "es": "Vida diaria y crecimiento personal"
+  },
+  "main_topic": {
+    "en": "Balancing daily responsibilities, habits and a realistic change in routine.",
+    "es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Persona adulta organizando su día en una agenda con taza de café, computadora portátil y reloj visible.",
+    "prompt": "Realistic editorial photo, adult planning daily routine with planner and coffee, laptop on desk, clock on wall, warm natural lighting, modern home office, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir y evaluar rutinas diarias realistas.",
+    "Expresar razones y condiciones para cambios de hábitos.",
+    "Usar tiempos verbales complejos para reflexionar sobre acciones pasadas y consecuencias.",
+    "Calificar afirmaciones con modales y expresiones suaves.",
+    "Negociar y aclarar expectativas sobre rutinas y responsabilidades."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Recently, I have been reconsidering how I manage my daily routine to better balance work, family, and personal time.",
+      "es": "Recientemente, he estado reconsiderando cómo manejo mi rutina diaria para equilibrar mejor el trabajo, la familia y el tiempo personal."
+    },
+    {
+      "number": 2,
+      "function": "background",
+      "en": "Before this, I had developed habits that seemed efficient but often left me stressed and tired by the evening.",
+      "es": "Antes de esto, había desarrollado hábitos que parecían eficientes pero que a menudo me dejaban estresado y cansado al final del día."
+    },
+    {
+      "number": 3,
+      "function": "reflection",
+      "en": "I had thought that staying busy from morning until night was a sign of productivity, but I now realize it was unsustainable.",
+      "es": "Había pensado que estar ocupado desde la mañana hasta la noche era un signo de productividad, pero ahora me doy cuenta de que no era sostenible."
+    },
+    {
+      "number": 4,
+      "function": "detail",
+      "en": "For instance, I usually skipped breakfast because I thought I didn't have enough time, which affected my energy levels.",
+      "es": "Por ejemplo, normalmente saltaba el desayuno porque pensaba que no tenía suficiente tiempo, lo que afectaba mis niveles de energía."
+    },
+    {
+      "number": 5,
+      "function": "past_perfect",
+      "en": "By the time I decided to change my routine, I had already experienced several health warnings and signs of burnout.",
+      "es": "Para cuando decidí cambiar mi rutina, ya había experimentado varias señales de advertencia de salud y agotamiento."
+    },
+    {
+      "number": 6,
+      "function": "evaluation",
+      "en": "Although changing habits is challenging, I knew it was necessary if I wanted to improve my overall well-being.",
+      "es": "Aunque cambiar hábitos es difícil, sabía que era necesario si quería mejorar mi bienestar general."
+    },
+    {
+      "number": 7,
+      "function": "modality_hedging",
+      "en": "I might not be able to adopt every change immediately, but I hope to make gradual progress without overwhelming myself.",
+      "es": "Puede que no pueda adoptar todos los cambios inmediatamente, pero espero hacer un progreso gradual sin abrumarme."
+    },
+    {
+      "number": 8,
+      "function": "negotiation",
+      "en": "For example, I have discussed with my partner the possibility of sharing morning tasks to lighten the load for both of us.",
+      "es": "Por ejemplo, he hablado con mi pareja sobre la posibilidad de compartir las tareas de la mañana para aligerar la carga para ambos."
+    },
+    {
+      "number": 9,
+      "function": "conditional",
+      "en": "If we divide responsibilities fairly, we will both have more time and less stress during busy mornings.",
+      "es": "Si dividimos las responsabilidades de manera justa, ambos tendremos más tiempo y menos estrés durante las mañanas ajetreadas."
+    },
+    {
+      "number": 10,
+      "function": "relative_clause",
+      "en": "The planner that I bought last week helps me schedule breaks and reminders, which keeps me on track throughout the day.",
+      "es": "El planificador que compré la semana pasada me ayuda a programar descansos y recordatorios, lo cual me mantiene en camino durante todo el día."
+    },
+    {
+      "number": 11,
+      "function": "reported_speech",
+      "en": "My friend told me that she had made similar adjustments and felt much happier and healthier afterward.",
+      "es": "Mi amiga me dijo que ella había hecho ajustes similares y se sintió mucho más feliz y saludable después."
+    },
+    {
+      "number": 12,
+      "function": "modal_advice",
+      "en": "I should consider setting boundaries for work hours to avoid burnout and allow time for relaxation and hobbies.",
+      "es": "Debería considerar establecer límites para las horas de trabajo para evitar el agotamiento y permitir tiempo para la relajación y los hobbies."
+    },
+    {
+      "number": 13,
+      "function": "hedging",
+      "en": "It seems that some days will inevitably be busier than others, but I try to accept this without too much frustration.",
+      "es": "Parece que algunos días inevitablemente serán más ocupados que otros, pero trato de aceptarlo sin demasiada frustración."
+    },
+    {
+      "number": 14,
+      "function": "plan",
+      "en": "Tomorrow, I am going to start waking up thirty minutes earlier to prepare a healthy breakfast and enjoy a calm start.",
+      "es": "Mañana voy a empezar a levantarme treinta minutos antes para preparar un desayuno saludable y comenzar el día con calma."
+    },
+    {
+      "number": 15,
+      "function": "possibility",
+      "en": "If I stick to this plan, I might feel more energized and able to focus better during work hours.",
+      "es": "Si me mantengo en este plan, podría sentirme más energizado y capaz de concentrarme mejor durante las horas de trabajo."
+    },
+    {
+      "number": 16,
+      "function": "clarification",
+      "en": "When I am unsure about taking on additional tasks, I will clarify my limits with colleagues to avoid misunderstandings.",
+      "es": "Cuando no esté seguro de asumir tareas adicionales, aclararé mis límites con los colegas para evitar malentendidos."
+    },
+    {
+      "number": 17,
+      "function": "reflection_future",
+      "en": "Looking ahead, I would like to maintain flexibility in my routine so that I can adapt when unexpected events occur.",
+      "es": "De cara al futuro, me gustaría mantener flexibilidad en mi rutina para poder adaptarme cuando ocurran eventos inesperados."
+    },
+    {
+      "number": 18,
+      "function": "qualification",
+      "en": "Of course, these changes might not produce instant results, yet they represent realistic steps towards better balance.",
+      "es": "Por supuesto, estos cambios podrían no producir resultados inmediatos, pero representan pasos realistas hacia un mejor equilibrio."
+    },
+    {
+      "number": 19,
+      "function": "acceptance",
+      "en": "I understand that perfection is unattainable, and accepting imperfections helps reduce unnecessary pressure.",
+      "es": "Entiendo que la perfección es inalcanzable, y aceptar las imperfecciones ayuda a reducir la presión innecesaria."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "In summary, adjusting my daily routine is a continuous process that requires patience, self-awareness, and realistic goals.",
+      "es": "En resumen, ajustar mi rutina diaria es un proceso continuo que requiere paciencia, autoconciencia y metas realistas."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect continuous",
+      "source_paragraph": 1,
+      "example_en": "Recently, I have been reconsidering how I manage my daily routine to better balance work, family, and personal time.",
+      "explanation_es": "Have been reconsidering expresa una reflexión iniciada antes y todavía relevante."
+    },
+    {
+      "name": "Past perfect",
+      "source_paragraph": 5,
+      "example_en": "By the time I decided to change my routine, I had already experienced several health warnings and signs of burnout.",
+      "explanation_es": "Had already experienced sitúa unas experiencias antes de la decisión de cambiar."
+    },
+    {
+      "name": "Might for possibility",
+      "source_paragraph": 7,
+      "example_en": "I might not be able to adopt every change immediately, but I hope to make gradual progress without overwhelming myself.",
+      "explanation_es": "Might not be able to expresa una posibilidad incierta, con una afirmación matizada."
+    },
+    {
+      "name": "First conditional",
+      "source_paragraph": 9,
+      "example_en": "If we divide responsibilities fairly, we will both have more time and less stress during busy mornings.",
+      "explanation_es": "If + presente y will + verbo describen una condición realista y su resultado futuro."
+    },
+    {
+      "name": "Relative clauses",
+      "source_paragraph": 10,
+      "example_en": "The planner that I bought last week helps me schedule breaks and reminders, which keeps me on track throughout the day.",
+      "explanation_es": "That I bought especifica el objeto; which añade información sobre su efecto."
+    },
+    {
+      "name": "Reported speech with past perfect",
+      "source_paragraph": 11,
+      "example_en": "My friend told me that she had made similar adjustments and felt much happier and healthier afterward.",
+      "explanation_es": "Told me y had made permiten relatar una experiencia anterior de otra persona."
+    },
+    {
+      "name": "Should for advice",
+      "source_paragraph": 12,
+      "example_en": "I should consider setting boundaries for work hours to avoid burnout and allow time for relaxation and hobbies.",
+      "explanation_es": "Should consider presenta una recomendación que se está valorando."
+    },
+    {
+      "name": "Going to for intention",
+      "source_paragraph": 14,
+      "example_en": "Tomorrow, I am going to start waking up thirty minutes earlier to prepare a healthy breakfast and enjoy a calm start.",
+      "explanation_es": "Am going to start expresa una intención para el futuro próximo."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "reconsidering how I manage my daily routine",
+      "meaning_es": "reconsiderar cómo organizo mi rutina diaria",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "left me stressed and tired",
+      "meaning_es": "me dejó estresado y cansado",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "a sign of productivity",
+      "meaning_es": "una señal de productividad",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "affected my energy levels",
+      "meaning_es": "afectó mis niveles de energía",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "make gradual progress",
+      "meaning_es": "hacer un progreso gradual",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "sharing morning tasks",
+      "meaning_es": "compartir las tareas de la mañana",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "divide responsibilities fairly",
+      "meaning_es": "dividir responsabilidades de forma justa",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "setting boundaries for work hours",
+      "meaning_es": "establecer límites para las horas de trabajo",
+      "source_paragraph": 12
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Recently, I have been reconsidering",
+              "how I manage my daily",
+              "routine to better balance work,",
+              "family, and personal time."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "By the time I decided",
+              "to change my routine, I",
+              "had already experienced several health",
+              "warnings and signs of burnout."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "If we divide responsibilities fairly,",
+              "we will both have more",
+              "time and less stress during",
+              "busy mornings."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Recently, I have been reconsidering",
+              "how I manage my daily",
+              "routine to better balance work,",
+              "family, and personal time."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "By the time I decided",
+              "to change my routine, I",
+              "had already experienced several health",
+              "warnings and signs of burnout."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "If we divide responsibilities fairly,",
+              "we will both have more",
+              "time and less stress during",
+              "busy mornings."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Recently, I have been reconsidering",
+              "how I manage my daily",
+              "routine to better balance work,",
+              "family, and personal time."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "By the time I decided",
+              "to change my routine, I",
+              "had already experienced several health",
+              "warnings and signs of burnout."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "If we divide responsibilities fairly,",
+              "we will both have more",
+              "time and less stress during",
+              "busy mornings."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-002",
+    "number": "002",
+    "title_en": "My Daily Routine",
+    "title_es": "Mi rutina diaria",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y crecimiento personal",
+    "main_topic_es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect continuous",
+      "Past perfect",
+      "Might for possibility",
+      "First conditional",
+      "Relative clauses",
+      "Reported speech with past perfect",
+      "Should for advice",
+      "Going to for intention"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

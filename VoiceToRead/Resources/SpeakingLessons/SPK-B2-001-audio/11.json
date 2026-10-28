@@ -1,0 +1,84 @@
+{
+  "text": "I should focus more on communicating meaning than on perfect grammar during conversations.",
+  "duration": 6.28000020980835,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.6000000238418579,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.0399999618530273,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.3799999952316284,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 23,
+      "length": 13,
+      "start": 1.7599999904632568,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.259999990463257,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 2.819999933242798,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.380000114440918,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 3.759999990463257,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 61,
+      "length": 7,
+      "start": 4.059999942779541,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 4.440000057220459,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 76,
+      "length": 13,
+      "start": 4.980000019073486,
+      "end": 5.599999904632568
+    }
+  ]
+}

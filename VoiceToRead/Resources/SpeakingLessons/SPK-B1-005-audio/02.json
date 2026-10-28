@@ -1,0 +1,96 @@
+{
+  "text": "My manager greeted me warmly and introduced me to the team in the meeting room.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.4000000059604645,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 0.8999999761581421,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.3600000143051147,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.8600000143051147,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 33,
+      "length": 10,
+      "start": 3.119999885559082,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.5799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.880000114440918,
+      "end": 4.0
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 4.0,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.179999828338623,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.619999885559082,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 5.139999866485596,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 5.320000171661377,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.599999904632568,
+      "end": 5.900000095367432
+    }
+  ]
+}

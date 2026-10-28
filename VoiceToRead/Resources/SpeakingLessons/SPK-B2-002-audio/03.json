@@ -1,0 +1,138 @@
+{
+  "text": "I had thought that staying busy from morning until night was a sign of productivity, but I now realize it was unsustainable.",
+  "duration": 8.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 2,
+      "length": 3,
+      "start": 0.30000001192092896,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.5199999809265137,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 0.8399999737739563,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 1.2599999904632568,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 1.5199999809265137,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 32,
+      "length": 4,
+      "start": 1.899999976158142,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.259999990463257,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 2.619999885559082,
+      "end": 3.0
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 3.0,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 3.3399999141693115,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 3.9000000953674316,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 4.340000152587891,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 71,
+      "length": 12,
+      "start": 5.159999847412109,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 5.880000114440918,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 89,
+      "length": 1,
+      "start": 5.940000057220459,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 91,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 95,
+      "length": 7,
+      "start": 6.480000019073486,
+      "end": 7.0
+    },
+    {
+      "location": 103,
+      "length": 2,
+      "start": 7.0,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 106,
+      "length": 3,
+      "start": 7.300000190734863,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 110,
+      "length": 13,
+      "start": 7.699999809265137,
+      "end": 8.380000114440918
+    }
+  ]
+}

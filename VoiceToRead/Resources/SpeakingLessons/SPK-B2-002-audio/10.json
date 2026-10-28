@@ -1,0 +1,132 @@
+{
+  "text": "The planner that I bought last week helps me schedule breaks and reminders, which keeps me on track throughout the day.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.30000001192092896,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.6800000071525574,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 17,
+      "length": 1,
+      "start": 0.9399999976158142,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 19,
+      "length": 6,
+      "start": 1.2200000286102295,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.3200000524520874,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 1.7599999904632568,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.119999885559082,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 2.6600000858306885,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 45,
+      "length": 8,
+      "start": 3.299999952316284,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 3.299999952316284,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 3.740000009536743,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 65,
+      "length": 9,
+      "start": 4.199999809265137,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 5.199999809265137,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 5.360000133514404,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 5.559999942779541,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 5.800000190734863,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 100,
+      "length": 10,
+      "start": 6.320000171661377,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 6.619999885559082,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 115,
+      "length": 3,
+      "start": 6.78000020980835,
+      "end": 7.039999961853027
+    }
+  ]
+}

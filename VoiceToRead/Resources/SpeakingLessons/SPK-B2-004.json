@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-004",
+  "number": 4,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "A Job Interview",
+    "es": "Una entrevista de trabajo"
+  },
+  "category": {
+    "en": "Career and Professional Skills",
+    "es": "Carrera y habilidades profesionales"
+  },
+  "main_topic": {
+    "en": "Preparing for and attending a job interview, discussing concrete past experience and honest strengths and growth areas.",
+    "es": "Prepararse y asistir a una entrevista de trabajo, discutiendo experiencias pasadas concretas y fortalezas y áreas de mejora de manera honesta."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Persona adulta en una entrevista de trabajo, hablando con un entrevistador en una oficina moderna.",
+    "prompt": "Realistic editorial photograph, adult in a business interview setting, facing interviewer in modern office, professional attire, natural light, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir experiencias laborales pasadas con detalle específico.",
+    "Expresar fortalezas y áreas de mejora con honestidad y tacto.",
+    "Usar tiempos verbales complejos en la narración de eventos.",
+    "Practicar negociaciones y clarificaciones en contexto profesional.",
+    "Mejorar la fluidez con expresiones útiles en entrevistas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Last week, I had a job interview at a marketing company that I had admired for years.",
+      "es": "La semana pasada, tuve una entrevista de trabajo en una empresa de marketing que había admirado durante años."
+    },
+    {
+      "number": 2,
+      "function": "preparation",
+      "en": "Before the interview, I had studied the company's recent campaigns to show I was well prepared.",
+      "es": "Antes de la entrevista, había estudiado las campañas recientes de la empresa para mostrar que estaba bien preparado."
+    },
+    {
+      "number": 3,
+      "function": "arrival",
+      "en": "When I arrived, I briefly introduced myself and tried to appear confident, even though I felt nervous.",
+      "es": "Cuando llegué, me presenté brevemente y traté de mostrarme confiado, aunque me sentía nervioso."
+    },
+    {
+      "number": 4,
+      "function": "question_strength",
+      "en": "The interviewer asked me to discuss my strengths, so I explained that I’m a quick learner and adaptable.",
+      "es": "El entrevistador me pidió que hablara de mis fortalezas, así que expliqué que soy un aprendiz rápido y adaptable."
+    },
+    {
+      "number": 5,
+      "function": "example_past",
+      "en": "For example, I had managed a project that required learning new software under tight deadlines.",
+      "es": "Por ejemplo, había gestionado un proyecto que requería aprender un software nuevo bajo plazos ajustados."
+    },
+    {
+      "number": 6,
+      "function": "question_growth",
+      "en": "When asked about my growth areas, I admitted that I tend to be overly self-critical sometimes.",
+      "es": "Cuando me preguntaron sobre mis áreas de mejora, admití que a veces tiendo a ser demasiado autocrítico."
+    },
+    {
+      "number": 7,
+      "function": "qualification_growth",
+      "en": "However, I emphasized that this pushes me to improve rather than hold myself back.",
+      "es": "Sin embargo, enfatizé que esto me impulsa a mejorar en lugar de frenarme."
+    },
+    {
+      "number": 8,
+      "function": "relate_experience",
+      "en": "I also mentioned that I had grown by accepting feedback from supervisors and colleagues.",
+      "es": "También mencioné que había crecido al aceptar retroalimentación de supervisores y colegas."
+    },
+    {
+      "number": 9,
+      "function": "ask_questions",
+      "en": "The interviewer asked if I had ever faced conflicts at work, and I honestly shared an example.",
+      "es": "El entrevistador preguntó si alguna vez había enfrentado conflictos en el trabajo y compartí honestamente un ejemplo."
+    },
+    {
+      "number": 10,
+      "function": "conflict_example",
+      "en": "Once, I had disagreed with a teammate about a campaign approach, but we resolved it through open dialogue.",
+      "es": "Una vez, no estuve de acuerdo con un compañero sobre el enfoque de una campaña, pero lo resolvimos mediante diálogo abierto."
+    },
+    {
+      "number": 11,
+      "function": "clarify_expectations",
+      "en": "I asked for clarification on team collaboration expectations, which the interviewer happily explained.",
+      "es": "Pedí aclaración sobre las expectativas de colaboración en equipo, que el entrevistador explicó con gusto."
+    },
+    {
+      "number": 12,
+      "function": "reflect_consequences",
+      "en": "I reflected that such clear communication could prevent misunderstandings and improve productivity.",
+      "es": "Reflexioné que una comunicación clara así podría prevenir malentendidos y mejorar la productividad."
+    },
+    {
+      "number": 13,
+      "function": "future_condition",
+      "en": "If I were offered the position, I would focus on building strong relationships across departments.",
+      "es": "Si me ofrecieran el puesto, me enfocaría en construir relaciones sólidas entre departamentos."
+    },
+    {
+      "number": 14,
+      "function": "express_interest",
+      "en": "I told the interviewer I would be excited to contribute to innovative marketing strategies.",
+      "es": "Le dije al entrevistador que estaría emocionado de contribuir a estrategias de marketing innovadoras."
+    },
+    {
+      "number": 15,
+      "function": "closing",
+      "en": "At the end, I thanked them for their time and expressed hope to hear back soon.",
+      "es": "Al final, les agradecí por su tiempo y expresé la esperanza de recibir noticias pronto."
+    },
+    {
+      "number": 16,
+      "function": "afterthought",
+      "en": "Looking back, I realized that I had prepared well, but I wished I had asked more about company culture.",
+      "es": "Recordando, me di cuenta de que me había preparado bien, pero desearía haber preguntado más sobre la cultura de la empresa."
+    },
+    {
+      "number": 17,
+      "function": "lesson_learned",
+      "en": "Next time, I will bring a list of questions to better understand the work environment.",
+      "es": "La próxima vez, llevaré una lista de preguntas para comprender mejor el entorno laboral."
+    },
+    {
+      "number": 18,
+      "function": "reflection_emotion",
+      "en": "Despite my nerves, I felt proud for handling the interview honestly and professionally.",
+      "es": "A pesar de mis nervios, me sentí orgulloso de haber manejado la entrevista con honestidad y profesionalismo."
+    },
+    {
+      "number": 19,
+      "function": "future_plan",
+      "en": "I plan to follow up with a thank-you email to reinforce my interest in the role.",
+      "es": "Planeo enviar un correo de agradecimiento para reafirmar mi interés en el puesto."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Overall, the experience taught me that preparation and honest communication are crucial for success.",
+      "es": "En general, la experiencia me enseñó que la preparación y una comunicación honesta son cruciales para el éxito."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "source_paragraph": 2,
+      "example_en": "Before the interview, I had studied the company's recent campaigns to show I was well prepared.",
+      "explanation_es": "Had studied sitúa la preparación antes de la entrevista."
+    },
+    {
+      "name": "Defining relative clause",
+      "source_paragraph": 5,
+      "example_en": "For example, I had managed a project that required learning new software under tight deadlines.",
+      "explanation_es": "That required learning describe una característica del proyecto."
+    },
+    {
+      "name": "Second conditional",
+      "source_paragraph": 13,
+      "example_en": "If I were offered the position, I would focus on building strong relationships across departments.",
+      "explanation_es": "If I were offered y I would focus expresan una situación hipotética presente o futura."
+    },
+    {
+      "name": "Reported questions",
+      "source_paragraph": 4,
+      "example_en": "The interviewer asked me to discuss my strengths, so I explained that I’m a quick learner and adaptable.",
+      "explanation_es": "Asked me to discuss comunica de forma indirecta una petición de la entrevista."
+    },
+    {
+      "name": "Future in the past with would",
+      "source_paragraph": 14,
+      "example_en": "I told the interviewer I would be excited to contribute to innovative marketing strategies.",
+      "explanation_es": "Would be expresa una expectativa futura desde el momento pasado de la entrevista."
+    },
+    {
+      "name": "Wish with past perfect",
+      "source_paragraph": 16,
+      "example_en": "Looking back, I realized that I had prepared well, but I wished I had asked more about company culture.",
+      "explanation_es": "Wished I had asked expresa un deseo de que algo pasado hubiera sido diferente."
+    },
+    {
+      "name": "Tend to for a general tendency",
+      "source_paragraph": 6,
+      "example_en": "When asked about my growth areas, I admitted that I tend to be overly self-critical sometimes.",
+      "explanation_es": "Tend to presenta una tendencia y evita convertirla en una afirmación absoluta."
+    },
+    {
+      "name": "Future with will",
+      "source_paragraph": 17,
+      "example_en": "Next time, I will bring a list of questions to better understand the work environment.",
+      "explanation_es": "Will bring expresa la decisión de actuar de otra manera en una próxima entrevista."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "well prepared",
+      "meaning_es": "bien preparado",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "felt nervous",
+      "meaning_es": "sentirse nervioso",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "quick learner",
+      "meaning_es": "aprendiz rápido",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "open dialogue",
+      "meaning_es": "diálogo abierto",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "asked for clarification",
+      "meaning_es": "pedir aclaración",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "focus on building strong relationships",
+      "meaning_es": "enfocarse en construir relaciones sólidas",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "handling the interview honestly",
+      "meaning_es": "manejar la entrevista con honestidad",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "follow up with a thank-you email",
+      "meaning_es": "dar seguimiento con un correo de agradecimiento",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last week, I had a",
+              "job interview at a marketing",
+              "company that I had admired",
+              "for years."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "However, I emphasized that",
+              "this pushes me to",
+              "improve rather than hold",
+              "myself back."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "At the end, I",
+              "thanked them for their",
+              "time and expressed hope",
+              "to hear back soon."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-004",
+    "number": "004",
+    "title_en": "A Job Interview",
+    "title_es": "Una entrevista de trabajo",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Carrera y habilidades profesionales",
+    "main_topic_es": "Preparación y comunicación honesta en entrevistas de trabajo",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Defining relative clause",
+      "Second conditional",
+      "Reported questions",
+      "Future in the past with would",
+      "Wish with past perfect",
+      "Tend to for a general tendency",
+      "Future with will"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "text": "During lunch, I tactfully asked a colleague if they could share tips on managing the daily workflow.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.5,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.440000057220459,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 16,
+      "length": 9,
+      "start": 1.659999966621399,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.180000066757202,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 32,
+      "length": 1,
+      "start": 2.619999885559082,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 34,
+      "length": 9,
+      "start": 3.240000009536743,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.240000009536743,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 3.680000066757202,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 3.9000000953674316,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.159999847412109,
+      "end": 4.5
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.5,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 72,
+      "length": 8,
+      "start": 4.920000076293945,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 81,
+      "length": 3,
+      "start": 5.199999809265137,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 5.599999904632568,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 5.820000171661377,
+      "end": 6.21999979019165
+    }
+  ]
+}

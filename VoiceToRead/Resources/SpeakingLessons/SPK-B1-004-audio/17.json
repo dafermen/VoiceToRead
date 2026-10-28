@@ -1,0 +1,84 @@
+{
+  "text": "At the end, I asked about team culture and opportunities for professional growth.",
+  "duration": 5.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.30000001192092896,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.6200000047683716,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.159999966621399,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.399999976158142,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 20,
+      "length": 5,
+      "start": 1.7400000095367432,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 2.180000066757202,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.559999942779541,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.9800000190734863,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 43,
+      "length": 13,
+      "start": 3.3399999141693115,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 3.9000000953674316,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 61,
+      "length": 12,
+      "start": 4.340000152587891,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 74,
+      "length": 6,
+      "start": 4.880000114440918,
+      "end": 5.320000171661377
+    }
+  ]
+}

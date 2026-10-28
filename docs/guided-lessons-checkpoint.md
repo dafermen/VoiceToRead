@@ -70,3 +70,41 @@ support packs, unchanged lesson JSON, localization and diff checks. XCTest cover
 asset decoding/duration, cue validity, support availability and UI start/stop.
 XCTest and physical-device speech quality, loop/pause behavior and layout checks
 have not been run on Windows and require Xcode/iPhone verification.
+
+
+## B1/B2 five-theme catalog
+
+The level selector groups five themes at each level: Improving My English,
+My Daily Routine, At the Doctor’s Office, A Job Interview and My First Day at a
+New Job. IDs are SPK-B1-001…005 and SPK-B2-001…005. The existing SPK-B1-001
+content/audio/support resources are preserved. Nine new original stories use
+the same twenty-paragraph schema, eight grammar entries, eight expressions and
+three reading rounds. The B2 stories are distinct narratives with more developed
+reasoning, hedging, hypothetical consequences and clarification strategies.
+
+Editorial review corrected grammar labels to match actual source sentences,
+including used to, zero vs first conditional and second vs third conditional.
+Medical-office stories are fictional communication practice; detailed treatment
+and test-preparation instructions were removed. Chunk segments are exact extracts
+of their source sentence. The original user-supplied 001 is unchanged, including
+its original fragment selection.
+
+All lessons include offline Marin recordings at the approved 0.85 speed, normal
+speed selection, media-time word highlighting, repeating and shadowing, and
+Spanish/French/Korean/Japanese/Simplified Chinese support. The generated support
+packs are labeled as AI translations and still need fluent-speaker review. Only
+the pilot has the provided photographic cover; new lessons use accessible themed
+symbol placeholders according to the existing null-asset contract. Images can be
+added later without changing lesson content or IDs.
+
+Generation scripts now take --lesson, reuse existing files, and stop if cached
+timing text differs from a changed paragraph. No key, .env or server API calls
+are included in the app. User-created trainings, sessions and stories are not
+read or migrated by this change. No scoring or progress logic is introduced.
+
+Validation checks all ten stories, grammar/card consistency, source references,
+two hundred audio hashes and word ranges, forty complete support packs and the
+original JSON byte identity before publishing the catalog. XCTest adds whole-
+catalog resource checks, distinct-level checks and a B1/B2 filter navigation test.
+Local XCTest/playback verification is unavailable on Windows; Xcode/iPhone checks
+remain necessary for real audio, layout and native-speaker quality assessment.

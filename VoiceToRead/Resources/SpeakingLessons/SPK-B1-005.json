@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-005",
+  "number": 5,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "My First Day at a New Job",
+    "es": "Mi primer día en un nuevo trabajo"
+  },
+  "category": {
+    "en": "Work and Career Development",
+    "es": "Trabajo y desarrollo profesional"
+  },
+  "main_topic": {
+    "en": "Meeting colleagues, clarifying responsibilities, asking for help, and setting expectations on the first day.",
+    "es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas en el primer día."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Una persona adulta en una oficina moderna saludando a sus nuevos compañeros de trabajo.",
+    "prompt": "Realistic editorial photograph, adult professional greeting new colleagues in a modern office environment, bright daylight through windows, diverse group, friendly atmosphere, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir experiencias y acciones en el primer día de trabajo.",
+    "Explicar responsabilidades y condiciones laborales.",
+    "Pedir ayuda y aclarar dudas en inglés.",
+    "Usar tiempos verbales presentes y pasados para relatar eventos.",
+    "Practicar vocabulario y expresiones comunes en el trabajo."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This morning, I arrived at my new job feeling a mix of excitement and nervousness.",
+      "es": "Esta mañana llegué a mi nuevo trabajo sintiendo una mezcla de emoción y nerviosismo."
+    },
+    {
+      "number": 2,
+      "function": "greeting",
+      "en": "My manager greeted me warmly and introduced me to the team in the meeting room.",
+      "es": "Mi jefe me saludó cordialmente y me presentó al equipo en la sala de reuniones."
+    },
+    {
+      "number": 3,
+      "function": "introduction",
+      "en": "Everyone was friendly, and I started to learn their names right away.",
+      "es": "Todos fueron amistosos y comencé a aprender sus nombres de inmediato."
+    },
+    {
+      "number": 4,
+      "function": "responsibility",
+      "en": "After introductions, my manager explained my job responsibilities clearly.",
+      "es": "Después de las presentaciones, mi jefe explicó mis responsabilidades laborales claramente."
+    },
+    {
+      "number": 5,
+      "function": "question",
+      "en": "I asked if I could have a written schedule to help me organize my tasks.",
+      "es": "Pregunté si podía tener un horario por escrito para ayudarme a organizar mis tareas."
+    },
+    {
+      "number": 6,
+      "function": "clarification",
+      "en": "She said I would mainly handle customer emails and assist the sales team.",
+      "es": "Ella dijo que principalmente me encargaría de los correos de los clientes y ayudaría al equipo de ventas."
+    },
+    {
+      "number": 7,
+      "function": "help_request",
+      "en": "I told her that I might need help in the beginning to understand the internal software.",
+      "es": "Le dije que podría necesitar ayuda al principio para entender el software interno."
+    },
+    {
+      "number": 8,
+      "function": "offer_help",
+      "en": "She reassured me that Carlos, a colleague, would train me during the first week.",
+      "es": "Ella me aseguró que Carlos, un compañero, me entrenaría durante la primera semana."
+    },
+    {
+      "number": 9,
+      "function": "first_task",
+      "en": "Then, Carlos showed me how to use the email system and asked me to send a test message.",
+      "es": "Luego, Carlos me mostró cómo usar el sistema de correo y me pidió que enviara un mensaje de prueba."
+    },
+    {
+      "number": 10,
+      "function": "feedback",
+      "en": "I made a small mistake but he patiently explained how to fix it.",
+      "es": "Cometí un pequeño error pero él me explicó pacientemente cómo corregirlo."
+    },
+    {
+      "number": 11,
+      "function": "interaction",
+      "en": "Later, I met another team member who invited me to join a coffee break.",
+      "es": "Más tarde, conocí a otro miembro del equipo que me invitó a tomar un descanso para el café."
+    },
+    {
+      "number": 12,
+      "function": "conversation",
+      "en": "We talked about our hobbies and the best places to eat near the office.",
+      "es": "Hablamos sobre nuestros pasatiempos y los mejores lugares para comer cerca de la oficina."
+    },
+    {
+      "number": 13,
+      "function": "expectations",
+      "en": "Before lunch, my manager set clear expectations for my performance during the first month.",
+      "es": "Antes del almuerzo, mi jefe estableció expectativas claras sobre mi desempeño durante el primer mes."
+    },
+    {
+      "number": 14,
+      "function": "support",
+      "en": "She emphasized that asking questions is important and that support is always available.",
+      "es": "Ella enfatizó que hacer preguntas es importante y que el apoyo siempre está disponible."
+    },
+    {
+      "number": 15,
+      "function": "reflection",
+      "en": "I felt relieved to know that I am not expected to know everything immediately.",
+      "es": "Me sentí aliviado al saber que no se espera que sepa todo de inmediato."
+    },
+    {
+      "number": 16,
+      "function": "plan",
+      "en": "In the afternoon, I organized my tasks and created a list of things to learn.",
+      "es": "Por la tarde, organicé mis tareas y creé una lista de cosas por aprender."
+    },
+    {
+      "number": 17,
+      "function": "commitment",
+      "en": "I promised myself to ask for help whenever I feel uncertain about my work.",
+      "es": "Me prometí pedir ayuda cuando tenga dudas sobre mi trabajo."
+    },
+    {
+      "number": 18,
+      "function": "anticipation",
+      "en": "By the end of the day, I looked forward to gaining confidence and improving my skills.",
+      "es": "Al final del día, esperaba ganar confianza y mejorar mis habilidades."
+    },
+    {
+      "number": 19,
+      "function": "gratitude",
+      "en": "I thanked my new colleagues for their kindness and support on my first day.",
+      "es": "Agradecí a mis nuevos compañeros por su amabilidad y apoyo en mi primer día."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Overall, my first day at the new job went well and I feel ready for the challenges ahead.",
+      "es": "En general, mi primer día en el nuevo trabajo fue bien y me siento preparado para los retos que vienen."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "source_paragraph": 1,
+      "example_en": "This morning, I arrived at my new job feeling a mix of excitement and nervousness.",
+      "explanation_es": "Arrived presenta una acción terminada esta mañana."
+    },
+    {
+      "name": "Could in an indirect request",
+      "source_paragraph": 5,
+      "example_en": "I asked if I could have a written schedule to help me organize my tasks.",
+      "explanation_es": "Asked if I could es una forma cortés de pedir algo al contar la petición."
+    },
+    {
+      "name": "Future in the past with would",
+      "source_paragraph": 6,
+      "example_en": "She said I would mainly handle customer emails and assist the sales team.",
+      "explanation_es": "Would handle presenta funciones futuras desde el punto de vista de una conversación pasada."
+    },
+    {
+      "name": "Might for possibility",
+      "source_paragraph": 7,
+      "example_en": "I told her that I might need help in the beginning to understand the internal software.",
+      "explanation_es": "Might need indica una posible necesidad, no una capacidad."
+    },
+    {
+      "name": "How to + verb",
+      "source_paragraph": 9,
+      "example_en": "Then, Carlos showed me how to use the email system and asked me to send a test message.",
+      "explanation_es": "How to use explica el procedimiento para hacer algo."
+    },
+    {
+      "name": "Relative clause with who",
+      "source_paragraph": 11,
+      "example_en": "Later, I met another team member who invited me to join a coffee break.",
+      "explanation_es": "Who invited me describe a la persona del equipo."
+    },
+    {
+      "name": "That clause",
+      "source_paragraph": 14,
+      "example_en": "She emphasized that asking questions is important and that support is always available.",
+      "explanation_es": "That asking questions is important introduce el contenido de lo que se destacó."
+    },
+    {
+      "name": "Look forward to + -ing",
+      "source_paragraph": 18,
+      "example_en": "By the end of the day, I looked forward to gaining confidence and improving my skills.",
+      "explanation_es": "Looked forward to gaining expresa una expectativa positiva usando una forma en -ing."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "feeling a mix of excitement and nervousness",
+      "meaning_es": "sentir una mezcla de emoción y nerviosismo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "greeted me warmly",
+      "meaning_es": "me saludó cordialmente",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "asked if I could have a written schedule",
+      "meaning_es": "pregunté si podía tener un horario por escrito",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "might need help in the beginning",
+      "meaning_es": "podría necesitar ayuda al principio",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "send a test message",
+      "meaning_es": "enviar un mensaje de prueba",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "made a small mistake",
+      "meaning_es": "cometí un pequeño error",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "asking questions is important",
+      "meaning_es": "hacer preguntas es importante",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "looked forward to gaining confidence",
+      "meaning_es": "esperar ganar confianza",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "This morning, I arrived",
+              "at my new job",
+              "feeling a mix of",
+              "excitement and nervousness."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I told her that",
+              "I might need help",
+              "in the beginning to",
+              "understand the internal software."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "I felt relieved to",
+              "know that I am",
+              "not expected to know",
+              "everything immediately."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-005",
+    "number": "005",
+    "title_en": "My First Day at a New Job",
+    "title_es": "Mi primer día en un nuevo trabajo",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y desarrollo profesional",
+    "main_topic_es": "Conocer colegas y establecer responsabilidades",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Could in an indirect request",
+      "Future in the past with would",
+      "Might for possibility",
+      "How to + verb",
+      "Relative clause with who",
+      "That clause",
+      "Look forward to + -ing"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

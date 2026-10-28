@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-002",
+  "number": 2,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "My Daily Routine",
+    "es": "Mi rutina diaria"
+  },
+  "category": {
+    "en": "Lifestyle and Habits",
+    "es": "Estilo de vida y hábitos"
+  },
+  "main_topic": {
+    "en": "Balancing daily responsibilities, habits, and realistic change in routine.",
+    "es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Persona adulta equilibrando tareas diarias y hábitos en una rutina casera, ambiente tranquilo y organizando su día.",
+    "prompt": "Realistic editorial photograph, adult managing daily routine tasks and habits at home, calm environment, organizing day on planner, natural light, modern lifestyle, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir la rutina diaria y responsabilidades personales.",
+    "Expresar cambios realistas y planes para mejorar hábitos.",
+    "Usar tiempos presente, pasado, perfecto y condicionales para contar experiencias.",
+    "Practicar expresiones comunes sobre hábitos y rutinas.",
+    "Repetir textos en inglés americano natural para mejorar fluidez."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Every morning, I wake up early to start my daily routine with a focused mindset.",
+      "es": "Cada mañana, me despierto temprano para comenzar mi rutina diaria con una mentalidad enfocada."
+    },
+    {
+      "number": 2,
+      "function": "habit",
+      "en": "Usually, I drink a glass of water and prepare a simple breakfast before leaving the house.",
+      "es": "Generalmente, tomo un vaso de agua y preparo un desayuno sencillo antes de salir de casa."
+    },
+    {
+      "number": 3,
+      "function": "responsibility",
+      "en": "Then, I check my emails quickly to see if there is anything urgent to handle.",
+      "es": "Luego, reviso mis correos electrónicos rápidamente para ver si hay algo urgente que atender."
+    },
+    {
+      "number": 4,
+      "function": "daily task",
+      "en": "After that, I start working on my assignments, making sure I follow my planned schedule.",
+      "es": "Después, empiezo a trabajar en mis tareas, asegurándome de seguir mi horario planificado."
+    },
+    {
+      "number": 5,
+      "function": "past habit",
+      "en": "Before, I used to work without any schedule, and I often felt overwhelmed by unfinished tasks.",
+      "es": "Antes, solía trabajar sin ningún horario y a menudo me sentía abrumado por las tareas sin terminar."
+    },
+    {
+      "number": 6,
+      "function": "change",
+      "en": "Now, I set realistic time blocks for each task to manage my day better.",
+      "es": "Ahora, establezco bloques de tiempo realistas para cada tarea para manejar mejor mi día."
+    },
+    {
+      "number": 7,
+      "function": "midday routine",
+      "en": "Around midday, I take a short break to eat lunch and relax for a few minutes.",
+      "es": "Alrededor del mediodía, tomo un descanso corto para almorzar y relajarme unos minutos."
+    },
+    {
+      "number": 8,
+      "function": "habit detail",
+      "en": "I usually prepare something healthy and quick, like a salad or a sandwich.",
+      "es": "Generalmente preparo algo saludable y rápido, como una ensalada o un sándwich."
+    },
+    {
+      "number": 9,
+      "function": "effect",
+      "en": "This break helps me recharge and stay productive for the rest of the afternoon.",
+      "es": "Este descanso me ayuda a recargarme y mantenerme productivo el resto de la tarde."
+    },
+    {
+      "number": 10,
+      "function": "afternoon task",
+      "en": "In the afternoon, I focus on meetings and collaboration with my colleagues online.",
+      "es": "Por la tarde, me concentro en reuniones y colaboración con mis colegas en línea."
+    },
+    {
+      "number": 11,
+      "function": "past limitation",
+      "en": "I didn't have online meetings before because my job was more independent.",
+      "es": "Antes no tenía reuniones en línea porque mi trabajo era más independiente."
+    },
+    {
+      "number": 12,
+      "function": "present continuous",
+      "en": "Currently, I am learning to organize these virtual meetings efficiently.",
+      "es": "Actualmente, estoy aprendiendo a organizar estas reuniones virtuales de manera eficiente."
+    },
+    {
+      "number": 13,
+      "function": "realistic plan",
+      "en": "I plan to improve my time management by setting clear goals for each meeting.",
+      "es": "Planeo mejorar mi gestión del tiempo estableciendo metas claras para cada reunión."
+    },
+    {
+      "number": 14,
+      "function": "evening routine",
+      "en": "After work, I like to exercise for thirty minutes to stay healthy and reduce stress.",
+      "es": "Después del trabajo, me gusta hacer ejercicio durante treinta minutos para mantenerme saludable y reducir el estrés."
+    },
+    {
+      "number": 15,
+      "function": "condition",
+      "en": "If I don’t exercise, I notice that I have less energy the next day.",
+      "es": "Si no hago ejercicio, noto que tengo menos energía al día siguiente."
+    },
+    {
+      "number": 16,
+      "function": "weekend habit",
+      "en": "On weekends, I prefer to relax more and spend time with family and friends.",
+      "es": "Los fines de semana, prefiero relajarme más y pasar tiempo con familia y amigos."
+    },
+    {
+      "number": 17,
+      "function": "realistic change",
+      "en": "Sometimes I try to go out for a walk even on busy weekends to enjoy fresh air.",
+      "es": "A veces intento salir a caminar incluso en fines de semana ocupados para disfrutar del aire fresco."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Balancing my responsibilities and habits takes time, but it makes me feel more in control.",
+      "es": "Equilibrar mis responsabilidades y hábitos requiere tiempo, pero me hace sentir más en control."
+    },
+    {
+      "number": 19,
+      "function": "goal",
+      "en": "I want to keep improving my routine gradually, allowing flexibility when needed.",
+      "es": "Quiero seguir mejorando mi rutina poco a poco, permitiendo flexibilidad cuando sea necesario."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Overall, small changes in daily habits lead to a healthier and more balanced life.",
+      "es": "En general, pequeños cambios en los hábitos diarios conducen a una vida más saludable y equilibrada."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple",
+      "source_paragraph": 2,
+      "example_en": "Usually, I drink a glass of water and prepare a simple breakfast before leaving the house.",
+      "explanation_es": "Describe una rutina habitual con verbos en presente: drink y prepare."
+    },
+    {
+      "name": "Used to",
+      "source_paragraph": 5,
+      "example_en": "Before, I used to work without any schedule, and I often felt overwhelmed by unfinished tasks.",
+      "explanation_es": "Used to + verbo describe un hábito pasado que ha cambiado."
+    },
+    {
+      "name": "Present continuous",
+      "source_paragraph": 12,
+      "example_en": "Currently, I am learning to organize these virtual meetings efficiently.",
+      "explanation_es": "Am learning expresa un proceso de aprendizaje actual."
+    },
+    {
+      "name": "Infinitive of purpose",
+      "source_paragraph": 1,
+      "example_en": "Every morning, I wake up early to start my daily routine with a focused mindset.",
+      "explanation_es": "To start explica para qué se realiza la acción de despertarse."
+    },
+    {
+      "name": "Past simple negative",
+      "source_paragraph": 11,
+      "example_en": "I didn't have online meetings before because my job was more independent.",
+      "explanation_es": "Did not + verbo en forma base expresa una acción o situación negativa pasada."
+    },
+    {
+      "name": "Plan to",
+      "source_paragraph": 13,
+      "example_en": "I plan to improve my time management by setting clear goals for each meeting.",
+      "explanation_es": "Plan to + verbo expresa una intención; no es la estructura going to."
+    },
+    {
+      "name": "Like to",
+      "source_paragraph": 14,
+      "example_en": "After work, I like to exercise for thirty minutes to stay healthy and reduce stress.",
+      "explanation_es": "Like to + verbo expresa una preferencia; like no es un verbo modal."
+    },
+    {
+      "name": "Zero conditional",
+      "source_paragraph": 15,
+      "example_en": "If I don’t exercise, I notice that I have less energy the next day.",
+      "explanation_es": "If + presente y resultado en presente describe una consecuencia habitual, no una predicción con will."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "start my daily routine with a focused mindset",
+      "meaning_es": "comenzar mi rutina diaria con una mentalidad enfocada",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "check my emails quickly",
+      "meaning_es": "revisar mis correos rápidamente",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "set realistic time blocks",
+      "meaning_es": "establecer bloques de tiempo realistas",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "take a short break",
+      "meaning_es": "tomar un descanso corto",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "stay productive for the rest of the afternoon",
+      "meaning_es": "mantenerme productivo el resto de la tarde",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "focus on meetings and collaboration",
+      "meaning_es": "enfocarme en reuniones y colaboración",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "notice that I have less energy",
+      "meaning_es": "notar que tengo menos energía",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "small changes in daily habits",
+      "meaning_es": "pequeños cambios en los hábitos diarios",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Every morning, I wake",
+              "up early to start",
+              "my daily routine with",
+              "a focused mindset."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Around midday, I take",
+              "a short break to",
+              "eat lunch and relax",
+              "for a few minutes."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "If I don’t exercise,",
+              "I notice that I",
+              "have less energy the",
+              "next day."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-002",
+    "number": "002",
+    "title_en": "My Daily Routine",
+    "title_es": "Mi rutina diaria",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Estilo de vida y hábitos",
+    "main_topic_es": "Balance de responsabilidades y cambios realistas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple",
+      "Used to",
+      "Present continuous",
+      "Infinitive of purpose",
+      "Past simple negative",
+      "Plan to",
+      "Like to",
+      "Zero conditional"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

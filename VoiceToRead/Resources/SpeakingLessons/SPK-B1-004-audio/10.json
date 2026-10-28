@@ -1,0 +1,90 @@
+{
+  "text": "I arrived at the office fifteen minutes early to make a good first impression.",
+  "duration": 6.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.4399999976158142,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.8799999952316284,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.100000023841858,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.7000000476837158,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 1.7000000476837158,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 32,
+      "length": 7,
+      "start": 2.4600000381469727,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 2.859999895095825,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.3399999141693115,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 4.019999980926514,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 54,
+      "length": 1,
+      "start": 4.21999979019165,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.440000057220459,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 61,
+      "length": 5,
+      "start": 4.760000228881836,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 67,
+      "length": 10,
+      "start": 5.199999809265137,
+      "end": 5.539999961853027
+    }
+  ]
+}

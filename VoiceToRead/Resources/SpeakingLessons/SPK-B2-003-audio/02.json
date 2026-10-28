@@ -1,0 +1,102 @@
+{
+  "text": "Before the appointment, I had already made a list of symptoms and questions that concerned me.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.6600000262260437,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 11,
+      "length": 11,
+      "start": 1.0800000429153442,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 24,
+      "length": 1,
+      "start": 2.180000066757202,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.2799999713897705,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 30,
+      "length": 7,
+      "start": 2.559999942779541,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 3.1600000858306885,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 3.5199999809265137,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.880000114440918,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 4.139999866485596,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 5.039999961853027,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 5.039999961853027,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 66,
+      "length": 9,
+      "start": 5.400000095367432,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.880000114440918,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 81,
+      "length": 9,
+      "start": 6.519999980926514,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 6.980000019073486,
+      "end": 7.260000228881836
+    }
+  ]
+}

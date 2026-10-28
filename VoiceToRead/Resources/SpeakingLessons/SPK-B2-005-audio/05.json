@@ -1,0 +1,96 @@
+{
+  "text": "Later, I asked my supervisor if I could clarify my main responsibilities to avoid misunderstandings.",
+  "duration": 7.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 7,
+      "length": 1,
+      "start": 0.8999999761581421,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 1.2599999904632568,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.440000057220459,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 18,
+      "length": 10,
+      "start": 1.8200000524520874,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 29,
+      "length": 2,
+      "start": 2.359999895095825,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 32,
+      "length": 1,
+      "start": 2.9800000190734863,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 3.119999885559082,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 40,
+      "length": 7,
+      "start": 3.3399999141693115,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.819999933242798,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 4.179999828338623,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 56,
+      "length": 16,
+      "start": 4.539999961853027,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.380000114440918,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 82,
+      "length": 17,
+      "start": 6.440000057220459,
+      "end": 7.519999980926514
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "text": "She emphasized that asking questions is important and that support is always available.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 4,
+      "length": 10,
+      "start": 0.5600000023841858,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.3600000143051147,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 2.0199999809265137,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 27,
+      "length": 9,
+      "start": 2.4600000381469727,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 37,
+      "length": 2,
+      "start": 3.0399999618530273,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 40,
+      "length": 9,
+      "start": 3.4200000762939453,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 3.9600000381469727,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.960000038146973,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 59,
+      "length": 7,
+      "start": 5.739999771118164,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 6.119999885559082,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 6.579999923706055,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 77,
+      "length": 9,
+      "start": 7.179999828338623,
+      "end": 7.599999904632568
+    }
+  ]
+}

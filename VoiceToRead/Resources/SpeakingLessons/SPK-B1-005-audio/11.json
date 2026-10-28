@@ -1,0 +1,90 @@
+{
+  "text": "Later, I met another team member who invited me to join a coffee break.",
+  "duration": 4.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 7,
+      "length": 1,
+      "start": 1.059999942779541,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.2400000095367432,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.340000033378601,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.7400000095367432,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.119999885559082,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.4200000762939453,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.700000047683716,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.0799999237060547,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.319999933242798,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.559999942779541,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 56,
+      "length": 1,
+      "start": 3.7200000286102295,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 58,
+      "length": 6,
+      "start": 4.019999980926514,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 4.179999828338623,
+      "end": 4.539999961853027
+    }
+  ]
+}

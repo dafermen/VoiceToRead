@@ -1,0 +1,108 @@
+{
+  "text": "I found that speaking for just ten minutes daily allowed me to use more complex sentences naturally.",
+  "duration": 7.050000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.30000001192092896,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.47999998927116394,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 13,
+      "length": 8,
+      "start": 0.8399999737739563,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.2000000476837158,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.4800000190734863,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 1.8200000524520874,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.059999942779541,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 2.440000057220459,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 49,
+      "length": 7,
+      "start": 2.880000114440918,
+      "end": 3.5
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 3.5,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 3.700000047683716,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 4.039999961853027,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 4.420000076293945,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 80,
+      "length": 9,
+      "start": 4.940000057220459,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 90,
+      "length": 9,
+      "start": 5.639999866485596,
+      "end": 6.360000133514404
+    }
+  ]
+}

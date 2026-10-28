@@ -59,6 +59,37 @@ final class SpeakingLessonTests: XCTestCase {
         }
     }
 
+    func testBothLevelsHaveFiveDistinctCompleteLessons() throws {
+        let lessons = try SpeakingLessonCatalog.load()
+        XCTAssertEqual(lessons.count, 10)
+        XCTAssertEqual(Set(lessons.map(\.id)).count, 10)
+        for level in ["B1", "B2"] {
+            let group = lessons.filter { $0.level == level }
+            XCTAssertEqual(group.map(\.number).sorted(), [1, 2, 3, 4, 5])
+            for lesson in group {
+                XCTAssertNoThrow(try lesson.validate())
+                for paragraph in lesson.paragraphs {
+                    let name = String(format: "%02d", paragraph.number)
+                    let directory = "SpeakingLessons/\(lesson.id)-audio"
+                    XCTAssertNotNil(Bundle.main.url(forResource: name, withExtension: "mp3", subdirectory: directory))
+                    let url = try XCTUnwrap(Bundle.main.url(forResource: name, withExtension: "json", subdirectory: directory))
+                    let timing = try JSONDecoder().decode(GuidedWordTiming.self, from: Data(contentsOf: url))
+                    XCTAssertNoThrow(try timing.validate(expected: paragraph.en))
+                }
+                for language in [CaptureLanguage.french, .korean, .japanese, .chinese] {
+                    let pack = try XCTUnwrap(GuidedLessonSupport.load(lesson: lesson, language: language))
+                    for i in 0..<20 { XCTAssertFalse(pack.text("paragraphs.\(i).es", fallback: "").isEmpty) }
+                }
+            }
+        }
+        for number in 1...5 {
+            let b1 = try XCTUnwrap(lessons.first { $0.level == "B1" && $0.number == number })
+            let b2 = try XCTUnwrap(lessons.first { $0.level == "B2" && $0.number == number })
+            XCTAssertEqual(b1.title.en, b2.title.en)
+            XCTAssertNotEqual(b1.paragraphs.map(\.en), b2.paragraphs.map(\.en))
+        }
+    }
+
     func testInvalidLessonsAreRejectedBeforeRendering() throws {
         let (_, original) = try fixture()
         func rejected(_ mutate: (inout [String: Any]) -> Void) throws {

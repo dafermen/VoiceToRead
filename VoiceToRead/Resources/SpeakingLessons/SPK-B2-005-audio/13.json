@@ -1,0 +1,96 @@
+{
+  "text": "If I hadn’t prepared questions beforehand, I might have missed important details about my role.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.7200000286102295,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 1.0399999618530273,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 12,
+      "length": 8,
+      "start": 1.2000000476837158,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 21,
+      "length": 9,
+      "start": 1.5800000429153442,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 31,
+      "length": 10,
+      "start": 2.180000066757202,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 3.440000057220459,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.559999942779541,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.759999990463257,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 4.159999847412109,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 63,
+      "length": 9,
+      "start": 4.159999847412109,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 73,
+      "length": 7,
+      "start": 4.679999828338623,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 81,
+      "length": 5,
+      "start": 5.139999866485596,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.460000038146973,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 5.679999828338623,
+      "end": 5.920000076293945
+    }
+  ]
+}

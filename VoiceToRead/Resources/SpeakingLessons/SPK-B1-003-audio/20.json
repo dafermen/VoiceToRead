@@ -1,0 +1,84 @@
+{
+  "text": "After the appointment, I feel reassured and plan to follow her advice carefully.",
+  "duration": 6.159999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.5600000023841858,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 10,
+      "length": 11,
+      "start": 1.0199999809265137,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 23,
+      "length": 1,
+      "start": 1.940000057220459,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.119999885559082,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 30,
+      "length": 9,
+      "start": 2.359999895095825,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 3.059999942779541,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 44,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 3.8399999141693115,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 52,
+      "length": 6,
+      "start": 4.179999828338623,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.28000020980835,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.619999885559082,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 4.960000038146973,
+      "end": 5.480000019073486
+    }
+  ]
+}

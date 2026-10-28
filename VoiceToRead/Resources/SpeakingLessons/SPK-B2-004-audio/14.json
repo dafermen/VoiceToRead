@@ -1,0 +1,90 @@
+{
+  "text": "I told the interviewer I would be excited to contribute to innovative marketing strategies.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.7599999904632568,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 11,
+      "length": 11,
+      "start": 1.2000000476837158,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 23,
+      "length": 1,
+      "start": 1.940000057220459,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.5399999618530273,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.740000009536743,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 34,
+      "length": 7,
+      "start": 2.9200000762939453,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 3.440000057220459,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 45,
+      "length": 10,
+      "start": 4.340000152587891,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 4.340000152587891,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 59,
+      "length": 10,
+      "start": 5.400000095367432,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 5.400000095367432,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 80,
+      "length": 10,
+      "start": 5.920000076293945,
+      "end": 6.599999904632568
+    }
+  ]
+}

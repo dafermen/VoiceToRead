@@ -197,6 +197,12 @@ final class HomeScreenTests: XCTestCase {
         let entry = app.buttons["guidedLessonsEntry"]
         XCTAssertTrue(entry.waitForExistence(timeout: 10))
         entry.tap()
+        let levels = app.segmentedControls["guidedLessonLevel"]
+        XCTAssertTrue(levels.waitForExistence(timeout: 5))
+        levels.buttons["B2"].tap()
+        XCTAssertTrue(app.buttons["guidedLesson-SPK-B2-001"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["guidedLesson-SPK-B1-001"].exists)
+        levels.buttons["B1"].tap()
         let lesson = app.buttons["guidedLesson-SPK-B1-001"]
         XCTAssertTrue(lesson.waitForExistence(timeout: 5))
         lesson.tap()

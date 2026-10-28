@@ -1,0 +1,102 @@
+{
+  "text": "I told her that I might need help in the beginning to understand the internal software.",
+  "duration": 6.739999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.5600000023841858,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.5
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.8200000524520874,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 2.0399999618530273,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.259999990463257,
+      "end": 2.5
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.7799999713897705,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.940000057220459,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 41,
+      "length": 9,
+      "start": 3.200000047683716,
+      "end": 3.5
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.5,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 54,
+      "length": 10,
+      "start": 4.159999847412109,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 4.639999866485596,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 69,
+      "length": 8,
+      "start": 5.420000076293945,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.420000076293945,
+      "end": 5.900000095367432
+    }
+  ]
+}

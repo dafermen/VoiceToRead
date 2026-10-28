@@ -1,0 +1,120 @@
+{
+  "text": "Before this, I had developed habits that seemed efficient but often left me stressed and tired by the evening.",
+  "duration": 7.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.5799999833106995,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.559999942779541,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 19,
+      "length": 9,
+      "start": 1.899999976158142,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.259999990463257,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 3.0999999046325684,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 48,
+      "length": 9,
+      "start": 3.4000000953674316,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 3.9800000190734863,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.659999847412109,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.099999904632568,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.340000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 76,
+      "length": 8,
+      "start": 5.71999979019165,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 6.039999961853027,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 6.599999904632568,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 6.71999979019165,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 6.980000019073486,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 102,
+      "length": 7,
+      "start": 7.260000228881836,
+      "end": 7.460000038146973
+    }
+  ]
+}

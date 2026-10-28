@@ -1,0 +1,102 @@
+{
+  "text": "I thanked her for the clarification and felt reassured to have a clear plan moving forward.",
+  "duration": 8.5600004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.9399999976158142,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 0.9399999976158142,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.2400000095367432,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 22,
+      "length": 13,
+      "start": 2.180000066757202,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.9200000762939453,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 4.099999904632568,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 45,
+      "length": 9,
+      "start": 4.400000095367432,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 55,
+      "length": 2,
+      "start": 5.139999866485596,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 5.860000133514404,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 63,
+      "length": 1,
+      "start": 6.039999961853027,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 6.340000152587891,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 6.619999885559082,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 7.099999904632568,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 83,
+      "length": 7,
+      "start": 7.78000020980835,
+      "end": 8.15999984741211
+    }
+  ]
+}

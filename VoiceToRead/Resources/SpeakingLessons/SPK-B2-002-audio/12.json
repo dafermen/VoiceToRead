@@ -1,0 +1,114 @@
+{
+  "text": "I should consider setting boundaries for work hours to avoid burnout and allow time for relaxation and hobbies.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 9,
+      "length": 8,
+      "start": 0.5799999833106995,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.2000000476837158,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 26,
+      "length": 10,
+      "start": 1.7200000286102295,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.240000009536743,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 3.4600000381469727,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 55,
+      "length": 5,
+      "start": 4.119999885559082,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 61,
+      "length": 7,
+      "start": 4.440000057220459,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.940000057220459,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 5.480000019073486,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.760000228881836,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 88,
+      "length": 10,
+      "start": 7.039999961853027,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 7.039999961853027,
+      "end": 7.920000076293945
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 7.920000076293945,
+      "end": 7.920000076293945
+    }
+  ]
+}

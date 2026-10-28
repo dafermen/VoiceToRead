@@ -1,0 +1,96 @@
+{
+  "text": "I thought that perhaps observing her workflow would give me insights I hadn’t considered yet.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.699999988079071,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.7599999904632568,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.4600000381469727,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 23,
+      "length": 9,
+      "start": 2.059999942779541,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.740000009536743,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 37,
+      "length": 8,
+      "start": 3.180000066757202,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.7799999713897705,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 4.440000057220459,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.659999847412109,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 5.159999847412109,
+      "end": 5.5
+    },
+    {
+      "location": 69,
+      "length": 1,
+      "start": 5.5,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 6.159999847412109,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 78,
+      "length": 10,
+      "start": 6.480000019073486,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 7.039999961853027,
+      "end": 7.420000076293945
+    }
+  ]
+}

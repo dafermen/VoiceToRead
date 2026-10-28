@@ -1,0 +1,102 @@
+{
+  "text": "Looking back, I realized that asking questions and confirming information helped me feel more in control.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.399999976158142,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.6399999856948853,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.2200000286102295,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 2.680000066757202,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 37,
+      "length": 9,
+      "start": 3.059999942779541,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 51,
+      "length": 10,
+      "start": 4.159999847412109,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 62,
+      "length": 11,
+      "start": 4.659999847412109,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 74,
+      "length": 6,
+      "start": 5.559999942779541,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 81,
+      "length": 2,
+      "start": 6.320000171661377,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.739999771118164,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 89,
+      "length": 4,
+      "start": 7.179999828338623,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 94,
+      "length": 2,
+      "start": 7.820000171661377,
+      "end": 8.279999732971191
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 8.279999732971191,
+      "end": 8.619999885559082
+    }
+  ]
+}

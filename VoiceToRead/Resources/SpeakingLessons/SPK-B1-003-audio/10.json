@@ -1,0 +1,90 @@
+{
+  "text": "She asks me to describe the headache more: is it sharp, throbbing, or constant?",
+  "duration": 6.860000133514404,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.800000011920929,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 1.100000023841858,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.840000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.840000033378601,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.4200000762939453,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.5799999237060547,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.9800000190734863,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 56,
+      "length": 9,
+      "start": 5.059999942779541,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 5.300000190734863,
+      "end": 6.0
+    },
+    {
+      "location": 70,
+      "length": 8,
+      "start": 6.0,
+      "end": 6.119999885559082
+    }
+  ]
+}

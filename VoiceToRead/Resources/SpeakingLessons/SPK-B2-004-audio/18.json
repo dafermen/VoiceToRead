@@ -1,0 +1,84 @@
+{
+  "text": "Despite my nerves, I felt proud for handling the interview honestly and professionally.",
+  "duration": 6.570000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 8,
+      "length": 2,
+      "start": 0.5799999833106995,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.9800000190734863,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 19,
+      "length": 1,
+      "start": 1.9600000381469727,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 2.1600000858306885,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.359999895095825,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 3.4800000190734863,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.4800000190734863,
+      "end": 4.0
+    },
+    {
+      "location": 49,
+      "length": 9,
+      "start": 4.0,
+      "end": 4.0
+    },
+    {
+      "location": 59,
+      "length": 8,
+      "start": 4.0,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 72,
+      "length": 14,
+      "start": 5.019999980926514,
+      "end": 5.460000038146973
+    }
+  ]
+}

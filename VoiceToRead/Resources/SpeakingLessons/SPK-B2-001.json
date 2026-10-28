@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-001",
+  "number": 1,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Improving My English",
+    "es": "Mejorando mi inglés"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Reflecting on fluency, sustainable practice, goals and confidence in English speaking.",
+    "es": "Reflexionar sobre la fluidez, práctica sostenible, metas y confianza al hablar inglés."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Persona adulta meditando sobre su aprendizaje de inglés en un ambiente tranquilo con libros y ordenador.",
+    "prompt": "Realistic editorial photo of an adult learner reflecting on English skills at home, books and laptop on desk, soft natural light, calm atmosphere, modern interior, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Expresar reflexiones sobre la fluidez y práctica sostenible.",
+    "Explicar razones y evaluar alternativas para mejorar habilidades.",
+    "Practicar gramática variada para comunicar condiciones y deseos.",
+    "Reflexionar sobre metas y confianza en el aprendizaje del inglés.",
+    "Mejorar comprensión y repetición de textos naturales en inglés."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Lately, I have been reflecting deeply on how to improve my English fluency and maintain a steady practice over time.",
+      "es": "Últimamente, he estado reflexionando profundamente sobre cómo mejorar mi fluidez en inglés y mantener una práctica constante a lo largo del tiempo."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "Although I had practiced irregularly before, I now realize that consistency is the key to real progress.",
+      "es": "Aunque antes practicaba de manera irregular, ahora me doy cuenta de que la constancia es la clave para un progreso real."
+    },
+    {
+      "number": 3,
+      "function": "evaluation",
+      "en": "I had considered attending intensive courses, but I had doubts about sustaining that pace after they ended.",
+      "es": "Había considerado asistir a cursos intensivos, pero tenía dudas sobre mantener ese ritmo una vez que terminaran."
+    },
+    {
+      "number": 4,
+      "function": "decision",
+      "en": "So I decided to develop a manageable routine that I can keep up without feeling overwhelmed.",
+      "es": "Así que decidí desarrollar una rutina manejable que pueda mantener sin sentirme abrumado."
+    },
+    {
+      "number": 5,
+      "function": "experience",
+      "en": "By the time I started this plan, I had already noticed that my confidence had improved slightly.",
+      "es": "Cuando empecé este plan, ya había notado que mi confianza había mejorado un poco."
+    },
+    {
+      "number": 6,
+      "function": "detail",
+      "en": "I found that speaking for just ten minutes daily allowed me to use more complex sentences naturally.",
+      "es": "Descubrí que hablar solo diez minutos al día me permitía usar oraciones más complejas de manera natural."
+    },
+    {
+      "number": 7,
+      "function": "reason",
+      "en": "This happens because regular practice helps my mind retrieve vocabulary faster, which reduces hesitation.",
+      "es": "Esto sucede porque la práctica regular ayuda a mi mente a recuperar el vocabulario más rápido, lo que reduce la vacilación."
+    },
+    {
+      "number": 8,
+      "function": "example",
+      "en": "For instance, instead of pausing to find exact words, I now use related expressions to keep the conversation flowing.",
+      "es": "Por ejemplo, en lugar de hacer pausas para encontrar palabras exactas, ahora utilizo expresiones relacionadas para mantener la conversación fluida."
+    },
+    {
+      "number": 9,
+      "function": "challenge",
+      "en": "However, I acknowledge that I still struggle with certain idiomatic phrases and pronunciation nuances.",
+      "es": "Sin embargo, reconozco que todavía tengo dificultades con ciertas frases idiomáticas y matices de pronunciación."
+    },
+    {
+      "number": 10,
+      "function": "reported_speech",
+      "en": "My tutor told me that making mistakes is part of developing fluency and should not discourage me.",
+      "es": "Mi tutor me dijo que cometer errores es parte de desarrollar la fluidez y no debería desanimarme."
+    },
+    {
+      "number": 11,
+      "function": "modal_advice",
+      "en": "I should focus more on communicating meaning than on perfect grammar during conversations.",
+      "es": "Debería centrarme más en comunicar el significado que en la gramática perfecta durante las conversaciones."
+    },
+    {
+      "number": 12,
+      "function": "negotiation",
+      "en": "When I feel unsure, I try to ask the listener politely if they can clarify or repeat what they said.",
+      "es": "Cuando me siento inseguro, trato de pedirle al interlocutor amablemente si puede aclarar o repetir lo que dijo."
+    },
+    {
+      "number": 13,
+      "function": "condition",
+      "en": "If I hadn't taken time to reflect on my learning, I wouldn't have adjusted my methods effectively.",
+      "es": "Si no hubiera tomado tiempo para reflexionar sobre mi aprendizaje, no habría ajustado mis métodos de manera efectiva."
+    },
+    {
+      "number": 14,
+      "function": "tactful_qualification",
+      "en": "I might not be fluent yet, but I am improving steadily and that motivates me to continue.",
+      "es": "Puede que no sea fluido aún, pero estoy mejorando de forma constante y eso me motiva a seguir."
+    },
+    {
+      "number": 15,
+      "function": "goal",
+      "en": "By the end of the year, I want to feel comfortable discussing complex topics without hesitation.",
+      "es": "Para fin de año, quiero sentirme cómodo discutiendo temas complejos sin vacilar."
+    },
+    {
+      "number": 16,
+      "function": "strategy",
+      "en": "To achieve this, I am planning to engage in conversations with native speakers at least twice a week.",
+      "es": "Para lograr esto, estoy planeando participar en conversaciones con hablantes nativos al menos dos veces por semana."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "Looking back, I realize that small consistent steps have made a bigger difference than intensive short bursts.",
+      "es": "Mirando atrás, me doy cuenta de que pequeños pasos constantes han hecho una diferencia mayor que periodos intensivos cortos."
+    },
+    {
+      "number": 18,
+      "function": "hedging",
+      "en": "I would say that language learning is a journey where patience, persistence, and practice matter most.",
+      "es": "Diría que aprender un idioma es un viaje donde la paciencia, la persistencia y la práctica son lo más importante."
+    },
+    {
+      "number": 19,
+      "function": "planning_future",
+      "en": "If I keep following this sustainable approach, I expect my confidence and fluency to increase notably.",
+      "es": "Si sigo este enfoque sostenible, espero que mi confianza y fluidez aumenten notablemente."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Ultimately, improving my English is less about perfection and more about consistent effort and growth.",
+      "es": "En última instancia, mejorar mi inglés se trata menos de la perfección y más del esfuerzo constante y el crecimiento."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect continuous",
+      "source_paragraph": 1,
+      "example_en": "Lately, I have been reflecting deeply on how to improve my English fluency and maintain a steady practice over time.",
+      "explanation_es": "Have been reflecting presenta una actividad reciente que continúa o sigue siendo relevante."
+    },
+    {
+      "name": "Past perfect",
+      "source_paragraph": 3,
+      "example_en": "I had considered attending intensive courses, but I had doubts about sustaining that pace after they ended.",
+      "explanation_es": "Had considered sitúa una posibilidad valorada antes de otra etapa del relato."
+    },
+    {
+      "name": "Present perfect",
+      "source_paragraph": 17,
+      "example_en": "Looking back, I realize that small consistent steps have made a bigger difference than intensive short bursts.",
+      "explanation_es": "Have made conecta los esfuerzos anteriores con sus resultados actuales."
+    },
+    {
+      "name": "Third conditional",
+      "source_paragraph": 13,
+      "example_en": "If I hadn't taken time to reflect on my learning, I wouldn't have adjusted my methods effectively.",
+      "explanation_es": "If + pasado perfecto y would have + participio describen una alternativa irreal en el pasado."
+    },
+    {
+      "name": "Should for advice",
+      "source_paragraph": 11,
+      "example_en": "I should focus more on communicating meaning than on perfect grammar during conversations.",
+      "explanation_es": "Should focus expresa una recomendación personal."
+    },
+    {
+      "name": "Reported speech",
+      "source_paragraph": 10,
+      "example_en": "My tutor told me that making mistakes is part of developing fluency and should not discourage me.",
+      "explanation_es": "Told me introduce el consejo recibido del tutor."
+    },
+    {
+      "name": "Hedging with would say",
+      "source_paragraph": 18,
+      "example_en": "I would say that language learning is a journey where patience, persistence, and practice matter most.",
+      "explanation_es": "I would say suaviza una opinión y evita presentarla como una certeza absoluta."
+    },
+    {
+      "name": "Defining relative clause",
+      "source_paragraph": 4,
+      "example_en": "So I decided to develop a manageable routine that I can keep up without feeling overwhelmed.",
+      "explanation_es": "That I can keep up especifica qué tipo de rutina se quiere desarrollar."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "improve my English fluency",
+      "meaning_es": "mejorar mi fluidez en inglés",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "real progress",
+      "meaning_es": "progreso real",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "maintain a steady practice over time",
+      "meaning_es": "mantener una práctica constante a lo largo del tiempo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "keep up without feeling overwhelmed",
+      "meaning_es": "mantener sin sentirse abrumado",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "use more complex sentences naturally",
+      "meaning_es": "usar oraciones más complejas de manera natural",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "reduces hesitation",
+      "meaning_es": "reducir la vacilación",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "making mistakes is part of developing fluency",
+      "meaning_es": "cometer errores es parte de desarrollar la fluidez",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "small consistent steps",
+      "meaning_es": "pequeños pasos constantes",
+      "source_paragraph": 17
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por pausas. Las pausas indican momentos para repetir y mejorar la pronunciación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Lately, I have been reflecting",
+              "deeply on how to improve",
+              "my English fluency and maintain",
+              "a steady practice over time."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "This happens because regular",
+              "practice helps my mind",
+              "retrieve vocabulary faster, which",
+              "reduces hesitation."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "By the end of",
+              "the year, I want",
+              "to feel comfortable discussing",
+              "complex topics without hesitation."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-001",
+    "number": "001",
+    "title_en": "Improving My English",
+    "title_es": "Mejorando mi inglés",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Reflexionar sobre fluidez, práctica sostenible y confianza",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect continuous",
+      "Past perfect",
+      "Present perfect",
+      "Third conditional",
+      "Should for advice",
+      "Reported speech",
+      "Hedging with would say",
+      "Defining relative clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

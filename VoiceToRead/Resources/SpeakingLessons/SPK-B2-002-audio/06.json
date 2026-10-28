@@ -1,0 +1,120 @@
+{
+  "text": "Although changing habits is challenging, I knew it was necessary if I wanted to improve my overall well-being.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 8,
+      "start": 0.5400000214576721,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.2400000095367432,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.7400000095367432,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 28,
+      "length": 11,
+      "start": 2.0999999046325684,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 3.319999933242798,
+      "end": 3.5
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 3.5,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.8399999141693115,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 55,
+      "length": 9,
+      "start": 4.179999828338623,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 65,
+      "length": 2,
+      "start": 4.659999847412109,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 68,
+      "length": 1,
+      "start": 5.300000190734863,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 5.519999980926514,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 5.71999979019165,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 6.420000076293945,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 6.420000076293945,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 6.840000152587891,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 99,
+      "length": 4,
+      "start": 7.239999771118164,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 104,
+      "length": 5,
+      "start": 7.679999828338623,
+      "end": 7.699999809265137
+    }
+  ]
+}

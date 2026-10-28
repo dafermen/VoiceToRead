@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-003",
+  "number": 3,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "At the Doctor’s Office",
+    "es": "En la consulta médica"
+  },
+  "category": {
+    "en": "Health and Communication",
+    "es": "Salud y comunicación"
+  },
+  "main_topic": {
+    "en": "Describing health concerns, asking for clarification, and confirming understanding during a routine medical appointment.",
+    "es": "Describir preocupaciones de salud, pedir aclaraciones y confirmar comprensión durante una consulta médica de rutina."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Paciente adulto hablando con doctor en consulta médica, ambiente tranquilo y profesional.",
+    "prompt": "Realistic photo of an adult patient in a doctor's office discussing health concerns with a calm doctor, clinical setting, natural light, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir preocupaciones de salud de forma clara y detallada.",
+    "Formular preguntas para aclarar dudas en una consulta médica.",
+    "Confirmar la comprensión de la información dada por el doctor.",
+    "Usar estructuras condicionales y modales para expresar incertidumbre y posibilidad.",
+    "Practicar vocabulario y expresiones naturales en un contexto médico."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Last week, I scheduled a check-up because I had been feeling unusually tired for several days.",
+      "es": "La semana pasada, programé un chequeo porque me había estado sintiendo inusualmente cansado durante varios días."
+    },
+    {
+      "number": 2,
+      "function": "history",
+      "en": "Before the appointment, I had already made a list of symptoms and questions that concerned me.",
+      "es": "Antes de la cita, ya había hecho una lista de síntomas y preguntas que me preocupaban."
+    },
+    {
+      "number": 3,
+      "function": "arrival",
+      "en": "When I arrived at the clinic, the nurse took my blood pressure and asked about my general health.",
+      "es": "Cuando llegué a la clínica, la enfermera me tomó la presión arterial y preguntó sobre mi salud general."
+    },
+    {
+      "number": 4,
+      "function": "initial_consultation",
+      "en": "The doctor greeted me warmly and said she had reviewed my medical history in advance.",
+      "es": "La doctora me saludó cordialmente y dijo que había revisado mi historial médico con anticipación."
+    },
+    {
+      "number": 5,
+      "function": "concern_description",
+      "en": "I explained that I had been experiencing persistent fatigue and occasional headaches during the past week.",
+      "es": "Expliqué que había estado experimentando fatiga persistente y dolores de cabeza ocasionales durante la última semana."
+    },
+    {
+      "number": 6,
+      "function": "doctor_questioning",
+      "en": "She asked if I had noticed any changes in my sleep patterns or appetite recently.",
+      "es": "Ella preguntó si había notado algún cambio en mis patrones de sueño o apetito recientemente."
+    },
+    {
+      "number": 7,
+      "function": "patient_response",
+      "en": "I replied that my sleep was sometimes restless, but I hadn't changed my diet significantly.",
+      "es": "Respondí que mi sueño a veces era inquieto, pero no había cambiado mi dieta significativamente."
+    },
+    {
+      "number": 8,
+      "function": "clarification_request",
+      "en": "When she mentioned fatigue, I asked whether it could be related to stress or another cause.",
+      "es": "Cuando mencionó la fatiga, pregunté si podría estar relacionada con el estrés u otra causa."
+    },
+    {
+      "number": 9,
+      "function": "doctor_explanation",
+      "en": "She explained that fatigue might result from various factors, and further tests would help clarify the cause.",
+      "es": "Ella explicó que la fatiga podría resultar de varios factores, y que más pruebas ayudarían a aclarar la causa."
+    },
+    {
+      "number": 10,
+      "function": "patient_inquiry",
+      "en": "I asked if the blood work would show anything specific or if I should prepare in any special way.",
+      "es": "Pregunté si los análisis de sangre mostrarían algo en específico o si debía prepararme de alguna forma especial."
+    },
+    {
+      "number": 11,
+      "function": "doctor_confirmation",
+      "en": "Before arranging any tests, I ask for written instructions so that I can check the details later.",
+      "es": "Antes de concertar cualquier prueba, pido instrucciones por escrito para poder comprobar los detalles más tarde."
+    },
+    {
+      "number": 12,
+      "function": "patient_understanding",
+      "en": "I explain that I would rather confirm the preparation with the clinic than rely on something I read online.",
+      "es": "Explico que preferiría confirmar la preparación con la clínica antes que confiar en algo que leí en internet."
+    },
+    {
+      "number": 13,
+      "function": "doctor_approval",
+      "en": "She welcomes my questions and suggests that I contact the clinic if any part of the instructions remains unclear.",
+      "es": "Ella recibe bien mis preguntas y sugiere que contacte con la clínica si alguna parte de las instrucciones sigue sin estar clara."
+    },
+    {
+      "number": 14,
+      "function": "next_steps",
+      "en": "She suggested scheduling a follow-up appointment after the test results were available to discuss next steps.",
+      "es": "Ella sugirió programar una cita de seguimiento una vez que estuvieran disponibles los resultados para discutir los próximos pasos."
+    },
+    {
+      "number": 15,
+      "function": "patient_negotiation",
+      "en": "I asked whether it was possible to receive the results sooner, as I was feeling anxious about the symptoms.",
+      "es": "Pregunté si era posible recibir los resultados antes, ya que me sentía ansioso por los síntomas."
+    },
+    {
+      "number": 16,
+      "function": "doctor_response",
+      "en": "She explained that the laboratory usually took two to three days, but she would call if anything urgent appeared.",
+      "es": "Ella explicó que el laboratorio normalmente tomaba dos o tres días, pero que me llamaría si aparecía algo urgente."
+    },
+    {
+      "number": 17,
+      "function": "patient_reassurance",
+      "en": "I thanked her for the clarification and felt reassured to have a clear plan moving forward.",
+      "es": "Le agradecí por la aclaración y me sentí tranquilo al tener un plan claro para seguir adelante."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Looking back, I realized that asking questions and confirming information helped me feel more in control.",
+      "es": "Al mirar atrás, me di cuenta de que hacer preguntas y confirmar la información me ayudó a sentirme más en control."
+    },
+    {
+      "number": 19,
+      "function": "advice",
+      "en": "I think patients should never hesitate to ask for explanations if something is not clear during appointments.",
+      "es": "Creo que los pacientes nunca deberían dudar en pedir explicaciones si algo no está claro durante las consultas."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Although health concerns can be stressful, clear communication with the doctor makes a significant difference.",
+      "es": "Aunque las preocupaciones de salud pueden ser estresantes, una comunicación clara con el médico hace una diferencia significativa."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "source_paragraph": 1,
+      "example_en": "Last week, I scheduled a check-up because I had been feeling unusually tired for several days.",
+      "explanation_es": "Had been feeling presenta una situación que llevaba un tiempo ocurriendo antes de la cita."
+    },
+    {
+      "name": "Past perfect",
+      "source_paragraph": 2,
+      "example_en": "Before the appointment, I had already made a list of symptoms and questions that concerned me.",
+      "explanation_es": "Had already made indica que la lista estaba preparada antes de la consulta."
+    },
+    {
+      "name": "Indirect questions",
+      "source_paragraph": 6,
+      "example_en": "She asked if I had noticed any changes in my sleep patterns or appetite recently.",
+      "explanation_es": "Asked if introduce una pregunta indirecta con orden de afirmación: I had noticed."
+    },
+    {
+      "name": "Might for possibility",
+      "source_paragraph": 9,
+      "example_en": "She explained that fatigue might result from various factors, and further tests would help clarify the cause.",
+      "explanation_es": "Might result presenta una posibilidad sin afirmar una causa definitiva."
+    },
+    {
+      "name": "Gerund after before",
+      "source_paragraph": 11,
+      "example_en": "Before arranging any tests, I ask for written instructions so that I can check the details later.",
+      "explanation_es": "Antes de una acción, before puede ir seguido de una forma en -ing: arranging."
+    },
+    {
+      "name": "Would rather ... than",
+      "source_paragraph": 12,
+      "example_en": "I explain that I would rather confirm the preparation with the clinic than rely on something I read online.",
+      "explanation_es": "Would rather + verbo y than permiten expresar una preferencia entre dos acciones."
+    },
+    {
+      "name": "Reported speech and future in the past",
+      "source_paragraph": 16,
+      "example_en": "She explained that the laboratory usually took two to three days, but she would call if anything urgent appeared.",
+      "explanation_es": "Explained y would call presentan lo dicho por la médica y una acción posterior desde el pasado."
+    },
+    {
+      "name": "Hedging with I think",
+      "source_paragraph": 19,
+      "example_en": "I think patients should never hesitate to ask for explanations if something is not clear during appointments.",
+      "explanation_es": "I think presenta la idea como una opinión personal."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "scheduled a check-up",
+      "meaning_es": "programé una revisión médica",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "made a list of symptoms",
+      "meaning_es": "hice una lista de síntomas",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "medical history",
+      "meaning_es": "historial médico",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "ask for written instructions",
+      "meaning_es": "pedir instrucciones por escrito",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "check the details",
+      "meaning_es": "comprobar los detalles",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "confirm the preparation",
+      "meaning_es": "confirmar la preparación",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "felt reassured",
+      "meaning_es": "me sentí más tranquilo",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "feel more in control",
+      "meaning_es": "sentirme con más control de la situación",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last week, I scheduled",
+              "a check-up because I",
+              "had been feeling unusually",
+              "tired for several days."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I replied that my",
+              "sleep was sometimes restless,",
+              "but I hadn't changed",
+              "my diet significantly."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "I asked whether it was",
+              "possible to receive the results",
+              "sooner, as I was feeling",
+              "anxious about the symptoms."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-003",
+    "number": "003",
+    "title_en": "At the Doctor’s Office",
+    "title_es": "En la consulta médica",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Salud y comunicación",
+    "main_topic_es": "Comunicación en citas médicas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Past perfect",
+      "Indirect questions",
+      "Might for possibility",
+      "Gerund after before",
+      "Would rather ... than",
+      "Reported speech and future in the past",
+      "Hedging with I think"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

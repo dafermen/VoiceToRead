@@ -1,0 +1,96 @@
+{
+  "text": "After that, I start working on my assignments, making sure I follow my planned schedule.",
+  "duration": 6.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.100000023841858,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.2999999523162842,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 1.5199999809265137,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 1.8799999952316284,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.119999885559082,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 34,
+      "length": 11,
+      "start": 2.440000057220459,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 47,
+      "length": 6,
+      "start": 3.619999885559082,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 59,
+      "length": 1,
+      "start": 3.9800000190734863,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 61,
+      "length": 6,
+      "start": 4.460000038146973,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 4.460000038146973,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 4.760000228881836,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 79,
+      "length": 8,
+      "start": 5.199999809265137,
+      "end": 5.599999904632568
+    }
+  ]
+}

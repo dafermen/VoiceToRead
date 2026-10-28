@@ -1,0 +1,102 @@
+{
+  "text": "If I keep following this sustainable approach, I expect my confidence and fluency to increase notably.",
+  "duration": 9.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.8199999928474426,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 1.159999966621399,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 10,
+      "length": 9,
+      "start": 1.4600000381469727,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.899999976158142,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 25,
+      "length": 11,
+      "start": 2.3399999141693115,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 37,
+      "length": 8,
+      "start": 3.0199999809265137,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 4.400000095367432,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 49,
+      "length": 6,
+      "start": 4.539999961853027,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 5.159999847412109,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 59,
+      "length": 10,
+      "start": 5.579999923706055,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 6.179999828338623,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 6.559999942779541,
+      "end": 7.0
+    },
+    {
+      "location": 82,
+      "length": 2,
+      "start": 7.0,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 85,
+      "length": 8,
+      "start": 7.480000019073486,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 7.960000038146973,
+      "end": 8.420000076293945
+    }
+  ]
+}

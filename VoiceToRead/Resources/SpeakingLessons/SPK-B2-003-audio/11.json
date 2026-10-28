@@ -1,0 +1,108 @@
+{
+  "text": "Before arranging any tests, I ask for written instructions so that I can check the details later.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.7200000286102295,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.340000033378601,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 1.8600000143051147,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 2.859999895095825,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.9600000381469727,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.5399999618530273,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 46,
+      "length": 12,
+      "start": 3.740000009536743,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.300000190734863,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 67,
+      "length": 1,
+      "start": 5.159999847412109,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 5.300000190734863,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 5.519999980926514,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 83,
+      "length": 7,
+      "start": 6.380000114440918,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 91,
+      "length": 5,
+      "start": 6.380000114440918,
+      "end": 6.71999979019165
+    }
+  ]
+}

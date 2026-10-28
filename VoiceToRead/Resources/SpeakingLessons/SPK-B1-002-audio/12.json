@@ -1,0 +1,66 @@
+{
+  "text": "Currently, I am learning to organize these virtual meetings efficiently.",
+  "duration": 4.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 0.6399999856948853,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 1.1200000047683716,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.2999999523162842,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.5800000429153442,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.4600000381469727,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 2.4600000381469727,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 2.9600000381469727,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 3.299999952316284,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 60,
+      "length": 11,
+      "start": 3.740000009536743,
+      "end": 4.460000038146973
+    }
+  ]
+}

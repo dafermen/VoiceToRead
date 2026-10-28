@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-005",
+  "number": 5,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "My First Day at a New Job",
+    "es": "Mi primer día en un nuevo trabajo"
+  },
+  "category": {
+    "en": "Professional Development",
+    "es": "Desarrollo profesional"
+  },
+  "main_topic": {
+    "en": "Meeting colleagues, clarifying responsibilities, asking for help and setting expectations on the first day.",
+    "es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas en el primer día."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Un trabajador adulto con ropa profesional presentándose a colegas en una oficina moderna, ambiente amigable y luminoso, de día, vista horizontal 16:9.",
+    "prompt": "Realistic editorial photo of an adult professional greeting new colleagues in a modern office, friendly and bright atmosphere, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Presentarse y describir el primer día en un trabajo nuevo.",
+    "Expresar y aclarar responsabilidades y expectativas.",
+    "Pedir ayuda y consejos de manera educada y efectiva.",
+    "Utilizar tiempos verbales complejos para explicar experiencias y planes.",
+    "Practicar lectura y repetición con conversaciones laborales realistas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today was my first day at the new company, and I was eager but also a bit nervous to meet my colleagues.",
+      "es": "Hoy fue mi primer día en la nueva empresa, y estaba emocionado pero también un poco nervioso por conocer a mis colegas."
+    },
+    {
+      "number": 2,
+      "function": "initial_impression",
+      "en": "Before arriving, I had already reviewed the company website and prepared some questions about my role.",
+      "es": "Antes de llegar, ya había revisado el sitio web de la empresa y preparado algunas preguntas sobre mi puesto."
+    },
+    {
+      "number": 3,
+      "function": "meeting_colleagues",
+      "en": "As soon as I got there, my manager introduced me to the team, explaining who does what in the department.",
+      "es": "En cuanto llegué, mi gerente me presentó al equipo, explicando quién hace qué en el departamento."
+    },
+    {
+      "number": 4,
+      "function": "reaction",
+      "en": "I noticed that everyone was friendly, but I still felt I should stay observant and learn the unspoken rules.",
+      "es": "Noté que todos eran amables, pero aún así sentí que debía estar atento y aprender las reglas no escritas."
+    },
+    {
+      "number": 5,
+      "function": "clarifying_duties",
+      "en": "Later, I asked my supervisor if I could clarify my main responsibilities to avoid misunderstandings.",
+      "es": "Más tarde, le pregunté a mi supervisor si podía aclarar mis responsabilidades principales para evitar malentendidos."
+    },
+    {
+      "number": 6,
+      "function": "supervisor_response",
+      "en": "She explained that while my tasks would evolve, my immediate focus should be on client communication and reporting.",
+      "es": "Ella explicó que, aunque mis tareas evolucionarían, mi enfoque inmediato debería estar en la comunicación con clientes y los informes."
+    },
+    {
+      "number": 7,
+      "function": "self_reflection",
+      "en": "I realized that had I not asked questions, I might have spent time on tasks that weren’t priorities.",
+      "es": "Me di cuenta de que si no hubiera hecho preguntas, podría haber dedicado tiempo a tareas que no eran prioridad."
+    },
+    {
+      "number": 8,
+      "function": "asking_for_help",
+      "en": "During lunch, I tactfully asked a colleague if they could share tips on managing the daily workflow.",
+      "es": "Durante el almuerzo, pregunté con tacto a un colega si podía compartir consejos para manejar el flujo de trabajo diario."
+    },
+    {
+      "number": 9,
+      "function": "colleague_advice",
+      "en": "She told me that creating detailed checklists and following up regularly had helped her stay organized.",
+      "es": "Ella me dijo que crear listas detalladas y hacer seguimientos regularmente la había ayudado a mantenerse organizada."
+    },
+    {
+      "number": 10,
+      "function": "expressing_expectations",
+      "en": "I mentioned that I hoped to contribute effectively from the start but understood the learning curve.",
+      "es": "Mencioné que esperaba contribuir eficazmente desde el principio pero entendía la curva de aprendizaje."
+    },
+    {
+      "number": 11,
+      "function": "manager_feedback",
+      "en": "My manager had told me earlier that it was perfectly normal to ask for help and that collaboration was valued.",
+      "es": "Mi gerente me había dicho antes que era perfectamente normal pedir ayuda y que se valoraba la colaboración."
+    },
+    {
+      "number": 12,
+      "function": "using_past_perfect",
+      "en": "By the time I left, I had introduced myself to almost everyone on the team and felt more confident.",
+      "es": "Cuando me fui, ya me había presentado casi a todos en el equipo y me sentía más confiado."
+    },
+    {
+      "number": 13,
+      "function": "conditional_thought",
+      "en": "If I hadn’t prepared questions beforehand, I might have missed important details about my role.",
+      "es": "Si no hubiera preparado preguntas antes, podría haber perdido detalles importantes sobre mi puesto."
+    },
+    {
+      "number": 14,
+      "function": "relative_clause_use",
+      "en": "The colleague who shared advice suggested setting reminders to track deadlines, which seemed very practical.",
+      "es": "El colega que compartió consejos sugirió establecer recordatorios para controlar fechas límite, lo que me pareció muy práctico."
+    },
+    {
+      "number": 15,
+      "function": "reported_speech",
+      "en": "She said that understanding priorities early on made her transition smoother and less stressful.",
+      "es": "Ella dijo que entender las prioridades desde temprano hizo su transición más fácil y con menos estrés."
+    },
+    {
+      "number": 16,
+      "function": "modals_for_politiness",
+      "en": "I asked if I could shadow her for a morning to see how she handled client emails effectively.",
+      "es": "Pregunté si podría acompañarla por una mañana para ver cómo manejaba eficazmente los correos de clientes."
+    },
+    {
+      "number": 17,
+      "function": "hedging",
+      "en": "I thought that perhaps observing her workflow would give me insights I hadn’t considered yet.",
+      "es": "Pensé que tal vez observar su flujo de trabajo me daría ideas que aún no había considerado."
+    },
+    {
+      "number": 18,
+      "function": "future_plans",
+      "en": "Tomorrow, I will follow up on my tasks and schedule brief check-ins with my supervisor for guidance.",
+      "es": "Mañana seguiré con mis tareas y programaré breves reuniones con mi supervisor para recibir orientación."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Looking back, the first day was challenging but essential for building a foundation of trust and understanding.",
+      "es": "Al mirar atrás, el primer día fue desafiante pero esencial para construir una base de confianza y comprensión."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "I may still have much to learn, but thanks to my questions and openness, I started on the right foot.",
+      "es": "Puede que aún tenga mucho que aprender, pero gracias a mis preguntas y apertura, comencé con buen pie."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "source_paragraph": 12,
+      "example_en": "By the time I left, I had introduced myself to almost everyone on the team and felt more confident.",
+      "explanation_es": "Had introduced sitúa unas presentaciones antes del momento de salir."
+    },
+    {
+      "name": "Third conditional with might have",
+      "source_paragraph": 13,
+      "example_en": "If I hadn’t prepared questions beforehand, I might have missed important details about my role.",
+      "explanation_es": "If + pasado perfecto y might have + participio expresan un resultado pasado hipotético y posible."
+    },
+    {
+      "name": "Relative clauses",
+      "source_paragraph": 14,
+      "example_en": "The colleague who shared advice suggested setting reminders to track deadlines, which seemed very practical.",
+      "explanation_es": "Who identifica a la persona y which añade un comentario sobre el consejo."
+    },
+    {
+      "name": "Reported speech",
+      "source_paragraph": 15,
+      "example_en": "She said that understanding priorities early on made her transition smoother and less stressful.",
+      "explanation_es": "Said that introduce la explicación de otra persona."
+    },
+    {
+      "name": "Could in a polite request",
+      "source_paragraph": 16,
+      "example_en": "I asked if I could shadow her for a morning to see how she handled client emails effectively.",
+      "explanation_es": "Asked if I could presenta cortésmente una petición que se está relatando."
+    },
+    {
+      "name": "Hedging with perhaps",
+      "source_paragraph": 17,
+      "example_en": "I thought that perhaps observing her workflow would give me insights I hadn’t considered yet.",
+      "explanation_es": "Perhaps matiza una idea sin presentarla como segura."
+    },
+    {
+      "name": "Future with will",
+      "source_paragraph": 18,
+      "example_en": "Tomorrow, I will follow up on my tasks and schedule brief check-ins with my supervisor for guidance.",
+      "explanation_es": "Will follow up y schedule expresan decisiones para el día siguiente."
+    },
+    {
+      "name": "May for concession",
+      "source_paragraph": 20,
+      "example_en": "I may still have much to learn, but thanks to my questions and openness, I started on the right foot.",
+      "explanation_es": "May still have reconoce una limitación antes de destacar un resultado positivo."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "meet my colleagues",
+      "meaning_es": "conocer a mis colegas",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "clarify my main responsibilities",
+      "meaning_es": "aclarar mis responsabilidades principales",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "stay observant",
+      "meaning_es": "mantenerse atento",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "tactfully asked",
+      "meaning_es": "pregunté con tacto",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "setting reminders",
+      "meaning_es": "establecer recordatorios",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "ask for help",
+      "meaning_es": "pedir ayuda",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "on the right foot",
+      "meaning_es": "con buen pie",
+      "source_paragraph": 20
+    },
+    {
+      "expression_en": "learning curve",
+      "meaning_es": "curva de aprendizaje",
+      "source_paragraph": 10
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Today was my first day at",
+              "the new company, and I was",
+              "eager but also a bit nervous",
+              "to meet my colleagues."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I realized that had I",
+              "not asked questions, I might",
+              "have spent time on tasks",
+              "that weren’t priorities."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "She said that understanding",
+              "priorities early on made",
+              "her transition smoother and",
+              "less stressful."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-005",
+    "number": "005",
+    "title_en": "My First Day at a New Job",
+    "title_es": "Mi primer día en un nuevo trabajo",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Desarrollo profesional",
+    "main_topic_es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Third conditional with might have",
+      "Relative clauses",
+      "Reported speech",
+      "Could in a polite request",
+      "Hedging with perhaps",
+      "Future with will",
+      "May for concession"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

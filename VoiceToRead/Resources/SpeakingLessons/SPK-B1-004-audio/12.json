@@ -1,0 +1,96 @@
+{
+  "text": "When asked about my experience, I described how I handled challenges at my previous job.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.3799999952316284,
+      "end": 1.0
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 1.0,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.340000033378601,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 20,
+      "length": 10,
+      "start": 1.6200000047683716,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 32,
+      "length": 1,
+      "start": 2.9200000762939453,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 34,
+      "length": 9,
+      "start": 3.059999942779541,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.559999942779541,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 48,
+      "length": 1,
+      "start": 3.8399999141693115,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 4.380000114440918,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 58,
+      "length": 10,
+      "start": 4.380000114440918,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.880000114440918,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 5.159999847412109,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 75,
+      "length": 8,
+      "start": 5.360000133514404,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.760000228881836,
+      "end": 6.179999828338623
+    }
+  ]
+}

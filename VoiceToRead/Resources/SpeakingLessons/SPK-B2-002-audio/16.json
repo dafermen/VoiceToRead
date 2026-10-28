@@ -1,0 +1,120 @@
+{
+  "text": "When I am unsure about taking on additional tasks, I will clarify my limits with colleagues to avoid misunderstandings.",
+  "duration": 8.319999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.30000001192092896,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 0.5199999809265137,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.8199999928474426,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 1.2599999904632568,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 1.8799999952316284,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 33,
+      "length": 10,
+      "start": 2.259999990463257,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 2.7200000286102295,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 51,
+      "length": 1,
+      "start": 3.859999895095825,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 3.9000000953674316,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 4.139999866485596,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 4.539999961853027,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 5.199999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.199999809265137,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 81,
+      "length": 10,
+      "start": 5.519999980926514,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 5.920000076293945,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 95,
+      "length": 5,
+      "start": 6.28000020980835,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 101,
+      "length": 17,
+      "start": 6.619999885559082,
+      "end": 7.760000228881836
+    }
+  ]
+}

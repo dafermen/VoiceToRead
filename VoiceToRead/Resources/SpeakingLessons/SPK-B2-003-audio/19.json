@@ -1,0 +1,108 @@
+{
+  "text": "I think patients should never hesitate to ask for explanations if something is not clear during appointments.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.4000000059604645,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 8,
+      "length": 8,
+      "start": 0.6600000262260437,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.2799999713897705,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.6399999856948853,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.0999999046325684,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 2.740000009536743,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.4000000953674316,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.5399999618530273,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 50,
+      "length": 12,
+      "start": 3.940000057220459,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.440000057220459,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 66,
+      "length": 9,
+      "start": 5.119999885559082,
+      "end": 5.5
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.5,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 6.079999923706055,
+      "end": 6.5
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 6.5,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 96,
+      "length": 12,
+      "start": 6.820000171661377,
+      "end": 7.260000228881836
+    }
+  ]
+}

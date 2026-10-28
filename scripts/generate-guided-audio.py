@@ -1,8 +1,11 @@
 from pathlib import Path
 import urllib.request,urllib.error,json,hashlib,re,unicodedata,uuid,sys,shutil
+import argparse
+parser=argparse.ArgumentParser();parser.add_argument('--lesson',default='SPK-B1-001');args=parser.parse_args()
+if not re.fullmatch(r'SPK-(B1|B2)-[0-9]{3}',args.lesson):sys.exit('Invalid lesson identifier.')
 root=Path(__file__).resolve().parents[1]; folder=root/'VoiceToRead/Resources/SpeakingLessons'
-lesson=json.loads((folder/'SPK-B1-001.json').read_text(encoding='utf-8'))
-out=folder/'SPK-B1-001-audio';out.mkdir(exist_ok=True)
+lesson=json.loads((folder/(args.lesson+'.json')).read_text(encoding='utf-8'))
+out=folder/(args.lesson+'-audio');out.mkdir(exist_ok=True)
 key=next((line.partition('=')[2].strip().strip('"').strip("'") for line in (root/'.env').read_text(encoding='utf-8-sig').splitlines() if line.partition('=')[0].strip()=='OPENAI_API_KEY'),None)
 if not key:sys.exit('Missing local API key (not printed).')
 def request(path,data,ctype):
@@ -21,14 +24,12 @@ def transcribe(path,text):
 manifest=[]
 for p in lesson['paragraphs']:
  n=p['number'];text=p['en'];path=out/f'{n:02}.mp3';timestamps=out/f'{n:02}.json'
+ if timestamps.exists() and json.loads(timestamps.read_text(encoding='utf-8'))['text']!=text:sys.exit('Source changed: review and regenerate this audio explicitly.')
  if not path.exists():
-  sample=Path(__file__).resolve().parents[1]/'local-voice-preview/paragraph-01-marin-speed085.mp3'
-  if n==1 and sample.exists():shutil.copyfile(sample,path)
-  else:
-   payload={'model':'gpt-4o-mini-tts','voice':'marin','input':text,'speed':0.85,'response_format':'mp3','instructions':'Read the provided text verbatim in clear, natural American English for an adult B1 language learner. Warm, calm teaching voice. Slightly slower than normal conversation, with natural phrasing and intonation. Do not exaggerate sounds, do not add words, introductions, music or sound effects.'}
-   data=request('audio/speech',json.dumps(payload).encode(),'application/json')
-   if len(data)<1000:sys.exit('Invalid audio response.')
-   path.write_bytes(data)
+  payload={'model':'gpt-4o-mini-tts','voice':'marin','input':text,'speed':0.85,'response_format':'mp3','instructions':'Read the provided text verbatim in clear, natural American English for an adult B1 language learner. Warm, calm teaching voice. Slightly slower than normal conversation, with natural phrasing and intonation. Do not exaggerate sounds, do not add words, introductions, music or sound effects.'}
+  data=request('audio/speech',json.dumps(payload).encode(),'application/json')
+  if len(data)<1000:sys.exit('Invalid audio response.')
+  path.write_bytes(data)
  if not timestamps.exists():
   response=transcribe(path,text);words=response.get('words',[])
   spans=[];cursor=0
@@ -45,5 +46,5 @@ for p in lesson['paragraphs']:
   timestamps.write_text(json.dumps({'text':text,'duration':response.get('duration'), 'words':cues},ensure_ascii=False,indent=2),encoding='utf-8')
  manifest.append({'number':n,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'text_sha256':hashlib.sha256(text.encode()).hexdigest()})
  print(f'Paragraph {n:02}: audio and verified word timestamps ready.',flush=True)
-(out/'manifest.json').write_text(json.dumps({'lesson':'SPK-B1-001','voice':'marin','model':'gpt-4o-mini-tts','base_speed':0.85,'ai_generated':True,'paragraphs':manifest},indent=2),encoding='utf-8')
+(out/'manifest.json').write_text(json.dumps({'lesson':args.lesson,'voice':'marin','model':'gpt-4o-mini-tts','base_speed':0.85,'ai_generated':True,'paragraphs':manifest},indent=2),encoding='utf-8')
 print('All twenty offline audio assets completed.',flush=True)

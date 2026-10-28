@@ -1,0 +1,120 @@
+{
+  "text": "By the time I left, I had introduced myself to almost everyone on the team and felt more confident.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.9399999976158142,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.2999999523162842,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.559999942779541,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 20,
+      "length": 1,
+      "start": 2.5,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 2.5399999618530273,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 26,
+      "length": 10,
+      "start": 2.880000114440918,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 37,
+      "length": 6,
+      "start": 3.2200000286102295,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.740000009536743,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 47,
+      "length": 6,
+      "start": 4.039999961853027,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 54,
+      "length": 8,
+      "start": 4.420000076293945,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 5.039999961853027,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 5.21999979019165,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 5.360000133514404,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.639999866485596,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 6.260000228881836,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.539999961853027,
+      "end": 7.0
+    },
+    {
+      "location": 89,
+      "length": 9,
+      "start": 7.0,
+      "end": 7.360000133514404
+    }
+  ]
+}

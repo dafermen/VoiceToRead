@@ -1,0 +1,84 @@
+{
+  "text": "I say it's a dull, constant pain, mostly around my forehead and temples.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 2,
+      "length": 3,
+      "start": 0.46000000834465027,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.2200000286102295,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.600000023841858,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 19,
+      "length": 8,
+      "start": 2.680000066757202,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.700000047683716,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 3.859999895095825,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 4.079999923706055,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 4.420000076293945,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 4.78000020980835,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 5.159999847412109,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 5.460000038146973,
+      "end": 5.880000114440918
+    }
+  ]
+}

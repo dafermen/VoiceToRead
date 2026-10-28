@@ -1,0 +1,114 @@
+{
+  "text": "In summary, adjusting my daily routine is a continuous process that requires patience, self-awareness, and realistic goals.",
+  "duration": 10.220000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.41999998688697815,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 12,
+      "length": 9,
+      "start": 1.899999976158142,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.899999976158142,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.299999952316284,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.619999885559082,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.0799999237060547,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 42,
+      "length": 1,
+      "start": 3.359999895095825,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 44,
+      "length": 10,
+      "start": 3.700000047683716,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 55,
+      "length": 7,
+      "start": 4.179999828338623,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 68,
+      "length": 8,
+      "start": 5.539999961853027,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 77,
+      "length": 8,
+      "start": 5.900000095367432,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 7.460000038146973,
+      "end": 7.5
+    },
+    {
+      "location": 92,
+      "length": 9,
+      "start": 7.5,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 103,
+      "length": 3,
+      "start": 8.539999961853027,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 107,
+      "length": 9,
+      "start": 8.84000015258789,
+      "end": 9.260000228881836
+    },
+    {
+      "location": 117,
+      "length": 5,
+      "start": 9.260000228881836,
+      "end": 9.739999771118164
+    }
+  ]
+}

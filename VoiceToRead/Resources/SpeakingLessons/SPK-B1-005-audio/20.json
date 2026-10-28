@@ -1,0 +1,114 @@
+{
+  "text": "Overall, my first day at the new job went well and I feel ready for the challenges ahead.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.0,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 1.2400000095367432,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.5800000429153442,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.9800000190734863,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.119999885559082,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.319999933242798,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.559999942779541,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.8399999141693115,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.0999999046325684,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.4800000190734863,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 51,
+      "length": 1,
+      "start": 4.059999942779541,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 4.400000095367432,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.820000171661377,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.099999904632568,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 72,
+      "length": 10,
+      "start": 5.440000057220459,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 5.71999979019165,
+      "end": 6.179999828338623
+    }
+  ]
+}

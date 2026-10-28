@@ -1,0 +1,102 @@
+{
+  "text": "When she mentioned fatigue, I asked whether it could be related to stress or another cause.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.3199999928474426,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 9,
+      "start": 0.5400000214576721,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 0.9200000166893005,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 1.940000057220459,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 2.119999885559082,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 2.380000114440918,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 2.6600000858306885,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 2.799999952316284,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 2.9600000381469727,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 3.259999990463257,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 3.4200000762939453,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 4.199999809265137,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 77,
+      "length": 7,
+      "start": 4.71999979019165,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 5.079999923706055,
+      "end": 5.539999961853027
+    }
+  ]
+}

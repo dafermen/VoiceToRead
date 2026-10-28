@@ -5,9 +5,14 @@ import UIKit
 struct SpeakingLessonLibraryView: View {
     @State private var lessons: [SpeakingLesson] = []
     @State private var failed = false
+    @State private var level = "B1"
     var body: some View {
         List {
-            ForEach(lessons) { lesson in
+            Picker("Level", selection: $level) {
+                Text("B1").tag("B1")
+                Text("B2").tag("B2")
+            }.pickerStyle(.segmented).accessibilityIdentifier("guidedLessonLevel")
+            ForEach(lessons.filter { $0.level == level }.sorted { $0.number < $1.number }) { lesson in
                 NavigationLink {
                     SpeakingLessonView(lesson: lesson)
                 } label: {
@@ -51,9 +56,18 @@ private struct SpeakingLessonCover: View {
         .clipped().clipShape(RoundedRectangle(cornerRadius: 12))
         .accessibilityElement(children: .ignore).accessibilityLabel(Text(verbatim: altText ?? lesson.image.altEs))
     }
+    private var coverSymbol: String {
+        switch lesson.number {
+        case 2: "clock"
+        case 3: "stethoscope"
+        case 4: "person.2"
+        case 5: "briefcase"
+        default: "book.closed"
+        }
+    }
     private var placeholder: some View {
         Rectangle().fill(Color.secondary.opacity(0.12))
-            .overlay { Image(systemName: "book.closed").font(.largeTitle).foregroundStyle(.secondary) }
+            .overlay { Image(systemName: coverSymbol).font(.largeTitle).foregroundStyle(.secondary) }
     }
 }
 

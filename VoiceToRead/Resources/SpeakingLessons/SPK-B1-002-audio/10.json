@@ -1,0 +1,84 @@
+{
+  "text": "In the afternoon, I focus on meetings and collaboration with my colleagues online.",
+  "duration": 6.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.20000000298023224
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.20000000298023224,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.9399999976158142,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 18,
+      "length": 1,
+      "start": 1.2999999523162842,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 20,
+      "length": 5,
+      "start": 1.7799999713897705,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 26,
+      "length": 2,
+      "start": 2.180000066757202,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 29,
+      "length": 8,
+      "start": 2.5399999618530273,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.9000000953674316,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 42,
+      "length": 13,
+      "start": 3.319999933242798,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.9000000953674316,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 4.28000020980835,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 64,
+      "length": 10,
+      "start": 4.739999771118164,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.019999980926514,
+      "end": 5.539999961853027
+    }
+  ]
+}
