@@ -1,0 +1,108 @@
+{
+  "text": "In retrospect, I see that talking openly about expectations isn’t always straightforward, yet it’s worth the effort.",
+  "duration": 9.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 3,
+      "length": 10,
+      "start": 0.4399999976158142,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 15,
+      "length": 1,
+      "start": 1.7799999713897705,
+      "end": 2.0
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 2.200000047683716,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 2.5199999809265137,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.880000114440918,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.4000000953674316,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 47,
+      "length": 12,
+      "start": 3.759999990463257,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 4.639999866485596,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 5.420000076293945,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 73,
+      "length": 15,
+      "start": 5.880000114440918,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 7.179999828338623,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 94,
+      "length": 4,
+      "start": 7.420000076293945,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 99,
+      "length": 5,
+      "start": 8.020000457763672,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 105,
+      "length": 3,
+      "start": 8.319999694824219,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 8.640000343322754,
+      "end": 8.84000015258789
+    }
+  ]
+}

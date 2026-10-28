@@ -1,0 +1,120 @@
+{
+  "text": "Last Thursday, I texted my friend Jordan, suggesting we meet for dinner as we often do once a month.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 5,
+      "length": 8,
+      "start": 0.6800000071525574,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 1,
+      "start": 1.7400000095367432,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 2.0399999618530273,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 2.2799999713897705,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.880000114440918,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 42,
+      "length": 10,
+      "start": 4.199999809265137,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.5
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.5,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 4.699999809265137,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 65,
+      "length": 6,
+      "start": 4.980000019073486,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 5.139999866485596,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.579999923706055,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 78,
+      "length": 5,
+      "start": 5.78000020980835,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 6.099999904632568,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 6.400000095367432,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 92,
+      "length": 1,
+      "start": 6.639999866485596,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 7.039999961853027,
+      "end": 7.039999961853027
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "text": "Carla mentioned she once lived in a noisy building and decided she never wanted to repeat that experience.",
+  "duration": 8.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.5799999833106995,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.8799999952316284,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.2799999713897705,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.5999999046325684,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.799999952316284,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 3.3399999141693115,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 42,
+      "length": 8,
+      "start": 3.3399999141693115,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.7799999713897705,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 55,
+      "length": 7,
+      "start": 4.440000057220459,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 4.900000095367432,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 5.380000114440918,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 5.739999771118164,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 6.079999923706055,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 6.480000019073486,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.699999809265137,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 95,
+      "length": 10,
+      "start": 7.039999961853027,
+      "end": 7.639999866485596
+    }
+  ]
+}

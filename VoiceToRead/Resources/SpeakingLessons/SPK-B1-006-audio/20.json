@@ -1,0 +1,102 @@
+{
+  "text": "This experience taught me that good communication and patience are important when travel plans change unexpectedly.",
+  "duration": 8.520000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 5,
+      "length": 10,
+      "start": 0.46000000834465027,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.1799999475479126,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.7400000095367432,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.059999942779541,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 36,
+      "length": 13,
+      "start": 2.299999952316284,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 2.940000057220459,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 54,
+      "length": 8,
+      "start": 3.4600000381469727,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 3.9800000190734863,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 67,
+      "length": 9,
+      "start": 4.599999904632568,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.260000228881836,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 82,
+      "length": 6,
+      "start": 5.739999771118164,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 6.119999885559082,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 95,
+      "length": 6,
+      "start": 6.559999942779541,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 102,
+      "length": 12,
+      "start": 7.119999885559082,
+      "end": 7.880000114440918
+    }
+  ]
+}

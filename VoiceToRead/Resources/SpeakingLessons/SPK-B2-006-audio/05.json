@@ -1,0 +1,102 @@
+{
+  "text": "I approached the customer service desk and explained my situation, asking what alternatives they could recommend.",
+  "duration": 8.5600004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 2,
+      "length": 10,
+      "start": 0.699999988079071,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.159999966621399,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 17,
+      "length": 8,
+      "start": 1.600000023841858,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 1.940000057220459,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.4000000953674316,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 43,
+      "length": 9,
+      "start": 3.4200000762939453,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 3.9000000953674316,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 56,
+      "length": 9,
+      "start": 4.260000228881836,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 5.920000076293945,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.920000076293945,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 79,
+      "length": 12,
+      "start": 6.260000228881836,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 6.860000133514404,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 97,
+      "length": 5,
+      "start": 7.21999979019165,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 103,
+      "length": 9,
+      "start": 7.460000038146973,
+      "end": 7.880000114440918
+    }
+  ]
+}

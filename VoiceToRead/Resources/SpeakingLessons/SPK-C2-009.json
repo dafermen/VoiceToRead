@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-009",
+  "number": 9,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Friendship and Difficult Conversations",
+    "es": "Amistad y conversaciones difíciles"
+  },
+  "category": {
+    "en": "Relationships and Communication",
+    "es": "Relaciones y comunicación"
+  },
+  "main_topic": {
+    "en": "A concrete friendship misunderstanding about plans and boundaries; expressing feelings, negotiating expectations, and interpreting ambiguity.",
+    "es": "Un malentendido concreto entre amigos sobre planes y límites; expresar sentimientos, negociar expectativas e interpretar la ambigüedad."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos amigos sentados en una cafetería teniendo una conversación seria y reflexiva.",
+    "prompt": "Realistic editorial photo, two adult friends talking seriously at a cozy café table, expressive faces, indirect daylight, tense and thoughtful mood, no visible text, horizontal 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Interpretar ambigüedad y matizar opiniones al negociar con amigos.",
+    "Expresar desacuerdo y emociones de forma diplomática.",
+    "Reformular argumentos para aclarar expectativas y límites.",
+    "Identificar estructuras gramaticales complejas en contexto real.",
+    "Practicar lectura, repetición y pronunciación de inglés avanzado."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Thursday, I texted my friend Jordan, suggesting we meet for dinner as we often do once a month.",
+      "es": "El jueves pasado le mandé un mensaje a mi amigo Jordan, proponiendo cenar juntos como solemos hacer una vez al mes."
+    },
+    {
+      "number": 2,
+      "function": "expectation",
+      "en": "Though he replied with a brief 'Maybe, let’s see,' I assumed we’d work it out as usual.",
+      "es": "Aunque respondió con un escueto 'Quizás, ya veremos', supuse que lo arreglaríamos como siempre."
+    },
+    {
+      "number": 3,
+      "function": "ambiguity",
+      "en": "However, his answer struck me as unusually noncommittal, which left me wondering if I’d missed something.",
+      "es": "Sin embargo, su respuesta me pareció poco comprometida, lo que me dejó pensando si me había perdido algo."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "Instead of clarifying, I hesitated, worried that pressing might come across as needy.",
+      "es": "En vez de aclarar, vacilé, preocupado de que insistir pudiera parecer necesitado."
+    },
+    {
+      "number": 5,
+      "function": "action",
+      "en": "The day passed, and when I heard nothing, I sent a neutral follow-up: 'No worries if you’re busy, just let me know.'",
+      "es": "Pasó el día y, al no saber nada, envié un mensaje neutral de seguimiento: 'No pasa nada si estás ocupado, solo avísame.'"
+    },
+    {
+      "number": 6,
+      "function": "response",
+      "en": "Jordan replied later, apologizing and saying he felt overwhelmed and needed space, which surprised me.",
+      "es": "Jordan respondió más tarde, disculpándose y diciendo que se sentía agobiado y que necesitaba espacio, lo que me sorprendió."
+    },
+    {
+      "number": 7,
+      "function": "emotional_reaction",
+      "en": "Uncertain whether I’d overstepped, I questioned myself—did I ignore subtle cues, or had I expected too much?",
+      "es": "Sin saber si me había excedido, me cuestioné a mí mismo: ¿había ignorado señales sutiles o esperaba demasiado?"
+    },
+    {
+      "number": 8,
+      "function": "reformulation",
+      "en": "I decided to acknowledge his message without minimizing his needs or over-explaining mine.",
+      "es": "Decidí reconocer su mensaje sin minimizar sus necesidades ni explicar demasiado las mías."
+    },
+    {
+      "number": 9,
+      "function": "dialogue",
+      "en": "So I wrote, 'Thanks for saying so—I hope you have the time you need, and I appreciate you telling me directly.'",
+      "es": "Así que escribí: 'Gracias por decirlo; espero que tengas el tiempo que necesites y aprecio que me lo digas directamente.'"
+    },
+    {
+      "number": 10,
+      "function": "extension",
+      "en": "But as I sent it, I wondered if my words might sound withdrawn or if they left room for reconnection.",
+      "es": "Pero al enviarlo, me pregunté si mis palabras podrían sonar distantes o si dejaban espacio para reconectar."
+    },
+    {
+      "number": 11,
+      "function": "introspection",
+      "en": "By the weekend, I reflected on my tendency to fill silence with assumptions rather than open questions.",
+      "es": "Para el fin de semana, reflexioné sobre mi tendencia a llenar el silencio con suposiciones en vez de preguntas abiertas."
+    },
+    {
+      "number": 12,
+      "function": "clarification",
+      "en": "When we finally spoke, I cautiously broached the topic: 'I wanted to check if I misunderstood anything from your last message.'",
+      "es": "Cuando finalmente hablamos, abordé el tema con cautela: 'Quise asegurarme de no haber malinterpretado nada de tu último mensaje.'"
+    },
+    {
+      "number": 13,
+      "function": "negotiation",
+      "en": "Jordan explained that he valued our friendship but had been feeling social pressure and wished for more unstructured downtime.",
+      "es": "Jordan explicó que valora nuestra amistad pero se sentía presionado socialmente y quería más tiempo libre sin planes."
+    },
+    {
+      "number": 14,
+      "function": "distinction",
+      "en": "I distinguished between giving space and disappearing entirely, so I said, 'I want to respect your boundaries but also maintain our connection.'",
+      "es": "Hice una distinción entre dar espacio y desaparecer por completo, así que dije: 'Quiero respetar tus límites pero también mantener nuestra conexión.'"
+    },
+    {
+      "number": 15,
+      "function": "agreement",
+      "en": "He agreed and suggested we be more explicit about our needs in future invitations.",
+      "es": "Él estuvo de acuerdo y propuso que en el futuro seamos más explícitos sobre nuestras necesidades al invitar."
+    },
+    {
+      "number": 16,
+      "function": "compromise",
+      "en": "Rather than settling for a vague arrangement, we decided to check in before making plans, calibrating our comfort levels each time.",
+      "es": "En vez de conformarnos con un acuerdo difuso, decidimos preguntar antes de hacer planes, calibrando nuestros niveles de comodidad cada vez."
+    },
+    {
+      "number": 17,
+      "function": "meta_comment",
+      "en": "In retrospect, I see that talking openly about expectations isn’t always straightforward, yet it’s worth the effort.",
+      "es": "En retrospectiva, veo que hablar abiertamente sobre expectativas no siempre es sencillo, pero vale la pena el esfuerzo."
+    },
+    {
+      "number": 18,
+      "function": "learning",
+      "en": "This experience reminded me that ambiguity in friendships can signal vulnerability, not just rejection.",
+      "es": "Esta experiencia me recordó que la ambigüedad en la amistad puede indicar vulnerabilidad y no solo rechazo."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "Now, Jordan and I consider boundaries as dynamic, discussing them as our situations shift, rather than imposing rigid rules.",
+      "es": "Ahora, Jordan y yo consideramos los límites como algo dinámico y los discutimos según nuestras circunstancias en vez de imponer reglas rígidas."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Our friendship is steadier for having allowed for discomfort, candidness, and a bit of uncertainty, rather than demanding perfect understanding.",
+      "es": "Nuestra amistad es más sólida gracias a haber aceptado la incomodidad, la franqueza y cierta incertidumbre, en vez de exigir comprensión perfecta."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present participle clause",
+      "example_en": "Last Thursday, I texted my friend Jordan, suggesting we meet for dinner as we often do once a month.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Which referring to a whole clause",
+      "example_en": "However, his answer struck me as unusually noncommittal, which left me wondering if I’d missed something.",
+      "explanation_es": "Which retoma la situación anterior para añadir su efecto o un comentario.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "I decided to acknowledge his message without minimizing his needs or over-explaining mine.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "But as I sent it, I wondered if my words might sound withdrawn or if they left room for reconnection.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Past perfect continuous",
+      "example_en": "Jordan explained that he valued our friendship but had been feeling social pressure and wished for more unstructured downtime.",
+      "explanation_es": "Had been + verbo en -ing presenta una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than settling for a vague arrangement, we decided to check in before making plans, calibrating our comfort levels each time.",
+      "explanation_es": "Rather than seguido de -ing presenta una alternativa que se decide evitar.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Gerund as subject",
+      "example_en": "In retrospect, I see that talking openly about expectations isn’t always straightforward, yet it’s worth the effort.",
+      "explanation_es": "Un grupo en -ing funciona como sujeto de la oración.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "So I wrote, 'Thanks for saying so—I hope you have the time you need, and I appreciate you telling me directly.'",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 9
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "left me wondering",
+      "meaning_es": "me dejó pensando / preguntándome",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "come across as needy",
+      "meaning_es": "parecer necesitado o dependiente",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "no worries if you’re busy",
+      "meaning_es": "no te preocupes si estás ocupado",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "needed space",
+      "meaning_es": "necesitaba espacio",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I questioned myself",
+      "meaning_es": "me cuestioné a mí mismo",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "over-explaining mine",
+      "meaning_es": "explicar demasiado mis propias necesidades",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "maintain our connection",
+      "meaning_es": "mantener nuestra conexión",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "boundaries",
+      "meaning_es": "límites personales",
+      "source_paragraph": 14
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Uncertain whether I’d overstepped,",
+              "I questioned myself—did I ignore subtle cues,",
+              "or had I expected too much?"
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "I distinguished between giving space and disappearing entirely,",
+              "so I said,",
+              "'I want to respect your boundaries but also maintain our connection.'"
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "This experience reminded me",
+              "that ambiguity in friendships",
+              "can signal vulnerability, not just rejection."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, manteniendo claridad y entonación natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-009",
+    "number": "009",
+    "title_en": "Friendship and Difficult Conversations",
+    "title_es": "Amistad y conversaciones difíciles",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Relaciones y comunicación",
+    "main_topic_es": "Malentendidos y negociación en la amistad",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present participle clause",
+      "Which referring to a whole clause",
+      "Without + gerund",
+      "Might for possibility",
+      "Past perfect continuous",
+      "Rather than + gerund",
+      "Gerund as subject",
+      "Defining relative clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

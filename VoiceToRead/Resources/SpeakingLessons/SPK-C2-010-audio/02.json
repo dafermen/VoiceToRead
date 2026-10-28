@@ -1,0 +1,120 @@
+{
+  "text": "It struck me how often we both glanced at our phones, each ping summoning a momentary lapse in attention.",
+  "duration": 8.5600004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.9200000166893005,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 1.2999999523162842,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 1.9600000381469727,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 2.3399999141693115,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 2.680000066757202,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 3.059999942779541,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.380000114440918,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 46,
+      "length": 6,
+      "start": 3.8399999141693115,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 5.059999942779541,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 5.179999828338623,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 64,
+      "length": 9,
+      "start": 5.639999866485596,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 74,
+      "length": 1,
+      "start": 6.199999809265137,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 76,
+      "length": 9,
+      "start": 6.400000095367432,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 7.119999885559082,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 7.380000114440918,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 7.800000190734863,
+      "end": 8.119999885559082
+    }
+  ]
+}

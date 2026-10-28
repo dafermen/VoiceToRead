@@ -1,0 +1,114 @@
+{
+  "text": "Together, we searched the store and found another jacket in a different color but with the right sleeves.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.7599999904632568,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 13,
+      "length": 8,
+      "start": 1.4800000190734863,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.7000000476837158,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.200000047683716,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.3399999141693115,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.9600000381469727,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 3.140000104904175,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.559999942779541,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 3.9800000190734863,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 60,
+      "length": 1,
+      "start": 4.340000152587891,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 62,
+      "length": 9,
+      "start": 4.619999885559082,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 4.78000020980835,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 5.159999847412109,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 5.860000133514404,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.059999942779541,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 91,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 6.619999885559082,
+      "end": 6.960000038146973
+    }
+  ]
+}

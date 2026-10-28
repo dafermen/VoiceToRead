@@ -1,0 +1,96 @@
+{
+  "text": "We agreed to always check in and confirm details before making plans in the future.",
+  "duration": 6.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.3199999928474426,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.6600000262260437,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.2000000476837158,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 20,
+      "length": 5,
+      "start": 1.4800000190734863,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 26,
+      "length": 2,
+      "start": 1.840000033378601,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.1600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 33,
+      "length": 7,
+      "start": 2.6600000858306885,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 3.119999885559082,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 49,
+      "length": 6,
+      "start": 3.740000009536743,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 4.179999828338623,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.980000019073486,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.179999828338623,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 5.300000190734863,
+      "end": 5.639999866485596
+    }
+  ]
+}

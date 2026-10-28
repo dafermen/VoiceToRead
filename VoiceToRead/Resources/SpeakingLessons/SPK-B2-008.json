@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-008",
+  "number": 8,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y solución de problemas"
+  },
+  "category": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "Explaining a mistaken or unsuitable purchase, justifying preferences, comparing options, and negotiating a practical solution.",
+    "es": "Explicar una compra equivocada o inadecuada, justificar preferencias, comparar opciones y negociar una solución práctica."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Cliente adulto en una tienda dialogando con un empleado, mostrando un producto con expresión de duda.",
+    "prompt": "Realistic editorial photograph, adult customer in a store talking to a store clerk, holding a product and looking unsure, bright indoor lighting, neutral background, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una situación de compra inesperada o insatisfactoria.",
+    "Justificar preferencias personales y explicar causas de insatisfacción.",
+    "Comparar oportunidades y opciones alternativas al resolver un problema.",
+    "Negociar y proponer soluciones prácticas usando inglés natural.",
+    "Practicar lectura y repetición en inglés americano avanzado."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Friday, I bought a smart speaker at a local electronics store, hoping it would make my daily routine easier.",
+      "es": "El viernes pasado, compré un altavoz inteligente en una tienda de electrónica local, esperando que facilitara mi rutina diaria."
+    },
+    {
+      "number": 2,
+      "function": "expectation",
+      "en": "The sales assistant assured me that this model would connect seamlessly with my phone and respond to voice commands quickly.",
+      "es": "El asistente de ventas me aseguró que este modelo se conectaría perfectamente con mi teléfono y respondería rápido a mis comandos de voz."
+    },
+    {
+      "number": 3,
+      "function": "reality",
+      "en": "However, when I set it up at home, it struggled to understand even basic instructions and rarely recognized my accent.",
+      "es": "Sin embargo, cuando lo instalé en casa, le costaba entender instrucciones básicas y rara vez reconocía mi acento."
+    },
+    {
+      "number": 4,
+      "function": "comparison",
+      "en": "My friend owns a different brand, which seems far more reliable and accurate in everyday use.",
+      "es": "Mi amiga tiene otra marca, que parece mucho más confiable y precisa en el uso diario."
+    },
+    {
+      "number": 5,
+      "function": "preference_reason",
+      "en": "I realized I needed a device that could actually adapt to various voices, especially since my family speaks both English and Spanish at home.",
+      "es": "Me di cuenta de que necesitaba un dispositivo que realmente pudiera adaptarse a varias voces, especialmente porque mi familia habla inglés y español en casa."
+    },
+    {
+      "number": 6,
+      "function": "cause",
+      "en": "The main issue, in my opinion, is that this speaker's software doesn't support multilingual settings as well as I'd hoped.",
+      "es": "El principal problema, en mi opinión, es que el software de este altavoz no soporta configuraciones multilingües tan bien como esperaba."
+    },
+    {
+      "number": 7,
+      "function": "action",
+      "en": "After two frustrating days, I packed up the speaker and returned to the store to explain the situation face to face.",
+      "es": "Después de dos días frustrantes, empaqué el altavoz y volví a la tienda para explicar la situación cara a cara."
+    },
+    {
+      "number": 8,
+      "function": "explanation",
+      "en": "I politely described my family's needs, emphasizing how we needed products that could switch languages without constant resets.",
+      "es": "Describí amablemente las necesidades de mi familia, enfatizando que necesitábamos productos que pudieran cambiar de idioma sin reinicios constantes."
+    },
+    {
+      "number": 9,
+      "function": "objection",
+      "en": "The salesperson reminded me that all specifications had been listed on the box and online, and insisted the speaker was working correctly.",
+      "es": "El vendedor me recordó que todas las especificaciones estaban indicadas en la caja y en línea, e insistió en que el altavoz funcionaba correctamente."
+    },
+    {
+      "number": 10,
+      "function": "counter_argument",
+      "en": "I acknowledged the details, but explained that technical compatibility does not always guarantee a product meets practical needs.",
+      "es": "Reconocí los detalles, pero expliqué que la compatibilidad técnica no siempre garantiza que un producto satisfaga necesidades prácticas."
+    },
+    {
+      "number": 11,
+      "function": "justification",
+      "en": "Since user experience is essential, I asked if there was a way to exchange my device for a brand that had better voice recognition reviews.",
+      "es": "Como la experiencia del usuario es fundamental, pregunté si era posible cambiar mi dispositivo por una marca con mejores reseñas en reconocimiento de voz."
+    },
+    {
+      "number": 12,
+      "function": "condition",
+      "en": "If I could find a suitable alternative in their inventory, I would be more than happy to pay the difference, if necessary.",
+      "es": "Si pudiera encontrar una alternativa adecuada en su inventario, estaría más que dispuesto a pagar la diferencia, si fuera necesario."
+    },
+    {
+      "number": 13,
+      "function": "negotiation",
+      "en": "The employee hesitated, reminding me that refunds were not guaranteed, but she did offer to check available options.",
+      "es": "La empleada dudó, recordándome que los reembolsos no estaban garantizados, pero se ofreció a revisar las opciones disponibles."
+    },
+    {
+      "number": 14,
+      "function": "exploration",
+      "en": "Together, we looked at other models, comparing their features and checking which ones included reliable language support.",
+      "es": "Juntos, observamos otros modelos, comparando sus funciones y verificando cuáles ofrecían soporte confiable para varios idiomas."
+    },
+    {
+      "number": 15,
+      "function": "evaluation",
+      "en": "After some discussion, we found a device with excellent multilingual performance and a longer warranty.",
+      "es": "Tras discutirlo, encontramos un dispositivo con excelente rendimiento multilingüe y una garantía más larga."
+    },
+    {
+      "number": 16,
+      "function": "agreement",
+      "en": "Although this new model cost a little more, I decided the extra features and peace of mind were worth it.",
+      "es": "Aunque este nuevo modelo costaba un poco más, decidí que las funciones adicionales y la tranquilidad valían la pena."
+    },
+    {
+      "number": 17,
+      "function": "outcome",
+      "en": "We settled the price difference, and she completed the exchange efficiently, making sure I understood the settings.",
+      "es": "Acordamos la diferencia de precio, y ella completó el cambio de manera eficiente, asegurándose de que entendiera la configuración."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Looking back, I think asking for a practical solution and showing flexibility helped us resolve the issue fairly.",
+      "es": "Al mirar atrás, creo que pedir una solución práctica y mostrar flexibilidad nos ayudó a resolver el problema de forma justa."
+    },
+    {
+      "number": 19,
+      "function": "lesson_learned",
+      "en": "Now, I always research how products perform in real homes before I buy, not just what the promotional material claims.",
+      "es": "Ahora siempre investigo cómo funcionan los productos en hogares reales antes de comprar, no solo lo que dicen los folletos promocionales."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "At the end of the day, I feel satisfied that I found a tool that truly makes my family's daily life more convenient.",
+      "es": "Al final del día, me siento satisfecho de haber encontrado una herramienta que realmente facilita la vida diaria de mi familia."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present participle clause",
+      "example_en": "Last Friday, I bought a smart speaker at a local electronics store, hoping it would make my daily routine easier.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Non-defining relative clause",
+      "example_en": "My friend owns a different brand, which seems far more reliable and accurate in everyday use.",
+      "explanation_es": "Una cláusula de relativo entre comas añade información sobre algo ya identificado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "I realized I needed a device that could actually adapt to various voices, especially since my family speaks both English and Spanish at home.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Past perfect passive",
+      "example_en": "The salesperson reminded me that all specifications had been listed on the box and online, and insisted the speaker was working correctly.",
+      "explanation_es": "Had been + participio describe una acción recibida antes de otro momento pasado.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "If I could find a suitable alternative in their inventory, I would be more than happy to pay the difference, if necessary.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Emphatic do",
+      "example_en": "The employee hesitated, reminding me that refunds were not guaranteed, but she did offer to check available options.",
+      "explanation_es": "Do + infinitivo en una afirmación refuerza la idea expresada.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although this new model cost a little more, I decided the extra features and peace of mind were worth it.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Now, I always research how products perform in real homes before I buy, not just what the promotional material claims.",
+      "explanation_es": "El presente simple describe hábitos, situaciones actuales o hechos generales.",
+      "source_paragraph": 19
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "hoping it would make my daily routine easier",
+      "meaning_es": "esperando que facilitaría mi rutina diaria",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "rarely recognized my accent",
+      "meaning_es": "rara vez reconocía mi acento",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "in my opinion",
+      "meaning_es": "en mi opinión",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "face to face",
+      "meaning_es": "cara a cara",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "user experience is essential",
+      "meaning_es": "la experiencia del usuario es fundamental",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "peace of mind",
+      "meaning_es": "tranquilidad",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "settled the price difference",
+      "meaning_es": "acordamos la diferencia de precio",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "at the end of the day",
+      "meaning_es": "al final del día",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "However,",
+              "when I set it up at home,",
+              "it struggled to understand even basic instructions and rarely recognized my accent."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "If I could find a suitable alternative in their inventory,",
+              "I would be more than happy to pay the difference,",
+              "if necessary."
+            ]
+          },
+          {
+            "source_paragraph": 17,
+            "segments": [
+              "We settled the price difference,",
+              "and she completed the exchange efficiently,",
+              "making sure I understood the settings."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-008",
+    "number": "008",
+    "title_en": "Shopping and Solving a Problem",
+    "title_es": "Compras y solución de problemas",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Compras y resolución de problemas",
+    "main_topic_es": "Explicar una compra equivocada y negociar soluciones",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present participle clause",
+      "Non-defining relative clause",
+      "Defining relative clause",
+      "Past perfect passive",
+      "Second conditional",
+      "Emphatic do",
+      "Concessive clause",
+      "Present simple"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

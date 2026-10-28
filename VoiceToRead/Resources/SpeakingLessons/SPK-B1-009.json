@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-009",
+  "number": 9,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Friendship and Difficult Conversations",
+    "es": "Amistad y conversaciones difíciles"
+  },
+  "category": {
+    "en": "Relationships and Social Skills",
+    "es": "Relaciones y habilidades sociales"
+  },
+  "main_topic": {
+    "en": "Dealing with misunderstandings in friendships, expressing feelings, clarifying boundaries, and negotiating future plans.",
+    "es": "Manejar malentendidos en la amistad, expresar sentimientos, aclarar límites y negociar planes futuros."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Dos adultos conversando en una cafetería, con expresiones serias pero amistosas.",
+    "prompt": "Realistic editorial photograph, two adult friends talking seriously but kindly in a coffee shop, natural daylight, cozy atmosphere, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir malentendidos en una amistad.",
+    "Expresar y explicar sentimientos personales.",
+    "Solicitar y proponer cambios en planes o acuerdos.",
+    "Negociar límites y expectativas de manera práctica.",
+    "Practicar lectura y repetición con inglés americano natural."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Saturday, I had a misunderstanding with my friend Ryan about our weekend plans.",
+      "es": "El sábado pasado tuve un malentendido con mi amigo Ryan sobre nuestros planes del fin de semana."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "He thought we would spend the whole day together, but I only expected to meet him for lunch.",
+      "es": "Él pensaba que pasaríamos todo el día juntos, pero yo solo esperaba encontrarme con él para almorzar."
+    },
+    {
+      "number": 3,
+      "function": "trigger",
+      "en": "When he called that morning, he sounded excited and asked what time I wanted to start our day.",
+      "es": "Cuando me llamó esa mañana, sonaba emocionado y me preguntó a qué hora quería empezar nuestro día."
+    },
+    {
+      "number": 4,
+      "function": "realization",
+      "en": "I realized right away that we hadn't been clear about our plans the day before.",
+      "es": "Me di cuenta de inmediato de que no habíamos sido claros sobre nuestros planes el día anterior."
+    },
+    {
+      "number": 5,
+      "function": "feeling",
+      "en": "I felt both surprised and a little nervous because I already had something else to do in the afternoon.",
+      "es": "Me sentí sorprendido y un poco nervioso porque ya tenía otro compromiso para la tarde."
+    },
+    {
+      "number": 6,
+      "function": "response",
+      "en": "So I told Ryan honestly, \"I was only planning to meet for lunch, since I have to work later.\"",
+      "es": "Así que le dije sinceramente a Ryan: \"Solo pensaba que íbamos a almorzar, porque tengo que trabajar después.\""
+    },
+    {
+      "number": 7,
+      "function": "reaction",
+      "en": "He sounded disappointed and quiet for a moment, then he said it was okay but seemed confused.",
+      "es": "Él sonó decepcionado y se quedó en silencio por un momento, luego dijo que estaba bien pero parecía confundido."
+    },
+    {
+      "number": 8,
+      "function": "past_habit",
+      "en": "We used to plan our weekends without checking in with each other's schedules first.",
+      "es": "Antes solíamos planear los fines de semana sin consultar primero las agendas del otro."
+    },
+    {
+      "number": 9,
+      "function": "reflection",
+      "en": "That habit often led to mix-ups, but we never really talked about what each of us wanted.",
+      "es": "Ese hábito a menudo causaba confusiones, pero nunca hablamos realmente sobre lo que cada uno quería."
+    },
+    {
+      "number": 10,
+      "function": "suggestion",
+      "en": "I suggested we could talk a bit now to make sure we understood each other's plans better for next time.",
+      "es": "Le sugerí que podíamos conversar un poco para asegurarnos de entender mejor los planes del otro la próxima vez."
+    },
+    {
+      "number": 11,
+      "function": "explanation",
+      "en": "I explained, \"I need time for myself on weekends, so I prefer shorter meet-ups sometimes.\"",
+      "es": "Le expliqué: \"Necesito tiempo para mí los fines de semana, así que a veces prefiero reuniones más cortas.\""
+    },
+    {
+      "number": 12,
+      "function": "reassurance",
+      "en": "But I also told him, \"I really enjoy spending time with you, and I don't want you to feel ignored.\"",
+      "es": "Pero también le dije: \"Realmente disfruto pasar tiempo contigo y no quiero que pienses que te ignoro.\""
+    },
+    {
+      "number": 13,
+      "function": "clarify",
+      "en": "Ryan said he was glad I told him honestly, and he shared that he sometimes worries about being left out.",
+      "es": "Ryan dijo que le alegraba que yo fuera sincero, y compartió que a veces le preocupa quedarse fuera."
+    },
+    {
+      "number": 14,
+      "function": "future_plan",
+      "en": "We agreed to always check in and confirm details before making plans in the future.",
+      "es": "Acordamos preguntar y confirmar los detalles antes de hacer planes en el futuro."
+    },
+    {
+      "number": 15,
+      "function": "proposal",
+      "en": "I proposed, \"Maybe next time, we can plan a full day if I have nothing else scheduled.\"",
+      "es": "Propuse: \"Quizás la próxima vez, podamos planear un día completo si no tengo otros compromisos.\""
+    },
+    {
+      "number": 16,
+      "function": "condition",
+      "en": "If we both remember to communicate, I think we will avoid these misunderstandings.",
+      "es": "Si ambos recordamos comunicarnos, creo que evitaremos estos malentendidos."
+    },
+    {
+      "number": 17,
+      "function": "hope",
+      "en": "I hope we'll be able to enjoy our time together more without worrying about hidden feelings.",
+      "es": "Espero que podamos disfrutar más nuestro tiempo juntos sin preocuparnos por sentimientos ocultos."
+    },
+    {
+      "number": 18,
+      "function": "gratitude",
+      "en": "I'm thankful Ryan wanted to talk it through, even though it was a little uncomfortable.",
+      "es": "Estoy agradecido de que Ryan quisiera hablarlo, aunque fue un poco incómodo."
+    },
+    {
+      "number": 19,
+      "function": "result",
+      "en": "After our conversation, we both felt more relaxed, and lunch was actually really nice.",
+      "es": "Después de nuestra conversación, ambos nos sentimos más tranquilos y el almuerzo fue realmente agradable."
+    },
+    {
+      "number": 20,
+      "function": "lesson",
+      "en": "Now, I see that clear communication helps us build a stronger, more honest friendship.",
+      "es": "Ahora veo que una comunicación clara nos ayuda a construir una amistad más fuerte y honesta."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last Saturday, I had a misunderstanding with my friend Ryan about our weekend plans.",
+      "explanation_es": "El pasado simple relata acciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "I realized right away that we hadn't been clear about our plans the day before.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "So I told Ryan honestly, \"I was only planning to meet for lunch, since I have to work later.\"",
+      "explanation_es": "Was/were + verbo en -ing presenta una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Used to",
+      "example_en": "We used to plan our weekends without checking in with each other's schedules first.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Could for suggestion or possibility",
+      "example_en": "I suggested we could talk a bit now to make sure we understood each other's plans better for next time.",
+      "explanation_es": "Could + infinitivo expresa una sugerencia o una posibilidad.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Enjoy + gerund",
+      "example_en": "But I also told him, \"I really enjoy spending time with you, and I don't want you to feel ignored.\"",
+      "explanation_es": "Enjoy seguido de -ing expresa una actividad que resulta agradable.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "First conditional",
+      "example_en": "If we both remember to communicate, I think we will avoid these misunderstandings.",
+      "explanation_es": "If + presente con will en el resultado relaciona una condición posible con una consecuencia futura.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "I'm thankful Ryan wanted to talk it through, even though it was a little uncomfortable.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 18
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "right away",
+      "meaning_es": "de inmediato",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "hadn't been clear",
+      "meaning_es": "no habíamos sido claros",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "check in",
+      "meaning_es": "consultar o confirmar",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "mix-ups",
+      "meaning_es": "confusiones",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "make sure",
+      "meaning_es": "asegurarse",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "spending time with you",
+      "meaning_es": "pasar tiempo contigo",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "talk it through",
+      "meaning_es": "hablarlo a fondo/analizar en detalle",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "clear communication",
+      "meaning_es": "comunicación clara",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I realized right away",
+              "that we hadn't been clear about our plans",
+              "the day before."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "We used to plan our weekends",
+              "without checking in with each other's schedules",
+              "first."
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "If we both remember to communicate,",
+              "I think we will avoid",
+              "these misunderstandings."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-009",
+    "number": "009",
+    "title_en": "Friendship and Difficult Conversations",
+    "title_es": "Amistad y conversaciones difíciles",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Relaciones y habilidades sociales",
+    "main_topic_es": "Manejar malentendidos en la amistad y negociar límites",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past perfect",
+      "Past continuous",
+      "Used to",
+      "Could for suggestion or possibility",
+      "Enjoy + gerund",
+      "First conditional",
+      "Concessive clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

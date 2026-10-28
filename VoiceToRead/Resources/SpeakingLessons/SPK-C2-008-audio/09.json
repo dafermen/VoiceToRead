@@ -1,0 +1,108 @@
+{
+  "text": "The representative listened attentively and acknowledged that product descriptions sometimes unintentionally mislead, especially when comfort is subjective.",
+  "duration": 10.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 4,
+      "length": 14,
+      "start": 0.4000000059604645,
+      "end": 1.0
+    },
+    {
+      "location": 19,
+      "length": 8,
+      "start": 1.0,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 28,
+      "length": 11,
+      "start": 1.5800000429153442,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 44,
+      "length": 12,
+      "start": 3.140000104904175,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 3.680000066757202,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 4.039999961853027,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 70,
+      "length": 12,
+      "start": 4.380000114440918,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 83,
+      "length": 9,
+      "start": 4.940000057220459,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 93,
+      "length": 15,
+      "start": 5.920000076293945,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 109,
+      "length": 7,
+      "start": 6.900000095367432,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 118,
+      "length": 10,
+      "start": 8.079999923706055,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 129,
+      "length": 4,
+      "start": 8.720000267028809,
+      "end": 9.100000381469727
+    },
+    {
+      "location": 134,
+      "length": 7,
+      "start": 9.100000381469727,
+      "end": 9.5
+    },
+    {
+      "location": 142,
+      "length": 2,
+      "start": 9.5,
+      "end": 9.859999656677246
+    },
+    {
+      "location": 145,
+      "length": 10,
+      "start": 9.859999656677246,
+      "end": 10.319999694824219
+    }
+  ]
+}

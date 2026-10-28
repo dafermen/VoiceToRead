@@ -1,0 +1,132 @@
+{
+  "text": "After testing several options, I found a pair that, by comparison, felt much lighter and immediately more suitable for extended use.",
+  "duration": 11.800000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.6200000047683716,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.159999966621399,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 22,
+      "length": 7,
+      "start": 1.840000033378601,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 31,
+      "length": 1,
+      "start": 3.240000009536743,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 3.5199999809265137,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 39,
+      "length": 1,
+      "start": 3.7200000286102295,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 4.179999828338623,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 4.179999828338623,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 4.980000019073486,
+      "end": 5.0
+    },
+    {
+      "location": 55,
+      "length": 10,
+      "start": 5.0,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 6.420000076293945,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 6.480000019073486,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 77,
+      "length": 7,
+      "start": 7.039999961853027,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 7.480000019073486,
+      "end": 8.140000343322754
+    },
+    {
+      "location": 89,
+      "length": 11,
+      "start": 8.140000343322754,
+      "end": 8.880000114440918
+    },
+    {
+      "location": 101,
+      "length": 4,
+      "start": 8.880000114440918,
+      "end": 9.520000457763672
+    },
+    {
+      "location": 106,
+      "length": 8,
+      "start": 9.520000457763672,
+      "end": 9.819999694824219
+    },
+    {
+      "location": 115,
+      "length": 3,
+      "start": 9.819999694824219,
+      "end": 10.619999885559082
+    },
+    {
+      "location": 119,
+      "length": 8,
+      "start": 10.619999885559082,
+      "end": 11.0600004196167
+    },
+    {
+      "location": 128,
+      "length": 3,
+      "start": 11.0600004196167,
+      "end": 11.5
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "text": "Given the lack of clarity, I stepped aside and checked ride-share apps, comparing possible journeys to Harbor City both alone and jointly with other stranded travelers.",
+  "duration": 11.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.4399999976158142,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.699999988079071,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 0.9399999976158142,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.0399999618530273,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.359999895095825,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 2.559999942779541,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.1600000858306885,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 47,
+      "length": 7,
+      "start": 3.559999942779541,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.8399999141693115,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 4.340000152587891,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.480000019073486,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 5.840000152587891,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 82,
+      "length": 8,
+      "start": 5.840000152587891,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 6.480000019073486,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 100,
+      "length": 2,
+      "start": 6.820000171661377,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 103,
+      "length": 6,
+      "start": 7.119999885559082,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 110,
+      "length": 4,
+      "start": 7.380000114440918,
+      "end": 7.739999771118164
+    },
+    {
+      "location": 115,
+      "length": 4,
+      "start": 7.739999771118164,
+      "end": 8.34000015258789
+    },
+    {
+      "location": 120,
+      "length": 5,
+      "start": 8.34000015258789,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 126,
+      "length": 3,
+      "start": 8.84000015258789,
+      "end": 9.279999732971191
+    },
+    {
+      "location": 130,
+      "length": 7,
+      "start": 9.279999732971191,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 138,
+      "length": 4,
+      "start": 9.5600004196167,
+      "end": 9.899999618530273
+    },
+    {
+      "location": 143,
+      "length": 5,
+      "start": 9.899999618530273,
+      "end": 10.239999771118164
+    },
+    {
+      "location": 149,
+      "length": 8,
+      "start": 10.239999771118164,
+      "end": 10.5600004196167
+    },
+    {
+      "location": 158,
+      "length": 9,
+      "start": 10.5600004196167,
+      "end": 11.079999923706055
+    }
+  ]
+}

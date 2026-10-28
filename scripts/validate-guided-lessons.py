@@ -1,14 +1,17 @@
-"""Validate all bundled lesson resources, then publish the explicit twenty-ID catalog."""
+"""Validate all bundled lesson resources, then publish the explicit forty-ID catalog."""
 from pathlib import Path
 import json,hashlib,re,sys,struct
 r=Path(__file__).resolve().parents[1];folder=r/'VoiceToRead/Resources/SpeakingLessons'
-ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,6)]
+ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,11)]
 titles_by_level={
 'B1':['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job'],
 'B2':['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job'],
 'C1':['Improving My English','A Job Interview','Resolving a Conflict','Defending a Proposal','Discussing Social Change'],
 'C2':['Improving My English','A Job Interview','Mediating a Negotiation','An Ethical Dilemma','Disagreeing with Tact']
 }
+new_titles=['Travel Plans and Unexpected Changes','Finding a Place to Live','Shopping and Solving a Problem','Friendship and Difficult Conversations','Technology in Everyday Life']
+for titles in titles_by_level.values():titles.extend(new_titles)
+
 def support_fields(value,path=''):
  result={}
  if isinstance(value,dict):
@@ -38,7 +41,7 @@ for identifier in ids:
  assert d['lesson_card']['activities_es']==[x['title_es'] for x in d['reading_practice']['rounds']]
  for item in d['grammar']+d['essential_expressions']:
   assert 1<=item['source_paragraph']<=20
- if level in ['C1','C2']:
+ if level in ['C1','C2'] or n>=6:
   for item in d['grammar']:assert item['example_en']==d['paragraphs'][item['source_paragraph']-1]['en']
   for item in d['essential_expressions']:assert item['expression_en'].lower() in d['paragraphs'][item['source_paragraph']-1]['en'].lower()
  for rnd in d['reading_practice']['rounds']:
@@ -70,4 +73,4 @@ assert hashlib.sha256((folder/'SPK-B1-001.json').read_text(encoding='utf-8').enc
 assert not list(folder.rglob('*-review.json')),'Review files must be resolved before publication'
 assert not list(folder.rglob('.env*'))
 if '--publish' in sys.argv:(folder/'catalog.json').write_text(json.dumps(ids,indent=2)+'\n',encoding='utf-8')
-print(f'PASS: twenty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); eighty support packs; twenty distinct covers; original 001 unchanged.',flush=True)
+print(f'PASS: forty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); one hundred sixty support packs; forty distinct covers; original 001 unchanged.',flush=True)

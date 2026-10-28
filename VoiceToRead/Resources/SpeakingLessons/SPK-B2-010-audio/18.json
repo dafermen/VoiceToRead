@@ -1,0 +1,114 @@
+{
+  "text": "If everyone in my family put their phones away during meals, I think we would have better conversations.",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 8,
+      "start": 0.36000001430511475,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 1.0199999809265137,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.2400000095367432,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.6399999856948853,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.840000033378601,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.1600000858306885,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.440000057220459,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.7799999713897705,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 47,
+      "length": 6,
+      "start": 3.140000104904175,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 54,
+      "length": 5,
+      "start": 3.4000000953674316,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 4.380000114440918,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 4.71999979019165,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.960000038146973,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 5.139999866485596,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.300000190734863,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 5.539999961853027,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 90,
+      "length": 13,
+      "start": 5.980000019073486,
+      "end": 6.619999885559082
+    }
+  ]
+}

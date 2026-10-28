@@ -1,0 +1,84 @@
+{
+  "text": "Each morning, I check the news and weather before getting out of bed.",
+  "duration": 5.679999828338623,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 5,
+      "length": 7,
+      "start": 0.6000000238418579,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.2000000476837158,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.5
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.640000104904175,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 3.2200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.2200000286102295,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 3.9000000953674316,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.199999809265137,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 62,
+      "length": 2,
+      "start": 4.420000076293945,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 4.800000190734863,
+      "end": 4.800000190734863
+    }
+  ]
+}

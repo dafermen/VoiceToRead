@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-010",
+  "number": 10,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "category": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Digital habits, requesting help and weighing convenience against distraction.",
+    "es": "Hábitos digitales, pedir ayuda y comparar conveniencia contra distracción."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Adulto organizando tareas diarias con una tableta y un teléfono inteligente en una mesa de la cocina.",
+    "prompt": "Realistic editorial photograph, adult organizing daily tasks with a tablet and smartphone on a kitchen table, natural light, cozy home setting, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar opciones relacionadas con la tecnología y justificar preferencias.",
+    "Solicitar ayuda de manera educada y responder a objeciones.",
+    "Describir hábitos digitales y sus efectos personales.",
+    "Utilizar tiempos verbales variados e hipótesis en contextos cotidianos.",
+    "Practicar la fluidez oral a través de la repetición segmentada y la narración."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Every morning, I check my phone first thing to see if there are any urgent messages from work or family.",
+      "es": "Cada mañana, reviso mi teléfono como primera acción para ver si hay mensajes urgentes del trabajo o la familia."
+    },
+    {
+      "number": 2,
+      "function": "routine",
+      "en": "After that, I usually scroll through the news while I prepare breakfast.",
+      "es": "Después de eso, suelo hojear las noticias mientras preparo el desayuno."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "I actually prefer reading the news online because it saves time and gives me a variety of sources.",
+      "es": "En realidad, prefiero leer las noticias en línea porque me ahorra tiempo y me da una variedad de fuentes."
+    },
+    {
+      "number": 4,
+      "function": "comparison",
+      "en": "However, on days when I leave my phone in another room, I notice that I pay more attention to my morning routine.",
+      "es": "Sin embargo, los días que dejo mi teléfono en otra habitación, noto que presto más atención a mi rutina matutina."
+    },
+    {
+      "number": 5,
+      "function": "reflection",
+      "en": "This makes me wonder if the convenience of having everything on one device is really worth the constant distraction.",
+      "es": "Esto me hace preguntarme si la comodidad de tener todo en un solo dispositivo realmente compensa la distracción constante."
+    },
+    {
+      "number": 6,
+      "function": "cause",
+      "en": "Sometimes, my cooking goes wrong because I'm so focused on my notifications.",
+      "es": "A veces la cocina me sale mal porque estoy demasiado pendiente de mis notificaciones."
+    },
+    {
+      "number": 7,
+      "function": "change",
+      "en": "Recently, I've tried putting my phone on silent for an hour every morning to concentrate better.",
+      "es": "Recientemente he intentado poner mi teléfono en silencio una hora cada mañana para concentrarme mejor."
+    },
+    {
+      "number": 8,
+      "function": "result",
+      "en": "As a result, I feel less stressed and I finish my breakfast much faster.",
+      "es": "Como resultado, me siento menos estresado y termino mi desayuno mucho más rápido."
+    },
+    {
+      "number": 9,
+      "function": "obstacle",
+      "en": "Still, I often need to check my calendar or get reminders to avoid missing appointments.",
+      "es": "Aun así, a menudo necesito revisar mi calendario o recibir recordatorios para no perder citas."
+    },
+    {
+      "number": 10,
+      "function": "request",
+      "en": "Today, I asked my partner if they could help me organize our shared digital calendar for the week.",
+      "es": "Hoy le pedí a mi pareja si podía ayudarme a organizar nuestro calendario digital compartido para la semana."
+    },
+    {
+      "number": 11,
+      "function": "response",
+      "en": "At first, they objected because they felt it would take too much time.",
+      "es": "Al principio, se opusieron porque pensaban que tomaría demasiado tiempo."
+    },
+    {
+      "number": 12,
+      "function": "justification",
+      "en": "I explained that if we did it together, we would avoid double-booking and constant last-minute messages.",
+      "es": "Expliqué que si lo hacíamos juntos evitaríamos las citas superpuestas y los mensajes de última hora."
+    },
+    {
+      "number": 13,
+      "function": "agreement",
+      "en": "Eventually, they agreed after realizing it would reduce confusion for both of us.",
+      "es": "Finalmente aceptaron al darse cuenta de que reduciría la confusión para ambos."
+    },
+    {
+      "number": 14,
+      "function": "detail",
+      "en": "We spent about twenty minutes syncing our schedules, adding reminders, and deciding on the best times for chores.",
+      "es": "Nos tomamos unos veinte minutos para sincronizar nuestros horarios, agregar recordatorios y decidir los mejores momentos para las tareas domésticas."
+    },
+    {
+      "number": 15,
+      "function": "observation",
+      "en": "I noticed that planning digitally is efficient, but discussing each item face-to-face avoids misunderstandings.",
+      "es": "Noté que planificar digitalmente es eficiente, pero dialogar cada punto cara a cara evita malentendidos."
+    },
+    {
+      "number": 16,
+      "function": "contrast",
+      "en": "If I relied only on notifications, I might forget to check important details or listen to my partner's suggestions.",
+      "es": "Si dependiera solo de las notificaciones, podría olvidar revisar detalles importantes o escuchar las sugerencias de mi pareja."
+    },
+    {
+      "number": 17,
+      "function": "explanation",
+      "en": "Digital tools are helpful, yet too many alerts become overwhelming and leave me feeling scattered.",
+      "es": "Las herramientas digitales son útiles, pero demasiadas alertas resultan abrumadoras y me dejan disperso."
+    },
+    {
+      "number": 18,
+      "function": "hypothetical",
+      "en": "If everyone in my family put their phones away during meals, I think we would have better conversations.",
+      "es": "Si todos en mi familia dejaran sus teléfonos durante las comidas, creo que tendríamos mejores conversaciones."
+    },
+    {
+      "number": 19,
+      "function": "opinion",
+      "en": "In my opinion, technology should support our routines instead of controlling them.",
+      "es": "En mi opinión, la tecnología debe apoyar nuestras rutinas y no controlarlas."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Finding the right balance isn't easy, but each small change helps me be more intentional with my digital habits.",
+      "es": "Encontrar el equilibrio no es fácil, pero cada pequeño cambio me ayuda a ser más consciente de mis hábitos digitales."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple",
+      "example_en": "Every morning, I check my phone first thing to see if there are any urgent messages from work or family.",
+      "explanation_es": "El presente simple describe hábitos, situaciones actuales o hechos generales.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Recently, I've tried putting my phone on silent for an hour every morning to concentrate better.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Today, I asked my partner if they could help me organize our shared digital calendar for the week.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "I explained that if we did it together, we would avoid double-booking and constant last-minute messages.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Present participle clause",
+      "example_en": "Eventually, they agreed after realizing it would reduce confusion for both of us.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Comparatives",
+      "example_en": "As a result, I feel less stressed and I finish my breakfast much faster.",
+      "explanation_es": "Los comparativos permiten contrastar cualidades, opciones o cantidades.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Gerund as subject",
+      "example_en": "Finding the right balance isn't easy, but each small change helps me be more intentional with my digital habits.",
+      "explanation_es": "Un grupo en -ing funciona como sujeto de la oración.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Because for reason",
+      "example_en": "I actually prefer reading the news online because it saves time and gives me a variety of sources.",
+      "explanation_es": "Because introduce la razón de una situación o una acción.",
+      "source_paragraph": 3
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "check my phone first thing",
+      "meaning_es": "revisar el teléfono como primera acción",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "pay more attention",
+      "meaning_es": "prestar más atención",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "worth the constant distraction",
+      "meaning_es": "compensa la distracción constante",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "putting my phone on silent",
+      "meaning_es": "poner el teléfono en silencio",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "double-booking",
+      "meaning_es": "programar dos cosas a la vez por error",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "face-to-face",
+      "meaning_es": "cara a cara",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "leave me feeling scattered",
+      "meaning_es": "me dejan disperso",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "finding the right balance",
+      "meaning_es": "encontrar el equilibrio correcto",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español, y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Pronuncia los fragmentos separados por barras. Las barras indican pausas naturales para practicar la fluidez.",
+        "chunks": [
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "This makes me wonder if the convenience of having everything on one device is really worth the constant distraction."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Recently,",
+              "I've tried putting my phone on silent for an hour every morning to concentrate better."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "If everyone in my family put their phones away during meals,",
+              "I think we would have better conversations."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee en voz alta los veinte párrafos completos. Concéntrate en mantener ritmo y entonación naturales.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-010",
+    "number": "010",
+    "title_en": "Technology in Everyday Life",
+    "title_es": "Tecnología en la vida cotidiana",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Tecnología en la vida cotidiana",
+    "main_topic_es": "Hábitos digitales, pedir ayuda y comparar conveniencia contra distracción",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple",
+      "Present perfect",
+      "Indirect question",
+      "Second conditional",
+      "Present participle clause",
+      "Comparatives",
+      "Gerund as subject",
+      "Because for reason"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

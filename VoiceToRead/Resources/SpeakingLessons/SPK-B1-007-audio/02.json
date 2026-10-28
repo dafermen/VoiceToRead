@@ -1,0 +1,120 @@
+{
+  "text": "We felt excited because both of us wanted a place that was quiet but still close to everything important.",
+  "duration": 7.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 8,
+      "length": 7,
+      "start": 0.8999999761581421,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.359999895095825,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 29,
+      "length": 2,
+      "start": 2.700000047683716,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 32,
+      "length": 2,
+      "start": 2.859999895095825,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 3.359999895095825,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 42,
+      "length": 1,
+      "start": 3.359999895095825,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 3.559999942779541,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 3.859999895095825,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 4.099999904632568,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.360000133514404,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 4.860000133514404,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 5.440000057220459,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.840000152587891,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 81,
+      "length": 2,
+      "start": 6.199999809265137,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 84,
+      "length": 10,
+      "start": 6.539999961853027,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 6.960000038146973,
+      "end": 7.380000114440918
+    }
+  ]
+}

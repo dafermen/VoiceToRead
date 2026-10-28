@@ -1,0 +1,144 @@
+{
+  "text": "Last weekend, after searching for the right item for several weeks, I purchased an office chair from a well-known furniture store downtown.",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 7,
+      "start": 0.5199999809265137,
+      "end": 1.0
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.4600000381469727,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 20,
+      "length": 9,
+      "start": 1.7400000095367432,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.119999885559082,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.440000057220459,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 44,
+      "length": 4,
+      "start": 2.9800000190734863,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.200000047683716,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 3.559999942779541,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 61,
+      "length": 5,
+      "start": 3.859999895095825,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 68,
+      "length": 1,
+      "start": 4.639999866485596,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 4.920000076293945,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 5.320000171661377,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 5.71999979019165,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 90,
+      "length": 5,
+      "start": 5.960000038146973,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.320000171661377,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 101,
+      "length": 1,
+      "start": 6.599999904632568,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 6.860000133514404,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 108,
+      "length": 5,
+      "start": 7.059999942779541,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 114,
+      "length": 9,
+      "start": 7.28000020980835,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 124,
+      "length": 5,
+      "start": 7.699999809265137,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 130,
+      "length": 8,
+      "start": 8.119999885559082,
+      "end": 8.65999984741211
+    }
+  ]
+}

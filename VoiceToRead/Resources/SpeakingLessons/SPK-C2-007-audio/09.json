@@ -1,0 +1,120 @@
+{
+  "text": "Jamie seemed relieved and carefully steered the conversation toward practicalities, such as who might handle bills and periodic cleaning.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 6,
+      "length": 6,
+      "start": 0.9200000166893005,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 13,
+      "length": 8,
+      "start": 1.399999976158142,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 26,
+      "length": 9,
+      "start": 2.7200000286102295,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 3.2799999713897705,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 48,
+      "length": 12,
+      "start": 3.9200000762939453,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 61,
+      "length": 6,
+      "start": 4.659999847412109,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 68,
+      "length": 14,
+      "start": 5.099999904632568,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.699999809265137,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 2,
+      "start": 6.78000020980835,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 7.139999866485596,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 96,
+      "length": 5,
+      "start": 7.28000020980835,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 102,
+      "length": 6,
+      "start": 7.579999923706055,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 109,
+      "length": 5,
+      "start": 7.840000152587891,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 115,
+      "length": 3,
+      "start": 8.319999694824219,
+      "end": 8.979999542236328
+    },
+    {
+      "location": 119,
+      "length": 8,
+      "start": 8.979999542236328,
+      "end": 9.520000457763672
+    },
+    {
+      "location": 128,
+      "length": 8,
+      "start": 9.520000457763672,
+      "end": 9.899999618530273
+    }
+  ]
+}

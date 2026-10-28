@@ -1,0 +1,162 @@
+{
+  "text": "Weighing all the factors, I conceded that the agent's complicated itinerary, while imperfect, was preferable to losing half a day, provided the connections didn't become impossible.",
+  "duration": 13.220000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.5400000214576721,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 0.8399999737739563,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.200000047683716,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.319999933242798,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.0399999618530273,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.240000009536743,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 54,
+      "length": 11,
+      "start": 3.9200000762939453,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 66,
+      "length": 9,
+      "start": 4.380000114440918,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 5.619999885559082,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 83,
+      "length": 9,
+      "start": 5.679999828338623,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 6.880000114440918,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 98,
+      "length": 10,
+      "start": 7.019999980926514,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 109,
+      "length": 2,
+      "start": 7.659999847412109,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 112,
+      "length": 6,
+      "start": 8.100000381469727,
+      "end": 8.359999656677246
+    },
+    {
+      "location": 119,
+      "length": 4,
+      "start": 8.359999656677246,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 124,
+      "length": 1,
+      "start": 8.699999809265137,
+      "end": 9.0600004196167
+    },
+    {
+      "location": 126,
+      "length": 3,
+      "start": 9.0600004196167,
+      "end": 9.079999923706055
+    },
+    {
+      "location": 131,
+      "length": 8,
+      "start": 9.819999694824219,
+      "end": 10.180000305175781
+    },
+    {
+      "location": 140,
+      "length": 3,
+      "start": 10.180000305175781,
+      "end": 10.5
+    },
+    {
+      "location": 144,
+      "length": 11,
+      "start": 10.5,
+      "end": 10.979999542236328
+    },
+    {
+      "location": 156,
+      "length": 6,
+      "start": 10.979999542236328,
+      "end": 11.399999618530273
+    },
+    {
+      "location": 163,
+      "length": 6,
+      "start": 11.399999618530273,
+      "end": 11.819999694824219
+    },
+    {
+      "location": 170,
+      "length": 10,
+      "start": 11.819999694824219,
+      "end": 12.479999542236328
+    }
+  ]
+}

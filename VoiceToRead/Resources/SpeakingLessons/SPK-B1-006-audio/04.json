@@ -1,0 +1,126 @@
+{
+  "text": "When we arrived at the train station, we learned that our train had been canceled due to a technical problem.",
+  "duration": 9.119999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 5,
+      "length": 2,
+      "start": 0.36000001430511475,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 8,
+      "length": 7,
+      "start": 0.7200000286102295,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.1399999856948853,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.440000057220459,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 1.7000000476837158,
+      "end": 2.0
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.0,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 3.180000066757202,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 3.3399999141693115,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.6600000858306885,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.880000114440918,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 4.139999866485596,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.440000057220459,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 73,
+      "length": 8,
+      "start": 5.159999847412109,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 5.679999828338623,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 6.400000095367432,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 89,
+      "length": 1,
+      "start": 6.619999885559082,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 91,
+      "length": 9,
+      "start": 6.920000076293945,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 101,
+      "length": 7,
+      "start": 7.260000228881836,
+      "end": 7.78000020980835
+    }
+  ]
+}

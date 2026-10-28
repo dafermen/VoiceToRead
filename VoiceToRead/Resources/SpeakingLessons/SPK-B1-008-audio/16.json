@@ -1,0 +1,96 @@
+{
+  "text": "The employee processed an even exchange, so I did not have to pay more money.",
+  "duration": 6.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.6600000262260437,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 13,
+      "length": 9,
+      "start": 0.8999999761581421,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.559999942779541,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.899999976158142,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 31,
+      "length": 8,
+      "start": 2.2200000286102295,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 41,
+      "length": 2,
+      "start": 3.3399999141693115,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.4600000381469727,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.9800000190734863,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.5
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.5,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.599999904632568,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 4.980000019073486,
+      "end": 5.179999828338623
+    }
+  ]
+}

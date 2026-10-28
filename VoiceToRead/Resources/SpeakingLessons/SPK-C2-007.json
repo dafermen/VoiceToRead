@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-007",
+  "number": 7,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Finding a Place to Live",
+    "es": "Buscar dónde vivir"
+  },
+  "category": {
+    "en": "Daily Life and Relationships",
+    "es": "Vida cotidiana y relaciones"
+  },
+  "main_topic": {
+    "en": "Viewing a potential home, discussing preferences, trade-offs, and responsibilities with a prospective housemate.",
+    "es": "Visitar una posible vivienda, hablar de preferencias, compromisos y responsabilidades con un posible compañero de piso."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos recorren juntos un apartamento, discutiendo detalles y observando el espacio para decidir si mudarse.",
+    "prompt": "Editorial realistic photograph, two adults viewing an apartment together, pointing and talking, modern decor, natural light through large windows, no text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Negociar y matizar preferencias en inglés avanzado.",
+    "Reformular o suavizar un desacuerdo en contexto.",
+    "Interpretar ambigüedad y ajustar el registro lingüístico.",
+    "Describir y negociar responsabilidades compartidas en una vivienda.",
+    "Practicar técnicas de repetición y fluidez en inglés estadounidense."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "I met Jamie at the apartment just after noon, the sun glazing the windows as we both tried—perhaps a bit cautiously—to get a sense of each other's expectations.",
+      "es": "Me encontré con Jamie en el apartamento poco después del mediodía, el sol iluminando las ventanas mientras ambos intentábamos—quizás con cierta cautela—captar las expectativas del otro."
+    },
+    {
+      "number": 2,
+      "function": "survey",
+      "en": "The listing had sounded promising, but actually walking through the place together inevitably revealed nuances the photos could never capture.",
+      "es": "El anuncio parecía prometedor, pero al recorrer el lugar juntos descubrimos matices que las fotos nunca podrían mostrar."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "Jamie confessed they preferred a quieter environment and could be sensitive to even low levels of noise, which made me rethink my tendency to play music in the evenings.",
+      "es": "Jamie confesó que prefería un ambiente tranquilo y que podía ser sensible incluso a bajos niveles de ruido, lo que me hizo replantear mi costumbre de escuchar música por las noches."
+    },
+    {
+      "number": 4,
+      "function": "request",
+      "en": "I hesitated, then suggested that, if sound carried, we might want to discuss both of our habits openly so we could make certain neither of us would feel imposed upon.",
+      "es": "Vacilé y luego sugerí que, si el sonido se transmitía, deberíamos hablar abiertamente de nuestros hábitos para asegurarnos de que ninguno se sintiera obligado por el otro."
+    },
+    {
+      "number": 5,
+      "function": "location",
+      "en": "As we inspected the bedrooms, I realized the street-facing room was slightly larger and brighter, though perhaps not everyone would see that as an advantage.",
+      "es": "Al inspeccionar los dormitorios, me di cuenta de que el que da a la calle era un poco más grande y luminoso, aunque quizá no todos lo verían como una ventaja."
+    },
+    {
+      "number": 6,
+      "function": "tradeoff",
+      "en": "Jamie pointed out that the extra sunlight came at the cost of more road noise—something, they mused, that was difficult to judge without actually living there first.",
+      "es": "Jamie señaló que la luz extra suponía más ruido de la calle; algo, reflexionó, difícil de juzgar sin haber vivido aquí previamente."
+    },
+    {
+      "number": 7,
+      "function": "hesitation",
+      "en": "If I am honest, I found myself uncertain how to interpret Jamie's tone as we moved from room to room, wondering whether their comments were reservations or mere observations.",
+      "es": "Si soy sincero, no estaba seguro de cómo interpretar el tono de Jamie al recorrer el piso, preguntándome si sus comentarios eran reservas o simples observaciones."
+    },
+    {
+      "number": 8,
+      "function": "agreement",
+      "en": "Sensing a slight tension, I tried to agree in principle on the need for quiet after a certain hour, though I clarified that my idea of 'quiet' might not entirely match theirs.",
+      "es": "Percibiendo cierta tensión, intenté acordar en principio la necesidad de tranquilidad después de cierta hora, aunque aclaré que mi concepto de 'tranquilidad' podría no coincidir del todo con el suyo."
+    },
+    {
+      "number": 9,
+      "function": "clarification",
+      "en": "Jamie seemed relieved and carefully steered the conversation toward practicalities, such as who might handle bills and periodic cleaning.",
+      "es": "Jamie pareció aliviado y dirigió la conversación con cuidado hacia aspectos prácticos, como quién se encargaría de las cuentas y la limpieza periódica."
+    },
+    {
+      "number": 10,
+      "function": "negotiation",
+      "en": "I mentioned, tentatively, that in my previous share there had been a weekly chore schedule for chores, which mostly worked but sometimes sparked minor disputes.",
+      "es": "Mencioné, con cautela, que en mi piso anterior había turnos semanales para las tareas, lo cual generalmente funcionaba, aunque a veces provocaba pequeñas disputas."
+    },
+    {
+      "number": 11,
+      "function": "counterproposal",
+      "en": "Rather than insisting, Jamie proposed that we combine the schedule with a more flexible approach, in case either of us needed to adjust for unexpected commitments.",
+      "es": "En vez de insistir, Jamie propuso combinar el turno con un enfoque más flexible, en caso de que alguno necesitara adaptarse a compromisos imprevistos."
+    },
+    {
+      "number": 12,
+      "function": "reflection",
+      "en": "I appreciated Jamie's tact—it isn’t always easy to negotiate household dynamics without inadvertently stepping on toes.",
+      "es": "Agradecí la delicadeza de Jamie; no siempre es fácil negociar la convivencia sin pisar sensibilidades por error."
+    },
+    {
+      "number": 13,
+      "function": "hypothetical",
+      "en": "We considered, for instance, that if either of us worked from home, then perhaps the living room should remain mostly undisturbed during office hours.",
+      "es": "Consideramos, por ejemplo, que si alguno teletrabajara, quizá deberíamos mantener el salón mayormente libre de ruidos durante el horario laboral."
+    },
+    {
+      "number": 14,
+      "function": "uncertainty",
+      "en": "At some point, Jamie asked me frankly whether I was someone who needed absolute routine—or could adapt if things were less predictable.",
+      "es": "En un momento, Jamie me preguntó sinceramente si yo era una persona que necesitaba rutina absoluta o si podía adaptarme a situaciones menos predecibles."
+    },
+    {
+      "number": 15,
+      "function": "reformulation",
+      "en": "I paused and reframed my response, noting that while I do value rhythm in daily life, I try not to prescribe a rigid framework for others.",
+      "es": "Hice una pausa y reformulé mi respuesta, indicando que aunque valoro cierta regularidad diaria, intento no imponer esquemas rígidos a los demás."
+    },
+    {
+      "number": 16,
+      "function": "soft_disagreement",
+      "en": "To be transparent, I voiced a soft reservation about keeping shared spaces meticulously tidy at all times, since, in my view, a lived-in feel signals comfort.",
+      "es": "Para ser transparente, expresé con suavidad cierta reserva sobre mantener siempre los espacios impecables, ya que en mi opinión un ambiente vivido transmite calidez."
+    },
+    {
+      "number": 17,
+      "function": "calibrated_agreement",
+      "en": "Jamie chuckled and, rather than insisting, conceded that a balance must be struck between order and informality, which seemed sensible to both of us.",
+      "es": "Jamie se rió y, en vez de insistir, admitió que había que encontrar un equilibrio entre orden e informalidad, lo que a ambos nos pareció razonable."
+    },
+    {
+      "number": 18,
+      "function": "compromise",
+      "en": "We gradually arrived at a tacit agreement: focus on main priorities, communicate about exceptions, and, above all, remain flexible.",
+      "es": "Poco a poco fuimos llegando a un acuerdo tácito: centrarse en las prioridades, comunicarse sobre las excepciones y, sobre todo, mantener la flexibilidad."
+    },
+    {
+      "number": 19,
+      "function": "decision",
+      "en": "By the end of the tour, neither of us pretended that total compatibility was likely—but both recognized the value of being able to articulate boundaries diplomatically.",
+      "es": "Al terminar la visita, ninguno fingió que la compatibilidad total era probable, pero ambos valoramos poder expresar los límites con diplomacia."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "We parted on genuinely good terms, each of us more aware of what shared living might require—and with the distinct sense that our conversation had set the right tone, regardless of the final decision.",
+      "es": "Nos despedimos en buenos términos, siendo ambos más conscientes de lo que implica compartir vivienda y con la sensación de que nuestra conversación había marcado el tono adecuado, más allá de la decisión final."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "The listing had sounded promising, but actually walking through the place together inevitably revealed nuances the photos could never capture.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Which referring to a whole clause",
+      "example_en": "Jamie confessed they preferred a quieter environment and could be sensitive to even low levels of noise, which made me rethink my tendency to play music in the evenings.",
+      "explanation_es": "Which retoma la situación anterior para añadir su efecto o un comentario.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "I hesitated, then suggested that, if sound carried, we might want to discuss both of our habits openly so we could make certain neither of us would feel imposed upon.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Comparatives",
+      "example_en": "As we inspected the bedrooms, I realized the street-facing room was slightly larger and brighter, though perhaps not everyone would see that as an advantage.",
+      "explanation_es": "Los comparativos permiten contrastar cualidades, opciones o cantidades.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than insisting, Jamie proposed that we combine the schedule with a more flexible approach, in case either of us needed to adjust for unexpected commitments.",
+      "explanation_es": "Rather than seguido de -ing presenta una alternativa que se decide evitar.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Mandative subjunctive",
+      "example_en": "Rather than insisting, Jamie proposed that we combine the schedule with a more flexible approach, in case either of us needed to adjust for unexpected commitments.",
+      "explanation_es": "Tras una propuesta, that + sujeto + forma base expresa la acción sugerida sin añadir -s.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Emphatic do",
+      "example_en": "I paused and reframed my response, noting that while I do value rhythm in daily life, I try not to prescribe a rigid framework for others.",
+      "explanation_es": "Do + infinitivo en una afirmación refuerza la idea expresada.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Passive voice",
+      "example_en": "Jamie chuckled and, rather than insisting, conceded that a balance must be struck between order and informality, which seemed sensible to both of us.",
+      "explanation_es": "Be + participio centra la atención en quien recibe una acción.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "get a sense of",
+      "meaning_es": "captar (comprender) algo de manera general",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "at the cost of",
+      "meaning_es": "a costa de",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "stepping on toes",
+      "meaning_es": "herir susceptibilidades",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "in principle",
+      "meaning_es": "en principio; teóricamente",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "tacit agreement",
+      "meaning_es": "acuerdo no expresado explícitamente, pero entendido",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "set the right tone",
+      "meaning_es": "crear la atmósfera o actitud adecuada",
+      "source_paragraph": 20
+    },
+    {
+      "expression_en": "articulate boundaries",
+      "meaning_es": "expresar claramente los límites personales",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "living there first",
+      "meaning_es": "vivir previamente en ese lugar (para experimentar de verdad)",
+      "source_paragraph": 6
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, revisa la traducción al español y repítelo dos veces para captar matices y recordarlo.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Haz pausas breves entre fragmentos, pero asegúrate de unir las ideas en la frase completa.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I met Jamie at the apartment just after noon,",
+              "the sun glazing the windows",
+              "as we both tried—perhaps a bit cautiously—to get a sense of each other's expectations."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "Jamie pointed out",
+              "that the extra sunlight came at the cost of more road noise—something,",
+              "they mused, that was difficult to judge without actually living there first."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "We gradually arrived at a tacit agreement:",
+              "focus on main priorities,",
+              "communicate about exceptions, and, above all, remain flexible."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee todos los párrafos en voz alta, manteniendo claridad y un ritmo natural. No te detengas en cada palabra, sino fluye como si contaras una experiencia real.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-007",
+    "number": "007",
+    "title_en": "Finding a Place to Live",
+    "title_es": "Buscar dónde vivir",
+    "level": "C2",
+    "language": "Inglés estadounidense",
+    "category_es": "Vida cotidiana y relaciones",
+    "main_topic_es": "Discutir necesidades y responsabilidades en la búsqueda de vivienda",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Which referring to a whole clause",
+      "Second conditional",
+      "Comparatives",
+      "Rather than + gerund",
+      "Mandative subjunctive",
+      "Emphatic do",
+      "Passive voice"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

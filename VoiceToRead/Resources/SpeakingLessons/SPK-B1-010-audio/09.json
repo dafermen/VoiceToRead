@@ -1,0 +1,78 @@
+{
+  "text": "After that, I felt more confident using the app on my own.",
+  "duration": 4.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.0399999618530273,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.2999999523162842,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.399999976158142,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 24,
+      "length": 9,
+      "start": 1.8200000524520874,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.3399999141693115,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 2.759999990463257,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.240000009536743,
+      "end": 3.5
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.5,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.740000009536743,
+      "end": 3.940000057220459
+    }
+  ]
+}

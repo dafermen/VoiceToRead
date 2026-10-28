@@ -1,0 +1,150 @@
+{
+  "text": "However, when I reached Midtown Central, a digital announcement informed travelers that the key rail connection ahead was suspended due to sudden track repairs.",
+  "duration": 11.4399995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.699999988079071,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.059999942779541,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.2999999523162842,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 1.600000023841858,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 32,
+      "length": 7,
+      "start": 2.140000104904175,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 3.200000047683716,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 3.380000114440918,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 51,
+      "length": 12,
+      "start": 3.7200000286102295,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 64,
+      "length": 8,
+      "start": 4.28000020980835,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 73,
+      "length": 9,
+      "start": 4.860000133514404,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 5.400000095367432,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 5.679999828338623,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 5.900000095367432,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.159999847412109,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 101,
+      "length": 10,
+      "start": 6.380000114440918,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 112,
+      "length": 5,
+      "start": 6.820000171661377,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 118,
+      "length": 3,
+      "start": 7.199999809265137,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 122,
+      "length": 9,
+      "start": 7.460000038146973,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 132,
+      "length": 3,
+      "start": 7.960000038146973,
+      "end": 8.579999923706055
+    },
+    {
+      "location": 136,
+      "length": 2,
+      "start": 8.579999923706055,
+      "end": 9.140000343322754
+    },
+    {
+      "location": 139,
+      "length": 6,
+      "start": 9.140000343322754,
+      "end": 9.140000343322754
+    },
+    {
+      "location": 146,
+      "length": 5,
+      "start": 9.140000343322754,
+      "end": 9.539999961853027
+    },
+    {
+      "location": 152,
+      "length": 7,
+      "start": 9.539999961853027,
+      "end": 9.899999618530273
+    }
+  ]
+}

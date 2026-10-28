@@ -1,0 +1,150 @@
+{
+  "text": "I realized I needed a device that could actually adapt to various voices, especially since my family speaks both English and Spanish at home.",
+  "duration": 10.34000015258789,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.4399999976158142,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 0.9399999976158142,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.2599999904632568,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 20,
+      "length": 1,
+      "start": 1.4800000190734863,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.7799999713897705,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.0799999237060547,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.359999895095825,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 40,
+      "length": 8,
+      "start": 2.5999999046325684,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.180000066757202,
+      "end": 3.5
+    },
+    {
+      "location": 55,
+      "length": 2,
+      "start": 3.5,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 3.9000000953674316,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 4.28000020980835,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 74,
+      "length": 10,
+      "start": 5.519999980926514,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 5.920000076293945,
+      "end": 6.460000038146973
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 6.460000038146973,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 94,
+      "length": 6,
+      "start": 6.739999771118164,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 101,
+      "length": 6,
+      "start": 7.059999942779541,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 113,
+      "length": 7,
+      "start": 7.820000171661377,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 121,
+      "length": 3,
+      "start": 8.260000228881836,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 125,
+      "length": 7,
+      "start": 8.739999771118164,
+      "end": 9.180000305175781
+    },
+    {
+      "location": 133,
+      "length": 2,
+      "start": 9.180000305175781,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 136,
+      "length": 4,
+      "start": 9.720000267028809,
+      "end": 9.739999771118164
+    }
+  ]
+}

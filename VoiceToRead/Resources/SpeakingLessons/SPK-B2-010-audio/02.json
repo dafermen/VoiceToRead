@@ -1,0 +1,78 @@
+{
+  "text": "After that, I usually scroll through the news while I prepare breakfast.",
+  "duration": 5.46999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.36000001430511475,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.8199999928474426,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.3799999952316284,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.7999999523162842,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.1600000858306885,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 2.7799999713897705,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 2.9600000381469727,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 52,
+      "length": 1,
+      "start": 3.4000000953674316,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 3.700000047683716,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 62,
+      "length": 9,
+      "start": 3.940000057220459,
+      "end": 4.5
+    }
+  ]
+}

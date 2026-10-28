@@ -1,0 +1,126 @@
+{
+  "text": "The listing had sounded promising, but actually walking through the place together inevitably revealed nuances the photos could never capture.",
+  "duration": 11.229999542236328,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.8199999928474426,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.1799999475479126,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.7400000095367432,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 24,
+      "length": 9,
+      "start": 1.8200000524520874,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 2.9800000190734863,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 3.119999885559082,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 48,
+      "length": 7,
+      "start": 3.5799999237060547,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 3.9600000381469727,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.28000020980835,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 4.71999979019165,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 83,
+      "length": 10,
+      "start": 5.260000228881836,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 94,
+      "length": 8,
+      "start": 5.880000114440918,
+      "end": 6.460000038146973
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 6.460000038146973,
+      "end": 7.0
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 7.0,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 115,
+      "length": 6,
+      "start": 7.840000152587891,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 122,
+      "length": 5,
+      "start": 7.840000152587891,
+      "end": 8.180000305175781
+    },
+    {
+      "location": 128,
+      "length": 5,
+      "start": 8.180000305175781,
+      "end": 8.479999542236328
+    },
+    {
+      "location": 134,
+      "length": 7,
+      "start": 8.479999542236328,
+      "end": 8.84000015258789
+    }
+  ]
+}

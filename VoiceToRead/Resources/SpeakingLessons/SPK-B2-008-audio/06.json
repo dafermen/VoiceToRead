@@ -1,0 +1,126 @@
+{
+  "text": "The main issue, in my opinion, is that this speaker's software doesn't support multilingual settings as well as I'd hoped.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.23999999463558197
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.23999999463558197,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.6200000047683716,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.2200000286102295,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.340000033378601,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 22,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.6600000858306885,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 2.9600000381469727,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 44,
+      "length": 9,
+      "start": 3.2799999713897705,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 54,
+      "length": 8,
+      "start": 4.300000190734863,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 4.300000190734863,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 4.820000171661377,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 79,
+      "length": 12,
+      "start": 5.199999809265137,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 92,
+      "length": 8,
+      "start": 5.880000114440918,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 101,
+      "length": 2,
+      "start": 6.440000057220459,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 104,
+      "length": 4,
+      "start": 7.119999885559082,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 109,
+      "length": 2,
+      "start": 7.340000152587891,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 7.519999980926514,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 116,
+      "length": 5,
+      "start": 7.840000152587891,
+      "end": 8.039999961853027
+    }
+  ]
+}

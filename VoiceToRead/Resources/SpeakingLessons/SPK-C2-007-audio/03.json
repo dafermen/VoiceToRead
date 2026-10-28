@@ -1,0 +1,180 @@
+{
+  "text": "Jamie confessed they preferred a quieter environment and could be sensitive to even low levels of noise, which made me rethink my tendency to play music in the evenings.",
+  "duration": 11.5600004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.5600000023841858,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.1399999856948853,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 21,
+      "length": 9,
+      "start": 1.559999942779541,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 31,
+      "length": 1,
+      "start": 1.940000057220459,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 33,
+      "length": 7,
+      "start": 2.700000047683716,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 41,
+      "length": 11,
+      "start": 2.700000047683716,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.2799999713897705,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 3.940000057220459,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.099999904632568,
+      "end": 4.5
+    },
+    {
+      "location": 66,
+      "length": 9,
+      "start": 4.5,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 4.679999828338623,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.360000133514404,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 5.679999828338623,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 6.019999980926514,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 98,
+      "length": 5,
+      "start": 6.599999904632568,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 7.440000057220459,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 111,
+      "length": 4,
+      "start": 7.539999961853027,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 116,
+      "length": 2,
+      "start": 7.78000020980835,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 119,
+      "length": 7,
+      "start": 8.119999885559082,
+      "end": 8.520000457763672
+    },
+    {
+      "location": 127,
+      "length": 2,
+      "start": 8.520000457763672,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 130,
+      "length": 8,
+      "start": 8.819999694824219,
+      "end": 9.260000228881836
+    },
+    {
+      "location": 139,
+      "length": 2,
+      "start": 9.260000228881836,
+      "end": 9.619999885559082
+    },
+    {
+      "location": 142,
+      "length": 4,
+      "start": 9.619999885559082,
+      "end": 9.84000015258789
+    },
+    {
+      "location": 147,
+      "length": 5,
+      "start": 9.84000015258789,
+      "end": 10.260000228881836
+    },
+    {
+      "location": 153,
+      "length": 2,
+      "start": 10.260000228881836,
+      "end": 10.5
+    },
+    {
+      "location": 156,
+      "length": 3,
+      "start": 10.5,
+      "end": 10.720000267028809
+    },
+    {
+      "location": 160,
+      "length": 8,
+      "start": 10.720000267028809,
+      "end": 10.899999618530273
+    }
+  ]
+}

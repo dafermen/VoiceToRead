@@ -1,0 +1,84 @@
+{
+  "text": "We walked around, measuring wall space and picturing where our furniture could go.",
+  "duration": 6.28000020980835,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.6800000071525574,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 18,
+      "length": 9,
+      "start": 1.8600000143051147,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.0999999046325684,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.0199999809265137,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 43,
+      "length": 9,
+      "start": 3.619999885559082,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.079999923706055,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.519999980926514,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 63,
+      "length": 9,
+      "start": 5.21999979019165,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 5.21999979019165,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 5.579999923706055,
+      "end": 5.920000076293945
+    }
+  ]
+}

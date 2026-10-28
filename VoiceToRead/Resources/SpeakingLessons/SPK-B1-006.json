@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-006",
+  "number": 6,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Travel Plans and Unexpected Changes",
+    "es": "Planes de viaje e imprevistos"
+  },
+  "category": {
+    "en": "Travel and Transportation",
+    "es": "Viajes y transporte"
+  },
+  "main_topic": {
+    "en": "A fictional journey disrupted by a changed reservation or transport connection; explain needs, compare realistic alternatives and agree on a plan.",
+    "es": "Un viaje ficticio interrumpido por un cambio de reserva o conexión; explicar necesidades, comparar alternativas realistas y acordar un plan."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Persona adulta en una estación de tren revisando su teléfono móvil y un boleto, maleta junto a ella, ambiente de cambio de planes.",
+    "prompt": "Realistic editorial photograph, adult traveler in a modern train station, checking phone and holding a reservation ticket, suitcase next to them, concerned expression, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una situación cotidiana relacionada con viajes y cambios.",
+    "Explicar necesidades y preferencias de manera clara.",
+    "Comparar alternativas realistas usando expresiones simples.",
+    "Acordar un plan futuro con un interlocutor.",
+    "Practicar lectura y repetición con inglés americano cotidiano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last weekend, I planned a trip with my best friend to visit another city by train.",
+      "es": "El fin de semana pasado, planeé un viaje con mi mejor amigo para visitar otra ciudad en tren."
+    },
+    {
+      "number": 2,
+      "function": "anticipation",
+      "en": "We were excited because we had been looking forward to this short vacation all month.",
+      "es": "Estábamos emocionados porque llevábamos todo el mes esperando estas cortas vacaciones."
+    },
+    {
+      "number": 3,
+      "function": "description",
+      "en": "Our reservation was for Saturday morning, and we packed our bags the night before.",
+      "es": "Nuestra reserva era para el sábado por la mañana y empacamos nuestras maletas la noche anterior."
+    },
+    {
+      "number": 4,
+      "function": "unexpected_event",
+      "en": "When we arrived at the train station, we learned that our train had been canceled due to a technical problem.",
+      "es": "Cuando llegamos a la estación, nos informaron que nuestro tren había sido cancelado por un problema técnico."
+    },
+    {
+      "number": 5,
+      "function": "reaction",
+      "en": "At first, we were both surprised and a little frustrated because we didn’t know what to do next.",
+      "es": "Al principio, ambos estábamos sorprendidos y un poco frustrados porque no sabíamos qué hacer después."
+    },
+    {
+      "number": 6,
+      "function": "seeking_help",
+      "en": "I went to the ticket counter and explained that we needed another way to get to our destination today.",
+      "es": "Fui a la taquilla y expliqué que necesitábamos otra manera de llegar a nuestro destino hoy."
+    },
+    {
+      "number": 7,
+      "function": "information",
+      "en": "The agent told us that the next direct train wouldn’t leave until late in the afternoon.",
+      "es": "El agente nos dijo que el siguiente tren directo no saldría hasta la tarde."
+    },
+    {
+      "number": 8,
+      "function": "alternative",
+      "en": "He suggested we could take a different route with a transfer in a nearby town, arriving earlier but with a short wait.",
+      "es": "Sugirió que podíamos tomar una ruta diferente haciendo trasbordo en un pueblo cercano; llegaríamos antes, pero con una pequeña espera."
+    },
+    {
+      "number": 9,
+      "function": "opinion",
+      "en": "I thought about it and said I preferred to arrive earlier, even if it meant changing trains.",
+      "es": "Lo pensé y dije que prefería llegar antes, aunque implicara cambiar de tren."
+    },
+    {
+      "number": 10,
+      "function": "preference",
+      "en": "My friend agreed that waiting all day for one train didn’t make much sense to us.",
+      "es": "Mi amigo estuvo de acuerdo en que esperar todo el día por un solo tren no tenía mucho sentido para nosotros."
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "We asked the agent to check for seats on the earlier alternative even if we had to pay a small fee.",
+      "es": "Le pedimos al agente que buscara asientos en la alternativa anterior aunque tuviéramos que pagar un pequeño recargo."
+    },
+    {
+      "number": 12,
+      "function": "confirmation",
+      "en": "Fortunately, there were enough seats, and the new tickets were available right away.",
+      "es": "Afortunadamente, había asientos disponibles y los nuevos boletos estaban listos de inmediato."
+    },
+    {
+      "number": 13,
+      "function": "relief",
+      "en": "We felt relieved that we wouldn’t lose the whole day waiting at the station.",
+      "es": "Nos sentimos aliviados de no perder todo el día esperando en la estación."
+    },
+    {
+      "number": 14,
+      "function": "process",
+      "en": "After we paid the difference, the agent handed us our tickets and explained our transfer details.",
+      "es": "Después de que pagamos la diferencia, el agente nos entregó los billetes y explicó los detalles del transbordo."
+    },
+    {
+      "number": 15,
+      "function": "preparation",
+      "en": "We made sure we understood where to change and how long we would have to wait in the other station.",
+      "es": "Nos aseguramos de entender dónde teníamos que cambiar y cuánto tiempo deberíamos esperar en la otra estación."
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "Even though our trip started with a problem, I realized that being flexible helped us find a good solution.",
+      "es": "Aunque nuestro viaje comenzó con un problema, me di cuenta de que ser flexibles nos ayudó a encontrar una buena solución."
+    },
+    {
+      "number": 17,
+      "function": "alternative_view",
+      "en": "My friend said that sometimes unexpected changes can actually make a trip more interesting.",
+      "es": "Mi amigo dijo que a veces, los cambios inesperados pueden hacer un viaje más interesante."
+    },
+    {
+      "number": 18,
+      "function": "conclusion",
+      "en": "In the end, we boarded our first train together feeling happy that we had managed the change well.",
+      "es": "Al final, subimos juntos a nuestro primer tren, contentos de haber manejado bien el cambio."
+    },
+    {
+      "number": 19,
+      "function": "future_plan",
+      "en": "Next time we travel, I will always double-check our connections and be ready for surprises.",
+      "es": "La próxima vez que viajemos, siempre revisaré dos veces nuestras conexiones y estaré listo para sorpresas."
+    },
+    {
+      "number": 20,
+      "function": "summary",
+      "en": "This experience taught me that good communication and patience are important when travel plans change unexpectedly.",
+      "es": "Esta experiencia me enseñó que la buena comunicación y la paciencia son importantes cuando los planes de viaje cambian de forma inesperada."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last weekend, I planned a trip with my best friend to visit another city by train.",
+      "explanation_es": "El pasado simple relata acciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past perfect continuous",
+      "example_en": "We were excited because we had been looking forward to this short vacation all month.",
+      "explanation_es": "Had been + verbo en -ing presenta una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past perfect passive",
+      "example_en": "When we arrived at the train station, we learned that our train had been canceled due to a technical problem.",
+      "explanation_es": "Had been + participio describe una acción recibida antes de otro momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Reported speech",
+      "example_en": "The agent told us that the next direct train wouldn’t leave until late in the afternoon.",
+      "explanation_es": "Una cláusula tras said, told u otro verbo de comunicación reproduce el contenido de lo dicho.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Could for suggestion or possibility",
+      "example_en": "He suggested we could take a different route with a transfer in a nearby town, arriving earlier but with a short wait.",
+      "explanation_es": "Could + infinitivo expresa una sugerencia o una posibilidad.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though our trip started with a problem, I realized that being flexible helped us find a good solution.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Will for future intention",
+      "example_en": "Next time we travel, I will always double-check our connections and be ready for surprises.",
+      "explanation_es": "Will + infinitivo expresa una intención o una expectativa futura.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Because for reason",
+      "example_en": "At first, we were both surprised and a little frustrated because we didn’t know what to do next.",
+      "explanation_es": "Because introduce la razón de una situación o una acción.",
+      "source_paragraph": 5
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "looking forward to",
+      "meaning_es": "esperar con ganas",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "didn’t know what to do next",
+      "meaning_es": "no saber qué hacer después",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "another way to get to our destination",
+      "meaning_es": "otra forma de llegar a nuestro destino",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "make much sense",
+      "meaning_es": "tener mucho sentido",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "right away",
+      "meaning_es": "de inmediato",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "lose the whole day",
+      "meaning_es": "perder todo el día",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "double-check",
+      "meaning_es": "revisar dos veces",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "be ready for surprises",
+      "meaning_es": "estar listo para sorpresas",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "When we arrived at the train station,",
+              "we learned that our train had been canceled due to a technical problem."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "He suggested we could take a different route with a transfer in a nearby town,",
+              "arriving earlier but with a short wait."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Next time we travel,",
+              "I will always double-check our connections and be ready for surprises."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-006",
+    "number": "006",
+    "title_en": "Travel Plans and Unexpected Changes",
+    "title_es": "Planes de viaje e imprevistos",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Viajes y transporte",
+    "main_topic_es": "Viaje ficticio, cambios en reserva o conexión y solución práctica",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past perfect continuous",
+      "Past perfect passive",
+      "Reported speech",
+      "Could for suggestion or possibility",
+      "Concessive clause",
+      "Will for future intention",
+      "Because for reason"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

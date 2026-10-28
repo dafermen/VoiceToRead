@@ -1,0 +1,78 @@
+{
+  "text": "I felt disappointed, because I had expected it to fit just right.",
+  "duration": 5.519999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.4000000059604645,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 7,
+      "length": 12,
+      "start": 0.6600000262260437,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 2.0,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.2200000286102295,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.5199999809265137,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 35,
+      "length": 8,
+      "start": 2.680000066757202,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.259999990463257,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.4800000190734863,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.199999809265137,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.800000190734863,
+      "end": 5.119999885559082
+    }
+  ]
+}

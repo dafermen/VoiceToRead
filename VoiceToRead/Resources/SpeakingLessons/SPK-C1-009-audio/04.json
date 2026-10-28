@@ -1,0 +1,150 @@
+{
+  "text": "Assuming she simply needed space, I tried to focus on my deadlines, although something in my gut told me I shouldn't let this slide.",
+  "duration": 9.449999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.6000000238418579,
+      "end": 1.0
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.0,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 1.4600000381469727,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 1.7999999523162842,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.8399999141693115,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 3.0199999809265137,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 3.3399999141693115,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.940000057220459,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.940000057220459,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.139999866485596,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 57,
+      "length": 9,
+      "start": 4.380000114440918,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 68,
+      "length": 8,
+      "start": 5.639999866485596,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 77,
+      "length": 9,
+      "start": 5.78000020980835,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 6.179999828338623,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.320000171661377,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 6.699999809265137,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 6.71999979019165,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 7.059999942779541,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 105,
+      "length": 1,
+      "start": 7.239999771118164,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 107,
+      "length": 9,
+      "start": 7.579999923706055,
+      "end": 7.880000114440918
+    },
+    {
+      "location": 117,
+      "length": 3,
+      "start": 7.880000114440918,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 121,
+      "length": 4,
+      "start": 8.100000381469727,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 126,
+      "length": 5,
+      "start": 8.319999694824219,
+      "end": 8.720000267028809
+    }
+  ]
+}

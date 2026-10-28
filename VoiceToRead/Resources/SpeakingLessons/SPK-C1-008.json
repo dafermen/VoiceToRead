@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-008",
+  "number": 8,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y solución de problemas"
+  },
+  "category": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "Describing a product mismatch, reasoning through competing needs, making nuanced requests, and negotiating a practical outcome.",
+    "es": "Describir un producto inadecuado, razonar entre necesidades opuestas, formular solicitudes matizadas y negociar una solución práctica."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Persona adulta hablando con atención con un vendedor en una tienda, mostrando un producto y discutiendo una posible solución.",
+    "prompt": "Realistic editorial photograph, adult customer in a modern store having a conversation with a store employee, discussing a returned product, both people attentive, subtle negotiation atmosphere, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir la insatisfacción con una compra y explicar las razones específicas.",
+    "Evaluar limitaciones y necesidades propias y ajenas al buscar una solución.",
+    "Negociar alternativas razonables utilizando un lenguaje matizado y avanzado.",
+    "Utilizar expresiones para ceder, matizar y buscar resultados equilibrados.",
+    "Desarrollar fluidez al argumentar y resolver problemas de consumo sin apoyarse en derechos legales asegurados."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last weekend, after searching for the right item for several weeks, I purchased an office chair from a well-known furniture store downtown.",
+      "es": "El fin de semana pasado, después de buscar el artículo adecuado durante varias semanas, compré una silla de oficina en una conocida tienda de muebles del centro."
+    },
+    {
+      "number": 2,
+      "function": "detail",
+      "en": "At first glance in the showroom, it appeared sturdy, adjustable, and comfortable enough to meet my expectations for long hours at the desk.",
+      "es": "A primera vista en la sala de exhibición, parecía resistente, ajustable y lo suficientemente cómoda como para cumplir con mis expectativas de largas horas en el escritorio."
+    },
+    {
+      "number": 3,
+      "function": "transition",
+      "en": "However, once I brought it home and spent an afternoon assembling it, I noticed a crucial flaw that made regular use much less feasible for me.",
+      "es": "Sin embargo, una vez que la llevé a casa y pasé una tarde armándola, noté una falla crucial que hacía mucho menos viable su uso regular para mí."
+    },
+    {
+      "number": 4,
+      "function": "observation",
+      "en": "The seat's depth could not be meaningfully adjusted, and as a result, my posture quickly became strained in a way that I simply had not anticipated.",
+      "es": "La profundidad del asiento no podía ajustarse de forma significativa y, como resultado, mi postura se vio rápidamente forzada de una manera que simplemente no había previsto."
+    },
+    {
+      "number": 5,
+      "function": "reflection",
+      "en": "Of course, some customers might not consider this a major issue, since everyone’s needs differ, and the product is otherwise well-constructed.",
+      "es": "Por supuesto, algunos clientes podrían no considerar esto un problema importante, ya que las necesidades de cada uno difieren y el producto, por lo demás, está bien construido."
+    },
+    {
+      "number": 6,
+      "function": "evaluation",
+      "en": "Rather than place all blame on the retailer, I recognize that my personal requirements were more specific than I initially realized.",
+      "es": "En lugar de culpar por completo al vendedor, reconozco que mis requisitos personales eran más específicos de lo que me di cuenta en un primer momento."
+    },
+    {
+      "number": 7,
+      "function": "acceptance",
+      "en": "While the chair fits the general description, subtle differences in seat depth matter greatly to my back health given the amount I sit each day.",
+      "es": "Si bien la silla cumple con la descripción general, las pequeñas diferencias en la profundidad del asiento son cruciales para la salud de mi espalda dada la cantidad de tiempo que paso sentado cada día."
+    },
+    {
+      "number": 8,
+      "function": "action",
+      "en": "Reluctant to simply keep something so fundamental yet impractical for me, I resolved to return to the store and discuss alternatives with the staff.",
+      "es": "A pesar de mi reticencia a quedarme con algo tan fundamental pero poco práctico para mí, decidí regresar a la tienda y discutir alternativas con el personal."
+    },
+    {
+      "number": 9,
+      "function": "approach",
+      "en": "I began our conversation by clarifying that I wasn’t dissatisfied with the quality overall but that there was a key mismatch with my needs.",
+      "es": "Comencé nuestra conversación aclarando que no estaba insatisfecho con la calidad en general, sino que había una descompensación clave entre el producto y mis necesidades."
+    },
+    {
+      "number": 10,
+      "function": "justification",
+      "en": "While explaining my issue, I acknowledged that I should have examined the technical details more thoroughly before making my decision.",
+      "es": "Al explicar mi problema, reconocí que debería haber examinado los detalles técnicos con más detenimiento antes de tomar mi decisión."
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "I asked if there might be a flexible way to address this, perhaps by exchanging the chair for another model that allows greater seat adjustment.",
+      "es": "Pregunté si podría haber una solución flexible, quizá cambiando la silla por otro modelo que permitiera un mayor ajuste del asiento."
+    },
+    {
+      "number": 12,
+      "function": "concession",
+      "en": "Since it had already been assembled and lightly used, I realized it would be unreasonable to request a full refund with no questions asked.",
+      "es": "Como ya había sido armada y utilizada ligeramente, entendía que no sería razonable pedir un reembolso total sin más."
+    },
+    {
+      "number": 13,
+      "function": "expectation",
+      "en": "Instead, I suggested that a partial store credit would be an acceptable compromise if an exact replacement was not possible.",
+      "es": "En su lugar, sugerí que un crédito parcial en tienda sería un compromiso aceptable si no era posible una sustitución exacta."
+    },
+    {
+      "number": 14,
+      "function": "alternative",
+      "en": "The associate explained their policies clearly, expressing sympathy yet pointing out that custom orders and items assembled at home are generally excluded from full returns.",
+      "es": "El dependiente me explicó las políticas con claridad, mostrando empatía pero señalando que los pedidos personalizados y los artículos montados en casa suelen excluirse de los reembolsos completos."
+    },
+    {
+      "number": 15,
+      "function": "clarification",
+      "en": "We discussed various approaches, including the possibility of listing the chair in the store’s resale program if neither store credit nor exchange could be arranged.",
+      "es": "Discutimos varias alternativas, incluyendo la posibilidad de poner la silla en el programa de reventa de la tienda si el crédito o el cambio no eran viables."
+    },
+    {
+      "number": 16,
+      "function": "discussion",
+      "en": "I admitted that although the resale value might be lower than I hoped, recouping even part of my investment would be preferable to keeping an unsuitable product.",
+      "es": "Reconocí que, aunque el valor de reventa podría ser inferior a mis expectativas, recuperar al menos parte de mi inversión sería preferible a conservar un producto inadecuado."
+    },
+    {
+      "number": 17,
+      "function": "solution",
+      "en": "After some deliberation, we settled on a modest store credit combined with adding the chair to their in-store resale listing at a small discount.",
+      "es": "Tras cierta deliberación, acordamos un crédito modesto en tienda y la inclusión de la silla en su catálogo de reventa con un pequeño descuento."
+    },
+    {
+      "number": 18,
+      "function": "result",
+      "en": "Although far from a perfect outcome, this practical arrangement at least acknowledged the complexity of the situation on both sides.",
+      "es": "Aunque dista mucho de ser la solución perfecta, este arreglo práctico al menos reconocía la complejidad de la situación por ambas partes."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Through this negotiation, I learned that a clear, flexible approach often yields more constructive results than simply demanding restitution.",
+      "es": "Gracias a esta negociación, aprendí que un enfoque claro y flexible suele dar resultados más constructivos que limitarse a exigir un reembolso."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "For future purchases, I will make a point of exploring subtle features in depth and fostering open dialogue should any issue arise.",
+      "es": "Para futuras compras, me aseguraré de explorar los detalles sutiles a fondo y de fomentar el diálogo abierto si surge algún inconveniente."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Defining relative clause",
+      "example_en": "However, once I brought it home and spent an afternoon assembling it, I noticed a crucial flaw that made regular use much less feasible for me.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Passive voice",
+      "example_en": "The seat's depth could not be meaningfully adjusted, and as a result, my posture quickly became strained in a way that I simply had not anticipated.",
+      "explanation_es": "Be + participio centra la atención en quien recibe una acción.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Rather than + bare infinitive",
+      "example_en": "Rather than place all blame on the retailer, I recognize that my personal requirements were more specific than I initially realized.",
+      "explanation_es": "Rather than seguido de infinitivo sin to contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Should have + past participle",
+      "example_en": "While explaining my issue, I acknowledged that I should have examined the technical details more thoroughly before making my decision.",
+      "explanation_es": "Should have + participio expresa una valoración retrospectiva de lo que habría sido mejor hacer.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I asked if there might be a flexible way to address this, perhaps by exchanging the chair for another model that allows greater seat adjustment.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Past perfect passive",
+      "example_en": "Since it had already been assembled and lightly used, I realized it would be unreasonable to request a full refund with no questions asked.",
+      "explanation_es": "Had been + participio describe una acción recibida antes de otro momento pasado.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "Instead, I suggested that a partial store credit would be an acceptable compromise if an exact replacement was not possible.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Conditional inversion with should",
+      "example_en": "For future purchases, I will make a point of exploring subtle features in depth and fostering open dialogue should any issue arise.",
+      "explanation_es": "Should + sujeto + infinitivo sustituye if + sujeto + should en una condición formal.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "at first glance",
+      "meaning_es": "a primera vista",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "place all blame",
+      "meaning_es": "culpar por completo",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "key mismatch",
+      "meaning_es": "descompensación clave",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "no questions asked",
+      "meaning_es": "sin más / sin hacer preguntas",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "an acceptable compromise",
+      "meaning_es": "un compromiso aceptable",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "expressing sympathy",
+      "meaning_es": "mostrando empatía",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "recouping even part",
+      "meaning_es": "recuperar al menos parte",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "make a point of",
+      "meaning_es": "asegurarse de / proponerse",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Estas pausas te ayudan a fijar la entonación y acento natural.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "However, once I brought it home",
+              "and spent an afternoon assembling it,",
+              "I noticed a crucial flaw",
+              "that made regular use much less feasible for me."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "Instead, I suggested that",
+              "a partial store credit would be an acceptable compromise",
+              "if an exact replacement was not possible."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "For future purchases,",
+              "I will make a point of exploring subtle features in depth",
+              "and fostering open dialogue should any issue arise."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta manteniendo ritmo y claridad, sin detenerte en cada palabra.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-008",
+    "number": "008",
+    "title_en": "Shopping and Solving a Problem",
+    "title_es": "Compras y solución de problemas",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Compras y resolución de problemas",
+    "main_topic_es": "Describir una compra inadecuada y negociar soluciones",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Defining relative clause",
+      "Passive voice",
+      "Rather than + bare infinitive",
+      "Should have + past participle",
+      "Indirect question",
+      "Past perfect passive",
+      "Second conditional",
+      "Conditional inversion with should"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

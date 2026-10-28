@@ -1,0 +1,120 @@
+{
+  "text": "Jordan explained that he valued our friendship but had been feeling social pressure and wished for more unstructured downtime.",
+  "duration": 9.279999732971191,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.6800000071525574,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.5199999809265137,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.7799999713897705,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.0399999618530273,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.4200000762939453,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 36,
+      "length": 10,
+      "start": 2.700000047683716,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 2.9800000190734863,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.0
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 60,
+      "length": 7,
+      "start": 4.199999809265137,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 4.579999923706055,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 75,
+      "length": 8,
+      "start": 5.039999961853027,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 6.440000057220459,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.659999847412109,
+      "end": 7.0
+    },
+    {
+      "location": 99,
+      "length": 4,
+      "start": 7.0,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 104,
+      "length": 12,
+      "start": 7.519999980926514,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 117,
+      "length": 8,
+      "start": 8.260000228881836,
+      "end": 8.9399995803833
+    }
+  ]
+}

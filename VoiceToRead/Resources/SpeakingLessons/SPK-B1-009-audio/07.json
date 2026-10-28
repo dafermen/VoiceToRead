@@ -1,0 +1,108 @@
+{
+  "text": "He sounded disappointed and quiet for a moment, then he said it was okay but seemed confused.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.7599999904632568,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 11,
+      "length": 12,
+      "start": 1.1799999475479126,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.8200000524520874,
+      "end": 2.5
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 2.5,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.8399999141693115,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 38,
+      "length": 1,
+      "start": 3.119999885559082,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 40,
+      "length": 6,
+      "start": 3.5999999046325684,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.559999942779541,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 4.71999979019165,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 5.019999980926514,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 5.300000190734863,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 5.539999961853027,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.840000152587891,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 6.21999979019165,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 77,
+      "length": 6,
+      "start": 7.099999904632568,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 84,
+      "length": 8,
+      "start": 7.519999980926514,
+      "end": 8.180000305175781
+    }
+  ]
+}

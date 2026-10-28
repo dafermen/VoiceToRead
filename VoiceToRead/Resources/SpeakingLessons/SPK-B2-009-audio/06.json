@@ -1,0 +1,108 @@
+{
+  "text": "When she answered, I told her I valued our friendship but sometimes needed to recharge by myself.",
+  "duration": 7.340000152587891,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.30000001192092896,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 8,
+      "start": 0.6000000238418579,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 19,
+      "length": 1,
+      "start": 1.159999966621399,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.7599999904632568,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 30,
+      "length": 1,
+      "start": 2.200000047683716,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 32,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.940000057220459,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 43,
+      "length": 10,
+      "start": 3.240000009536743,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.680000066757202,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 58,
+      "length": 9,
+      "start": 4.400000095367432,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 4.920000076293945,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.260000228881836,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.559999942779541,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 6.059999942779541,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 90,
+      "length": 6,
+      "start": 6.320000171661377,
+      "end": 6.840000152587891
+    }
+  ]
+}

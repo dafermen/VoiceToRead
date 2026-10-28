@@ -1,0 +1,90 @@
+{
+  "text": "Now, I see that clear communication helps us build a stronger, more honest friendship.",
+  "duration": 6.570000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.8399999737739563,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 1.1200000047683716,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.340000033378601,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.7000000476837158,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 13,
+      "start": 1.9800000190734863,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.700000047683716,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 3.1600000858306885,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.4800000190734863,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 51,
+      "length": 1,
+      "start": 3.640000104904175,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 3.940000057220459,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.960000038146973,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 5.179999828338623,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 75,
+      "length": 10,
+      "start": 5.579999923706055,
+      "end": 5.960000038146973
+    }
+  ]
+}

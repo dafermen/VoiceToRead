@@ -1,0 +1,96 @@
+{
+  "text": "She noted that friendship means respecting limits and, if necessary, speaking up before resentment accumulates.",
+  "duration": 8.800000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.5400000214576721,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 15,
+      "length": 10,
+      "start": 1.6799999475479126,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 1.6799999475479126,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 32,
+      "length": 10,
+      "start": 2.119999885559082,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 2.7200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 55,
+      "length": 2,
+      "start": 4.300000190734863,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 58,
+      "length": 9,
+      "start": 4.420000076293945,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 69,
+      "length": 8,
+      "start": 5.980000019073486,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 5.980000019073486,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.380000114440918,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 88,
+      "length": 10,
+      "start": 6.840000152587891,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 99,
+      "length": 11,
+      "start": 7.440000057220459,
+      "end": 8.260000228881836
+    }
+  ]
+}

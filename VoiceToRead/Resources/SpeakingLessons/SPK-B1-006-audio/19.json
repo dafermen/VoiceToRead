@@ -1,0 +1,102 @@
+{
+  "text": "Next time we travel, I will always double-check our connections and be ready for surprises.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5799999833106995,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 1.0199999809265137,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.4199999570846558,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 21,
+      "length": 1,
+      "start": 2.559999942779541,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 2.5999999046325684,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.880000114440918,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 3.4200000762939453,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.880000114440918,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 4.079999923706055,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 52,
+      "length": 11,
+      "start": 4.380000114440918,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.820000171661377,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 5.639999866485596,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.900000095367432,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 77,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 81,
+      "length": 9,
+      "start": 6.559999942779541,
+      "end": 6.960000038146973
+    }
+  ]
+}

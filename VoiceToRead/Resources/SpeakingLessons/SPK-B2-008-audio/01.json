@@ -1,0 +1,126 @@
+{
+  "text": "Last Friday, I bought a smart speaker at a local electronics store, hoping it would make my daily routine easier.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.3200000524520874,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 15,
+      "length": 6,
+      "start": 1.5199999809265137,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.5800000429153442,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 30,
+      "length": 7,
+      "start": 2.119999885559082,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 2.4800000190734863,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 2.759999990463257,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.0199999809265137,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 49,
+      "length": 11,
+      "start": 3.259999990463257,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 61,
+      "length": 5,
+      "start": 3.9200000762939453,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 5.0,
+      "end": 5.0
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.0,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 78,
+      "length": 5,
+      "start": 5.199999809265137,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 5.360000133514404,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 89,
+      "length": 2,
+      "start": 5.539999961853027,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 5.820000171661377,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 98,
+      "length": 7,
+      "start": 6.099999904632568,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 106,
+      "length": 6,
+      "start": 6.519999980926514,
+      "end": 7.019999980926514
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "text": "At some point, Jamie asked me frankly whether I was someone who needed absolute routine—or could adapt if things were less predictable.",
+  "duration": 8.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.25999999046325684
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.25999999046325684,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 8,
+      "length": 5,
+      "start": 0.6399999856948853,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.3200000524520874,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 1.559999942779541,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 1.940000057220459,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 30,
+      "length": 7,
+      "start": 2.240000009536743,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 46,
+      "length": 1,
+      "start": 3.0999999046325684,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.2799999713897705,
+      "end": 3.5
+    },
+    {
+      "location": 52,
+      "length": 7,
+      "start": 3.5,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 64,
+      "length": 6,
+      "start": 4.019999980926514,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 71,
+      "length": 8,
+      "start": 4.260000228881836,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 4.820000171661377,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 4.820000171661377,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 91,
+      "length": 5,
+      "start": 6.019999980926514,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 97,
+      "length": 5,
+      "start": 6.239999771118164,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 103,
+      "length": 2,
+      "start": 6.71999979019165,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 106,
+      "length": 6,
+      "start": 7.199999809265137,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 118,
+      "length": 4,
+      "start": 7.679999828338623,
+      "end": 7.920000076293945
+    },
+    {
+      "location": 123,
+      "length": 11,
+      "start": 7.920000076293945,
+      "end": 8.319999694824219
+    }
+  ]
+}

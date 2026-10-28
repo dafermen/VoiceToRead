@@ -68,7 +68,35 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
         return result
     }
 
-    // A short original retelling for beginners. Used only when creating a new library.
+    static let sampleTitle = "Presentarme y conversar"
+    static let samplePracticeText = """
+    Hola, me llamo Alex.
+    Vivo cerca del centro de la ciudad.
+    Trabajo con un equipo pequeño.
+    Estoy aprendiendo inglés para comunicarme mejor.
+    Me gustaría practicar contigo.
+    ¿Cómo te llamas?
+    ¿A qué te dedicas?
+    En mi tiempo libre me gusta caminar.
+    También disfruto escuchar música.
+    Normalmente empiezo a trabajar por la mañana.
+    Hoy tengo una reunión importante.
+    Necesito explicar una idea con claridad.
+    ¿Podrías hablar un poco más despacio?
+    No entendí la última parte.
+    ¿Puedes repetir esa frase, por favor?
+    Déjame comprobar si entendí bien.
+    Prefiero hacer una pregunta antes de continuar.
+    Mañana voy a practicar otra vez.
+    Poco a poco me siento más seguro al hablar.
+    Gracias por escucharme. ¿Tienes alguna pregunta?
+    """
+    static func samplePractice() throws -> Self {
+        try edited(title: sampleTitle, text: samplePracticeText)
+    }
+
+    // Legacy text remains for existing stories and safe identification of an untouched starter.
+
     static let firstText = """
     Había una vez tres cerditos.
     Los tres hermanos vivían cerca de un bosque.
@@ -109,7 +137,7 @@ enum EnglishTrainingFailure: LocalizedError {
 /// Separate local storage: never opens, migrates, deletes or rewrites the session database.
 @MainActor @Observable
 final class EnglishTrainingStore {
-    private struct Archive: Codable { var version = 2; var trainings: [EnglishTraining] }
+    private struct Archive: Codable { var version = 2; var trainings: [EnglishTraining]; var sampleRevision: Int? }
     private(set) var trainings: [EnglishTraining]
     private let file: URL
 
@@ -129,15 +157,30 @@ final class EnglishTrainingStore {
                     throw EnglishTrainingFailure.unsupportedFile
                 }
                 trainings = archive.trainings
+                if archive.sampleRevision == nil, let index = trainings.firstIndex(where: { $0.title == "Los tres cerditos" }) {
+                    let old = trainings[index]
+                    let legacyLines = EnglishTraining.firstText.components(separatedBy: .newlines)
+                        .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
+                    let untouched = old.sourceLanguage == .spanish && old.targetLanguage == .english &&
+                        old.phrases.map(\.spanish) == legacyLines &&
+                        old.phrases.allSatisfy { $0.english.isEmpty && !$0.reviewed && $0.needsPractice }
+                    if untouched {
+                        var sample = try EnglishTraining.samplePractice(); sample.id = old.id
+                        trainings[index] = sample
+                    } else if !trainings.contains(where: { $0.title == EnglishTraining.sampleTitle }) {
+                        trainings.append(try EnglishTraining.samplePractice())
+                    }
+                    try persist(trainings)
+                }
             } catch { throw EnglishTrainingFailure.unsupportedFile }
         } else {
-            trainings = [try EnglishTraining.edited(title: "Los tres cerditos", text: EnglishTraining.firstText)]
+            trainings = [try EnglishTraining.samplePractice()]
             try persist(trainings)
         }
     }
     func training(_ id: UUID) -> EnglishTraining? { trainings.first { $0.id == id } }
     private func persist(_ values: [EnglishTraining]) throws {
-        let data = try JSONEncoder().encode(Archive(trainings: values))
+        let data = try JSONEncoder().encode(Archive(trainings: values, sampleRevision: 1))
         try data.write(to: file, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
     }
     func save(_ training: EnglishTraining) throws {

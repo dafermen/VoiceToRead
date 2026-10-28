@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-006",
+  "number": 6,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Travel Plans and Unexpected Changes",
+    "es": "Planes de viaje e imprevistos"
+  },
+  "category": {
+    "en": "Travel and Adaptability",
+    "es": "Viajes y adaptabilidad"
+  },
+  "main_topic": {
+    "en": "Managing disruptions in travel, negotiating alternatives, and agreeing on a solution through nuanced dialogue.",
+    "es": "Gestionar interrupciones en viajes, negociar alternativas y acordar una solución mediante un diálogo matizado."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos conversando con gestos en el mostrador de una estación de tren, equipaje al lado.",
+    "prompt": "Editorial photo, adults discussing unexpected travel disruption at train station counter, visible emotions, luggage beside them, railway interior, natural daylight, no logos, 16:9 horizontal",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Expresar incertidumbre, matizar opiniones y reformular puntos delicados.",
+    "Comparar alternativas ante imprevistos en viajes.",
+    "Negociar y llegar a acuerdos usando matices de registro y cortesía.",
+    "Interpretar ambigüedades y moderar criterios al dialogar.",
+    "Practicar la comprensión y producción precisa del inglés avanzado realista."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Sunday, I set off for a conference in Harbor City, intending to arrive the evening before my talk and settle in with ample time.",
+      "es": "El pasado domingo, partí hacia una conferencia en Harbor City con la intención de llegar la noche anterior a mi charla y acomodarme con suficiente tiempo."
+    },
+    {
+      "number": 2,
+      "function": "incident",
+      "en": "However, as the train reached the midpoint of the journey, an announcement informed us that all onward connections were cancelled due to an unforeseen technical fault.",
+      "es": "Sin embargo, cuando el tren llegó a mitad de trayecto, un anuncio nos informó que todas las conexiones siguientes estaban canceladas por una avería técnica imprevista."
+    },
+    {
+      "number": 3,
+      "function": "emotion",
+      "en": "A ripple of confusion swept through the carriage, and I admit I found myself momentarily rooted to my seat, weighing what this would mean for my commitment.",
+      "es": "Un murmullo de confusión recorrió el vagón y admito que, por un momento, me quedé inmóvil, sopesando lo que esto implicaría para mi compromiso."
+    },
+    {
+      "number": 4,
+      "function": "action",
+      "en": "Gathering my belongings, I approached the makeshift help desk where a dozen other passengers were already vying for information.",
+      "es": "Recogiendo mis pertenencias, me acerqué al improvisado mostrador de ayuda donde ya una docena de pasajeros intentaban obtener información."
+    },
+    {
+      "number": 5,
+      "function": "interaction",
+      "en": "Attempting to remain courteous yet clear, I explained to the attendant that I had a specific professional obligation and asked about any feasible way to reach the city that night.",
+      "es": "Intentando mantenerme cortés pero claro, le expliqué al empleado que tenía una obligación profesional específica y pregunté por alguna forma factible de llegar esa noche a la ciudad."
+    },
+    {
+      "number": 6,
+      "function": "ambiguity",
+      "en": "He tentatively suggested a replacement bus service might materialize, though he promptly hedged, highlighting that details were pending coordination.",
+      "es": "Sugerió de manera tentativa que quizás aparecería un servicio de autobús de reemplazo, aunque de inmediato advirtió que los detalles estaban pendientes de coordinar."
+    },
+    {
+      "number": 7,
+      "function": "alternative",
+      "en": "Given the lack of clarity, I stepped aside and checked ride-share apps, comparing possible journeys to Harbor City both alone and jointly with other stranded travelers.",
+      "es": "Ante la falta de claridad, me aparté y consulté aplicaciones de transporte compartido, comparando viajes posibles a Harbor City tanto solo como con otros pasajeros varados."
+    },
+    {
+      "number": 8,
+      "function": "engagement",
+      "en": "Noticing a woman nearby equally perplexed, I initiated a conversation, proposing we pool ideas and perhaps coordinate onward travel together.",
+      "es": "Al notar que una mujer cercana estaba igual de desconcertada, entablé conversación, sugiriendo que unificáramos ideas y quizá coordináramos el siguiente trayecto juntos."
+    },
+    {
+      "number": 9,
+      "function": "negotiation",
+      "en": "She agreed, and while we differed on budget preferences, we both acknowledged the need to first clarify how late we might feasibly reach the city.",
+      "es": "Ella aceptó, y aunque diferíamos en cuanto al presupuesto, ambos reconocimos la necesidad de precisar primero cuán tarde sería razonable llegar a la ciudad."
+    },
+    {
+      "number": 10,
+      "function": "complication",
+      "en": "At that juncture, a garbled announcement implied the bus would perhaps run only as far as Birchdale, still some way short of our goal.",
+      "es": "En ese momento, un anuncio poco claro insinuó que el autobús quizá solo llegaría hasta Birchdale, aún lejos de nuestro destino."
+    },
+    {
+      "number": 11,
+      "function": "interpretation",
+      "en": "Trying not to jump to conclusions, we discussed whether to risk waiting for a partial solution or take proactive measures and move on by another mode.",
+      "es": "Tratando de no sacar conclusiones precipitadas, discutimos si arriesgarnos a esperar una solución parcial o tomar medidas proactivas y avanzar por otro medio."
+    },
+    {
+      "number": 12,
+      "function": "proposal",
+      "en": "I suggested, if my understanding was correct, that we could join two other travelers in booking a car for the remainder of the journey, splitting expenses evenly.",
+      "es": "Sugerí, si mi interpretación era correcta, que podríamos unirnos a otros dos viajeros para reservar un coche para el resto del trayecto, dividiendo los gastos equitativamente."
+    },
+    {
+      "number": 13,
+      "function": "register_variation",
+      "en": "She cautiously countered that, while the idea was reasonable, we should perhaps hold off on any commitment until one more official update came through.",
+      "es": "Ella objetó con cautela que, aunque la idea era razonable, quizá sería mejor esperar otra actualización oficial antes de comprometernos."
+    },
+    {
+      "number": 14,
+      "function": "reformulation",
+      "en": "Attempting to reassure her, I reformulated my point: I entirely understood the reluctance, and if either option became viable, I was willing to defer to her preference.",
+      "es": "Intentando tranquilizarla, reformulé mi postura: entendía perfectamente la reticencia y, si cualquiera de las opciones resultaba viable, estaba dispuesto a ceder a su preferencia."
+    },
+    {
+      "number": 15,
+      "function": "agreement_modulation",
+      "en": "Our tentative agreement was that we would re-evaluate in fifteen minutes, balancing the risk of further delay against the expense involved.",
+      "es": "Nuestro acuerdo provisional fue reevaluar en quince minutos, equilibrando el riesgo de más retraso con el coste implicado."
+    },
+    {
+      "number": 16,
+      "function": "development",
+      "en": "When the next announcement confirmed that no onward trains would run that night and the bus service capacity was limited, our decision was effectively made for us.",
+      "es": "Cuando el siguiente anuncio confirmó que no habría más trenes esa noche y que la capacidad del autobús era limitada, nuestra decisión quedó prácticamente tomada."
+    },
+    {
+      "number": 17,
+      "function": "resolution",
+      "en": "We swiftly contacted the other stranded travelers, and within minutes, the four of us had secured a private car, each accommodating the cost for efficiency’s sake.",
+      "es": "Contactamos rápidamente a los otros viajeros varados y, en pocos minutos, los cuatro conseguimos un coche privado, asumiendo cada uno el costo para mayor eficiencia."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "In retrospect, I appreciated how calibrating my responses to the situation—and to my companion’s discomfort—helped us negotiate an outcome respectful of everyone’s circumstances.",
+      "es": "Al mirar atrás, valoro cómo ajustar mis respuestas a la situación, y a la incomodidad de mi compañera, nos permitió negociar una solución respetuosa para todos."
+    },
+    {
+      "number": 19,
+      "function": "result",
+      "en": "Arriving past midnight, I felt relief mingled with fatigue, relieved less by the resolution than by the mutual understanding achieved along the way.",
+      "es": "Llegando pasada la medianoche, sentí alivio mezclado con cansancio, aliviado menos por la resolución que por la comprensión mutua lograda en el camino."
+    },
+    {
+      "number": 20,
+      "function": "closure",
+      "en": "Though nothing had gone as planned, our improvised cooperation meant each of us could honor our commitments despite the disruption.",
+      "es": "Aunque nada salió como estaba previsto, nuestra cooperación improvisada hizo posible que cada uno cumpliera con sus compromisos a pesar del contratiempo."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Passive voice",
+      "example_en": "However, as the train reached the midpoint of the journey, an announcement informed us that all onward connections were cancelled due to an unforeseen technical fault.",
+      "explanation_es": "Be + participio centra la atención en quien recibe una acción.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Present participle clause",
+      "example_en": "Gathering my belongings, I approached the makeshift help desk where a dozen other passengers were already vying for information.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Attempting to remain courteous yet clear, I explained to the attendant that I had a specific professional obligation and asked about any feasible way to reach the city that night.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "He tentatively suggested a replacement bus service might materialize, though he promptly hedged, highlighting that details were pending coordination.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "She cautiously countered that, while the idea was reasonable, we should perhaps hold off on any commitment until one more official update came through.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Future in the past",
+      "example_en": "Our tentative agreement was that we would re-evaluate in fifteen minutes, balancing the risk of further delay against the expense involved.",
+      "explanation_es": "Would + infinitivo presenta algo que era futuro desde un punto de vista pasado.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "We swiftly contacted the other stranded travelers, and within minutes, the four of us had secured a private car, each accommodating the cost for efficiency’s sake.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "Gathering my belongings, I approached the makeshift help desk where a dozen other passengers were already vying for information.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 4
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "a ripple of confusion",
+      "meaning_es": "una ola/murmullo de confusión",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Attempting to remain courteous yet clear",
+      "meaning_es": "Intentando mantenerme cortés pero claro",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "details were pending coordination",
+      "meaning_es": "los detalles estaban pendientes de coordinar",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "stepped aside",
+      "meaning_es": "me aparté",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "jump to conclusions",
+      "meaning_es": "sacar conclusiones precipitadas",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "hold off on any commitment",
+      "meaning_es": "posponer cualquier compromiso",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "calibrating my responses",
+      "meaning_es": "ajustando mis respuestas",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "relief mingled with fatigue",
+      "meaning_es": "alivio mezclado con cansancio",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "A ripple of confusion swept through the carriage,",
+              "and I admit I found myself momentarily rooted to my seat,",
+              "weighing what this would mean for my commitment."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "I suggested, if my understanding was correct,",
+              "that we could join two other travelers in booking a car for the remainder of the journey,",
+              "splitting expenses evenly."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "In retrospect,",
+              "I appreciated how calibrating my responses to the situation—and to my companion’s discomfort—helped us negotiate an outcome respectful of everyone’s circumstances."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-006",
+    "number": "006",
+    "title_en": "Travel Plans and Unexpected Changes",
+    "title_es": "Planes de viaje e imprevistos",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Viajes y adaptabilidad",
+    "main_topic_es": "Gestionar interrupciones y negociar soluciones en viajes",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Passive voice",
+      "Present participle clause",
+      "Indirect question",
+      "Might for possibility",
+      "Concessive clause",
+      "Future in the past",
+      "Past perfect",
+      "Defining relative clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

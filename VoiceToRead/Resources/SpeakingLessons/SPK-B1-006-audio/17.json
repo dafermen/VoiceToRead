@@ -1,0 +1,90 @@
+{
+  "text": "My friend said that sometimes unexpected changes can actually make a trip more interesting.",
+  "duration": 7.050000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.4000000059604645,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.6600000262260437,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.0800000429153442,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 20,
+      "length": 9,
+      "start": 1.6399999856948853,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 30,
+      "length": 10,
+      "start": 2.180000066757202,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 2.9000000953674316,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.4800000190734863,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 4.019999980926514,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.539999961853027,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 67,
+      "length": 1,
+      "start": 4.71999979019165,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 79,
+      "length": 11,
+      "start": 5.539999961853027,
+      "end": 5.960000038146973
+    }
+  ]
+}

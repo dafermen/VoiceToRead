@@ -1,0 +1,162 @@
+{
+  "text": "While neither of us was entirely satisfied, I conceded that, if necessary, I could create a more compact workspace to secure the benefits the apartment offered.",
+  "duration": 13.220000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.6200000047683716,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.2799999713897705,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.7799999713897705,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 24,
+      "length": 8,
+      "start": 2.0399999618530273,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 33,
+      "length": 9,
+      "start": 2.5999999046325684,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 4.019999980926514,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 46,
+      "length": 8,
+      "start": 4.199999809265137,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.71999979019165,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 5.400000095367432,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 64,
+      "length": 9,
+      "start": 5.579999923706055,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 75,
+      "length": 1,
+      "start": 6.739999771118164,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 7.099999904632568,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 7.340000152587891,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 90,
+      "length": 1,
+      "start": 7.760000228881836,
+      "end": 8.0
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 8.0,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 8.84000015258789,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 105,
+      "length": 9,
+      "start": 8.84000015258789,
+      "end": 9.479999542236328
+    },
+    {
+      "location": 115,
+      "length": 2,
+      "start": 9.479999542236328,
+      "end": 10.15999984741211
+    },
+    {
+      "location": 118,
+      "length": 6,
+      "start": 10.15999984741211,
+      "end": 10.460000038146973
+    },
+    {
+      "location": 125,
+      "length": 3,
+      "start": 10.460000038146973,
+      "end": 10.920000076293945
+    },
+    {
+      "location": 129,
+      "length": 8,
+      "start": 10.920000076293945,
+      "end": 11.220000267028809
+    },
+    {
+      "location": 138,
+      "length": 3,
+      "start": 11.220000267028809,
+      "end": 11.579999923706055
+    },
+    {
+      "location": 142,
+      "length": 9,
+      "start": 11.579999923706055,
+      "end": 11.920000076293945
+    },
+    {
+      "location": 152,
+      "length": 7,
+      "start": 11.920000076293945,
+      "end": 12.300000190734863
+    }
+  ]
+}

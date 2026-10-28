@@ -1,0 +1,120 @@
+{
+  "text": "Rather than reject her suggestion outright, I said, 'Perhaps, though I’m cautious about adding yet another stream of notifications.'",
+  "duration": 8.520000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 12,
+      "length": 6,
+      "start": 0.8600000143051147,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.2000000476837158,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 23,
+      "length": 10,
+      "start": 1.5399999618530273,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.059999942779541,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.0199999809265137,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.140000104904175,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 3.940000057220459,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.539999961853027,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 73,
+      "length": 8,
+      "start": 4.800000190734863,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 5.28000020980835,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 5.679999828338623,
+      "end": 6.0
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.0,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 99,
+      "length": 7,
+      "start": 6.260000228881836,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 107,
+      "length": 6,
+      "start": 6.739999771118164,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 114,
+      "length": 2,
+      "start": 7.099999904632568,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 117,
+      "length": 13,
+      "start": 7.460000038146973,
+      "end": 8.039999961853027
+    }
+  ]
+}

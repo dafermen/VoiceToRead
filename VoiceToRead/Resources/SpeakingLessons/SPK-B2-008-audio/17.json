@@ -1,0 +1,108 @@
+{
+  "text": "We settled the price difference, and she completed the exchange efficiently, making sure I understood the settings.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.5799999833106995,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 0.9399999976158142,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.2200000286102295,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 21,
+      "length": 10,
+      "start": 1.5800000429153442,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.9200000762939453,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.940000057220459,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 41,
+      "length": 9,
+      "start": 3.2200000286102295,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 55,
+      "length": 8,
+      "start": 4.119999885559082,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 64,
+      "length": 11,
+      "start": 4.519999980926514,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 77,
+      "length": 6,
+      "start": 6.139999866485596,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.179999828338623,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 89,
+      "length": 1,
+      "start": 6.539999961853027,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 91,
+      "length": 10,
+      "start": 6.960000038146973,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 7.260000228881836,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 106,
+      "length": 8,
+      "start": 7.639999866485596,
+      "end": 7.840000152587891
+    }
+  ]
+}

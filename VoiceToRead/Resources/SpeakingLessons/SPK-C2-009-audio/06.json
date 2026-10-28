@@ -1,0 +1,96 @@
+{
+  "text": "Jordan replied later, apologizing and saying he felt overwhelmed and needed space, which surprised me.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 0.47999998927116394,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.0199999809265137,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 22,
+      "length": 11,
+      "start": 2.2799999713897705,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.619999885559082,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 38,
+      "length": 6,
+      "start": 2.9600000381469727,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.259999990463257,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 53,
+      "length": 11,
+      "start": 3.819999933242798,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 4.519999980926514,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 5.21999979019165,
+      "end": 5.5
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 5.5,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 6.739999771118164,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 89,
+      "length": 9,
+      "start": 6.880000114440918,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 7.400000095367432,
+      "end": 7.71999979019165
+    }
+  ]
+}

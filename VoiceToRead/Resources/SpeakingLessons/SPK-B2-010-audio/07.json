@@ -1,0 +1,102 @@
+{
+  "text": "Recently, I've tried putting my phone on silent for an hour every morning to concentrate better.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.100000023841858,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.5199999809265137,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 1.8600000143051147,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 29,
+      "length": 2,
+      "start": 2.140000104904175,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.440000057220459,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 2.700000047683716,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 3.4600000381469727,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 3.7200000286102295,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.239999771118164,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 4.239999771118164,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 4.659999847412109,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 4.980000019073486,
+      "end": 5.5
+    },
+    {
+      "location": 77,
+      "length": 11,
+      "start": 5.5,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 6.059999942779541,
+      "end": 6.380000114440918
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "text": "Instead, I suggested that a partial store credit would be an acceptable compromise if an exact replacement was not possible.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 1.0199999809265137,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 11,
+      "length": 9,
+      "start": 1.5199999809265137,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.2799999713897705,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.4600000381469727,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.819999933242798,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 3.240000009536743,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.5799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 55,
+      "length": 2,
+      "start": 3.880000114440918,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 4.019999980926514,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 61,
+      "length": 10,
+      "start": 4.300000190734863,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 72,
+      "length": 10,
+      "start": 4.800000190734863,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.380000114440918,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 6.119999885559082,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 6.420000076293945,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 95,
+      "length": 11,
+      "start": 6.760000228881836,
+      "end": 7.320000171661377
+    },
+    {
+      "location": 107,
+      "length": 3,
+      "start": 7.320000171661377,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 7.800000190734863,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 115,
+      "length": 8,
+      "start": 8.15999984741211,
+      "end": 8.5600004196167
+    }
+  ]
+}

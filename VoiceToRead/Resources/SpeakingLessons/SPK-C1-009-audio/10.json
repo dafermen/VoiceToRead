@@ -1,0 +1,132 @@
+{
+  "text": "I told her, 'I realize I’ve asked for flexibility several times, and I regret how that must have felt for you.'",
+  "duration": 8.279999732971191,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.2800000011920929,
+      "end": 0.5
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.5,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.399999976158142,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 2.140000104904175,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.759999990463257,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 38,
+      "length": 11,
+      "start": 3.059999942779541,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 3.6600000858306885,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 4.320000171661377,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 5.519999980926514,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 69,
+      "length": 1,
+      "start": 5.619999885559082,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 5.860000133514404,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 6.300000190734863,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.619999885559082,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 6.820000171661377,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 7.079999923706055,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 7.260000228881836,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 7.440000057220459,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 106,
+      "length": 3,
+      "start": 7.699999809265137,
+      "end": 7.860000133514404
+    }
+  ]
+}

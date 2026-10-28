@@ -1,0 +1,120 @@
+{
+  "text": "Alternatively, she mentioned a carpooling option with other stranded travelers, though this would be more expensive and less predictable.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 13,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 19,
+      "length": 9,
+      "start": 1.659999966621399,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 1.9600000381469727,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 31,
+      "length": 10,
+      "start": 2.240000009536743,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 2.859999895095825,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.0999999046325684,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 54,
+      "length": 5,
+      "start": 3.4000000953674316,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 3.819999933242798,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 69,
+      "length": 9,
+      "start": 4.159999847412109,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 80,
+      "length": 6,
+      "start": 5.420000076293945,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 5.539999961853027,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 5.760000228881836,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 98,
+      "length": 2,
+      "start": 5.880000114440918,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 101,
+      "length": 4,
+      "start": 6.039999961853027,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 106,
+      "length": 9,
+      "start": 6.260000228881836,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 6.860000133514404,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 120,
+      "length": 4,
+      "start": 7.420000076293945,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 125,
+      "length": 11,
+      "start": 7.639999866485596,
+      "end": 8.0600004196167
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "text": "I began our conversation by clarifying that I wasn’t dissatisfied with the quality overall but that there was a key mismatch with my needs.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.46000000834465027,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 8,
+      "length": 3,
+      "start": 0.8600000143051147,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 12,
+      "length": 12,
+      "start": 1.1799999475479126,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 28,
+      "length": 10,
+      "start": 2.380000114440918,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 2.9600000381469727,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.5399999618530273,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 46,
+      "length": 6,
+      "start": 3.7799999713897705,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 53,
+      "length": 12,
+      "start": 4.179999828338623,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 5.079999923706055,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.360000133514404,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 75,
+      "length": 7,
+      "start": 5.579999923706055,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 83,
+      "length": 7,
+      "start": 5.980000019073486,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 91,
+      "length": 3,
+      "start": 6.71999979019165,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 95,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 100,
+      "length": 5,
+      "start": 7.699999809265137,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 106,
+      "length": 3,
+      "start": 7.820000171661377,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 110,
+      "length": 1,
+      "start": 8.020000457763672,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 8.199999809265137,
+      "end": 8.5
+    },
+    {
+      "location": 116,
+      "length": 8,
+      "start": 8.5,
+      "end": 9.079999923706055
+    },
+    {
+      "location": 125,
+      "length": 4,
+      "start": 9.079999923706055,
+      "end": 9.319999694824219
+    },
+    {
+      "location": 130,
+      "length": 2,
+      "start": 9.319999694824219,
+      "end": 9.600000381469727
+    },
+    {
+      "location": 133,
+      "length": 5,
+      "start": 9.600000381469727,
+      "end": 9.960000038146973
+    }
+  ]
+}

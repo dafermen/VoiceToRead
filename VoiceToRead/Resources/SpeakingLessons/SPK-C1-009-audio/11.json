@@ -1,0 +1,144 @@
+{
+  "text": "She hesitated, then admitted, 'When plans change last minute, I feel like an afterthought—not a priority, even if I understand your reasons.'",
+  "duration": 10.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 4,
+      "length": 9,
+      "start": 0.3799999952316284,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.5399999618530273,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 1.7200000286102295,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.9000000953674316,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 3.0999999046325684,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 3.5199999809265137,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.9800000190734863,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 4.400000095367432,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 62,
+      "length": 1,
+      "start": 5.28000020980835,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 5.400000095367432,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.599999904632568,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 5.800000190734863,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 77,
+      "length": 12,
+      "start": 5.960000038146973,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 5.960000038146973,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 94,
+      "length": 1,
+      "start": 7.239999771118164,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 96,
+      "length": 8,
+      "start": 7.519999980926514,
+      "end": 7.860000133514404
+    },
+    {
+      "location": 106,
+      "length": 4,
+      "start": 8.699999809265137,
+      "end": 8.899999618530273
+    },
+    {
+      "location": 111,
+      "length": 2,
+      "start": 8.899999618530273,
+      "end": 9.020000457763672
+    },
+    {
+      "location": 114,
+      "length": 1,
+      "start": 9.020000457763672,
+      "end": 9.739999771118164
+    },
+    {
+      "location": 116,
+      "length": 10,
+      "start": 9.739999771118164,
+      "end": 9.739999771118164
+    },
+    {
+      "location": 127,
+      "length": 4,
+      "start": 9.739999771118164,
+      "end": 9.979999542236328
+    },
+    {
+      "location": 132,
+      "length": 7,
+      "start": 9.979999542236328,
+      "end": 10.399999618530273
+    }
+  ]
+}

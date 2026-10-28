@@ -1,0 +1,126 @@
+{
+  "text": "Now, I always research how products perform in real homes before I buy, not just what the promotional material claims.",
+  "duration": 10.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.9399999976158142,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 7,
+      "length": 6,
+      "start": 1.2799999713897705,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 14,
+      "length": 8,
+      "start": 2.0399999618530273,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 2.4800000190734863,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 27,
+      "length": 8,
+      "start": 2.7799999713897705,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 3.2200000286102295,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.7799999713897705,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 4.119999885559082,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 58,
+      "length": 6,
+      "start": 4.920000076293945,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 65,
+      "length": 1,
+      "start": 5.340000152587891,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.639999866485596,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 6.639999866485596,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 6.820000171661377,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 7.139999866485596,
+      "end": 7.320000171661377
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 7.320000171661377,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 90,
+      "length": 11,
+      "start": 7.539999961853027,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 102,
+      "length": 8,
+      "start": 8.020000457763672,
+      "end": 8.619999885559082
+    },
+    {
+      "location": 111,
+      "length": 6,
+      "start": 8.619999885559082,
+      "end": 9.0600004196167
+    }
+  ]
+}

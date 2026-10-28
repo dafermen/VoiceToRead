@@ -1,0 +1,138 @@
+{
+  "text": "He suggested we could take a different route with a transfer in a nearby town, arriving earlier but with a short wait.",
+  "duration": 8.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 3,
+      "length": 9,
+      "start": 0.3400000035762787,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 0.8399999737739563,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.159999966621399,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.3799999952316284,
+      "end": 1.5
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 1.5,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 29,
+      "length": 9,
+      "start": 1.7400000095367432,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.1600000858306885,
+      "end": 2.5
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 50,
+      "length": 1,
+      "start": 2.859999895095825,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 52,
+      "length": 8,
+      "start": 3.140000104904175,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 3.5199999809265137,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 64,
+      "length": 1,
+      "start": 3.799999952316284,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 4.099999904632568,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 4.21999979019165,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 79,
+      "length": 8,
+      "start": 5.360000133514404,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 5.71999979019165,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 96,
+      "length": 3,
+      "start": 6.320000171661377,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 6.840000152587891,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 105,
+      "length": 1,
+      "start": 6.980000019073486,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 107,
+      "length": 5,
+      "start": 7.340000152587891,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 7.420000076293945,
+      "end": 7.739999771118164
+    }
+  ]
+}

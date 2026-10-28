@@ -1,0 +1,108 @@
+{
+  "text": "She sent several excited messages, and I replied honestly that I wasn't feeling very social that evening.",
+  "duration": 7.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.4000000059604645,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 9,
+      "length": 7,
+      "start": 0.7400000095367432,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.2400000095367432,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 25,
+      "length": 8,
+      "start": 1.9600000381469727,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 3.200000047683716,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 39,
+      "length": 1,
+      "start": 3.2200000286102295,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 3.440000057220459,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 49,
+      "length": 8,
+      "start": 3.7200000286102295,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 4.300000190734863,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 63,
+      "length": 1,
+      "start": 4.800000190734863,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 65,
+      "length": 6,
+      "start": 5.039999961853027,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 5.360000133514404,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.679999828338623,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 85,
+      "length": 6,
+      "start": 6.119999885559082,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 6.400000095367432,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 6.71999979019165,
+      "end": 6.940000057220459
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "text": "The agent proposed a multi-stop itinerary involving three commuter trains and a final bus leg; however, he cautioned me that I would have only minutes to change platforms at each transfer.",
+  "duration": 13.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.3799999952316284,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 10,
+      "length": 8,
+      "start": 1.0199999809265137,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 19,
+      "length": 1,
+      "start": 1.7599999904632568,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 2.0799999237060547,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.5399999618530273,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 32,
+      "length": 9,
+      "start": 2.8399999141693115,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 42,
+      "length": 9,
+      "start": 3.5799999237060547,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 4.139999866485596,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 58,
+      "length": 8,
+      "start": 4.739999771118164,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 5.059999942779541,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.519999980926514,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 78,
+      "length": 1,
+      "start": 5.820000171661377,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 80,
+      "length": 5,
+      "start": 6.260000228881836,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.260000228881836,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 6.539999961853027,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 95,
+      "length": 7,
+      "start": 7.920000076293945,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 104,
+      "length": 2,
+      "start": 8.680000305175781,
+      "end": 8.920000076293945
+    },
+    {
+      "location": 107,
+      "length": 9,
+      "start": 8.920000076293945,
+      "end": 9.380000114440918
+    },
+    {
+      "location": 117,
+      "length": 2,
+      "start": 9.380000114440918,
+      "end": 9.539999961853027
+    },
+    {
+      "location": 120,
+      "length": 4,
+      "start": 9.539999961853027,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 125,
+      "length": 1,
+      "start": 9.720000267028809,
+      "end": 9.819999694824219
+    },
+    {
+      "location": 127,
+      "length": 5,
+      "start": 9.819999694824219,
+      "end": 9.960000038146973
+    },
+    {
+      "location": 133,
+      "length": 4,
+      "start": 9.960000038146973,
+      "end": 10.15999984741211
+    },
+    {
+      "location": 138,
+      "length": 4,
+      "start": 10.15999984741211,
+      "end": 10.760000228881836
+    },
+    {
+      "location": 143,
+      "length": 7,
+      "start": 10.760000228881836,
+      "end": 11.0
+    },
+    {
+      "location": 151,
+      "length": 2,
+      "start": 11.0,
+      "end": 11.34000015258789
+    },
+    {
+      "location": 154,
+      "length": 6,
+      "start": 11.34000015258789,
+      "end": 11.600000381469727
+    },
+    {
+      "location": 161,
+      "length": 9,
+      "start": 11.600000381469727,
+      "end": 12.119999885559082
+    },
+    {
+      "location": 171,
+      "length": 2,
+      "start": 12.119999885559082,
+      "end": 12.420000076293945
+    },
+    {
+      "location": 174,
+      "length": 4,
+      "start": 12.420000076293945,
+      "end": 12.680000305175781
+    },
+    {
+      "location": 179,
+      "length": 8,
+      "start": 12.680000305175781,
+      "end": 13.0600004196167
+    }
+  ]
+}

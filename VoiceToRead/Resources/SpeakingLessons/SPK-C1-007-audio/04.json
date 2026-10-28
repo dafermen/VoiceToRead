@@ -1,0 +1,144 @@
+{
+  "text": "Given the need for a workspace, I immediately noticed the absence of a separate office area, which was one of my top priorities.",
+  "duration": 8.680000305175781,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.46000000834465027,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.1200000047683716,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 19,
+      "length": 1,
+      "start": 1.399999976158142,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 21,
+      "length": 9,
+      "start": 1.659999966621399,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 32,
+      "length": 1,
+      "start": 2.859999895095825,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 34,
+      "length": 11,
+      "start": 2.9000000953674316,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.4800000190734863,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.9200000762939453,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 4.199999809265137,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 4.599999904632568,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 69,
+      "length": 1,
+      "start": 4.860000133514404,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 71,
+      "length": 8,
+      "start": 5.019999980926514,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 80,
+      "length": 6,
+      "start": 5.380000114440918,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 5.78000020980835,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 93,
+      "length": 5,
+      "start": 6.5,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 6.539999961853027,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 103,
+      "length": 3,
+      "start": 6.739999771118164,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 107,
+      "length": 2,
+      "start": 6.860000133514404,
+      "end": 7.0
+    },
+    {
+      "location": 110,
+      "length": 2,
+      "start": 7.0,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 113,
+      "length": 3,
+      "start": 7.199999809265137,
+      "end": 7.5
+    },
+    {
+      "location": 117,
+      "length": 10,
+      "start": 7.5,
+      "end": 7.960000038146973
+    }
+  ]
+}

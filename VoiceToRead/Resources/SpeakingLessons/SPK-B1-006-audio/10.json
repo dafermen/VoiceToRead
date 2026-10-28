@@ -1,0 +1,102 @@
+{
+  "text": "My friend agreed that waiting all day for one train didn’t make much sense to us.",
+  "duration": 6.909999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.41999998688697815,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.800000011920929,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.3600000143051147,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 22,
+      "length": 7,
+      "start": 1.940000057220459,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.2799999713897705,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.6600000858306885,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.9000000953674316,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.5
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.5,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 52,
+      "length": 6,
+      "start": 3.880000114440918,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.639999866485596,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.880000114440918,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 5.260000228881836,
+      "end": 5.5
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.5,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 5.71999979019165,
+      "end": 6.019999980926514
+    }
+  ]
+}

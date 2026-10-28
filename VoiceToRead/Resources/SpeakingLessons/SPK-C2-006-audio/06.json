@@ -1,0 +1,120 @@
+{
+  "text": "He tentatively suggested a replacement bus service might materialize, though he promptly hedged, highlighting that details were pending coordination.",
+  "duration": 12.789999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 3,
+      "length": 11,
+      "start": 0.6600000262260437,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 15,
+      "length": 9,
+      "start": 1.3600000143051147,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 25,
+      "length": 1,
+      "start": 2.140000104904175,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 27,
+      "length": 11,
+      "start": 2.5799999237060547,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 3.619999885559082,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 4.119999885559082,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 57,
+      "length": 11,
+      "start": 4.440000057220459,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 6.079999923706055,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 6.239999771118164,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 80,
+      "length": 8,
+      "start": 6.699999809265137,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 7.260000228881836,
+      "end": 7.980000019073486
+    },
+    {
+      "location": 97,
+      "length": 12,
+      "start": 8.899999618530273,
+      "end": 8.899999618530273
+    },
+    {
+      "location": 110,
+      "length": 4,
+      "start": 8.899999618530273,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 115,
+      "length": 7,
+      "start": 9.4399995803833,
+      "end": 9.800000190734863
+    },
+    {
+      "location": 123,
+      "length": 4,
+      "start": 9.800000190734863,
+      "end": 10.180000305175781
+    },
+    {
+      "location": 128,
+      "length": 7,
+      "start": 10.180000305175781,
+      "end": 10.619999885559082
+    },
+    {
+      "location": 136,
+      "length": 12,
+      "start": 10.619999885559082,
+      "end": 11.460000038146973
+    }
+  ]
+}

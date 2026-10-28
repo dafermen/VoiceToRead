@@ -1,0 +1,114 @@
+{
+  "text": "If I had to choose between space and peace, I think I would still pick the brighter room.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.2199999988079071
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.2199999988079071,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.47999998927116394,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.800000011920929,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 12,
+      "length": 6,
+      "start": 1.2400000095367432,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 1.4800000190734863,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 2.140000104904175,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.700000047683716,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 3.119999885559082,
+      "end": 3.5
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 4.300000190734863,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 4.360000133514404,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 52,
+      "length": 1,
+      "start": 4.559999942779541,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 54,
+      "length": 5,
+      "start": 4.800000190734863,
+      "end": 5.0
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 5.0,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 5.400000095367432,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.679999828338623,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 75,
+      "length": 8,
+      "start": 6.099999904632568,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.420000076293945,
+      "end": 6.840000152587891
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-007",
+  "number": 7,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Finding a Place to Live",
+    "es": "Buscar dónde vivir"
+  },
+  "category": {
+    "en": "Daily Life",
+    "es": "Vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Viewing a potential home, discussing needs, trade-offs, preferences, and shared responsibilities with a roommate.",
+    "es": "Visitar una vivienda posible, discutir necesidades, comparar opciones, preferencias y responsabilidades compartidas con un compañero."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos adultos observando el interior de un apartamento vacío y conversando sobre el espacio.",
+    "prompt": "Realistic editorial photograph, two adults viewing an empty apartment, discussing with gestures and looking at features like windows and kitchen, urban setting, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar opciones y justificar preferencias al buscar vivienda.",
+    "Explicar causas de necesidades personales relacionadas al hogar.",
+    "Negociar responsabilidades compartidas y responder a objeciones.",
+    "Utilizar variados tiempos verbales y condicionales adecuados.",
+    "Practicar lectura y repetición contextualizada en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday afternoon, I met Alex to visit an apartment that might become our next home.",
+      "es": "Ayer por la tarde, me reuní con Alex para visitar un apartamento que podría convertirse en nuestro próximo hogar."
+    },
+    {
+      "number": 2,
+      "function": "description",
+      "en": "The apartment was on the third floor, filled with natural light and a view over the nearby park.",
+      "es": "El apartamento estaba en el tercer piso, lleno de luz natural y tenía vistas al parque cercano."
+    },
+    {
+      "number": 3,
+      "function": "opinion",
+      "en": "I immediately liked the open kitchen, because cooking is something I love to do after a long day.",
+      "es": "Inmediatamente me gustó la cocina abierta, porque cocinar es algo que me encanta hacer después de un día largo."
+    },
+    {
+      "number": 4,
+      "function": "contrast",
+      "en": "Alex, on the other hand, seemed more interested in whether we would have enough space in the living room for his piano.",
+      "es": "Alex, en cambio, parecía más interesado en si tendríamos suficiente espacio en la sala para su piano."
+    },
+    {
+      "number": 5,
+      "function": "detail",
+      "en": "We walked around, measuring wall space and picturing where our furniture could go.",
+      "es": "Caminamos por el lugar, midiendo el espacio en las paredes e imaginando dónde podría ir nuestro mobiliario."
+    },
+    {
+      "number": 6,
+      "function": "preference",
+      "en": "Ideally, I would prefer a place with a small balcony, but I was willing to compromise if the rest felt right.",
+      "es": "Idealmente, preferiría un lugar con un pequeño balcón, pero estaba dispuesto a ceder si lo demás nos convencía."
+    },
+    {
+      "number": 7,
+      "function": "reason",
+      "en": "Having outdoor space has always helped me relax and clear my head, especially during busy weeks.",
+      "es": "Tener un espacio exterior siempre me ha ayudado a relajarme y despejar la mente, especialmente durante semanas ajetreadas."
+    },
+    {
+      "number": 8,
+      "function": "tradeoff",
+      "en": "Still, I realized that more natural light and a larger living area matter more than a small balcony.",
+      "es": "Aun así, me di cuenta de que tener más luz natural y una sala más grande es más importante que un balcón pequeño."
+    },
+    {
+      "number": 9,
+      "function": "negotiation",
+      "en": "Alex agreed, but he wanted to know if I'd be okay with keeping his plants near the windows.",
+      "es": "Alex estuvo de acuerdo, pero quiso saber si estaría bien que pusiera sus plantas cerca de las ventanas."
+    },
+    {
+      "number": 10,
+      "function": "reassurance",
+      "en": "I told him I'd be happy to water the plants when he's away, since I enjoy caring for them too.",
+      "es": "Le dije que estaría encantado de regar las plantas cuando él no esté, ya que también disfruto cuidarlas."
+    },
+    {
+      "number": 11,
+      "function": "potential_issue",
+      "en": "When we checked the bedrooms, Alex mentioned he is a light sleeper and worries about street noise.",
+      "es": "Cuando revisamos las habitaciones, Alex mencionó que duerme ligero y le preocupa el ruido de la calle."
+    },
+    {
+      "number": 12,
+      "function": "solution",
+      "en": "Since only the back room faces the quieter side, we decided he would take that one, and I'd take the front.",
+      "es": "Como solo el cuarto trasero da al lado más silencioso, decidimos que él tomaría ése y yo el del frente."
+    },
+    {
+      "number": 13,
+      "function": "objection",
+      "en": "I pointed out that the front room is smaller, but at least I'll have a nice sunrise every morning.",
+      "es": "Señalé que el cuarto del frente es más pequeño, pero al menos tendré un bonito amanecer todas las mañanas."
+    },
+    {
+      "number": 14,
+      "function": "compromise",
+      "en": "Alex suggested we could swap rooms after six months if it turns out the street noise isn’t so bad.",
+      "es": "Alex sugirió que podríamos intercambiar cuartos después de seis meses si resulta que el ruido de la calle no es tan molesto."
+    },
+    {
+      "number": 15,
+      "function": "hypothetical",
+      "en": "If I had to choose between space and peace, I think I would still pick the brighter room.",
+      "es": "Si tuviera que elegir entre espacio y tranquilidad, creo que aún elegiría la habitación más luminosa."
+    },
+    {
+      "number": 16,
+      "function": "future_arrangement",
+      "en": "We discussed cleaning responsibilities, agreeing that alternating weeks would keep things fair.",
+      "es": "Discutimos las responsabilidades de limpieza y acordamos que alternar semanas mantendría todo equitativo."
+    },
+    {
+      "number": 17,
+      "function": "possibility",
+      "en": "There is always the chance that disagreements will come up, but I feel confident we can communicate openly.",
+      "es": "Siempre existe la posibilidad de que surjan desacuerdos, pero confío en que podremos comunicarnos abiertamente."
+    },
+    {
+      "number": 18,
+      "function": "decision",
+      "en": "After looking at our priorities, we both agreed that this apartment meets most of our needs.",
+      "es": "Después de repasar nuestras prioridades, ambos coincidimos en que este apartamento cumple con la mayoría de nuestras necesidades."
+    },
+    {
+      "number": 19,
+      "function": "action",
+      "en": "We told the agent we were interested, and she promised to send us the rental application by tomorrow.",
+      "es": "Le dijimos a la agente que estábamos interesados, y ella prometió enviarnos la solicitud de alquiler para mañana."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "If we end up living here, I hope it will really feel like home for both of us.",
+      "es": "Si terminamos viviendo aquí, espero que realmente se sienta como un hogar para los dos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Could for suggestion or possibility",
+      "example_en": "We walked around, measuring wall space and picturing where our furniture could go.",
+      "explanation_es": "Could + infinitivo expresa una sugerencia o una posibilidad.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Would for preference",
+      "example_en": "Ideally, I would prefer a place with a small balcony, but I was willing to compromise if the rest felt right.",
+      "explanation_es": "Would expresa una preferencia o un deseo de forma hipotética o cortés.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Having outdoor space has always helped me relax and clear my head, especially during busy weeks.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Gerund as subject",
+      "example_en": "Having outdoor space has always helped me relax and clear my head, especially during busy weeks.",
+      "explanation_es": "Un grupo en -ing funciona como sujeto de la oración.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Comparatives",
+      "example_en": "Still, I realized that more natural light and a larger living area matter more than a small balcony.",
+      "explanation_es": "Los comparativos permiten contrastar cualidades, opciones o cantidades.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "If I had to choose between space and peace, I think I would still pick the brighter room.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Present participle clause",
+      "example_en": "We discussed cleaning responsibilities, agreeing that alternating weeks would keep things fair.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "First conditional",
+      "example_en": "If we end up living here, I hope it will really feel like home for both of us.",
+      "explanation_es": "If + presente con will en el resultado relaciona una condición posible con una consecuencia futura.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "filled with natural light",
+      "meaning_es": "lleno de luz natural",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "open kitchen",
+      "meaning_es": "cocina abierta",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "enough space",
+      "meaning_es": "suficiente espacio",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "picturing where our furniture could go",
+      "meaning_es": "imaginando dónde iría nuestro mobiliario",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "clear my head",
+      "meaning_es": "despejar la mente",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "willing to compromise",
+      "meaning_es": "dispuesto a ceder",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "light sleeper",
+      "meaning_es": "duerme ligero",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "alternating weeks",
+      "meaning_es": "semanas alternadas",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "Ideally, I would prefer a place with a small balcony,",
+              "but I was willing to compromise",
+              "if the rest felt right."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "Since only the back room faces the quieter side,",
+              "we decided he would take that one,",
+              "and I'd take the front."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "If we end up living here,",
+              "I hope it will really feel like home",
+              "for both of us."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-007",
+    "number": "007",
+    "title_en": "Finding a Place to Live",
+    "title_es": "Buscar dónde vivir",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana",
+    "main_topic_es": "Visitar una vivienda, negociar preferencias y responsabilidades",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Could for suggestion or possibility",
+      "Would for preference",
+      "Present perfect",
+      "Gerund as subject",
+      "Comparatives",
+      "Second conditional",
+      "Present participle clause",
+      "First conditional"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

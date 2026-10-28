@@ -1,0 +1,90 @@
+{
+  "text": "As a result, I feel less stressed and I finish my breakfast much faster.",
+  "duration": 6.159999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.46000000834465027,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.7599999904632568,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.440000057220459,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.7999999523162842,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.9600000381469727,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 25,
+      "length": 8,
+      "start": 2.3399999141693115,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.7799999713897705,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 38,
+      "length": 1,
+      "start": 3.4800000190734863,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 40,
+      "length": 6,
+      "start": 3.859999895095825,
+      "end": 4.0
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 4.0,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 50,
+      "length": 9,
+      "start": 4.380000114440918,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.739999771118164,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 65,
+      "length": 6,
+      "start": 5.21999979019165,
+      "end": 5.619999885559082
+    }
+  ]
+}

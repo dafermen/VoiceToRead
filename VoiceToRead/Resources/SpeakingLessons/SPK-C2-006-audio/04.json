@@ -1,0 +1,120 @@
+{
+  "text": "Gathering my belongings, I approached the makeshift help desk where a dozen other passengers were already vying for information.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.800000011920929,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 13,
+      "length": 10,
+      "start": 1.1399999856948853,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 25,
+      "length": 1,
+      "start": 2.299999952316284,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 27,
+      "length": 10,
+      "start": 2.4200000762939453,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 42,
+      "length": 9,
+      "start": 3.059999942779541,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 3.559999942779541,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 3.9600000381469727,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.320000171661377,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 68,
+      "length": 1,
+      "start": 4.880000114440918,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 5.239999771118164,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 5.320000171661377,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 82,
+      "length": 10,
+      "start": 6.199999809265137,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 6.199999809265137,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 98,
+      "length": 7,
+      "start": 6.539999961853027,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 106,
+      "length": 5,
+      "start": 7.159999847412109,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 7.539999961853027,
+      "end": 8.300000190734863
+    },
+    {
+      "location": 116,
+      "length": 11,
+      "start": 8.300000190734863,
+      "end": 8.720000267028809
+    }
+  ]
+}

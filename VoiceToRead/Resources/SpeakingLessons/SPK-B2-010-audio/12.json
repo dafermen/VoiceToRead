@@ -1,0 +1,114 @@
+{
+  "text": "I explained that if we did it together, we would avoid double-booking and constant last-minute messages.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.5799999833106995,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.8999999761581421,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.4800000190734863,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.8799999952316284,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 2.119999885559082,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 2.259999990463257,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.5399999618530273,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 3.4600000381469727,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.559999942779541,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.7799999713897705,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 55,
+      "length": 6,
+      "start": 4.079999923706055,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 4.440000057220459,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 4.880000114440918,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 5.579999923706055,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.260000228881836,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 7.039999961853027,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 95,
+      "length": 8,
+      "start": 7.159999847412109,
+      "end": 7.579999923706055
+    }
+  ]
+}

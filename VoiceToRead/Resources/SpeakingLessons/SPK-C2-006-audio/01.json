@@ -1,0 +1,156 @@
+{
+  "text": "Last Sunday, I set off for a conference in Harbor City, intending to arrive the evening before my talk and settle in with ample time.",
+  "duration": 9.979999542236328,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5400000214576721,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.440000057220459,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.7400000095367432,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.899999976158142,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 2.119999885559082,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.2799999713897705,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 29,
+      "length": 10,
+      "start": 2.9200000762939453,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.9200000762939453,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.140000104904175,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 3.440000057220459,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 56,
+      "length": 9,
+      "start": 4.679999828338623,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 4.940000057220459,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 5.659999847412109,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.659999847412109,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 6.039999961853027,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 6.28000020980835,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 6.659999847412109,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 6.960000038146973,
+      "end": 7.360000133514404
+    },
+    {
+      "location": 103,
+      "length": 3,
+      "start": 7.360000133514404,
+      "end": 8.140000343322754
+    },
+    {
+      "location": 107,
+      "length": 6,
+      "start": 8.140000343322754,
+      "end": 8.359999656677246
+    },
+    {
+      "location": 114,
+      "length": 2,
+      "start": 8.359999656677246,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 117,
+      "length": 4,
+      "start": 8.699999809265137,
+      "end": 9.0
+    },
+    {
+      "location": 122,
+      "length": 5,
+      "start": 9.0,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 128,
+      "length": 4,
+      "start": 9.239999771118164,
+      "end": 9.640000343322754
+    }
+  ]
+}

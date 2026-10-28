@@ -1,0 +1,132 @@
+{
+  "text": "After several days, I realized the headset was far from comfortable and started causing headaches barely an hour into each call.",
+  "duration": 9.449999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.4399999976158142,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 0.9800000190734863,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 20,
+      "length": 1,
+      "start": 1.7799999713897705,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 8,
+      "start": 1.9800000190734863,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.4200000762939453,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.759999990463257,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.1600000858306885,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.4800000190734863,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.799999952316284,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 56,
+      "length": 11,
+      "start": 4.119999885559082,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 5.400000095367432,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 5.739999771118164,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 88,
+      "length": 9,
+      "start": 6.179999828338623,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 98,
+      "length": 6,
+      "start": 6.739999771118164,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 7.559999942779541,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 8.15999984741211,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 8.15999984741211,
+      "end": 8.460000038146973
+    },
+    {
+      "location": 118,
+      "length": 4,
+      "start": 8.460000038146973,
+      "end": 8.880000114440918
+    },
+    {
+      "location": 123,
+      "length": 4,
+      "start": 8.880000114440918,
+      "end": 9.140000343322754
+    }
+  ]
+}

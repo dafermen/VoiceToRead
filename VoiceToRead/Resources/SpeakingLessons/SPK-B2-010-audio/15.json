@@ -1,0 +1,102 @@
+{
+  "text": "I noticed that planning digitally is efficient, but discussing each item face-to-face avoids misunderstandings.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.5600000023841858,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.0800000429153442,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.7200000286102295,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 24,
+      "length": 9,
+      "start": 2.1600000858306885,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.640000104904175,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 37,
+      "length": 9,
+      "start": 3.140000104904175,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 4.21999979019165,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 52,
+      "length": 10,
+      "start": 4.340000152587891,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.820000171661377,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.360000133514404,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.619999885559082,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 6.059999942779541,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 6.21999979019165,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 86,
+      "length": 6,
+      "start": 6.880000114440918,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 93,
+      "length": 17,
+      "start": 7.420000076293945,
+      "end": 8.5600004196167
+    }
+  ]
+}

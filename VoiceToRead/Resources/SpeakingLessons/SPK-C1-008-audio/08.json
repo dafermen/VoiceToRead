@@ -1,0 +1,150 @@
+{
+  "text": "Reluctant to simply keep something so fundamental yet impractical for me, I resolved to return to the store and discuss alternatives with the staff.",
+  "duration": 10.270000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.8399999737739563,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.159999966621399,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.4800000190734863,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 1.9800000190734863,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 2.5199999809265137,
+      "end": 3.0
+    },
+    {
+      "location": 38,
+      "length": 11,
+      "start": 3.0,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 54,
+      "length": 11,
+      "start": 3.9800000190734863,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.639999866485596,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 4.940000057220459,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 74,
+      "length": 1,
+      "start": 5.699999809265137,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 76,
+      "length": 8,
+      "start": 5.820000171661377,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 85,
+      "length": 2,
+      "start": 6.199999809265137,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 6.480000019073486,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 6.699999809265137,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 6.880000114440918,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 102,
+      "length": 5,
+      "start": 7.119999885559082,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 7.380000114440918,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 112,
+      "length": 7,
+      "start": 7.840000152587891,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 120,
+      "length": 12,
+      "start": 8.199999809265137,
+      "end": 8.920000076293945
+    },
+    {
+      "location": 133,
+      "length": 4,
+      "start": 8.920000076293945,
+      "end": 9.199999809265137
+    },
+    {
+      "location": 138,
+      "length": 3,
+      "start": 9.199999809265137,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 142,
+      "length": 5,
+      "start": 9.460000038146973,
+      "end": 9.760000228881836
+    }
+  ]
+}

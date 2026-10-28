@@ -1,0 +1,180 @@
+{
+  "text": "If I am honest, I found myself uncertain how to interpret Jamie's tone as we moved from room to room, wondering whether their comments were reservations or mere observations.",
+  "duration": 13.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.23999999463558197
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.23999999463558197,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 5,
+      "length": 2,
+      "start": 0.4000000059604645,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 8,
+      "length": 6,
+      "start": 0.6200000047683716,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.340000033378601,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.899999976158142,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 24,
+      "length": 6,
+      "start": 2.0799999237060547,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 31,
+      "length": 9,
+      "start": 2.6600000858306885,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 3.200000047683716,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.740000009536743,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 48,
+      "length": 9,
+      "start": 4.440000057220459,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 4.440000057220459,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 5.119999885559082,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 5.460000038146973,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 6.099999904632568,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 6.360000133514404,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.659999847412109,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 88,
+      "length": 4,
+      "start": 7.21999979019165,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 93,
+      "length": 2,
+      "start": 7.21999979019165,
+      "end": 7.860000133514404
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 7.860000133514404,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 102,
+      "length": 9,
+      "start": 8.9399995803833,
+      "end": 8.9399995803833
+    },
+    {
+      "location": 112,
+      "length": 7,
+      "start": 8.9399995803833,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 120,
+      "length": 5,
+      "start": 9.239999771118164,
+      "end": 9.579999923706055
+    },
+    {
+      "location": 126,
+      "length": 8,
+      "start": 9.579999923706055,
+      "end": 9.979999542236328
+    },
+    {
+      "location": 135,
+      "length": 4,
+      "start": 9.979999542236328,
+      "end": 10.300000190734863
+    },
+    {
+      "location": 140,
+      "length": 12,
+      "start": 10.300000190734863,
+      "end": 10.960000038146973
+    },
+    {
+      "location": 153,
+      "length": 2,
+      "start": 10.960000038146973,
+      "end": 12.020000457763672
+    },
+    {
+      "location": 156,
+      "length": 4,
+      "start": 12.020000457763672,
+      "end": 12.34000015258789
+    },
+    {
+      "location": 161,
+      "length": 12,
+      "start": 12.34000015258789,
+      "end": 12.960000038146973
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "text": "Now, though our friendship isn't immune to stress, we both know we can communicate openly whenever life’s pressures threaten our connection.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 1.0199999809265137,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 16,
+      "length": 10,
+      "start": 1.8600000143051147,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 1.8600000143051147,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 33,
+      "length": 6,
+      "start": 2.359999895095825,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.5999999046325684,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.299999952316284,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.859999895095825,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.9600000381469727,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.340000152587891,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 4.539999961853027,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 4.739999771118164,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 71,
+      "length": 11,
+      "start": 4.980000019073486,
+      "end": 5.5
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 5.5,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 90,
+      "length": 8,
+      "start": 6.239999771118164,
+      "end": 7.0
+    },
+    {
+      "location": 99,
+      "length": 6,
+      "start": 7.0,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 106,
+      "length": 9,
+      "start": 7.760000228881836,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 116,
+      "length": 8,
+      "start": 7.760000228881836,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 125,
+      "length": 3,
+      "start": 8.100000381469727,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 129,
+      "length": 10,
+      "start": 8.399999618530273,
+      "end": 8.760000228881836
+    }
+  ]
+}

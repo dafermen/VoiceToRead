@@ -1,0 +1,132 @@
+{
+  "text": "We discussed the possibility of negotiating a slightly lower rent or getting the landlord to include some utilities to offset costs.",
+  "duration": 10.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 3,
+      "length": 9,
+      "start": 0.5799999833106995,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.059999942779541,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 17,
+      "length": 11,
+      "start": 1.3799999952316284,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 29,
+      "length": 2,
+      "start": 2.0999999046325684,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 32,
+      "length": 11,
+      "start": 3.319999933242798,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.319999933242798,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 46,
+      "length": 8,
+      "start": 3.700000047683716,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 55,
+      "length": 5,
+      "start": 4.039999961853027,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.420000076293945,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 4.760000228881836,
+      "end": 5.5
+    },
+    {
+      "location": 69,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 77,
+      "length": 3,
+      "start": 5.800000190734863,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 81,
+      "length": 8,
+      "start": 6.059999942779541,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.360000133514404,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 93,
+      "length": 7,
+      "start": 6.840000152587891,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 101,
+      "length": 4,
+      "start": 7.079999923706055,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 106,
+      "length": 9,
+      "start": 7.559999942779541,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 116,
+      "length": 2,
+      "start": 8.020000457763672,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 119,
+      "length": 6,
+      "start": 8.739999771118164,
+      "end": 9.199999809265137
+    },
+    {
+      "location": 126,
+      "length": 5,
+      "start": 9.199999809265137,
+      "end": 9.699999809265137
+    }
+  ]
+}

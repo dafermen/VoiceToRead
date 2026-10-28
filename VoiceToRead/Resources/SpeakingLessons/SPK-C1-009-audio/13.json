@@ -1,0 +1,120 @@
+{
+  "text": "Then, I asked if setting firmer boundaries—like confirming a day in advance—might help us avoid similar disappointments.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 6,
+      "length": 1,
+      "start": 0.699999988079071,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 8,
+      "length": 5,
+      "start": 1.600000023841858,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.940000057220459,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 2.299999952316284,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.619999885559082,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 32,
+      "length": 10,
+      "start": 3.1600000858306885,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 3.1600000858306885,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 48,
+      "length": 10,
+      "start": 4.559999942779541,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 59,
+      "length": 1,
+      "start": 5.199999809265137,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 5.579999923706055,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 65,
+      "length": 2,
+      "start": 5.639999866485596,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 5.900000095367432,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 5.900000095367432,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 7.119999885559082,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 7.440000057220459,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 90,
+      "length": 5,
+      "start": 7.820000171661377,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 96,
+      "length": 7,
+      "start": 8.199999809265137,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 104,
+      "length": 15,
+      "start": 8.84000015258789,
+      "end": 9.680000305175781
+    }
+  ]
+}

@@ -220,10 +220,10 @@ extension LearningTests {
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = try EnglishTrainingStore(directory: directory)
         let first = try XCTUnwrap(store.trainings.first)
-        XCTAssertEqual(first.title, "Los tres cerditos")
+        XCTAssertEqual(first.title, "Presentarme y conversar")
         XCTAssertEqual(first.phrases.count, 20)
-        XCTAssertEqual(first.phrases.first?.spanish, "Había una vez tres cerditos.")
-        XCTAssertEqual(first.phrases.last?.spanish, "Los cerditos aprendieron a trabajar con cuidado y a ayudarse.")
+        XCTAssertEqual(first.phrases.first?.spanish, "Hola, me llamo Alex.")
+        XCTAssertEqual(first.phrases.last?.spanish, "Gracias por escucharme. ¿Tienes alguna pregunta?")
         XCTAssertFalse(first.ready)
         let sibling = directory.appendingPathComponent("legacy-data.txt")
         try Data("preserve".utf8).write(to: sibling)
@@ -493,5 +493,35 @@ extension LearningTests {
         XCTAssertTrue(chinese.expected.allSatisfy(\.matched))
         XCTAssertTrue(chinese.heard.allSatisfy(\.matched))
         XCTAssertTrue(PracticeRecognition.matches("你好", target: "你好。"))
+    }
+}
+
+
+extension LearningTests {
+    func testLegacyPracticeExampleMigrationPreservesEditedTranslations() throws {
+        struct LegacyArchive: Codable { var version = 2; var trainings: [EnglishTraining] }
+        for edited in [false, true] {
+            let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+            defer { try? FileManager.default.removeItem(at: directory) }
+            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            var old = try EnglishTraining.edited(title: "Los tres cerditos", text: EnglishTraining.firstText)
+            if edited {
+                old.phrases[0].english = "My correction"
+                old.phrases[0].reviewed = true
+                old.phrases[0].needsPractice = false
+            }
+            let file = directory.appendingPathComponent("trainings.json")
+            try JSONEncoder().encode(LegacyArchive(trainings: [old])).write(to: file)
+            let store = try EnglishTrainingStore(directory: directory)
+            XCTAssertTrue(store.trainings.contains { $0.title == EnglishTraining.sampleTitle })
+            if edited {
+                XCTAssertEqual(store.training(old.id), old)
+                XCTAssertEqual(store.trainings.count, 2)
+            } else {
+                XCTAssertEqual(store.trainings.count, 1)
+                XCTAssertEqual(store.training(old.id)?.title, EnglishTraining.sampleTitle)
+            }
+            XCTAssertEqual(try EnglishTrainingStore(directory: directory).trainings, store.trainings)
+        }
     }
 }

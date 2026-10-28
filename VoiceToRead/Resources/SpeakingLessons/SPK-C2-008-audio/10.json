@@ -1,0 +1,138 @@
+{
+  "text": "She tentatively proposed offering me a store credit, noting that company policy did not guarantee outright refunds, particularly for non-faulty goods.",
+  "duration": 13.029999732971191,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 4,
+      "length": 11,
+      "start": 0.9399999976158142,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.6799999475479126,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 25,
+      "length": 8,
+      "start": 2.440000057220459,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.9000000953674316,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 3.2200000286102295,
+      "end": 3.5
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 3.5,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 3.7200000286102295,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 5.139999866485596,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 65,
+      "length": 7,
+      "start": 5.599999904632568,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 5.940000057220459,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 80,
+      "length": 3,
+      "start": 6.440000057220459,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 6.860000133514404,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 88,
+      "length": 9,
+      "start": 7.300000190734863,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 98,
+      "length": 8,
+      "start": 7.900000095367432,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 107,
+      "length": 7,
+      "start": 8.84000015258789,
+      "end": 9.9399995803833
+    },
+    {
+      "location": 116,
+      "length": 12,
+      "start": 10.140000343322754,
+      "end": 10.619999885559082
+    },
+    {
+      "location": 129,
+      "length": 3,
+      "start": 10.619999885559082,
+      "end": 11.239999771118164
+    },
+    {
+      "location": 133,
+      "length": 3,
+      "start": 11.239999771118164,
+      "end": 11.680000305175781
+    },
+    {
+      "location": 137,
+      "length": 6,
+      "start": 11.680000305175781,
+      "end": 12.399999618530273
+    },
+    {
+      "location": 144,
+      "length": 5,
+      "start": 12.399999618530273,
+      "end": 12.399999618530273
+    }
+  ]
+}

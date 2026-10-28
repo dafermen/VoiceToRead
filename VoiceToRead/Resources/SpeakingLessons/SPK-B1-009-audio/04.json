@@ -1,0 +1,96 @@
+{
+  "text": "I realized right away that we hadn't been clear about our plans the day before.",
+  "duration": 5.679999828338623,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.5799999833106995,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 1.159999966621399,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.5800000429153442,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.9600000381469727,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 2.4000000953674316,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 2.799999952316284,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.9600000381469727,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.240000009536743,
+      "end": 3.5
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.5,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.7200000286102295,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 3.9800000190734863,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.360000133514404,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.599999904632568,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 4.800000190734863,
+      "end": 5.159999847412109
+    }
+  ]
+}

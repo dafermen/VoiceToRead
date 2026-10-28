@@ -171,6 +171,186 @@
       "width": 1672,
       "height": 941,
       "sha256": "909045eb5f3c4c505f5afcc6928e2acf9f1f6802da0e7c86fbda9e408b61a786"
+    },
+    {
+      "lesson_id": "SPK-B1-006",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-006-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult friends with small suitcases asking a friendly station agent for another route at a bright railway station.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "db3740cdae83985856c084c6e8481652c2a034ff5fbf228b1888be6b4febb1a0"
+    },
+    {
+      "lesson_id": "SPK-B1-007",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-007-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult roommates visiting a sunny apartment and discussing the compact kitchen by a window.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "be2a0f071daed0ad907ed2c886b645db5ef8bc9a00ae1c0e4298b3d4c297b117"
+    },
+    {
+      "lesson_id": "SPK-B1-008",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-008-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult customer and helpful shop assistant comparing a jacket sleeve size at a neat clothing store counter.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d40072c5b9e8a8c014c038201c664c36ec05763fbc14faf6b4eb30d9a192b302"
+    },
+    {
+      "lesson_id": "SPK-B1-009",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-009-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two male adult friends calmly clarifying weekend plans at a small outdoor cafe table.",
+      "width": 1672,
+      "height": 940,
+      "sha256": "3a9228935d42efe7b49335acc3245ec9b030f071e5bc443e47def13384dee48b"
+    },
+    {
+      "lesson_id": "SPK-B1-010",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-010-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult woman helping her brother learn a simple phone task at a home table, both relaxed.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "de1284f062fda74ebbc90f06c245568cc4b75a4f3ab2e64b420b5d6f1d82b970"
+    },
+    {
+      "lesson_id": "SPK-B2-006",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-006-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult conference traveler discussing shared transport with another traveler near airport windows during rainy weather.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5cb57570edce37a2715472754355523f39d7bc199cd6076b7926bc73e4b400e4"
+    },
+    {
+      "lesson_id": "SPK-B2-007",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-007-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult prospective roommates measuring space for a piano in an empty bright apartment with houseplants.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9399b3b677448d78127912d93d901e025d16101d6c72c2a233d12f06c83cef8b"
+    },
+    {
+      "lesson_id": "SPK-B2-008",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-008-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult customer explaining a small smart speaker problem to a female electronics shop assistant.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c867c9b1239175d895cb3a43c832c6c190d830f97edc7b209926cdc5267ef484"
+    },
+    {
+      "lesson_id": "SPK-B2-009",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-009-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult female friends having an honest gentle conversation about needing time alone, in a quiet cafe.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "4509e1a0a73db46ad1958e1e520cb151642da37e06f571a0e0fce5e80d5f3e18"
+    },
+    {
+      "lesson_id": "SPK-B2-010",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-010-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult couple organizing a shared weekly calendar with a tablet during breakfast in a sunny kitchen.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "18f53e452ae13100d6b7d6293d5517015b4229ca4031d56eb458a5f816e819e9"
+    },
+    {
+      "lesson_id": "SPK-C1-006",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-006-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult traveler with a suitcase weighing route alternatives with a railway desk agent, station softly blurred.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "cdbe8b8e6d299a17edfb779b766a5b02dfc1f930d8a70d5414134afea7c353a6"
+    },
+    {
+      "lesson_id": "SPK-C1-007",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-007-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult prospective roommates negotiating space for a work desk in an apartment with open kitchen.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5b59b1bc8602353e4889b3f1d2258186625431f034a4c770ce6e143ee39838f7"
+    },
+    {
+      "lesson_id": "SPK-C1-008",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-008-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult customer discussing an unsuitable office chair with a furniture shop employee, thoughtful cooperative expressions.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "78a3868155925c1f0177284d7ef02d5eacd96fb8887f8f6aae12c91a66c5b382"
+    },
+    {
+      "lesson_id": "SPK-C1-009",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-009-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult women friends talking face to face over coffee after a misunderstanding, attentive compassionate expressions.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3b1983854b52289ddad47b1af2a88d34552d708a57ca26ef1b39e57d7bf1c72f"
+    },
+    {
+      "lesson_id": "SPK-C1-010",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-010-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult roommates agreeing on quiet time before a video meeting at a kitchen table, headphones and closed laptop nearby.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "6c4f6fb156b4eebfd8ed42ab31578e32ce40c6f231faec38899a82463a4898c6"
+    },
+    {
+      "lesson_id": "SPK-C2-006",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-006-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult stranded train passengers tactfully agreeing on an alternative journey beside their luggage in a spacious station concourse.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2cd067235fa5dd3a1671cbcf17769e97a451f5940da74f0bca44fb26d72ae2ea"
+    },
+    {
+      "lesson_id": "SPK-C2-007",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-007-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult prospective roommates discussing expectations while touring a living room with large windows facing a street.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3069050f9ce962d922c95bfd84b5f3cb8c3571820a0643a2f02af6594ef855e6"
+    },
+    {
+      "lesson_id": "SPK-C2-008",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-008-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: An adult customer politely testing a comfortable pair of headphones with help from an attentive electronics store representative.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "aad77c79913b767e0fcaa6ff4f5d5259f8a097baef80fdd7ff06c57acb2edd75"
+    },
+    {
+      "lesson_id": "SPK-C2-009",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-009-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult male friends seated on a park bench talking openly about friendship and personal boundaries, calm understated emotion.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "54aa66a9ca82e807bdb63836ba63c929d96db91b222a782f5685226b6dd10844"
+    },
+    {
+      "lesson_id": "SPK-C2-010",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-010-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: an adult English guided lesson cover, landscape 16:9. Candid editorial lifestyle photography, soft natural daylight, warm neutral colors with subtle blue, realistic skin and hands, uncluttered composition readable at thumbnail size, generous comfortable margins. No text, no readable writing or screens, no logos, no watermark, no UI, no collage. Scene: Two adult women friends setting phones face down beside handwritten notebooks as they resume a cafe conversation.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "930063a7d147027dd91aa97b2124115392da1174ecff2f71f7d74796efb07196"
     }
   ],
   "preserved_original": {

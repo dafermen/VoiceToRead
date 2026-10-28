@@ -1,0 +1,132 @@
+{
+  "text": "Keen not to offend her enthusiasm, I added, 'Your approach makes sense, even if I lean a bit more toward minimalism.'",
+  "duration": 8.800000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.5199999809265137,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.059999942779541,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 12,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.659999966621399,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 23,
+      "length": 10,
+      "start": 1.9800000190734863,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 35,
+      "length": 1,
+      "start": 3.140000104904175,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 3.2799999713897705,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 4.239999771118164,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 4.300000190734863,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.71999979019165,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 5.099999904632568,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 6.0,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 6.119999885559082,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 80,
+      "length": 1,
+      "start": 6.320000171661377,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.679999828338623,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 87,
+      "length": 1,
+      "start": 6.699999809265137,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.880000114440918,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 7.099999904632568,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 98,
+      "length": 6,
+      "start": 7.519999980926514,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 105,
+      "length": 10,
+      "start": 7.800000190734863,
+      "end": 8.479999542236328
+    }
+  ]
+}

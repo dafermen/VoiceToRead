@@ -1,0 +1,102 @@
+{
+  "text": "Reflecting on the process, I appreciated that both sides managed potential disagreement without escalation or resentment.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.7599999904632568,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 0.9800000190734863,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.1799999475479126,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.299999952316284,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 29,
+      "length": 11,
+      "start": 2.440000057220459,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 3.1600000858306885,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 3.8399999141693115,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 4.239999771118164,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 65,
+      "length": 9,
+      "start": 4.71999979019165,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 75,
+      "length": 12,
+      "start": 5.320000171661377,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 5.920000076293945,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 96,
+      "length": 10,
+      "start": 6.71999979019165,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 107,
+      "length": 2,
+      "start": 7.539999961853027,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 110,
+      "length": 10,
+      "start": 8.0600004196167,
+      "end": 8.34000015258789
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "text": "This makes me wonder if the convenience of having everything on one device is really worth the constant distraction.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.47999998927116394,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.8999999761581421,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 14,
+      "length": 6,
+      "start": 1.440000057220459,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.5399999618530273,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 2.0999999046325684,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 28,
+      "length": 11,
+      "start": 2.299999952316284,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.819999933242798,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.119999885559082,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 50,
+      "length": 10,
+      "start": 3.359999895095825,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 4.039999961853027,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.260000228881836,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 4.619999885559082,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.079999923706055,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 78,
+      "length": 6,
+      "start": 5.78000020980835,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 6.159999847412109,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 91,
+      "length": 3,
+      "start": 6.420000076293945,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 95,
+      "length": 8,
+      "start": 6.920000076293945,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 104,
+      "length": 11,
+      "start": 7.119999885559082,
+      "end": 7.659999847412109
+    }
+  ]
+}

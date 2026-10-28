@@ -1,0 +1,126 @@
+{
+  "text": "Although this new model cost a little more, I decided the extra features and peace of mind were worth it.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.6000000238418579,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.159999966621399,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.559999942779541,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 1.7400000095367432,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.2200000286102295,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.440000057220459,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 2.5999999046325684,
+      "end": 3.0
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.5999999046325684,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.7200000286102295,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 4.159999847412109,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 4.420000076293945,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 64,
+      "length": 8,
+      "start": 4.840000152587891,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 5.260000228881836,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 5.619999885559082,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.900000095367432,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.079999923706055,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 6.420000076293945,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 96,
+      "length": 5,
+      "start": 6.920000076293945,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 7.159999847412109,
+      "end": 7.440000057220459
+    }
+  ]
+}

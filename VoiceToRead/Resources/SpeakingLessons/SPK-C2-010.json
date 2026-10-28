@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-010",
+  "number": 10,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "category": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Digital habits, requesting help, and weighing convenience against distraction through nuanced real-life interaction.",
+    "es": "Hábitos digitales, solicitar ayuda y ponderar la conveniencia frente a la distracción en una interacción realista y matizada."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos conversan en una cafetería con smartphones a la vista, debatiendo el uso de tecnología cotidiana.",
+    "prompt": "Editorial, two adults in a modern cafe, smartphones on the table, deep in conversation, animated but friendly debate, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comprender matices en discusiones sobre hábitos digitales.",
+    "Solicitar ayuda y reaccionar a sugerencias de forma matizada.",
+    "Reformular y calibrar desacuerdo o acuerdo diplomáticamente.",
+    "Interpretar ambigüedades y sopesar ventajas e inconvenientes.",
+    "Practicar registros formales e informales en contextos sociales complejos."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Friday, I met Monica at our usual café, planning simply to catch up but, as it happened, our conversation veered quickly toward digital distractions.",
+      "es": "El viernes pasado, me encontré con Mónica en nuestra cafetería habitual, con la intención de ponernos al día, pero nuestra conversación derivó rápidamente hacia las distracciones digitales."
+    },
+    {
+      "number": 2,
+      "function": "observation",
+      "en": "It struck me how often we both glanced at our phones, each ping summoning a momentary lapse in attention.",
+      "es": "Me llamó la atención lo frecuente que era que ambos miráramos el móvil, cada notificación causando una breve desconexión."
+    },
+    {
+      "number": 3,
+      "function": "personal_insight",
+      "en": "I confessed, half-apologetically, that I feel perpetually tugged in two directions: the urge to stay available and the desire for a conversation unmarred by interruptions.",
+      "es": "Confesé, medio disculpándome, que siempre siento ese tirón en dos direcciones: el deseo de estar disponible y el anhelo de una conversación sin interrupciones."
+    },
+    {
+      "number": 4,
+      "function": "example",
+      "en": "For instance, during weekly family calls, I sometimes catch myself skimming news headlines instead of really listening.",
+      "es": "Por ejemplo, durante las llamadas familiares semanales, a veces me descubro hojeando titulares de noticias en lugar de escuchar de verdad."
+    },
+    {
+      "number": 5,
+      "function": "self_reflection",
+      "en": "Paradoxically, these digital tools, intended to make life seamless, sometimes fracture my focus into fragments.",
+      "es": "Paradójicamente, estas herramientas digitales pensadas para facilitar la vida a veces fragmentan mi atención en mil partes."
+    },
+    {
+      "number": 6,
+      "function": "perspective_shift",
+      "en": "Monica, however, tends to see convenience as outweighing such costs, describing her tablet as an extension of her memory.",
+      "es": "Mónica, sin embargo, suele considerar que la comodidad compensa esos costos y describe su tableta como una extensión de su memoria."
+    },
+    {
+      "number": 7,
+      "function": "comparison",
+      "en": "Whereas she religiously schedules reminders for everything—from water intake to birthdays—I’ve always favored handwritten lists, even if I misplace them.",
+      "es": "Mientras que ella programa recordatorios para todo—desde beber agua hasta los cumpleaños—yo siempre he preferido las listas a mano, aun si las pierdo."
+    },
+    {
+      "number": 8,
+      "function": "request",
+      "en": "Midway through our coffee, Monica offered, 'Do you want me to show you a few productivity apps?' which I met with hesitation.",
+      "es": "A mitad del café, Mónica propuso: '¿Quieres que te enseñe algunas aplicaciones de productividad?', propuesta ante la que dudé."
+    },
+    {
+      "number": 9,
+      "function": "tentative_stance",
+      "en": "Rather than reject her suggestion outright, I said, 'Perhaps, though I’m cautious about adding yet another stream of notifications.'",
+      "es": "En vez de rechazar su sugerencia de plano, comenté: 'Quizá, aunque me cautela sumar otra fuente de notificaciones.'"
+    },
+    {
+      "number": 10,
+      "function": "clarification",
+      "en": "I tried to specify, 'My concern lies less with the technology itself and more with how invasively it seeps into quiet moments.'",
+      "es": "Intenté precisar: 'Mi preocupación no es tanto la tecnología en sí, sino cómo se infiltra invasivamente en los momentos tranquilos.'"
+    },
+    {
+      "number": 11,
+      "function": "suggestion",
+      "en": "Monica reformulated her offer gently, proposing, 'Maybe we can set everything to silent and only keep select alerts—would that help?'",
+      "es": "Mónica reformuló amablemente, sugiriendo: 'Quizá podamos silenciar todo y dejar solo algunas alertas seleccionadas; ¿eso ayudaría?'"
+    },
+    {
+      "number": 12,
+      "function": "tentative_agreement",
+      "en": "That sounded reasonable, so I nodded, admitting, 'Possibly, if I can fine-tune what actually merits my attention.'",
+      "es": "Eso sonó razonable, así que asentí, admitiendo: 'Es posible, si puedo ajustar lo que realmente merece mi atención.'"
+    },
+    {
+      "number": 13,
+      "function": "diplomacy",
+      "en": "Keen not to offend her enthusiasm, I added, 'Your approach makes sense, even if I lean a bit more toward minimalism.'",
+      "es": "Sin querer desestimar su entusiasmo, añadí: 'Tu enfoque es lógico, aunque yo tiendo un poco más hacia el minimalismo.'"
+    },
+    {
+      "number": 14,
+      "function": "shared_challenge",
+      "en": "She admitted that calibrating her own device habits had required trial, error, and more than a few reminders from friends.",
+      "es": "Ella reconoció que ajustar sus propios hábitos con los dispositivos le costó ensayo, error y más de un recordatorio de amigos."
+    },
+    {
+      "number": 15,
+      "function": "adaptation",
+      "en": "Curiously, her adjustments weren’t so far from my own—though perhaps styled with more deliberate optimism.",
+      "es": "Curiosamente, sus adaptaciones no distaban tanto de las mías, aunque quizá se orientaban con un optimismo más deliberado."
+    },
+    {
+      "number": 16,
+      "function": "concession",
+      "en": "I acknowledged, 'To be fair, I do rely on my phone for navigation and the occasional last-minute rescheduling.'",
+      "es": "Reconocí: 'Siendo justo, sí dependo del móvil para orientarme y, a veces, reagendar cosas sobre la marcha.'"
+    },
+    {
+      "number": 17,
+      "function": "nuance",
+      "en": "We agreed that the line between convenience and intrusion is—for both of us—constantly redrawn, never quite fixed.",
+      "es": "Coincidimos en que la línea entre lo conveniente y lo intrusivo es, para ambos, siempre cambiante, nunca del todo clara."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "By the time our mugs were empty, we’d both silenced our notifications and resumed our chat, at least briefly, device-free.",
+      "es": "Cuando nuestras tazas quedaron vacías, ambos habíamos silenciado nuestras notificaciones y reanudado la charla, al menos por un rato, sin dispositivos."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Walking home, I pondered that balance in digital habits isn’t a tidy formula but a shifting negotiation shaped by intent and context.",
+      "es": "Mientras volvía a casa, pensé que el equilibrio en los hábitos digitales no es una fórmula fija, sino una negociación cambiante según la intención y el contexto."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "Next week, we plan to repeat the experiment—this time, perhaps more intentionally present for each other.",
+      "es": "La próxima semana planeamos repetir el experimento; quizá, esta vez, con una presencia más intencionada el uno para el otro."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Absolute participial clause",
+      "example_en": "It struck me how often we both glanced at our phones, each ping summoning a momentary lapse in attention.",
+      "explanation_es": "Un grupo con su propio sujeto y un participio añade una circunstancia a la oración principal.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Reduced passive relative clause",
+      "example_en": "Paradoxically, these digital tools, intended to make life seamless, sometimes fracture my focus into fragments.",
+      "explanation_es": "Un participio pasado modifica un sustantivo y equivale a una relativa con which/that + be.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Whereas she religiously schedules reminders for everything—from water intake to birthdays—I’ve always favored handwritten lists, even if I misplace them.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Which referring to a whole clause",
+      "example_en": "Midway through our coffee, Monica offered, 'Do you want me to show you a few productivity apps?' which I met with hesitation.",
+      "explanation_es": "Which retoma la situación anterior para añadir su efecto o un comentario.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Rather than + bare infinitive",
+      "example_en": "Rather than reject her suggestion outright, I said, 'Perhaps, though I’m cautious about adding yet another stream of notifications.'",
+      "explanation_es": "Rather than seguido de infinitivo sin to contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Even if for concession",
+      "example_en": "Keen not to offend her enthusiasm, I added, 'Your approach makes sense, even if I lean a bit more toward minimalism.'",
+      "explanation_es": "Even if indica que una condición no cambiaría la idea principal.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "By the time our mugs were empty, we’d both silenced our notifications and resumed our chat, at least briefly, device-free.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Nominalization",
+      "example_en": "Walking home, I pondered that balance in digital habits isn’t a tidy formula but a shifting negotiation shaped by intent and context.",
+      "explanation_es": "Los sustantivos de acción, como negotiation, condensan procesos para tratarlos como conceptos.",
+      "source_paragraph": 19
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "veered quickly toward",
+      "meaning_es": "se desvió rápidamente hacia",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "momentary lapse in attention",
+      "meaning_es": "momento breve de distracción",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "perpetually tugged in two directions",
+      "meaning_es": "siempre tironeado en dos direcciones",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "extension of her memory",
+      "meaning_es": "una extensión de su memoria",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "met with hesitation",
+      "meaning_es": "respondí con vacilación",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "makes sense",
+      "meaning_es": "tiene sentido",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "be fair",
+      "meaning_es": "ser justo",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "shifting negotiation",
+      "meaning_es": "negociación cambiante",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "It struck me how often we both glanced at our phones,",
+              "each ping summoning a momentary lapse in attention."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "Keen not to offend her enthusiasm,",
+              "I added,",
+              "'Your approach makes sense,",
+              "even if I lean a bit more toward minimalism.'"
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Walking home,",
+              "I pondered that balance in digital habits isn’t a tidy formula but a shifting negotiation shaped by intent and context."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-010",
+    "number": "010",
+    "title_en": "Technology in Everyday Life",
+    "title_es": "Tecnología en la vida cotidiana",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Tecnología en la vida cotidiana",
+    "main_topic_es": "Hábitos y decisiones tecnológicas en la vida diaria",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Absolute participial clause",
+      "Reduced passive relative clause",
+      "Present perfect",
+      "Which referring to a whole clause",
+      "Rather than + bare infinitive",
+      "Even if for concession",
+      "Past perfect",
+      "Nominalization"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

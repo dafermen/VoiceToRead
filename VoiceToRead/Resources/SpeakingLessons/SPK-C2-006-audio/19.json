@@ -1,0 +1,144 @@
+{
+  "text": "Arriving past midnight, I felt relief mingled with fatigue, relieved less by the resolution than by the mutual understanding achieved along the way.",
+  "duration": 11.4399995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.6000000238418579,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 14,
+      "length": 8,
+      "start": 1.1200000047683716,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 24,
+      "length": 1,
+      "start": 2.180000066757202,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 2.359999895095825,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.1600000858306885,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.819999933242798,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 4.21999979019165,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 5.699999809265137,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.699999809265137,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 6.179999828338623,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 77,
+      "length": 3,
+      "start": 6.380000114440918,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 81,
+      "length": 10,
+      "start": 6.679999828338623,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 7.199999809265137,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 97,
+      "length": 2,
+      "start": 7.840000152587891,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 100,
+      "length": 3,
+      "start": 8.039999961853027,
+      "end": 8.220000267028809
+    },
+    {
+      "location": 104,
+      "length": 6,
+      "start": 8.220000267028809,
+      "end": 8.65999984741211
+    },
+    {
+      "location": 111,
+      "length": 13,
+      "start": 8.65999984741211,
+      "end": 9.399999618530273
+    },
+    {
+      "location": 125,
+      "length": 8,
+      "start": 9.399999618530273,
+      "end": 10.260000228881836
+    },
+    {
+      "location": 134,
+      "length": 5,
+      "start": 10.260000228881836,
+      "end": 10.600000381469727
+    },
+    {
+      "location": 140,
+      "length": 3,
+      "start": 10.600000381469727,
+      "end": 10.760000228881836
+    },
+    {
+      "location": 144,
+      "length": 3,
+      "start": 10.760000228881836,
+      "end": 11.039999961853027
+    }
+  ]
+}

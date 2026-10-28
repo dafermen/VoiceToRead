@@ -1,0 +1,168 @@
+{
+  "text": "Reassured by the agent's proactive support, I also received an offer from another stranded traveler to share a ride between two outlying stations, should trains be delayed.",
+  "duration": 13.149999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.8600000143051147,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.159999966621399,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 2.0
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 2.0,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.5399999618530273,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.859999895095825,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 4.099999904632568,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 4.679999828338623,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 5.019999980926514,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 5.360000133514404,
+      "end": 5.5
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.5,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 5.820000171661377,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 82,
+      "length": 8,
+      "start": 6.199999809265137,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 6.639999866485596,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 100,
+      "length": 2,
+      "start": 7.139999866485596,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 7.940000057220459,
+      "end": 8.180000305175781
+    },
+    {
+      "location": 109,
+      "length": 1,
+      "start": 8.180000305175781,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 111,
+      "length": 4,
+      "start": 8.699999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 116,
+      "length": 7,
+      "start": 8.699999809265137,
+      "end": 9.079999923706055
+    },
+    {
+      "location": 124,
+      "length": 3,
+      "start": 9.079999923706055,
+      "end": 9.520000457763672
+    },
+    {
+      "location": 128,
+      "length": 8,
+      "start": 9.520000457763672,
+      "end": 10.039999961853027
+    },
+    {
+      "location": 137,
+      "length": 8,
+      "start": 10.039999961853027,
+      "end": 10.619999885559082
+    },
+    {
+      "location": 147,
+      "length": 6,
+      "start": 11.399999618530273,
+      "end": 11.479999542236328
+    },
+    {
+      "location": 154,
+      "length": 6,
+      "start": 11.479999542236328,
+      "end": 11.84000015258789
+    },
+    {
+      "location": 161,
+      "length": 2,
+      "start": 11.84000015258789,
+      "end": 12.199999809265137
+    },
+    {
+      "location": 164,
+      "length": 7,
+      "start": 12.199999809265137,
+      "end": 12.479999542236328
+    }
+  ]
+}

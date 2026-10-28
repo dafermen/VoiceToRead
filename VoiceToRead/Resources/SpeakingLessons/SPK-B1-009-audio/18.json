@@ -1,0 +1,96 @@
+{
+  "text": "I'm thankful Ryan wanted to talk it through, even though it was a little uncomfortable.",
+  "duration": 6.119999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.5600000023841858,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.0800000429153442,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.6799999475479126,
+      "end": 2.0
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 2.0,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.200000047683716,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.440000057220459,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 2.6600000858306885,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.5,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.759999990463257,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.059999942779541,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 4.260000228881836,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 64,
+      "length": 1,
+      "start": 4.460000038146973,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 4.619999885559082,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 73,
+      "length": 13,
+      "start": 4.880000114440918,
+      "end": 5.400000095367432
+    }
+  ]
+}

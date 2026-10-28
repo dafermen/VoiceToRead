@@ -1,0 +1,96 @@
+{
+  "text": "However, he suggested checking the online store or looking at other jackets on the racks.",
+  "duration": 7.050000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.0399999618530273,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 12,
+      "length": 9,
+      "start": 1.3799999952316284,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 22,
+      "length": 8,
+      "start": 1.9199999570846558,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.3399999141693115,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.799999952316284,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.0799999237060547,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.5399999618530273,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 4.260000228881836,
+      "end": 4.5
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.5,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.860000133514404,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 5.079999923706055,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.480000019073486,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.760000228881836,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 5.940000057220459,
+      "end": 6.300000190734863
+    }
+  ]
+}

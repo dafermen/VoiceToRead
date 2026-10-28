@@ -1,0 +1,114 @@
+{
+  "text": "The employee hesitated, reminding me that refunds were not guaranteed, but she did offer to check available options.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.3799999952316284,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 13,
+      "length": 9,
+      "start": 0.8199999928474426,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 24,
+      "length": 9,
+      "start": 2.4600000381469727,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.4600000381469727,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 3.180000066757202,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 3.4600000381469727,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 3.619999885559082,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 59,
+      "length": 10,
+      "start": 3.940000057220459,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 4.920000076293945,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.019999980926514,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.199999809265137,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 5.519999980926514,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 2,
+      "start": 5.78000020980835,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 98,
+      "length": 9,
+      "start": 6.260000228881836,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 108,
+      "length": 7,
+      "start": 6.739999771118164,
+      "end": 7.159999847412109
+    }
+  ]
+}

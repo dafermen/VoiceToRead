@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-006",
+  "number": 6,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Travel Plans and Unexpected Changes",
+    "es": "Planes de viaje e imprevistos"
+  },
+  "category": {
+    "en": "Travel",
+    "es": "Viajes"
+  },
+  "main_topic": {
+    "en": "Reasoning through disrupted travel and negotiation; explaining needs, evaluating alternatives, and agreeing on feasible solutions.",
+    "es": "Resolver problemas durante el viaje y negociar; explicar necesidades, evaluar alternativas y acordar soluciones viables."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Persona resolviendo un problema de viaje en una estación de tren con una pantalla de horarios y una maleta.",
+    "prompt": "Realistic editorial photograph, adult traveler at train station, checking large digital timetable board, talking to a staff member, rolling suitcase, moody indoor light, candid, horizontal 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Narrar una experiencia de viaje interrumpida en detalle.",
+    "Explicar necesidades y expectativas claramente en un contexto realista.",
+    "Comparar y negociar alternativas de manera flexible y argumentada.",
+    "Utilizar estructuras complejas y vocabulario avanzado durante una interacción.",
+    "Practicar la lectura y la pronunciación del inglés americano avanzado."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "After months of anticipation, I set off on my long-awaited journey across the northeast, eager to reconnect with an old friend in Harbor City.",
+      "es": "Tras meses de anticipación, emprendí el esperado viaje por el noreste, emocionado por reencontrarme con un viejo amigo en Harbor City."
+    },
+    {
+      "number": 2,
+      "function": "action",
+      "en": "I'd meticulously booked connections, ensuring that there was ample buffer time between each segment, so I thought delays would hardly disrupt my plans.",
+      "es": "Había reservado las conexiones meticulosamente, asegurando tiempo de margen entre cada tramo, así que pensé que los retrasos difícilmente arruinarían mis planes."
+    },
+    {
+      "number": 3,
+      "function": "unexpected_event",
+      "en": "However, when I reached Midtown Central, a digital announcement informed travelers that the key rail connection ahead was suspended due to sudden track repairs.",
+      "es": "Sin embargo, al llegar a Midtown Central, un anuncio digital informó a los viajeros que la conexión ferroviaria principal estaba suspendida por reparaciones inesperadas en las vías."
+    },
+    {
+      "number": 4,
+      "function": "reaction",
+      "en": "Confronted with dozens of stranded passengers, I joined the understandable scramble to revise itineraries, keeping my urgency in check as I approached the customer desk.",
+      "es": "Frente a docenas de pasajeros varados, me uní a la comprensible agitación por reorganizar itinerarios, manteniendo la calma mientras me acercaba al mostrador de atención."
+    },
+    {
+      "number": 5,
+      "function": "explanation",
+      "en": "Explaining the purpose of my journey to the agent, I emphasized how important it was to arrive before evening, as I'd promised my friend to help prepare for an event.",
+      "es": "Al explicar el motivo de mi viaje al agente, destaqué la importancia de llegar antes de la noche, ya que había prometido a mi amigo ayudarle a preparar un evento."
+    },
+    {
+      "number": 6,
+      "function": "agent_response",
+      "en": "The staff member listened patiently, then regretfully informed me that my original reservation was no longer valid and the earliest direct alternative would leave the following morning.",
+      "es": "El empleado me escuchó con paciencia y luego, con pesar, me informó que mi reserva original ya no era válida y la alternativa directa más próxima saldría hasta la mañana siguiente."
+    },
+    {
+      "number": 7,
+      "function": "complication",
+      "en": "Since staying overnight was not feasible, I asked whether any connecting routes, even with additional transfers, could still get me to Harbor City on the same day.",
+      "es": "Como no podía quedarme esa noche, consulté si era posible llegar a Harbor City ese mismo día, aunque implicara más transbordos."
+    },
+    {
+      "number": 8,
+      "function": "negotiation",
+      "en": "The agent proposed a multi-stop itinerary involving three commuter trains and a final bus leg; however, he cautioned me that I would have only minutes to change platforms at each transfer.",
+      "es": "El agente propuso un itinerario con tres trenes locales y un tramo final en autobús; sin embargo, advirtió que apenas tendría unos minutos para cambiar de andén en cada conexión."
+    },
+    {
+      "number": 9,
+      "function": "constraint",
+      "en": "Recognizing the risk of missing connections if any segment ran late, I weighed the option against waiting until morning, mindful of my friend's reliance on my help.",
+      "es": "Reconociendo el riesgo de perder conexiones si algún tramo se retrasaba, sopesé la opción frente a esperar hasta la mañana, pensando en la dependencia de mi amigo."
+    },
+    {
+      "number": 10,
+      "function": "alternate_option",
+      "en": "While I briefly considered renting a car despite the cost, I realized urban traffic and unfamiliar roads could make this more stressful and, paradoxically, slower.",
+      "es": "Aunque pensé por un momento en alquilar un coche pese al costo, me di cuenta de que el tráfico urbano y las rutas desconocidas podrían hacerlo más estresante y, paradójicamente, más lento."
+    },
+    {
+      "number": 11,
+      "function": "reasoning",
+      "en": "Weighing all the factors, I conceded that the agent's complicated itinerary, while imperfect, was preferable to losing half a day, provided the connections didn't become impossible.",
+      "es": "Sopesando todos los factores, admití que el itinerario complicado del agente, aunque imperfecto, era preferible a perder medio día, siempre y cuando las conexiones no se volvieran imposibles."
+    },
+    {
+      "number": 12,
+      "function": "cautious_agreement",
+      "en": "I asked the agent to reserve the multi-leg route but qualified my decision by asking whether he could notify downstream stations in case I was delayed between transfers.",
+      "es": "Le pedí al agente que reservara la opción con varias etapas, pero matizé mi decisión preguntando si podía avisar a las estaciones siguientes en caso de retraso entre transbordos."
+    },
+    {
+      "number": 13,
+      "function": "agent_support",
+      "en": "He assured me that he would forward my ticket details and projected arrival times, so staff at key stops might assist if complications arose.",
+      "es": "Me aseguró que enviaría los datos de mi billete y las horas previstas de llegada, para que el personal de las estaciones clave pudiese ayudarme si surgía algún inconveniente."
+    },
+    {
+      "number": 14,
+      "function": "unexpected_help",
+      "en": "Reassured by the agent's proactive support, I also received an offer from another stranded traveler to share a ride between two outlying stations, should trains be delayed.",
+      "es": "Tranquilizado por el apoyo proactivo del agente, también recibí una oferta de otro viajero varado para compartir vehículo entre dos estaciones remotas, en caso de retrasos en los trenes."
+    },
+    {
+      "number": 15,
+      "function": "decision",
+      "en": "Realizing that flexibility was now essential, I accepted the complicated journey, keeping both the rideshare possibility and the agent’s assistance in mind.",
+      "es": "Dándome cuenta de que la flexibilidad era esencial en ese momento, acepté el trayecto complicado, considerando tanto la posibilidad de compartir vehículo como la ayuda del agente."
+    },
+    {
+      "number": 16,
+      "function": "challenge",
+      "en": "Navigating unfamiliar stations with barely time to glance at the signs, I relied on quick texts and hurried explanations to colleagues and my friend, who replied appreciatively despite the uncertainty.",
+      "es": "Atravesando estaciones desconocidas casi sin mirar los letreros, dependí de mensajes rápidos y explicaciones apresuradas a colegas y mi amigo, quien respondió agradecido a pesar de la incertidumbre."
+    },
+    {
+      "number": 17,
+      "function": "obstacle",
+      "en": "At one transfer, an elevator breakdown forced me to dash up two flights with my suitcase, but a sympathetic staff member offered to carry my bag while I caught my breath.",
+      "es": "En una de las conexiones, el ascensor averiado me obligó a subir dos pisos con la maleta, pero un empleado comprensivo se ofreció a llevar mi equipaje mientras recuperaba el aliento."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "Against the odds, I reached Harbor City just before dusk, exhausted but relieved, and my friend welcomed me with open arms—and maybe even a bit of admiration.",
+      "es": "Contra todo pronóstico, llegué a Harbor City poco antes del anochecer, agotado pero aliviado, y mi amigo me recibió con los brazos abiertos y quizás incluso con algo de admiración."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Looking back, the combination of compromise, candid communication, and unexpected kindness turned a ruined reservation into a memorable adventure.",
+      "es": "Al mirar atrás, la combinación de concesiones, comunicación sincera y amabilidad inesperada convirtió una reserva perdida en una experiencia memorable."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Next time, I will be prepared for sudden changes, but I’ll remember how resilience and cooperation can transform frustration into genuine connection.",
+      "es": "La próxima vez estaré preparado para cambios repentinos, pero recordaré cómo la resiliencia y la colaboración pueden transformar la frustración en un verdadero vínculo."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "I'd meticulously booked connections, ensuring that there was ample buffer time between each segment, so I thought delays would hardly disrupt my plans.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Passive voice",
+      "example_en": "However, when I reached Midtown Central, a digital announcement informed travelers that the key rail connection ahead was suspended due to sudden track repairs.",
+      "explanation_es": "Be + participio centra la atención en quien recibe una acción.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Present participle clause",
+      "example_en": "Confronted with dozens of stranded passengers, I joined the understandable scramble to revise itineraries, keeping my urgency in check as I approached the customer desk.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Since staying overnight was not feasible, I asked whether any connecting routes, even with additional transfers, could still get me to Harbor City on the same day.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "While I briefly considered renting a car despite the cost, I realized urban traffic and unfamiliar roads could make this more stressful and, paradoxically, slower.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Future in the past",
+      "example_en": "He assured me that he would forward my ticket details and projected arrival times, so staff at key stops might assist if complications arose.",
+      "explanation_es": "Would + infinitivo presenta algo que era futuro desde un punto de vista pasado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Conditional inversion with should",
+      "example_en": "Reassured by the agent's proactive support, I also received an offer from another stranded traveler to share a ride between two outlying stations, should trains be delayed.",
+      "explanation_es": "Should + sujeto + infinitivo sustituye if + sujeto + should en una condición formal.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Non-defining relative clause",
+      "example_en": "Navigating unfamiliar stations with barely time to glance at the signs, I relied on quick texts and hurried explanations to colleagues and my friend, who replied appreciatively despite the uncertainty.",
+      "explanation_es": "Una cláusula de relativo entre comas añade información sobre algo ya identificado.",
+      "source_paragraph": 16
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "meticulously booked",
+      "meaning_es": "reservado meticulosamente",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "in check",
+      "meaning_es": "bajo control",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "key rail connection",
+      "meaning_es": "conexión ferroviaria principal",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "revise itineraries",
+      "meaning_es": "revisar los itinerarios",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "conceded that",
+      "meaning_es": "admití que",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "against the odds",
+      "meaning_es": "contra todo pronóstico",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "turned a ruined reservation into a memorable adventure",
+      "meaning_es": "convirtió una reserva perdida en una experiencia memorable",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "in mind",
+      "meaning_es": "en mente",
+      "source_paragraph": 15
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "I'd meticulously booked connections,",
+              "ensuring that there was ample buffer time between each segment,",
+              "so I thought delays would hardly disrupt my plans."
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "Weighing all the factors,",
+              "I conceded that the agent's complicated itinerary,",
+              "while imperfect,",
+              "was preferable to losing half a day,",
+              "provided the connections didn't become impossible."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "Against the odds,",
+              "I reached Harbor City just before dusk,",
+              "exhausted but relieved,",
+              "and my friend welcomed me with open arms—and maybe even a bit of admiration."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-006",
+    "number": "006",
+    "title_en": "Travel Plans and Unexpected Changes",
+    "title_es": "Planes de viaje e imprevistos",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Viajes",
+    "main_topic_es": "Resolver problemas y negociar alternativas en un viaje",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Passive voice",
+      "Present participle clause",
+      "Indirect question",
+      "Concessive clause",
+      "Future in the past",
+      "Conditional inversion with should",
+      "Non-defining relative clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

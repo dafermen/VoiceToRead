@@ -1,0 +1,102 @@
+{
+  "text": "Having outdoor space has always helped me relax and clear my head, especially during busy weeks.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 0.5799999833106995,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.0800000429153442,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.0799999237060547,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 32,
+      "length": 6,
+      "start": 2.740000009536743,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.0399999618530273,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.4200000762939453,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.8399999141693115,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 4.239999771118164,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 4.460000038146973,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.800000190734863,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 67,
+      "length": 10,
+      "start": 5.440000057220459,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 78,
+      "length": 6,
+      "start": 6.139999866485596,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 85,
+      "length": 4,
+      "start": 6.579999923706055,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 90,
+      "length": 5,
+      "start": 6.940000057220459,
+      "end": 7.320000171661377
+    }
+  ]
+}

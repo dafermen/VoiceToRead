@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-006",
+  "number": 6,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Travel Plans and Unexpected Changes",
+    "es": "Planes de viaje e imprevistos"
+  },
+  "category": {
+    "en": "Travel and Problem Solving",
+    "es": "Viajes y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "Planning a journey, dealing with a disrupted reservation, explaining needs, comparing options, and agreeing on a new plan.",
+    "es": "Planificación de un viaje, gestionar una reserva interrumpida, explicar necesidades, comparar opciones y acordar un nuevo plan."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos adultos hablando con un agente de viajes en una estación moderna, revisando opciones tras un cambio inesperado.",
+    "prompt": "Realistic editorial photograph, two adults discussing with a travel agent at a modern transportation terminal, checking travel alternatives after a schedule change, stress and problem-solving, 16:9 horizontal",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar alternativas realistas tras un imprevisto en los planes de viaje.",
+    "Justificar preferencias y explicar necesidades de manera detallada.",
+    "Explicar causas y consecuencias usando diferentes tiempos y modales.",
+    "Responder a objeciones y llegar a acuerdos de forma diplomática.",
+    "Practicar lectura fluida y repetición con expresiones naturales del inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Monday, I set out for Chicago to attend a business conference that I had been looking forward to for weeks.",
+      "es": "El lunes pasado, partí rumbo a Chicago para asistir a una conferencia de negocios que había esperado durante semanas."
+    },
+    {
+      "number": 2,
+      "function": "anticipation",
+      "en": "Everything had been planned carefully, including my hotel reservation and train connection from the airport.",
+      "es": "Todo había sido planeado cuidadosamente, incluida mi reserva de hotel y la conexión del tren desde el aeropuerto."
+    },
+    {
+      "number": 3,
+      "function": "problem",
+      "en": "But when I arrived, the display board flashed a message: my connecting train had been canceled because of severe weather.",
+      "es": "Pero al llegar, el panel de información mostró un mensaje: mi tren de conexión había sido cancelado por el mal tiempo."
+    },
+    {
+      "number": 4,
+      "function": "reaction",
+      "en": "Immediately, I felt anxious, realizing I would need to find another way into the city if I wanted to make the afternoon session.",
+      "es": "Inmediatamente me sentí ansioso, al darme cuenta de que tendría que encontrar otra forma de llegar al centro si quería llegar a la sesión de la tarde."
+    },
+    {
+      "number": 5,
+      "function": "decision",
+      "en": "I approached the customer service desk and explained my situation, asking what alternatives they could recommend.",
+      "es": "Me acerqué al mostrador de atención al cliente y expliqué mi situación, preguntando qué alternativas podían recomendarme."
+    },
+    {
+      "number": 6,
+      "function": "offer",
+      "en": "The agent suggested taking an express bus, which would leave in forty minutes, but it might hit heavy traffic due to the storm.",
+      "es": "El agente sugirió tomar un autobús exprés, que saldría en cuarenta minutos, pero podría encontrar mucho tráfico debido a la tormenta."
+    },
+    {
+      "number": 7,
+      "function": "alternative",
+      "en": "Alternatively, she mentioned a carpooling option with other stranded travelers, though this would be more expensive and less predictable.",
+      "es": "Como alternativa, mencionó una opción para compartir coche con otros viajeros varados, aunque sería más caro y menos predecible."
+    },
+    {
+      "number": 8,
+      "function": "comparison",
+      "en": "I considered the bus safer, but the carpool might allow me to reach the hotel sooner if the roads were clear enough.",
+      "es": "Consideré que el autobús era más seguro, pero el coche compartido podría permitirme llegar antes al hotel si las carreteras estaban lo suficientemente despejadas."
+    },
+    {
+      "number": 9,
+      "function": "argument",
+      "en": "Since I’d brought only a carry-on and could be flexible, I asked another traveler if they wanted to share a ride.",
+      "es": "Como solo llevaba un equipaje de mano y podía ser flexible, pregunté a otro viajero si quería compartir un viaje."
+    },
+    {
+      "number": 10,
+      "function": "counterpoint",
+      "en": "However, he hesitated and pointed out that the express bus would at least guarantee a direct route.",
+      "es": "Sin embargo, él dudó y señaló que el autobús exprés al menos garantizaba una ruta directa."
+    },
+    {
+      "number": 11,
+      "function": "explanation",
+      "en": "I explained that waiting for the bus might risk missing the beginning of my conference, which was my top priority.",
+      "es": "Expliqué que esperar el autobús podría hacerme perder el inicio de la conferencia, que era mi máxima prioridad."
+    },
+    {
+      "number": 12,
+      "function": "compromise",
+      "en": "We agreed that if there was a group ready in ten minutes, we would book a car together; otherwise, we would take the bus.",
+      "es": "Acordamos que si había un grupo listo en diez minutos, reservaríamos un coche juntos; de lo contrario, tomaríamos el autobús."
+    },
+    {
+      "number": 13,
+      "function": "conditional",
+      "en": "If I’d known about the cancellation earlier, I would have arranged a backup option from the start.",
+      "es": "Si hubiera sabido sobre la cancelación antes, habría organizado una opción alternativa desde el principio."
+    },
+    {
+      "number": 14,
+      "function": "description",
+      "en": "After a few minutes, two more people joined us, which made hiring a ride more affordable for everyone.",
+      "es": "Después de unos minutos, se unieron dos personas más, lo que hizo que contratar un coche fuera más económico para todos."
+    },
+    {
+      "number": 15,
+      "function": "progression",
+      "en": "Once on the road, we watched the storm through the windows, relieved that our route remained mostly clear.",
+      "es": "Una vez en camino, observamos la tormenta por las ventanas, aliviados de que nuestra ruta se mantuviera mayormente despejada."
+    },
+    {
+      "number": 16,
+      "function": "objection",
+      "en": "At one point, someone worried the driver might take a longer route, but I pointed out that he was using the same GPS app we all trusted.",
+      "es": "En un momento, alguien se preocupó de que el conductor pudiera tomar una ruta más larga, pero señalé que estaba usando la misma aplicación de GPS en la que todos confiábamos."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "It wasn’t the journey I had imagined, but working together with strangers made the unexpected challenge feel easier.",
+      "es": "No fue el viaje que había imaginado, pero trabajar en conjunto con desconocidos hizo que el desafío inesperado fuera más llevadero."
+    },
+    {
+      "number": 18,
+      "function": "result",
+      "en": "Fortunately, I arrived at my hotel just as the rain stopped and with time to freshen up before the conference began.",
+      "es": "Afortunadamente, llegué a mi hotel justo cuando la lluvia cesó y con tiempo para arreglarme antes de que comenzara la conferencia."
+    },
+    {
+      "number": 19,
+      "function": "takeaway",
+      "en": "This experience taught me to prepare for sudden changes, and that flexibility and quick thinking can turn a setback into a solution.",
+      "es": "Esta experiencia me enseñó a prepararme para cambios repentinos, y que la flexibilidad y la rapidez mental pueden convertir un contratiempo en una solución."
+    },
+    {
+      "number": 20,
+      "function": "closure",
+      "en": "Next time I make travel plans, I’ll be sure to review alternative options and stay calm, whatever happens.",
+      "es": "La próxima vez que haga planes de viaje, me aseguraré de revisar opciones alternativas y mantener la calma, pase lo que pase."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "example_en": "Last Monday, I set out for Chicago to attend a business conference that I had been looking forward to for weeks.",
+      "explanation_es": "Had been + verbo en -ing presenta una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past perfect passive",
+      "example_en": "Everything had been planned carefully, including my hotel reservation and train connection from the airport.",
+      "explanation_es": "Had been + participio describe una acción recibida antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Future in the past",
+      "example_en": "Immediately, I felt anxious, realizing I would need to find another way into the city if I wanted to make the afternoon session.",
+      "explanation_es": "Would + infinitivo presenta algo que era futuro desde un punto de vista pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "The agent suggested taking an express bus, which would leave in forty minutes, but it might hit heavy traffic due to the storm.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "I considered the bus safer, but the carpool might allow me to reach the hotel sooner if the roads were clear enough.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Third conditional",
+      "example_en": "If I’d known about the cancellation earlier, I would have arranged a backup option from the start.",
+      "explanation_es": "If + pasado perfecto con would/might have + participio imagina un pasado diferente y su resultado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Which referring to a whole clause",
+      "example_en": "After a few minutes, two more people joined us, which made hiring a ride more affordable for everyone.",
+      "explanation_es": "Which retoma la situación anterior para añadir su efecto o un comentario.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "At one point, someone worried the driver might take a longer route, but I pointed out that he was using the same GPS app we all trusted.",
+      "explanation_es": "Was/were + verbo en -ing presenta una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 16
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "set out for",
+      "meaning_es": "partir hacia",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "looking forward to",
+      "meaning_es": "esperar con ilusión",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "find another way",
+      "meaning_es": "buscar otra opción",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "express bus",
+      "meaning_es": "autobús exprés",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "hit heavy traffic",
+      "meaning_es": "encontrar mucho tráfico",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "top priority",
+      "meaning_es": "máxima prioridad",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "working together with strangers",
+      "meaning_es": "trabajar junto a desconocidos",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "whatever happens",
+      "meaning_es": "pase lo que pase",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last Monday,",
+              "I set out for Chicago to attend a business conference that I had been looking forward to for weeks."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "The agent suggested taking an express bus,",
+              "which would leave in forty minutes,",
+              "but it might hit heavy traffic",
+              "due to the storm."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "If I’d known about the cancellation earlier,",
+              "I would have arranged a backup option",
+              "from the start."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-006",
+    "number": "006",
+    "title_en": "Travel Plans and Unexpected Changes",
+    "title_es": "Planes de viaje e imprevistos",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Viajes y resolución de problemas",
+    "main_topic_es": "Gestión de planes de viaje y alternativas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Past perfect passive",
+      "Future in the past",
+      "Might for possibility",
+      "Second conditional",
+      "Third conditional",
+      "Which referring to a whole clause",
+      "Past continuous"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

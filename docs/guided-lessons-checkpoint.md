@@ -166,3 +166,48 @@ The cover accessibility labels remain; image traits and stable IDs were added.
 The resource validator requires twenty distinct landscape PNGs; XCTest adds native
 UIImage decoding and uniqueness coverage, with a reader image accessibility check.
 XCTest and iPhone visual verification cannot be run locally on Windows.
+
+## Lessons 006–010 and personal practice navigation
+
+The catalog now contains ten lessons at each of B1, B2, C1 and C2 (forty total).
+New themes at all four levels are Travel Plans and Unexpected Changes, Finding
+a Place to Live, Shopping and Solving a Problem, Friendship and Difficult
+Conversations, and Technology in Everyday Life. Each level has a different
+original narrative, not a translation or synonym substitution of another level.
+Lessons 001–005, their audio, support packs and covers remain unchanged.
+
+Each new lesson retains twenty English/Spanish paragraphs, eight grammar items,
+eight expressions, five objectives and three reading rounds. Grammar labels were
+reviewed against actual source sentences; expressions and complete chunks are
+checked against their referenced paragraphs. Additional AI-generated support packs
+cover French, Korean, Japanese and Simplified Chinese. As with the earlier
+catalog, these are learning materials targeted at a level, not certified CEFR
+assessments; fluent-speaker review remains useful for the support translations.
+
+Four hundred new offline Marin recordings use the approved 0.85 speed and measured
+word cues. The app keeps the existing playback, repeat and shadowing controls.
+An ASR spelling difference (Karla/Carla) in B1-007 paragraph nine was reconciled
+without changing any measured timing. Audio with actual omissions was regenerated.
+Twenty new covers were generated using built-in image_gen and visually reviewed;
+their exact prompts, repository paths and hashes are in lesson-cover-prompts.json.
+The complete catalog requires eight hundred audio clips, one hundred sixty support
+packs and forty distinct covers before the catalog can be published.
+
+Training now opens a hub with two peer entries: Guided lessons and My practices.
+The existing personal practice list, instructions, editor and create button live
+inside My practices. No conversation, listening, story or playback logic changes.
+
+The personal starter is now Presentarme y conversar, with twenty everyday phrases
+about introductions, routines and asking for clarification. Fresh stores use it.
+An untouched, untranslated legacy Los tres cerditos starter is replaced while
+keeping its training identifier. If that starter was edited, translated or has
+practice changes, it is preserved and the new sample is added once. Other user
+practices and libraries without the legacy starter are left intact. An optional
+archive revision prevents repeated sample insertion. The legacy source constant
+remains unchanged because the story catalog also uses it.
+
+Resource and localization validation run locally. XCTest resource counts and
+navigation coverage were updated; migration coverage checks untouched and edited
+legacy starters and reopening. Windows cannot run Xcode/XCTest or the iPhone UI;
+native compilation, accessibility layout and playback still need Xcode/iPhone
+verification. The development .env remains ignored and outside bundled resources.

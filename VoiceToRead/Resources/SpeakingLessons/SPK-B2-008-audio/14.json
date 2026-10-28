@@ -1,0 +1,108 @@
+{
+  "text": "Together, we looked at other models, comparing their features and checking which ones included reliable language support.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.6600000262260437,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.440000057220459,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 1.9800000190734863,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.299999952316284,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 37,
+      "length": 9,
+      "start": 3.8399999141693115,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.8399999141693115,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 4.199999809265137,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.679999828338623,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 66,
+      "length": 8,
+      "start": 5.420000076293945,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.71999979019165,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 6.179999828338623,
+      "end": 6.5
+    },
+    {
+      "location": 86,
+      "length": 8,
+      "start": 6.5,
+      "end": 7.0
+    },
+    {
+      "location": 95,
+      "length": 8,
+      "start": 7.0,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 104,
+      "length": 8,
+      "start": 7.760000228881836,
+      "end": 8.239999771118164
+    },
+    {
+      "location": 113,
+      "length": 7,
+      "start": 8.239999771118164,
+      "end": 8.720000267028809
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-007",
+  "number": 7,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Finding a Place to Live",
+    "es": "Buscar dónde vivir"
+  },
+  "category": {
+    "en": "Housing and Daily Life",
+    "es": "Vivienda y vida diaria"
+  },
+  "main_topic": {
+    "en": "Viewing homes, discussing needs and trade-offs, and negotiating shared responsibilities.",
+    "es": "Visita a viviendas, diálogo sobre necesidades y concesiones, y negociación de responsabilidades compartidas."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos adultos revisando juntos un departamento mostrando interés, con agente inmobiliario al fondo.",
+    "prompt": "High-quality editorial photograph, two adults viewing an apartment together, discussing, real estate agent in background, cozy urban home, natural light, modern but lived-in decor, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Negociar preferencias y expectativas en inglés avanzado.",
+    "Distinguir formas de hacer concesiones y matizar opiniones.",
+    "Interpretar estructuras complejas en conversaciones cotidianas.",
+    "Practicar expresiones útiles para acuerdos y desacuerdos.",
+    "Desarrollar fluidez exponiendo resultados y propuestas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "After months of searching for a new home, I finally scheduled a viewing with Leo for an apartment that, on paper, seemed almost ideal.",
+      "es": "Después de meses buscando un nuevo hogar, finalmente agendé una visita con Leo para un departamento que, en teoría, parecía casi ideal."
+    },
+    {
+      "number": 2,
+      "function": "setting",
+      "en": "The neighborhood felt vibrant yet quiet, with local shops and green spaces only a short walk away, an aspect both of us valued highly.",
+      "es": "El vecindario se sentía dinámico pero tranquilo, con tiendas locales y zonas verdes a poca distancia, algo que ambos valorábamos mucho."
+    },
+    {
+      "number": 3,
+      "function": "perception",
+      "en": "As we stepped inside, Leo remarked that the natural light was impressive, although the living room was slightly smaller than we had anticipated.",
+      "es": "Al entrar, Leo comentó que la luz natural era impresionante, aunque la sala era un poco más pequeña de lo que esperábamos."
+    },
+    {
+      "number": 4,
+      "function": "prioritization",
+      "en": "Given the need for a workspace, I immediately noticed the absence of a separate office area, which was one of my top priorities.",
+      "es": "Dado que necesitaba un espacio para trabajar, noté de inmediato la ausencia de una oficina aparte, que era una de mis mayores prioridades."
+    },
+    {
+      "number": 5,
+      "function": "negotiation",
+      "en": "Still, Leo pointed out that the layout allowed for a modest desk by the window, and suggested we could adapt if we rearranged the furniture strategically.",
+      "es": "Aun así, Leo señaló que la distribución permitía poner un escritorio modesto junto a la ventana, y propuso que podríamos adaptarnos si reorganizábamos los muebles estratégicamente."
+    },
+    {
+      "number": 6,
+      "function": "hesitation",
+      "en": "Although I conceded that it might work, I was hesitant to compromise on a dedicated workspace after realizing how productive I’d been at home lately.",
+      "es": "Aunque admití que quizá funcionaría, dudaba en ceder solo porque ahora soy muy productivo trabajando desde casa con oficina propia."
+    },
+    {
+      "number": 7,
+      "function": "trade_offs",
+      "en": "On the other hand, the kitchen exceeded our expectations, as it had modern appliances and enough room to accommodate meal prep together—something Leo had insisted was crucial.",
+      "es": "Por otro lado, la cocina superaba nuestras expectativas, ya que tenía electrodomésticos modernos y suficiente espacio para cocinar juntos—algo que Leo consideraba fundamental."
+    },
+    {
+      "number": 8,
+      "function": "evaluation",
+      "en": "However, neither of us could ignore that the rent stretched our budget, and while manageable now, it might prove difficult if circumstances changed.",
+      "es": "Sin embargo, ninguno pudo ignorar que la renta se salía de nuestro presupuesto, y aunque por ahora era posible, podría ser difícil si las circunstancias cambiaban."
+    },
+    {
+      "number": 9,
+      "function": "qualification",
+      "en": "I pointed out that, provided we reduced discretionary expenses and perhaps postponed purchasing new furniture, affording this apartment would not be out of reach.",
+      "es": "Señalé que, siempre que redujéramos gastos innecesarios y pospusiéramos comprar muebles nuevos, costear este apartamento no sería imposible."
+    },
+    {
+      "number": 10,
+      "function": "agreement",
+      "en": "Leo agreed in principle, but he added that he’d prefer greater financial stability before taking on higher monthly payments.",
+      "es": "Leo estuvo de acuerdo en principio, pero añadió que preferiría tener más estabilidad financiera antes de asumir pagos mensuales más altos."
+    },
+    {
+      "number": 11,
+      "function": "suggestion",
+      "en": "We discussed the possibility of negotiating a slightly lower rent or getting the landlord to include some utilities to offset costs.",
+      "es": "Discutimos la posibilidad de negociar una renta un poco más baja o que el propietario incluyera algunos servicios para compensar los costos."
+    },
+    {
+      "number": 12,
+      "function": "listing_priorities",
+      "en": "As we walked through the rest of the apartment, we verbalized our non-negotiables, with mine focused on quiet surroundings and Leo’s on an accessible kitchen.",
+      "es": "Mientras recorríamos el resto del departamento, expresamos nuestros requisitos esenciales; para mí eran la tranquilidad y para Leo una cocina accesible."
+    },
+    {
+      "number": 13,
+      "function": "compromise",
+      "en": "It soon became clear that neither of us would get everything we wanted, so we began weighing up which features we could live without if necessary.",
+      "es": "Pronto se hizo evidente que ninguno obtendría todo lo que quería, así que comenzamos a sopesar qué características podríamos sacrificar si fuera necesario."
+    },
+    {
+      "number": 14,
+      "function": "shared_responsibility",
+      "en": "To keep potential conflicts at bay, we also decided to make a list of chore responsibilities that could be rotated weekly, ensuring fairness.",
+      "es": "Para evitar posibles conflictos, también decidimos elaborar una lista de tareas domésticas que se rotaría semanalmente para garantizar la equidad."
+    },
+    {
+      "number": 15,
+      "function": "proposal",
+      "en": "I proposed that each of us choose the one aspect we refused to compromise on, so our absolute priorities would remain protected.",
+      "es": "Propuse que cada uno eligiera el único aspecto en el que no pensaba ceder, para que nuestras prioridades absolutas quedaran protegidas."
+    },
+    {
+      "number": 16,
+      "function": "reaffirmation",
+      "en": "After some reflection, Leo reaffirmed that the kitchen layout was non-negotiable for him, while I was firm about needing peace and quiet for remote work.",
+      "es": "Después de reflexionar, Leo reiteró que la disposición de la cocina era innegociable para él, mientras que yo insistí en la necesidad de tranquilidad para el teletrabajo."
+    },
+    {
+      "number": 17,
+      "function": "concession",
+      "en": "While neither of us was entirely satisfied, I conceded that, if necessary, I could create a more compact workspace to secure the benefits the apartment offered.",
+      "es": "Aunque ninguno quedó totalmente satisfecho, cedí que, de ser necesario, podría acondicionar un espacio de trabajo más reducido a cambio de los beneficios del departamento."
+    },
+    {
+      "number": 18,
+      "function": "acceptance",
+      "en": "Leo acknowledged my flexibility and tentatively agreed that the overall advantages might outweigh the drawbacks, at least for the coming year.",
+      "es": "Leo reconoció mi flexibilidad y aceptó, aunque con reservas, que las ventajas generales podían superar los inconvenientes, al menos durante el próximo año."
+    },
+    {
+      "number": 19,
+      "function": "resolution",
+      "en": "Having reached an understanding, we left the viewing feeling cautiously optimistic, ready to discuss our offer and terms with the agent.",
+      "es": "Al llegar a un entendimiento, salimos de la visita moderadamente optimistas, listos para discutir nuestra oferta y condiciones con el agente."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "In retrospect, the experience reminded me how essential it is not only to voice personal needs, but to listen genuinely and stay open to compromise.",
+      "es": "En retrospectiva, la experiencia me recordó lo importante que es no solo expresar necesidades propias, sino también escuchar y mantener una actitud abierta a la negociación."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "As we stepped inside, Leo remarked that the natural light was impressive, although the living room was slightly smaller than we had anticipated.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Non-defining relative clause",
+      "example_en": "Given the need for a workspace, I immediately noticed the absence of a separate office area, which was one of my top priorities.",
+      "explanation_es": "Una cláusula de relativo entre comas añade información sobre algo ya identificado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "Still, Leo pointed out that the layout allowed for a modest desk by the window, and suggested we could adapt if we rearranged the furniture strategically.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I conceded that it might work, I was hesitant to compromise on a dedicated workspace after realizing how productive I’d been at home lately.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Gerund as subject",
+      "example_en": "I pointed out that, provided we reduced discretionary expenses and perhaps postponed purchasing new furniture, affording this apartment would not be out of reach.",
+      "explanation_es": "Un grupo en -ing funciona como sujeto de la oración.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Passive voice",
+      "example_en": "To keep potential conflicts at bay, we also decided to make a list of chore responsibilities that could be rotated weekly, ensuring fairness.",
+      "explanation_es": "Be + participio centra la atención en quien recibe una acción.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Mandative subjunctive",
+      "example_en": "I proposed that each of us choose the one aspect we refused to compromise on, so our absolute priorities would remain protected.",
+      "explanation_es": "Tras una propuesta, that + sujeto + forma base expresa la acción sugerida sin añadir -s.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Perfect participle clause",
+      "example_en": "Having reached an understanding, we left the viewing feeling cautiously optimistic, ready to discuss our offer and terms with the agent.",
+      "explanation_es": "Having + participio presenta una acción completada antes de la principal.",
+      "source_paragraph": 19
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "on paper",
+      "meaning_es": "en teoría",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "stretched our budget",
+      "meaning_es": "salirse de nuestro presupuesto",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "affording this apartment would not be out of reach",
+      "meaning_es": "costear este apartamento no sería imposible",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "in principle",
+      "meaning_es": "en principio",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "non-negotiables",
+      "meaning_es": "requisitos esenciales/innegociables",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "keep potential conflicts at bay",
+      "meaning_es": "evitar posibles conflictos",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "cautiously optimistic",
+      "meaning_es": "moderadamente optimista",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "in retrospect",
+      "meaning_es": "en retrospectiva",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "Given the need for a workspace,",
+              "I immediately noticed the absence of a separate office area,",
+              "which was one of my top priorities."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "However, neither of us could ignore that the rent stretched our budget,",
+              "and while manageable now,",
+              "it might prove difficult if circumstances changed."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Having reached an understanding,",
+              "we left the viewing feeling cautiously optimistic,",
+              "ready to discuss our offer and terms with the agent."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-007",
+    "number": "007",
+    "title_en": "Finding a Place to Live",
+    "title_es": "Buscar dónde vivir",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Vivienda y vida diaria",
+    "main_topic_es": "Visita a vivienda y negociación de necesidades",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Non-defining relative clause",
+      "Second conditional",
+      "Concessive clause",
+      "Gerund as subject",
+      "Passive voice",
+      "Mandative subjunctive",
+      "Perfect participle clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

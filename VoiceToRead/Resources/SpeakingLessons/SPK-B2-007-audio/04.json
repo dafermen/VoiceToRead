@@ -1,0 +1,138 @@
+{
+  "text": "Alex, on the other hand, seemed more interested in whether we would have enough space in the living room for his piano.",
+  "duration": 8.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 6,
+      "length": 2,
+      "start": 0.8999999761581421,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.340000033378601,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 13,
+      "length": 5,
+      "start": 1.5399999618530273,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.7599999904632568,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.859999895095825,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 32,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 37,
+      "length": 10,
+      "start": 3.2799999713897705,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.700000047683716,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 4.159999847412109,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.340000152587891,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 4.739999771118164,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 4.920000076293945,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 80,
+      "length": 5,
+      "start": 5.260000228881836,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 5.659999847412109,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 5.78000020980835,
+      "end": 6.0
+    },
+    {
+      "location": 93,
+      "length": 6,
+      "start": 6.0,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 6.159999847412109,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 105,
+      "length": 3,
+      "start": 6.420000076293945,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 109,
+      "length": 3,
+      "start": 6.840000152587891,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 113,
+      "length": 5,
+      "start": 7.059999942779541,
+      "end": 7.420000076293945
+    }
+  ]
+}

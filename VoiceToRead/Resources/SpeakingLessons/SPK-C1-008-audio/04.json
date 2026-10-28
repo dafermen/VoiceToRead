@@ -1,0 +1,162 @@
+{
+  "text": "The seat's depth could not be meaningfully adjusted, and as a result, my posture quickly became strained in a way that I simply had not anticipated.",
+  "duration": 11.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 0.9399999976158142,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 1.2200000286102295,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.5800000429153442,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 30,
+      "length": 12,
+      "start": 2.180000066757202,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 43,
+      "length": 8,
+      "start": 2.7799999713897705,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 4.059999942779541,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.139999866485596,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 60,
+      "length": 1,
+      "start": 4.400000095367432,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.940000057220459,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 5.440000057220459,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 73,
+      "length": 7,
+      "start": 5.619999885559082,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 6.039999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 6.539999961853027,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 96,
+      "length": 8,
+      "start": 6.960000038146973,
+      "end": 7.5
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 7.5,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 108,
+      "length": 1,
+      "start": 7.71999979019165,
+      "end": 7.980000019073486
+    },
+    {
+      "location": 110,
+      "length": 3,
+      "start": 7.980000019073486,
+      "end": 8.0
+    },
+    {
+      "location": 114,
+      "length": 4,
+      "start": 8.0,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 119,
+      "length": 1,
+      "start": 8.199999809265137,
+      "end": 8.479999542236328
+    },
+    {
+      "location": 121,
+      "length": 6,
+      "start": 8.479999542236328,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 128,
+      "length": 3,
+      "start": 8.859999656677246,
+      "end": 9.180000305175781
+    },
+    {
+      "location": 132,
+      "length": 3,
+      "start": 9.180000305175781,
+      "end": 9.520000457763672
+    },
+    {
+      "location": 136,
+      "length": 11,
+      "start": 9.520000457763672,
+      "end": 10.0600004196167
+    }
+  ]
+}

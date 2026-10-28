@@ -1,0 +1,162 @@
+{
+  "text": "However, as the train reached the midpoint of the journey, an announcement informed us that all onward connections were cancelled due to an unforeseen technical fault.",
+  "duration": 12.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.159999966621399,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.5199999809265137,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.7400000095367432,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 22,
+      "length": 7,
+      "start": 2.0799999237060547,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.440000057220459,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.680000066757202,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.1600000858306885,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.3399999141693115,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 3.5799999237060547,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.480000019073486,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 62,
+      "length": 12,
+      "start": 4.619999885559082,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 75,
+      "length": 8,
+      "start": 5.119999885559082,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 5.659999847412109,
+      "end": 6.0
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 6.0,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 6.21999979019165,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.619999885559082,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 103,
+      "length": 11,
+      "start": 7.039999961853027,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 115,
+      "length": 4,
+      "start": 7.619999885559082,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 120,
+      "length": 9,
+      "start": 7.940000057220459,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 130,
+      "length": 3,
+      "start": 8.399999618530273,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 134,
+      "length": 2,
+      "start": 9.15999984741211,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 137,
+      "length": 2,
+      "start": 9.4399995803833,
+      "end": 9.65999984741211
+    },
+    {
+      "location": 140,
+      "length": 10,
+      "start": 9.65999984741211,
+      "end": 10.359999656677246
+    },
+    {
+      "location": 151,
+      "length": 9,
+      "start": 10.359999656677246,
+      "end": 10.899999618530273
+    },
+    {
+      "location": 161,
+      "length": 5,
+      "start": 10.899999618530273,
+      "end": 11.34000015258789
+    }
+  ]
+}

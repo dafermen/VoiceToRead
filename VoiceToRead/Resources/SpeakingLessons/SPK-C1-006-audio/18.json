@@ -1,0 +1,174 @@
+{
+  "text": "Against the odds, I reached Harbor City just before dusk, exhausted but relieved, and my friend welcomed me with open arms—and maybe even a bit of admiration.",
+  "duration": 13.34000015258789,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 8,
+      "length": 3,
+      "start": 0.6000000238418579,
+      "end": 1.5
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.5
+    },
+    {
+      "location": 18,
+      "length": 1,
+      "start": 1.659999966621399,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 2.1600000858306885,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.4600000381469727,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 35,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 3.2799999713897705,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 3.940000057220459,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 4.28000020980835,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 58,
+      "length": 9,
+      "start": 5.380000114440918,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.78000020980835,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 72,
+      "length": 8,
+      "start": 6.360000133514404,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 7.480000019073486,
+      "end": 7.5
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 7.5,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 7.78000020980835,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 96,
+      "length": 8,
+      "start": 8.119999885559082,
+      "end": 8.600000381469727
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 8.600000381469727,
+      "end": 8.960000038146973
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 8.960000038146973,
+      "end": 9.180000305175781
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 9.180000305175781,
+      "end": 9.579999923706055
+    },
+    {
+      "location": 118,
+      "length": 4,
+      "start": 9.579999923706055,
+      "end": 10.699999809265137
+    },
+    {
+      "location": 123,
+      "length": 3,
+      "start": 9.579999923706055,
+      "end": 10.699999809265137
+    },
+    {
+      "location": 127,
+      "length": 5,
+      "start": 10.699999809265137,
+      "end": 10.979999542236328
+    },
+    {
+      "location": 133,
+      "length": 4,
+      "start": 10.979999542236328,
+      "end": 11.4399995803833
+    },
+    {
+      "location": 138,
+      "length": 1,
+      "start": 11.4399995803833,
+      "end": 11.819999694824219
+    },
+    {
+      "location": 140,
+      "length": 3,
+      "start": 11.819999694824219,
+      "end": 11.960000038146973
+    },
+    {
+      "location": 144,
+      "length": 2,
+      "start": 11.960000038146973,
+      "end": 12.640000343322754
+    },
+    {
+      "location": 147,
+      "length": 10,
+      "start": 12.640000343322754,
+      "end": 12.640000343322754
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "In the end, we both felt respected and relieved, and that's really what matters most to me.",
+  "duration": 6.980000019073486,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.2199999988079071
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.2199999988079071,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.5400000214576721,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 1.1200000047683716,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.3600000143051147,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.7799999713897705,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 2.119999885559082,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 2.6600000858306885,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 3.200000047683716,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 4.199999809265137,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 4.260000228881836,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 60,
+      "length": 6,
+      "start": 4.579999923706055,
+      "end": 5.0
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 5.0,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 5.400000095367432,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.539999961853027,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 85,
+      "length": 2,
+      "start": 5.960000038146973,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 6.159999847412109,
+      "end": 6.300000190734863
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "text": "She approved this approach, explaining it would allow both sides to feel confident that the exchange resolved the original issue.",
+  "duration": 10.149999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.6200000047683716,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.2000000476837158,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 18,
+      "length": 8,
+      "start": 1.6399999856948853,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 28,
+      "length": 10,
+      "start": 2.9600000381469727,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.2799999713897705,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.5199999809265137,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.700000047683716,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.9600000381469727,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.460000038146973,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 65,
+      "length": 2,
+      "start": 4.840000152587891,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.179999828338623,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 73,
+      "length": 9,
+      "start": 5.420000076293945,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.059999942779541,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.699999809265137,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 92,
+      "length": 8,
+      "start": 7.079999923706055,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 101,
+      "length": 8,
+      "start": 7.539999961853027,
+      "end": 8.140000343322754
+    },
+    {
+      "location": 110,
+      "length": 3,
+      "start": 8.140000343322754,
+      "end": 8.460000038146973
+    },
+    {
+      "location": 114,
+      "length": 8,
+      "start": 8.460000038146973,
+      "end": 8.960000038146973
+    },
+    {
+      "location": 123,
+      "length": 5,
+      "start": 8.960000038146973,
+      "end": 9.319999694824219
+    }
+  ]
+}

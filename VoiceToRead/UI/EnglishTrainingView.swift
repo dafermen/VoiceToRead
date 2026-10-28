@@ -4,6 +4,33 @@ import Speech
 
 @MainActor
 struct EnglishTrainingLibraryView: View {
+    var body: some View {
+        List {
+            Section {
+                NavigationLink { SpeakingLessonLibraryView() } label: {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Guided lessons", systemImage: "book.closed").font(.headline)
+                        Text("Learn English with prepared lessons, audio and shadowing.")
+                            .font(.subheadline).foregroundStyle(.secondary)
+                    }.padding(.vertical, 8)
+                }.accessibilityIdentifier("guidedLessonsEntry")
+            }
+            Section {
+                NavigationLink { PersonalTrainingLibraryView() } label: {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("My practices", systemImage: "square.and.pencil").font(.headline)
+                        Text("Practise with your own texts and the languages you choose.")
+                            .font(.subheadline).foregroundStyle(.secondary)
+                    }.padding(.vertical, 8)
+                }.accessibilityIdentifier("personalPracticesEntry")
+            }
+        }
+        .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+@MainActor
+private struct PersonalTrainingLibraryView: View {
     @State private var store: EnglishTrainingStore?
     @State private var failure: String?
     @State private var creating = false
@@ -11,11 +38,6 @@ struct EnglishTrainingLibraryView: View {
         Group {
             if let store {
                 List {
-                    Section {
-                        NavigationLink { SpeakingLessonLibraryView() } label: {
-                            Label("Guided lessons", systemImage: "book.closed")
-                        }.accessibilityIdentifier("guidedLessonsEntry")
-                    }
                     Section {
                         Text("Choose the source and practice languages, write one phrase per line, then review the translations before practising.")
                         Text("Trainings stay on this device. Round results are temporary.").font(.caption).foregroundStyle(.secondary)
@@ -34,7 +56,7 @@ struct EnglishTrainingLibraryView: View {
                 }
                 .toolbar {
                     HomeCircleToolbarItem {
-                        HomeCircleAction(title: "New training", symbol: "plus") { creating = true }
+                        HomeCircleAction(title: "Create practice", symbol: "plus") { creating = true }
                             .accessibilityIdentifier("newEnglishTraining")
                     }
                 }
@@ -49,7 +71,7 @@ struct EnglishTrainingLibraryView: View {
                 }
             }
         }
-        .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("My practices").navigationBarTitleDisplayMode(.inline)
         .task { if store == nil { openStore() } }
     }
     private func openStore() {

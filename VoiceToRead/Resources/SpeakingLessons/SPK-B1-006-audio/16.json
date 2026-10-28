@@ -1,0 +1,120 @@
+{
+  "text": "Even though our trip started with a problem, I realized that being flexible helped us find a good solution.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.4000000059604645,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 0.6800000071525574,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.0399999618530273,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 1.3600000143051147,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 1.840000033378601,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.0399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 2.6600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 45,
+      "length": 1,
+      "start": 3.2200000286102295,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 3.4000000953674316,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.9000000953674316,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 61,
+      "length": 5,
+      "start": 4.239999771118164,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 67,
+      "length": 8,
+      "start": 4.579999923706055,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 5.159999847412109,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.760000228881836,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.059999942779541,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 91,
+      "length": 1,
+      "start": 6.300000190734863,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 6.519999980926514,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 98,
+      "length": 8,
+      "start": 6.800000190734863,
+      "end": 7.159999847412109
+    }
+  ]
+}

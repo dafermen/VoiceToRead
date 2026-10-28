@@ -1,0 +1,180 @@
+{
+  "text": "I asked the agent to reserve the multi-leg route but qualified my decision by asking whether he could notify downstream stations in case I was delayed between transfers.",
+  "duration": 12.119999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.3799999952316284,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 8,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 1.059999942779541,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 18,
+      "length": 2,
+      "start": 1.3799999952316284,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 2.140000104904175,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.140000104904175,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 2.440000057220459,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.0799999237060547,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.5199999809265137,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 4.179999828338623,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.71999979019165,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 66,
+      "length": 8,
+      "start": 5.039999961853027,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.400000095367432,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 78,
+      "length": 6,
+      "start": 5.880000114440918,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 85,
+      "length": 7,
+      "start": 6.28000020980835,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 93,
+      "length": 2,
+      "start": 6.579999923706055,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 96,
+      "length": 5,
+      "start": 6.760000228881836,
+      "end": 7.0
+    },
+    {
+      "location": 102,
+      "length": 6,
+      "start": 7.0,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 109,
+      "length": 10,
+      "start": 7.480000019073486,
+      "end": 8.140000343322754
+    },
+    {
+      "location": 120,
+      "length": 8,
+      "start": 8.140000343322754,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 129,
+      "length": 2,
+      "start": 8.699999809265137,
+      "end": 9.380000114440918
+    },
+    {
+      "location": 132,
+      "length": 4,
+      "start": 9.380000114440918,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 137,
+      "length": 1,
+      "start": 9.5600004196167,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 139,
+      "length": 3,
+      "start": 9.720000267028809,
+      "end": 10.0
+    },
+    {
+      "location": 143,
+      "length": 7,
+      "start": 10.0,
+      "end": 10.300000190734863
+    },
+    {
+      "location": 151,
+      "length": 7,
+      "start": 10.300000190734863,
+      "end": 10.800000190734863
+    },
+    {
+      "location": 159,
+      "length": 9,
+      "start": 10.800000190734863,
+      "end": 11.239999771118164
+    }
+  ]
+}

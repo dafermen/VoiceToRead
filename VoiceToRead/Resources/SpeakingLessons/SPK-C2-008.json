@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-008",
+  "number": 8,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y solución de problemas"
+  },
+  "category": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "Explaining a mismatch in a purchase and negotiating a fair, practical solution.",
+    "es": "Explicar una compra inadecuada y negociar una solución justa y práctica."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Persona adulta dialogando cortésmente con un empleado en la tienda acerca de una compra inadecuada, mostrando el producto.",
+    "prompt": "Realistic editorial photo: adult customer holding a purchased item and conversing politely with a store employee at a service counter, both thoughtful, interior lighting, no visible logos, horizontal, 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Narrar una situación de compra problemática con lenguaje avanzado.",
+    "Interpretar imprecisión y matizar puntos delicados.",
+    "Proponer y negociar posibles soluciones prácticas.",
+    "Reformular y calibrar acuerdo o desacuerdo respetuosamente.",
+    "Practicar lectura fluida y repetición con fragmentos largos y naturales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Recently, I purchased a pair of headphones from an electronics store with the intention of using them during long video conferences for work.",
+      "es": "Recientemente compré unos auriculares en una tienda de electrónica con la intención de usarlos en videoconferencias largas para el trabajo."
+    },
+    {
+      "number": 2,
+      "function": "observation",
+      "en": "While the product looked quite promising at first glance, some features described on the packaging proved rather ambiguous upon closer inspection.",
+      "es": "Aunque el producto parecía muy prometedor a primera vista, algunas características descritas en el empaque resultaron bastante ambiguas al examinarlo más cuidadosamente."
+    },
+    {
+      "number": 3,
+      "function": "inciting_action",
+      "en": "After several days, I realized the headset was far from comfortable and started causing headaches barely an hour into each call.",
+      "es": "Después de varios días, me di cuenta de que los auriculares distaban mucho de ser cómodos y me empezaron a provocar dolor de cabeza a la hora de cada llamada."
+    },
+    {
+      "number": 4,
+      "function": "problem_statement",
+      "en": "Given the discomfort and the lack of clarity in the specifications, I decided it would be reasonable to return to the store and explain the situation.",
+      "es": "Dado el malestar y la falta de claridad en las especificaciones, decidí que lo razonable sería regresar a la tienda y explicar la situación."
+    },
+    {
+      "number": 5,
+      "function": "opening_move",
+      "en": "When I arrived, I approached a customer service representative and carefully explained that, unfortunately, the product didn't meet my needs as expected.",
+      "es": "Al llegar, me acerqué a un representante de atención al cliente y expliqué cuidadosamente que, lamentablemente, el producto no cumplía mis expectativas como esperaba."
+    },
+    {
+      "number": 6,
+      "function": "register_shift",
+      "en": "I made a conscious effort to remain polite as I described the headache issue, emphasizing this wasn't a question of fashion but of basic functionality.",
+      "es": "Fui consciente de mantener la cortesía al describir el problema del dolor de cabeza, puntualizando que no era cuestión de estética, sino de funcionalidad básica."
+    },
+    {
+      "number": 7,
+      "function": "interpretation",
+      "en": "Since the box merely stated 'ergonomic design' without any actual detail, I suggested that perhaps my interpretation had differed from the store's intent.",
+      "es": "Como la caja solo indicaba ‘diseño ergonómico’ sin ningún detalle real, sugerí que quizás mi interpretación había diferido de la intención de la tienda."
+    },
+    {
+      "number": 8,
+      "function": "register_adjustment",
+      "en": "I took care not to sound accusatory and instead framed the mismatch as an understandable lapse in mutual expectations.",
+      "es": "Me cuidé de no sonar acusatorio y más bien enmarqué el desacuerdo como un comprensible desfase entre expectativas mutuas."
+    },
+    {
+      "number": 9,
+      "function": "empathy",
+      "en": "The representative listened attentively and acknowledged that product descriptions sometimes unintentionally mislead, especially when comfort is subjective.",
+      "es": "La representante escuchó atentamente y reconoció que las descripciones de productos a veces resultan involuntariamente equívocas, especialmente tratándose de comodidad, que es subjetiva."
+    },
+    {
+      "number": 10,
+      "function": "tentative_agreement",
+      "en": "She tentatively proposed offering me a store credit, noting that company policy did not guarantee outright refunds, particularly for non-faulty goods.",
+      "es": "Ella propuso tentativamente ofrecerme un vale en tienda, señalando que la política no garantizaba reembolsos directos, especialmente en bienes sin fallas."
+    },
+    {
+      "number": 11,
+      "function": "polite_challenge",
+      "en": "Respectfully, I questioned whether a credit was the most equitable option, since the miscommunication arguably originated from vague labeling rather than my own error.",
+      "es": "Respetuosamente, pregunté si un vale era la opción más equitativa, ya que la confusión se originó, podría decirse, por un etiquetado vago y no por un error mío."
+    },
+    {
+      "number": 12,
+      "function": "reformulation",
+      "en": "I clarified that I wasn’t insisting on a full refund but hoped for a practical outcome—perhaps an exchange for a demonstrably more comfortable headset.",
+      "es": "Aclaré que no estaba exigiendo un reembolso total, sino que esperaba un resultado práctico: tal vez un cambio por otros auriculares probadamente más cómodos."
+    },
+    {
+      "number": 13,
+      "function": "calibrating_agreement",
+      "en": "She considered my suggestion and pointed out that, if there were comparable models available, an exchange might indeed be feasible.",
+      "es": "Ella consideró mi sugerencia y señaló que, si había modelos similares disponibles, efectivamente podría ser viable cambiar el producto."
+    },
+    {
+      "number": 14,
+      "function": "solution_building",
+      "en": "Without rushing to a conclusion, I asked if I could briefly try one or two alternative models in the store before making my decision.",
+      "es": "Sin precipitarme a una conclusión, pregunté si podría probar brevemente uno o dos modelos alternativos en la tienda antes de decidirme."
+    },
+    {
+      "number": 15,
+      "function": "procedural_agreement",
+      "en": "She approved this approach, explaining it would allow both sides to feel confident that the exchange resolved the original issue.",
+      "es": "Ella aceptó este procedimiento, explicando que así ambas partes podrían estar seguras de que el cambio abordaba realmente el problema inicial."
+    },
+    {
+      "number": 16,
+      "function": "comparison",
+      "en": "After testing several options, I found a pair that, by comparison, felt much lighter and immediately more suitable for extended use.",
+      "es": "Tras probar varias opciones, encontré unos auriculares que, en comparación, resultaban mucho más livianos y adecuados para uso prolongado."
+    },
+    {
+      "number": 17,
+      "function": "outcome",
+      "en": "We completed the exchange and she documented our conversation, noting that mutual flexibility had ensured a satisfactory result.",
+      "es": "Completamos el cambio y ella documentó nuestra conversación, mencionando que la flexibilidad de ambas partes garantizó un resultado satisfactorio."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Reflecting on the process, I appreciated that both sides managed potential disagreement without escalation or resentment.",
+      "es": "Al reflexionar sobre el proceso, valoré que ambas partes gestionaran el desacuerdo potencial sin que derivara en tensión ni resentimiento."
+    },
+    {
+      "number": 19,
+      "function": "lesson_drawn",
+      "en": "This interaction reminded me how reviewing ambiguous claims and remaining open to compromise can create authentic problem-solving in daily life.",
+      "es": "Esta experiencia me recordó que analizar afirmaciones ambiguas y estar dispuesto a ceder puede generar soluciones auténticas en la vida diaria."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "In the end, I left the store with a product that actually suited my purpose, and the process strengthened my confidence in handling nuanced situations.",
+      "es": "Al final, salí de la tienda con un producto que realmente se adaptaba a mi propósito y el proceso reforzó mi confianza para manejar situaciones delicadas."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Reduced passive relative clause",
+      "example_en": "While the product looked quite promising at first glance, some features described on the packaging proved rather ambiguous upon closer inspection.",
+      "explanation_es": "Un participio pasado modifica un sustantivo y equivale a una relativa con which/that + be.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Since the box merely stated 'ergonomic design' without any actual detail, I suggested that perhaps my interpretation had differed from the store's intent.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "I clarified that I wasn’t insisting on a full refund but hoped for a practical outcome—perhaps an exchange for a demonstrably more comfortable headset.",
+      "explanation_es": "Was/were + verbo en -ing presenta una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Second conditional",
+      "example_en": "She considered my suggestion and pointed out that, if there were comparable models available, an exchange might indeed be feasible.",
+      "explanation_es": "If + pasado con would, could o might presenta una situación hipotética y su posible resultado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Without rushing to a conclusion, I asked if I could briefly try one or two alternative models in the store before making my decision.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Comparatives",
+      "example_en": "After testing several options, I found a pair that, by comparison, felt much lighter and immediately more suitable for extended use.",
+      "explanation_es": "Los comparativos permiten contrastar cualidades, opciones o cantidades.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Present participle clause",
+      "example_en": "Reflecting on the process, I appreciated that both sides managed potential disagreement without escalation or resentment.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "In the end, I left the store with a product that actually suited my purpose, and the process strengthened my confidence in handling nuanced situations.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "at first glance",
+      "meaning_es": "a primera vista",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "proved rather ambiguous",
+      "meaning_es": "resultar bastante ambiguo",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "as expected",
+      "meaning_es": "como se esperaba",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "question of fashion",
+      "meaning_es": "una cuestión de estética o apariencia",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "remain polite",
+      "meaning_es": "mantener la cortesía",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "originated from",
+      "meaning_es": "se originó a partir de",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "mutual flexibility",
+      "meaning_es": "flexibilidad de ambas partes",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "handling nuanced situations",
+      "meaning_es": "manejar situaciones delicadas o matizadas",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "While the product looked quite promising at first glance,",
+              "some features described on the packaging proved rather ambiguous upon closer inspection."
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "Respectfully,",
+              "I questioned whether a credit was the most equitable option,",
+              "since the miscommunication arguably originated from vague labeling",
+              "rather than my own error."
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "After testing several options,",
+              "I found a pair that,",
+              "by comparison,",
+              "felt much lighter and immediately more suitable for extended use."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta de forma fluida, priorizando ritmo y entonación natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-008",
+    "number": "008",
+    "title_en": "Shopping and Solving a Problem",
+    "title_es": "Compras y solución de problemas",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Compras y resolución de problemas",
+    "main_topic_es": "Explicar y negociar la solución de una compra inadecuada",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Reduced passive relative clause",
+      "Past perfect",
+      "Past continuous",
+      "Second conditional",
+      "Without + gerund",
+      "Comparatives",
+      "Present participle clause",
+      "Defining relative clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

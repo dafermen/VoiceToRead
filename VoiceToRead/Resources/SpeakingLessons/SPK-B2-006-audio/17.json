@@ -1,0 +1,114 @@
+{
+  "text": "It wasn’t the journey I had imagined, but working together with strangers made the unexpected challenge feel easier.",
+  "duration": 8.470000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 0.8399999737739563,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.0800000429153442,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.5199999809265137,
+      "end": 2.0
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.259999990463257,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 3.5999999046325684,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 3.9800000190734863,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.460000038146973,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 64,
+      "length": 9,
+      "start": 4.71999979019165,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.340000152587891,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 6.0
+    },
+    {
+      "location": 83,
+      "length": 10,
+      "start": 6.0,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 94,
+      "length": 9,
+      "start": 6.599999904632568,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 104,
+      "length": 4,
+      "start": 7.199999809265137,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 7.599999904632568,
+      "end": 8.0600004196167
+    }
+  ]
+}

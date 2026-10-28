@@ -1,0 +1,78 @@
+{
+  "text": "Ironically, the digital tools that streamline my tasks often generate extra distractions.",
+  "duration": 7.21999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.3200000524520874,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.5399999618530273,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.840000033378601,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.299999952316284,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 35,
+      "length": 10,
+      "start": 2.7200000286102295,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.200000047683716,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.5199999809265137,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 55,
+      "length": 5,
+      "start": 4.019999980926514,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 61,
+      "length": 8,
+      "start": 4.900000095367432,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 5.400000095367432,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 76,
+      "length": 12,
+      "start": 5.980000019073486,
+      "end": 6.539999961853027
+    }
+  ]
+}

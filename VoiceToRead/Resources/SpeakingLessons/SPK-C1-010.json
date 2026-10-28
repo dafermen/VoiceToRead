@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-010",
+  "number": 10,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "category": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Digital habits, requesting help, and negotiating convenience versus distraction in daily scenarios.",
+    "es": "Hábitos digitales, pedir ayuda y negociar conveniencia versus distracción en situaciones cotidianas."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Adulto usando varios dispositivos digitales en casa, alternando entre la concentración y la distracción.",
+    "prompt": "Editorial photo: an adult at a dining table, using a laptop, smartphone, and headphones, surrounded by reminders and a coffee mug, appearing focused yet distracted, warm daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir y analizar hábitos digitales en la vida diaria.",
+    "Solicitar ayuda y negociar límites tecnológicos con vocabulario avanzado.",
+    "Evaluar ventajas y desventajas de la conveniencia digital.",
+    "Matizar afirmaciones y ceder puntos en una conversación.",
+    "Practicar estructuras complejas y expresiones idiomáticas naturales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "As I settled in for a productive morning at my kitchen table, my phone kept lighting up with a flurry of app notifications.",
+      "es": "Mientras me acomodaba para tener una mañana productiva en la mesa de mi cocina, mi teléfono no dejaba de iluminarse con una avalancha de notificaciones de aplicaciones."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "Although I appreciate how technology lets me stay informed, sometimes it inadvertently fragments my attention.",
+      "es": "Aunque valoro cómo la tecnología me permite mantenerme informado, a veces fragmenta mi atención sin querer."
+    },
+    {
+      "number": 3,
+      "function": "action",
+      "en": "I switched my laptop to 'Do Not Disturb' mode, hoping to regain focus before my first virtual meeting.",
+      "es": "Puse mi portátil en modo 'No molestar', con la esperanza de recuperar la concentración antes de mi primera reunión virtual."
+    },
+    {
+      "number": 4,
+      "function": "experience",
+      "en": "Yet, even as I tried to ignore my phone, the vibration from group chats beckoned my curiosity.",
+      "es": "Aun cuando intentaba ignorar mi teléfono, la vibración de los chats grupales despertaba mi curiosidad."
+    },
+    {
+      "number": 5,
+      "function": "reflection",
+      "en": "Ironically, the digital tools that streamline my tasks often generate extra distractions.",
+      "es": "Irónicamente, las herramientas digitales que facilitan mis tareas suelen generar distracciones adicionales."
+    },
+    {
+      "number": 6,
+      "function": "shift",
+      "en": "Recognizing my scattered state, I decided to set boundaries by turning off notifications for non-essential apps.",
+      "es": "Al darme cuenta de mi dispersión, decidí poner límites desactivando las notificaciones de las aplicaciones no esenciales."
+    },
+    {
+      "number": 7,
+      "function": "request",
+      "en": "Before joining my call, I texted my roommate, 'Would you mind keeping the music down this morning while I'm presenting?'",
+      "es": "Antes de unirme a la llamada, escribí a mi compañera de piso: '¿Te importaría bajar la música esta mañana mientras presento?'"
+    },
+    {
+      "number": 8,
+      "function": "negotiation",
+      "en": "To be fair, I recognized that our small apartment means background noise is hard to avoid, but I hoped for a compromise.",
+      "es": "Siendo justo, reconocí que nuestro piso pequeño dificulta evitar ruidos, pero esperaba llegar a un acuerdo."
+    },
+    {
+      "number": 9,
+      "function": "response",
+      "en": "She replied that she could use headphones, though she mentioned it might make her workout less enjoyable.",
+      "es": "Ella respondió que podía usar audífonos, aunque mencionó que eso haría su ejercicio menos agradable."
+    },
+    {
+      "number": 10,
+      "function": "accommodation",
+      "en": "I replied that I genuinely appreciated her willingness to adapt, while also suggesting that after my meeting, I'd make time for us to listen together.",
+      "es": "Le respondí que realmente apreciaba su disposición a adaptarse y además sugerí que tras mi reunión podríamos escuchar música juntos."
+    },
+    {
+      "number": 11,
+      "function": "concession",
+      "en": "Of course, I conceded that I sometimes scroll through social media during her video calls, so I wasn't entirely blameless.",
+      "es": "Por supuesto, admití que a veces reviso redes sociales durante sus videollamadas, así que no estaba completamente libre de culpa."
+    },
+    {
+      "number": 12,
+      "function": "conditional",
+      "en": "If we both limit our digital distractions during each other's important moments, our routines run more smoothly.",
+      "es": "Si ambos limitamos nuestras distracciones digitales durante los momentos importantes del otro, nuestras rutinas fluyen mejor."
+    },
+    {
+      "number": 13,
+      "function": "qualification",
+      "en": "Naturally, I can't claim to eliminate every distraction, since some group work genuinely requires instant messaging.",
+      "es": "Naturalmente, no puedo afirmar que elimino toda distracción, ya que ciertos trabajos en grupo requieren mensajería instantánea."
+    },
+    {
+      "number": 14,
+      "function": "reasoning",
+      "en": "After all, the convenience of digital communication is part of what enables collaboration across time zones.",
+      "es": "Al fin y al cabo, la comodidad de la comunicación digital es lo que permite colaborar entre distintos husos horarios."
+    },
+    {
+      "number": 15,
+      "function": "conclusion",
+      "en": "In short, managing digital habits isn't about rigid restrictions, but striking a flexible balance.",
+      "es": "En resumen, gestionar los hábitos digitales no consiste en restricciones rígidas, sino en lograr un equilibrio flexible."
+    },
+    {
+      "number": 16,
+      "function": "result",
+      "en": "Thanks to these small negotiations, my presentation proceeded with fewer interruptions than usual.",
+      "es": "Gracias a estas pequeñas negociaciones, mi presentación transcurrió con menos interrupciones de lo habitual."
+    },
+    {
+      "number": 17,
+      "function": "reflection_2",
+      "en": "Later, as I reflected, it occurred to me that our willingness to adapt likely matters as much as the devices we use.",
+      "es": "Más tarde, al reflexionar, me di cuenta de que nuestra disposición a adaptarnos probablemente importa tanto como los dispositivos que utilizamos."
+    },
+    {
+      "number": 18,
+      "function": "insight",
+      "en": "If anything, my experience confirmed that negotiating expectations is at least as valuable as any digital convenience.",
+      "es": "De hecho, mi experiencia confirmó que negociar expectativas es al menos tan valioso como cualquier comodidad digital."
+    },
+    {
+      "number": 19,
+      "function": "closure",
+      "en": "While the world grows noisier and faster, perhaps the real challenge is to maintain human connection amid the digital flux.",
+      "es": "Mientras el mundo se vuelve más ruidoso y acelerado, tal vez el verdadero reto sea mantener la conexión humana en medio del flujo digital."
+    },
+    {
+      "number": 20,
+      "function": "implication",
+      "en": "Ultimately, the way we balance convenience against distraction shapes not just our habits, but our relationships as well.",
+      "es": "En última instancia, la forma en que equilibramos conveniencia y distracción no solo moldea nuestros hábitos, sino también nuestras relaciones."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present participle clause",
+      "example_en": "Recognizing my scattered state, I decided to set boundaries by turning off notifications for non-essential apps.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Would you mind + gerund",
+      "example_en": "Before joining my call, I texted my roommate, 'Would you mind keeping the music down this morning while I'm presenting?'",
+      "explanation_es": "Would you mind + -ing formula una petición cortés.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I appreciate how technology lets me stay informed, sometimes it inadvertently fragments my attention.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "Ironically, the digital tools that streamline my tasks often generate extra distractions.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "She replied that she could use headphones, though she mentioned it might make her workout less enjoyable.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Conditional for habitual results",
+      "example_en": "If we both limit our digital distractions during each other's important moments, our routines run more smoothly.",
+      "explanation_es": "La condición y el resultado en presente describen una relación habitual, no una promesa futura.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Comparatives",
+      "example_en": "Thanks to these small negotiations, my presentation proceeded with fewer interruptions than usual.",
+      "explanation_es": "Los comparativos permiten contrastar cualidades, opciones o cantidades.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Future in the past",
+      "example_en": "I replied that I genuinely appreciated her willingness to adapt, while also suggesting that after my meeting, I'd make time for us to listen together.",
+      "explanation_es": "Would + infinitivo presenta algo que era futuro desde un punto de vista pasado.",
+      "source_paragraph": 10
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "regain focus",
+      "meaning_es": "recuperar la concentración",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "fragments my attention",
+      "meaning_es": "fragmentar mi atención",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "set boundaries",
+      "meaning_es": "poner límites",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Would you mind",
+      "meaning_es": "¿Te importaría...?",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "keeping the music down",
+      "meaning_es": "bajar la música",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "genuinely appreciated",
+      "meaning_es": "realmente aprecié",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "limit our digital distractions",
+      "meaning_es": "limitar nuestras distracciones digitales",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "striking a flexible balance",
+      "meaning_es": "lograr un equilibrio flexible",
+      "source_paragraph": 15
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, apóyate en la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "Although I appreciate how technology lets me stay informed,",
+              "sometimes it inadvertently fragments my attention."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "Recognizing my scattered state,",
+              "I decided to set boundaries by turning off notifications for non-essential apps."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "If we both limit our digital distractions during each other's important moments,",
+              "our routines run more smoothly."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta priorizando claridad, ritmo y naturalidad en el inglés.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-010",
+    "number": "010",
+    "title_en": "Technology in Everyday Life",
+    "title_es": "Tecnología en la vida cotidiana",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Tecnología en la vida cotidiana",
+    "main_topic_es": "Hábitos digitales, pedir ayuda y negociación de límites",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present participle clause",
+      "Would you mind + gerund",
+      "Concessive clause",
+      "Defining relative clause",
+      "Might for possibility",
+      "Conditional for habitual results",
+      "Comparatives",
+      "Future in the past"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

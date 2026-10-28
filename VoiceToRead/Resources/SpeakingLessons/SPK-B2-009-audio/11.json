@@ -1,0 +1,108 @@
+{
+  "text": "She understood, but admitted that seeing me say no felt personal and made her question our closeness.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 4,
+      "length": 10,
+      "start": 0.47999998927116394,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.340000033378601,
+      "end": 2.0
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 2.0,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.3399999141693115,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.7799999713897705,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 41,
+      "length": 2,
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.700000047683716,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.9600000381469727,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 56,
+      "length": 8,
+      "start": 4.300000190734863,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 4.900000095367432,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.579999923706055,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.71999979019165,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.980000019073486,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.480000019073486,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 91,
+      "length": 9,
+      "start": 6.820000171661377,
+      "end": 7.360000133514404
+    }
+  ]
+}

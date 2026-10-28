@@ -1,0 +1,78 @@
+{
+  "text": "Next week, I'm going to try turning off notifications during work hours.",
+  "duration": 5.519999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5400000214576721,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 1.4600000381469727,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.5399999618530273,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.7200000286102295,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.899999976158142,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.200000047683716,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.619999885559082,
+      "end": 3.0
+    },
+    {
+      "location": 40,
+      "length": 13,
+      "start": 3.0,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 3.7799999713897705,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.239999771118164,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 4.679999828338623,
+      "end": 4.800000190734863
+    }
+  ]
+}

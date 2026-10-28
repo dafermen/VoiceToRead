@@ -1,0 +1,144 @@
+{
+  "text": "Since the box merely stated 'ergonomic design' without any actual detail, I suggested that perhaps my interpretation had differed from the store's intent.",
+  "duration": 12.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.800000011920929,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 1.059999942779541,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 14,
+      "length": 6,
+      "start": 1.4800000190734863,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 2.0399999618530273,
+      "end": 2.5
+    },
+    {
+      "location": 29,
+      "length": 9,
+      "start": 2.5,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 3.3399999141693115,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 47,
+      "length": 7,
+      "start": 3.9800000190734863,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 4.420000076293945,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 59,
+      "length": 6,
+      "start": 4.900000095367432,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 5.360000133514404,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 74,
+      "length": 1,
+      "start": 6.559999942779541,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 76,
+      "length": 9,
+      "start": 6.739999771118164,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 7.179999828338623,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 7.519999980926514,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 8.100000381469727,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 102,
+      "length": 14,
+      "start": 8.819999694824219,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 117,
+      "length": 3,
+      "start": 9.460000038146973,
+      "end": 10.0600004196167
+    },
+    {
+      "location": 121,
+      "length": 8,
+      "start": 10.0600004196167,
+      "end": 10.359999656677246
+    },
+    {
+      "location": 130,
+      "length": 4,
+      "start": 10.359999656677246,
+      "end": 10.539999961853027
+    },
+    {
+      "location": 135,
+      "length": 3,
+      "start": 10.539999961853027,
+      "end": 10.800000190734863
+    },
+    {
+      "location": 139,
+      "length": 7,
+      "start": 10.800000190734863,
+      "end": 11.300000190734863
+    },
+    {
+      "location": 147,
+      "length": 6,
+      "start": 11.300000190734863,
+      "end": 11.5600004196167
+    }
+  ]
+}

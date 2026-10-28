@@ -1,0 +1,108 @@
+{
+  "text": "By the weekend, I reflected on my tendency to fill silence with assumptions rather than open questions.",
+  "duration": 7.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.4000000059604645,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 0.6200000047683716,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.2400000095367432,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 18,
+      "length": 9,
+      "start": 1.840000033378601,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.140000104904175,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.4800000190734863,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.759999990463257,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.2200000286102295,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.859999895095825,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 4.139999866485596,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.659999847412109,
+      "end": 5.0
+    },
+    {
+      "location": 64,
+      "length": 11,
+      "start": 5.0,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 5.400000095367432,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.360000133514404,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 88,
+      "length": 4,
+      "start": 6.659999847412109,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 93,
+      "length": 9,
+      "start": 6.980000019073486,
+      "end": 7.420000076293945
+    }
+  ]
+}

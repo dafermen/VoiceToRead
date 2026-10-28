@@ -1,0 +1,84 @@
+{
+  "text": "Fortunately, there were enough seats, and the new tickets were available right away.",
+  "duration": 5.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 11,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 13,
+      "length": 5,
+      "start": 1.0199999809265137,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.5199999809265137,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 24,
+      "length": 6,
+      "start": 1.7599999904632568,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 31,
+      "length": 5,
+      "start": 2.140000104904175,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.380000114440918,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 3.640000104904175,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 3.880000114440918,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 63,
+      "length": 9,
+      "start": 4.179999828338623,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 4.559999942779541,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.28000020980835
+    }
+  ]
+}

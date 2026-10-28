@@ -61,13 +61,13 @@ final class SpeakingLessonTests: XCTestCase {
         }
     }
 
-    func testAllFourLevelsHaveFiveDistinctCompleteLessons() throws {
+    func testAllFourLevelsHaveTenDistinctCompleteLessons() throws {
         let lessons = try SpeakingLessonCatalog.load()
-        XCTAssertEqual(lessons.count, 20)
-        XCTAssertEqual(Set(lessons.map(\.id)).count, 20)
+        XCTAssertEqual(lessons.count, 40)
+        XCTAssertEqual(Set(lessons.map(\.id)).count, 40)
         for level in ["B1", "B2", "C1", "C2"] {
             let group = lessons.filter { $0.level == level }
-            XCTAssertEqual(group.map(\.number).sorted(), [1, 2, 3, 4, 5])
+            XCTAssertEqual(group.map(\.number).sorted(), Array(1...10))
             for lesson in group {
                 XCTAssertNoThrow(try lesson.validate())
                 for paragraph in lesson.paragraphs {
@@ -84,14 +84,14 @@ final class SpeakingLessonTests: XCTestCase {
                 }
             }
         }
-        XCTAssertEqual(Set(lessons.map { $0.paragraphs.map(\.en).joined(separator: "\n") }).count, 20)
+        XCTAssertEqual(Set(lessons.map { $0.paragraphs.map(\.en).joined(separator: "\n") }).count, 40)
         for number in 1...2 {
             let c1 = try XCTUnwrap(lessons.first { $0.level == "C1" && $0.number == number })
             let c2 = try XCTUnwrap(lessons.first { $0.level == "C2" && $0.number == number })
             XCTAssertEqual(c1.title.en, c2.title.en)
             XCTAssertNotEqual(c1.paragraphs.map(\.en), c2.paragraphs.map(\.en))
         }
-        for number in 1...5 {
+        for number in 1...10 {
             let b1 = try XCTUnwrap(lessons.first { $0.level == "B1" && $0.number == number })
             let b2 = try XCTUnwrap(lessons.first { $0.level == "B2" && $0.number == number })
             XCTAssertEqual(b1.title.en, b2.title.en)
@@ -110,7 +110,7 @@ final class SpeakingLessonTests: XCTestCase {
             XCTAssertEqual(cover.size.width / cover.size.height, 16.0 / 9.0, accuracy: 0.025)
             XCTAssertTrue(fingerprints.insert(Data(SHA256.hash(data: data))).inserted)
         }
-        XCTAssertEqual(fingerprints.count, 20)
+        XCTAssertEqual(fingerprints.count, 40)
     }
 
     func testInvalidLessonsAreRejectedBeforeRendering() throws {

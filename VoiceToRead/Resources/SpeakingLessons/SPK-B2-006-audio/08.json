@@ -1,0 +1,138 @@
+{
+  "text": "I considered the bus safer, but the carpool might allow me to reach the hotel sooner if the roads were clear enough.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 2,
+      "length": 10,
+      "start": 0.46000000834465027,
+      "end": 1.0
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.0,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.3799999952316284,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 1.7400000095367432,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 2.740000009536743,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.859999895095825,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 3.0799999237060547,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 3.5999999046325684,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 4.019999980926514,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 4.320000171661377,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.559999942779541,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.820000171661377,
+      "end": 5.0
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.0,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 5.239999771118164,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 78,
+      "length": 6,
+      "start": 5.639999866485596,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 85,
+      "length": 2,
+      "start": 6.079999923706055,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.71999979019165,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 7.300000190734863,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 7.300000190734863,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 7.659999847412109,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 7.900000095367432,
+      "end": 8.279999732971191
+    }
+  ]
+}

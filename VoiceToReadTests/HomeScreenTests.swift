@@ -196,6 +196,8 @@ final class HomeScreenTests: XCTestCase {
         mode.buttons["Train"].tap()
         let entry = app.buttons["guidedLessonsEntry"]
         XCTAssertTrue(entry.waitForExistence(timeout: 10))
+        XCTAssertFalse(app.buttons["newEnglishTraining"].exists, "The training hub has no ambiguous plus action")
+        XCTAssertTrue(app.buttons["personalPracticesEntry"].exists)
         entry.tap()
         let levels = app.segmentedControls["guidedLessonLevel"]
         XCTAssertTrue(levels.waitForExistence(timeout: 5))
@@ -1701,7 +1703,8 @@ final class HomeScreenTests: XCTestCase {
         app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
-        app.staticTexts["Los tres cerditos"].tap()
+        app.buttons["personalPracticesEntry"].tap()
+        app.staticTexts["Presentarme y conversar"].tap()
         let start = app.buttons["startEnglishTraining"]
         XCTAssertTrue(start.waitForExistence(timeout: 5))
         XCTAssertFalse(start.isEnabled)
@@ -1716,7 +1719,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["saveTrainingEnglish"].tap()
         start.tap()
         XCTAssertTrue(app.staticTexts["trainingPrompt"].waitForExistence(timeout: 5))
-        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Había una vez tres cerditos.")
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hola, me llamo Alex.")
         XCTAssertFalse(app.staticTexts["trainingExpected"].exists)
         XCTAssertFalse(app.alerts.firstMatch.exists, "Opening training must not request microphone access")
         app.buttons["revealTrainingResponse"].tap()
@@ -1737,10 +1740,11 @@ final class HomeScreenTests: XCTestCase {
         app.terminate(); app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
-        app.staticTexts["Los tres cerditos"].tap()
+        app.buttons["personalPracticesEntry"].tap()
+        app.staticTexts["Presentarme y conversar"].tap()
         XCTAssertFalse(app.buttons["Review phrases to practise"].exists)
         app.buttons["startEnglishTraining"].tap()
-        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Había una vez tres cerditos.")
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hola, me llamo Alex.")
     }
 
     @MainActor
@@ -1751,6 +1755,7 @@ final class HomeScreenTests: XCTestCase {
         app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
+        app.buttons["personalPracticesEntry"].tap()
         app.buttons["newEnglishTraining"].tap()
         app.textFields["trainingTitle"].tap(); app.textFields["trainingTitle"].typeText("My languages")
         app.buttons["trainingSourceLanguage"].tap(); app.buttons["English"].tap()
@@ -1817,6 +1822,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertLessThan(train.frame.midY, write.frame.midY)
         let newConversationSize = new.frame.size
         trainingEntry(in: app).tap()
+        app.buttons["personalPracticesEntry"].tap()
         let newTraining = app.buttons["newEnglishTraining"]
         XCTAssertTrue(newTraining.waitForExistence(timeout: 5))
         XCTAssertEqual(newTraining.frame.width, newConversationSize.width, accuracy: 1)
@@ -1826,7 +1832,7 @@ final class HomeScreenTests: XCTestCase {
         app.textViews["trainingSpanishInput"].tap(); app.textViews["trainingSpanishInput"].typeText("Buenos días.\nNecesito un taxi.")
         app.buttons["saveEnglishTraining"].tap()
         XCTAssertTrue(app.staticTexts["Travel"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["Los tres cerditos"].exists)
+        XCTAssertTrue(app.staticTexts["Presentarme y conversar"].exists)
         app.tabBars.buttons["Saved"].tap()
         XCTAssertFalse(app.buttons["savedLanguagePractice"].exists)
         app.staticTexts["Review sample"].tap()

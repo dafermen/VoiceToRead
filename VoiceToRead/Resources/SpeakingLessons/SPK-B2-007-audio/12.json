@@ -1,0 +1,132 @@
+{
+  "text": "Since only the back room faces the quieter side, we decided he would take that one, and I'd take the front.",
+  "duration": 8.520000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 0.8399999737739563,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.1399999856948853,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.5399999618530273,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.2200000286102295,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.859999895095825,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 3.8399999141693115,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 52,
+      "length": 7,
+      "start": 3.9800000190734863,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.460000038146973,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 4.800000190734863,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.019999980926514,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.159999847412109,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.480000019073486,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.28000020980835,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 6.619999885559082,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 97,
+      "length": 3,
+      "start": 6.820000171661377,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 101,
+      "length": 5,
+      "start": 7.239999771118164,
+      "end": 7.239999771118164
+    }
+  ]
+}

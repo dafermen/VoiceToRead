@@ -1,0 +1,96 @@
+{
+  "text": "Carla suggested we could share the cleaning by making a simple schedule on the refrigerator.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.5400000214576721,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.1799999475479126,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.4800000190734863,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 1.7599999904632568,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 1.9600000381469727,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 35,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 2.5399999618530273,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 47,
+      "length": 6,
+      "start": 3.259999990463257,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 54,
+      "length": 1,
+      "start": 3.5399999618530273,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 3.8399999141693115,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 4.139999866485596,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 4.639999866485596,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.079999923706055,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 79,
+      "length": 12,
+      "start": 5.28000020980835,
+      "end": 5.71999979019165
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "text": "Eventually, they agreed after realizing it would reduce confusion for both of us.",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 1.0399999618530273,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.140000104904175,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 30,
+      "length": 9,
+      "start": 2.5799999237060547,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 3.140000104904175,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.359999895095825,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 49,
+      "length": 6,
+      "start": 3.5399999618530273,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 56,
+      "length": 9,
+      "start": 3.9200000762939453,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.460000038146973,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.860000133514404,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.039999961853027,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 5.380000114440918,
+      "end": 5.480000019073486
+    }
+  ]
+}

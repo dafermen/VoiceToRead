@@ -1,0 +1,150 @@
+{
+  "text": "He assured me that he would forward my ticket details and projected arrival times, so staff at key stops might assist if complications arose.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.46000000834465027,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.9800000190734863,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.2799999713897705,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.7000000476837158,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 22,
+      "length": 5,
+      "start": 1.8799999952316284,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.140000104904175,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.5799999237060547,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 2.9000000953674316,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.180000066757202,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 58,
+      "length": 9,
+      "start": 3.9800000190734863,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 4.340000152587891,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 4.71999979019165,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.840000152587891,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 6.059999942779541,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 6.400000095367432,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.699999809265137,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 99,
+      "length": 5,
+      "start": 7.059999942779541,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 7.420000076293945,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 111,
+      "length": 6,
+      "start": 7.800000190734863,
+      "end": 8.220000267028809
+    },
+    {
+      "location": 118,
+      "length": 2,
+      "start": 8.220000267028809,
+      "end": 8.680000305175781
+    },
+    {
+      "location": 121,
+      "length": 13,
+      "start": 8.680000305175781,
+      "end": 9.279999732971191
+    },
+    {
+      "location": 135,
+      "length": 5,
+      "start": 9.279999732971191,
+      "end": 9.779999732971191
+    }
+  ]
+}

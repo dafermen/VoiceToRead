@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-009",
+  "number": 9,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Friendship and Difficult Conversations",
+    "es": "Amistad y conversaciones difíciles"
+  },
+  "category": {
+    "en": "Society and Relationships",
+    "es": "Sociedad y relaciones"
+  },
+  "main_topic": {
+    "en": "A concrete misunderstanding between friends about plans and boundaries; expressing feelings and negotiating expectations without stereotypes or manipulative advice.",
+    "es": "Un malentendido concreto entre amigos sobre planes y límites; expresar sentimientos y negociar expectativas sin estereotipos ni consejos manipuladores."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos amigos adultos conversando seriamente en una cafetería, bebidas en la mesa, ambiente de reflexión y respeto.",
+    "prompt": "Realistic editorial photograph, two adult friends in serious conversation at a café, coffee cups on the table, modern setting, natural daylight, emotional and respectful expressions, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir y analizar un malentendido concreto entre amigos.",
+    "Expresar sentimientos complejos y matices en inglés avanzado.",
+    "Negociar expectativas y límites sin recurrir a estereotipos o consejos manipulativos.",
+    "Utilizar estructuras gramaticales avanzadas en un contexto realista.",
+    "Practicar la lectura comprensiva, repetición y fluidez en inglés americano formal y natural."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Last Friday, I found myself tangled in an unexpected misunderstanding with my closest friend, Anna, after I canceled our weekend plans at the last minute.",
+      "es": "El pasado viernes, me encontré envuelto en un malentendido inesperado con mi amiga más cercana, Anna, después de cancelar nuestros planes de fin de semana en el último momento."
+    },
+    {
+      "number": 2,
+      "function": "context",
+      "en": "I had been looking forward to decompressing with her all week, but an overwhelming project at work demanded my full attention.",
+      "es": "Había estado esperando relajarme con ella toda la semana, pero un proyecto abrumador en el trabajo requirió toda mi atención."
+    },
+    {
+      "number": 3,
+      "function": "background",
+      "en": "By the time I sent my apologetic message, she replied with a cold 'Okay,' which felt much heavier than it looked on the screen.",
+      "es": "Cuando envié mi mensaje de disculpas, ella respondió con un seco 'Ok', que se sintió mucho más pesado de lo que parecía en la pantalla."
+    },
+    {
+      "number": 4,
+      "function": "initial_reaction",
+      "en": "Assuming she simply needed space, I tried to focus on my deadlines, although something in my gut told me I shouldn't let this slide.",
+      "es": "Asumiendo que solo necesitaba espacio, intenté concentrarme en mis fechas límite, aunque algo en mi interior me decía que no debía dejar pasar esto."
+    },
+    {
+      "number": 5,
+      "function": "realization",
+      "en": "Later that night, it dawned on me that Anna might see this as a pattern—not a one-time slip—since I had rescheduled more than once lately.",
+      "es": "Esa noche, me di cuenta de que Anna podría ver esto como un patrón, no como un desliz aislado, ya que últimamente he reprogramado más de una vez."
+    },
+    {
+      "number": 6,
+      "function": "reflection",
+      "en": "I knew she values reliability, so the prospect of letting her down genuinely unsettled me.",
+      "es": "Sabía que ella valora la fiabilidad, por lo que la posibilidad de haberle fallado realmente me inquietó."
+    },
+    {
+      "number": 7,
+      "function": "self_awareness",
+      "en": "Although I could cite the pressures I've faced, doing so might sound dismissive of her feelings if I framed it carelessly.",
+      "es": "Aunque podría mencionar las presiones que he enfrentado, hacerlo podría sonar como si restara importancia a sus sentimientos si lo expresaba sin cuidado."
+    },
+    {
+      "number": 8,
+      "function": "motivation",
+      "en": "Unwilling to let tension fester, I invited her for coffee to acknowledge the situation face-to-face rather than relying on texts.",
+      "es": "No queriendo dejar que la tensión creciera, la invité a tomar un café para abordar la situación cara a cara en vez de seguir con mensajes."
+    },
+    {
+      "number": 9,
+      "function": "meeting",
+      "en": "When we met, Anna’s posture and clipped tone signaled frustration, but she listened quietly as I explained my perspective.",
+      "es": "Cuando nos encontramos, la postura de Anna y su tono cortante evidenciaron frustración, aunque escuchó en silencio mientras yo explicaba mi perspectiva."
+    },
+    {
+      "number": 10,
+      "function": "initiation",
+      "en": "I told her, 'I realize I’ve asked for flexibility several times, and I regret how that must have felt for you.'",
+      "es": "Le dije: 'Me doy cuenta de que he pedido flexibilidad varias veces, y lamento cómo eso te habrá hecho sentir.'"
+    },
+    {
+      "number": 11,
+      "function": "emotion",
+      "en": "She hesitated, then admitted, 'When plans change last minute, I feel like an afterthought—not a priority, even if I understand your reasons.'",
+      "es": "Ella vaciló y luego admitió: 'Cuando los planes cambian a última hora, siento que soy una opción secundaria, no una prioridad, aunque entienda tus motivos.'"
+    },
+    {
+      "number": 12,
+      "function": "acknowledgment",
+      "en": "I genuinely apologized, clarifying that my cancellations reflected my own bandwidth, never a lack of affection or respect.",
+      "es": "Me disculpé sinceramente, aclarando que mis cancelaciones reflejaban mi propia capacidad limitada, nunca una falta de cariño o respeto."
+    },
+    {
+      "number": 13,
+      "function": "negotiation",
+      "en": "Then, I asked if setting firmer boundaries—like confirming a day in advance—might help us avoid similar disappointments.",
+      "es": "Luego, pregunté si establecer límites más claros, como confirmar un día antes, podría ayudarnos a evitar desilusiones similares."
+    },
+    {
+      "number": 14,
+      "function": "compromise",
+      "en": "Anna nodded; she suggested that if either of us noticed work was likely to interfere, we could flag it early and propose alternatives.",
+      "es": "Anna asintió; sugirió que si alguno notaba que el trabajo podría interferir, lo señaláramos pronto y propusiéramos opciones alternativas."
+    },
+    {
+      "number": 15,
+      "function": "qualification",
+      "en": "To be transparent, I admitted there might still be unavoidable emergencies, but committed to minimizing surprises as much as possible.",
+      "es": "Para ser transparente, admití que aún podría haber emergencias inevitables, pero me comprometí a minimizar las sorpresas en lo posible."
+    },
+    {
+      "number": 16,
+      "function": "empathy",
+      "en": "Recognizing the vulnerability in her words, I assured her I never intended to take her kindness for granted.",
+      "es": "Reconociendo la vulnerabilidad en sus palabras, le aseguré que nunca fue mi intención dar por sentado su generosidad."
+    },
+    {
+      "number": 17,
+      "function": "reassurance",
+      "en": "She noted that friendship means respecting limits and, if necessary, speaking up before resentment accumulates.",
+      "es": "Ella señaló que la amistad implica respetar los límites y, si es necesario, hablar antes de que se acumule el resentimiento."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "We agreed our schedules would always fluctuate, but transparency and mutual care could keep misunderstandings from building up.",
+      "es": "Acordamos que nuestras agendas siempre fluctuarán, pero la transparencia y el cuidado mutuo pueden evitar que los malentendidos se agraven."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "That conversation didn't eliminate every tension instantly, but it did leave us both lighter, clearer, and realigned in our expectations.",
+      "es": "Esa conversación no eliminó toda la tensión de inmediato, pero nos dejó a ambos más aliviados, claros y alineados en nuestras expectativas."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "Now, though our friendship isn't immune to stress, we both know we can communicate openly whenever life’s pressures threaten our connection.",
+      "es": "Ahora, aunque nuestra amistad no es inmune al estrés, ambos sabemos que podemos comunicarnos abiertamente cuando las presiones de la vida amenacen nuestra relación."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "example_en": "I had been looking forward to decompressing with her all week, but an overwhelming project at work demanded my full attention.",
+      "explanation_es": "Had been + verbo en -ing presenta una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Which referring to a whole clause",
+      "example_en": "By the time I sent my apologetic message, she replied with a cold 'Okay,' which felt much heavier than it looked on the screen.",
+      "explanation_es": "Which retoma la situación anterior para añadir su efecto o un comentario.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Present participle clause",
+      "example_en": "Assuming she simply needed space, I tried to focus on my deadlines, although something in my gut told me I shouldn't let this slide.",
+      "explanation_es": "Una cláusula en -ing aporta una acción simultánea, una causa o el contexto de la acción principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "Later that night, it dawned on me that Anna might see this as a pattern—not a one-time slip—since I had rescheduled more than once lately.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "I told her, 'I realize I’ve asked for flexibility several times, and I regret how that must have felt for you.'",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Conditional for habitual results",
+      "example_en": "She hesitated, then admitted, 'When plans change last minute, I feel like an afterthought—not a priority, even if I understand your reasons.'",
+      "explanation_es": "La condición y el resultado en presente describen una relación habitual, no una promesa futura.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Then, I asked if setting firmer boundaries—like confirming a day in advance—might help us avoid similar disappointments.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Now, though our friendship isn't immune to stress, we both know we can communicate openly whenever life’s pressures threaten our connection.",
+      "explanation_es": "Although, though o even though introduce un contraste con la idea principal.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "let this slide",
+      "meaning_es": "dejar pasar esto, no intervenir ante un problema menor",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "bandwidth",
+      "meaning_es": "capacidad mental, emocional o física disponible en ese momento",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "take her kindness for granted",
+      "meaning_es": "dar su generosidad por sentado",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "mutual care",
+      "meaning_es": "preocupación y cuidado recíprocos",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "flag it early",
+      "meaning_es": "avisar o advertirlo con anticipación",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "realigned in our expectations",
+      "meaning_es": "volver a poner las expectativas en sintonía",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "immune to stress",
+      "meaning_es": "no afectado por el estrés",
+      "source_paragraph": 20
+    },
+    {
+      "expression_en": "decompressing",
+      "meaning_es": "relajarse después de estrés o tensión",
+      "source_paragraph": 2
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "I had been looking forward",
+              "to decompressing with her",
+              "all week, but an overwhelming project",
+              "at work demanded my full attention."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I told her,",
+              "'I realize I’ve asked for flexibility",
+              "several times, and I regret",
+              "how that must have felt for you.'"
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "Anna nodded;",
+              "she suggested that if either of us noticed work was likely to interfere,",
+              "we could flag it early and propose alternatives."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-009",
+    "number": "009",
+    "title_en": "Friendship and Difficult Conversations",
+    "title_es": "Amistad y conversaciones difíciles",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Sociedad y relaciones",
+    "main_topic_es": "Malentendido concreto entre amigos y negociación de expectativas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Which referring to a whole clause",
+      "Present participle clause",
+      "Might for possibility",
+      "Present perfect",
+      "Conditional for habitual results",
+      "Indirect question",
+      "Concessive clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "text": "Everything had been planned carefully, including my hotel reservation and train connection from the airport.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 0.7200000286102295,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.1200000047683716,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 1.3600000143051147,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 28,
+      "length": 9,
+      "start": 1.7200000286102295,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 39,
+      "length": 9,
+      "start": 3.180000066757202,
+      "end": 3.5
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 3.5,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 3.819999933242798,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 58,
+      "length": 11,
+      "start": 4.239999771118164,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 4.900000095367432,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 5.739999771118164,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 80,
+      "length": 10,
+      "start": 6.099999904632568,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 6.579999923706055,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 96,
+      "length": 3,
+      "start": 7.139999866485596,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 100,
+      "length": 7,
+      "start": 7.460000038146973,
+      "end": 7.599999904632568
+    }
+  ]
+}

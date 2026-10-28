@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-007",
+  "number": 7,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Finding a Place to Live",
+    "es": "Buscar dónde vivir"
+  },
+  "category": {
+    "en": "Daily Life and Housing",
+    "es": "Vida cotidiana y vivienda"
+  },
+  "main_topic": {
+    "en": "Viewing a potential home together, sharing needs, discussing trade-offs and responsibilities, expressing preferences.",
+    "es": "Visitar una posible vivienda, compartir necesidades, hablar de ventajas y responsabilidades, expresar preferencias."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Personas adultas conversando dentro de una casa vacía durante una visita a una vivienda.",
+    "prompt": "Realistic editorial photograph, two adults visiting a vacant home together, discussing, looking around the living room, natural daylight, modern American style, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir necesidades y preferencias al buscar vivienda.",
+    "Comparar ventajas y desventajas de diferentes espacios.",
+    "Formular solicitudes y expresar acuerdos sobre responsabilidades compartidas.",
+    "Compartir experiencias pasadas y planes futuros.",
+    "Practicar lectura y repetición con inglés estadounidense práctico."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Saturday, my friend Carla and I went to see an apartment that was available for rent near our jobs.",
+      "es": "El sábado pasado, mi amiga Carla y yo fuimos a ver un apartamento que estaba disponible para alquilar cerca de nuestros trabajos."
+    },
+    {
+      "number": 2,
+      "function": "anticipation",
+      "en": "We felt excited because both of us wanted a place that was quiet but still close to everything important.",
+      "es": "Nos sentíamos emocionadas porque las dos queríamos un lugar tranquilo pero cerca de todo lo importante."
+    },
+    {
+      "number": 3,
+      "function": "observation",
+      "en": "When we arrived, the building looked clean and safe, with big windows and a friendly doorman.",
+      "es": "Al llegar, el edificio se veía limpio y seguro, con ventanas grandes y un portero amable."
+    },
+    {
+      "number": 4,
+      "function": "first_impression",
+      "en": "As we walked in, we noticed the living room was bright and had enough space for a small couch and table.",
+      "es": "Al entrar, notamos que la sala era luminosa y tenía espacio suficiente para un pequeño sofá y mesa."
+    },
+    {
+      "number": 5,
+      "function": "need",
+      "en": "Carla told me she needed her own room with a desk to work from home a few days each week.",
+      "es": "Carla me dijo que necesitaba su propia habitación con escritorio para trabajar desde casa algunos días a la semana."
+    },
+    {
+      "number": 6,
+      "function": "preference",
+      "en": "I said I would love a kitchen with enough counter space to cook comfortably and invite friends.",
+      "es": "Le dije que me encantaría una cocina con suficiente mesa para cocinar cómodo e invitar a amigos."
+    },
+    {
+      "number": 7,
+      "function": "comparison",
+      "en": "The kitchen in this apartment was smaller than the one I had in my last place, but it looked modern and clean.",
+      "es": "La cocina de este apartamento era más pequeña que la que tenía en mi antiguo lugar, pero se veía moderna y limpia."
+    },
+    {
+      "number": 8,
+      "function": "memory",
+      "en": "I remembered the old apartment where I used to share a single bathroom with four people, and I really wanted a better situation.",
+      "es": "Me acordé del antiguo apartamento donde solía compartir un solo baño con cuatro personas, y en serio quería algo mejor."
+    },
+    {
+      "number": 9,
+      "function": "tradeoff",
+      "en": "Carla pointed out that although the rent was a bit high, it included water, heat, and a parking spot.",
+      "es": "Carla señaló que aunque la renta era algo alta, incluía agua, calefacción y un espacio de estacionamiento."
+    },
+    {
+      "number": 10,
+      "function": "opinion",
+      "en": "I agreed that those extras made it feel like a good deal for us, especially during winter.",
+      "es": "Estuve de acuerdo en que esos extras lo hacían sentir como una buena oferta para nosotras, especialmente en invierno."
+    },
+    {
+      "number": 11,
+      "function": "future_plan",
+      "en": "We talked about how we would each decorate our rooms if we decided to take this apartment.",
+      "es": "Hablamos sobre cómo decoraríamos nuestras habitaciones si decidiéramos quedarnos con este apartamento."
+    },
+    {
+      "number": 12,
+      "function": "compromise",
+      "en": "Carla suggested we could share the cleaning by making a simple schedule on the refrigerator.",
+      "es": "Carla sugirió que podríamos compartir la limpieza creando un horario sencillo en el refrigerador."
+    },
+    {
+      "number": 13,
+      "function": "suggestion",
+      "en": "I offered to bring my vacuum cleaner and some kitchen tools to make things easier for both of us.",
+      "es": "Ofrecí llevar mi aspiradora y algunos utensilios de cocina para facilitarnos las cosas a las dos."
+    },
+    {
+      "number": 14,
+      "function": "concern",
+      "en": "We both said we wanted quiet at night because we go to bed early during the week.",
+      "es": "Las dos dijimos que queríamos tranquilidad en la noche porque nos acostamos temprano entre semana."
+    },
+    {
+      "number": 15,
+      "function": "recall",
+      "en": "Carla mentioned she once lived in a noisy building and decided she never wanted to repeat that experience.",
+      "es": "Carla comentó que una vez vivió en un edificio ruidoso y decidió que nunca quería repetir esa experiencia."
+    },
+    {
+      "number": 16,
+      "function": "agreement",
+      "en": "We promised each other to always talk calmly if something in the apartment bothered us in the future.",
+      "es": "Nos prometimos hablar siempre con calma si en el futuro algo del apartamento nos molestaba."
+    },
+    {
+      "number": 17,
+      "function": "decision",
+      "en": "After looking at everything, we told the owner we were very interested and asked for a day to think.",
+      "es": "Después de ver todo, le dijimos al dueño que estábamos muy interesadas y pedimos un día para pensar."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "On Sunday night, we talked again and agreed this apartment fit most of our needs and plans.",
+      "es": "El domingo por la noche, volvimos a hablar y acordamos que este apartamento cubría la mayoría de nuestras necesidades y planes."
+    },
+    {
+      "number": 19,
+      "function": "plan",
+      "en": "We decided to call the owner on Monday and say yes, hoping it would be the start of a great adventure.",
+      "es": "Decidimos llamar al dueño el lunes y decir que sí, esperando que fuera el comienzo de una gran aventura."
+    },
+    {
+      "number": 20,
+      "function": "resolution",
+      "en": "Now, we're preparing a moving list together so everything will go smoothly on our first day in our new home.",
+      "es": "Ahora, estamos preparando juntas una lista de mudanza para que todo salga bien en nuestro primer día en el nuevo hogar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last Saturday, my friend Carla and I went to see an apartment that was available for rent near our jobs.",
+      "explanation_es": "El pasado simple relata acciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "We felt excited because both of us wanted a place that was quiet but still close to everything important.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Would for preference",
+      "example_en": "I said I would love a kitchen with enough counter space to cook comfortably and invite friends.",
+      "explanation_es": "Would expresa una preferencia o un deseo de forma hipotética o cortés.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Comparatives",
+      "example_en": "The kitchen in this apartment was smaller than the one I had in my last place, but it looked modern and clean.",
+      "explanation_es": "Los comparativos permiten contrastar cualidades, opciones o cantidades.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Used to",
+      "example_en": "I remembered the old apartment where I used to share a single bathroom with four people, and I really wanted a better situation.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Could for suggestion or possibility",
+      "example_en": "Carla suggested we could share the cleaning by making a simple schedule on the refrigerator.",
+      "explanation_es": "Could + infinitivo expresa una sugerencia o una posibilidad.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Present simple",
+      "example_en": "We both said we wanted quiet at night because we go to bed early during the week.",
+      "explanation_es": "El presente simple describe hábitos, situaciones actuales o hechos generales.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Present continuous",
+      "example_en": "Now, we're preparing a moving list together so everything will go smoothly on our first day in our new home.",
+      "explanation_es": "Be + verbo en -ing presenta una actividad que está en curso.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "for rent",
+      "meaning_es": "disponible para alquilar",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "close to everything",
+      "meaning_es": "cerca de todo",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "had enough space",
+      "meaning_es": "tenía suficiente espacio",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "work from home",
+      "meaning_es": "trabajar desde casa",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "invite friends",
+      "meaning_es": "invitar a amigos",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "pointed out",
+      "meaning_es": "señaló / hizo notar",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "a good deal",
+      "meaning_es": "una buena oferta",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "go smoothly",
+      "meaning_es": "salga bien / sin problemas",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos indicados por barras. Las barras muestran pausas, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last Saturday,",
+              "my friend Carla and I went to see an apartment that was available for rent near our jobs."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I remembered the old apartment where I used to share a single bathroom with four people,",
+              "and I really wanted a better situation."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Now,",
+              "we're preparing a moving list together so everything will go smoothly on our first day in our new home."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta en inglés, priorizando claridad y naturalidad, sin pausarte palabra por palabra.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-007",
+    "number": "007",
+    "title_en": "Finding a Place to Live",
+    "title_es": "Buscar dónde vivir",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana y vivienda",
+    "main_topic_es": "Visitar una vivienda, necesidades, preferencias y acuerdos",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Defining relative clause",
+      "Would for preference",
+      "Comparatives",
+      "Used to",
+      "Could for suggestion or possibility",
+      "Present simple",
+      "Present continuous"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

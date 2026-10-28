@@ -1,0 +1,96 @@
+{
+  "text": "I knew she values reliability, so the prospect of letting her down genuinely unsettled me.",
+  "duration": 7.340000152587891,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.3199999928474426,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.5600000023841858,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.9800000190734863,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 18,
+      "length": 11,
+      "start": 1.4800000190734863,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.9800000190734863,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 3.059999942779541,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 3.259999990463257,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.700000047683716,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 4.21999979019165,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.21999979019165,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.480000019073486,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 67,
+      "length": 9,
+      "start": 4.960000038146973,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 77,
+      "length": 9,
+      "start": 6.059999942779541,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 6.739999771118164,
+      "end": 6.940000057220459
+    }
+  ]
+}

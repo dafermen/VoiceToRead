@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-008",
+  "number": 8,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y solución de problemas"
+  },
+  "category": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "A mistaken or unsuitable purchase; explain the mismatch and ask for a practical solution.",
+    "es": "Una compra equivocada o inadecuada; explicar la incompatibilidad y pedir una solución práctica."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Persona adulta mostrando una prenda de ropa inadecuada en un mostrador de tienda y hablando con un empleado.",
+    "prompt": "Realistic editorial photograph. Adult person at a store counter holding up an unsuitable item of clothing and explaining its problem to a helpful store worker, modern US shop, friendly atmosphere, 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una compra reciente y el problema que tuvo.",
+    "Explicar las razones prácticas de la insatisfacción.",
+    "Solicitar una solución clara y razonable en inglés.",
+    "Hablar de experiencias relacionadas en pasado y presente.",
+    "Practicar frases útiles para manejar problemas al comprar."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Last weekend, I went to the mall to buy a jacket for work.",
+      "es": "El fin de semana pasado, fui al centro comercial para comprar una chaqueta para el trabajo."
+    },
+    {
+      "number": 2,
+      "function": "background",
+      "en": "I found one that looked perfect on the rack, so I decided to buy it without trying it on.",
+      "es": "Encontré una que se veía perfecta en el perchero, así que decidí comprarla sin probármela."
+    },
+    {
+      "number": 3,
+      "function": "first_problem",
+      "en": "When I got home and put it on, I realized the sleeves were much too short for me.",
+      "es": "Cuando llegué a casa y me la puse, me di cuenta de que las mangas eran demasiado cortas para mí."
+    },
+    {
+      "number": 4,
+      "function": "reaction",
+      "en": "I felt disappointed, because I had expected it to fit just right.",
+      "es": "Me sentí decepcionado, porque esperaba que me quedara bien."
+    },
+    {
+      "number": 5,
+      "function": "attempted_fix",
+      "en": "I tried wearing it over a sweater, but it still didn’t look or feel comfortable.",
+      "es": "Intenté usarla sobre un suéter, pero aún así no se veía ni se sentía cómoda."
+    },
+    {
+      "number": 6,
+      "function": "decision",
+      "en": "After thinking about it, I decided to return to the store and explain the problem.",
+      "es": "Después de pensarlo, decidí volver a la tienda y explicar el problema."
+    },
+    {
+      "number": 7,
+      "function": "preparation",
+      "en": "I made sure to bring the jacket, its tag, and my receipt with me.",
+      "es": "Me aseguré de llevar la chaqueta, su etiqueta y mi recibo conmigo."
+    },
+    {
+      "number": 8,
+      "function": "store_visit",
+      "en": "At the customer service counter, I politely told the employee what had happened.",
+      "es": "En el mostrador de servicio al cliente, le dije amablemente al empleado lo que había pasado."
+    },
+    {
+      "number": 9,
+      "function": "explanation",
+      "en": "I explained that the jacket was the right style, but the sleeves did not match my size.",
+      "es": "Expliqué que la chaqueta era del estilo correcto, pero las mangas no coincidían con mi talla."
+    },
+    {
+      "number": 10,
+      "function": "reason",
+      "en": "I also mentioned that it was my mistake for not trying it on before buying.",
+      "es": "También mencioné que fue un error mío no probármela antes de comprar."
+    },
+    {
+      "number": 11,
+      "function": "request",
+      "en": "I asked if there was a practical way to exchange it for the right size or a similar style.",
+      "es": "Pregunté si había una manera práctica de cambiarla por la talla correcta o un estilo similar."
+    },
+    {
+      "number": 12,
+      "function": "response",
+      "en": "The employee said they did not have the same jacket in my size at that store.",
+      "es": "El empleado dijo que no tenían la misma chaqueta en mi talla en esa tienda."
+    },
+    {
+      "number": 13,
+      "function": "suggestion",
+      "en": "However, he suggested checking the online store or looking at other jackets on the racks.",
+      "es": "Sin embargo, me sugirió revisar la tienda en línea o ver otras chaquetas en los estantes."
+    },
+    {
+      "number": 14,
+      "function": "action",
+      "en": "He offered to help me find a similar one that fit better.",
+      "es": "Se ofreció a ayudarme a encontrar una similar que me quedara mejor."
+    },
+    {
+      "number": 15,
+      "function": "outcome",
+      "en": "Together, we searched the store and found another jacket in a different color but with the right sleeves.",
+      "es": "Juntos, buscamos en la tienda y encontramos otra chaqueta de diferente color, pero con las mangas adecuadas."
+    },
+    {
+      "number": 16,
+      "function": "exchange",
+      "en": "The employee processed an even exchange, so I did not have to pay more money.",
+      "es": "El empleado realizó un cambio directo, así que no tuve que pagar más dinero."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "This time, I tried on the new jacket at the store before accepting it.",
+      "es": "Esta vez, me probé la nueva chaqueta en la tienda antes de aceptarla."
+    },
+    {
+      "number": 18,
+      "function": "lesson",
+      "en": "Now I know it’s best to check the fit before buying something important.",
+      "es": "Ahora sé que es mejor revisar la talla antes de comprar algo importante."
+    },
+    {
+      "number": 19,
+      "function": "advice",
+      "en": "If I ever have a problem with a purchase again, I will try to explain it honestly and request a simple solution.",
+      "es": "Si vuelvo a tener un problema con una compra, intentaré explicarlo honestamente y pedir una solución sencilla."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "In the end, I was able to solve my problem and felt relieved to have clothing I could actually use.",
+      "es": "Al final, pude solucionar mi problema y sentí alivio al tener ropa que realmente puedo usar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last weekend, I went to the mall to buy a jacket for work.",
+      "explanation_es": "El pasado simple relata acciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Defining relative clause",
+      "example_en": "I found one that looked perfect on the rack, so I decided to buy it without trying it on.",
+      "explanation_es": "Una cláusula con that u otro relativo especifica a qué persona o cosa se refiere el sustantivo.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "I felt disappointed, because I had expected it to fit just right.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After thinking about it, I decided to return to the store and explain the problem.",
+      "explanation_es": "After o before seguido de -ing sitúa una acción respecto de otra.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I asked if there was a practical way to exchange it for the right size or a similar style.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Suggest + gerund",
+      "example_en": "However, he suggested checking the online store or looking at other jackets on the racks.",
+      "explanation_es": "Suggest seguido de -ing permite proponer una acción.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "First conditional",
+      "example_en": "If I ever have a problem with a purchase again, I will try to explain it honestly and request a simple solution.",
+      "explanation_es": "If + presente con will en el resultado relaciona una condición posible con una consecuencia futura.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Be able to",
+      "example_en": "In the end, I was able to solve my problem and felt relieved to have clothing I could actually use.",
+      "explanation_es": "Be able to + infinitivo expresa capacidad o haber conseguido realizar una acción.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "fit just right",
+      "meaning_es": "quedar perfectamente",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "I realized",
+      "meaning_es": "me di cuenta",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "customer service counter",
+      "meaning_es": "mostrador de servicio al cliente",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "it was my mistake",
+      "meaning_es": "fue mi error",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "a practical way",
+      "meaning_es": "una manera práctica",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "even exchange",
+      "meaning_es": "cambio directo/sin diferencia de precio",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "felt relieved",
+      "meaning_es": "sentí alivio",
+      "source_paragraph": 20
+    },
+    {
+      "expression_en": "before buying",
+      "meaning_es": "antes de comprar",
+      "source_paragraph": 10
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Lee en voz alta cada segmento; escucha la entonación natural.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "When I got home and put it on,",
+              "I realized the sleeves were much too short for me."
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "I asked if there was a practical way to exchange it for the right size or a similar style."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "In the end,",
+              "I was able to solve my problem and felt relieved to have clothing I could actually use."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee todos los veinte párrafos completos en voz alta. No te detengas entre palabras; mantén el ritmo y claridad.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-008",
+    "number": "008",
+    "title_en": "Shopping and Solving a Problem",
+    "title_es": "Compras y solución de problemas",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Compras y resolución de problemas",
+    "main_topic_es": "Explicar problemas con compras y solicitar soluciones",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Defining relative clause",
+      "Past perfect",
+      "After/before + gerund",
+      "Indirect question",
+      "Suggest + gerund",
+      "First conditional",
+      "Be able to"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

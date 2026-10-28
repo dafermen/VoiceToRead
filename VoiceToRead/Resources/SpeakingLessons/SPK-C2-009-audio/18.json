@@ -1,0 +1,90 @@
+{
+  "text": "This experience reminded me that ambiguity in friendships can signal vulnerability, not just rejection.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 5,
+      "length": 10,
+      "start": 0.4000000059604645,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.159999966621399,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.0399999618530273,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 33,
+      "length": 9,
+      "start": 2.7200000286102295,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.1600000858306885,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 46,
+      "length": 11,
+      "start": 4.199999809265137,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.199999809265137,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.760000228881836,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 69,
+      "length": 13,
+      "start": 5.099999904632568,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 6.699999809265137,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 88,
+      "length": 4,
+      "start": 6.900000095367432,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 93,
+      "length": 9,
+      "start": 7.300000190734863,
+      "end": 7.71999979019165
+    }
+  ]
+}

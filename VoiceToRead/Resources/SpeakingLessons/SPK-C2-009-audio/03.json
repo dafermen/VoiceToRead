@@ -1,0 +1,102 @@
+{
+  "text": "However, his answer struck me as unusually noncommittal, which left me wondering if I’d missed something.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.1799999475479126,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.3600000143051147,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 1.8200000524520874,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.440000057220459,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 33,
+      "length": 9,
+      "start": 2.740000009536743,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 43,
+      "length": 12,
+      "start": 3.259999990463257,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 4.460000038146973,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.699999809265137,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 4.940000057220459,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 71,
+      "length": 9,
+      "start": 5.239999771118164,
+      "end": 5.5
+    },
+    {
+      "location": 81,
+      "length": 2,
+      "start": 5.5,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.760000228881836,
+      "end": 6.0
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 6.0,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 6.179999828338623,
+      "end": 6.579999923706055
+    }
+  ]
+}

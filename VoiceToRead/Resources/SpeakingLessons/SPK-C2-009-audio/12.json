@@ -1,0 +1,132 @@
+{
+  "text": "When we finally spoke, I cautiously broached the topic: 'I wanted to check if I misunderstood anything from your last message.'",
+  "duration": 9.569999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 5,
+      "length": 2,
+      "start": 0.3400000035762787,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 8,
+      "length": 7,
+      "start": 0.7200000286102295,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.399999976158142,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 23,
+      "length": 1,
+      "start": 2.319999933242798,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 25,
+      "length": 10,
+      "start": 2.700000047683716,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 3.240000009536743,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 4.059999942779541,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 57,
+      "length": 1,
+      "start": 5.320000171661377,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 59,
+      "length": 6,
+      "start": 5.519999980926514,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.760000228881836,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 6.360000133514404,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 78,
+      "length": 1,
+      "start": 6.559999942779541,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 80,
+      "length": 13,
+      "start": 6.920000076293945,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 94,
+      "length": 8,
+      "start": 7.420000076293945,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 8.020000457763672,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 8.260000228881836,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 8.420000076293945,
+      "end": 8.779999732971191
+    },
+    {
+      "location": 118,
+      "length": 7,
+      "start": 8.779999732971191,
+      "end": 9.199999809265137
+    }
+  ]
+}

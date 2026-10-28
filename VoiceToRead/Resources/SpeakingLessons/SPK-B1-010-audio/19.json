@@ -1,0 +1,96 @@
+{
+  "text": "I hope I'll be able to keep a better balance between technology and unplugged time.",
+  "duration": 5.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.4000000059604645,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.6200000047683716,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 0.8600000143051147,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.0199999809265137,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.2200000286102295,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.5800000429153442,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 1.6399999856948853,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 1.8600000143051147,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.140000104904175,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 2.559999942779541,
+      "end": 3.0
+    },
+    {
+      "location": 53,
+      "length": 10,
+      "start": 3.0,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 4.320000171661377,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.139999866485596
+    }
+  ]
+}

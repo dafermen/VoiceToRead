@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-010",
+  "number": 10,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "category": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Digital habits, requesting help, and balancing convenience with distraction.",
+    "es": "Hábitos digitales, pedir ayuda y equilibrar comodidad y distracción."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Persona adulta usando un smartphone y una laptop en una mesa, con una taza de café y una expresión pensativa.",
+    "prompt": "Realistic editorial photograph, adult using smartphone and laptop at a table, coffee cup, thoughtful facial expression, soft natural morning light, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir hábitos digitales actuales y pasados.",
+    "Explicar la razón de pedir ayuda con tecnología.",
+    "Contrastar ventajas y desventajas del uso de dispositivos.",
+    "Expresar intenciones y futuros cambios en el uso digital.",
+    "Practicar la comprensión y repetición en inglés americano cotidiano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I use my phone every day for almost everything, from reading messages to setting reminders.",
+      "es": "Uso mi teléfono todos los días para casi todo, desde leer mensajes hasta poner recordatorios."
+    },
+    {
+      "number": 2,
+      "function": "routine",
+      "en": "Each morning, I check the news and weather before getting out of bed.",
+      "es": "Cada mañana, reviso las noticias y el clima antes de levantarme de la cama."
+    },
+    {
+      "number": 3,
+      "function": "experience",
+      "en": "Last week, my friend showed me a new app for making to-do lists, and I decided to try it.",
+      "es": "La semana pasada, mi amigo me mostró una aplicación nueva para hacer listas de tareas, y decidí probarla."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "It seemed easy at first, but quickly I realized I was missing some important features.",
+      "es": "Parecía fácil al principio, pero pronto me di cuenta de que me faltaban algunas funciones importantes."
+    },
+    {
+      "number": 5,
+      "function": "challenge",
+      "en": "I struggled to figure out how to share my lists with my family.",
+      "es": "Me costó trabajo averiguar cómo compartir mis listas con mi familia."
+    },
+    {
+      "number": 6,
+      "function": "request_help",
+      "en": "So, I asked my younger sister, who is very good with technology, to give me a hand.",
+      "es": "Así que le pedí a mi hermana menor, que es muy buena con la tecnología, que me echara una mano."
+    },
+    {
+      "number": 7,
+      "function": "specific_request",
+      "en": "I told her, \"Could you please show me how to send my list to Mom and Dad?\"",
+      "es": "Le dije: \"¿Podrías mostrarme cómo enviar mi lista a mamá y papá?\""
+    },
+    {
+      "number": 8,
+      "function": "gratitude",
+      "en": "She patiently walked me through the steps until I understood.",
+      "es": "Ella me guió pacientemente por los pasos hasta que entendí."
+    },
+    {
+      "number": 9,
+      "function": "reaction",
+      "en": "After that, I felt more confident using the app on my own.",
+      "es": "Después de eso, me sentí más seguro usando la aplicación por mi cuenta."
+    },
+    {
+      "number": 10,
+      "function": "benefit",
+      "en": "Digital tools can make life more convenient, especially when organizing daily tasks.",
+      "es": "Las herramientas digitales pueden hacer la vida más cómoda, especialmente al organizar las tareas diarias."
+    },
+    {
+      "number": 11,
+      "function": "limitation",
+      "en": "However, notifications often distract me and make it hard to focus.",
+      "es": "Sin embargo, las notificaciones a menudo me distraen y hacen difícil concentrarme."
+    },
+    {
+      "number": 12,
+      "function": "contrast",
+      "en": "There are times when I wish I could put my phone down and read a real book instead.",
+      "es": "A veces desearía poder dejar el teléfono y leer un libro de verdad."
+    },
+    {
+      "number": 13,
+      "function": "comparison",
+      "en": "I remember that when I was younger, I used to write important notes on paper.",
+      "es": "Recuerdo que cuando era más joven, solía escribir notas importantes en papel."
+    },
+    {
+      "number": 14,
+      "function": "change",
+      "en": "These days, I rarely go anywhere without my phone or my laptop.",
+      "es": "Actualmente, casi no voy a ningún lado sin mi teléfono o mi computadora portátil."
+    },
+    {
+      "number": 15,
+      "function": "intention",
+      "en": "Next week, I'm going to try turning off notifications during work hours.",
+      "es": "La próxima semana, voy a intentar apagar las notificaciones durante las horas de trabajo."
+    },
+    {
+      "number": 16,
+      "function": "future_plan",
+      "en": "If I can focus better, I'll finish my work faster and have more free time.",
+      "es": "Si puedo concentrarme mejor, terminaré mi trabajo más rápido y tendré más tiempo libre."
+    },
+    {
+      "number": 17,
+      "function": "habit_goal",
+      "en": "I'd like to use my devices mostly for helpful tasks, not just for scrolling or playing games.",
+      "es": "Me gustaría usar mis dispositivos principalmente para tareas útiles, no solo para ver redes o jugar."
+    },
+    {
+      "number": 18,
+      "function": "strategy",
+      "en": "Sometimes, I set a timer to remind myself to take breaks from screens.",
+      "es": "A veces pongo una alarma para recordarme tomar descansos de las pantallas."
+    },
+    {
+      "number": 19,
+      "function": "expectation",
+      "en": "I hope I'll be able to keep a better balance between technology and unplugged time.",
+      "es": "Espero poder mantener un mejor equilibrio entre la tecnología y el tiempo sin dispositivos."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "For now, I know I can ask for help when I need it, and small changes make a difference.",
+      "es": "Por ahora, sé que puedo pedir ayuda cuando la necesito y que los pequeños cambios marcan la diferencia."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple",
+      "example_en": "I use my phone every day for almost everything, from reading messages to setting reminders.",
+      "explanation_es": "El presente simple describe hábitos, situaciones actuales o hechos generales.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past simple",
+      "example_en": "Last week, my friend showed me a new app for making to-do lists, and I decided to try it.",
+      "explanation_es": "El pasado simple relata acciones terminadas en el pasado.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "It seemed easy at first, but quickly I realized I was missing some important features.",
+      "explanation_es": "Was/were + verbo en -ing presenta una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Non-defining relative clause",
+      "example_en": "So, I asked my younger sister, who is very good with technology, to give me a hand.",
+      "explanation_es": "Una cláusula de relativo entre comas añade información sobre algo ya identificado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Used to",
+      "example_en": "I remember that when I was younger, I used to write important notes on paper.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Be going to",
+      "example_en": "Next week, I'm going to try turning off notifications during work hours.",
+      "explanation_es": "Be going to + infinitivo expresa una intención o un plan futuro.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "First conditional",
+      "example_en": "If I can focus better, I'll finish my work faster and have more free time.",
+      "explanation_es": "If + presente con will en el resultado relaciona una condición posible con una consecuencia futura.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Would for preference",
+      "example_en": "I'd like to use my devices mostly for helpful tasks, not just for scrolling or playing games.",
+      "explanation_es": "Would expresa una preferencia o un deseo de forma hipotética o cortés.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "give me a hand",
+      "meaning_es": "ayudarme",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "walked me through the steps",
+      "meaning_es": "me explicó los pasos poco a poco",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "on my own",
+      "meaning_es": "por mi cuenta",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "make life more convenient",
+      "meaning_es": "hacer la vida más cómoda/práctica",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "hard to focus",
+      "meaning_es": "difícil concentrarse",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "put my phone down",
+      "meaning_es": "dejar el teléfono",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "scrolling",
+      "meaning_es": "desplazar contenido en pantalla (normalmente sin objetivo)",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "make a difference",
+      "meaning_es": "tener un impacto positivo, cambiar algo para mejor",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I use my phone every day",
+              "for almost everything,",
+              "from reading messages",
+              "to setting reminders."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "So, I asked my younger sister,",
+              "who is very good with technology,",
+              "to give me a hand."
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "If I can focus better,",
+              "I'll finish my work faster",
+              "and have more free time."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-010",
+    "number": "010",
+    "title_en": "Technology in Everyday Life",
+    "title_es": "Tecnología en la vida cotidiana",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Tecnología en la vida cotidiana",
+    "main_topic_es": "Hábitos digitales y pedir ayuda",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple",
+      "Past simple",
+      "Past continuous",
+      "Non-defining relative clause",
+      "Used to",
+      "Be going to",
+      "First conditional",
+      "Would for preference"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

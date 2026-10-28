@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-009",
+  "number": 9,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Friendship and Difficult Conversations",
+    "es": "Amistad y conversaciones difíciles"
+  },
+  "category": {
+    "en": "Relationships and Communication",
+    "es": "Relaciones y comunicación"
+  },
+  "main_topic": {
+    "en": "Resolving misunderstandings about plans and boundaries in a friendship; expressing feelings, preferences, and negotiating expectations.",
+    "es": "Resolver malentendidos sobre planes y límites en una amistad; expresar sentimientos, preferencias y negociar expectativas."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos personas adultas sentadas frente a frente en una cafetería, hablando con expresiones serias pero respetuosas.",
+    "prompt": "Realistic editorial photograph, two adults sitting face-to-face in a cafe, having a serious but respectful conversation, natural urban daylight, diverse backgrounds, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir un malentendido concreto entre amigos.",
+    "Expresar y justificar preferencias personales en inglés.",
+    "Comparar opciones y negociar acuerdos en situaciones sociales.",
+    "Explicar causas y responder a objeciones con naturalidad.",
+    "Practicar lectura y repetición de expresiones útiles para conversaciones difíciles."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Saturday, Olivia invited me to a group dinner, but I was unsure about joining because I needed some alone time.",
+      "es": "El sábado pasado, Olivia me invitó a una cena grupal, pero no estaba seguro de ir porque necesitaba tiempo para mí."
+    },
+    {
+      "number": 2,
+      "function": "setup",
+      "en": "She sent several excited messages, and I replied honestly that I wasn't feeling very social that evening.",
+      "es": "Ella mandó varios mensajes entusiastas, y le respondí con sinceridad que esa noche no me sentía muy social."
+    },
+    {
+      "number": 3,
+      "function": "misunderstanding",
+      "en": "The next morning, I noticed Olivia had stopped replying to my texts, and I began to worry I'd hurt her feelings.",
+      "es": "A la mañana siguiente, noté que Olivia había dejado de responderme, y empecé a preocuparme por si había herido sus sentimientos."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "I replayed my words in my mind, wondering if I should have explained my reasons more clearly from the start.",
+      "es": "Repetí mis palabras en la mente, preguntándome si debería haber explicado mis razones más claramente desde el principio."
+    },
+    {
+      "number": 5,
+      "function": "initiative",
+      "en": "Instead of guessing, I decided to call Olivia and ask her directly if we could talk.",
+      "es": "En vez de suponer, decidí llamar a Olivia y preguntarle directamente si podíamos hablar."
+    },
+    {
+      "number": 6,
+      "function": "feelings",
+      "en": "When she answered, I told her I valued our friendship but sometimes needed to recharge by myself.",
+      "es": "Cuando atendió, le dije que valoraba nuestra amistad pero que a veces necesitaba recargar energías solo."
+    },
+    {
+      "number": 7,
+      "function": "objection",
+      "en": "Olivia replied that she had felt ignored and assumed I didn't care about her plans.",
+      "es": "Olivia respondió que se había sentido ignorada y pensó que no me importaban sus planes."
+    },
+    {
+      "number": 8,
+      "function": "justification",
+      "en": "I explained it wasn't about her or the group at all; I simply feel overwhelmed when I have too many social events close together.",
+      "es": "Expliqué que no tenía nada que ver con ella ni con el grupo; simplemente me siento abrumado cuando tengo demasiados compromisos sociales seguidos."
+    },
+    {
+      "number": 9,
+      "function": "comparison",
+      "en": "For Olivia, spending lots of time together is important, while I sometimes need a quiet evening to feel balanced.",
+      "es": "Para Olivia, pasar mucho tiempo juntos es importante, mientras que yo a veces necesito una noche tranquila para sentirme equilibrado."
+    },
+    {
+      "number": 10,
+      "function": "example",
+      "en": "I pointed out that if I join every event even when tired, I don't enjoy myself or contribute positively.",
+      "es": "Le señalé que si participo en cada evento aunque esté cansado, no lo disfruto ni aporto de manera positiva."
+    },
+    {
+      "number": 11,
+      "function": "counterpoint",
+      "en": "She understood, but admitted that seeing me say no felt personal and made her question our closeness.",
+      "es": "Ella lo entendió, pero admitió que verme decir que no le resultó muy personal y le hizo cuestionar nuestra cercanía."
+    },
+    {
+      "number": 12,
+      "function": "explaining cause",
+      "en": "I reassured her that nothing about my friendship with her had changed; needing space sometimes helps me be a better friend.",
+      "es": "La tranquilicé diciendo que mi amistad con ella no había cambiado; a veces, necesitar espacio me ayuda a ser mejor amigo."
+    },
+    {
+      "number": 13,
+      "function": "negotiation",
+      "en": "We agreed that next time, I would let her know earlier if I needed to skip a plan, and she'd give me a little more room to decide.",
+      "es": "Acordamos que la próxima vez le avisaría antes si necesitaba no ir a algún plan, y ella me daría un poco más de espacio para decidir."
+    },
+    {
+      "number": 14,
+      "function": "hypothetical",
+      "en": "If I had pretended nothing was wrong, our misunderstanding might have grown into real tension.",
+      "es": "Si yo hubiera fingido que no pasaba nada, el malentendido podría haberse convertido en una verdadera tensión."
+    },
+    {
+      "number": 15,
+      "function": "preferences",
+      "en": "Personally, I prefer honest, direct communication, even if it feels awkward at first.",
+      "es": "Personalmente, prefiero una comunicación honesta y directa, aunque al principio resulte incómodo."
+    },
+    {
+      "number": 16,
+      "function": "alternative",
+      "en": "Alternatively, we could have just ignored the issue, but that wouldn't have helped either of us feel better.",
+      "es": "Como alternativa, podríamos haber ignorado el asunto, pero eso no habría ayudado a ninguno de los dos a sentirnos mejor."
+    },
+    {
+      "number": 17,
+      "function": "future plan",
+      "en": "Now, I plan to invite Olivia to something small this weekend as a gesture of goodwill.",
+      "es": "Ahora, planeo invitar a Olivia a algo pequeño este fin de semana como un gesto de buena voluntad."
+    },
+    {
+      "number": 18,
+      "function": "hope",
+      "en": "I hope this conversation will make our friendship stronger, as we now trust each other to speak up.",
+      "es": "Espero que esta conversación fortalezca nuestra amistad, ya que ahora confiamos en expresarnos."
+    },
+    {
+      "number": 19,
+      "function": "lesson",
+      "en": "Looking back, I realize clear boundaries need to be talked about, not just assumed.",
+      "es": "Al mirar atrás, me doy cuenta de que los límites claros deben hablarse, no simplemente asumirse."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "In the end, we both felt respected and relieved, and that's really what matters most to me.",
+      "es": "Al final, ambos nos sentimos respetados y aliviados, y eso es lo que realmente más me importa."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous",
+      "example_en": "She sent several excited messages, and I replied honestly that I wasn't feeling very social that evening.",
+      "explanation_es": "Was/were + verbo en -ing presenta una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "The next morning, I noticed Olivia had stopped replying to my texts, and I began to worry I'd hurt her feelings.",
+      "explanation_es": "Had + participio sitúa una acción antes de otro momento pasado.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Should have + past participle",
+      "example_en": "I replayed my words in my mind, wondering if I should have explained my reasons more clearly from the start.",
+      "explanation_es": "Should have + participio expresa una valoración retrospectiva de lo que habría sido mejor hacer.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Instead of guessing, I decided to call Olivia and ask her directly if we could talk.",
+      "explanation_es": "Una pregunta subordinada con if o whether mantiene el orden de sujeto y verbo de una afirmación.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Conditional for habitual results",
+      "example_en": "I pointed out that if I join every event even when tired, I don't enjoy myself or contribute positively.",
+      "explanation_es": "La condición y el resultado en presente describen una relación habitual, no una promesa futura.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Third conditional",
+      "example_en": "If I had pretended nothing was wrong, our misunderstanding might have grown into real tension.",
+      "explanation_es": "If + pasado perfecto con would/might have + participio imagina un pasado diferente y su resultado.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Even if for concession",
+      "example_en": "Personally, I prefer honest, direct communication, even if it feels awkward at first.",
+      "explanation_es": "Even if indica que una condición no cambiaría la idea principal.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Passive voice",
+      "example_en": "Looking back, I realize clear boundaries need to be talked about, not just assumed.",
+      "explanation_es": "Be + participio centra la atención en quien recibe una acción.",
+      "source_paragraph": 19
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "alone time",
+      "meaning_es": "tiempo para uno mismo; estar solo para descansar o recargar energía",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "recharge by myself",
+      "meaning_es": "recargar energías estando solo/a",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "it wasn't about her or the group at all",
+      "meaning_es": "no se trataba de ella ni del grupo en absoluto",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "If I join every event even when tired",
+      "meaning_es": "Si participo en cada evento incluso estando cansado",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "made her question our closeness",
+      "meaning_es": "le hizo cuestionar nuestra cercanía o confianza",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "as a gesture of goodwill",
+      "meaning_es": "como un acto o gesto de buena voluntad",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "clear boundaries",
+      "meaning_es": "límites claros, generalmente en una relación o comunicación",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "what matters most to me",
+      "meaning_es": "lo que más me importa",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos en barras. Las barras indican pausas naturales, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last Saturday,",
+              "Olivia invited me to a group dinner,",
+              "but I was unsure about joining because I needed some alone time."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I pointed out that if I join every event even when tired,",
+              "I don't enjoy myself or contribute positively."
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "If I had pretended nothing was wrong,",
+              "our misunderstanding might have grown into real tension."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-009",
+    "number": "009",
+    "title_en": "Friendship and Difficult Conversations",
+    "title_es": "Amistad y conversaciones difíciles",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Relaciones y comunicación",
+    "main_topic_es": "Resolver malentendidos sobre planes y límites en una amistad",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous",
+      "Past perfect",
+      "Should have + past participle",
+      "Indirect question",
+      "Conditional for habitual results",
+      "Third conditional",
+      "Even if for concession",
+      "Passive voice"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

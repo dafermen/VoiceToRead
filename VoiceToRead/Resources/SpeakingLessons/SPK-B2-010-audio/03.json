@@ -1,0 +1,114 @@
+{
+  "text": "I actually prefer reading the news online because it saves time and gives me a variety of sources.",
+  "duration": 7.269999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.2800000011920929,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.7599999904632568,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.2200000286102295,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.559999942779541,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.059999942779541,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.059999942779541,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 2.700000047683716,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.119999885559082,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 3.4800000190734863,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.119999885559082,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 4.619999885559082,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 4.78000020980835,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 77,
+      "length": 1,
+      "start": 5.019999980926514,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 79,
+      "length": 7,
+      "start": 5.260000228881836,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.539999961853027,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 90,
+      "length": 7,
+      "start": 6.039999961853027,
+      "end": 6.119999885559082
+    }
+  ]
+}
