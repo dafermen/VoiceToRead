@@ -108,3 +108,37 @@ identity/filename correspondence, resource registration, localization and diff
 format. XCTest adds native image decoding, uniqueness, renamed/legacy identity
 and custom-story fallback coverage. Xcode/XCTest and iPhone layout/VoiceOver
 verification cannot run locally on Windows and remain necessary on Apple devices.
+
+## Twenty-story starter library
+
+Nine original Spanish short adaptations complete the twenty-story library:
+La liebre y la tortuga; El león y el ratón; El ratón de campo y el ratón de ciudad;
+Ricitos de Oro y los tres osos; Juan y las habichuelas mágicas; Los músicos de Bremen;
+La princesa y el guisante; El zapatero y los duendes; Sopa de piedra.
+The new versions use eighteen short paragraphs each, gentle outcomes and no
+graphic violence. They are newly written retellings, not copied translations.
+Juan's ending is adapted to avoid taking someone else's possessions; the pea
+story presents its traditional test as a fictional belief, not a claim about
+real sensitivity or worth. Existing eleven texts and all earlier covers remain
+unchanged. Traditional tale references consulted for selection include:
+
+- Aesop fable index: https://read.gov/aesop/001.html
+- Andersen collection: https://www.gutenberg.org/cache/epub/1597/pg1597-images.html
+- Three Bears reference: https://www.colorado.edu/projects/fairy-tales/the-story-of-the-three-bears
+- Stone Soup tradition: https://www.ala.org/winner/stone-soup
+
+The existing per-example installation markers add only newly introduced IDs.
+User corrections, translations and approvals remain; intentionally deleted older
+examples stay deleted. No store migration, language control, review, narration,
+speed, highlighting or session/training behavior was changed. New stories start
+in Spanish and use the existing translation-and-adult-review flow for other
+languages; the original remains playable.
+
+Nine additional built-in image_gen covers follow the established offline 16:9
+gouache style. Exact prompts, repository paths and SHA-256 hashes are appended
+to story-cover-prompts.json. The existing folder resource includes them without
+new Xcode project entries. Local checks verify twenty unique covers and IDs,
+unchanged first-eleven source text, valid content lengths and localization.
+XCTest expectations now require twenty examples, plus a prior-eleven archive
+case that keeps an edited story, preserves deletion and adds new examples once.
+XCTest/iPhone UI verification requires Xcode and cannot run locally on Windows.

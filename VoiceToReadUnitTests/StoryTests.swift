@@ -20,7 +20,7 @@ final class StoryTests: XCTestCase {
             var legacy = story; legacy.id = UUID(); legacy.title = entry.aliases.first ?? entry.title
             XCTAssertEqual(StoryExampleCatalog.coverName(for: legacy), name)
         }
-        XCTAssertEqual(hashes.count, 11)
+        XCTAssertEqual(hashes.count, 20)
         let custom = try StoryDocument.edited(title: "A different story", text: "My own text.", source: .english, target: .spanish)
         XCTAssertNil(StoryExampleCatalog.coverName(for: custom))
     }
@@ -29,7 +29,7 @@ final class StoryTests: XCTestCase {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = try StoryStore(directory: directory)
-        XCTAssertEqual(store.stories.count, 11)
+        XCTAssertEqual(store.stories.count, 20)
         XCTAssertEqual(store.stories.first?.title, "Caperucita Roja")
         XCTAssertFalse(try XCTUnwrap(store.stories.first).translatedReady)
         let sibling = directory.appendingPathComponent("trainings.json")
@@ -39,12 +39,12 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(try StoryStore(directory: directory).stories, store.stories)
         try store.delete(story)
         XCTAssertEqual(try Data(contentsOf: sibling), Data("existing training".utf8))
-        XCTAssertEqual(try StoryStore(directory: directory).stories.count, 11)
+        XCTAssertEqual(try StoryStore(directory: directory).stories.count, 20)
     }
 
     func testCatalogIsValidAndDeletedExamplesStayDeleted() throws {
-        XCTAssertEqual(StoryExampleCatalog.entries.count, 11)
-        XCTAssertEqual(Set(StoryExampleCatalog.entries.map(\.id)).count, 11)
+        XCTAssertEqual(StoryExampleCatalog.entries.count, 20)
+        XCTAssertEqual(Set(StoryExampleCatalog.entries.map(\.id)).count, 20)
         for entry in StoryExampleCatalog.entries {
             let story = try entry.document()
             XCTAssertTrue(story.valid)
@@ -57,8 +57,25 @@ final class StoryTests: XCTestCase {
         let deleted = try XCTUnwrap(store.stories.first)
         try store.delete(deleted)
         let reopened = try StoryStore(directory: directory)
-        XCTAssertEqual(reopened.stories.count, 10)
+        XCTAssertEqual(reopened.stories.count, 19)
         XCTAssertNil(reopened.story(deleted.id))
+    }
+
+    func testElevenStoryArchiveAddsNewExamplesOnceWithoutRestoringDeletedExamples() throws {
+        struct PriorArchive: Codable { var version = 1; var stories: [StoryDocument]; var installedExamples: [UUID] }
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        let previous = Array(StoryExampleCatalog.entries.prefix(11))
+        var retained = try previous.dropFirst().map { try $0.document() }
+        retained[0].title = "My edited Rapunzel"
+        let file = directory.appendingPathComponent("stories.json")
+        try JSONEncoder().encode(PriorArchive(stories: retained, installedExamples: previous.map(\.id))).write(to: file)
+        let store = try StoryStore(directory: directory)
+        XCTAssertEqual(store.stories.count, 19)
+        XCTAssertNil(store.story(previous[0].id), "An intentionally deleted story must stay deleted")
+        for story in retained { XCTAssertEqual(store.story(story.id), story) }
+        XCTAssertEqual(try StoryStore(directory: directory).stories, store.stories)
     }
 
     func testOldLibraryKeepsCorrectedStoriesAndAddsCatalogOnlyOnce() throws {
@@ -76,7 +93,7 @@ final class StoryTests: XCTestCase {
         let file = directory.appendingPathComponent("stories.json")
         try JSONEncoder().encode(OldArchive(stories: [pigs, custom])).write(to: file)
         let store = try StoryStore(directory: directory)
-        XCTAssertEqual(store.stories.count, 12)
+        XCTAssertEqual(store.stories.count, 21)
         XCTAssertEqual(store.story(pigs.id), pigs)
         XCTAssertEqual(store.story(custom.id), custom)
         XCTAssertTrue(try XCTUnwrap(store.story(pigs.id)).translatedReady)

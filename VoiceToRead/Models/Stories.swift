@@ -397,6 +397,186 @@ En medio del desierto, ambos buscan agua y se acompañan.
 El niño desea regresar a su hogar y el piloto debe continuar su camino.
 Aunque se separan, el recuerdo de su amistad permanece.
 La historia invita a cuidar nuestros vínculos y a mirar con curiosidad.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000012")!, title: "La liebre y la tortuga", aliases: [], text: """
+Una liebre corría muy deprisa por el bosque.
+Una tortuga caminaba despacio por el mismo sendero.
+La liebre se reía de sus pasos pequeños.
+La tortuga le propuso una carrera hasta el gran roble.
+Los animales marcaron la salida y la meta.
+Cuando comenzó la carrera, la liebre salió como una flecha.
+La tortuga avanzó a su propio ritmo.
+La liebre miró atrás y vio a su compañera muy lejos.
+Pensó que tenía tiempo para dormir bajo un árbol.
+Cerró los ojos y se quedó profundamente dormida.
+La tortuga siguió caminando sin detenerse.
+Pasó junto al árbol y continuó hacia el roble.
+Cuando la liebre despertó, el sol ya estaba más bajo.
+Corrió hacia la meta con todas sus fuerzas.
+Pero la tortuga acababa de llegar.
+La liebre la felicitó y dejó de burlarse de sus pasos.
+Las dos comprendieron que cada uno puede avanzar a su manera.
+La constancia de la tortuga había dado resultado.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000013")!, title: "El león y el ratón", aliases: [], text: """
+Un león descansaba a la sombra de un árbol.
+Un ratón pasó corriendo y tropezó con su pata.
+El león abrió los ojos y lo sujetó con cuidado.
+El ratón le pidió que lo dejara marchar.
+Le prometió ayudarlo si alguna vez lo necesitaba.
+El león pensó que un animal tan pequeño no podría ayudarlo.
+Aun así, levantó la pata y le permitió irse.
+Unos días después, el león quedó atrapado en una red.
+Cuanto más se movía, más se apretaban las cuerdas.
+El ratón escuchó sus rugidos y se acercó.
+Al verlo, buscó un lugar por donde empezar.
+Con sus dientes pequeños fue cortando las cuerdas.
+Trabajó con paciencia hasta abrir un hueco.
+El león salió de la red y respiró tranquilo.
+Le dio las gracias a su pequeño amigo.
+El ratón se alegró de haber podido ayudar.
+Desde aquel día, los dos se saludaban al encontrarse.
+El león había descubierto que la ayuda puede llegar de quien menos esperamos.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000014")!, title: "El ratón de campo y el ratón de ciudad", aliases: [], text: """
+Un ratón de campo invitó a su primo a visitarlo.
+Preparó semillas, pan y unas manzanas pequeñas.
+El ratón de ciudad agradeció la comida.
+Después habló de los grandes banquetes de su casa.
+Invitó a su primo a conocer la ciudad.
+Los dos viajaron juntos y llegaron al anochecer.
+En una mesa encontraron queso, fruta y migas de pastel.
+El ratón de campo nunca había visto tanta comida.
+Justo cuando iba a probarla, se abrió una puerta.
+Los dos corrieron a esconderse detrás de un mueble.
+Esperaron en silencio hasta que la habitación quedó vacía.
+Volvieron a la mesa, pero escucharon los pasos de un gato.
+Tuvieron que regresar a su escondite.
+El ratón de campo echó de menos la calma de su hogar.
+Le explicó a su primo que prefería comer tranquilo.
+El ratón de ciudad comprendió su decisión.
+Se despidieron con cariño y prometieron seguir visitándose.
+Cada uno podía disfrutar de un hogar diferente.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000015")!, title: "Ricitos de Oro y los tres osos", aliases: [], text: """
+Tres osos vivían en una casita junto al bosque.
+Una mañana dejaron su desayuno enfriándose y salieron a pasear.
+Ricitos de Oro llegó a la casa y llamó a la puerta.
+Como nadie respondió, entró sin pedir permiso.
+En la mesa vio tres cuencos de avena.
+El primero estaba muy caliente y el segundo demasiado frío.
+El tercero estaba templado, y Ricitos se lo comió.
+Después quiso sentarse a descansar.
+La silla pequeña le pareció cómoda, pero se rompió al sentarse.
+Ricitos subió a un dormitorio con tres camas.
+Se acostó en la más pequeña y se quedó dormida.
+Cuando los osos volvieron, encontraron la mesa y las sillas cambiadas.
+El osito descubrió que alguien había comido su desayuno.
+Luego encontraron a Ricitos durmiendo en su cama.
+Ella despertó, se sorprendió y les pidió disculpas.
+Los osos le explicaron que debía esperar una invitación para entrar.
+Ricitos volvió con su familia para contar lo ocurrido.
+Más tarde regresaron juntos para ayudar a reparar la silla.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000016")!, title: "Juan y las habichuelas mágicas", aliases: ["Jack y las habichuelas mágicas"], text: """
+Juan vivía con su madre en una pequeña granja.
+Un día cambió su vaca por unas habichuelas que un viajero decía que eran mágicas.
+Su madre se preocupó porque necesitaban comida, no semillas.
+Juan plantó las habichuelas cerca de la ventana.
+Al amanecer, un tallo enorme llegaba hasta las nubes.
+Juan subió con cuidado y encontró un camino entre ellas.
+Al final del camino había una casa gigantesca.
+En su interior vio una gallina y un arpa dorada.
+Una mujer le ofreció pan y le advirtió que el gigante estaba por llegar.
+Juan se escondió mientras el gigante entraba en la casa.
+El gigante pidió a la gallina un huevo de oro.
+Después escuchó la música del arpa hasta quedarse dormido.
+Juan quiso llevarse la gallina para ayudar a su madre.
+Pero, al levantarla, la gallina cacareó y despertó al gigante.
+Juan la dejó en su sitio y salió corriendo.
+Bajó por el tallo antes de que el gigante pudiera alcanzarlo.
+Al volver a casa, contó toda la aventura a su madre.
+Juntos decidieron buscar otra manera de mejorar la granja, sin tomar lo que no era suyo.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000017")!, title: "Los músicos de Bremen", aliases: [], text: """
+Un burro mayor decidió viajar a Bremen para hacerse músico.
+Por el camino encontró a un perro que también necesitaba un nuevo hogar.
+El burro lo invitó a acompañarlo.
+Más adelante se unieron un gato y un gallo.
+Los cuatro soñaban con formar una pequeña banda.
+Al caer la noche, vieron una casa iluminada en el bosque.
+Dentro había unos ladrones sentados a una mesa llena de comida.
+Los animales se acercaron a la ventana y pensaron un plan.
+El perro se apoyó sobre el burro, el gato sobre el perro y el gallo sobre el gato.
+Todos comenzaron a cantar al mismo tiempo.
+El ruido sorprendió tanto a los ladrones que salieron corriendo.
+Los cuatro amigos entraron, cenaron y buscaron un lugar para dormir.
+Más tarde, un ladrón regresó para mirar la casa.
+Escuchó al perro ladrar y al gallo cantar desde la ventana.
+Pensó que había demasiados vigilantes y se marchó.
+A la mañana siguiente, los animales encontraron la casa tranquila.
+Decidieron quedarse juntos y practicar allí sus canciones.
+No llegaron a Bremen, pero encontraron compañía y un hogar.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000018")!, title: "La princesa y el guisante", aliases: [], text: """
+En un reino lejano, un príncipe quería conocer a una princesa.
+Había viajado mucho, pero todavía no había encontrado a su compañera.
+Una noche de tormenta, alguien llamó a la puerta del castillo.
+Era una joven con la ropa empapada por la lluvia.
+Ella explicó que era una princesa y que se había perdido en el camino.
+La familia la recibió y le ofreció ropa seca y una cena caliente.
+La reina quiso comprobar la historia de la visitante de una manera extraña.
+Colocó un pequeño guisante debajo de muchos colchones.
+Encima preparó una cama para la joven.
+A la mañana siguiente, le preguntaron cómo había dormido.
+La joven respondió que algo duro le había impedido descansar.
+La reina se sorprendió de que hubiera notado el guisante.
+La reina creyó que aquello confirmaba la historia de la joven.
+El príncipe prefirió pasar tiempo con ella y escuchar su historia.
+Poco a poco descubrieron que disfrutaban de las mismas conversaciones.
+La joven decidió quedarse unos días más para conocer el reino.
+El pequeño guisante terminó guardado como recuerdo de aquella noche.
+La familia recordaba sobre todo la alegría de haber abierto su puerta.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000019")!, title: "El zapatero y los duendes", aliases: [], text: """
+Un zapatero y su esposa tenían un pequeño taller.
+Trabajaban mucho, pero apenas les quedaba dinero para comprar cuero.
+Una noche, el zapatero cortó las piezas de su último par de zapatos.
+Las dejó sobre la mesa y se fue a descansar.
+A la mañana siguiente, los zapatos ya estaban terminados.
+Tenían unas puntadas pequeñas y muy cuidadas.
+Un cliente los compró, y la pareja pudo conseguir más materiales.
+Aquella noche dejaron nuevas piezas sobre la mesa.
+Al amanecer encontraron otros zapatos perfectamente hechos.
+Intrigados, decidieron quedarse despiertos para conocer a sus ayudantes.
+Vieron entrar a dos pequeños duendes con ropa muy gastada.
+Los duendes cosieron y trabajaron hasta terminar los zapatos.
+La pareja quiso agradecerles su ayuda.
+Prepararon dos conjuntos de ropa y unos zapatos diminutos.
+Esa noche dejaron los regalos sobre la mesa del taller.
+Los duendes se vistieron, bailaron de alegría y salieron cantando.
+El zapatero y su esposa continuaron trabajando con lo que habían aprendido.
+Siempre recordaron con cariño a sus generosos visitantes.
+"""),
+        Entry(id: UUID(uuidString: "57100000-0000-4000-8000-000000000020")!, title: "Sopa de piedra", aliases: ["La sopa de piedra"], text: """
+Un viajero llegó a un pueblo con una olla vacía.
+Los vecinos lo saludaron, pero cada familia tenía poca comida.
+El viajero propuso preparar una sopa para compartir.
+Llenó la olla con agua y puso dentro una piedra limpia.
+Los vecinos se acercaron, curiosos por aquella sopa tan extraña.
+El viajero explicó que una zanahoria le daría más sabor.
+Una mujer recordó que tenía dos zanahorias en casa.
+Otro vecino trajo una patata y una cebolla.
+Una familia añadió un puñado de judías.
+Alguien ofreció unas hojas verdes y un poco de sal.
+Poco a poco, la olla se llenó de colores y aromas.
+Los vecinos pusieron una mesa larga en la plaza.
+Cuando la sopa estuvo lista, la viajera retiró la piedra.
+Todos recibieron un cuenco caliente y un trozo de pan.
+Un niño preguntó si la piedra había hecho la comida.
+El viajero sonrió y explicó que la sopa existía gracias a lo que cada uno había aportado.
+Los vecinos descubrieron que juntos tenían más de lo que pensaban.
+Desde entonces, buscaron más ocasiones para cocinar y compartir.
 """)
     ]
 }
