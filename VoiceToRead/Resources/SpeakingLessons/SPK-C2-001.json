@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-001",
+  "number": 1,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Improving My English",
+    "es": "Mejorando mi inglés"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Reflecting on how language choices shape identity and interpersonal meaning, shifting register while retaining an authentic voice.",
+    "es": "Reflexionar sobre cómo las elecciones lingüísticas configuran la identidad y el significado interpersonal, cambiando el registro y conservando una voz auténtica."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Persona adulta reflexionando sobre el uso del inglés, mostrando gestos de pensamiento profundo en un entorno tranquilo.",
+    "prompt": "Thoughtful adult reflecting on English language use, subtle expression, cozy study environment, warm lighting, modern interior, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Explorar cómo las decisiones lingüísticas afectan la identidad.",
+    "Entender el impacto del registro en la comunicación interpersonal.",
+    "Practicar reformulaciones para ajustar el tono manteniendo autenticidad.",
+    "Reconocer la importancia del matiz y la subestimación.",
+    "Aplicar elecciones pragmáticas para optimizar el mensaje."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Lately, I've realized that improving my English isn't just about grammar; it's about choosing language that truly represents who I am.",
+      "es": "Últimamente he descubierto que mejorar mi inglés no se trata solo de gramática; es elegir un lenguaje que realmente represente quién soy."
+    },
+    {
+      "number": 2,
+      "function": "reflection",
+      "en": "I find that shifting my register—sometimes formal, sometimes casual—allows me to connect with different people while staying genuine.",
+      "es": "Me doy cuenta de que cambiar mi registro—a veces formal, a veces informal—me permite conectar con diferentes personas y a la vez ser genuino."
+    },
+    {
+      "number": 3,
+      "function": "personal_discovery",
+      "en": "When I speak too formally, I risk sounding distant; if I'm too casual, I might seem careless, so balance is key.",
+      "es": "Cuando hablo demasiado formal corro el riesgo de sonar distante; si soy demasiado informal, puedo parecer descuidado, así que el equilibrio es fundamental."
+    },
+    {
+      "number": 4,
+      "function": "example",
+      "en": "For example, in meetings, I use concise, polite expressions, but with friends, I prefer relaxed and idiomatic phrases.",
+      "es": "Por ejemplo, en reuniones uso expresiones concisas y amables, pero con amigos prefiero frases relajadas e idiomáticas."
+    },
+    {
+      "number": 5,
+      "function": "challenge",
+      "en": "It’s tricky to adapt my tone without losing my voice; I want to be approachable yet respected and clear.",
+      "es": "Es difícil adaptar mi tono sin perder mi voz; quiero ser accesible pero también respetado y claro."
+    },
+    {
+      "number": 6,
+      "function": "strategy",
+      "en": "What I used to regard as merely polishing a sentence now strikes me as a decision about how much distance, certainty, or solidarity I wish to convey.",
+      "es": "Lo que antes consideraba un simple retoque de una oración ahora me parece una decisión sobre cuánta distancia, certeza o solidaridad deseo transmitir."
+    },
+    {
+      "number": 7,
+      "function": "illustration",
+      "en": "When giving feedback, I might say, “That approach could be improved,” rather than blunt criticism, to keep the conversation positive.",
+      "es": "Al dar retroalimentación puedo decir “Ese enfoque podría mejorarse” en lugar de una crítica directa, para mantener la conversación positiva."
+    },
+    {
+      "number": 8,
+      "function": "observation",
+      "en": "This subtlety helps avoid conflict and shows respect, even while being honest, which I value deeply.",
+      "es": "Esta sutileza ayuda a evitar conflictos y muestra respeto, incluso siendo honesto, algo que valoro profundamente."
+    },
+    {
+      "number": 9,
+      "function": "insight",
+      "en": "I've learned that pragmatic choices—tone, word order, emphasis—shape interpersonal meaning beyond mere vocabulary.",
+      "es": "He aprendido que las elecciones pragmáticas—tono, orden de palabras, énfasis—influyen en el significado interpersonal más allá del vocabulario."
+    },
+    {
+      "number": 10,
+      "function": "example",
+      "en": "For instance, moving an adverb or changing the stress can alter whether a remark sounds sincere, tentative, or quietly skeptical.",
+      "es": "Por ejemplo, mover un adverbio o cambiar el énfasis puede alterar si un comentario suena sincero, tentativo o discretamente escéptico."
+    },
+    {
+      "number": 11,
+      "function": "process",
+      "en": "When a colleague calls a difficult proposal interesting, I no longer assume enthusiasm; I ask what, specifically, they find promising or unresolved.",
+      "es": "Cuando un colega califica de interesante una propuesta difícil, ya no doy por supuesto su entusiasmo; pregunto qué considera prometedor o qué sigue sin resolverse."
+    },
+    {
+      "number": 12,
+      "function": "reflection",
+      "en": "Such small differences influence how my listener perceives both me and my message.",
+      "es": "Estas pequeñas diferencias influyen en cómo mi interlocutor me percibe a mí y a mi mensaje."
+    },
+    {
+      "number": 13,
+      "function": "tension",
+      "en": "Sometimes I hesitate, worried that adjusting too much might seem insincere or crafted.",
+      "es": "A veces dudo, preocupado de que ajustar demasiado pueda parecer insincero o forzado."
+    },
+    {
+      "number": 14,
+      "function": "resolution",
+      "en": "Far from making me less authentic, adapting my language thoughtfully allows me to express the same conviction without imposing the same tone on every listener.",
+      "es": "Lejos de hacerme menos auténtico, adaptar mi lenguaje con cuidado me permite expresar la misma convicción sin imponer el mismo tono a todos los interlocutores."
+    },
+    {
+      "number": 15,
+      "function": "experience",
+      "en": "In conversations, I aim to listen actively and mirror the other’s style subtly to build rapport naturally.",
+      "es": "En las conversaciones procuro escuchar activamente y reflejar sutilmente el estilo del otro para crear afinidad de forma natural."
+    },
+    {
+      "number": 16,
+      "function": "example",
+      "en": "Had I taken the comment at face value, I might have missed an invitation to discuss the concern that had remained politely unspoken.",
+      "es": "Si hubiera interpretado el comentario literalmente, quizá habría pasado por alto una invitación a hablar de la inquietud que había quedado cortésmente implícita."
+    },
+    {
+      "number": 17,
+      "function": "growth",
+      "en": "Not until I began attending to those small shifts in emphasis did I appreciate how a familiar expression could carry an unfamiliar intention.",
+      "es": "Solo cuando empecé a prestar atención a esos pequeños cambios de énfasis comprendí cómo una expresión conocida podía transmitir una intención inesperada."
+    },
+    {
+      "number": 18,
+      "function": "hope",
+      "en": "Ultimately, I want my English to reflect my personality and intentions clearly, fostering trust and understanding.",
+      "es": "En última instancia, quiero que mi inglés refleje mi personalidad e intenciones claramente, fomentando confianza y comprensión."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Improving my English is less about perfection and more about mastering nuance, authenticity, and connection.",
+      "es": "Mejorar mi inglés es menos cuestión de perfección y más de dominar el matiz, la autenticidad y la conexión."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Every conversation is a chance to practice this, to listen, adjust, and speak in a way that feels truly mine.",
+      "es": "Cada conversación es una oportunidad para practicar esto: escuchar, ajustarme y hablar de un modo que realmente sea mío."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect with realization",
+      "source_paragraph": 1,
+      "example_en": "Lately, I've realized that improving my English isn't just about grammar; it's about choosing language that truly represents who I am.",
+      "explanation_es": "Have realized conecta una comprensión alcanzada con su relevancia actual."
+    },
+    {
+      "name": "What-cleft with stance verb",
+      "source_paragraph": 6,
+      "example_en": "What I used to regard as merely polishing a sentence now strikes me as a decision about how much distance, certainty, or solidarity I wish to convey.",
+      "explanation_es": "What I used to regard ... now strikes me as contrapone dos interpretaciones."
+    },
+    {
+      "name": "Modal passive for tentative feedback",
+      "source_paragraph": 7,
+      "example_en": "When giving feedback, I might say, “That approach could be improved,” rather than blunt criticism, to keep the conversation positive.",
+      "explanation_es": "Could be improved matiza una crítica sin identificar explícitamente a quien debe actuar."
+    },
+    {
+      "name": "Whether ... or",
+      "source_paragraph": 10,
+      "example_en": "For instance, moving an adverb or changing the stress can alter whether a remark sounds sincere, tentative, or quietly skeptical.",
+      "explanation_es": "Whether ... or organiza interpretaciones alternativas de una misma observación."
+    },
+    {
+      "name": "Negative assumption and embedded question",
+      "source_paragraph": 11,
+      "example_en": "When a colleague calls a difficult proposal interesting, I no longer assume enthusiasm; I ask what, specifically, they find promising or unresolved.",
+      "explanation_es": "No longer assume revisa una inferencia; what they find introduce una pregunta indirecta."
+    },
+    {
+      "name": "Far from + -ing",
+      "source_paragraph": 14,
+      "example_en": "Far from making me less authentic, adapting my language thoughtfully allows me to express the same conviction without imposing the same tone on every listener.",
+      "explanation_es": "Far from making rechaza una interpretación antes de formular otra."
+    },
+    {
+      "name": "Inverted third conditional",
+      "source_paragraph": 16,
+      "example_en": "Had I taken the comment at face value, I might have missed an invitation to discuss the concern that had remained politely unspoken.",
+      "explanation_es": "Had I taken expresa una condición pasada irreal y might have missed su posible consecuencia."
+    },
+    {
+      "name": "Inversion after not until",
+      "source_paragraph": 17,
+      "example_en": "Not until I began attending to those small shifts in emphasis did I appreciate how a familiar expression could carry an unfamiliar intention.",
+      "explanation_es": "Not until ... did I appreciate retrasa el reconocimiento y enfatiza la condición previa."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "improving my English isn't just about grammar",
+      "meaning_es": "mejorar mi inglés no se trata solo de gramática",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "shifting my register",
+      "meaning_es": "cambiar mi registro",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "balance is key",
+      "meaning_es": "el equilibrio es fundamental",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "strikes me as",
+      "meaning_es": "me parece o lo percibo como",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "how much distance",
+      "meaning_es": "cuánta distancia",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I risk sounding distant",
+      "meaning_es": "en riesgo de sonar distante",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "at face value",
+      "meaning_es": "literalmente, sin buscar un significado implícito",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "Far from making me less authentic",
+      "meaning_es": "lejos de hacerme menos auténtico",
+      "source_paragraph": 14
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Lately, I've realized that improving my",
+              "English isn't just about grammar; it's",
+              "about choosing language that truly represents",
+              "who I am."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "When giving feedback, I might",
+              "say, “That approach could be",
+              "improved,” rather than blunt criticism,",
+              "to keep the conversation positive."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "In conversations, I aim to",
+              "listen actively and mirror the",
+              "other’s style subtly to build",
+              "rapport naturally."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-001",
+    "number": "001",
+    "title_en": "Improving My English",
+    "title_es": "Mejorando mi inglés",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Reflexión sobre identidad y comunicación auténtica",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect with realization",
+      "What-cleft with stance verb",
+      "Modal passive for tentative feedback",
+      "Whether ... or",
+      "Negative assumption and embedded question",
+      "Far from + -ing",
+      "Inverted third conditional",
+      "Inversion after not until"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

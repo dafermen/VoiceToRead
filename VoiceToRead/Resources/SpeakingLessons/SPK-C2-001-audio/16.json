@@ -1,0 +1,144 @@
+{
+  "text": "Had I taken the comment at face value, I might have missed an invitation to discuss the concern that had remained politely unspoken.",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 4,
+      "length": 1,
+      "start": 0.46000000834465027,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 6,
+      "length": 5,
+      "start": 0.8399999737739563,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.059999942779541,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.3200000524520874,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.7599999904632568,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.200000047683716,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.5399999618530273,
+      "end": 3.0
+    },
+    {
+      "location": 39,
+      "length": 1,
+      "start": 3.5199999809265137,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.680000066757202,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.9000000953674316,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 52,
+      "length": 6,
+      "start": 4.340000152587891,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.340000152587891,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 62,
+      "length": 10,
+      "start": 4.679999828338623,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.099999904632568,
+      "end": 5.5
+    },
+    {
+      "location": 76,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.880000114440918,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 6.099999904632568,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.579999923706055,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 101,
+      "length": 3,
+      "start": 6.860000133514404,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 105,
+      "length": 8,
+      "start": 7.059999942779541,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 114,
+      "length": 8,
+      "start": 7.400000095367432,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 123,
+      "length": 8,
+      "start": 8.039999961853027,
+      "end": 8.9399995803833
+    }
+  ]
+}

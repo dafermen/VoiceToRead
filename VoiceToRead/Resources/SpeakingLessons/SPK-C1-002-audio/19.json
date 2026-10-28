@@ -1,0 +1,78 @@
+{
+  "text": "This interview reaffirmed my commitment to continuous improvement and purposeful career development.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.47999998927116394,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 15,
+      "length": 10,
+      "start": 1.0399999618530273,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 26,
+      "length": 2,
+      "start": 2.0999999046325684,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 29,
+      "length": 10,
+      "start": 2.5199999809265137,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.880000114440918,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 43,
+      "length": 10,
+      "start": 3.4000000953674316,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 54,
+      "length": 11,
+      "start": 4.099999904632568,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.78000020980835,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 70,
+      "length": 10,
+      "start": 5.460000038146973,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.159999847412109,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 88,
+      "length": 11,
+      "start": 6.539999961853027,
+      "end": 7.019999980926514
+    }
+  ]
+}

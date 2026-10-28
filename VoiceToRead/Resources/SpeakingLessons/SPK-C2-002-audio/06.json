@@ -1,0 +1,132 @@
+{
+  "text": "I acknowledged the gap directly, then distinguished the circumstances I could explain from the assumptions I would rather not leave unexamined.",
+  "duration": 10.270000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 12,
+      "start": 0.4399999976158142,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.0800000429153442,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 23,
+      "length": 8,
+      "start": 1.7400000095367432,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 3.119999885559082,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 38,
+      "length": 13,
+      "start": 3.299999952316284,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.9000000953674316,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 56,
+      "length": 13,
+      "start": 4.400000095367432,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 70,
+      "length": 1,
+      "start": 4.900000095367432,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 5.320000171661377,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 5.480000019073486,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.039999961853027,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 91,
+      "length": 3,
+      "start": 6.639999866485596,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 95,
+      "length": 11,
+      "start": 6.960000038146973,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 107,
+      "length": 1,
+      "start": 7.300000190734863,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 109,
+      "length": 5,
+      "start": 7.639999866485596,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 115,
+      "length": 6,
+      "start": 7.800000190734863,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 122,
+      "length": 3,
+      "start": 8.119999885559082,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 126,
+      "length": 5,
+      "start": 8.420000076293945,
+      "end": 8.65999984741211
+    },
+    {
+      "location": 132,
+      "length": 10,
+      "start": 8.65999984741211,
+      "end": 9.359999656677246
+    }
+  ]
+}

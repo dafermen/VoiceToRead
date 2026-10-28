@@ -1,0 +1,114 @@
+{
+  "text": "Notably, the tone and register shift subtly depending on whom I am speaking with, balancing formality and friendliness.",
+  "duration": 10.149999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.3600000143051147,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.7200000286102295,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 22,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 31,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 37,
+      "length": 6,
+      "start": 3.1600000858306885,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 44,
+      "length": 9,
+      "start": 3.7200000286102295,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.519999980926514,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.980000019073486,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 62,
+      "length": 1,
+      "start": 5.260000228881836,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 5.460000038146973,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 67,
+      "length": 8,
+      "start": 5.699999809265137,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.980000019073486,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 82,
+      "length": 9,
+      "start": 7.5,
+      "end": 7.5
+    },
+    {
+      "location": 92,
+      "length": 9,
+      "start": 7.5,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 8.199999809265137,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 106,
+      "length": 12,
+      "start": 8.84000015258789,
+      "end": 9.239999771118164
+    }
+  ]
+}

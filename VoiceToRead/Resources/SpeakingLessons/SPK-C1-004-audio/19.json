@@ -1,0 +1,96 @@
+{
+  "text": "Ultimately, I want to demonstrate that thoughtful innovation benefits both our team and the company.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.2200000286102295,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.559999942779541,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.8200000524520874,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 22,
+      "length": 11,
+      "start": 2.5399999618530273,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.5399999618530273,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 39,
+      "length": 10,
+      "start": 3.0399999618530273,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 50,
+      "length": 10,
+      "start": 3.440000057220459,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 61,
+      "length": 8,
+      "start": 4.099999904632568,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.699999809265137,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.059999942779541,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.539999961853027,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.699999809265137,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.440000057220459,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 92,
+      "length": 7,
+      "start": 6.699999809265137,
+      "end": 6.980000019073486
+    }
+  ]
+}

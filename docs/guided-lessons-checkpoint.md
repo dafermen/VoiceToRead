@@ -108,3 +108,42 @@ original JSON byte identity before publishing the catalog. XCTest adds whole-
 catalog resource checks, distinct-level checks and a B1/B2 filter navigation test.
 Local XCTest/playback verification is unavailable on Windows; Xcode/iPhone checks
 remain necessary for real audio, layout and native-speaker quality assessment.
+
+
+## C1/C2 catalog extension
+
+The library now offers B1, B2, C1 and C2, with five lessons per level. Existing
+B1/B2 lessons and generated media are preserved. Advanced themes:
+
+- C1: Improving My English; A Job Interview; Resolving a Conflict;
+  Defending a Proposal; Discussing Social Change.
+- C2: Improving My English; A Job Interview; Mediating a Negotiation;
+  An Ethical Dilemma; Disagreeing with Tact.
+
+The two shared advanced themes use different narratives. C1 includes practical
+argument, concession, qualification and negotiation of realistic expectations.
+C2 emphasizes register, implicit meaning, reformulation, careful disagreement
+and limits on what can be inferred from tone alone. These are authored learning
+materials targeted at CEFR levels, not a formal CEFR assessment/certification.
+
+Editorial review aligned eight grammar explanations with actual source sentences
+per lesson, including inverted conditionals, focus constructions, fused relative
+clauses and concessive forms. Essential expressions and complete chunked examples
+are checked against their source paragraphs. Problematic overgeneralizations
+about adjective position, directness and reading intentions were replaced.
+
+The new lessons retain twenty English/Spanish paragraphs, eight grammar entries,
+eight expressions, five objectives and three reading rounds. Four AI-generated
+support packs per lesson add French, Korean, Japanese and Simplified Chinese;
+these are labeled and need fluent-speaker review. Accessible themed placeholder
+covers remain until dedicated artwork is provided. There is no new recording,
+scoring, advancement or user-data migration logic.
+
+Offline Marin audio uses the approved 0.85 base speed, existing Normal option,
+word timings and unchanged repeat/shadowing controls. The developer scripts accept
+C1/C2 identifiers. The catalog is only published after full resource validation.
+Expected total: twenty lessons, four hundred audio assets and eighty support packs.
+XCTest resource coverage and level-navigation tests include all four levels;
+these cannot be executed locally on Windows. Xcode/iPhone playback/layout and
+native-speaker editorial checks remain necessary. The API key stays in the
+ignored development .env and is not copied into resources or the iPhone app.

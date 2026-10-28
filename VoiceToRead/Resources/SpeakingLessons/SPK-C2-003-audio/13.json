@@ -1,0 +1,84 @@
+{
+  "text": "I qualify this by emphasizing that adjustments remain possible as new information emerges.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.46000000834465027,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.4600000381469727,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 18,
+      "length": 11,
+      "start": 2.0199999809265137,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.7200000286102295,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 35,
+      "length": 11,
+      "start": 3.180000066757202,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 47,
+      "length": 6,
+      "start": 3.700000047683716,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 54,
+      "length": 8,
+      "start": 4.239999771118164,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.860000133514404,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 5.639999866485596,
+      "end": 6.0
+    },
+    {
+      "location": 70,
+      "length": 11,
+      "start": 6.0,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 82,
+      "length": 7,
+      "start": 6.639999866485596,
+      "end": 7.119999885559082
+    }
+  ]
+}

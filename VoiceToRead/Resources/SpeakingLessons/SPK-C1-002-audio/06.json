@@ -1,0 +1,138 @@
+{
+  "text": "I acknowledged that while one initiative fell short due to unforeseen market changes, the experience reinforced my adaptability and proactive risk management.",
+  "duration": 12.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 2,
+      "length": 12,
+      "start": 0.47999998927116394,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 0.9399999976158142,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 20,
+      "length": 5,
+      "start": 1.4199999570846558,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 30,
+      "length": 10,
+      "start": 2.0199999809265137,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 2.559999942779541,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 2.9200000762939453,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.4200000762939453,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 3.940000057220459,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 59,
+      "length": 10,
+      "start": 4.440000057220459,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 4.860000133514404,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 77,
+      "length": 7,
+      "start": 5.300000190734863,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.380000114440918,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 90,
+      "length": 10,
+      "start": 6.519999980926514,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 101,
+      "length": 10,
+      "start": 7.260000228881836,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 112,
+      "length": 2,
+      "start": 8.100000381469727,
+      "end": 8.5
+    },
+    {
+      "location": 115,
+      "length": 12,
+      "start": 8.5,
+      "end": 9.300000190734863
+    },
+    {
+      "location": 128,
+      "length": 3,
+      "start": 9.300000190734863,
+      "end": 9.859999656677246
+    },
+    {
+      "location": 132,
+      "length": 9,
+      "start": 9.859999656677246,
+      "end": 10.4399995803833
+    },
+    {
+      "location": 142,
+      "length": 4,
+      "start": 10.4399995803833,
+      "end": 10.779999732971191
+    },
+    {
+      "location": 147,
+      "length": 10,
+      "start": 10.779999732971191,
+      "end": 11.220000267028809
+    }
+  ]
+}

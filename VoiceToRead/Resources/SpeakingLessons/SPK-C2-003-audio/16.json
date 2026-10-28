@@ -1,0 +1,102 @@
+{
+  "text": "Before closing, I confirm all understand the next steps and feel comfortable with the plan's adaptability.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 0.5199999809265137,
+      "end": 1.0
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.659999966621399,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.840000033378601,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.2799999713897705,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 30,
+      "length": 10,
+      "start": 2.759999990463257,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 3.200000047683716,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.4000000953674316,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.7200000286102295,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 56,
+      "length": 3,
+      "start": 4.059999942779541,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.639999866485596,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 65,
+      "length": 11,
+      "start": 4.880000114440918,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.440000057220459,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 5.900000095367432,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 86,
+      "length": 6,
+      "start": 6.059999942779541,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 93,
+      "length": 12,
+      "start": 6.559999942779541,
+      "end": 7.199999809265137
+    }
+  ]
+}

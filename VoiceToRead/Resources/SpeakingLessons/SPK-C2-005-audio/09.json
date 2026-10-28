@@ -1,0 +1,120 @@
+{
+  "text": "I also use understatement to soften statements—for instance, replacing “I disagree” with “I see it a bit differently.”",
+  "duration": 10.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 1.100000023841858,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 11,
+      "length": 14,
+      "start": 1.6799999475479126,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 26,
+      "length": 2,
+      "start": 2.4600000381469727,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 36,
+      "length": 10,
+      "start": 3.4600000381469727,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 4.840000152587891,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 61,
+      "length": 9,
+      "start": 6.019999980926514,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 6.480000019073486,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 6.980000019073486,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 7.78000020980835,
+      "end": 8.220000267028809
+    },
+    {
+      "location": 90,
+      "length": 1,
+      "start": 8.220000267028809,
+      "end": 8.979999542236328
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 8.979999542236328,
+      "end": 9.380000114440918
+    },
+    {
+      "location": 96,
+      "length": 2,
+      "start": 9.380000114440918,
+      "end": 9.619999885559082
+    },
+    {
+      "location": 99,
+      "length": 1,
+      "start": 9.619999885559082,
+      "end": 9.84000015258789
+    },
+    {
+      "location": 101,
+      "length": 3,
+      "start": 9.84000015258789,
+      "end": 10.079999923706055
+    },
+    {
+      "location": 105,
+      "length": 11,
+      "start": 10.079999923706055,
+      "end": 10.960000038146973
+    }
+  ]
+}

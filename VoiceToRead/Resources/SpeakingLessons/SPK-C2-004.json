@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-004",
+  "number": 4,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "An Ethical Dilemma",
+    "es": "Un dilema ético"
+  },
+  "category": {
+    "en": "Workplace Communication and Ethics",
+    "es": "Comunicación y ética en el trabajo"
+  },
+  "main_topic": {
+    "en": "Recognizing honest mistakes at work, balancing loyalties, understanding discretion versus concealment; thoughtful reasoning beyond simplistic moral judgments.",
+    "es": "Reconocer errores honestos en el trabajo, equilibrar lealtades, comprender la discreción frente al ocultamiento; razonamiento cuidadoso sin moralismos simplistas."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Persona adulta en oficina reflexionando con expresión seria, documentos y computadora sobre la mesa, ambiente de trabajo profesional.",
+    "prompt": "Photorealistic image of an adult person in an office reflecting seriously, papers and computer on desk, professional workplace setting, natural light, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Reconocer la diferencia entre discreción y ocultamiento.",
+    "Reflexionar sobre lealtades en conflictos éticos laborales.",
+    "Identificar expresiones para suavizar juicios morales.",
+    "Entender estructuras complejas de condicionales para expresar incertidumbre.",
+    "Practicar narración en primera persona con matices pragmáticos."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday, I found myself facing an unexpected ethical dilemma at work, one that left me questioning how best to act.",
+      "es": "Ayer me encontré frente a un dilema ético inesperado en el trabajo, que me hizo cuestionar cuál era la mejor forma de actuar."
+    },
+    {
+      "number": 2,
+      "function": "discovery",
+      "en": "Earlier that day, I noticed a minor but honest mistake in a colleague’s report that could have serious repercussions if left uncorrected.",
+      "es": "Ese mismo día, noté un error pequeño pero honesto en el informe de un compañero que podría tener graves repercusiones si no se corregía."
+    },
+    {
+      "number": 3,
+      "function": "emotion",
+      "en": "I felt torn between protecting our team’s reputation and being transparent with management.",
+      "es": "Me sentí dividido entre proteger la reputación de nuestro equipo y ser transparente con la dirección."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "It wasn’t a matter of right or wrong in simple terms but about navigating competing loyalties and uncertain consequences.",
+      "es": "No se trataba de un asunto simple de correcto o incorrecto, sino de manejar lealtades competidoras y consecuencias inciertas."
+    },
+    {
+      "number": 5,
+      "function": "consideration",
+      "en": "Had I confused discretion with silence, I might have protected everyone's comfort for the moment while leaving the underlying error available to mislead someone later.",
+      "es": "Si hubiera confundido la discreción con el silencio, quizá habría protegido momentáneamente la comodidad de todos, dejando que el error pudiera confundir a alguien después."
+    },
+    {
+      "number": 6,
+      "function": "pragmatic_choice",
+      "en": "So, I carefully reformulated my concerns, emphasizing possibilities rather than accusations when discussing the issue with my manager.",
+      "es": "Así que reformulé cuidadosamente mis inquietudes, enfatizando posibilidades más que acusaciones al hablar del asunto con mi jefe."
+    },
+    {
+      "number": 7,
+      "function": "subtlety",
+      "en": "Rather than understating the possible consequences, I separated what we knew from what we were still checking, so that calm language did not conceal uncertainty.",
+      "es": "En lugar de minimizar las posibles consecuencias, separé lo que sabíamos de lo que aún estábamos comprobando, para que el lenguaje sereno no ocultara la incertidumbre."
+    },
+    {
+      "number": 8,
+      "function": "balancing_act",
+      "en": "This balance helped maintain trust both in my colleague’s integrity and in my commitment to the company’s values.",
+      "es": "Este equilibrio ayudó a mantener la confianza tanto en la integridad de mi compañero como en mi compromiso con los valores de la empresa."
+    },
+    {
+      "number": 9,
+      "function": "uncertainty",
+      "en": "Much as I wanted an immediate reassurance that nobody would be blamed, I could not reasonably ask my manager to promise an outcome before the facts were established.",
+      "es": "Por mucho que quisiera la tranquilidad inmediata de que no se culparía a nadie, no podía pedir razonablemente a mi responsable que prometiera un resultado antes de esclarecer los hechos."
+    },
+    {
+      "number": 10,
+      "function": "personal_growth",
+      "en": "This experience nudged me to consider how often ethical decisions resist clear-cut answers and demand nuanced judgment.",
+      "es": "Esta experiencia me impulsó a pensar que con frecuencia las decisiones éticas no tienen respuestas claras y requieren un juicio matizado."
+    },
+    {
+      "number": 11,
+      "function": "dialogue",
+      "en": "Later, I spoke with my colleague privately, choosing words that respected their efforts while gently suggesting we review the data together.",
+      "es": "Más tarde, hablé con mi compañero en privado, eligiendo palabras que respetaran su esfuerzo y que suave sugirieran revisar juntos los datos."
+    },
+    {
+      "number": 12,
+      "function": "empathy",
+      "en": "I understood it was easy to overlook details under pressure, and I wanted to support, not accuse.",
+      "es": "Entendí que bajo presión es fácil pasar por alto detalles, y quería apoyar, no acusar."
+    },
+    {
+      "number": 13,
+      "function": "result",
+      "en": "Our conversation led to discovering a small transcription error that we corrected before the final submission.",
+      "es": "Nuestra conversación llevó al descubrimiento de un pequeño error de transcripción, que corregimos antes de la entrega final."
+    },
+    {
+      "number": 14,
+      "function": "lesson",
+      "en": "What had initially seemed a choice between loyalty and honesty became a question of how to correct the record promptly while treating the people involved fairly.",
+      "es": "Lo que al principio parecía una elección entre lealtad y honestidad se convirtió en una cuestión de cómo corregir la información con prontitud y tratar justamente a las personas implicadas."
+    },
+    {
+      "number": 15,
+      "function": "principle",
+      "en": "I now see how reformulating concerns and avoiding moral absolutism can calm tensions and foster cooperation.",
+      "es": "Ahora veo cómo reformular inquietudes y evitar el absolutismo moral puede calmar tensiones y fomentar la cooperación."
+    },
+    {
+      "number": 16,
+      "function": "future_intent",
+      "en": "Going forward, I’ll strive to balance honesty with empathy, understanding the human element behind every decision.",
+      "es": "De ahora en adelante, intentaré equilibrar la honestidad con la empatía, comprendiendo el elemento humano detrás de cada decisión."
+    },
+    {
+      "number": 17,
+      "function": "caution",
+      "en": "Only by keeping a clear record of what had been corrected could we ensure that discretion did not quietly become a convenient form of concealment.",
+      "es": "Solo manteniendo un registro claro de lo corregido podíamos asegurarnos de que la discreción no se convirtiera silenciosamente en una forma cómoda de encubrimiento."
+    },
+    {
+      "number": 18,
+      "function": "philosophical",
+      "en": "Ultimately, ethical dilemmas challenge us to reflect beyond rules and consider context, relationships, and possible outcomes.",
+      "es": "En última instancia, los dilemas éticos nos desafían a reflexionar más allá de las reglas y a considerar el contexto, las relaciones y los posibles resultados."
+    },
+    {
+      "number": 19,
+      "function": "summary",
+      "en": "This incident deepened my appreciation for the delicate balance required when honesty intersects with loyalty.",
+      "es": "Este incidente profundizó mi aprecio por el delicado equilibrio que se requiere cuando la honestidad se cruza con la lealtad."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "While not perfect, I believe my nuanced approach helped preserve trust and integrity in a complicated moment.",
+      "es": "Aunque no fue perfecto, creo que mi enfoque matizado ayudó a preservar la confianza y la integridad en un momento complicado."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Appositive noun phrase",
+      "source_paragraph": 1,
+      "example_en": "Yesterday, I found myself facing an unexpected ethical dilemma at work, one that left me questioning how best to act.",
+      "explanation_es": "One that ... retoma dilemma y amplía su efecto sobre la persona."
+    },
+    {
+      "name": "Inverted third conditional",
+      "source_paragraph": 5,
+      "example_en": "Had I confused discretion with silence, I might have protected everyone's comfort for the moment while leaving the underlying error available to mislead someone later.",
+      "explanation_es": "Had I confused introduce una condición irreal pasada; might have protected plantea su posible resultado."
+    },
+    {
+      "name": "Rather than + -ing",
+      "source_paragraph": 7,
+      "example_en": "Rather than understating the possible consequences, I separated what we knew from what we were still checking, so that calm language did not conceal uncertainty.",
+      "explanation_es": "Rather than understating contrasta minimizar el problema con separar hechos e incertidumbre."
+    },
+    {
+      "name": "Concession with much as",
+      "source_paragraph": 9,
+      "example_en": "Much as I wanted an immediate reassurance that nobody would be blamed, I could not reasonably ask my manager to promise an outcome before the facts were established.",
+      "explanation_es": "Much as I wanted reconoce un deseo intenso antes de explicar un límite."
+    },
+    {
+      "name": "Reduced participial clause",
+      "source_paragraph": 11,
+      "example_en": "Later, I spoke with my colleague privately, choosing words that respected their efforts while gently suggesting we review the data together.",
+      "explanation_es": "Choosing words describe cómo se realizó la conversación privada."
+    },
+    {
+      "name": "Fused relative clause as subject",
+      "source_paragraph": 14,
+      "example_en": "What had initially seemed a choice between loyalty and honesty became a question of how to correct the record promptly while treating the people involved fairly.",
+      "explanation_es": "What had initially seemed ... funciona como sujeto de became, sin un sustantivo antecedente; how to correct introduce la cuestión práctica."
+    },
+    {
+      "name": "Inversion after only by",
+      "source_paragraph": 17,
+      "example_en": "Only by keeping a clear record of what had been corrected could we ensure that discretion did not quietly become a convenient form of concealment.",
+      "explanation_es": "Only by keeping ... could we ensure enfoca el medio necesario y cambia el orden del modal y el sujeto."
+    },
+    {
+      "name": "Future intention with will",
+      "source_paragraph": 16,
+      "example_en": "Going forward, I’ll strive to balance honesty with empathy, understanding the human element behind every decision.",
+      "explanation_es": "I will strive expresa un compromiso futuro personal; no garantiza un resultado."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "facing an unexpected ethical dilemma",
+      "meaning_es": "enfrentando un dilema ético inesperado",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "serious repercussions if left uncorrected",
+      "meaning_es": "graves repercusiones si no se corrige",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "torn between protecting",
+      "meaning_es": "dividido entre proteger",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "navigating competing loyalties",
+      "meaning_es": "manejar lealtades competidoras",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "gently suggesting we review the data together",
+      "meaning_es": "sugiriendo suavemente que revisemos los datos juntos",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "correct the record promptly",
+      "meaning_es": "corregir la información con prontitud",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "avoiding moral absolutism can calm tensions",
+      "meaning_es": "evitar el absolutismo moral puede calmar tensiones",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "balance required when honesty intersects with loyalty",
+      "meaning_es": "equilibrio requerido cuando la honestidad se cruza con la lealtad",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Yesterday, I found myself facing",
+              "an unexpected ethical dilemma at",
+              "work, one that left me",
+              "questioning how best to act."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Rather than understating the possible consequences, I",
+              "separated what we knew from what we",
+              "were still checking, so that calm language",
+              "did not conceal uncertainty."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "I now see how",
+              "reformulating concerns and avoiding",
+              "moral absolutism can calm",
+              "tensions and foster cooperation."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-004",
+    "number": "004",
+    "title_en": "An Ethical Dilemma",
+    "title_es": "Un dilema ético",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación y ética en el trabajo",
+    "main_topic_es": "Reconocer errores honestos y equilibrar lealtades",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Appositive noun phrase",
+      "Inverted third conditional",
+      "Rather than + -ing",
+      "Concession with much as",
+      "Reduced participial clause",
+      "Fused relative clause as subject",
+      "Inversion after only by",
+      "Future intention with will"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

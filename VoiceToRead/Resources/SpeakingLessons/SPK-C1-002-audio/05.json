@@ -1,0 +1,150 @@
+{
+  "text": "The interviewer challenged me by inquiring about a time when a project I directed did not meet expectations and how I handled that setback.",
+  "duration": 10.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 4,
+      "length": 11,
+      "start": 0.3199999928474426,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 16,
+      "length": 10,
+      "start": 1.340000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 1.840000033378601,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.240000009536743,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 33,
+      "length": 9,
+      "start": 2.9600000381469727,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.380000114440918,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 49,
+      "length": 1,
+      "start": 3.759999990463257,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.940000057220459,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.21999979019165,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 4.380000114440918,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 4.71999979019165,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 71,
+      "length": 1,
+      "start": 4.960000038146973,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 73,
+      "length": 8,
+      "start": 5.78000020980835,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 5.78000020980835,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.28000020980835,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.539999961853027,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 95,
+      "length": 12,
+      "start": 6.78000020980835,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 7.679999828338623,
+      "end": 8.5
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 8.5,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 116,
+      "length": 1,
+      "start": 8.739999771118164,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 118,
+      "length": 7,
+      "start": 9.239999771118164,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 126,
+      "length": 4,
+      "start": 9.239999771118164,
+      "end": 9.600000381469727
+    },
+    {
+      "location": 131,
+      "length": 7,
+      "start": 9.600000381469727,
+      "end": 10.100000381469727
+    }
+  ]
+}

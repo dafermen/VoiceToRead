@@ -1,0 +1,102 @@
+{
+  "text": "My tutor emphasizes that such limitations are natural and that persistent practice gradually mitigates these obstacles.",
+  "duration": 9.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 3,
+      "length": 5,
+      "start": 0.5400000214576721,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 9,
+      "length": 10,
+      "start": 0.8799999952316284,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.659999966621399,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.559999942779541,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 30,
+      "length": 11,
+      "start": 2.9000000953674316,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.4200000762939453,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.819999933242798,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 4.519999980926514,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 5.019999980926514,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 63,
+      "length": 10,
+      "start": 5.519999980926514,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 5.940000057220459,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 83,
+      "length": 9,
+      "start": 6.619999885559082,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 93,
+      "length": 9,
+      "start": 7.539999961853027,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 8.100000381469727,
+      "end": 8.5600004196167
+    },
+    {
+      "location": 109,
+      "length": 9,
+      "start": 8.5600004196167,
+      "end": 8.819999694824219
+    }
+  ]
+}

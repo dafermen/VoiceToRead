@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-002",
+  "number": 2,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "A Job Interview",
+    "es": "Una entrevista de trabajo"
+  },
+  "category": {
+    "en": "Career and Professional Development",
+    "es": "Carrera y desarrollo profesional"
+  },
+  "main_topic": {
+    "en": "A senior job interview involving challenging follow-up questions, justified achievements, and tactful discussion of expectations.",
+    "es": "Una entrevista de trabajo senior con preguntas difíciles, logros justificados y discusión diplomática de expectativas."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Una sala de entrevista profesional con dos personas: candidato senior y entrevistador sosteniendo notas, ambiente formal.",
+    "prompt": "Realistic editorial photo of a senior job interview, business setting, professional man and interviewer in formal attire, notepads on table, serious tone, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir logros profesionales con precisión y justificación.",
+    "Responder preguntas difíciles con tacto y argumentación compleja.",
+    "Discutir expectativas laborales de forma diplomática y efectiva.",
+    "Leer y repetir un relato coherente y avanzado en inglés.",
+    "Practicar estructuras gramaticales avanzadas en contexto profesional."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Earlier today, I attended an interview for a senior management position that demanded both strategic vision and practical experience.",
+      "es": "Hoy, más temprano, asistí a una entrevista para un puesto de alta dirección que exigía tanto visión estratégica como experiencia práctica."
+    },
+    {
+      "number": 2,
+      "function": "introduction",
+      "en": "The interviewer began by asking about my most significant professional achievements and how they had influenced my career trajectory.",
+      "es": "La persona entrevistadora comenzó preguntando por mis logros profesionales más importantes y cómo habían influido en mi trayectoria."
+    },
+    {
+      "number": 3,
+      "function": "response",
+      "en": "I explained that leading a cross-functional project that increased revenue by twenty percent was a defining moment that honed my leadership and negotiation skills.",
+      "es": "Expliqué que liderar un proyecto transversal que aumentó los ingresos en un veinte por ciento fue un momento definitorio que perfeccionó mis habilidades de liderazgo y negociación."
+    },
+    {
+      "number": 4,
+      "function": "clarification",
+      "en": "When asked how I managed stakeholder conflicts, I detailed my approach of active listening combined with data-driven decision-making, which ultimately unified divergent interests.",
+      "es": "Cuando me preguntaron cómo gestioné los conflictos entre interesados, detallé mi enfoque de escucha activa combinado con una toma de decisiones basada en datos, que finalmente unificó intereses divergentes."
+    },
+    {
+      "number": 5,
+      "function": "follow-up",
+      "en": "The interviewer challenged me by inquiring about a time when a project I directed did not meet expectations and how I handled that setback.",
+      "es": "El entrevistador me desafió preguntando sobre una ocasión en la que un proyecto que dirigí no cumplió con las expectativas y cómo manejé ese revés."
+    },
+    {
+      "number": 6,
+      "function": "reflection",
+      "en": "I acknowledged that while one initiative fell short due to unforeseen market changes, the experience reinforced my adaptability and proactive risk management.",
+      "es": "Reconocí que, aunque una iniciativa no tuvo éxito debido a cambios imprevistos en el mercado, la experiencia reforzó mi adaptabilidad y gestión proactiva de riesgos."
+    },
+    {
+      "number": 7,
+      "function": "strategy",
+      "en": "To mitigate future risks, I elaborated on implementing continuous monitoring processes and fostering cross-team communication.",
+      "es": "Para mitigar riesgos futuros, expliqué haber implementado procesos de monitoreo continuo y fomentar la comunicación entre equipos."
+    },
+    {
+      "number": 8,
+      "function": "expectations",
+      "en": "Turning the conversation towards my expectations, I expressed my interest in a collaborative culture that supports innovation and professional growth.",
+      "es": "Dirigiendo la conversación hacia mis expectativas, expresé mi interés en una cultura colaborativa que apoye la innovación y el crecimiento profesional."
+    },
+    {
+      "number": 9,
+      "function": "negotiation",
+      "en": "When discussing compensation, I explained that I would welcome a conversation about the full package, provided that the responsibilities were clearly defined.",
+      "es": "Al hablar de la remuneración, expliqué que agradecería conversar sobre el paquete completo, siempre que las responsabilidades estuvieran claramente definidas."
+    },
+    {
+      "number": 10,
+      "function": "question",
+      "en": "The interviewer then probed how I envision my role evolving over the next five years within this organization.",
+      "es": "Luego el entrevistador indagó sobre cómo imagino que evolucionaría mi rol en los próximos cinco años dentro de esta organización."
+    },
+    {
+      "number": 11,
+      "function": "vision",
+      "en": "I articulated a vision of continuous leadership development coupled with measurable contributions to the company’s strategic goals.",
+      "es": "Articulé una visión de desarrollo continuo de liderazgo junto con contribuciones medibles a los objetivos estratégicos de la empresa."
+    },
+    {
+      "number": 12,
+      "function": "challenge",
+      "en": "He asked whether I anticipated any challenges in adapting to their corporate environment given my previous experiences.",
+      "es": "Me preguntó si anticipaba algún desafío para adaptarme a su entorno corporativo dado mis experiencias anteriores."
+    },
+    {
+      "number": 13,
+      "function": "adaptation",
+      "en": "I conceded that while the culture might differ, my history of quickly embracing new systems and fostering team cohesion would ease integration.",
+      "es": "Concedí que, aunque la cultura pueda ser diferente, mi historial de adoptar rápidamente nuevos sistemas y fomentar la cohesión del equipo facilitaría la integración."
+    },
+    {
+      "number": 14,
+      "function": "closing",
+      "en": "As the interview concluded, I reiterated my enthusiasm for the role and readiness to contribute meaningfully from day one.",
+      "es": "Al finalizar la entrevista, reiteré mi entusiasmo por el puesto y mi disposición para contribuir de manera significativa desde el primer día."
+    },
+    {
+      "number": 15,
+      "function": "reflection",
+      "en": "Walking out, I felt the exchange challenged me intellectually but also affirmed my preparedness for advanced leadership roles.",
+      "es": "Al salir, sentí que el intercambio me desafió intelectualmente pero también confirmó mi preparación para roles de liderazgo avanzados."
+    },
+    {
+      "number": 16,
+      "function": "realization",
+      "en": "I realized that transparent communication paired with evidence-based arguments is essential in such high-stakes conversations.",
+      "es": "Me di cuenta de que la comunicación transparente combinada con argumentos basados en evidencia es esencial en conversaciones de alto riesgo."
+    },
+    {
+      "number": 17,
+      "function": "anticipation",
+      "en": "Were I to face a similar question again, I would ask which specific concern the interviewer wanted me to address before choosing my example.",
+      "es": "Si volviera a enfrentarme a una pregunta similar, preguntaría qué inquietud concreta quería abordar la persona entrevistadora antes de elegir mi ejemplo."
+    },
+    {
+      "number": 18,
+      "function": "summary",
+      "en": "Ultimately, I am confident that presenting well-substantiated examples and showing adaptability are key to securing senior positions.",
+      "es": "En última instancia, confío en que presentar ejemplos bien fundamentados y mostrar adaptabilidad son claves para asegurar puestos senior."
+    },
+    {
+      "number": 19,
+      "function": "motivation",
+      "en": "This interview reaffirmed my commitment to continuous improvement and purposeful career development.",
+      "es": "Esta entrevista reafirmó mi compromiso con la mejora continua y el desarrollo profesional con propósito."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "I left knowing that thoughtful preparation and eloquent discussion can transform challenging questions into opportunities to impress.",
+      "es": "Salí sabiendo que la preparación cuidadosa y la discusión elocuente pueden transformar preguntas difíciles en oportunidades para impresionar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Defining relative clause",
+      "source_paragraph": 1,
+      "example_en": "Earlier today, I attended an interview for a senior management position that demanded both strategic vision and practical experience.",
+      "explanation_es": "That demanded especifica qué exigía el puesto."
+    },
+    {
+      "name": "Reported question with past perfect",
+      "source_paragraph": 2,
+      "example_en": "The interviewer began by asking about my most significant professional achievements and how they had influenced my career trajectory.",
+      "explanation_es": "Had influenced sitúa la influencia antes de la pregunta relatada."
+    },
+    {
+      "name": "Reduced passive clause",
+      "source_paragraph": 4,
+      "example_en": "When asked how I managed stakeholder conflicts, I detailed my approach of active listening combined with data-driven decision-making, which ultimately unified divergent interests.",
+      "explanation_es": "When asked reduce when I was asked."
+    },
+    {
+      "name": "Concession with while",
+      "source_paragraph": 6,
+      "example_en": "I acknowledged that while one initiative fell short due to unforeseen market changes, the experience reinforced my adaptability and proactive risk management.",
+      "explanation_es": "While reconoce una dificultad antes de explicar su efecto positivo."
+    },
+    {
+      "name": "Provided that",
+      "source_paragraph": 9,
+      "example_en": "When discussing compensation, I explained that I would welcome a conversation about the full package, provided that the responsibilities were clearly defined.",
+      "explanation_es": "Provided that introduce una condición necesaria para la conversación propuesta."
+    },
+    {
+      "name": "Embedded question",
+      "source_paragraph": 12,
+      "example_en": "He asked whether I anticipated any challenges in adapting to their corporate environment given my previous experiences.",
+      "explanation_es": "Whether introduce una pregunta indirecta con orden de afirmación."
+    },
+    {
+      "name": "Conditional inversion with were",
+      "source_paragraph": 17,
+      "example_en": "Were I to face a similar question again, I would ask which specific concern the interviewer wanted me to address before choosing my example.",
+      "explanation_es": "Were I to face equivale a if I were to face, seguido de would."
+    },
+    {
+      "name": "Gerunds as coordinated subjects",
+      "source_paragraph": 18,
+      "example_en": "Ultimately, I am confident that presenting well-substantiated examples and showing adaptability are key to securing senior positions.",
+      "explanation_es": "Presenting y showing forman el sujeto compuesto de are."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "attended an interview",
+      "meaning_es": "asistí a una entrevista",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "defining moment",
+      "meaning_es": "momento definitorio",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "data-driven decision-making",
+      "meaning_es": "toma de decisiones basada en datos",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "handled that setback",
+      "meaning_es": "manejar ese revés",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "turning the conversation towards",
+      "meaning_es": "dirigiendo la conversación hacia",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "would welcome a conversation",
+      "meaning_es": "agradecería poder conversar",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "embracing new systems",
+      "meaning_es": "adoptar nuevos sistemas",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "transform challenging questions into opportunities",
+      "meaning_es": "transformar preguntas difíciles en oportunidades",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por pausas de entrenamiento. Las barras no indican puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Earlier today, I attended an",
+              "interview for a senior management",
+              "position that demanded both strategic",
+              "vision and practical experience."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "To mitigate future risks,",
+              "I elaborated on implementing",
+              "continuous monitoring processes and",
+              "fostering cross-team communication."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "Walking out, I felt the",
+              "exchange challenged me intellectually but",
+              "also affirmed my preparedness for",
+              "advanced leadership roles."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee todos los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-002",
+    "number": "002",
+    "title_en": "A Job Interview",
+    "title_es": "Una entrevista de trabajo",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Carrera y desarrollo profesional",
+    "main_topic_es": "Entrevista senior con discusión delicada de expectativas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Defining relative clause",
+      "Reported question with past perfect",
+      "Reduced passive clause",
+      "Concession with while",
+      "Provided that",
+      "Embedded question",
+      "Conditional inversion with were",
+      "Gerunds as coordinated subjects"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

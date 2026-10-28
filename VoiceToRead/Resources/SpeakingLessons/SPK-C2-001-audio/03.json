@@ -1,0 +1,132 @@
+{
+  "text": "When I speak too formally, I risk sounding distant; if I'm too casual, I might seem careless, so balance is key.",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.2199999988079071
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.2199999988079071,
+      "end": 0.5
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.5,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 17,
+      "length": 8,
+      "start": 1.159999966621399,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.059999942779541,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.240000009536743,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.559999942779541,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 3.0199999809265137,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 4.460000038146973,
+      "end": 4.5
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 4.5,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.739999771118164,
+      "end": 5.0
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 5.0,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 71,
+      "length": 1,
+      "start": 5.940000057220459,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 6.079999923706055,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 6.320000171661377,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 84,
+      "length": 8,
+      "start": 6.619999885559082,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 94,
+      "length": 2,
+      "start": 7.760000228881836,
+      "end": 8.0
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 8.0,
+      "end": 8.5
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 8.5,
+      "end": 8.960000038146973
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 8.960000038146973,
+      "end": 9.239999771118164
+    }
+  ]
+}

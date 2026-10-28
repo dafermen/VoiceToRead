@@ -202,6 +202,10 @@ final class HomeScreenTests: XCTestCase {
         levels.buttons["B2"].tap()
         XCTAssertTrue(app.buttons["guidedLesson-SPK-B2-001"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["guidedLesson-SPK-B1-001"].exists)
+        levels.buttons["C1"].tap()
+        XCTAssertTrue(app.buttons["guidedLesson-SPK-C1-001"].waitForExistence(timeout: 5))
+        levels.buttons["C2"].tap()
+        XCTAssertTrue(app.buttons["guidedLesson-SPK-C2-001"].waitForExistence(timeout: 5))
         levels.buttons["B1"].tap()
         let lesson = app.buttons["guidedLesson-SPK-B1-001"]
         XCTAssertTrue(lesson.waitForExistence(timeout: 5))

@@ -1,0 +1,114 @@
+{
+  "text": "For instance, the manual entry of data has led to mistakes that delayed project deadlines in the past.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.4399999976158142,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.2999999523162842,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.559999942779541,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 1.9800000190734863,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.4200000762939453,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.940000057220459,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.2799999713897705,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.440000057220459,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 4.119999885559082,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.119999885559082,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 4.480000019073486,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 4.840000152587891,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 80,
+      "length": 9,
+      "start": 5.480000019073486,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 5.920000076293945,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 6.28000020980835,
+      "end": 6.659999847412109
+    }
+  ]
+}

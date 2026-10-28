@@ -1,0 +1,144 @@
+{
+  "text": "Only when I stopped treating every hesitation as a failure did I begin to notice how much more freely I could express myself.",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.36000001430511475,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 10,
+      "length": 1,
+      "start": 0.5600000023841858,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 0.8199999928474426,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 1.159999966621399,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 1.559999942779541,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 35,
+      "length": 10,
+      "start": 2.059999942779541,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 2.559999942779541,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 49,
+      "length": 1,
+      "start": 2.9200000762939453,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 3.259999990463257,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 3.5399999618530273,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 63,
+      "length": 1,
+      "start": 4.159999847412109,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 4.380000114440918,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 4.739999771118164,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 74,
+      "length": 6,
+      "start": 5.460000038146973,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 81,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 85,
+      "length": 4,
+      "start": 6.019999980926514,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.300000190734863,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 95,
+      "length": 6,
+      "start": 6.639999866485596,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 102,
+      "length": 1,
+      "start": 6.900000095367432,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 104,
+      "length": 5,
+      "start": 7.239999771118164,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 110,
+      "length": 7,
+      "start": 7.400000095367432,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 118,
+      "length": 6,
+      "start": 7.78000020980835,
+      "end": 8.34000015258789
+    }
+  ]
+}

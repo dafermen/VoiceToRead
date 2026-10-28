@@ -1,0 +1,78 @@
+{
+  "text": "This softens the tone, reducing defensiveness and opening space for constructive dialogue.",
+  "duration": 8.680000305175781,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 5,
+      "length": 7,
+      "start": 0.7599999904632568,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.2999999523162842,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.940000057220459,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 23,
+      "length": 8,
+      "start": 3.0799999237060547,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 32,
+      "length": 13,
+      "start": 3.0799999237060547,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 4.760000228881836,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 5.179999828338623,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 5.78000020980835,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 68,
+      "length": 12,
+      "start": 6.239999771118164,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 81,
+      "length": 8,
+      "start": 6.940000057220459,
+      "end": 7.559999942779541
+    }
+  ]
+}

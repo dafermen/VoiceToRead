@@ -1,0 +1,144 @@
+{
+  "text": "What holds me back is not a lack of commitment but the belief that every sentence must be flawless before I say it.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.5799999833106995,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.9599999785423279,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.2200000286102295,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.5399999618530273,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.8200000524520874,
+      "end": 2.0
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.0,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.2200000286102295,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.4200000762939453,
+      "end": 3.0
+    },
+    {
+      "location": 36,
+      "length": 10,
+      "start": 3.0,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.0199999809265137,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.799999952316284,
+      "end": 4.0
+    },
+    {
+      "location": 55,
+      "length": 6,
+      "start": 4.0,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 4.699999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 73,
+      "length": 8,
+      "start": 5.199999809265137,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 5.619999885559082,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.940000057220459,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 90,
+      "length": 8,
+      "start": 6.320000171661377,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 99,
+      "length": 6,
+      "start": 6.519999980926514,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 106,
+      "length": 1,
+      "start": 7.019999980926514,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 7.260000228881836,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 112,
+      "length": 2,
+      "start": 7.440000057220459,
+      "end": 7.699999809265137
+    }
+  ]
+}

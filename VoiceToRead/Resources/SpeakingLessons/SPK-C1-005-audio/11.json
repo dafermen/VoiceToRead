@@ -1,0 +1,84 @@
+{
+  "text": "Most participants seemed willing to consider flexible solutions that accommodate various needs fairly.",
+  "duration": 6.860000133514404,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 12,
+      "start": 0.5400000214576721,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.2000000476837158,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 1.600000023841858,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 1.9800000190734863,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 2.6600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 45,
+      "length": 8,
+      "start": 2.6600000858306885,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 54,
+      "length": 9,
+      "start": 3.3399999141693115,
+      "end": 4.0
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 69,
+      "length": 11,
+      "start": 4.639999866485596,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 5.159999847412109,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 5.71999979019165,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 95,
+      "length": 6,
+      "start": 6.059999942779541,
+      "end": 6.5
+    }
+  ]
+}

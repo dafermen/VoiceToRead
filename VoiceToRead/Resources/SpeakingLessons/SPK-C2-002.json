@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-002",
+  "number": 2,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "A Job Interview",
+    "es": "Una entrevista de trabajo"
+  },
+  "category": {
+    "en": "Professional Communication",
+    "es": "Comunicación profesional"
+  },
+  "main_topic": {
+    "en": "Handling ambiguity, implicit concerns, tone changes, and reformulating sensitive questions in executive interviews.",
+    "es": "Manejo de ambigüedad, preocupaciones implícitas, cambios de tono y reformulación de preguntas sensibles en entrevistas ejecutivas."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos personas sentadas en una sala moderna de oficina, una entrevistando a la otra con lenguaje corporal atento y profesional.",
+    "prompt": "Realistic modern office interview scene between two adults, one interviewing the other, subtle body language indicating tension and thoughtfulness, natural lighting, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Reconocer señales implícitas y cambios de tono en entrevistas ejecutivas.",
+    "Reformular preguntas sensibles de manera natural y profesional.",
+    "Interpretar ambigüedades y responder con precisión en contextos formales.",
+    "Practicar la interacción con matices y subtexto en inglés americano.",
+    "Mejorar la fluidez y el vocabulario para entrevistas ejecutivas complejas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today, I was invited to an executive interview for a senior management position at a growing tech company.",
+      "es": "Hoy me invitaron a una entrevista ejecutiva para un puesto de alta gerencia en una empresa tecnológica en crecimiento."
+    },
+    {
+      "number": 2,
+      "function": "initial_observation",
+      "en": "From the start, I sensed a polite but reserved tone from the interviewer, hinting at underlying expectations beyond the formal questions.",
+      "es": "Desde el inicio, percibí un tono educado pero reservado de parte del entrevistador, sugiriendo expectativas subyacentes más allá de las preguntas formales."
+    },
+    {
+      "number": 3,
+      "function": "implicit_concern",
+      "en": "One question struck me as indirectly addressing my adaptability without explicitly naming it, emphasizing my reaction to uncertain situations.",
+      "es": "Una pregunta me llamó la atención por abordar indirectamente mi adaptabilidad sin nombrarla explícitamente, enfatizando mi reacción ante situaciones inciertas."
+    },
+    {
+      "number": 4,
+      "function": "response_strategy",
+      "en": "I chose to highlight examples of flexibility while carefully remaining concise and avoiding over-explaining, respecting professional brevity.",
+      "es": "Decidí resaltar ejemplos de flexibilidad, permaneciendo conciso y evitando explicaciones excesivas, respetando la brevedad profesional."
+    },
+    {
+      "number": 5,
+      "function": "sensitive_question",
+      "en": "At one point, the interviewer asked about gaps in my employment history, phrasing it in a way that implied potential concerns about commitment.",
+      "es": "En un momento, el entrevistador preguntó sobre lagunas en mi historial laboral, formulándolo de modo que implicaba posibles dudas sobre mi compromiso."
+    },
+    {
+      "number": 6,
+      "function": "reformulation",
+      "en": "I acknowledged the gap directly, then distinguished the circumstances I could explain from the assumptions I would rather not leave unexamined.",
+      "es": "Reconocí directamente el período sin empleo y después distinguí las circunstancias que podía explicar de las suposiciones que prefería no dejar sin examinar."
+    },
+    {
+      "number": 7,
+      "function": "tone_shift",
+      "en": "Midway, I noticed the interviewer’s tone shift to a more inquisitive, almost challenging style, testing my composure under subtle pressure.",
+      "es": "A mitad de la entrevista noté que el tono del entrevistador cambió a uno más inquisitivo, casi desafiante, poniendo a prueba mi compostura bajo una presión sutil."
+    },
+    {
+      "number": 8,
+      "function": "adaptation",
+      "en": "I adjusted by slowing my speech, using measured pauses, and carefully choosing words that conveyed confidence without defensiveness.",
+      "es": "Me adapté reduciendo la velocidad al hablar, usando pausas medidas y escogiendo palabras que transmitieran confianza sin defensividad."
+    },
+    {
+      "number": 9,
+      "function": "nuance",
+      "en": "Rather than glossing over a leadership failure, I described what I had misjudged, how I had corrected course, and which limits I still recognized.",
+      "es": "En lugar de pasar por alto un fracaso de liderazgo, describí qué había valorado mal, cómo había corregido el rumbo y qué limitaciones seguía reconociendo."
+    },
+    {
+      "number": 10,
+      "function": "question_reformulation",
+      "en": "Asked what I expected to earn, I said I would welcome discussing a range once we had established the scope of the role, rather than sidestepping the question altogether.",
+      "es": "Al preguntarme cuánto esperaba ganar, dije que agradecería hablar de un rango una vez definido el alcance del puesto, en lugar de eludir la pregunta por completo."
+    },
+    {
+      "number": 11,
+      "function": "interpersonal_stakes",
+      "en": "Throughout, I felt the stakes of every answer increased, knowing my phrasing might influence perceptions far beyond the interview itself.",
+      "es": "Durante toda la entrevista sentí que la importancia de cada respuesta aumentaba, sabiendo que mi forma de expresarme podría influir en percepciones que trascendían la entrevista misma."
+    },
+    {
+      "number": 12,
+      "function": "emotional_control",
+      "en": "Had I mistaken every pause for disapproval, I might have filled the silence with explanations that answered a concern the interviewer had never actually expressed.",
+      "es": "Si hubiera interpretado cada pausa como desaprobación, quizá habría llenado el silencio con explicaciones que respondían a una inquietud que la persona entrevistadora nunca había expresado."
+    },
+    {
+      "number": 13,
+      "function": "positive_reinforcement",
+      "en": "It was the connection between my examples and their unresolved priorities, rather than the polish of my delivery alone, that seemed to move the conversation forward.",
+      "es": "Fue la conexión entre mis ejemplos y sus prioridades aún sin resolver, más que la soltura de mi exposición por sí sola, lo que pareció hacer avanzar la conversación."
+    },
+    {
+      "number": 14,
+      "function": "closing_strategy",
+      "en": "When closing, I summarized my key strengths succinctly and invited questions, showing openness and confidence without arrogance.",
+      "es": "Al cerrar, resumí mis fortalezas clave de forma sucinta e invité a preguntas, mostrando apertura y confianza sin arrogancia."
+    },
+    {
+      "number": 15,
+      "function": "mutual_understanding",
+      "en": "The interviewer offered subtle nods and slight smiles, signaling gradual rapport building despite the earlier tension.",
+      "es": "El entrevistador ofreció leves asentimientos y pequeñas sonrisas, señalando una conexión gradual a pesar de la tensión inicial."
+    },
+    {
+      "number": 16,
+      "function": "follow_up",
+      "en": "After the formal part, casual conversation focused on industry trends allowed me to relax and demonstrate knowledge comfortably.",
+      "es": "Después de la parte formal, la conversación casual sobre tendencias del sector me permitió relajarme y mostrar conocimientos con naturalidad."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "Reflecting on the experience, I realized that handling ambiguity and reading tone are as crucial as the words spoken.",
+      "es": "Reflexionando sobre la experiencia, me di cuenta de que manejar la ambigüedad y leer el tono son tan cruciales como las palabras dichas."
+    },
+    {
+      "number": 18,
+      "function": "lesson_learned",
+      "en": "What mattered was making a sensitive issue discussable without pretending that either of us could infer the other's intentions from tone alone.",
+      "es": "Lo importante era poder hablar de un asunto delicado sin fingir que cualquiera de los dos podía deducir las intenciones del otro únicamente por el tono."
+    },
+    {
+      "number": 19,
+      "function": "skill_development",
+      "en": "Going forward, I plan to practice these nuanced communication strategies to excel in future high-stakes interviews.",
+      "es": "De ahora en adelante, planeo practicar estas estrategias de comunicación matizada para destacar en futuras entrevistas de alta exigencia."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Ultimately, mastering subtlety, tone, and reformulation made me feel better prepared to navigate complex professional conversations with confidence.",
+      "es": "En definitiva, dominar la sutileza, el tono y la reformulación me hizo sentir mejor preparado para manejar conversaciones profesionales complejas con confianza."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Participial clause",
+      "source_paragraph": 2,
+      "example_en": "From the start, I sensed a polite but reserved tone from the interviewer, hinting at underlying expectations beyond the formal questions.",
+      "explanation_es": "Hinting at añade una posible interpretación del tono sin convertirla en un hecho demostrado."
+    },
+    {
+      "name": "Would rather + bare infinitive",
+      "source_paragraph": 6,
+      "example_en": "I acknowledged the gap directly, then distinguished the circumstances I could explain from the assumptions I would rather not leave unexamined.",
+      "explanation_es": "Would rather not leave expresa una preferencia sobre cómo tratar las suposiciones."
+    },
+    {
+      "name": "Rather than + -ing",
+      "source_paragraph": 9,
+      "example_en": "Rather than glossing over a leadership failure, I described what I had misjudged, how I had corrected course, and which limits I still recognized.",
+      "explanation_es": "Rather than glossing over contrasta una respuesta evitada con una explicación concreta."
+    },
+    {
+      "name": "Reduced passive clause",
+      "source_paragraph": 10,
+      "example_en": "Asked what I expected to earn, I said I would welcome discussing a range once we had established the scope of the role, rather than sidestepping the question altogether.",
+      "explanation_es": "Asked what I expected equivale a when I was asked what I expected."
+    },
+    {
+      "name": "Inverted third conditional",
+      "source_paragraph": 12,
+      "example_en": "Had I mistaken every pause for disapproval, I might have filled the silence with explanations that answered a concern the interviewer had never actually expressed.",
+      "explanation_es": "Had I mistaken y might have filled plantean una interpretación pasada que no se produjo."
+    },
+    {
+      "name": "It-cleft sentence",
+      "source_paragraph": 13,
+      "example_en": "It was the connection between my examples and their unresolved priorities, rather than the polish of my delivery alone, that seemed to move the conversation forward.",
+      "explanation_es": "It was ... that enfoca qué hizo avanzar la conversación, frente a una alternativa."
+    },
+    {
+      "name": "What-cleft with epistemic limit",
+      "source_paragraph": 18,
+      "example_en": "What mattered was making a sensitive issue discussable without pretending that either of us could infer the other's intentions from tone alone.",
+      "explanation_es": "What mattered ... without pretending that combina foco y un límite sobre lo que se puede inferir."
+    },
+    {
+      "name": "Gerund phrases as subject",
+      "source_paragraph": 17,
+      "example_en": "Reflecting on the experience, I realized that handling ambiguity and reading tone are as crucial as the words spoken.",
+      "explanation_es": "Handling ambiguity y reading tone forman el sujeto de are."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "polite but reserved tone",
+      "meaning_es": "tono educado pero reservado",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "indirectly addressing my adaptability",
+      "meaning_es": "abordar indirectamente mi adaptabilidad",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "carefully remaining concise",
+      "meaning_es": "permanecer conciso cuidadosamente",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "leave unexamined",
+      "meaning_es": "dejar sin examinar",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "shift to a more inquisitive",
+      "meaning_es": "cambio a un estilo más inquisitivo",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "choosing words that conveyed confidence",
+      "meaning_es": "escoger palabras que transmitían confianza",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "glossing over",
+      "meaning_es": "pasar por alto o tratar superficialmente",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "sidestepping the question",
+      "meaning_es": "eludir la pregunta",
+      "source_paragraph": 10
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Today, I was invited to",
+              "an executive interview for a",
+              "senior management position at a",
+              "growing tech company."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Midway, I noticed the interviewer’s",
+              "tone shift to a more",
+              "inquisitive, almost challenging style, testing",
+              "my composure under subtle pressure."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "The interviewer offered subtle",
+              "nods and slight smiles,",
+              "signaling gradual rapport building",
+              "despite the earlier tension."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-002",
+    "number": "002",
+    "title_en": "A Job Interview",
+    "title_es": "Una entrevista de trabajo",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación profesional",
+    "main_topic_es": "Manejo de ambigüedad y reformulación en entrevistas ejecutivas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Participial clause",
+      "Would rather + bare infinitive",
+      "Rather than + -ing",
+      "Reduced passive clause",
+      "Inverted third conditional",
+      "It-cleft sentence",
+      "What-cleft with epistemic limit",
+      "Gerund phrases as subject"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

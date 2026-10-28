@@ -1,0 +1,120 @@
+{
+  "text": "While immersive methods promise rapid progress, I realize that they may not suit my current schedule and energy levels.",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.8799999952316284,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.2999999523162842,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 1.8600000143051147,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.4000000953674316,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 2.880000114440918,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 48,
+      "length": 1,
+      "start": 4.099999904632568,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 4.119999885559082,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.760000228881836,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.920000076293945,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.099999904632568,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.400000095367432,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 81,
+      "length": 2,
+      "start": 5.599999904632568,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 84,
+      "length": 7,
+      "start": 5.900000095367432,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 92,
+      "length": 8,
+      "start": 6.239999771118164,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 101,
+      "length": 3,
+      "start": 6.619999885559082,
+      "end": 7.0
+    },
+    {
+      "location": 105,
+      "length": 6,
+      "start": 7.0,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 112,
+      "length": 6,
+      "start": 7.340000152587891,
+      "end": 7.78000020980835
+    }
+  ]
+}

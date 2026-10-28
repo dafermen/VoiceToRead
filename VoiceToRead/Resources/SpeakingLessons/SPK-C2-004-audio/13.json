@@ -1,0 +1,102 @@
+{
+  "text": "Our conversation led to discovering a small transcription error that we corrected before the final submission.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 12,
+      "start": 0.36000001430511475,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.159999966621399,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 24,
+      "length": 11,
+      "start": 2.319999933242798,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 36,
+      "length": 1,
+      "start": 2.319999933242798,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.640000104904175,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 44,
+      "length": 13,
+      "start": 2.9800000190734863,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 3.5199999809265137,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 3.9800000190734863,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.539999961853027,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 4.820000171661377,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 82,
+      "length": 6,
+      "start": 5.260000228881836,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 5.659999847412109,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 93,
+      "length": 5,
+      "start": 5.900000095367432,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 99,
+      "length": 10,
+      "start": 6.300000190734863,
+      "end": 6.639999866485596
+    }
+  ]
+}

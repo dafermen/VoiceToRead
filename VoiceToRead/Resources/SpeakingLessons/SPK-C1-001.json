@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-001",
+  "number": 1,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Improving My English",
+    "es": "Mejorando mi inglés"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Evaluate competing learning strategies, acknowledge limitations and negotiate realistic goals with a tutor.",
+    "es": "Evaluar estrategias de aprendizaje competidoras, reconocer limitaciones y negociar metas realistas con un tutor."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Persona adulta discutiendo estrategias de aprendizaje de inglés con un tutor en una sala de estudio moderna.",
+    "prompt": "A realistic editorial photograph of an adult learner and an English tutor seated at a modern study table discussing learning strategies, notebooks and laptop open, natural light, modern educational environment, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comprender y evaluar diferentes estrategias para mejorar el inglés.",
+    "Reconocer las limitaciones personales en el aprendizaje.",
+    "Negociar y establecer objetivos realistas con un tutor.",
+    "Argumentar ideas con precisión y usar gramática avanzada.",
+    "Practicar la lectura y expresión oral mediante una narrativa auténtica."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Lately, I've been reflecting on how best to improve my English and debating between various learning strategies with my tutor.",
+      "es": "Últimamente he estado reflexionando sobre la mejor forma de mejorar mi inglés y debatiendo entre varias estrategias de aprendizaje con mi tutor."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "While immersive methods promise rapid progress, I realize that they may not suit my current schedule and energy levels.",
+      "es": "Aunque los métodos inmersivos prometen un progreso rápido, me doy cuenta de que pueden no adaptarse a mi horario y niveles de energía actuales."
+    },
+    {
+      "number": 3,
+      "function": "experience",
+      "en": "In the past, I focused exclusively on grammar exercises, but that approach, albeit thorough, felt monotonous and less applicable to real conversations.",
+      "es": "En el pasado, me concentré exclusivamente en ejercicios de gramática, pero ese enfoque, aunque completo, parecía monótono y menos aplicable a conversaciones reales."
+    },
+    {
+      "number": 4,
+      "function": "challenge",
+      "en": "My tutor suggested incorporating spontaneous speaking practice, yet I must admit that the unpredictability of such sessions sometimes overwhelms me.",
+      "es": "Mi tutor sugirió incorporar práctica de habla espontánea, sin embargo debo admitir que la imprevisibilidad de esas sesiones a veces me abruma."
+    },
+    {
+      "number": 5,
+      "function": "detail",
+      "en": "I often find myself hesitating because I strive for perfection, which ironically hinders fluid communication.",
+      "es": "A menudo me encuentro dudando porque busco la perfección, lo cual irónicamente dificulta una comunicación fluida."
+    },
+    {
+      "number": 6,
+      "function": "cause",
+      "en": "What holds me back is not a lack of commitment but the belief that every sentence must be flawless before I say it.",
+      "es": "Lo que me frena no es la falta de compromiso, sino la creencia de que cada oración debe ser impecable antes de decirla."
+    },
+    {
+      "number": 7,
+      "function": "past_habit",
+      "en": "Before meeting my tutor, I used to rely heavily on written exercises only, believing that theory alone would suffice.",
+      "es": "Antes de conocer a mi tutor, solía depender mucho sólo de ejercicios escritos, creyendo que la teoría sería suficiente."
+    },
+    {
+      "number": 8,
+      "function": "change",
+      "en": "Now, I've begun to embrace and practice more dynamic methods including role-plays and listening to podcasts.",
+      "es": "Ahora he comenzado a adoptar y practicar métodos más dinámicos, incluyendo juegos de roles y escuchar podcasts."
+    },
+    {
+      "number": 9,
+      "function": "example",
+      "en": "For instance, last week we simulated a job interview, which challenged me to think on my feet and improved my confidence.",
+      "es": "Por ejemplo, la semana pasada simulamos una entrevista de trabajo, lo que me desafió a pensar rápido y mejoró mi confianza."
+    },
+    {
+      "number": 10,
+      "function": "observation",
+      "en": "Such activities, despite their initial difficulty, have highlighted areas where I can improve, especially in idiomatic expressions.",
+      "es": "Estas actividades, a pesar de su dificultad inicial, han resaltado áreas en las que puedo mejorar, especialmente en expresiones idiomáticas."
+    },
+    {
+      "number": 11,
+      "function": "limitation",
+      "en": "Nevertheless, I recognize that my limited vocabulary sometimes causes me to stall, even during prepared dialogues.",
+      "es": "Sin embargo reconozco que mi vocabulario limitado a veces me hace detenerme, incluso durante diálogos preparados."
+    },
+    {
+      "number": 12,
+      "function": "perspective",
+      "en": "My tutor emphasizes that such limitations are natural and that persistent practice gradually mitigates these obstacles.",
+      "es": "Mi tutor enfatiza que tales limitaciones son naturales y que la práctica persistente gradualmente mitiga estos obstáculos."
+    },
+    {
+      "number": 13,
+      "function": "plan",
+      "en": "Consequently, we've devised a balanced plan including daily vocabulary building and twice-weekly conversation sessions.",
+      "es": "Como resultado, hemos diseñado un plan equilibrado que incluye construcción diaria de vocabulario y sesiones de conversación dos veces por semana."
+    },
+    {
+      "number": 14,
+      "function": "action",
+      "en": "I've committed to maintaining a journal of new words and expressions to reinforce retention and active usage.",
+      "es": "Me he comprometido a mantener un diario de palabras y expresiones nuevas para reforzar la retención y el uso activo."
+    },
+    {
+      "number": 15,
+      "function": "condition",
+      "en": "If I stay disciplined with this routine, I expect my communicative skills will noticeably advance within months.",
+      "es": "Si mantengo la disciplina con esta rutina, espero que mis habilidades comunicativas avancen notablemente en unos meses."
+    },
+    {
+      "number": 16,
+      "function": "strategy",
+      "en": "Additionally, when encountering unfamiliar terms, I plan to discuss them immediately with my tutor to consolidate understanding.",
+      "es": "Además, al encontrar términos desconocidos, planeo discutirlos inmediatamente con mi tutor para consolidar la comprensión."
+    },
+    {
+      "number": 17,
+      "function": "expectation",
+      "en": "Only when I stopped treating every hesitation as a failure did I begin to notice how much more freely I could express myself.",
+      "es": "Solo cuando dejé de considerar cada vacilación un fracaso empecé a notar con cuánta más libertad podía expresarme."
+    },
+    {
+      "number": 18,
+      "function": "goal",
+      "en": "Ultimately, my goal is to develop a flexible command of English that serves me professionally and socially.",
+      "es": "En última instancia, mi objetivo es desarrollar un dominio flexible del inglés que me sirva profesional y socialmente."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Reflecting on this journey, I understand that combining strategy evaluation with self-awareness is crucial for meaningful progress.",
+      "es": "Reflexionando sobre este viaje, comprendo que combinar la evaluación de estrategias con la autoconciencia es crucial para un progreso significativo."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Though perfection remains distant, each conversation with my tutor brings me closer to effective and authentic communication.",
+      "es": "Aunque la perfección aún está distante, cada conversación con mi tutor me acerca a una comunicación efectiva y auténtica."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect continuous",
+      "source_paragraph": 1,
+      "example_en": "Lately, I've been reflecting on how best to improve my English and debating between various learning strategies with my tutor.",
+      "explanation_es": "Have been reflecting presenta una reflexión reciente que continúa."
+    },
+    {
+      "name": "Concession with albeit",
+      "source_paragraph": 3,
+      "example_en": "In the past, I focused exclusively on grammar exercises, but that approach, albeit thorough, felt monotonous and less applicable to real conversations.",
+      "explanation_es": "Albeit thorough introduce una concesión breve y relativamente formal."
+    },
+    {
+      "name": "What-cleft sentence",
+      "source_paragraph": 6,
+      "example_en": "What holds me back is not a lack of commitment but the belief that every sentence must be flawless before I say it.",
+      "explanation_es": "What holds me back is centra la atención en la causa concreta."
+    },
+    {
+      "name": "Present perfect",
+      "source_paragraph": 8,
+      "example_en": "Now, I've begun to embrace and practice more dynamic methods including role-plays and listening to podcasts.",
+      "explanation_es": "Have begun conecta un cambio anterior con el presente."
+    },
+    {
+      "name": "Non-defining relative clause",
+      "source_paragraph": 9,
+      "example_en": "For instance, last week we simulated a job interview, which challenged me to think on my feet and improved my confidence.",
+      "explanation_es": "Which challenged me añade información sobre la simulación."
+    },
+    {
+      "name": "Commit to + -ing",
+      "source_paragraph": 14,
+      "example_en": "I've committed to maintaining a journal of new words and expressions to reinforce retention and active usage.",
+      "explanation_es": "Después de committed to se utiliza maintaining porque to es una preposición."
+    },
+    {
+      "name": "First conditional",
+      "source_paragraph": 15,
+      "example_en": "If I stay disciplined with this routine, I expect my communicative skills will noticeably advance within months.",
+      "explanation_es": "If + presente introduce una condición realista relacionada con una expectativa futura."
+    },
+    {
+      "name": "Inversion after only when",
+      "source_paragraph": 17,
+      "example_en": "Only when I stopped treating every hesitation as a failure did I begin to notice how much more freely I could express myself.",
+      "explanation_es": "Después de Only when se invierte la oración principal: did I begin."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "reflecting on how best to improve",
+      "meaning_es": "reflexionando sobre la mejor forma de mejorar",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "may not suit my current schedule",
+      "meaning_es": "pueden no adaptarse a mi horario actual",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "strive for perfection",
+      "meaning_es": "buscar la perfección",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "think on my feet",
+      "meaning_es": "pensar rápidamente",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "highlighted areas where I can improve",
+      "meaning_es": "resaltado áreas en las que puedo mejorar",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "stall, even during prepared dialogues",
+      "meaning_es": "detenerme incluso durante diálogos preparados",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "devised a balanced plan",
+      "meaning_es": "diseñado un plan equilibrado",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "each conversation with my tutor brings me closer",
+      "meaning_es": "cada conversación con mi tutor me acerca",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Lately, I've been reflecting on",
+              "how best to improve my",
+              "English and debating between various",
+              "learning strategies with my tutor."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Before meeting my tutor, I",
+              "used to rely heavily on",
+              "written exercises only, believing that",
+              "theory alone would suffice."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "If I stay disciplined with",
+              "this routine, I expect my",
+              "communicative skills will noticeably advance",
+              "within months."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-001",
+    "number": "001",
+    "title_en": "Improving My English",
+    "title_es": "Mejorando mi inglés",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Evaluar estrategias de aprendizaje y establecer metas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect continuous",
+      "Concession with albeit",
+      "What-cleft sentence",
+      "Present perfect",
+      "Non-defining relative clause",
+      "Commit to + -ing",
+      "First conditional",
+      "Inversion after only when"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

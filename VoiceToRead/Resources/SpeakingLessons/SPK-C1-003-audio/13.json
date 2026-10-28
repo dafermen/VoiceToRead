@@ -1,0 +1,96 @@
+{
+  "text": "Going forward, I plan to express my concerns clearly while inviting feedback to prevent misunderstandings.",
+  "duration": 8.470000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.5199999809265137,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 15,
+      "length": 1,
+      "start": 1.2200000286102295,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.8799999952316284,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 2.0999999046325684,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 2.759999990463257,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.759999990463257,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 3.0799999237060547,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.5199999809265137,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.079999923706055,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 59,
+      "length": 8,
+      "start": 4.760000228881836,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 68,
+      "length": 8,
+      "start": 5.199999809265137,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 5.800000190734863,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 6.380000114440918,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 88,
+      "length": 17,
+      "start": 6.639999866485596,
+      "end": 7.800000190734863
+    }
+  ]
+}

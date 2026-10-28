@@ -1,0 +1,78 @@
+{
+  "text": "Initially, some colleagues voiced concern that automation might complicate their daily responsibilities.",
+  "duration": 7.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.1399999856948853,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 16,
+      "length": 10,
+      "start": 1.6200000047683716,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.0999999046325684,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 34,
+      "length": 7,
+      "start": 2.4800000190734863,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.140000104904175,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 47,
+      "length": 10,
+      "start": 3.799999952316284,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 4.300000190734863,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 64,
+      "length": 10,
+      "start": 4.840000152587891,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.460000038146973,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 81,
+      "length": 5,
+      "start": 5.820000171661377,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 87,
+      "length": 16,
+      "start": 6.159999847412109,
+      "end": 6.940000057220459
+    }
+  ]
+}

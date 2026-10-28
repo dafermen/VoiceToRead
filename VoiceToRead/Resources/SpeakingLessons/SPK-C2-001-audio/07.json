@@ -1,0 +1,126 @@
+{
+  "text": "When giving feedback, I might say, “That approach could be improved,” rather than blunt criticism, to keep the conversation positive.",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.3199999928474426,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 12,
+      "length": 8,
+      "start": 0.7200000286102295,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.7799999713897705,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.899999976158142,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.1600000858306885,
+      "end": 2.5
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 3.180000066757202,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 41,
+      "length": 8,
+      "start": 3.240000009536743,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.700000047683716,
+      "end": 4.0
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 4.0,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 59,
+      "length": 8,
+      "start": 4.260000228881836,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 5.320000171661377,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.699999809265137,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 6.059999942779541,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 88,
+      "length": 9,
+      "start": 6.380000114440918,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 7.320000171661377,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 102,
+      "length": 4,
+      "start": 7.659999847412109,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 107,
+      "length": 3,
+      "start": 7.840000152587891,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 111,
+      "length": 12,
+      "start": 8.720000267028809,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 124,
+      "length": 8,
+      "start": 8.720000267028809,
+      "end": 9.319999694824219
+    }
+  ]
+}

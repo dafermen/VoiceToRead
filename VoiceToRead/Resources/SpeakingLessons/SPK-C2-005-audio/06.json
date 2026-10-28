@@ -1,0 +1,90 @@
+{
+  "text": "This way, I maintain professionalism and openness while gently indicating my disagreement or limitations.",
+  "duration": 8.319999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.4000000059604645,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 10,
+      "length": 1,
+      "start": 1.059999942779541,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 12,
+      "length": 8,
+      "start": 1.2400000095367432,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 21,
+      "length": 15,
+      "start": 1.6799999475479126,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.740000009536743,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 41,
+      "length": 8,
+      "start": 3.1600000858306885,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.680000066757202,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 4.420000076293945,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 63,
+      "length": 10,
+      "start": 4.920000076293945,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 5.380000114440918,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 77,
+      "length": 12,
+      "start": 5.800000190734863,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.239999771118164,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 93,
+      "length": 11,
+      "start": 6.860000133514404,
+      "end": 7.380000114440918
+    }
+  ]
+}

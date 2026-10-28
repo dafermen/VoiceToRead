@@ -1,0 +1,120 @@
+{
+  "text": "As the interview concluded, I reiterated my enthusiasm for the role and readiness to contribute meaningfully from day one.",
+  "duration": 8.680000305175781,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.4000000059604645,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.8399999737739563,
+      "end": 1.0
+    },
+    {
+      "location": 17,
+      "length": 9,
+      "start": 1.0,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 2.380000114440918,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 30,
+      "length": 10,
+      "start": 2.5999999046325684,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 41,
+      "length": 2,
+      "start": 3.1600000858306885,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 44,
+      "length": 10,
+      "start": 3.5199999809265137,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 4.099999904632568,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.440000057220459,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.599999904632568,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.920000076293945,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 5.559999942779541,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 82,
+      "length": 2,
+      "start": 5.900000095367432,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 85,
+      "length": 10,
+      "start": 6.360000133514404,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 96,
+      "length": 12,
+      "start": 6.739999771118164,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 109,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 114,
+      "length": 3,
+      "start": 7.800000190734863,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 118,
+      "length": 3,
+      "start": 8.100000381469727,
+      "end": 8.399999618530273
+    }
+  ]
+}

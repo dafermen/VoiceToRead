@@ -59,11 +59,11 @@ final class SpeakingLessonTests: XCTestCase {
         }
     }
 
-    func testBothLevelsHaveFiveDistinctCompleteLessons() throws {
+    func testAllFourLevelsHaveFiveDistinctCompleteLessons() throws {
         let lessons = try SpeakingLessonCatalog.load()
-        XCTAssertEqual(lessons.count, 10)
-        XCTAssertEqual(Set(lessons.map(\.id)).count, 10)
-        for level in ["B1", "B2"] {
+        XCTAssertEqual(lessons.count, 20)
+        XCTAssertEqual(Set(lessons.map(\.id)).count, 20)
+        for level in ["B1", "B2", "C1", "C2"] {
             let group = lessons.filter { $0.level == level }
             XCTAssertEqual(group.map(\.number).sorted(), [1, 2, 3, 4, 5])
             for lesson in group {
@@ -81,6 +81,13 @@ final class SpeakingLessonTests: XCTestCase {
                     for i in 0..<20 { XCTAssertFalse(pack.text("paragraphs.\(i).es", fallback: "").isEmpty) }
                 }
             }
+        }
+        XCTAssertEqual(Set(lessons.map { $0.paragraphs.map(\.en).joined(separator: "\n") }).count, 20)
+        for number in 1...2 {
+            let c1 = try XCTUnwrap(lessons.first { $0.level == "C1" && $0.number == number })
+            let c2 = try XCTUnwrap(lessons.first { $0.level == "C2" && $0.number == number })
+            XCTAssertEqual(c1.title.en, c2.title.en)
+            XCTAssertNotEqual(c1.paragraphs.map(\.en), c2.paragraphs.map(\.en))
         }
         for number in 1...5 {
             let b1 = try XCTUnwrap(lessons.first { $0.level == "B1" && $0.number == number })

@@ -1,9 +1,14 @@
-"""Validate all bundled lesson resources, then publish the explicit ten-ID catalog."""
+"""Validate all bundled lesson resources, then publish the explicit twenty-ID catalog."""
 from pathlib import Path
 import json,hashlib,re,sys
 r=Path(__file__).resolve().parents[1];folder=r/'VoiceToRead/Resources/SpeakingLessons'
-ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2'] for n in range(1,6)]
-titles=['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job']
+ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,6)]
+titles_by_level={
+'B1':['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job'],
+'B2':['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job'],
+'C1':['Improving My English','A Job Interview','Resolving a Conflict','Defending a Proposal','Discussing Social Change'],
+'C2':['Improving My English','A Job Interview','Mediating a Negotiation','An Ethical Dilemma','Disagreeing with Tact']
+}
 def support_fields(value,path=''):
  result={}
  if isinstance(value,dict):
@@ -16,7 +21,12 @@ alltext=set();bytes_audio=0;audio_count=0
 for identifier in ids:
  d=json.loads((folder/(identifier+'.json')).read_text(encoding='utf-8'));level=identifier.split('-')[1];n=int(identifier[-3:])
  assert d['id']==identifier and d['level']==level and d['number']==n
- assert d['title']['en']==titles[n-1] and d['language']=='en-US'
+ assert d['title']['en']==titles_by_level[level][n-1] and d['language']=='en-US'
+ c=d['lesson_card']
+ assert c['id']==d['id'] and c['level']==level and int(c['number'])==n
+ assert c['title_en']==d['title']['en'] and c['title_es']==d['title']['es']
+ assert c['paragraph_count']==20 and c['essential_expressions_count']==8 and c['estimated_minutes']==d['estimated_minutes']
+ assert d['schema_version']=='1.0.0' and d['status']=='ready'
  assert [p['number'] for p in d['paragraphs']]==list(range(1,21))
  assert len(d['grammar'])==8 and len(d['essential_expressions'])==8
  assert [x['number'] for x in d['reading_practice']['rounds']]==[1,2,3]
@@ -24,6 +34,9 @@ for identifier in ids:
  assert d['lesson_card']['activities_es']==[x['title_es'] for x in d['reading_practice']['rounds']]
  for item in d['grammar']+d['essential_expressions']:
   assert 1<=item['source_paragraph']<=20
+ if level in ['C1','C2']:
+  for item in d['grammar']:assert item['example_en']==d['paragraphs'][item['source_paragraph']-1]['en']
+  for item in d['essential_expressions']:assert item['expression_en'].lower() in d['paragraphs'][item['source_paragraph']-1]['en'].lower()
  for rnd in d['reading_practice']['rounds']:
   for chunk in rnd.get('chunks',[]):
    assert 1<=chunk['source_paragraph']<=20 and all(chunk['segments'])
@@ -53,4 +66,4 @@ assert hashlib.sha256((folder/'SPK-B1-001.json').read_text(encoding='utf-8').enc
 assert not list(folder.rglob('*-review.json')),'Review files must be resolved before publication'
 assert not list(folder.rglob('.env*'))
 if '--publish' in sys.argv:(folder/'catalog.json').write_text(json.dumps(ids,indent=2)+'\n',encoding='utf-8')
-print(f'PASS: ten complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); forty support packs; original 001 unchanged.',flush=True)
+print(f'PASS: twenty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); eighty support packs; original 001 unchanged.',flush=True)

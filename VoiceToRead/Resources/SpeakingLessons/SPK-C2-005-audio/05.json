@@ -1,0 +1,162 @@
+{
+  "text": "For example, instead of saying “I can't take this on,” I might say, “I appreciate the trust, but I have some concerns about my current workload.”",
+  "duration": 10.390000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.3799999952316284,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.5800000429153442,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.6799999475479126,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 24,
+      "length": 6,
+      "start": 2.0199999809265137,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 32,
+      "length": 1,
+      "start": 2.259999990463257,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.5799999237060547,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.9000000953674316,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.0799999237060547,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.359999895095825,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 55,
+      "length": 1,
+      "start": 3.880000114440918,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 4.21999979019165,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 4.460000038146973,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 69,
+      "length": 1,
+      "start": 5.400000095367432,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 71,
+      "length": 10,
+      "start": 5.519999980926514,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 6.099999904632568,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 6.360000133514404,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 7.139999866485596,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 97,
+      "length": 1,
+      "start": 7.239999771118164,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 99,
+      "length": 4,
+      "start": 7.460000038146973,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 104,
+      "length": 4,
+      "start": 7.579999923706055,
+      "end": 8.0
+    },
+    {
+      "location": 109,
+      "length": 8,
+      "start": 8.0,
+      "end": 8.300000190734863
+    },
+    {
+      "location": 118,
+      "length": 5,
+      "start": 8.300000190734863,
+      "end": 8.600000381469727
+    },
+    {
+      "location": 124,
+      "length": 2,
+      "start": 8.600000381469727,
+      "end": 8.899999618530273
+    },
+    {
+      "location": 127,
+      "length": 7,
+      "start": 8.899999618530273,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 135,
+      "length": 8,
+      "start": 9.15999984741211,
+      "end": 9.640000343322754
+    }
+  ]
+}

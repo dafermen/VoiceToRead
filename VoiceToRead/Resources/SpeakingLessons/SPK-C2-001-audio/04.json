@@ -1,0 +1,114 @@
+{
+  "text": "For example, in meetings, I use concise, polite expressions, but with friends, I prefer relaxed and idiomatic phrases.",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.3400000035762787,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 1.059999942779541,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.559999942779541,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.4200000762939453,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 2.559999942779541,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 32,
+      "length": 7,
+      "start": 2.759999990463257,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 3.8399999141693115,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 48,
+      "length": 11,
+      "start": 3.8399999141693115,
+      "end": 4.5
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 5.019999980926514,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 5.099999904632568,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 70,
+      "length": 7,
+      "start": 5.360000133514404,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 1,
+      "start": 6.179999828338623,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.300000190734863,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 6.599999904632568,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 96,
+      "length": 3,
+      "start": 7.239999771118164,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 100,
+      "length": 9,
+      "start": 7.820000171661377,
+      "end": 8.279999732971191
+    },
+    {
+      "location": 110,
+      "length": 7,
+      "start": 8.279999732971191,
+      "end": 8.640000343322754
+    }
+  ]
+}

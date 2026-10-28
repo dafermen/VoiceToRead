@@ -1,0 +1,114 @@
+{
+  "text": "I conceded that security is paramount and explained our plan to implement strict access controls within the software.",
+  "duration": 9.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.3799999952316284,
+      "end": 1.0
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.0,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.7200000286102295,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 2.180000066757202,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 28,
+      "length": 9,
+      "start": 2.619999885559082,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 3.200000047683716,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 42,
+      "length": 9,
+      "start": 4.139999866485596,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 4.619999885559082,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.900000095367432,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 5.21999979019165,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 64,
+      "length": 9,
+      "start": 6.019999980926514,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 74,
+      "length": 6,
+      "start": 6.019999980926514,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.539999961853027,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 88,
+      "length": 8,
+      "start": 7.179999828338623,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 97,
+      "length": 6,
+      "start": 7.760000228881836,
+      "end": 8.300000190734863
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 8.300000190734863,
+      "end": 8.539999961853027
+    },
+    {
+      "location": 108,
+      "length": 8,
+      "start": 8.539999961853027,
+      "end": 8.899999618530273
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-003",
+  "number": 3,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Resolving a Conflict",
+    "es": "Resolviendo un conflicto"
+  },
+  "category": {
+    "en": "Workplace Communication",
+    "es": "Comunicación en el trabajo"
+  },
+  "main_topic": {
+    "en": "Resolve a realistic disagreement with a colleague by distinguishing intentions, impact, constraints and shared interests.",
+    "es": "Resolver un desacuerdo realista con un colega distinguiendo intenciones, impacto, limitaciones e intereses compartidos."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos colegas discutiendo respetuosamente en una oficina moderna, expresión de diálogo abierto y resolución.",
+    "prompt": "Realistic editorial photo, two colleagues resolving conflict respectfully in a modern office, open dialogue expression, natural light, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Expresar claramente intenciones y percepciones durante un conflicto.",
+    "Distinguir entre impacto y intención en una conversación difícil.",
+    "Reconocer limitaciones personales y laborales que afectan el conflicto.",
+    "Negociar soluciones basadas en intereses compartidos.",
+    "Practicar gramática avanzada y expresiones útiles para la resolución de conflictos."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday, a disagreement arose between my colleague and me during the project meeting.",
+      "es": "Ayer surgió un desacuerdo entre mi colega y yo durante la reunión del proyecto."
+    },
+    {
+      "number": 2,
+      "function": "initial_feeling",
+      "en": "I initially felt frustrated because I believed my suggestions were being overlooked unnecessarily.",
+      "es": "Al principio me sentí frustrado porque creía que mis sugerencias estaban siendo ignoradas innecesariamente."
+    },
+    {
+      "number": 3,
+      "function": "colleague_perspective",
+      "en": "However, after listening carefully, I realized that she was concerned about the feasibility given our tight deadlines.",
+      "es": "Sin embargo, tras escuchar con atención, me di cuenta de que ella estaba preocupada por la viabilidad debido a los plazos ajustados."
+    },
+    {
+      "number": 4,
+      "function": "reflection_intentions",
+      "en": "It became clear that her intention was not to dismiss my ideas but to highlight real constraints we must consider.",
+      "es": "Se volvió claro que su intención no era descartar mis ideas sino destacar las limitaciones reales que debemos considerar."
+    },
+    {
+      "number": 5,
+      "function": "acknowledging_impact",
+      "en": "Nevertheless, I pointed out how the way she expressed her concerns impacted my motivation negatively.",
+      "es": "Sin embargo, señalé cómo la forma en que expresó sus preocupaciones afectó negativamente mi motivación."
+    },
+    {
+      "number": 6,
+      "function": "concession",
+      "en": "Had I asked about the deadline before defending my proposal, I might have understood why my colleague sounded so cautious.",
+      "es": "Si hubiera preguntado por el plazo antes de defender mi propuesta, quizá habría entendido por qué mi compañera parecía tan cautelosa."
+    },
+    {
+      "number": 7,
+      "function": "colleague_response",
+      "en": "She acknowledged that her tone was harsher than intended due to stress from upcoming deadlines.",
+      "es": "Ella reconoció que su tono fue más duro de lo previsto debido al estrés de los próximos plazos."
+    },
+    {
+      "number": 8,
+      "function": "shared_interest",
+      "en": "What mattered to both of us was delivering a dependable project, even though we had initially emphasized different ways of achieving that goal.",
+      "es": "Lo que nos importaba a ambos era entregar un proyecto fiable, aunque al principio habíamos destacado formas diferentes de alcanzar ese objetivo."
+    },
+    {
+      "number": 9,
+      "function": "negotiation",
+      "en": "As a result, we decided to merge my innovative ideas with her practical constraints to find workable solutions.",
+      "es": "Como resultado, decidimos combinar mis ideas innovadoras con sus limitaciones prácticas para encontrar soluciones viables."
+    },
+    {
+      "number": 10,
+      "function": "example_solution",
+      "en": "We agreed that a phased approach could work, provided that we defined which features were essential and who would review each stage.",
+      "es": "Acordamos que un enfoque por fases podría funcionar, siempre que definiéramos qué funciones eran esenciales y quién revisaría cada etapa."
+    },
+    {
+      "number": 11,
+      "function": "realization",
+      "en": "This compromise recognized both the creative ambition and the operational realities we face.",
+      "es": "Este compromiso reconoció tanto la ambición creativa como las realidades operativas que enfrentamos."
+    },
+    {
+      "number": 12,
+      "function": "personal_growth",
+      "en": "Reflecting on the dialogue, I realized the importance of distinguishing between intent and impact in conflicts.",
+      "es": "Reflexionando sobre el diálogo, me di cuenta de la importancia de distinguir entre la intención y el impacto en los conflictos."
+    },
+    {
+      "number": 13,
+      "function": "strategy",
+      "en": "Going forward, I plan to express my concerns clearly while inviting feedback to prevent misunderstandings.",
+      "es": "De ahora en adelante, planeo expresar mis preocupaciones claramente mientras invito a retroalimentación para evitar malentendidos."
+    },
+    {
+      "number": 14,
+      "function": "colleague_strategy",
+      "en": "Only after we had clarified our assumptions did we agree on a way to raise concerns without making the other person feel dismissed.",
+      "es": "Solo después de aclarar nuestras suposiciones acordamos una forma de expresar inquietudes sin que la otra persona se sintiera desestimada."
+    },
+    {
+      "number": 15,
+      "function": "importance_of_communication",
+      "en": "Ultimately, we realized that transparent and empathetic communication is key to effective teamwork.",
+      "es": "En última instancia, nos dimos cuenta de que una comunicación transparente y empática es clave para un trabajo en equipo efectivo."
+    },
+    {
+      "number": 16,
+      "function": "lesson",
+      "en": "Resolving conflicts constructively requires patience, active listening, and willingness to adapt.",
+      "es": "Resolver conflictos de manera constructiva requiere paciencia, escucha activa y disposición a adaptarse."
+    },
+    {
+      "number": 17,
+      "function": "future_expectation",
+      "en": "I hope that by applying these lessons, future disagreements will lead to stronger collaboration.",
+      "es": "Espero que aplicando estas lecciones, futuros desacuerdos conduzcan a una colaboración más sólida."
+    },
+    {
+      "number": 18,
+      "function": "ongoing_process",
+      "en": "I understand now that conflict resolution is an ongoing skill that improves with practice and reflection.",
+      "es": "Ahora entiendo que la resolución de conflictos es una habilidad continua que mejora con la práctica y la reflexión."
+    },
+    {
+      "number": 19,
+      "function": "conclusion",
+      "en": "In the end, our discussion reinforced mutual respect and helped align our efforts effectively.",
+      "es": "Al final, nuestra discusión reforzó el respeto mutuo y ayudó a alinear nuestros esfuerzos de manera efectiva."
+    },
+    {
+      "number": 20,
+      "function": "final_thought",
+      "en": "Though challenging, resolving this conflict deepened our professional relationship and trust.",
+      "es": "Aunque fue un reto, resolver este conflicto profundizó nuestra relación profesional y confianza."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous passive",
+      "source_paragraph": 2,
+      "example_en": "I initially felt frustrated because I believed my suggestions were being overlooked unnecessarily.",
+      "explanation_es": "Were being overlooked combina una acción pasada en desarrollo con voz pasiva."
+    },
+    {
+      "name": "Inverted third conditional with might have",
+      "source_paragraph": 6,
+      "example_en": "Had I asked about the deadline before defending my proposal, I might have understood why my colleague sounded so cautious.",
+      "explanation_es": "Might have understood expresa un resultado pasado hipotético; had asked aparece en una condición invertida."
+    },
+    {
+      "name": "What-cleft sentence",
+      "source_paragraph": 8,
+      "example_en": "What mattered to both of us was delivering a dependable project, even though we had initially emphasized different ways of achieving that goal.",
+      "explanation_es": "What mattered ... was destaca el interés compartido."
+    },
+    {
+      "name": "Provided that",
+      "source_paragraph": 10,
+      "example_en": "We agreed that a phased approach could work, provided that we defined which features were essential and who would review each stage.",
+      "explanation_es": "Provided that limita la aceptación a condiciones expresas."
+    },
+    {
+      "name": "Agree on + noun phrase",
+      "source_paragraph": 14,
+      "example_en": "Only after we had clarified our assumptions did we agree on a way to raise concerns without making the other person feel dismissed.",
+      "explanation_es": "Agree on introduce el asunto acordado: a way to raise concerns."
+    },
+    {
+      "name": "Inversion after only after",
+      "source_paragraph": 14,
+      "example_en": "Only after we had clarified our assumptions did we agree on a way to raise concerns without making the other person feel dismissed.",
+      "explanation_es": "Only after ... did we agree invierte auxiliar y sujeto en la oración principal."
+    },
+    {
+      "name": "Gerund as subject",
+      "source_paragraph": 16,
+      "example_en": "Resolving conflicts constructively requires patience, active listening, and willingness to adapt.",
+      "explanation_es": "Resolving conflicts actúa como sujeto de requires."
+    },
+    {
+      "name": "Reduced concessive clause",
+      "source_paragraph": 20,
+      "example_en": "Though challenging, resolving this conflict deepened our professional relationship and trust.",
+      "explanation_es": "Though challenging reconoce la dificultad sin repetir una oración completa."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "a disagreement arose",
+      "meaning_es": "surgió un desacuerdo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "being overlooked unnecessarily",
+      "meaning_es": "ser ignorado innecesariamente",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "highlight real constraints",
+      "meaning_es": "destacar limitaciones reales",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "impacted my motivation negatively",
+      "meaning_es": "afectó negativamente mi motivación",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "What mattered to both of us",
+      "meaning_es": "lo que nos importaba a ambos",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "merge my innovative ideas",
+      "meaning_es": "combinar mis ideas innovadoras",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "distinguishing between intent and impact",
+      "meaning_es": "distinguir entre intención e impacto",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "transparent and empathetic communication",
+      "meaning_es": "comunicación transparente y empática",
+      "source_paragraph": 15
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Yesterday, a disagreement arose",
+              "between my colleague and",
+              "me during the project",
+              "meeting."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "She acknowledged that her",
+              "tone was harsher than",
+              "intended due to stress",
+              "from upcoming deadlines."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "Ultimately, we realized that",
+              "transparent and empathetic communication",
+              "is key to effective",
+              "teamwork."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-003",
+    "number": "003",
+    "title_en": "Resolving a Conflict",
+    "title_es": "Resolviendo un conflicto",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Comunicación en el trabajo",
+    "main_topic_es": "Resolver un desacuerdo distinguiendo intenciones, impacto, limitaciones e intereses compartidos",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous passive",
+      "Inverted third conditional with might have",
+      "What-cleft sentence",
+      "Provided that",
+      "Agree on + noun phrase",
+      "Inversion after only after",
+      "Gerund as subject",
+      "Reduced concessive clause"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

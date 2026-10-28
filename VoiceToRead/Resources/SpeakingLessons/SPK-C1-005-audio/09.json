@@ -1,0 +1,144 @@
+{
+  "text": "Not only would additional seating change how the park was used, but its placement could also determine whose access was improved or restricted.",
+  "duration": 16.219999313354492,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.8399999737739563,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 15,
+      "length": 10,
+      "start": 1.1799999475479126,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.0399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.6600000858306885,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 2.8399999141693115,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.2200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 3.5399999618530273,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.559999942779541,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.679999828338623,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 4.940000057220459,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 5.380000114440918,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 88,
+      "length": 4,
+      "start": 5.71999979019165,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 93,
+      "length": 9,
+      "start": 6.159999847412109,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 6.579999923706055,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 7.099999904632568,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 7.579999923706055,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 120,
+      "length": 8,
+      "start": 7.940000057220459,
+      "end": 8.460000038146973
+    },
+    {
+      "location": 129,
+      "length": 2,
+      "start": 8.460000038146973,
+      "end": 9.039999961853027
+    },
+    {
+      "location": 132,
+      "length": 10,
+      "start": 9.039999961853027,
+      "end": 9.4399995803833
+    }
+  ]
+}

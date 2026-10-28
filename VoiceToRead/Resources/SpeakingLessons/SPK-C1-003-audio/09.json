@@ -1,0 +1,114 @@
+{
+  "text": "As a result, we decided to merge my innovative ideas with her practical constraints to find workable solutions.",
+  "duration": 9.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.30000001192092896,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5199999809265137,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 1.2000000476837158,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.6200000047683716,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 2.4800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.4800000190734863,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 36,
+      "length": 10,
+      "start": 2.8399999141693115,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.259999990463257,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 3.799999952316284,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.28000020980835,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 62,
+      "length": 9,
+      "start": 4.539999961853027,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 72,
+      "length": 11,
+      "start": 5.099999904632568,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.5
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 6.5,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 92,
+      "length": 8,
+      "start": 6.760000228881836,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 101,
+      "length": 9,
+      "start": 7.380000114440918,
+      "end": 7.860000133514404
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "I left knowing that thoughtful preparation and eloquent discussion can transform challenging questions into opportunities to impress.",
+  "duration": 11.5600004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 1.3200000524520874,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 2.119999885559082,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 20,
+      "length": 10,
+      "start": 2.880000114440918,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 31,
+      "length": 11,
+      "start": 3.200000047683716,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.9000000953674316,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 4.519999980926514,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 56,
+      "length": 10,
+      "start": 5.019999980926514,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.639999866485596,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 71,
+      "length": 9,
+      "start": 6.440000057220459,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 81,
+      "length": 11,
+      "start": 7.099999904632568,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 93,
+      "length": 9,
+      "start": 7.820000171661377,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 8.4399995803833,
+      "end": 9.180000305175781
+    },
+    {
+      "location": 108,
+      "length": 13,
+      "start": 9.180000305175781,
+      "end": 9.979999542236328
+    },
+    {
+      "location": 122,
+      "length": 2,
+      "start": 9.979999542236328,
+      "end": 10.760000228881836
+    },
+    {
+      "location": 125,
+      "length": 7,
+      "start": 10.760000228881836,
+      "end": 11.199999809265137
+    }
+  ]
+}

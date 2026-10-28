@@ -1,0 +1,150 @@
+{
+  "text": "Were I to face a similar question again, I would ask which specific concern the interviewer wanted me to address before choosing my example.",
+  "duration": 9.8100004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.3799999952316284,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 0.699999988079071,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.9399999976158142,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 15,
+      "length": 1,
+      "start": 1.159999966621399,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.4600000381469727,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 25,
+      "length": 8,
+      "start": 1.7400000095367432,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.2799999713897705,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 3.3399999141693115,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.4600000381469727,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 3.9800000190734863,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 59,
+      "length": 8,
+      "start": 4.420000076293945,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 5.119999885559082,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.599999904632568,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 80,
+      "length": 11,
+      "start": 5.940000057220459,
+      "end": 6.5
+    },
+    {
+      "location": 92,
+      "length": 6,
+      "start": 6.5,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 6.739999771118164,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 7.019999980926514,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 105,
+      "length": 7,
+      "start": 7.599999904632568,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 113,
+      "length": 6,
+      "start": 7.599999904632568,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 120,
+      "length": 8,
+      "start": 8.4399995803833,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 129,
+      "length": 2,
+      "start": 8.819999694824219,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 132,
+      "length": 7,
+      "start": 9.15999984741211,
+      "end": 9.460000038146973
+    }
+  ]
+}

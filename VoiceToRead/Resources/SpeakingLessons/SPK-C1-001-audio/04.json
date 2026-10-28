@@ -1,0 +1,126 @@
+{
+  "text": "My tutor suggested incorporating spontaneous speaking practice, yet I must admit that the unpredictability of such sessions sometimes overwhelms me.",
+  "duration": 10.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 5,
+      "start": 0.36000001430511475,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 9,
+      "length": 9,
+      "start": 0.699999988079071,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 13,
+      "start": 1.4800000190734863,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 33,
+      "length": 11,
+      "start": 2.380000114440918,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 45,
+      "length": 8,
+      "start": 3.2799999713897705,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 54,
+      "length": 8,
+      "start": 3.700000047683716,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 5.059999942779541,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 68,
+      "length": 1,
+      "start": 5.159999847412109,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 5.440000057220459,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.71999979019165,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 6.059999942779541,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.239999771118164,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 90,
+      "length": 16,
+      "start": 6.619999885559082,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 107,
+      "length": 2,
+      "start": 7.340000152587891,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 110,
+      "length": 4,
+      "start": 7.579999923706055,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 115,
+      "length": 8,
+      "start": 7.820000171661377,
+      "end": 8.359999656677246
+    },
+    {
+      "location": 124,
+      "length": 9,
+      "start": 8.359999656677246,
+      "end": 9.380000114440918
+    },
+    {
+      "location": 134,
+      "length": 10,
+      "start": 9.380000114440918,
+      "end": 10.079999923706055
+    },
+    {
+      "location": 145,
+      "length": 2,
+      "start": 10.079999923706055,
+      "end": 10.319999694824219
+    }
+  ]
+}

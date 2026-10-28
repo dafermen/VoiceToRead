@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-004",
+  "number": 4,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Defending a Proposal",
+    "es": "Defendiendo una propuesta"
+  },
+  "category": {
+    "en": "Workplace Communication",
+    "es": "Comunicación en el trabajo"
+  },
+  "main_topic": {
+    "en": "Presenting a workplace improvement, responding to objections, and revising the proposal without losing its central purpose.",
+    "es": "Presentar una mejora en el trabajo, responder a objeciones y revisar la propuesta sin perder su propósito central."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Profesional en una reunión presentando una propuesta laboral con gráficos y debate en sala de oficina moderna.",
+    "prompt": "Realistic editorial photograph, business professional presenting a workplace improvement proposal in a modern office meeting room, attentive colleagues discussing with charts and laptops, natural lighting, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Entender cómo presentar y defender una propuesta en el trabajo.",
+    "Aprender a responder a objeciones con argumentos claros y respetuosos.",
+    "Practicar la habilidad de revisar una propuesta sin perder su objetivo central.",
+    "Reconocer y usar expresiones útiles para discusión profesional.",
+    "Mejorar comprensión y fluidez en interacciones formales de trabajo."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, I proposed a new system to improve our team's workflow, knowing that change always meets resistance.",
+      "es": "La semana pasada, propuse un nuevo sistema para mejorar el flujo de trabajo de nuestro equipo, sabiendo que el cambio siempre encuentra resistencia."
+    },
+    {
+      "number": 2,
+      "function": "proposal_intro",
+      "en": "My main idea was to automate routine tasks to free up more time for strategic planning.",
+      "es": "Mi idea principal era automatizar tareas rutinarias para liberar más tiempo para la planificación estratégica."
+    },
+    {
+      "number": 3,
+      "function": "reaction",
+      "en": "Initially, some colleagues voiced concern that automation might complicate their daily responsibilities.",
+      "es": "Al principio, algunos colegas manifestaron preocupación de que la automatización pudiera complicar sus tareas diarias."
+    },
+    {
+      "number": 4,
+      "function": "response_objection",
+      "en": "Although I could not promise an effortless transition, I argued that a carefully limited trial would let us assess the benefits without committing the entire team.",
+      "es": "Aunque no podía prometer una transición sin esfuerzo, argumenté que una prueba de alcance limitado permitiría evaluar los beneficios sin comprometer a todo el equipo."
+    },
+    {
+      "number": 5,
+      "function": "detail_argument",
+      "en": "Specifically, repetitive tasks that consume hours each week could be handled by software, reducing human error.",
+      "es": "En específico, las tareas repetitivas que consumen horas cada semana podrían ser manejadas por software, reduciendo errores humanos."
+    },
+    {
+      "number": 6,
+      "function": "supporting_example",
+      "en": "For instance, the manual entry of data has led to mistakes that delayed project deadlines in the past.",
+      "es": "Por ejemplo, la entrada manual de datos ha provocado errores que retrasaron plazos de proyectos en el pasado."
+    },
+    {
+      "number": 7,
+      "function": "concession",
+      "en": "While I understood their hesitation, I suggested we pilot the system with a small team first to evaluate it.",
+      "es": "Aunque entendía su hesitación, sugerí que probáramos el sistema con un pequeño equipo primero para evaluarlo."
+    },
+    {
+      "number": 8,
+      "function": "objection_revision",
+      "en": "One colleague argued that data security might be compromised if automation increased access points.",
+      "es": "Un colega argumentó que la seguridad de datos podría verse comprometida si la automatización aumentaba los puntos de acceso."
+    },
+    {
+      "number": 9,
+      "function": "counter_argument",
+      "en": "I conceded that security is paramount and explained our plan to implement strict access controls within the software.",
+      "es": "Reconocí que la seguridad es primordial y expliqué nuestro plan para implementar controles de acceso estrictos dentro del software."
+    },
+    {
+      "number": 10,
+      "function": "detail_revision",
+      "en": "Moreover, regular audits would be conducted to detect and address any vulnerabilities promptly.",
+      "es": "Además, se realizarían auditorías regulares para detectar y abordar cualquier vulnerabilidad rápidamente."
+    },
+    {
+      "number": 11,
+      "function": "expression_understanding",
+      "en": "What I wanted to make clear was that identifying a weakness in the proposal would improve the trial rather than count as resistance to change.",
+      "es": "Lo que quería dejar claro era que detectar una debilidad en la propuesta mejoraría la prueba, en lugar de interpretarse como resistencia al cambio."
+    },
+    {
+      "number": 12,
+      "function": "proposal_adjustment",
+      "en": "As a result, I proposed scheduling weekly feedback meetings to ensure open communication and adjustments.",
+      "es": "Como resultado, propuse programar reuniones semanales de retroalimentación para asegurar comunicación abierta y ajustes."
+    },
+    {
+      "number": 13,
+      "function": "positive_reinforcement",
+      "en": "I emphasized that our goal remains improving efficiency without disrupting anyone's current responsibilities excessively.",
+      "es": "Enfatizé que nuestro objetivo sigue siendo mejorar la eficiencia sin interrumpir excesivamente las responsabilidades actuales de nadie."
+    },
+    {
+      "number": 14,
+      "function": "agreement_progress",
+      "en": "Only after discussing how the trial could be paused did the team agree to proceed, with a review scheduled before any wider rollout.",
+      "es": "Solo después de hablar de cómo podría pausarse la prueba aceptó el equipo continuar, con una revisión prevista antes de ampliarla."
+    },
+    {
+      "number": 15,
+      "function": "reflection",
+      "en": "This experience taught me that defending a proposal requires flexibility without compromising core objectives.",
+      "es": "Esta experiencia me enseñó que defender una propuesta requiere flexibilidad sin comprometer los objetivos centrales."
+    },
+    {
+      "number": 16,
+      "function": "advice",
+      "en": "Listening actively and acknowledging valid objections builds trust and strengthens your argument.",
+      "es": "Escuchar activamente y reconocer objeciones válidas genera confianza y fortalece tu argumento."
+    },
+    {
+      "number": 17,
+      "function": "strategy",
+      "en": "When revising a proposal, retaining its essence while incorporating feedback is essential for acceptance.",
+      "es": "Al revisar una propuesta, conservar su esencia mientras se incorpora la retroalimentación es esencial para su aceptación."
+    },
+    {
+      "number": 18,
+      "function": "expectation",
+      "en": "I now expect the pilot phase will provide valuable insights to refine the process further and gain wider support.",
+      "es": "Ahora espero que la fase piloto proporcione información valiosa para refinar el proceso y obtener un apoyo más amplio."
+    },
+    {
+      "number": 19,
+      "function": "goal",
+      "en": "Ultimately, I want to demonstrate that thoughtful innovation benefits both our team and the company.",
+      "es": "En última instancia, quiero demostrar que la innovación reflexiva beneficia tanto a nuestro equipo como a la empresa."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Defending a proposal is less about asserting dominance and more about collaborative problem-solving.",
+      "es": "Defender una propuesta es menos cuestión de imponer y más de resolver problemas de manera colaborativa."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect",
+      "source_paragraph": 6,
+      "example_en": "For instance, the manual entry of data has led to mistakes that delayed project deadlines in the past.",
+      "explanation_es": "Has led conecta errores pasados con el argumento actual."
+    },
+    {
+      "name": "Modal passive",
+      "source_paragraph": 5,
+      "example_en": "Specifically, repetitive tasks that consume hours each week could be handled by software, reducing human error.",
+      "explanation_es": "Could be handled centra la atención en las tareas y su posible gestión."
+    },
+    {
+      "name": "Concession with although",
+      "source_paragraph": 4,
+      "example_en": "Although I could not promise an effortless transition, I argued that a carefully limited trial would let us assess the benefits without committing the entire team.",
+      "explanation_es": "Although I could not promise reconoce un límite antes de defender la prueba."
+    },
+    {
+      "name": "Suggest + clause",
+      "source_paragraph": 7,
+      "example_en": "While I understood their hesitation, I suggested we pilot the system with a small team first to evaluate it.",
+      "explanation_es": "Suggested we pilot utiliza pilot en forma base tras una propuesta."
+    },
+    {
+      "name": "Modal passive in reported planning",
+      "source_paragraph": 10,
+      "example_en": "Moreover, regular audits would be conducted to detect and address any vulnerabilities promptly.",
+      "explanation_es": "Would be conducted presenta unas auditorías previstas desde un punto de vista pasado."
+    },
+    {
+      "name": "What-cleft sentence",
+      "source_paragraph": 11,
+      "example_en": "What I wanted to make clear was that identifying a weakness in the proposal would improve the trial rather than count as resistance to change.",
+      "explanation_es": "What I wanted ... was enfoca el significado que debía quedar claro."
+    },
+    {
+      "name": "Inversion after only after",
+      "source_paragraph": 14,
+      "example_en": "Only after discussing how the trial could be paused did the team agree to proceed, with a review scheduled before any wider rollout.",
+      "explanation_es": "Only after ... did the team agree destaca una condición previa del acuerdo."
+    },
+    {
+      "name": "Reduced temporal clause with when",
+      "source_paragraph": 17,
+      "example_en": "When revising a proposal, retaining its essence while incorporating feedback is essential for acceptance.",
+      "explanation_es": "When revising reduce una oración temporal cuyo sujeto se entiende por el contexto."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "meets resistance",
+      "meaning_es": "encuentra resistencia",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "free up more time",
+      "meaning_es": "liberar más tiempo",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "voiced concern",
+      "meaning_es": "manifestaron preocupación",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "a carefully limited trial",
+      "meaning_es": "una prueba de alcance cuidadosamente limitado",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "pilot the system",
+      "meaning_es": "probar el sistema en fase piloto",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "data security",
+      "meaning_es": "seguridad de datos",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "rather than count as resistance",
+      "meaning_es": "en lugar de interpretarse como resistencia",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "core objectives",
+      "meaning_es": "objetivos centrales",
+      "source_paragraph": 15
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last week, I proposed a",
+              "new system to improve our",
+              "team's workflow, knowing that change",
+              "always meets resistance."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "While I understood their hesitation,",
+              "I suggested we pilot the",
+              "system with a small team",
+              "first to evaluate it."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "This experience taught me",
+              "that defending a proposal",
+              "requires flexibility without compromising",
+              "core objectives."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-004",
+    "number": "004",
+    "title_en": "Defending a Proposal",
+    "title_es": "Defendiendo una propuesta",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Comunicación en el trabajo",
+    "main_topic_es": "Presentar mejoras y manejar objeciones",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect",
+      "Modal passive",
+      "Concession with although",
+      "Suggest + clause",
+      "Modal passive in reported planning",
+      "What-cleft sentence",
+      "Inversion after only after",
+      "Reduced temporal clause with when"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

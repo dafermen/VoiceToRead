@@ -1,0 +1,96 @@
+{
+  "text": "In meetings, I've noticed that what colleagues say often carries unspoken expectations beneath the surface.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 3,
+      "length": 8,
+      "start": 0.3400000035762787,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.1200000047683716,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.6799999475479126,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.299999952316284,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 36,
+      "length": 10,
+      "start": 2.700000047683716,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 2.9200000762939453,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 3.5399999618530273,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 3.9800000190734863,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 65,
+      "length": 8,
+      "start": 4.420000076293945,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 74,
+      "length": 12,
+      "start": 5.21999979019165,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 87,
+      "length": 7,
+      "start": 6.159999847412109,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.679999828338623,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 99,
+      "length": 7,
+      "start": 7.059999942779541,
+      "end": 7.179999828338623
+    }
+  ]
+}

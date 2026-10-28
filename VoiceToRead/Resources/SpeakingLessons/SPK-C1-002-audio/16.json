@@ -1,0 +1,108 @@
+{
+  "text": "I realized that transparent communication paired with evidence-based arguments is essential in such high-stakes conversations.",
+  "duration": 9.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.41999998688697815,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.9599999785423279,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 16,
+      "length": 11,
+      "start": 1.6799999475479126,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 28,
+      "length": 13,
+      "start": 2.2799999713897705,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 3.059999942779541,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 54,
+      "length": 8,
+      "start": 3.9800000190734863,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 4.239999771118164,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 69,
+      "length": 9,
+      "start": 4.579999923706055,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 5.139999866485596,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 82,
+      "length": 9,
+      "start": 5.900000095367432,
+      "end": 6.460000038146973
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 6.460000038146973,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 95,
+      "length": 4,
+      "start": 7.039999961853027,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 105,
+      "length": 6,
+      "start": 7.699999809265137,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 112,
+      "length": 13,
+      "start": 7.940000057220459,
+      "end": 8.619999885559082
+    }
+  ]
+}

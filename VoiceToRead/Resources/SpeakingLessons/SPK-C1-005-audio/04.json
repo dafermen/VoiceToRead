@@ -1,0 +1,90 @@
+{
+  "text": "Accessibility advocates reminded us that any modification should prioritize wheelchair-friendly pathways and entrances.",
+  "duration": 8.319999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 13,
+      "start": 0.0,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 14,
+      "length": 9,
+      "start": 0.9800000190734863,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 24,
+      "length": 8,
+      "start": 1.6200000047683716,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 2.5399999618530273,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.859999895095825,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 45,
+      "length": 12,
+      "start": 3.059999942779541,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 58,
+      "length": 6,
+      "start": 3.7799999713897705,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 65,
+      "length": 10,
+      "start": 4.519999980926514,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 76,
+      "length": 10,
+      "start": 5.21999979019165,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 87,
+      "length": 8,
+      "start": 5.78000020980835,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 96,
+      "length": 8,
+      "start": 6.260000228881836,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 105,
+      "length": 3,
+      "start": 6.800000190734863,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 109,
+      "length": 9,
+      "start": 7.28000020980835,
+      "end": 7.679999828338623
+    }
+  ]
+}

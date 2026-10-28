@@ -1,0 +1,120 @@
+{
+  "text": "While I understood their hesitation, I suggested we pilot the system with a small team first to evaluate it.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 6,
+      "length": 1,
+      "start": 0.6200000047683716,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 8,
+      "length": 10,
+      "start": 1.340000033378601,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.940000057220459,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 25,
+      "length": 10,
+      "start": 2.5399999618530273,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 4.079999923706055,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 39,
+      "length": 9,
+      "start": 4.340000152587891,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 4.860000133514404,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 5.619999885559082,
+      "end": 6.0
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 6.0,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 6.400000095367432,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 6.679999828338623,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 74,
+      "length": 1,
+      "start": 7.039999961853027,
+      "end": 7.320000171661377
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 7.320000171661377,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 7.619999885559082,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 7.960000038146973,
+      "end": 8.5
+    },
+    {
+      "location": 93,
+      "length": 2,
+      "start": 8.5,
+      "end": 9.020000457763672
+    },
+    {
+      "location": 96,
+      "length": 8,
+      "start": 9.020000457763672,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 9.460000038146973,
+      "end": 9.84000015258789
+    }
+  ]
+}

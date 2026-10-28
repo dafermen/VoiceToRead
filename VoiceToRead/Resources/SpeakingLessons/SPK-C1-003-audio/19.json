@@ -1,0 +1,90 @@
+{
+  "text": "In the end, our discussion reinforced mutual respect and helped align our efforts effectively.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.23999999463558197
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.23999999463558197,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.5799999833106995,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.2000000476837158,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 16,
+      "length": 10,
+      "start": 1.4600000381469727,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 27,
+      "length": 10,
+      "start": 1.9600000381469727,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 38,
+      "length": 6,
+      "start": 2.7799999713897705,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.3399999141693115,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.940000057220459,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 4.559999942779541,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 4.820000171661377,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 5.300000190734863,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 5.679999828338623,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 82,
+      "length": 11,
+      "start": 5.940000057220459,
+      "end": 6.5
+    }
+  ]
+}

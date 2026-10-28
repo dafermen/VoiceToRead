@@ -1,0 +1,102 @@
+{
+  "text": "I begin by acknowledging both perspectives: a sense of urgency balanced with a commitment to excellence.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.6000000238418579,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 8,
+      "length": 2,
+      "start": 1.059999942779541,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 11,
+      "length": 13,
+      "start": 1.6399999856948853,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.0999999046325684,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 30,
+      "length": 12,
+      "start": 2.5999999046325684,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 4.039999961853027,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 4.159999847412109,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 4.360000133514404,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 55,
+      "length": 7,
+      "start": 5.260000228881836,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 5.260000228881836,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 6.039999961853027,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 77,
+      "length": 1,
+      "start": 6.320000171661377,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 79,
+      "length": 10,
+      "start": 6.820000171661377,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.820000171661377,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 93,
+      "length": 10,
+      "start": 7.420000076293945,
+      "end": 7.599999904632568
+    }
+  ]
+}

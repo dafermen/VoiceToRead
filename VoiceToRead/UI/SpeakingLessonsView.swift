@@ -11,6 +11,8 @@ struct SpeakingLessonLibraryView: View {
             Picker("Level", selection: $level) {
                 Text("B1").tag("B1")
                 Text("B2").tag("B2")
+                Text("C1").tag("C1")
+                Text("C2").tag("C2")
             }.pickerStyle(.segmented).accessibilityIdentifier("guidedLessonLevel")
             ForEach(lessons.filter { $0.level == level }.sorted { $0.number < $1.number }) { lesson in
                 NavigationLink {
@@ -57,7 +59,16 @@ private struct SpeakingLessonCover: View {
         .accessibilityElement(children: .ignore).accessibilityLabel(Text(verbatim: altText ?? lesson.image.altEs))
     }
     private var coverSymbol: String {
-        switch lesson.number {
+        if lesson.level == "C1" || lesson.level == "C2" {
+            switch lesson.number {
+            case 2: return "person.2"
+            case 3: return "bubble.left.and.bubble.right"
+            case 4: return lesson.level == "C1" ? "lightbulb" : "checkmark.shield"
+            case 5: return "person.3"
+            default: return "book.closed"
+            }
+        }
+        return switch lesson.number {
         case 2: "clock"
         case 3: "stethoscope"
         case 4: "person.2"

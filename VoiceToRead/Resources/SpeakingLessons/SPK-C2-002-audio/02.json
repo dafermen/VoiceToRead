@@ -1,0 +1,132 @@
+{
+  "text": "From the start, I sensed a polite but reserved tone from the interviewer, hinting at underlying expectations beyond the formal questions.",
+  "duration": 9.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.2800000011920929,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.6000000238418579,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.3799999952316284,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.600000023841858,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 25,
+      "length": 1,
+      "start": 1.8600000143051147,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.200000047683716,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.4800000190734863,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 2.9000000953674316,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.380000114440918,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 3.880000114440918,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.139999866485596,
+      "end": 4.5
+    },
+    {
+      "location": 61,
+      "length": 11,
+      "start": 4.5,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 5.599999904632568,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 82,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 85,
+      "length": 10,
+      "start": 6.099999904632568,
+      "end": 6.5
+    },
+    {
+      "location": 96,
+      "length": 12,
+      "start": 6.71999979019165,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 7.420000076293945,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 8.0600004196167,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 120,
+      "length": 6,
+      "start": 8.4399995803833,
+      "end": 8.600000381469727
+    },
+    {
+      "location": 127,
+      "length": 9,
+      "start": 8.600000381469727,
+      "end": 9.220000267028809
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "I understood it was easy to overlook details under pressure, and I wanted to support, not accuse.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 10,
+      "start": 0.3799999952316284,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 0.8600000143051147,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.4600000381469727,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.6799999475479126,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 2.0399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.6600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.6600000858306885,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.240000009536743,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 3.5999999046325684,
+      "end": 4.0
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 4.659999847412109,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 65,
+      "length": 1,
+      "start": 4.679999828338623,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 4.900000095367432,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 5.099999904632568,
+      "end": 5.5
+    },
+    {
+      "location": 77,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.539999961853027,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 90,
+      "length": 6,
+      "start": 6.71999979019165,
+      "end": 7.139999866485596
+    }
+  ]
+}

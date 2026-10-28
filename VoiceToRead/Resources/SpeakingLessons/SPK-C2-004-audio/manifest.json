@@ -1,0 +1,109 @@
+{
+  "lesson": "SPK-C2-004",
+  "voice": "marin",
+  "model": "gpt-4o-mini-tts",
+  "base_speed": 0.85,
+  "ai_generated": true,
+  "paragraphs": [
+    {
+      "number": 1,
+      "sha256": "19c7fe10f77b27c5af5b9540d14477bb2ad4b5e261aa92eae85514a172ad7b4e",
+      "text_sha256": "d6e8e2f419d99e85682387b18dd0a647d923ae5922504d26fb4664d6448718a0"
+    },
+    {
+      "number": 2,
+      "sha256": "688e9b36fafb8360a8b4380a0d4c6ae77778d07813159e48788c35b07d3ad260",
+      "text_sha256": "d414c5dbdafd87d66a3112f18acdce67a84f88f6c3a5aea67e8fbe28255942e0"
+    },
+    {
+      "number": 3,
+      "sha256": "8e4215e124dfbfcffc075129f181734e30a6a9b23cb410dfd9651d2baa2a403e",
+      "text_sha256": "5eafa718ff153a806255fbbc03460d8fa91358236a298e885059f03a7dfc43c1"
+    },
+    {
+      "number": 4,
+      "sha256": "5c2b1ec4924af55d00855258c6c513423833b31ea19abb93e038b9d6a018b44a",
+      "text_sha256": "b6f3cbdde82f71ef010f31bf45ce2566dcb4f38ec1370fd2cfab331091704282"
+    },
+    {
+      "number": 5,
+      "sha256": "2b56a32f8571294542e491bc92108d45143ecff70827cbf761c8ede223e0e241",
+      "text_sha256": "7e2213e7a6c5529bddda9a914ab7cf010639e1ef114f5156a79de97f645e313b"
+    },
+    {
+      "number": 6,
+      "sha256": "567e16df716b70881c2a9e752305249d58ac7325fca17fa0731e5674d0cba317",
+      "text_sha256": "d87907a25835ffc35545bc67bd5b7110e2719eb7ade05d6760cc2e4d54777d70"
+    },
+    {
+      "number": 7,
+      "sha256": "983b08892966a8bb8daacfe0e229d51d65eb59080d7aa92ee90701b3bc0cccad",
+      "text_sha256": "e952fa9c902b930b1a5189f5486e9ad106effb463874cc5105874a7a1322490c"
+    },
+    {
+      "number": 8,
+      "sha256": "f4e841d3133ce887583b8f68291a2202095faec39749ca4c0c5985c3e86ce4da",
+      "text_sha256": "442bc56cbcd913d5d72d987a96ad84326864cb0f4675f0c90b72727f227ed16a"
+    },
+    {
+      "number": 9,
+      "sha256": "97aad0dc7c0d40d5c215592a06e59bf2b72039be67d08be081fbb2f7e7f024c7",
+      "text_sha256": "a1624f2db4370d91cbd125763394bcfce2cb8d5ed9da0886d14ddd9faa0edd14"
+    },
+    {
+      "number": 10,
+      "sha256": "2c1eee3a764372da39893ddea4d875a3a6263b8ad382d826bfa4fa7fb95a6866",
+      "text_sha256": "9931e58ee0819743e326a2940998bd7191b82378ea748249eaca7706908abffa"
+    },
+    {
+      "number": 11,
+      "sha256": "6876d79ad48d62eee7eae22d4114942f2fd68e45d941ef08e874dd3975db7b6f",
+      "text_sha256": "91aecbf13abf9a3481b275f0b1f5ee5e67ac0f5d2c0232f9bb1aed8bdf1f0f77"
+    },
+    {
+      "number": 12,
+      "sha256": "b8be2c248706c16a7ad5520264522f773bb350cddc3d64c60ff62755e07ed539",
+      "text_sha256": "f1d2e20b9b8107f0c99743c85a3a15b17d5109f1d4a8af60d78d5afafe068bfd"
+    },
+    {
+      "number": 13,
+      "sha256": "55d793e2acfa0aa164d2b77e1a4c554694e50a337bb57277063e66765bf5963e",
+      "text_sha256": "4e747a81a95cd48fef896606c57fcd0744cd2541b9e08f6e62c705bcd232a1a2"
+    },
+    {
+      "number": 14,
+      "sha256": "e4c4520201bdd9ab12d8d96710c48a7c9f64cce5c19cf961c1277edf727c3445",
+      "text_sha256": "35e3211f4b3dce1e073017f793664f63767a95c719e6135a66f6336fb74a40fd"
+    },
+    {
+      "number": 15,
+      "sha256": "4ac2695058e67848b6324a9b730a7ecdce0358c9ec59b54ab75a71b8a663f08f",
+      "text_sha256": "296c60e045ab4d1c3ef9e7f9f403a273b84a729a8a48036c494abec42abdceb8"
+    },
+    {
+      "number": 16,
+      "sha256": "7551f1ebdcadca2ac44b0f0be129cc01e5ca57f1c6d45f9a9fb4e9ee6fc2c75a",
+      "text_sha256": "ad7e6ca60c14c0d9b5d1fde481243e7fce742fb7f408594d402ca0bc201faa7c"
+    },
+    {
+      "number": 17,
+      "sha256": "ae73b134378fa3942a0eb895487258abd61ac29aa19dd5e70c00c20f6c85a905",
+      "text_sha256": "45fc9f7cf2e2316ef55aecccf6e661f4f8d94aa44b9fda635d700ce51d9fa958"
+    },
+    {
+      "number": 18,
+      "sha256": "b93a1e95466954cd2c604e0270a3b9691d0505d7238fb5fd313ea7005c4a291c",
+      "text_sha256": "8463ba0c0cfcad2e64d1c46a50f2bcc55b45592c5c6988f23442609b5fcd0ec1"
+    },
+    {
+      "number": 19,
+      "sha256": "0bf17edc27bf51f2730854c8acfdd76705bff143a4459bf38d0dbdf1d2d54f25",
+      "text_sha256": "a0ef2dc894447594e59485ef444e52da5c7ccb4bee6ccb0f5e18c4a2ffc1e756"
+    },
+    {
+      "number": 20,
+      "sha256": "c805d83ff7936e3bb1bedfec2b87df2a95afbf0d0f1a81c7ce6930126f340dd4",
+      "text_sha256": "049d117b9eaeba6a537884c8e30c0ea0debd4dac032f4c05bc00315ebe4fd767"
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-005",
+  "number": 5,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Discussing Social Change",
+    "es": "Debatiendo un cambio social"
+  },
+  "category": {
+    "en": "Community and Society",
+    "es": "Comunidad y sociedad"
+  },
+  "main_topic": {
+    "en": "A community discussion about changing how shared public spaces are used; weigh accessibility, competing needs and unintended consequences without advocating a partisan position.",
+    "es": "Una discusión comunitaria sobre el cambio en el uso de espacios públicos compartidos; valorar accesibilidad, necesidades contrapuestas y consecuencias no deseadas sin posturas partidistas."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Personas en un parque público participando en una charla comunitaria junto a áreas de juegos y senderos accesibles.",
+    "prompt": "Realistic editorial photograph, diverse community group discussing in a public park with playground and accessible paths, natural daylight, warm atmosphere, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Abordar temas complejos sobre cambios sociales y espacios públicos.",
+    "Expresar opiniones con precisión, concesión y calificación.",
+    "Reconocer y usar estructuras gramaticales complejas en conversación.",
+    "Comprender y practicar expresiones útiles para debates equilibrados.",
+    "Mejorar comprensión lectora y fluidez oral en discusiones avanzadas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Recently, our neighborhood organized a community meeting to discuss potential changes to the way we use our shared park spaces.",
+      "es": "Recientemente, nuestro barrio organizó una reunión comunitaria para debatir posibles cambios en la forma en que usamos los espacios públicos compartidos del parque."
+    },
+    {
+      "number": 2,
+      "function": "opening_statement",
+      "en": "Some residents proposed adding more seating and picnic areas, arguing that it would encourage social gatherings across all age groups.",
+      "es": "Algunos vecinos propusieron añadir más asientos y áreas de picnic, argumentando que fomentaría encuentros sociales entre todas las edades."
+    },
+    {
+      "number": 3,
+      "function": "contrasting_view",
+      "en": "However, others expressed concern that increasing seating might reduce open space for children to play freely and safely.",
+      "es": "Sin embargo, otros manifestaron preocupación de que aumentar los asientos podría reducir el espacio abierto para que los niños jueguen libre y seguramente."
+    },
+    {
+      "number": 4,
+      "function": "accessibility_focus",
+      "en": "Accessibility advocates reminded us that any modification should prioritize wheelchair-friendly pathways and entrances.",
+      "es": "Los defensores de la accesibilidad nos recordaron que cualquier modificación debe priorizar caminos y entradas accesibles para sillas de ruedas."
+    },
+    {
+      "number": 5,
+      "function": "competing_needs",
+      "en": "Balancing these needs proved complex, as expanding facilities sometimes clashes with preserving natural open areas.",
+      "es": "Equilibrar estas necesidades resultó complejo, ya que ampliar las instalaciones a veces choca con la preservación de áreas naturales abiertas."
+    },
+    {
+      "number": 6,
+      "function": "unintended_consequences",
+      "en": "One participant highlighted that more picnic zones might inadvertently lead to increased littering and noise pollution.",
+      "es": "Un participante destacó que más zonas de picnic podrían provocar involuntariamente un aumento de basura y contaminación acústica."
+    },
+    {
+      "number": 7,
+      "function": "concession",
+      "en": "Although these concerns are valid, proponents argued that with proper maintenance and rules, negative effects could be minimized.",
+      "es": "Aunque estas preocupaciones son válidas, los partidarios argumentaron que con un mantenimiento adecuado y normas, los efectos negativos podrían minimizarse."
+    },
+    {
+      "number": 8,
+      "function": "personal_experience",
+      "en": "From my experience, I noticed that areas with benches tend to foster more community interaction and spontaneous conversations.",
+      "es": "Según mi experiencia, noté que las áreas con bancos suelen fomentar más interacción comunitaria y conversaciones espontáneas."
+    },
+    {
+      "number": 9,
+      "function": "qualification",
+      "en": "Not only would additional seating change how the park was used, but its placement could also determine whose access was improved or restricted.",
+      "es": "La incorporación de más asientos no solo cambiaría el uso del parque, sino que su ubicación también podría determinar a quién se facilitaba o dificultaba el acceso."
+    },
+    {
+      "number": 10,
+      "function": "proposal",
+      "en": "Perhaps a compromise could involve creating designated zones for seating without encroaching upon the grassy play areas.",
+      "es": "Quizás un compromiso podría ser crear zonas designadas para asientos sin invadir las áreas verdes de juego."
+    },
+    {
+      "number": 11,
+      "function": "agreement",
+      "en": "Most participants seemed willing to consider flexible solutions that accommodate various needs fairly.",
+      "es": "La mayoría de los participantes pareció dispuesta a considerar soluciones flexibles que acomoden diversas necesidades de manera justa."
+    },
+    {
+      "number": 12,
+      "function": "future_considerations",
+      "en": "We also discussed scheduling periodic reviews to assess the impact of any implemented changes over time.",
+      "es": "También discutimos programar revisiones periódicas para evaluar el impacto de cualquier cambio implementado con el tiempo."
+    },
+    {
+      "number": 13,
+      "function": "example_of_balancing",
+      "en": "For instance, limiting picnic areas’ hours could reduce noise during quiet times but still allow community use.",
+      "es": "Por ejemplo, limitar el horario de las zonas de picnic podría reducir el ruido durante momentos de tranquilidad pero aún permitir su uso comunitario."
+    },
+    {
+      "number": 14,
+      "function": "acknowledgment",
+      "en": "What the discussion revealed was not a simple choice between progress and resistance, but a need to make the trade-offs explicit.",
+      "es": "Lo que reveló el debate no fue una simple elección entre progreso y resistencia, sino la necesidad de hacer explícitas las compensaciones."
+    },
+    {
+      "number": 15,
+      "function": "suggestion",
+      "en": "Encouraging volunteer groups to help maintain the park might also foster a stronger sense of ownership and care.",
+      "es": "Fomentar grupos de voluntarios para ayudar a mantener el parque podría además crear un mayor sentido de pertenencia y cuidado."
+    },
+    {
+      "number": 16,
+      "function": "conclusion_part_one",
+      "en": "In conclusion, we agreed that any social change requires patience, active listening, and mutual respect to succeed.",
+      "es": "En conclusión, acordamos que cualquier cambio social requiere paciencia, escucha activa y respeto mutuo para tener éxito."
+    },
+    {
+      "number": 17,
+      "function": "conclusion_part_two",
+      "en": "Had the group dismissed the quieter concerns as minor details, the final proposal might have excluded the very residents it was meant to support.",
+      "es": "Si el grupo hubiera descartado las inquietudes menos expresadas como detalles menores, la propuesta final quizá habría excluido precisamente a los residentes que pretendía apoyar."
+    },
+    {
+      "number": 18,
+      "function": "personal_reflection",
+      "en": "This process reminded me that collaborative discussions enrich communities even if perfect solutions are rare.",
+      "es": "Este proceso me recordó que las discusiones colaborativas enriquecen a las comunidades aunque las soluciones perfectas sean raras."
+    },
+    {
+      "number": 19,
+      "function": "future_engagement",
+      "en": "I look forward to participating in future dialogues where more voices can be heard and considered.",
+      "es": "Espero participar en futuros diálogos donde más voces puedan ser escuchadas y consideradas."
+    },
+    {
+      "number": 20,
+      "function": "closing_thoughts",
+      "en": "Ultimately, adapting shared spaces reflects our evolving community, and cooperation remains key to progress.",
+      "es": "En última instancia, adaptar los espacios compartidos refleja nuestra comunidad en evolución y la cooperación sigue siendo clave para el progreso."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Reported argument",
+      "source_paragraph": 2,
+      "example_en": "Some residents proposed adding more seating and picnic areas, arguing that it would encourage social gatherings across all age groups.",
+      "explanation_es": "Arguing that introduce la razón expuesta por quienes proponen el cambio."
+    },
+    {
+      "name": "Should for recommendation",
+      "source_paragraph": 4,
+      "example_en": "Accessibility advocates reminded us that any modification should prioritize wheelchair-friendly pathways and entrances.",
+      "explanation_es": "Should prioritize expresa una recomendación, no una certeza."
+    },
+    {
+      "name": "Modal passive",
+      "source_paragraph": 7,
+      "example_en": "Although these concerns are valid, proponents argued that with proper maintenance and rules, negative effects could be minimized.",
+      "explanation_es": "Could be minimized expresa una posibilidad con foco en los efectos."
+    },
+    {
+      "name": "Inversion after not only",
+      "source_paragraph": 9,
+      "example_en": "Not only would additional seating change how the park was used, but its placement could also determine whose access was improved or restricted.",
+      "explanation_es": "Not only would additional seating change invierte el modal y el sujeto."
+    },
+    {
+      "name": "Tentative suggestion with could",
+      "source_paragraph": 10,
+      "example_en": "Perhaps a compromise could involve creating designated zones for seating without encroaching upon the grassy play areas.",
+      "explanation_es": "Perhaps y could presentan una opción sin imponerla."
+    },
+    {
+      "name": "What-cleft sentence",
+      "source_paragraph": 14,
+      "example_en": "What the discussion revealed was not a simple choice between progress and resistance, but a need to make the trade-offs explicit.",
+      "explanation_es": "What the discussion revealed was enfoca la conclusión principal."
+    },
+    {
+      "name": "Gerund as subject",
+      "source_paragraph": 15,
+      "example_en": "Encouraging volunteer groups to help maintain the park might also foster a stronger sense of ownership and care.",
+      "explanation_es": "Encouraging volunteer groups forma el sujeto de might foster."
+    },
+    {
+      "name": "Inverted third conditional",
+      "source_paragraph": 17,
+      "example_en": "Had the group dismissed the quieter concerns as minor details, the final proposal might have excluded the very residents it was meant to support.",
+      "explanation_es": "Had the group dismissed equivale a if the group had dismissed; might have expresa el resultado hipotético."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "shared park spaces",
+      "meaning_es": "espacios públicos compartidos",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "social gatherings across all age groups",
+      "meaning_es": "encuentros sociales entre todas las edades",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "increasing seating might reduce open space",
+      "meaning_es": "aumentar los asientos podría reducir el espacio abierto",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "prioritize wheelchair-friendly pathways",
+      "meaning_es": "priorizar caminos accesibles para sillas de ruedas",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "inadvertently lead to increased littering",
+      "meaning_es": "provocar involuntariamente un aumento de basura",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "foster more community interaction",
+      "meaning_es": "fomentar más interacción comunitaria",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "creating designated zones",
+      "meaning_es": "crear zonas designadas",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "make the trade-offs explicit",
+      "meaning_es": "hacer explícitas las compensaciones",
+      "source_paragraph": 14
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Recently, our neighborhood organized a",
+              "community meeting to discuss potential",
+              "changes to the way we",
+              "use our shared park spaces."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Although these concerns are valid,",
+              "proponents argued that with proper",
+              "maintenance and rules, negative effects",
+              "could be minimized."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "Encouraging volunteer groups to help",
+              "maintain the park might also",
+              "foster a stronger sense of",
+              "ownership and care."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-005",
+    "number": "005",
+    "title_en": "Discussing Social Change",
+    "title_es": "Debatiendo un cambio social",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Comunidad y sociedad",
+    "main_topic_es": "Discusión comunitaria sobre espacios públicos",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Reported argument",
+      "Should for recommendation",
+      "Modal passive",
+      "Inversion after not only",
+      "Tentative suggestion with could",
+      "What-cleft sentence",
+      "Gerund as subject",
+      "Inverted third conditional"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

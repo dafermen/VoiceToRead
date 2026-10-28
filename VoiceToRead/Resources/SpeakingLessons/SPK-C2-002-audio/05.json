@@ -1,0 +1,144 @@
+{
+  "text": "At one point, the interviewer asked about gaps in my employment history, phrasing it in a way that implied potential concerns about commitment.",
+  "duration": 9.399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.2199999988079071
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.2199999988079071,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.5600000023841858,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.3600000143051147,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 18,
+      "length": 11,
+      "start": 1.5800000429153442,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 2.180000066757202,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.4800000190734863,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.8399999141693115,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.1600000858306885,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.359999895095825,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 53,
+      "length": 10,
+      "start": 3.5999999046325684,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 4.019999980926514,
+      "end": 4.5
+    },
+    {
+      "location": 73,
+      "length": 8,
+      "start": 5.440000057220459,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 82,
+      "length": 2,
+      "start": 5.559999942779541,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 85,
+      "length": 2,
+      "start": 5.800000190734863,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 88,
+      "length": 1,
+      "start": 5.880000114440918,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 6.159999847412109,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 94,
+      "length": 4,
+      "start": 6.21999979019165,
+      "end": 6.5
+    },
+    {
+      "location": 99,
+      "length": 7,
+      "start": 6.5,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 107,
+      "length": 9,
+      "start": 6.840000152587891,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 117,
+      "length": 8,
+      "start": 7.420000076293945,
+      "end": 8.0
+    },
+    {
+      "location": 126,
+      "length": 5,
+      "start": 8.0,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 132,
+      "length": 10,
+      "start": 8.420000076293945,
+      "end": 8.779999732971191
+    }
+  ]
+}

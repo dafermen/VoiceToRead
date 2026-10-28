@@ -1,0 +1,114 @@
+{
+  "text": "Today, I'm stepping into the role of mediator between two colleagues whose priorities clash on the project timeline.",
+  "duration": 7.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.8600000143051147,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 11,
+      "length": 8,
+      "start": 1.2999999523162842,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.559999942779541,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.8600000143051147,
+      "end": 2.0
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.2799999713897705,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 37,
+      "length": 8,
+      "start": 2.680000066757202,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.0799999237060547,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.680000066757202,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 58,
+      "length": 10,
+      "start": 4.059999942779541,
+      "end": 4.5
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 4.5,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 75,
+      "length": 10,
+      "start": 4.860000133514404,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 5.420000076293945,
+      "end": 6.0
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 6.0,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.28000020980835,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 99,
+      "length": 7,
+      "start": 6.440000057220459,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 107,
+      "length": 8,
+      "start": 6.880000114440918,
+      "end": 7.28000020980835
+    }
+  ]
+}

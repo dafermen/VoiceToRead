@@ -1,0 +1,108 @@
+{
+  "text": "I've committed to maintaining a journal of new words and expressions to reinforce retention and active usage.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.800000011920929,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.100000023841858,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 18,
+      "length": 11,
+      "start": 1.9600000381469727,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 30,
+      "length": 1,
+      "start": 1.9600000381469727,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 32,
+      "length": 7,
+      "start": 2.3399999141693115,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.440000057220459,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 2.759999990463257,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.0799999237060547,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.4000000953674316,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 57,
+      "length": 11,
+      "start": 3.7799999713897705,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.260000228881836,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 4.960000038146973,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 82,
+      "length": 9,
+      "start": 5.559999942779541,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 6.119999885559082,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.619999885559082,
+      "end": 7.0
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 7.0,
+      "end": 7.420000076293945
+    }
+  ]
+}

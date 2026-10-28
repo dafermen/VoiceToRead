@@ -1,0 +1,84 @@
+{
+  "text": "I felt torn between protecting our team’s reputation and being transparent with management.",
+  "duration": 6.909999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 1.100000023841858,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 1.3600000143051147,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 1.7599999904632568,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 20,
+      "length": 10,
+      "start": 2.2200000286102295,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.700000047683716,
+      "end": 3.0
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 3.0,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 42,
+      "length": 10,
+      "start": 4.039999961853027,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 4.679999828338623,
+      "end": 5.0
+    },
+    {
+      "location": 63,
+      "length": 11,
+      "start": 5.0,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 5.599999904632568,
+      "end": 6.0
+    },
+    {
+      "location": 80,
+      "length": 10,
+      "start": 6.0,
+      "end": 6.300000190734863
+    }
+  ]
+}

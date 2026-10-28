@@ -2,7 +2,7 @@ from pathlib import Path
 import urllib.request,urllib.error,json,hashlib,re,unicodedata,uuid,sys,shutil
 import argparse
 parser=argparse.ArgumentParser();parser.add_argument('--lesson',default='SPK-B1-001');args=parser.parse_args()
-if not re.fullmatch(r'SPK-(B1|B2)-[0-9]{3}',args.lesson):sys.exit('Invalid lesson identifier.')
+if not re.fullmatch(r'SPK-(B1|B2|C1|C2)-[0-9]{3}',args.lesson):sys.exit('Invalid lesson identifier.')
 root=Path(__file__).resolve().parents[1]; folder=root/'VoiceToRead/Resources/SpeakingLessons'
 lesson=json.loads((folder/(args.lesson+'.json')).read_text(encoding='utf-8'))
 out=folder/(args.lesson+'-audio');out.mkdir(exist_ok=True)
@@ -26,7 +26,7 @@ for p in lesson['paragraphs']:
  n=p['number'];text=p['en'];path=out/f'{n:02}.mp3';timestamps=out/f'{n:02}.json'
  if timestamps.exists() and json.loads(timestamps.read_text(encoding='utf-8'))['text']!=text:sys.exit('Source changed: review and regenerate this audio explicitly.')
  if not path.exists():
-  payload={'model':'gpt-4o-mini-tts','voice':'marin','input':text,'speed':0.85,'response_format':'mp3','instructions':'Read the provided text verbatim in clear, natural American English for an adult B1 language learner. Warm, calm teaching voice. Slightly slower than normal conversation, with natural phrasing and intonation. Do not exaggerate sounds, do not add words, introductions, music or sound effects.'}
+  payload={'model':'gpt-4o-mini-tts','voice':'marin','input':text,'speed':0.85,'response_format':'mp3','instructions':'Read the provided text verbatim in clear, natural American English for an adult English language learner. Warm, calm teaching voice. Slightly slower than normal conversation, with natural phrasing and intonation. Do not exaggerate sounds, do not add words, introductions, music or sound effects.'}
   data=request('audio/speech',json.dumps(payload).encode(),'application/json')
   if len(data)<1000:sys.exit('Invalid audio response.')
   path.write_bytes(data)

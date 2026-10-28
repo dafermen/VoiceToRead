@@ -1,0 +1,96 @@
+{
+  "text": "Improving my English is less about perfection and more about mastering nuance, authenticity, and connection.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.7400000095367432,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.0399999618530273,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.5399999618530273,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.180000066757202,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.440000057220459,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 35,
+      "length": 10,
+      "start": 2.759999990463257,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.2799999713897705,
+      "end": 4.0
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 55,
+      "length": 5,
+      "start": 4.28000020980835,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 61,
+      "length": 9,
+      "start": 4.659999847412109,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 5.139999866485596,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 79,
+      "length": 12,
+      "start": 6.980000019073486,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 7.579999923706055,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 97,
+      "length": 10,
+      "start": 8.119999885559082,
+      "end": 8.460000038146973
+    }
+  ]
+}

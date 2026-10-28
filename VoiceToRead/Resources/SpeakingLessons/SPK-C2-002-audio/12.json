@@ -1,0 +1,156 @@
+{
+  "text": "Had I mistaken every pause for disapproval, I might have filled the silence with explanations that answered a concern the interviewer had never actually expressed.",
+  "duration": 11.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 4,
+      "length": 1,
+      "start": 0.41999998688697815,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 6,
+      "length": 8,
+      "start": 0.7799999713897705,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.3200000524520874,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 1.9800000190734863,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.319999933242798,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 31,
+      "length": 11,
+      "start": 2.5999999046325684,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.7799999713897705,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.940000057220459,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 4.179999828338623,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 4.599999904632568,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.599999904632568,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 4.900000095367432,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.300000190734863,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 81,
+      "length": 12,
+      "start": 5.659999847412109,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 94,
+      "length": 4,
+      "start": 6.380000114440918,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 99,
+      "length": 8,
+      "start": 7.159999847412109,
+      "end": 7.5
+    },
+    {
+      "location": 108,
+      "length": 1,
+      "start": 7.5,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 110,
+      "length": 7,
+      "start": 7.840000152587891,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 118,
+      "length": 3,
+      "start": 8.199999809265137,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 122,
+      "length": 11,
+      "start": 8.859999656677246,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 134,
+      "length": 3,
+      "start": 9.4399995803833,
+      "end": 9.640000343322754
+    },
+    {
+      "location": 138,
+      "length": 5,
+      "start": 9.640000343322754,
+      "end": 9.899999618530273
+    },
+    {
+      "location": 144,
+      "length": 8,
+      "start": 9.899999618530273,
+      "end": 10.619999885559082
+    },
+    {
+      "location": 153,
+      "length": 9,
+      "start": 10.619999885559082,
+      "end": 11.079999923706055
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "text": "This incident deepened my appreciation for the delicate balance required when honesty intersects with loyalty.",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 5,
+      "length": 8,
+      "start": 0.5799999833106995,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 14,
+      "length": 8,
+      "start": 1.2200000286102295,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.5
+    },
+    {
+      "location": 26,
+      "length": 12,
+      "start": 2.5,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.5
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 4.5,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 4.679999828338623,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 64,
+      "length": 8,
+      "start": 5.380000114440918,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 6.28000020980835,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 7.079999923706055,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 86,
+      "length": 10,
+      "start": 7.699999809265137,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 8.819999694824219,
+      "end": 9.119999885559082
+    },
+    {
+      "location": 102,
+      "length": 7,
+      "start": 9.119999885559082,
+      "end": 9.399999618530273
+    }
+  ]
+}

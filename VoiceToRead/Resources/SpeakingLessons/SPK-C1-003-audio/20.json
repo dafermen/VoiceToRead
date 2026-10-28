@@ -1,0 +1,72 @@
+{
+  "text": "Though challenging, resolving this conflict deepened our professional relationship and trust.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 7,
+      "length": 11,
+      "start": 0.4399999976158142,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 20,
+      "length": 9,
+      "start": 2.119999885559082,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.119999885559082,
+      "end": 2.5
+    },
+    {
+      "location": 35,
+      "length": 8,
+      "start": 2.5,
+      "end": 3.0
+    },
+    {
+      "location": 44,
+      "length": 8,
+      "start": 3.0,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 57,
+      "length": 12,
+      "start": 3.9800000190734863,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 70,
+      "length": 12,
+      "start": 4.519999980926514,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 83,
+      "length": 3,
+      "start": 5.139999866485596,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 5.539999961853027,
+      "end": 5.860000133514404
+    }
+  ]
+}

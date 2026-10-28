@@ -1,0 +1,162 @@
+{
+  "text": "Rather than implying that the disagreement is trivial, I suggest that there may be room to distinguish a firm deadline from an assumption nobody has tested.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 12,
+      "length": 8,
+      "start": 0.8199999928474426,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.2599999904632568,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.5199999809265137,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 30,
+      "length": 12,
+      "start": 1.7400000095367432,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 2.559999942779541,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 55,
+      "length": 1,
+      "start": 3.700000047683716,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 3.859999895095825,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 4.260000228881836,
+      "end": 4.5
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 4.5,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 4.699999809265137,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 4.920000076293945,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 5.099999904632568,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 5.320000171661377,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 91,
+      "length": 11,
+      "start": 5.699999809265137,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 103,
+      "length": 1,
+      "start": 6.039999961853027,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 105,
+      "length": 4,
+      "start": 6.340000152587891,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 110,
+      "length": 8,
+      "start": 6.599999904632568,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 119,
+      "length": 4,
+      "start": 7.059999942779541,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 124,
+      "length": 2,
+      "start": 7.480000019073486,
+      "end": 7.739999771118164
+    },
+    {
+      "location": 127,
+      "length": 10,
+      "start": 7.739999771118164,
+      "end": 8.140000343322754
+    },
+    {
+      "location": 138,
+      "length": 6,
+      "start": 8.140000343322754,
+      "end": 8.600000381469727
+    },
+    {
+      "location": 145,
+      "length": 3,
+      "start": 8.600000381469727,
+      "end": 8.9399995803833
+    },
+    {
+      "location": 149,
+      "length": 6,
+      "start": 8.9399995803833,
+      "end": 9.239999771118164
+    }
+  ]
+}

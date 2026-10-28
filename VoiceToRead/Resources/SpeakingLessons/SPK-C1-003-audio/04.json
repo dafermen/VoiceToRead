@@ -1,0 +1,126 @@
+{
+  "text": "It became clear that her intention was not to dismiss my ideas but to highlight real constraints we must consider.",
+  "duration": 7.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.3199999928474426,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 0.699999988079071,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.100000023841858,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.399999976158142,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 1.600000023841858,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 2.0999999046325684,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.4600000381469727,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 2.7200000286102295,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.2799999713897705,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 3.2799999713897705,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 3.5999999046325684,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 4.619999885559082,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 5.199999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.199999809265137,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 85,
+      "length": 11,
+      "start": 5.639999866485596,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 97,
+      "length": 2,
+      "start": 6.159999847412109,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 6.480000019073486,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 105,
+      "length": 8,
+      "start": 6.760000228881836,
+      "end": 7.159999847412109
+    }
+  ]
+}

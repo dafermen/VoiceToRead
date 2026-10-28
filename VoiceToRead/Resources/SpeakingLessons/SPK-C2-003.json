@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-003",
+  "number": 3,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Mediating a Negotiation",
+    "es": "Mediando en una negociación"
+  },
+  "category": {
+    "en": "Business Communication",
+    "es": "Comunicación empresarial"
+  },
+  "main_topic": {
+    "en": "Mediating a negotiation between colleagues with different priorities, recognizing face-saving language, and formulating an acceptable qualified agreement.",
+    "es": "Medicación en una negociación entre colegas con prioridades diferentes, reconocimiento del lenguaje para salvar la imagen y formulación de un acuerdo aceptable y calificado."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos colegas negociando alrededor de una mesa en una oficina moderna, con expresiones de escucha atenta y diálogo constructivo.",
+    "prompt": "Realistic editorial photograph, two colleagues mediating a negotiation seated around a table in a modern office, attentive listening and constructive dialogue expressions, professional attire, warm natural light, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Identificar y usar lenguaje para salvar la imagen (face-saving language) en negociaciones.",
+    "Reconocer la importancia de la reformulación y las expresiones sutiles para la mediación efectiva.",
+    "Practicar la mediación verbal entre partes con diferentes prioridades.",
+    "Formular acuerdos cualificados que consideren las necesidades de ambas partes.",
+    "Mejorar la fluidez y naturalidad en interacciones profesionales complejas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today, I'm stepping into the role of mediator between two colleagues whose priorities clash on the project timeline.",
+      "es": "Hoy asumo el papel de mediador entre dos colegas cuyas prioridades chocan respecto al calendario del proyecto."
+    },
+    {
+      "number": 2,
+      "function": "setup",
+      "en": "One insists on speed to meet external demands, while the other stresses quality and thorough review before delivery.",
+      "es": "Uno insiste en la rapidez para cumplir con demandas externas, mientras que el otro enfatiza la calidad y una revisión exhaustiva antes de la entrega."
+    },
+    {
+      "number": 3,
+      "function": "observation",
+      "en": "Recognizing their positions, I choose to use language that allows them to save face rather than confront directly.",
+      "es": "Reconociendo sus posturas, decido utilizar un lenguaje que les permita salvar la imagen en vez de confrontar directamente."
+    },
+    {
+      "number": 4,
+      "function": "strategy",
+      "en": "I begin by acknowledging both perspectives: a sense of urgency balanced with a commitment to excellence.",
+      "es": "Comienzo reconociendo ambas perspectivas: un sentido de urgencia equilibrado con un compromiso con la excelencia."
+    },
+    {
+      "number": 5,
+      "function": "reformulation",
+      "en": "When one calls the review an unnecessary delay, I ask which checks are indispensable and which might be streamlined, without deciding in advance whose account is fairer.",
+      "es": "Cuando uno califica la revisión de retraso innecesario, pregunto qué comprobaciones son indispensables y cuáles podrían agilizarse, sin decidir de antemano qué versión es más justa."
+    },
+    {
+      "number": 6,
+      "function": "calm",
+      "en": "This softens the tone, reducing defensiveness and opening space for constructive dialogue.",
+      "es": "Esto suaviza el tono, reduce la actitud defensiva y abre espacio para un diálogo constructivo."
+    },
+    {
+      "number": 7,
+      "function": "empower",
+      "en": "I invite each party to express what they need without blaming, encouraging empathy and mutual understanding.",
+      "es": "Invito a cada parte a expresar lo que necesita sin culpar, fomentando la empatía y la comprensión mutua."
+    },
+    {
+      "number": 8,
+      "function": "understatement",
+      "en": "Rather than implying that the disagreement is trivial, I suggest that there may be room to distinguish a firm deadline from an assumption nobody has tested.",
+      "es": "En lugar de insinuar que el desacuerdo es trivial, sugiero que quizá convenga distinguir un plazo firme de una suposición que nadie ha comprobado."
+    },
+    {
+      "number": 9,
+      "function": "pragmatic_choice",
+      "en": "Were either colleague to hear that as a demand to concede, I would need to clarify that exploring an option does not amount to accepting it.",
+      "es": "Si cualquiera de los colegas lo interpretara como una exigencia de ceder, tendría que aclarar que explorar una opción no equivale a aceptarla."
+    },
+    {
+      "number": 10,
+      "function": "listening",
+      "en": "Listening carefully, I detect implicit concerns each one hasn't voiced openly, such as resource limitations and team capacity.",
+      "es": "Escuchando atentamente, detecto preocupaciones implícitas que ninguno ha expresado abiertamente, como limitaciones de recursos y capacidad del equipo."
+    },
+    {
+      "number": 11,
+      "function": "paraphrasing",
+      "en": "Paraphrasing these concerns aloud helps to clarify misunderstandings and build trust.",
+      "es": "Parafrasear estas preocupaciones en voz alta ayuda a aclarar malentendidos y generar confianza."
+    },
+    {
+      "number": 12,
+      "function": "compromise_proposal",
+      "en": "I propose a phased timeline that prioritizes critical elements first, followed by detailed review phases.",
+      "es": "Propongo un calendario por fases que prioriza primero los elementos críticos, seguido de fases de revisión detallada."
+    },
+    {
+      "number": 13,
+      "function": "qualification",
+      "en": "I qualify this by emphasizing that adjustments remain possible as new information emerges.",
+      "es": "Califico esto enfatizando que los ajustes siguen siendo posibles a medida que surge nueva información."
+    },
+    {
+      "number": 14,
+      "function": "agreement_formulation",
+      "en": "Both parties tentatively agree, provided that the essential checks remain explicit and any change in capacity triggers a further discussion rather than an unspoken compromise.",
+      "es": "Ambas partes aceptan de forma provisional, siempre que las comprobaciones esenciales sigan siendo explícitas y cualquier cambio de capacidad dé lugar a otra conversación, no a una concesión tácita."
+    },
+    {
+      "number": 15,
+      "function": "face_saving_expression",
+      "en": "Only once I ask each person to restate the agreement in their own words do we discover that one apparently shared phrase still means different things to them.",
+      "es": "Solo cuando pido a cada persona que reformule el acuerdo con sus propias palabras descubrimos que una frase aparentemente compartida todavía significa cosas distintas para cada una."
+    },
+    {
+      "number": 16,
+      "function": "closing",
+      "en": "Before closing, I confirm all understand the next steps and feel comfortable with the plan's adaptability.",
+      "es": "Antes de cerrar, confirmo que todos entienden los siguientes pasos y se sienten cómodos con la adaptabilidad del plan."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "It is not the absence of disagreement that makes the outcome workable, but the precision with which the remaining differences have been acknowledged.",
+      "es": "No es la ausencia de desacuerdo lo que hace viable el resultado, sino la precisión con que se han reconocido las diferencias que aún quedan."
+    },
+    {
+      "number": 18,
+      "function": "lesson",
+      "en": "Reformulation avoids direct accusations and helps preserve professional relationships.",
+      "es": "La reformulación evita acusaciones directas y ayuda a preservar relaciones profesionales."
+    },
+    {
+      "number": 19,
+      "function": "advice",
+      "en": "Encouraging qualified agreements keeps dialogue open and adaptable, essential in complex negotiations.",
+      "es": "Fomentar acuerdos calificados mantiene el diálogo abierto y adaptable, esencial en negociaciones complejas."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Ultimately, successful mediation balances assertiveness with empathy, crafting shared solutions.",
+      "es": "En última instancia, una mediación exitosa equilibra la asertividad con la empatía, creando soluciones compartidas."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Possessive relative clause",
+      "source_paragraph": 1,
+      "example_en": "Today, I'm stepping into the role of mediator between two colleagues whose priorities clash on the project timeline.",
+      "explanation_es": "Whose priorities vincula las prioridades con los colegas."
+    },
+    {
+      "name": "Indirect question with modal passive",
+      "source_paragraph": 5,
+      "example_en": "When one calls the review an unnecessary delay, I ask which checks are indispensable and which might be streamlined, without deciding in advance whose account is fairer.",
+      "explanation_es": "Which might be streamlined combina una pregunta indirecta con una posibilidad en pasiva."
+    },
+    {
+      "name": "Rather than + -ing",
+      "source_paragraph": 8,
+      "example_en": "Rather than implying that the disagreement is trivial, I suggest that there may be room to distinguish a firm deadline from an assumption nobody has tested.",
+      "explanation_es": "Rather than implying distingue la intención expresada de una interpretación que se quiere evitar."
+    },
+    {
+      "name": "Conditional inversion with were",
+      "source_paragraph": 9,
+      "example_en": "Were either colleague to hear that as a demand to concede, I would need to clarify that exploring an option does not amount to accepting it.",
+      "explanation_es": "Were either colleague to hear equivale a if either colleague were to hear."
+    },
+    {
+      "name": "Provided that and qualified agreement",
+      "source_paragraph": 14,
+      "example_en": "Both parties tentatively agree, provided that the essential checks remain explicit and any change in capacity triggers a further discussion rather than an unspoken compromise.",
+      "explanation_es": "Provided that condiciona la aceptación a comprobaciones y procedimientos explícitos."
+    },
+    {
+      "name": "Inversion after only once",
+      "source_paragraph": 15,
+      "example_en": "Only once I ask each person to restate the agreement in their own words do we discover that one apparently shared phrase still means different things to them.",
+      "explanation_es": "Only once ... do we discover enfatiza qué permite descubrir la diferencia."
+    },
+    {
+      "name": "Negative it-cleft",
+      "source_paragraph": 17,
+      "example_en": "It is not the absence of disagreement that makes the outcome workable, but the precision with which the remaining differences have been acknowledged.",
+      "explanation_es": "It is not ... but contrasta la ausencia de desacuerdo con la precisión al reconocerlo."
+    },
+    {
+      "name": "Gerund as subject",
+      "source_paragraph": 19,
+      "example_en": "Encouraging qualified agreements keeps dialogue open and adaptable, essential in complex negotiations.",
+      "explanation_es": "Encouraging qualified agreements actúa como sujeto de keeps."
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "save face",
+      "meaning_es": "salvar la imagen o evitar la humillación",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "reducing defensiveness",
+      "meaning_es": "reducir la actitud defensiva",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "opening space for constructive dialogue",
+      "meaning_es": "abrir espacio para un diálogo constructivo",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "indispensable",
+      "meaning_es": "indispensable",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "room to distinguish",
+      "meaning_es": "margen para distinguir",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "does not amount to accepting it",
+      "meaning_es": "no equivale a aceptarlo",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "qualify this by emphasizing",
+      "meaning_es": "calificar esto enfatizando",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "balanced with a commitment to excellence",
+      "meaning_es": "equilibrado con un compromiso con la excelencia",
+      "source_paragraph": 4
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Today, I'm stepping into the",
+              "role of mediator between two",
+              "colleagues whose priorities clash on",
+              "the project timeline."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I invite each party",
+              "to express what they",
+              "need without blaming, encouraging",
+              "empathy and mutual understanding."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "Only once I ask each person to",
+              "restate the agreement in their own words",
+              "do we discover that one apparently shared",
+              "phrase still means different things to them."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-003",
+    "number": "003",
+    "title_en": "Mediating a Negotiation",
+    "title_es": "Mediando en una negociación",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación empresarial",
+    "main_topic_es": "Medicar entre colegas con prioridades distintas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Possessive relative clause",
+      "Indirect question with modal passive",
+      "Rather than + -ing",
+      "Conditional inversion with were",
+      "Provided that and qualified agreement",
+      "Inversion after only once",
+      "Negative it-cleft",
+      "Gerund as subject"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "text": "Ultimately, we realized that transparent and empathetic communication is key to effective teamwork.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.7000000476837158,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.259999990463257,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 29,
+      "length": 11,
+      "start": 2.7200000286102295,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 3.4000000953674316,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 45,
+      "length": 10,
+      "start": 3.9600000381469727,
+      "end": 4.5
+    },
+    {
+      "location": 56,
+      "length": 13,
+      "start": 4.5,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 5.199999809265137,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 6.039999961853027,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 6.440000057220459,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 80,
+      "length": 9,
+      "start": 7.119999885559082,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 90,
+      "length": 8,
+      "start": 7.519999980926514,
+      "end": 8.039999961853027
+    }
+  ]
+}

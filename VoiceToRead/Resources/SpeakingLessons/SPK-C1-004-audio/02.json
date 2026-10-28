@@ -1,0 +1,102 @@
+{
+  "text": "My main idea was to automate routine tasks to free up more time for strategic planning.",
+  "duration": 6.739999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.36000001430511475,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.7400000095367432,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.1200000047683716,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.440000057220459,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 2.0999999046325684,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.119999885559082,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 2.7200000286102295,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.240000009536743,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.859999895095825,
+      "end": 4.0
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 4.0,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.260000228881836,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.820000171661377,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 5.21999979019165,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.639999866485596,
+      "end": 6.059999942779541
+    }
+  ]
+}

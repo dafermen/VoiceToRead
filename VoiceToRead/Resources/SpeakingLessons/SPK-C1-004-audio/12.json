@@ -1,0 +1,96 @@
+{
+  "text": "As a result, I proposed scheduling weekly feedback meetings to ensure open communication and adjustments.",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.30000001192092896,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5400000214576721,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.399999976158142,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.659999966621399,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 24,
+      "length": 10,
+      "start": 2.0999999046325684,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.7799999713897705,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 42,
+      "length": 8,
+      "start": 3.299999952316284,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 3.859999895095825,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.239999771118164,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.679999828338623,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.5
+    },
+    {
+      "location": 75,
+      "length": 13,
+      "start": 5.5,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.119999885559082,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 93,
+      "length": 11,
+      "start": 6.679999828338623,
+      "end": 6.960000038146973
+    }
+  ]
+}

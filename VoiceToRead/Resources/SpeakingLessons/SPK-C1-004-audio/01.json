@@ -1,0 +1,114 @@
+{
+  "text": "Last week, I proposed a new system to improve our team's workflow, knowing that change always meets resistance.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.1200000047683716,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 13,
+      "length": 8,
+      "start": 1.4199999570846558,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.7599999904632568,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 2.0399999618530273,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.319999933242798,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 2.6600000858306885,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.059999942779541,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.4200000762939453,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.680000066757202,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 57,
+      "length": 8,
+      "start": 4.539999961853027,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 67,
+      "length": 7,
+      "start": 5.420000076293945,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 5.420000076293945,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 80,
+      "length": 6,
+      "start": 5.820000171661377,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 87,
+      "length": 6,
+      "start": 6.179999828338623,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 6.820000171661377,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 100,
+      "length": 10,
+      "start": 7.099999904632568,
+      "end": 7.619999885559082
+    }
+  ]
+}
