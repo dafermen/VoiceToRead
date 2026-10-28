@@ -1,0 +1,120 @@
+{
+  "text": "However, Maria pointed out, 'Some of us can't bring supplies, but we can help by organizing snacks and drinks.'",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 1.0,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.3799999952316284,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.840000033378601,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.759999990463257,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.9000000953674316,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 37,
+      "length": 2,
+      "start": 3.0999999046325684,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 3.4200000762939453,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.6600000858306885,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 52,
+      "length": 8,
+      "start": 3.880000114440918,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 5.119999885559082,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.21999979019165,
+      "end": 5.5
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 5.5,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.900000095367432,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 6.260000228881836,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 81,
+      "length": 10,
+      "start": 6.679999828338623,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 92,
+      "length": 6,
+      "start": 7.239999771118164,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 7.840000152587891,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 103,
+      "length": 6,
+      "start": 8.260000228881836,
+      "end": 8.5
+    }
+  ]
+}

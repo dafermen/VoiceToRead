@@ -1,0 +1,162 @@
+{
+  "text": "Although we could invite more people, Jamie pointed out that Sasha’s apartment isn’t large, which forced us to consider how many guests would really fit comfortably.",
+  "duration": 10.270000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.3799999952316284,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 0.6399999856948853,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 0.8600000143051147,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 1.2000000476837158,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 1.600000023841858,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.5199999809265137,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 44,
+      "length": 7,
+      "start": 2.759999990463257,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.4200000762939453,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 61,
+      "length": 7,
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 69,
+      "length": 9,
+      "start": 4.139999866485596,
+      "end": 4.5
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 4.5,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 4.960000038146973,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 5.960000038146973,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 98,
+      "length": 6,
+      "start": 6.119999885559082,
+      "end": 6.460000038146973
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 6.460000038146973,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 108,
+      "length": 2,
+      "start": 6.71999979019165,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 111,
+      "length": 8,
+      "start": 7.21999979019165,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 120,
+      "length": 3,
+      "start": 7.21999979019165,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 124,
+      "length": 4,
+      "start": 7.559999942779541,
+      "end": 7.860000133514404
+    },
+    {
+      "location": 129,
+      "length": 6,
+      "start": 7.860000133514404,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 136,
+      "length": 5,
+      "start": 8.199999809265137,
+      "end": 8.5
+    },
+    {
+      "location": 142,
+      "length": 6,
+      "start": 8.5,
+      "end": 8.920000076293945
+    },
+    {
+      "location": 149,
+      "length": 3,
+      "start": 8.920000076293945,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 153,
+      "length": 11,
+      "start": 9.15999984741211,
+      "end": 9.699999809265137
+    }
+  ]
+}

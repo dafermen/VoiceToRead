@@ -1,0 +1,132 @@
+{
+  "text": "Although she sounded matter-of-fact, I sensed a lingering irritation beneath her even tone, so I acknowledged that possibility openly.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.4399999976158142,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 0.8399999737739563,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 1.2000000476837158,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 1.7799999713897705,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 1.7799999713897705,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 2.5999999046325684,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 3.140000104904175,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 46,
+      "length": 1,
+      "start": 3.4200000762939453,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 48,
+      "length": 9,
+      "start": 3.700000047683716,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 58,
+      "length": 10,
+      "start": 4.079999923706055,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 69,
+      "length": 7,
+      "start": 4.820000171661377,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 77,
+      "length": 3,
+      "start": 5.360000133514404,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 5.679999828338623,
+      "end": 6.0
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.0,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 7.079999923706055,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 95,
+      "length": 1,
+      "start": 7.239999771118164,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 97,
+      "length": 12,
+      "start": 7.579999923706055,
+      "end": 8.0
+    },
+    {
+      "location": 110,
+      "length": 4,
+      "start": 8.0,
+      "end": 8.34000015258789
+    },
+    {
+      "location": 115,
+      "length": 11,
+      "start": 8.34000015258789,
+      "end": 9.039999961853027
+    },
+    {
+      "location": 127,
+      "length": 6,
+      "start": 9.039999961853027,
+      "end": 9.600000381469727
+    }
+  ]
+}

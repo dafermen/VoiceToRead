@@ -1,0 +1,84 @@
+{
+  "text": "Sarah said she could buy drinks and napkins without spending too much money.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 0.9599999785423279,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.5399999618530273,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.7799999713897705,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.059999942779541,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.5199999809265137,
+      "end": 3.0
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 3.0,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 44,
+      "length": 7,
+      "start": 3.5799999237060547,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 52,
+      "length": 8,
+      "start": 4.320000171661377,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 4.739999771118164,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 5.400000095367432,
+      "end": 5.619999885559082
+    }
+  ]
+}

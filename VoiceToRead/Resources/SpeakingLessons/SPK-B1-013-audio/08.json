@@ -1,0 +1,120 @@
+{
+  "text": "Most people felt that a few balloons and a sign would be enough, even though some love big decorations.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.2400000095367432,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.5199999809265137,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.7599999904632568,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.0399999618530273,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 3.059999942779541,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 3.680000066757202,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.680000066757202,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.340000152587891,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 4.619999885559082,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 5.800000190734863,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 6.099999904632568,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 6.380000114440918,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.800000190734863,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 7.28000020980835,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 91,
+      "length": 11,
+      "start": 8.020000457763672,
+      "end": 8.520000457763672
+    }
+  ]
+}

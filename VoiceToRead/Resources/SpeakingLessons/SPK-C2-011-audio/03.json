@@ -1,0 +1,144 @@
+{
+  "text": "When our waiter returned with water, I asked, \"Would you happen to have any chef specials tonight, or perhaps recommendations beyond what's listed?\"",
+  "duration": 9.6899995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.30000001192092896,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 6,
+      "start": 0.5400000214576721,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 0.7599999904632568,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 1.340000033378601,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 1.6200000047683716,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 2.119999885559082,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.640000104904175,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.5,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.740000009536743,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 3.940000057220459,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 4.440000057220459,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 4.920000076293945,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 81,
+      "length": 8,
+      "start": 5.079999923706055,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 90,
+      "length": 7,
+      "start": 5.699999809265137,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 6.599999904632568,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 102,
+      "length": 7,
+      "start": 6.739999771118164,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 110,
+      "length": 15,
+      "start": 7.21999979019165,
+      "end": 7.980000019073486
+    },
+    {
+      "location": 126,
+      "length": 6,
+      "start": 7.980000019073486,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 133,
+      "length": 6,
+      "start": 8.4399995803833,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 140,
+      "length": 6,
+      "start": 8.859999656677246,
+      "end": 9.220000267028809
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "By contrast, NetLearn offers purely online modules, which are flexible, but do not have scheduled live feedback.",
+  "duration": 9.279999732971191,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 3,
+      "length": 8,
+      "start": 0.4399999976158142,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 13,
+      "length": 8,
+      "start": 1.8799999952316284,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 2.200000047683716,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.7200000286102295,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 3.299999952316284,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 3.940000057220459,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 4.920000076293945,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 5.179999828338623,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 62,
+      "length": 8,
+      "start": 5.519999980926514,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 6.440000057220459,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 6.579999923706055,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 6.760000228881836,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 7.039999961853027,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 88,
+      "length": 9,
+      "start": 7.460000038146973,
+      "end": 7.880000114440918
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 7.880000114440918,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 103,
+      "length": 8,
+      "start": 8.319999694824219,
+      "end": 8.640000343322754
+    }
+  ]
+}

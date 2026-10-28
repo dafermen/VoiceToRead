@@ -1,0 +1,156 @@
+{
+  "text": "His answer felt a bit ambiguous, so I reformulated: \"So I should focus on exploring the process, even though the bowls aren't turning out right?\"",
+  "duration": 10.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.699999988079071,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.1200000047683716,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.5399999618530273,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.7999999523162842,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 9,
+      "start": 1.9800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 3.2799999713897705,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 36,
+      "length": 1,
+      "start": 3.4200000762939453,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 38,
+      "length": 12,
+      "start": 3.7200000286102295,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 5.559999942779541,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 56,
+      "length": 1,
+      "start": 5.679999828338623,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 58,
+      "length": 6,
+      "start": 5.840000152587891,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 6.360000133514404,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 74,
+      "length": 9,
+      "start": 6.880000114440918,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 7.179999828338623,
+      "end": 7.5
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 7.5,
+      "end": 8.0
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 8.640000343322754,
+      "end": 8.800000190734863
+    },
+    {
+      "location": 102,
+      "length": 6,
+      "start": 8.800000190734863,
+      "end": 8.9399995803833
+    },
+    {
+      "location": 109,
+      "length": 3,
+      "start": 8.9399995803833,
+      "end": 9.300000190734863
+    },
+    {
+      "location": 113,
+      "length": 5,
+      "start": 9.300000190734863,
+      "end": 9.420000076293945
+    },
+    {
+      "location": 119,
+      "length": 6,
+      "start": 9.420000076293945,
+      "end": 9.739999771118164
+    },
+    {
+      "location": 126,
+      "length": 7,
+      "start": 9.739999771118164,
+      "end": 10.039999961853027
+    },
+    {
+      "location": 134,
+      "length": 3,
+      "start": 10.039999961853027,
+      "end": 10.279999732971191
+    },
+    {
+      "location": 138,
+      "length": 5,
+      "start": 10.279999732971191,
+      "end": 10.5600004196167
+    }
+  ]
+}

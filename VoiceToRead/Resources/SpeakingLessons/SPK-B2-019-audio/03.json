@@ -1,0 +1,114 @@
+{
+  "text": "Our team of four gathered for a quick meeting; I suggested that we clarify everyone's responsibilities before starting.",
+  "duration": 8.800000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.5199999809265137,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.8600000143051147,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 1.1399999856948853,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 17,
+      "length": 8,
+      "start": 1.5199999809265137,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.0199999809265137,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 30,
+      "length": 1,
+      "start": 2.299999952316284,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.4800000190734863,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 2.7799999713897705,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 3.9000000953674316,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 49,
+      "length": 9,
+      "start": 4.119999885559082,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 4.820000171661377,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 67,
+      "length": 7,
+      "start": 5.059999942779541,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 75,
+      "length": 10,
+      "start": 5.619999885559082,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 86,
+      "length": 16,
+      "start": 6.599999904632568,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 103,
+      "length": 6,
+      "start": 7.300000190734863,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 110,
+      "length": 8,
+      "start": 7.900000095367432,
+      "end": 8.34000015258789
+    }
+  ]
+}

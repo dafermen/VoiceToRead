@@ -1,0 +1,96 @@
+{
+  "text": "By the following Wednesday, we had finished and reviewed the project before our internal deadline.",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.5199999809265137,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.8399999737739563,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 17,
+      "length": 9,
+      "start": 1.2599999904632568,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.5,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.5999999046325684,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 35,
+      "length": 8,
+      "start": 2.880000114440918,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.3399999141693115,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 48,
+      "length": 8,
+      "start": 3.7799999713897705,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.019999980926514,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 61,
+      "length": 7,
+      "start": 4.260000228881836,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 4.739999771118164,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.380000114440918,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 80,
+      "length": 8,
+      "start": 5.739999771118164,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 89,
+      "length": 8,
+      "start": 6.239999771118164,
+      "end": 6.699999809265137
+    }
+  ]
+}

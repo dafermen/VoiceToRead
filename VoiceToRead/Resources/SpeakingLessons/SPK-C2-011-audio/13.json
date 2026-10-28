@@ -1,0 +1,132 @@
+{
+  "text": "Wanting to ensure no miscommunication, I confirmed, \"Just to be sure, the risotto will be prepared without cream, as usual, right?\"",
+  "duration": 10.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 8,
+      "length": 2,
+      "start": 0.6200000047683716,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.8600000143051147,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 18,
+      "length": 2,
+      "start": 1.2799999713897705,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 21,
+      "length": 16,
+      "start": 1.7599999904632568,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 39,
+      "length": 1,
+      "start": 3.140000104904175,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 41,
+      "length": 9,
+      "start": 3.240000009536743,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 4.360000133514404,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 4.579999923706055,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 4.760000228881836,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.980000019073486,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 5.860000133514404,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 5.980000019073486,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.340000152587891,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 6.619999885559082,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 90,
+      "length": 8,
+      "start": 7.239999771118164,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 99,
+      "length": 7,
+      "start": 7.239999771118164,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 107,
+      "length": 5,
+      "start": 7.599999904632568,
+      "end": 8.0
+    },
+    {
+      "location": 114,
+      "length": 2,
+      "start": 8.399999618530273,
+      "end": 8.680000305175781
+    },
+    {
+      "location": 117,
+      "length": 5,
+      "start": 8.680000305175781,
+      "end": 9.079999923706055
+    },
+    {
+      "location": 124,
+      "length": 5,
+      "start": 9.359999656677246,
+      "end": 9.760000228881836
+    }
+  ]
+}

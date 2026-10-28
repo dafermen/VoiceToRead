@@ -1,0 +1,168 @@
+{
+  "text": "Another volunteer, Shayna, said she had noticed that some neighbors, who are elderly, might not join manual work, but could help by chatting to those passing by.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 8,
+      "length": 9,
+      "start": 0.5,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 19,
+      "length": 6,
+      "start": 1.4600000381469727,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.4000000953674316,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.4600000381469727,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.6600000858306885,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 40,
+      "length": 7,
+      "start": 2.9600000381469727,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 3.140000104904175,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 3.4200000762939453,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 58,
+      "length": 9,
+      "start": 3.6600000858306885,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.5,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 77,
+      "length": 7,
+      "start": 4.78000020980835,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 5.659999847412109,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.019999980926514,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 101,
+      "length": 6,
+      "start": 6.260000228881836,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 6.71999979019165,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 114,
+      "length": 3,
+      "start": 7.440000057220459,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 118,
+      "length": 5,
+      "start": 7.659999847412109,
+      "end": 7.880000114440918
+    },
+    {
+      "location": 124,
+      "length": 4,
+      "start": 7.880000114440918,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 129,
+      "length": 2,
+      "start": 8.119999885559082,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 132,
+      "length": 8,
+      "start": 8.640000343322754,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 141,
+      "length": 2,
+      "start": 8.640000343322754,
+      "end": 8.880000114440918
+    },
+    {
+      "location": 144,
+      "length": 5,
+      "start": 8.880000114440918,
+      "end": 9.119999885559082
+    },
+    {
+      "location": 150,
+      "length": 7,
+      "start": 9.119999885559082,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 158,
+      "length": 2,
+      "start": 9.4399995803833,
+      "end": 9.800000190734863
+    }
+  ]
+}

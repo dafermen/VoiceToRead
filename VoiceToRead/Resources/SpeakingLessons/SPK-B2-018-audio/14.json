@@ -1,0 +1,114 @@
+{
+  "text": "Chris admitted he would be happy with either option, as long as we weren't outside in heavy rain.",
+  "duration": 6.570000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 6,
+      "length": 8,
+      "start": 0.47999998927116394,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 0.9800000190734863,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.2799999713897705,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.399999976158142,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 1.659999966621399,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 38,
+      "length": 6,
+      "start": 2.2799999713897705,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 3.559999942779541,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.740000009536743,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 3.9200000762939453,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 4.139999866485596,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 67,
+      "length": 7,
+      "start": 4.300000190734863,
+      "end": 4.5
+    },
+    {
+      "location": 75,
+      "length": 7,
+      "start": 4.5,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 4.980000019073486,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 5.239999771118164,
+      "end": 5.5
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 5.5,
+      "end": 5.800000190734863
+    }
+  ]
+}

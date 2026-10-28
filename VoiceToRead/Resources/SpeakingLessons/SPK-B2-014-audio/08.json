@@ -1,0 +1,114 @@
+{
+  "text": "After class, I asked the instructor, \"Could you watch me next time and tell me what I'm missing?\"",
+  "duration": 7.050000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 5,
+      "start": 0.46000000834465027,
+      "end": 1.0
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.4600000381469727,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.659999966621399,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.9199999570846558,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 25,
+      "length": 10,
+      "start": 2.700000047683716,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 3.059999942779541,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.619999885559082,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.819999933242798,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.119999885559082,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.420000076293945,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.619999885559082,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 4.980000019073486,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 5.579999923706055,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.78000020980835,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.980000019073486,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 6.159999847412109,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 6.360000133514404,
+      "end": 6.599999904632568
+    }
+  ]
+}

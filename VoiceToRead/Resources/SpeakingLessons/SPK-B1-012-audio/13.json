@@ -1,0 +1,90 @@
+{
+  "text": "This time, I made sure to look for street signs before crossing each intersection.",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.2799999713897705,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.6200000047683716,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.8600000143051147,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 2.0999999046325684,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 2.440000057220459,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.5399999618530273,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.880000114440918,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.2200000286102295,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 48,
+      "length": 6,
+      "start": 3.619999885559082,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 55,
+      "length": 8,
+      "start": 4.260000228881836,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.699999809265137,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 69,
+      "length": 12,
+      "start": 5.300000190734863,
+      "end": 5.78000020980835
+    }
+  ]
+}

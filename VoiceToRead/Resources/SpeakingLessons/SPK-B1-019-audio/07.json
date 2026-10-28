@@ -1,0 +1,108 @@
+{
+  "text": "We decided to give each other quick progress updates every morning, rather than waiting until the end.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.4399999976158142,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.9399999976158142,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.2999999523162842,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.5800000429153442,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.899999976158142,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 2.259999990463257,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 2.680000066757202,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.2799999713897705,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 3.759999990463257,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 59,
+      "length": 7,
+      "start": 4.21999979019165,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 5.199999809265137,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 5.380000114440918,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 6.039999961853027,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 88,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 6.320000171661377,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 6.559999942779541,
+      "end": 6.800000190734863
+    }
+  ]
+}

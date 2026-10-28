@@ -1,0 +1,132 @@
+{
+  "text": "Finally, I've chosen to join the weekend class because I want clear support and I learn best by talking with others.",
+  "duration": 9.399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 1.0800000429153442,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 14,
+      "length": 6,
+      "start": 1.6200000047683716,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.319999933242798,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 33,
+      "length": 7,
+      "start": 2.619999885559082,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.0199999809265137,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 47,
+      "length": 7,
+      "start": 3.4200000762939453,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 55,
+      "length": 1,
+      "start": 3.7799999713897705,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.159999847412109,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.360000133514404,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 4.739999771118164,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.199999809265137,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 80,
+      "length": 1,
+      "start": 5.78000020980835,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 88,
+      "length": 4,
+      "start": 6.21999979019165,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 93,
+      "length": 2,
+      "start": 6.679999828338623,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 96,
+      "length": 7,
+      "start": 7.039999961853027,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 104,
+      "length": 4,
+      "start": 7.28000020980835,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 7.699999809265137,
+      "end": 7.820000171661377
+    }
+  ]
+}

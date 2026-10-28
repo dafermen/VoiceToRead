@@ -1,0 +1,144 @@
+{
+  "text": "I asked, \"What would you say I should focus on for the next class, assuming I keep running into issues with even pressure?\"",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.2800000011920929,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.2799999713897705,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.5199999809265137,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.940000057220459,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.1600000858306885,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.4000000953674316,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 2.9200000762939453,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.259999990463257,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.4000000953674316,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 3.880000114440918,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 67,
+      "length": 8,
+      "start": 5.199999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 76,
+      "length": 1,
+      "start": 5.199999809265137,
+      "end": 5.5
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.5,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 83,
+      "length": 7,
+      "start": 5.760000228881836,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 6.059999942779541,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.360000133514404,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 6.679999828338623,
+      "end": 7.0
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 7.0,
+      "end": 7.360000133514404
+    },
+    {
+      "location": 113,
+      "length": 8,
+      "start": 7.360000133514404,
+      "end": 7.679999828338623
+    }
+  ]
+}

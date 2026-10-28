@@ -1,0 +1,120 @@
+{
+  "text": "She explained that BluePace had seemed great initially, but after a few weeks she felt isolated without live feedback.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 4,
+      "length": 9,
+      "start": 0.4000000059604645,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.0199999809265137,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 19,
+      "length": 8,
+      "start": 1.6200000047683716,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 2.1600000858306885,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 32,
+      "length": 6,
+      "start": 2.440000057220459,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.680000066757202,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 45,
+      "length": 9,
+      "start": 3.0799999237060547,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 56,
+      "length": 3,
+      "start": 4.21999979019165,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 4.340000152587891,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 66,
+      "length": 1,
+      "start": 4.619999885559082,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.880000114440918,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 5.139999866485596,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.019999980926514,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 87,
+      "length": 8,
+      "start": 6.28000020980835,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 96,
+      "length": 7,
+      "start": 6.880000114440918,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 104,
+      "length": 4,
+      "start": 7.260000228881836,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 109,
+      "length": 8,
+      "start": 7.639999866485596,
+      "end": 7.920000076293945
+    }
+  ]
+}

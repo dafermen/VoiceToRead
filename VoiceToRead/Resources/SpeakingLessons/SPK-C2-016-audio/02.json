@@ -1,0 +1,108 @@
+{
+  "text": "Instead of rationalizing the oversight, I went directly to her office, prepared to acknowledge the error fully.",
+  "duration": 8.520000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 8,
+      "length": 2,
+      "start": 0.5199999809265137,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 11,
+      "length": 13,
+      "start": 0.8600000143051147,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.659999966621399,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 29,
+      "length": 9,
+      "start": 2.0399999618530273,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 40,
+      "length": 1,
+      "start": 3.119999885559082,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.240000009536743,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 3.4200000762939453,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 3.9600000381469727,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.239999771118164,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.460000038146973,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 71,
+      "length": 8,
+      "start": 5.679999828338623,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 5.960000038146973,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 83,
+      "length": 11,
+      "start": 6.71999979019165,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.71999979019165,
+      "end": 7.0
+    },
+    {
+      "location": 99,
+      "length": 5,
+      "start": 7.0,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 7.300000190734863,
+      "end": 7.760000228881836
+    }
+  ]
+}

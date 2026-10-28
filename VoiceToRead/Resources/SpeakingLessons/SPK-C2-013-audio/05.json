@@ -1,0 +1,102 @@
+{
+  "text": "Before finalizing, I asked whether limiting the list might unintentionally exclude someone important to our friend.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 7,
+      "length": 10,
+      "start": 0.6800000071525574,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 19,
+      "length": 1,
+      "start": 1.9600000381469727,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 2.2200000286102295,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 27,
+      "length": 7,
+      "start": 2.5999999046325684,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 35,
+      "length": 8,
+      "start": 3.059999942779541,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.440000057220459,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.099999904632568,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.099999904632568,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 59,
+      "length": 15,
+      "start": 4.519999980926514,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 75,
+      "length": 7,
+      "start": 5.460000038146973,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 83,
+      "length": 7,
+      "start": 6.039999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 91,
+      "length": 9,
+      "start": 6.539999961853027,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 101,
+      "length": 2,
+      "start": 7.139999866485596,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 7.480000019073486,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 108,
+      "length": 6,
+      "start": 7.71999979019165,
+      "end": 8.0
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "text": "Afterwards, he pointed out, \"You tended to tense your shoulders that time, which undermines the stability you're trying to achieve.\"",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 1.0,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.2999999523162842,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.659999966621399,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.8399999141693115,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 33,
+      "length": 6,
+      "start": 2.9000000953674316,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 3.180000066757202,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.7799999713897705,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.7799999713897705,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 54,
+      "length": 9,
+      "start": 4.099999904632568,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.360000133514404,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 4.679999828338623,
+      "end": 5.0
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.679999828338623,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 81,
+      "length": 10,
+      "start": 5.820000171661377,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 6.440000057220459,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 96,
+      "length": 9,
+      "start": 6.78000020980835,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 106,
+      "length": 6,
+      "start": 7.159999847412109,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 113,
+      "length": 6,
+      "start": 7.519999980926514,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 120,
+      "length": 2,
+      "start": 7.78000020980835,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 123,
+      "length": 7,
+      "start": 8.399999618530273,
+      "end": 8.399999618530273
+    }
+  ]
+}

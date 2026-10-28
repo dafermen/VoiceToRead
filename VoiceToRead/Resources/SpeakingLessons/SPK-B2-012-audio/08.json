@@ -1,0 +1,114 @@
+{
+  "text": "I explained that I preferred walking rather than waiting for a late bus and missing the opening hour.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.41999998688697815,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.8999999761581421,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 17,
+      "length": 1,
+      "start": 1.2599999904632568,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 19,
+      "length": 9,
+      "start": 1.5399999618530273,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.0999999046325684,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 37,
+      "length": 6,
+      "start": 2.819999933242798,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 44,
+      "length": 4,
+      "start": 3.5399999618530273,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 49,
+      "length": 7,
+      "start": 4.159999847412109,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.159999847412109,
+      "end": 4.5
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 4.5,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.760000228881836,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.059999942779541,
+      "end": 5.5
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.5,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 76,
+      "length": 7,
+      "start": 6.139999866485596,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 6.300000190734863,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 6.980000019073486,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.980000019073486,
+      "end": 7.300000190734863
+    }
+  ]
+}

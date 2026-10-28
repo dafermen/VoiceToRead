@@ -1,0 +1,144 @@
+{
+  "text": "As we wrapped up the call, I realized that planning with so many preferences could have become complicated, but our group valued compromise.",
+  "duration": 10.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 2,
+      "start": 0.4000000059604645,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.7599999904632568,
+      "end": 1.0
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.0,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.2400000095367432,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.399999976158142,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.2200000286102295,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 29,
+      "length": 8,
+      "start": 2.440000057220459,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 2.9600000381469727,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 43,
+      "length": 8,
+      "start": 3.559999942779541,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 3.880000114440918,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.179999828338623,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.559999942779541,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 65,
+      "length": 11,
+      "start": 4.800000190734863,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 5.28000020980835,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.139999866485596,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 6.400000095367432,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 95,
+      "length": 11,
+      "start": 6.78000020980835,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 8.119999885559082,
+      "end": 8.239999771118164
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 8.239999771118164,
+      "end": 8.5
+    },
+    {
+      "location": 116,
+      "length": 5,
+      "start": 8.5,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 122,
+      "length": 6,
+      "start": 8.819999694824219,
+      "end": 9.640000343322754
+    },
+    {
+      "location": 129,
+      "length": 10,
+      "start": 9.640000343322754,
+      "end": 10.260000228881836
+    }
+  ]
+}

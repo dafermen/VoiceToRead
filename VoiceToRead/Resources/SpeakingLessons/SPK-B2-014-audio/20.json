@@ -1,0 +1,132 @@
+{
+  "text": "Looking back, I should have focused on the basics first, but I know that steady effort is the key to improvement.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.2599999904632568,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.5199999809265137,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.659999966621399,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 1.8799999952316284,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.2200000286102295,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.440000057220459,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 2.759999990463257,
+      "end": 3.0
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.0,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.019999980926514,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 4.099999904632568,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 4.559999942779541,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 5.159999847412109,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 80,
+      "length": 6,
+      "start": 5.21999979019165,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.679999828338623,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 6.559999942779541,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 98,
+      "length": 2,
+      "start": 6.579999923706055,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 101,
+      "length": 11,
+      "start": 6.960000038146973,
+      "end": 7.320000171661377
+    }
+  ]
+}

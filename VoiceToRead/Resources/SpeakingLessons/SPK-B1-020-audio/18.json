@@ -1,0 +1,84 @@
+{
+  "text": "Next month, I will join an online beginners’ group to keep me motivated.",
+  "duration": 5.46999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.5,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.100000023841858,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.5199999809265137,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.7799999713897705,
+      "end": 2.0
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 2.0,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.4800000190734863,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 34,
+      "length": 9,
+      "start": 2.7799999713897705,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.619999885559082,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.619999885559082,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.119999885559082,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.360000133514404,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 62,
+      "length": 9,
+      "start": 4.579999923706055,
+      "end": 5.079999923706055
+    }
+  ]
+}

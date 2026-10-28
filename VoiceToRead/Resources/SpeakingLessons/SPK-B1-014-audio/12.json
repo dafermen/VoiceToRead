@@ -1,0 +1,108 @@
+{
+  "text": "Amanda explained that waiting for the first layer to dry would stop the colors from running together.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.5600000023841858,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.2400000095367432,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 22,
+      "length": 7,
+      "start": 1.6399999856948853,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 1.9199999570846558,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.2200000286102295,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.440000057220459,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 2.880000114440918,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.0799999237060547,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.7799999713897705,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 3.7799999713897705,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.380000114440918,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.78000020980835,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.019999980926514,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.380000114440918,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 84,
+      "length": 7,
+      "start": 5.920000076293945,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 92,
+      "length": 8,
+      "start": 6.059999942779541,
+      "end": 6.5
+    }
+  ]
+}

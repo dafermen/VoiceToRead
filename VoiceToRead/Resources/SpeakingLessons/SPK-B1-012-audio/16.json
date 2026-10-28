@@ -1,0 +1,120 @@
+{
+  "text": "I thanked him for the help and crossed carefully, making sure not to miss the next street I needed.",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 2,
+      "length": 7,
+      "start": 0.6399999856948853,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 0.6399999856948853,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 0.9200000166893005,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.1799999475479126,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.440000057220459,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.380000114440918,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 39,
+      "length": 9,
+      "start": 2.7799999713897705,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 4.159999847412109,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.360000133514404,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.800000190734863,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.139999866485596,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.480000019073486,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.480000019073486,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.760000228881836,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 6.099999904632568,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 90,
+      "length": 1,
+      "start": 6.440000057220459,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 92,
+      "length": 6,
+      "start": 6.880000114440918,
+      "end": 7.119999885559082
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "text": "That evening, while I was walking home, I found myself weighing the risks and benefits of inviting others into my process, rather than going it alone.",
+  "duration": 10.34000015258789,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 5,
+      "length": 7,
+      "start": 0.4399999976158142,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.1799999475479126,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 20,
+      "length": 1,
+      "start": 1.340000033378601,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.5199999809265137,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 1.7200000286102295,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.059999942779541,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 40,
+      "length": 1,
+      "start": 2.859999895095825,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.059999942779541,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 48,
+      "length": 6,
+      "start": 3.180000066757202,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 55,
+      "length": 8,
+      "start": 3.759999990463257,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.119999885559082,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 4.800000190734863,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.300000190734863,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.699999809265137,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 90,
+      "length": 8,
+      "start": 6.019999980926514,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 99,
+      "length": 6,
+      "start": 6.360000133514404,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 106,
+      "length": 4,
+      "start": 6.800000190734863,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 111,
+      "length": 2,
+      "start": 7.059999942779541,
+      "end": 7.320000171661377
+    },
+    {
+      "location": 114,
+      "length": 7,
+      "start": 7.320000171661377,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 123,
+      "length": 6,
+      "start": 8.4399995803833,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 130,
+      "length": 4,
+      "start": 8.640000343322754,
+      "end": 8.9399995803833
+    },
+    {
+      "location": 135,
+      "length": 5,
+      "start": 8.9399995803833,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 141,
+      "length": 2,
+      "start": 9.15999984741211,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 144,
+      "length": 5,
+      "start": 9.460000038146973,
+      "end": 9.720000267028809
+    }
+  ]
+}

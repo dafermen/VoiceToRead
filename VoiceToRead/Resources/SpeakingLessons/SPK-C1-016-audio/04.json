@@ -1,0 +1,150 @@
+{
+  "text": "Even though I was juggling two last-minute client requests yesterday, I admitted that I should have prioritized the team’s preparation over other emails.",
+  "duration": 10.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.4000000059604645,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.7200000286102295,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 0.9599999785423279,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 18,
+      "length": 8,
+      "start": 1.2599999904632568,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 1.600000023841858,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.259999990463257,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 2.700000047683716,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 2.9000000953674316,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 3.299999952316284,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 59,
+      "length": 9,
+      "start": 3.7799999713897705,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 70,
+      "length": 1,
+      "start": 5.139999866485596,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 72,
+      "length": 8,
+      "start": 5.320000171661377,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 5.659999847412109,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 86,
+      "length": 1,
+      "start": 5.960000038146973,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 6.199999809265137,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 95,
+      "length": 4,
+      "start": 6.400000095367432,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 100,
+      "length": 11,
+      "start": 6.619999885559082,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 7.380000114440918,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 116,
+      "length": 6,
+      "start": 7.599999904632568,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 123,
+      "length": 11,
+      "start": 8.0600004196167,
+      "end": 8.65999984741211
+    },
+    {
+      "location": 135,
+      "length": 4,
+      "start": 8.65999984741211,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 140,
+      "length": 5,
+      "start": 9.460000038146973,
+      "end": 9.800000190734863
+    },
+    {
+      "location": 146,
+      "length": 6,
+      "start": 9.800000190734863,
+      "end": 10.279999732971191
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "text": "Sarah, a colleague who had completed an in-person course at BrightPath Academy, recommended it because she felt supported by the instructors.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 7,
+      "length": 1,
+      "start": 0.9399999976158142,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 9,
+      "length": 9,
+      "start": 1.159999966621399,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.559999942779541,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.8600000143051147,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 27,
+      "length": 9,
+      "start": 2.0999999046325684,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 37,
+      "length": 2,
+      "start": 2.4800000190734863,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.880000114440918,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.059999942779541,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.380000114440918,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 3.799999952316284,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 60,
+      "length": 10,
+      "start": 4.099999904632568,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 4.559999942779541,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 80,
+      "length": 11,
+      "start": 5.739999771118164,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 6.099999904632568,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 95,
+      "length": 7,
+      "start": 6.380000114440918,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 103,
+      "length": 3,
+      "start": 6.820000171661377,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 107,
+      "length": 4,
+      "start": 7.059999942779541,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 112,
+      "length": 9,
+      "start": 7.28000020980835,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 122,
+      "length": 2,
+      "start": 7.71999979019165,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 125,
+      "length": 3,
+      "start": 8.039999961853027,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 129,
+      "length": 11,
+      "start": 8.319999694824219,
+      "end": 8.619999885559082
+    }
+  ]
+}

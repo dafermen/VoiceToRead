@@ -1,0 +1,114 @@
+{
+  "text": "Still, sharing personal work requires a certain vulnerability, which can be difficult to navigate for perfectionists like me.",
+  "duration": 8.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.7200000286102295,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.3399999141693115,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 29,
+      "length": 8,
+      "start": 2.680000066757202,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 38,
+      "length": 1,
+      "start": 3.200000047683716,
+      "end": 3.5
+    },
+    {
+      "location": 40,
+      "length": 7,
+      "start": 3.5,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 48,
+      "length": 13,
+      "start": 3.7799999713897705,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 5.340000152587891,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 5.400000095367432,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.579999923706055,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 76,
+      "length": 9,
+      "start": 5.860000133514404,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 6.119999885559082,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 89,
+      "length": 8,
+      "start": 6.860000133514404,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 6.860000133514404,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 102,
+      "length": 14,
+      "start": 7.159999847412109,
+      "end": 7.920000076293945
+    },
+    {
+      "location": 117,
+      "length": 4,
+      "start": 7.920000076293945,
+      "end": 8.180000305175781
+    },
+    {
+      "location": 122,
+      "length": 2,
+      "start": 8.180000305175781,
+      "end": 8.420000076293945
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "text": "I clarified, 'I usually avoid very spicy options, so would it be possible to have the sauce served on the side rather than adding it directly?'",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.6800000071525574,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.899999976158142,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 2.119999885559082,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 3.0999999046325684,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 3.740000009536743,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 4.079999923706055,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 5.21999979019165,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 5.400000095367432,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 5.539999961853027,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 62,
+      "length": 2,
+      "start": 5.639999866485596,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 65,
+      "length": 8,
+      "start": 5.840000152587891,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 6.21999979019165,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 6.480000019073486,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 6.639999866485596,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 7.260000228881836,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 92,
+      "length": 6,
+      "start": 7.260000228881836,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 7.639999866485596,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 7.820000171661377,
+      "end": 7.980000019073486
+    },
+    {
+      "location": 106,
+      "length": 4,
+      "start": 7.980000019073486,
+      "end": 8.34000015258789
+    },
+    {
+      "location": 111,
+      "length": 6,
+      "start": 8.34000015258789,
+      "end": 9.119999885559082
+    },
+    {
+      "location": 118,
+      "length": 4,
+      "start": 9.119999885559082,
+      "end": 9.420000076293945
+    },
+    {
+      "location": 123,
+      "length": 6,
+      "start": 9.420000076293945,
+      "end": 9.65999984741211
+    },
+    {
+      "location": 130,
+      "length": 2,
+      "start": 9.65999984741211,
+      "end": 9.920000076293945
+    },
+    {
+      "location": 133,
+      "length": 8,
+      "start": 9.920000076293945,
+      "end": 10.359999656677246
+    }
+  ]
+}

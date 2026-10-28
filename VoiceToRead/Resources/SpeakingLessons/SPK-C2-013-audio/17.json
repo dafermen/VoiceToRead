@@ -1,0 +1,120 @@
+{
+  "text": "Although neither of us wanted speeches, I raised the idea of toasting briefly, just to acknowledge our friend’s accomplishment.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 9,
+      "length": 7,
+      "start": 0.5199999809265137,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 0.8999999761581421,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.2999999523162842,
+      "end": 1.5
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 1.5,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 1.7799999713897705,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 40,
+      "length": 1,
+      "start": 2.9600000381469727,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 3.0799999237060547,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.380000114440918,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 3.6600000858306885,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 3.9000000953674316,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 61,
+      "length": 8,
+      "start": 4.21999979019165,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 70,
+      "length": 7,
+      "start": 4.739999771118164,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.599999904632568,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 5.840000152587891,
+      "end": 6.5
+    },
+    {
+      "location": 87,
+      "length": 11,
+      "start": 6.5,
+      "end": 6.5
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 6.5,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 103,
+      "length": 8,
+      "start": 6.800000190734863,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 112,
+      "length": 14,
+      "start": 7.119999885559082,
+      "end": 7.599999904632568
+    }
+  ]
+}

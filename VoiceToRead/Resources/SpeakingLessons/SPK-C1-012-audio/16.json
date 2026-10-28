@@ -1,0 +1,132 @@
+{
+  "text": "She noted that, in her experience, after sitting for hours, even a short walk from the tram stop can feel refreshing.",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.3199999928474426,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.5400000214576721,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.159999966621399,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.2799999713897705,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 23,
+      "length": 10,
+      "start": 1.5199999809265137,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 2.740000009536743,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 2.9200000762939453,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 3.619999885559082,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.420000076293945,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 65,
+      "length": 1,
+      "start": 4.559999942779541,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 4.800000190734863,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.059999942779541,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.300000190734863,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 83,
+      "length": 3,
+      "start": 5.519999980926514,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 5.760000228881836,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 6.019999980926514,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 97,
+      "length": 3,
+      "start": 6.340000152587891,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 101,
+      "length": 4,
+      "start": 6.599999904632568,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 106,
+      "length": 10,
+      "start": 6.800000190734863,
+      "end": 7.21999979019165
+    }
+  ]
+}

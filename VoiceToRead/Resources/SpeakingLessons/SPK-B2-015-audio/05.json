@@ -1,0 +1,150 @@
+{
+  "text": "Some neighbors said, 'I'd rather paint the benches because it will brighten up the whole area,' while others wanted to clear the trails first.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.5400000214576721,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 0.9599999785423279,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 2.0999999046325684,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.240000009536743,
+      "end": 2.5
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 2.5,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 3.1600000858306885,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 3.440000057220459,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 3.9800000190734863,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.119999885559082,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 67,
+      "length": 8,
+      "start": 4.340000152587891,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 4.539999961853027,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 4.840000152587891,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 5.019999980926514,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 89,
+      "length": 4,
+      "start": 5.400000095367432,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 96,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 102,
+      "length": 6,
+      "start": 6.519999980926514,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 6.880000114440918,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 116,
+      "length": 2,
+      "start": 7.179999828338623,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 119,
+      "length": 5,
+      "start": 7.480000019073486,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 125,
+      "length": 3,
+      "start": 7.599999904632568,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 129,
+      "length": 6,
+      "start": 8.15999984741211,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 136,
+      "length": 5,
+      "start": 8.15999984741211,
+      "end": 8.640000343322754
+    }
+  ]
+}

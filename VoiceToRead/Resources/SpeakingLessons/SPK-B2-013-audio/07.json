@@ -1,0 +1,108 @@
+{
+  "text": "\"We could invite only close friends this time,\" Avery suggested, noting our previous difficulties coordinating bigger events.",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 1,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.30000001192092896,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.699999988079071,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.2400000095367432,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 22,
+      "length": 5,
+      "start": 1.899999976158142,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.3399999141693115,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 2.5999999046325684,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 2.9800000190734863,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 4.099999904632568,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 54,
+      "length": 9,
+      "start": 4.099999904632568,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 65,
+      "length": 6,
+      "start": 5.71999979019165,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.71999979019165,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 76,
+      "length": 8,
+      "start": 6.059999942779541,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 85,
+      "length": 12,
+      "start": 6.519999980926514,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 98,
+      "length": 12,
+      "start": 7.239999771118164,
+      "end": 7.920000076293945
+    },
+    {
+      "location": 111,
+      "length": 6,
+      "start": 7.920000076293945,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 118,
+      "length": 6,
+      "start": 8.420000076293945,
+      "end": 8.84000015258789
+    }
+  ]
+}

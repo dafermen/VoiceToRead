@@ -1,0 +1,144 @@
+{
+  "text": "Even though the sky darkened a little, nobody rushed indoors; instead, we strolled along the lakeside and sat whenever the view invited us.",
+  "duration": 13.270000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5199999809265137,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.0800000429153442,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.7799999713897705,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 2.180000066757202,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.799999952316284,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 3.0999999046325684,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 4.079999923706055,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 46,
+      "length": 6,
+      "start": 4.599999904632568,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 5.019999980926514,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 6.860000133514404,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 6.980000019073486,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 8.119999885559082,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 8.119999885559082,
+      "end": 8.520000457763672
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 8.520000457763672,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 93,
+      "length": 8,
+      "start": 8.819999694824219,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 9.4399995803833,
+      "end": 10.15999984741211
+    },
+    {
+      "location": 106,
+      "length": 3,
+      "start": 10.15999984741211,
+      "end": 10.479999542236328
+    },
+    {
+      "location": 110,
+      "length": 8,
+      "start": 10.479999542236328,
+      "end": 11.0600004196167
+    },
+    {
+      "location": 119,
+      "length": 3,
+      "start": 11.0600004196167,
+      "end": 11.4399995803833
+    },
+    {
+      "location": 123,
+      "length": 4,
+      "start": 11.4399995803833,
+      "end": 11.720000267028809
+    },
+    {
+      "location": 128,
+      "length": 7,
+      "start": 11.720000267028809,
+      "end": 12.220000267028809
+    },
+    {
+      "location": 136,
+      "length": 2,
+      "start": 12.220000267028809,
+      "end": 12.680000305175781
+    }
+  ]
+}

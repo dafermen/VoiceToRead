@@ -1,0 +1,102 @@
+{
+  "text": "If I ever notice a similar issue, I will address it directly before it causes inconvenience.",
+  "duration": 7.21999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.23999999463558197
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.23999999463558197,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5600000023841858,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.8399999737739563,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 17,
+      "length": 1,
+      "start": 1.1399999856948853,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 1.5199999809265137,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 1.7799999713897705,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.4600000381469727,
+      "end": 2.5
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 2.740000009536743,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 2.9800000190734863,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 52,
+      "length": 8,
+      "start": 3.319999933242798,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 61,
+      "length": 6,
+      "start": 3.759999990463257,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 4.300000190734863,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 4.900000095367432,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 78,
+      "length": 13,
+      "start": 4.900000095367432,
+      "end": 5.760000228881836
+    }
+  ]
+}

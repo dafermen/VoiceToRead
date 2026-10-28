@@ -1,0 +1,102 @@
+{
+  "text": "I’ve always preferred making things rather than just observing, so pottery felt like a natural fit.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 12,
+      "length": 9,
+      "start": 0.8399999737739563,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.340000033378601,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.0399999618530273,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 3.0399999618530273,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 3.359999895095825,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 3.680000066757202,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 4.840000152587891,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 67,
+      "length": 7,
+      "start": 5.059999942779541,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 5.460000038146973,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 6.079999923706055,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 85,
+      "length": 1,
+      "start": 6.28000020980835,
+      "end": 6.5
+    },
+    {
+      "location": 87,
+      "length": 7,
+      "start": 6.5,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 6.820000171661377,
+      "end": 7.199999809265137
+    }
+  ]
+}

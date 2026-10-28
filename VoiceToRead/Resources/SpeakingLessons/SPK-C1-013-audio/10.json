@@ -1,0 +1,138 @@
+{
+  "text": "Jamie was fine with taking over what I used to do, especially since he’d wanted to try his hand at arranging flowers.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.5600000023841858,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.0399999618530273,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.6399999856948853,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 2.2200000286102295,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.380000114440918,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 32,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 2.9600000381469727,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 3.2200000286102295,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.380000114440918,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 51,
+      "length": 10,
+      "start": 4.679999828338623,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 5.119999885559082,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.800000190734863,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 6.079999923706055,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 6.28000020980835,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 83,
+      "length": 3,
+      "start": 6.480000019073486,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.739999771118164,
+      "end": 7.0
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 7.0,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 96,
+      "length": 2,
+      "start": 7.400000095367432,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 99,
+      "length": 9,
+      "start": 7.800000190734863,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 109,
+      "length": 7,
+      "start": 8.15999984741211,
+      "end": 8.819999694824219
+    }
+  ]
+}

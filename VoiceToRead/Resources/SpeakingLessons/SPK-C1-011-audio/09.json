@@ -1,0 +1,132 @@
+{
+  "text": "My friend asked if the kitchen might prepare the mushroom risotto without parmesan, since she prefers to avoid dairy whenever possible.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 0.6600000262260437,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.1200000047683716,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.2999999523162842,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 23,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 31,
+      "length": 5,
+      "start": 1.7200000286102295,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.0399999618530273,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 49,
+      "length": 8,
+      "start": 2.740000009536743,
+      "end": 3.0
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 3.0,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 3.4000000953674316,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 3.9200000762939453,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 84,
+      "length": 5,
+      "start": 5.119999885559082,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 5.199999809265137,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 5.420000076293945,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 5.760000228881836,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 6.400000095367432,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 111,
+      "length": 5,
+      "start": 6.400000095367432,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 117,
+      "length": 8,
+      "start": 6.699999809265137,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 126,
+      "length": 8,
+      "start": 7.119999885559082,
+      "end": 7.619999885559082
+    }
+  ]
+}

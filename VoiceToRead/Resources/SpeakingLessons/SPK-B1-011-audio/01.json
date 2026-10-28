@@ -1,0 +1,120 @@
+{
+  "text": "Last Friday, I went to a new restaurant with my friend Lisa because we wanted to try something different.",
+  "duration": 7.21999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.559999942779541,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.7599999904632568,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.899999976158142,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 23,
+      "length": 1,
+      "start": 2.0799999237060547,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.259999990463257,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 29,
+      "length": 10,
+      "start": 2.680000066757202,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.9800000190734863,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.2200000286102295,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 48,
+      "length": 6,
+      "start": 3.4800000190734863,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.6600000858306885,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 60,
+      "length": 7,
+      "start": 4.059999942779541,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 4.940000057220459,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 5.199999809265137,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 5.380000114440918,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 81,
+      "length": 3,
+      "start": 5.639999866485596,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 85,
+      "length": 9,
+      "start": 5.840000152587891,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 6.260000228881836,
+      "end": 6.659999847412109
+    }
+  ]
+}

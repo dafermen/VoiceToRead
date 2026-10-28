@@ -1,0 +1,132 @@
+{
+  "text": "We finalized our plans by dividing responsibilities without making assumptions about who would do what, and we made a shared list.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 9,
+      "start": 0.4000000059604645,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.0800000429153442,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 1.340000033378601,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.6799999475479126,
+      "end": 2.0
+    },
+    {
+      "location": 26,
+      "length": 8,
+      "start": 2.0,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 35,
+      "length": 16,
+      "start": 2.4200000762939453,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 52,
+      "length": 7,
+      "start": 3.3399999141693115,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 60,
+      "length": 6,
+      "start": 3.8399999141693115,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 67,
+      "length": 11,
+      "start": 4.179999828338623,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 4.739999771118164,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 5.099999904632568,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 5.300000190734863,
+      "end": 5.5
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 5.5,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 5.639999866485596,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 6.539999961853027,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 108,
+      "length": 2,
+      "start": 6.639999866485596,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 111,
+      "length": 4,
+      "start": 6.900000095367432,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 116,
+      "length": 1,
+      "start": 6.920000076293945,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 118,
+      "length": 6,
+      "start": 7.159999847412109,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 125,
+      "length": 4,
+      "start": 7.400000095367432,
+      "end": 7.78000020980835
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "text": "Looking back, I should have planned my time better so I would not quit halfway through.",
+  "duration": 6.400000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.4600000381469727,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.600000023841858,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.7799999713897705,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.0199999809265137,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.3399999141693115,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 2.619999885559082,
+      "end": 3.0
+    },
+    {
+      "location": 44,
+      "length": 6,
+      "start": 3.0,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.359999895095825,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 54,
+      "length": 1,
+      "start": 3.9000000953674316,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 56,
+      "length": 5,
+      "start": 4.079999923706055,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.199999809265137,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 4.760000228881836,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 79,
+      "length": 7,
+      "start": 5.179999828338623,
+      "end": 5.579999923706055
+    }
+  ]
+}

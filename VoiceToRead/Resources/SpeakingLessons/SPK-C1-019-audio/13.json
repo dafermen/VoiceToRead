@@ -1,0 +1,120 @@
+{
+  "text": "Alex shared a quick template that made updating the structure much more efficient, saving us time without sacrificing coherence.",
+  "duration": 9.449999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.8199999928474426,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.159999966621399,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.3600000143051147,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 1.7200000286102295,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.0399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.6600000858306885,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 2.880000114440918,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.319999933242798,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 52,
+      "length": 9,
+      "start": 4.019999980926514,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.019999980926514,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 4.539999961853027,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 4.860000133514404,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 6.139999866485596,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.159999847412109,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 6.639999866485596,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 98,
+      "length": 7,
+      "start": 6.860000133514404,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 106,
+      "length": 11,
+      "start": 7.400000095367432,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 118,
+      "length": 9,
+      "start": 8.039999961853027,
+      "end": 8.779999732971191
+    }
+  ]
+}

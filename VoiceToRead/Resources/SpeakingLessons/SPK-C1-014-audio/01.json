@@ -1,0 +1,168 @@
+{
+  "text": "Last month, I signed up for a beginner ceramics class because I’d been feeling the urge to create something tangible after long days spent at my computer.",
+  "duration": 9.979999542236328,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.47999998927116394,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.9200000166893005,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 14,
+      "length": 6,
+      "start": 1.2799999713897705,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.440000057220459,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.7000000476837158,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 1.840000033378601,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.0199999809265137,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 2.3399999141693115,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 2.9800000190734863,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 3.4000000953674316,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.340000152587891,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 4.440000057220459,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 4.739999771118164,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 5.019999980926514,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 5.260000228881836,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 91,
+      "length": 6,
+      "start": 5.539999961853027,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 98,
+      "length": 9,
+      "start": 5.880000114440918,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 108,
+      "length": 8,
+      "start": 6.360000133514404,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 117,
+      "length": 5,
+      "start": 6.880000114440918,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 123,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 128,
+      "length": 4,
+      "start": 7.940000057220459,
+      "end": 8.300000190734863
+    },
+    {
+      "location": 133,
+      "length": 5,
+      "start": 8.300000190734863,
+      "end": 8.619999885559082
+    },
+    {
+      "location": 139,
+      "length": 2,
+      "start": 8.619999885559082,
+      "end": 8.760000228881836
+    },
+    {
+      "location": 142,
+      "length": 2,
+      "start": 8.760000228881836,
+      "end": 8.9399995803833
+    },
+    {
+      "location": 145,
+      "length": 8,
+      "start": 8.9399995803833,
+      "end": 9.300000190734863
+    }
+  ]
+}

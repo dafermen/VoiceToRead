@@ -1,0 +1,150 @@
+{
+  "text": "Glancing over the menu, I realized that many dishes sounded appealing, but some ingredients weren't clearly described, so I wanted to ask for clarification.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.699999988079071,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.059999942779541,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.3799999952316284,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 24,
+      "length": 1,
+      "start": 2.0399999618530273,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 26,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 35,
+      "length": 4,
+      "start": 2.6600000858306885,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 3.0199999809265137,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 3.319999933242798,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 52,
+      "length": 7,
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 60,
+      "length": 9,
+      "start": 4.139999866485596,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.320000171661377,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 5.420000076293945,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 80,
+      "length": 11,
+      "start": 5.760000228881836,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 92,
+      "length": 7,
+      "start": 6.28000020980835,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 100,
+      "length": 7,
+      "start": 6.679999828338623,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 108,
+      "length": 9,
+      "start": 7.099999904632568,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 119,
+      "length": 2,
+      "start": 8.34000015258789,
+      "end": 8.460000038146973
+    },
+    {
+      "location": 122,
+      "length": 1,
+      "start": 8.460000038146973,
+      "end": 8.65999984741211
+    },
+    {
+      "location": 124,
+      "length": 6,
+      "start": 8.65999984741211,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 131,
+      "length": 2,
+      "start": 8.819999694824219,
+      "end": 9.180000305175781
+    },
+    {
+      "location": 134,
+      "length": 3,
+      "start": 9.180000305175781,
+      "end": 9.260000228881836
+    },
+    {
+      "location": 138,
+      "length": 3,
+      "start": 9.260000228881836,
+      "end": 9.5
+    },
+    {
+      "location": 142,
+      "length": 13,
+      "start": 9.5,
+      "end": 10.0600004196167
+    }
+  ]
+}

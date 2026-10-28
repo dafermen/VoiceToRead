@@ -1,0 +1,120 @@
+{
+  "text": "Hearing that, I responded: \"That opens up ways for people to contribute without having to do the heavy lifting.\"",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.47999998927116394,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.159999966621399,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 16,
+      "length": 9,
+      "start": 1.3600000143051147,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.5999999046325684,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 2.7200000286102295,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.119999885559082,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.4200000762939453,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.680000066757202,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 51,
+      "length": 6,
+      "start": 3.940000057220459,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 61,
+      "length": 10,
+      "start": 4.539999961853027,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 4.960000038146973,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 80,
+      "length": 6,
+      "start": 5.480000019073486,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 5.860000133514404,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.099999904632568,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 6.260000228881836,
+      "end": 6.5
+    },
+    {
+      "location": 97,
+      "length": 5,
+      "start": 6.5,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 6.699999809265137,
+      "end": 6.960000038146973
+    }
+  ]
+}

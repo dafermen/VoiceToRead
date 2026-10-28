@@ -1,0 +1,108 @@
+{
+  "text": "He suggested we could try the mushroom ravioli and the margherita pizza, both of which sounded delicious.",
+  "duration": 8.470000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 3,
+      "length": 9,
+      "start": 0.3799999952316284,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 0.9200000166893005,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.2000000476837158,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.4600000381469727,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.840000033378601,
+      "end": 2.5
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.5,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 39,
+      "length": 7,
+      "start": 2.8399999141693115,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.440000057220459,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 4.139999866485596,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 55,
+      "length": 10,
+      "start": 4.519999980926514,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 4.820000171661377,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.800000190734863,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 6.159999847412109,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 81,
+      "length": 5,
+      "start": 6.340000152587891,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 87,
+      "length": 7,
+      "start": 6.840000152587891,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 7.380000114440918,
+      "end": 8.039999961853027
+    }
+  ]
+}

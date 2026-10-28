@@ -1,0 +1,126 @@
+{
+  "text": "After confirming the details, the waiter summarized our order back to us, pausing to check each change we had requested.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 10,
+      "start": 0.5,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.0800000429153442,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 1.940000057220459,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.4600000381469727,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.680000066757202,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 41,
+      "length": 10,
+      "start": 2.880000114440918,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.5799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 56,
+      "length": 5,
+      "start": 3.880000114440918,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.039999961853027,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 4.460000038146973,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 4.659999847412109,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 5.699999809265137,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 82,
+      "length": 2,
+      "start": 5.760000228881836,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 6.099999904632568,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 6.340000152587891,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.840000152587891,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 103,
+      "length": 2,
+      "start": 7.21999979019165,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 106,
+      "length": 3,
+      "start": 7.420000076293945,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 110,
+      "length": 9,
+      "start": 7.639999866485596,
+      "end": 8.0
+    }
+  ]
+}

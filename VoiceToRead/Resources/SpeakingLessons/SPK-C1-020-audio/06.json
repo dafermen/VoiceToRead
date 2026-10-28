@@ -1,0 +1,138 @@
+{
+  "text": "He mentioned that last year I had been caught up in so many commitments, which resulted in unfinished projects and constant exhaustion.",
+  "duration": 9.8100004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 9,
+      "start": 0.30000001192092896,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 0.7200000286102295,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.0800000429153442,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.4600000381469727,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 1.7400000095367432,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 1.9600000381469727,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.0999999046325684,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 2.3399999141693115,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 2.5999999046325684,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 2.799999952316284,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 3.0399999618530273,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.2799999713897705,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 60,
+      "length": 11,
+      "start": 3.5399999618530273,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 4.619999885559082,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 79,
+      "length": 8,
+      "start": 4.739999771118164,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 5.159999847412109,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 91,
+      "length": 10,
+      "start": 5.599999904632568,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 102,
+      "length": 8,
+      "start": 5.920000076293945,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 6.480000019073486,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 115,
+      "length": 8,
+      "start": 7.099999904632568,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 124,
+      "length": 10,
+      "start": 7.619999885559082,
+      "end": 8.100000381469727
+    }
+  ]
+}

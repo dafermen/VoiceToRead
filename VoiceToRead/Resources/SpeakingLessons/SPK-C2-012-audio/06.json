@@ -1,0 +1,144 @@
+{
+  "text": "I wanted to clarify the route, so I asked whether there were any landmarks I should look out for before making a turn.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.30000001192092896,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.6200000047683716,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 1.059999942779541,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.440000057220459,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.059999942779541,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.5999999046325684,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.700000047683716,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 3.140000104904175,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 3.200000047683716,
+      "end": 3.5
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.5,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.700000047683716,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 65,
+      "length": 9,
+      "start": 4.28000020980835,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 75,
+      "length": 1,
+      "start": 4.960000038146973,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 77,
+      "length": 6,
+      "start": 5.079999923706055,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 5.260000228881836,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 5.440000057220459,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 5.679999828338623,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 97,
+      "length": 6,
+      "start": 6.039999961853027,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 104,
+      "length": 6,
+      "start": 6.420000076293945,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 111,
+      "length": 1,
+      "start": 6.699999809265137,
+      "end": 7.0
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 7.0,
+      "end": 7.139999866485596
+    }
+  ]
+}

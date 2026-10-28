@@ -1,0 +1,120 @@
+{
+  "text": "On the day of the event, some people arrived late or forgot their supplies, which caused a little confusion.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.41999998688697815,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.6399999856948853,
+      "end": 1.0
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 1.0,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.3200000524520874,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.4800000190734863,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.4000000953674316,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 3.0799999237060547,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.5399999618530273,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 4.039999961853027,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 4.659999847412109,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 60,
+      "length": 5,
+      "start": 5.059999942779541,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 66,
+      "length": 8,
+      "start": 5.440000057220459,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 6.639999866485596,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 82,
+      "length": 6,
+      "start": 6.840000152587891,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 89,
+      "length": 1,
+      "start": 7.260000228881836,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 91,
+      "length": 6,
+      "start": 7.539999961853027,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 98,
+      "length": 9,
+      "start": 7.760000228881836,
+      "end": 8.279999732971191
+    }
+  ]
+}

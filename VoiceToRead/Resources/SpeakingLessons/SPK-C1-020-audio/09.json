@@ -1,0 +1,120 @@
+{
+  "text": "Dan asked if I could be happy with even a single finished painting, rather than risking disappointment by overcommitting.",
+  "duration": 8.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.41999998688697815,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 10,
+      "length": 2,
+      "start": 0.8999999761581421,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 1.1399999856948853,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.2999999523162842,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.4600000381469727,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.6799999475479126,
+      "end": 2.0
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 35,
+      "length": 4,
+      "start": 2.319999933242798,
+      "end": 2.5
+    },
+    {
+      "location": 40,
+      "length": 1,
+      "start": 2.5,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 2.799999952316284,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 49,
+      "length": 8,
+      "start": 3.180000066757202,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 58,
+      "length": 8,
+      "start": 3.7200000286102295,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 4.699999809265137,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 4.940000057220459,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 5.400000095367432,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 88,
+      "length": 14,
+      "start": 5.579999923706055,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 103,
+      "length": 2,
+      "start": 6.28000020980835,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 106,
+      "length": 14,
+      "start": 6.960000038146973,
+      "end": 7.619999885559082
+    }
+  ]
+}

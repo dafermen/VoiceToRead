@@ -1,0 +1,144 @@
+{
+  "text": "She described the dish in detail, but I hesitated because I’m not used to eating spicy food and the description mentioned chili oil.",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 4,
+      "length": 9,
+      "start": 0.4399999976158142,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.1200000047683716,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.4600000381469727,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.659999966621399,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.0199999809265137,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.859999895095825,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 38,
+      "length": 1,
+      "start": 2.9200000762939453,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 40,
+      "length": 9,
+      "start": 3.299999952316284,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 3.700000047683716,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.480000019073486,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.699999809265137,
+      "end": 5.0
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 5.0,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 5.260000228881836,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 74,
+      "length": 6,
+      "start": 5.71999979019165,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 81,
+      "length": 5,
+      "start": 5.760000228881836,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 6.179999828338623,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 6.579999923706055,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 96,
+      "length": 3,
+      "start": 7.139999866485596,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 100,
+      "length": 11,
+      "start": 7.28000020980835,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 112,
+      "length": 9,
+      "start": 7.800000190734863,
+      "end": 8.279999732971191
+    },
+    {
+      "location": 122,
+      "length": 5,
+      "start": 8.279999732971191,
+      "end": 8.779999732971191
+    },
+    {
+      "location": 128,
+      "length": 3,
+      "start": 8.779999732971191,
+      "end": 9.140000343322754
+    }
+  ]
+}

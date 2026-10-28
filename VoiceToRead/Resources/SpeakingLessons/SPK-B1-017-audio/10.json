@@ -1,0 +1,132 @@
+{
+  "text": "The last time I signed up for an online class, I had forgotten to check how much live support was included.",
+  "duration": 7.269999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.2800000011920929,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.7200000286102295,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.0399999618530273,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.3799999952316284,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.5800000429153442,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.8200000524520874,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 1.9600000381469727,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 33,
+      "length": 6,
+      "start": 2.240000009536743,
+      "end": 2.5
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 2.5,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 3.619999885559082,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.6600000858306885,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 3.880000114440918,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.159999847412109,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 4.699999809265137,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 4.71999979019165,
+      "end": 5.0
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.0,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 5.260000228881836,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 86,
+      "length": 7,
+      "start": 5.679999828338623,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 6.019999980926514,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 98,
+      "length": 8,
+      "start": 6.340000152587891,
+      "end": 6.599999904632568
+    }
+  ]
+}

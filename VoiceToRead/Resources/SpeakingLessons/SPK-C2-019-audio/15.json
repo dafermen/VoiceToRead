@@ -1,0 +1,162 @@
+{
+  "text": "We briefly debated whether to contact the client for confirmation about scope, but Elaine raised concerns that we might sound uncertain this late in the process.",
+  "duration": 9.8100004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.2800000011920929,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 0.7599999904632568,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 1.2200000286102295,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 1.600000023841858,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 30,
+      "length": 7,
+      "start": 2.0999999046325684,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.3399999141693115,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 53,
+      "length": 12,
+      "start": 3.1600000858306885,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 3.740000009536743,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 4.179999828338623,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 4.900000095367432,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 5.28000020980835,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 90,
+      "length": 6,
+      "start": 5.579999923706055,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 97,
+      "length": 8,
+      "start": 5.940000057220459,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 106,
+      "length": 4,
+      "start": 6.519999980926514,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 111,
+      "length": 2,
+      "start": 6.78000020980835,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 114,
+      "length": 5,
+      "start": 6.960000038146973,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 120,
+      "length": 5,
+      "start": 7.260000228881836,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 126,
+      "length": 9,
+      "start": 7.519999980926514,
+      "end": 8.0
+    },
+    {
+      "location": 136,
+      "length": 4,
+      "start": 8.0,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 141,
+      "length": 4,
+      "start": 8.399999618530273,
+      "end": 8.600000381469727
+    },
+    {
+      "location": 146,
+      "length": 2,
+      "start": 8.600000381469727,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 149,
+      "length": 3,
+      "start": 8.739999771118164,
+      "end": 8.899999618530273
+    },
+    {
+      "location": 153,
+      "length": 7,
+      "start": 8.899999618530273,
+      "end": 9.34000015258789
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "text": "She smiled and said that while walking would allow me to see the river park, it might take over thirty minutes.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.5199999809265137,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 1.1799999475479126,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.8600000143051147,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 2.0399999618530273,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.259999990463257,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.5399999618530273,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.9600000381469727,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.240000009536743,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.4600000381469727,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 3.880000114440918,
+      "end": 4.0
+    },
+    {
+      "location": 61,
+      "length": 3,
+      "start": 4.0,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 4.239999771118164,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 4.440000057220459,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 5.480000019073486,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 80,
+      "length": 5,
+      "start": 5.639999866485596,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 5.920000076293945,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 6.300000190734863,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.71999979019165,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 7.199999809265137,
+      "end": 7.619999885559082
+    }
+  ]
+}

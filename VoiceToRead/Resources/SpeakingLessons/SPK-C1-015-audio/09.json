@@ -1,0 +1,162 @@
+{
+  "text": "Even though I used to think multitasking was always best, I started to wonder if focusing on one project would actually lead to a better result.",
+  "duration": 11.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5600000023841858,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.8600000143051147,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.2400000095367432,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.4800000190734863,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 22,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 28,
+      "length": 12,
+      "start": 1.899999976158142,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.680000066757202,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 3.0999999046325684,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 3.7200000286102295,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 58,
+      "length": 1,
+      "start": 5.079999923706055,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 60,
+      "length": 7,
+      "start": 5.239999771118164,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 5.519999980926514,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 6.039999961853027,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 6.039999961853027,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 81,
+      "length": 8,
+      "start": 6.380000114440918,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 90,
+      "length": 2,
+      "start": 6.739999771118164,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 7.199999809265137,
+      "end": 7.5
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 7.5,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 8.100000381469727,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 111,
+      "length": 8,
+      "start": 8.699999809265137,
+      "end": 9.359999656677246
+    },
+    {
+      "location": 120,
+      "length": 4,
+      "start": 9.359999656677246,
+      "end": 9.640000343322754
+    },
+    {
+      "location": 125,
+      "length": 2,
+      "start": 9.640000343322754,
+      "end": 9.859999656677246
+    },
+    {
+      "location": 128,
+      "length": 1,
+      "start": 9.859999656677246,
+      "end": 10.140000343322754
+    },
+    {
+      "location": 130,
+      "length": 6,
+      "start": 10.140000343322754,
+      "end": 10.319999694824219
+    },
+    {
+      "location": 137,
+      "length": 6,
+      "start": 10.319999694824219,
+      "end": 10.800000190734863
+    }
+  ]
+}

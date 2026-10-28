@@ -1,0 +1,132 @@
+{
+  "text": "Next time, I will clarify deadlines at the start and remind the team not to promise more than we can finish.",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.340000033378601,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.4199999570846558,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 26,
+      "length": 9,
+      "start": 2.119999885559082,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.680000066757202,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.940000057220459,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.240000009536743,
+      "end": 3.5
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.5,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 4.119999885559082,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 4.440000057220459,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.639999866485596,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.940000057220459,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.300000190734863,
+      "end": 5.5
+    },
+    {
+      "location": 76,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 5.840000152587891,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 89,
+      "length": 4,
+      "start": 6.119999885559082,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 94,
+      "length": 2,
+      "start": 6.260000228881836,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 97,
+      "length": 3,
+      "start": 6.480000019073486,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 101,
+      "length": 6,
+      "start": 6.679999828338623,
+      "end": 6.940000057220459
+    }
+  ]
+}

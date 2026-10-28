@@ -1,0 +1,150 @@
+{
+  "text": "Although I’m grateful for a steady income, I feel less fulfilled without time for art, which used to balance out the stress of routine.",
+  "duration": 10.819999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.6800000071525574,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 13,
+      "length": 8,
+      "start": 1.440000057220459,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.8799999952316284,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.380000114440918,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.759999990463257,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.9000000953674316,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 4.059999942779541,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 4.21999979019165,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 4.559999942779541,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 55,
+      "length": 9,
+      "start": 4.980000019073486,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 65,
+      "length": 7,
+      "start": 5.579999923706055,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 6.28000020980835,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 6.679999828338623,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 6.980000019073486,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 7.679999828338623,
+      "end": 7.860000133514404
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 7.860000133514404,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 98,
+      "length": 2,
+      "start": 8.199999809265137,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 101,
+      "length": 7,
+      "start": 8.859999656677246,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 109,
+      "length": 3,
+      "start": 8.859999656677246,
+      "end": 9.140000343322754
+    },
+    {
+      "location": 113,
+      "length": 3,
+      "start": 9.140000343322754,
+      "end": 9.399999618530273
+    },
+    {
+      "location": 117,
+      "length": 6,
+      "start": 9.399999618530273,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 124,
+      "length": 2,
+      "start": 9.720000267028809,
+      "end": 10.0
+    },
+    {
+      "location": 127,
+      "length": 7,
+      "start": 10.0,
+      "end": 10.420000076293945
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "text": "Jacqui, who had arrived early, said she could understand being pressed for time but felt frustrated to start a meeting incomplete.",
+  "duration": 8.5600004196167,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 8,
+      "length": 3,
+      "start": 0.9200000166893005,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.1399999856948853,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.3799999952316284,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.7000000476837158,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.5999999046325684,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.619999885559082,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 2.8399999141693115,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 46,
+      "length": 10,
+      "start": 3.059999942779541,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 3.640000104904175,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 3.9600000381469727,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 4.21999979019165,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 80,
+      "length": 3,
+      "start": 4.860000133514404,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 5.539999961853027,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 10,
+      "start": 5.78000020980835,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 100,
+      "length": 2,
+      "start": 6.380000114440918,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 6.960000038146973,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 109,
+      "length": 1,
+      "start": 7.079999923706055,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 111,
+      "length": 7,
+      "start": 7.579999923706055,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 119,
+      "length": 10,
+      "start": 7.579999923706055,
+      "end": 8.199999809265137
+    }
+  ]
+}

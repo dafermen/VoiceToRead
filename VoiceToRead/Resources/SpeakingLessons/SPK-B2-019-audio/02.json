@@ -1,0 +1,108 @@
+{
+  "text": "Although I already had several tasks, I agreed because I knew teamwork was essential for this client.",
+  "duration": 7.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 0.5799999833106995,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 0.9800000190734863,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.4600000381469727,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 23,
+      "length": 7,
+      "start": 1.899999976158142,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 31,
+      "length": 5,
+      "start": 2.359999895095825,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 38,
+      "length": 1,
+      "start": 3.5,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 40,
+      "length": 6,
+      "start": 3.6600000858306885,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 47,
+      "length": 7,
+      "start": 4.079999923706055,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 55,
+      "length": 1,
+      "start": 4.760000228881836,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 62,
+      "length": 8,
+      "start": 5.21999979019165,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.71999979019165,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 75,
+      "length": 9,
+      "start": 6.099999904632568,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 6.480000019073486,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 89,
+      "length": 4,
+      "start": 6.960000038146973,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 94,
+      "length": 6,
+      "start": 7.21999979019165,
+      "end": 7.5
+    }
+  ]
+}

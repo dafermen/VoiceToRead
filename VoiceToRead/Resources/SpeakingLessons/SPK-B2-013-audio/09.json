@@ -1,0 +1,132 @@
+{
+  "text": "We started assigning tasks and agreed that I would handle the invitations, while Avery would take care of snacks and drinks.",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.7200000286102295,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 11,
+      "length": 9,
+      "start": 1.2599999904632568,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.4800000190734863,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 3.240000009536743,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 3.9200000762939453,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 4.199999809265137,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 51,
+      "length": 6,
+      "start": 4.480000019073486,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.659999847412109,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 62,
+      "length": 11,
+      "start": 5.059999942779541,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 6.440000057220459,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 81,
+      "length": 5,
+      "start": 6.639999866485596,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 7.039999961853027,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 7.619999885559082,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 7.820000171661377,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 103,
+      "length": 2,
+      "start": 8.020000457763672,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 106,
+      "length": 6,
+      "start": 8.260000228881836,
+      "end": 8.5600004196167
+    },
+    {
+      "location": 113,
+      "length": 3,
+      "start": 8.5600004196167,
+      "end": 9.140000343322754
+    },
+    {
+      "location": 117,
+      "length": 6,
+      "start": 9.140000343322754,
+      "end": 9.140000343322754
+    }
+  ]
+}

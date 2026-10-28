@@ -1,0 +1,126 @@
+{
+  "text": "I reflected that, while walking had its appeal, I might have underestimated the distance I'd need to cover on foot.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.5600000023841858,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.9800000190734863,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.9600000381469727,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 2.200000047683716,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.619999885559082,
+      "end": 3.0
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 3.0,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 40,
+      "length": 6,
+      "start": 3.240000009536743,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 48,
+      "length": 1,
+      "start": 4.239999771118164,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 4.460000038146973,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.699999809265137,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 61,
+      "length": 14,
+      "start": 4.980000019073486,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.71999979019165,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 80,
+      "length": 8,
+      "start": 6.039999961853027,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.400000095367432,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 6.820000171661377,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 98,
+      "length": 2,
+      "start": 6.940000057220459,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 101,
+      "length": 5,
+      "start": 7.159999847412109,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 107,
+      "length": 2,
+      "start": 7.420000076293945,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 110,
+      "length": 4,
+      "start": 7.800000190734863,
+      "end": 8.0600004196167
+    }
+  ]
+}

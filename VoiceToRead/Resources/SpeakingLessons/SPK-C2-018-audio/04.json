@@ -1,0 +1,162 @@
+{
+  "text": "I cautioned that, since the spring weather had been unpredictable lately, we might need to prepare for showers, or possibly reschedule if the forecast changed suddenly.",
+  "duration": 11.4399995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.6399999856948853,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.9399999976158142,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.840000033378601,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.299999952316284,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.5199999809265137,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 2.859999895095825,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.0999999046325684,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 52,
+      "length": 13,
+      "start": 3.4000000953674316,
+      "end": 4.0
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 4.0,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 5.039999961853027,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 5.300000190734863,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 5.579999923706055,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 5.78000020980835,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 6.079999923706055,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 6.260000228881836,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 6.619999885559082,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 112,
+      "length": 2,
+      "start": 7.380000114440918,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 115,
+      "length": 8,
+      "start": 7.71999979019165,
+      "end": 8.220000267028809
+    },
+    {
+      "location": 124,
+      "length": 10,
+      "start": 8.220000267028809,
+      "end": 8.960000038146973
+    },
+    {
+      "location": 135,
+      "length": 2,
+      "start": 8.960000038146973,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 138,
+      "length": 3,
+      "start": 9.5600004196167,
+      "end": 9.779999732971191
+    },
+    {
+      "location": 142,
+      "length": 8,
+      "start": 9.779999732971191,
+      "end": 10.239999771118164
+    },
+    {
+      "location": 151,
+      "length": 7,
+      "start": 10.239999771118164,
+      "end": 10.699999809265137
+    },
+    {
+      "location": 159,
+      "length": 8,
+      "start": 10.699999809265137,
+      "end": 11.079999923706055
+    }
+  ]
+}

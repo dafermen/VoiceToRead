@@ -1,0 +1,126 @@
+{
+  "text": "\"Exactly, and when you see a mural of blue birds, the library will be just across the intersection,\" she confirmed.",
+  "duration": 7.989999771118164,
+  "words": [
+    {
+      "location": 1,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.5199999809265137,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.899999976158142,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.0999999046325684,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.5799999237060547,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 2.5799999237060547,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 2.8399999141693115,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.119999885559082,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 4.0,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 4.139999866485596,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.539999961853027,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 4.800000190734863,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.340000152587891,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 5.679999828338623,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 86,
+      "length": 12,
+      "start": 6.460000038146973,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 101,
+      "length": 3,
+      "start": 7.039999961853027,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 105,
+      "length": 9,
+      "start": 7.199999809265137,
+      "end": 7.599999904632568
+    }
+  ]
+}

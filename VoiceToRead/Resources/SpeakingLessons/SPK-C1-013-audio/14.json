@@ -1,0 +1,120 @@
+{
+  "text": "Rather than overcommitting, we agreed to skip extra decorations and invest our energy in the mood and music instead.",
+  "duration": 8.800000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 12,
+      "length": 14,
+      "start": 0.8600000143051147,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.359999895095825,
+      "end": 2.5
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.5,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 2.740000009536743,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 3.3399999141693115,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.359999895095825,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 52,
+      "length": 11,
+      "start": 3.859999895095825,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.420000076293945,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 68,
+      "length": 6,
+      "start": 5.199999809265137,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.559999942779541,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 79,
+      "length": 6,
+      "start": 5.840000152587891,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 6.159999847412109,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.400000095367432,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 6.900000095367432,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 6.940000057220459,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 102,
+      "length": 5,
+      "start": 7.340000152587891,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 108,
+      "length": 7,
+      "start": 7.699999809265137,
+      "end": 8.119999885559082
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "text": "Although everyone showed enthusiasm, I cautioned that without clear role boundaries we might duplicate efforts or miss key details.",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 9,
+      "length": 8,
+      "start": 0.5199999809265137,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.1200000047683716,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 25,
+      "length": 10,
+      "start": 1.4800000190734863,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 3.059999942779541,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 39,
+      "length": 9,
+      "start": 3.2200000286102295,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.940000057220459,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 4.099999904632568,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.420000076293945,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 4.860000133514404,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 73,
+      "length": 10,
+      "start": 5.260000228881836,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 5.679999828338623,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 93,
+      "length": 9,
+      "start": 6.619999885559082,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 7.199999809265137,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 111,
+      "length": 2,
+      "start": 7.760000228881836,
+      "end": 8.359999656677246
+    },
+    {
+      "location": 114,
+      "length": 4,
+      "start": 8.359999656677246,
+      "end": 8.65999984741211
+    },
+    {
+      "location": 119,
+      "length": 3,
+      "start": 8.65999984741211,
+      "end": 9.039999961853027
+    },
+    {
+      "location": 123,
+      "length": 7,
+      "start": 9.039999961853027,
+      "end": 9.479999542236328
+    }
+  ]
+}

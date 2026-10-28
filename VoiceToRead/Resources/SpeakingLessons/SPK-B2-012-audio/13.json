@@ -1,0 +1,108 @@
+{
+  "text": "Although the bus route was slightly shorter, the walking route followed a small river lined with gardens.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.46000000834465027,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 0.8399999737739563,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 1.0800000429153442,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.3600000143051147,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 27,
+      "length": 8,
+      "start": 1.7000000476837158,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 2.0999999046325684,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 49,
+      "length": 7,
+      "start": 3.380000114440918,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 3.7200000286102295,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 4.079999923706055,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 4.400000095367432,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 4.699999809265137,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 80,
+      "length": 5,
+      "start": 5.039999961853027,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 5.360000133514404,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 6.21999979019165,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 6.900000095367432,
+      "end": 6.900000095367432
+    }
+  ]
+}

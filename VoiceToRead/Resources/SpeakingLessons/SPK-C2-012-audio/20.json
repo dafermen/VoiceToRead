@@ -1,0 +1,162 @@
+{
+  "text": "In the end, I arrived at the Marengo Library just before sunset, glad I had persisted in clarifying—rather than relying on an uncertain first impression.",
+  "duration": 11.109999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.20000000298023224
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.20000000298023224,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.47999998927116394,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.159999966621399,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.7599999904632568,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.7599999904632568,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.940000057220459,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.180000066757202,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.559999942779541,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.119999885559082,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.700000047683716,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 4.099999904632568,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 5.559999942779541,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 70,
+      "length": 1,
+      "start": 5.559999942779541,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.800000190734863,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 76,
+      "length": 9,
+      "start": 5.960000038146973,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 6.559999942779541,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 89,
+      "length": 10,
+      "start": 7.340000152587891,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 100,
+      "length": 6,
+      "start": 7.340000152587891,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 107,
+      "length": 4,
+      "start": 8.039999961853027,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 112,
+      "length": 7,
+      "start": 8.399999618530273,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 120,
+      "length": 2,
+      "start": 8.720000267028809,
+      "end": 9.0600004196167
+    },
+    {
+      "location": 123,
+      "length": 2,
+      "start": 9.0600004196167,
+      "end": 9.34000015258789
+    },
+    {
+      "location": 126,
+      "length": 9,
+      "start": 9.34000015258789,
+      "end": 9.739999771118164
+    },
+    {
+      "location": 136,
+      "length": 5,
+      "start": 9.739999771118164,
+      "end": 10.279999732971191
+    },
+    {
+      "location": 142,
+      "length": 10,
+      "start": 10.279999732971191,
+      "end": 10.680000305175781
+    }
+  ]
+}

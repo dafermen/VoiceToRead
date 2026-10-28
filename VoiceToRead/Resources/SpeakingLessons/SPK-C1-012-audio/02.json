@@ -1,0 +1,126 @@
+{
+  "text": "Even though I had checked the map beforehand, navigating such a dense network of intersections was more confusing than expected.",
+  "duration": 10.149999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.9200000166893005,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.2000000476837158,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.3799999952316284,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.7200000286102295,
+      "end": 2.0
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.4600000381469727,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 34,
+      "length": 10,
+      "start": 2.559999942779541,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 46,
+      "length": 10,
+      "start": 4.539999961853027,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.539999961853027,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 62,
+      "length": 1,
+      "start": 5.059999942779541,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 5.699999809265137,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 70,
+      "length": 7,
+      "start": 5.699999809265137,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 6.059999942779541,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 81,
+      "length": 13,
+      "start": 7.039999961853027,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 95,
+      "length": 3,
+      "start": 7.039999961853027,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 99,
+      "length": 4,
+      "start": 7.639999866485596,
+      "end": 8.039999961853027
+    },
+    {
+      "location": 104,
+      "length": 9,
+      "start": 8.039999961853027,
+      "end": 8.579999923706055
+    },
+    {
+      "location": 114,
+      "length": 4,
+      "start": 8.579999923706055,
+      "end": 8.920000076293945
+    },
+    {
+      "location": 119,
+      "length": 8,
+      "start": 8.920000076293945,
+      "end": 9.399999618530273
+    }
+  ]
+}

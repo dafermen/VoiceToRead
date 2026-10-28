@@ -1,0 +1,138 @@
+{
+  "text": "We quickly agreed that, rather than attempting every advanced feature, it would be wiser to focus on what we could realistically deliver.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.3199999928474426,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.7400000095367432,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.2799999713897705,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 24,
+      "length": 6,
+      "start": 2.619999885559082,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.6600000858306885,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 36,
+      "length": 10,
+      "start": 3.059999942779541,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.4600000381469727,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 4.079999923706055,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 4.579999923706055,
+      "end": 5.0
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 5.679999828338623,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 5.800000190734863,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 5.940000057220459,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 83,
+      "length": 5,
+      "start": 6.199999809265137,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 89,
+      "length": 2,
+      "start": 6.539999961853027,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 6.960000038146973,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 98,
+      "length": 2,
+      "start": 7.260000228881836,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 101,
+      "length": 4,
+      "start": 7.760000228881836,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 106,
+      "length": 2,
+      "start": 8.199999809265137,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 109,
+      "length": 5,
+      "start": 8.420000076293945,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 115,
+      "length": 13,
+      "start": 8.720000267028809,
+      "end": 9.600000381469727
+    },
+    {
+      "location": 129,
+      "length": 7,
+      "start": 9.600000381469727,
+      "end": 10.15999984741211
+    }
+  ]
+}

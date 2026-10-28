@@ -1,0 +1,114 @@
+{
+  "text": "Somebody asked if people would really show up on Saturday, since it had rained the last two weekends.",
+  "duration": 7.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.7599999904632568,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.3600000143051147,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.6200000047683716,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 1.9800000190734863,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.200000047683716,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.0199999809265137,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.2200000286102295,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 49,
+      "length": 8,
+      "start": 3.6600000858306885,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.71999979019165,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 65,
+      "length": 2,
+      "start": 4.760000228881836,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.940000057220459,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.179999828338623,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.519999980926514,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 5.900000095367432,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.239999771118164,
+      "end": 6.5
+    },
+    {
+      "location": 92,
+      "length": 8,
+      "start": 6.5,
+      "end": 6.860000133514404
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "text": "Before going, I thanked her for elaborating on the options instead of simply giving me the shortest answer.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.6000000238418579,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.659999966621399,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.9800000190734863,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 2.2799999713897705,
+      "end": 2.5
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 2.5,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 32,
+      "length": 11,
+      "start": 2.9200000762939453,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.799999952316284,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 4.019999980926514,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 4.199999809265137,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 59,
+      "length": 7,
+      "start": 4.739999771118164,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 5.340000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 5.71999979019165,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 77,
+      "length": 6,
+      "start": 6.139999866485596,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 6.420000076293945,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.739999771118164,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 6.960000038146973,
+      "end": 7.360000133514404
+    },
+    {
+      "location": 100,
+      "length": 6,
+      "start": 7.360000133514404,
+      "end": 7.760000228881836
+    }
+  ]
+}

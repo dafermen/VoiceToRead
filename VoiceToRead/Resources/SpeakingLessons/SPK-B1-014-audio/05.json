@@ -1,0 +1,102 @@
+{
+  "text": "I tried to copy a bright sunrise, but my colors kept mixing together on the page.",
+  "duration": 6.909999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.699999988079071,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 8,
+      "length": 2,
+      "start": 1.100000023841858,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.7000000476837158,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.7000000476837158,
+      "end": 2.0
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 2.0,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 2.319999933242798,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 3.740000009536743,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 3.819999933242798,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 4.079999923706055,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.480000019073486,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 4.820000171661377,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 5.300000190734863,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 5.800000190734863,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.980000019073486,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 6.119999885559082,
+      "end": 6.460000038146973
+    }
+  ]
+}

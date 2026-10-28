@@ -1,0 +1,120 @@
+{
+  "text": "Out of curiosity, I phoned SummitPath and asked them to clarify, and their representative was careful not to overpromise.",
+  "duration": 9.399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 4,
+      "length": 2,
+      "start": 0.2800000011920929,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 7,
+      "length": 9,
+      "start": 0.47999998927116394,
+      "end": 1.0
+    },
+    {
+      "location": 18,
+      "length": 1,
+      "start": 1.6799999475479126,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 2.0999999046325684,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 27,
+      "length": 10,
+      "start": 2.119999885559082,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.5399999618530273,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 3.859999895095825,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 4.119999885559082,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 4.820000171661377,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 5.559999942779541,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 5.599999904632568,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 75,
+      "length": 14,
+      "start": 5.820000171661377,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 90,
+      "length": 3,
+      "start": 6.360000133514404,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 6.820000171661377,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 7.239999771118164,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 106,
+      "length": 2,
+      "start": 7.840000152587891,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 109,
+      "length": 11,
+      "start": 8.119999885559082,
+      "end": 8.779999732971191
+    }
+  ]
+}

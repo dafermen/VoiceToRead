@@ -1,0 +1,102 @@
+{
+  "text": "I admitted, \"We should have checked how many paint sets are actually available before making promises.\"",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.47999998927116394,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 1.0199999809265137,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.6799999475479126,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.8799999952316284,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.140000104904175,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.440000057220459,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.799999952316284,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.0799999237060547,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.4200000762939453,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 56,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 3.819999933242798,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 69,
+      "length": 9,
+      "start": 4.400000095367432,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 79,
+      "length": 6,
+      "start": 4.840000152587891,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 86,
+      "length": 6,
+      "start": 5.480000019073486,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 93,
+      "length": 8,
+      "start": 5.78000020980835,
+      "end": 6.320000171661377
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "text": "We ended the conversation with me promising to text Dan after every milestone, since sharing small victories can sometimes provide the push I need.",
+  "duration": 10.390000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 3,
+      "length": 5,
+      "start": 0.3400000035762787,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.6200000047683716,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 13,
+      "length": 12,
+      "start": 0.8600000143051147,
+      "end": 1.5
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 1.940000057220459,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 34,
+      "length": 9,
+      "start": 2.140000104904175,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 2.5399999618530273,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 3.5
+    },
+    {
+      "location": 56,
+      "length": 5,
+      "start": 3.5,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 3.799999952316284,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 4.300000190734863,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 5.639999866485596,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 85,
+      "length": 7,
+      "start": 5.739999771118164,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 93,
+      "length": 5,
+      "start": 6.139999866485596,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 99,
+      "length": 9,
+      "start": 6.519999980926514,
+      "end": 7.0
+    },
+    {
+      "location": 109,
+      "length": 3,
+      "start": 7.0,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 113,
+      "length": 9,
+      "start": 7.619999885559082,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 123,
+      "length": 7,
+      "start": 8.15999984741211,
+      "end": 8.539999961853027
+    },
+    {
+      "location": 131,
+      "length": 3,
+      "start": 8.539999961853027,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 135,
+      "length": 4,
+      "start": 8.819999694824219,
+      "end": 9.079999923706055
+    },
+    {
+      "location": 140,
+      "length": 1,
+      "start": 9.079999923706055,
+      "end": 9.420000076293945
+    },
+    {
+      "location": 142,
+      "length": 4,
+      "start": 9.420000076293945,
+      "end": 9.640000343322754
+    }
+  ]
+}

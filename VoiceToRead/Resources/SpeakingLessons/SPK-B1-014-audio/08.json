@@ -1,0 +1,96 @@
+{
+  "text": "\"You might want to use less water on your brush,\" he suggested, which sounded helpful.",
+  "duration": 6.0,
+  "words": [
+    {
+      "location": 1,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.3400000035762787,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.6600000262260437,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 0.9800000190734863,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.2400000095367432,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.440000057220459,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.180000066757202,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.4200000762939453,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 2.5999999046325684,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.2200000286102295,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 3.3399999141693115,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 70,
+      "length": 7,
+      "start": 4.659999847412109,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 4.960000038146973,
+      "end": 5.380000114440918
+    }
+  ]
+}

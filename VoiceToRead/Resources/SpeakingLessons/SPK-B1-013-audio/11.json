@@ -1,0 +1,96 @@
+{
+  "text": "Someone asked if we should bring plates and cups, since the kitchen sometimes runs out.",
+  "duration": 6.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 8,
+      "length": 5,
+      "start": 0.800000011920929,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.2599999904632568,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 1.7200000286102295,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 1.9600000381469727,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 33,
+      "length": 6,
+      "start": 2.180000066757202,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 2.5999999046325684,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 44,
+      "length": 4,
+      "start": 3.319999933242798,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.9200000762939453,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 56,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 60,
+      "length": 7,
+      "start": 4.28000020980835,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 4.619999885559082,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.21999979019165,
+      "end": 5.5
+    },
+    {
+      "location": 83,
+      "length": 3,
+      "start": 5.5,
+      "end": 5.840000152587891
+    }
+  ]
+}

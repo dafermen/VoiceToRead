@@ -1,0 +1,180 @@
+{
+  "text": "The waiter explained, \"We haven't had the side salad on the menu lately, but I could ask the kitchen to put something together without any dressing, if you prefer.\"",
+  "duration": 9.399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.3799999952316284,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 11,
+      "length": 9,
+      "start": 0.46000000834465027,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 1.6799999475479126,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.0199999809265137,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 38,
+      "length": 3,
+      "start": 2.2200000286102295,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.4600000381469727,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 2.7200000286102295,
+      "end": 3.0
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 3.0,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 56,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 3.4600000381469727,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 65,
+      "length": 6,
+      "start": 3.559999942779541,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 4.559999942779541,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 77,
+      "length": 1,
+      "start": 4.659999847412109,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 4.840000152587891,
+      "end": 5.0
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 5.0,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 5.179999828338623,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 93,
+      "length": 7,
+      "start": 5.480000019073486,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 101,
+      "length": 2,
+      "start": 5.599999904632568,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 5.900000095367432,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 108,
+      "length": 9,
+      "start": 6.059999942779541,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 118,
+      "length": 8,
+      "start": 6.440000057220459,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 127,
+      "length": 7,
+      "start": 6.800000190734863,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 135,
+      "length": 3,
+      "start": 7.199999809265137,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 139,
+      "length": 8,
+      "start": 7.559999942779541,
+      "end": 7.840000152587891
+    },
+    {
+      "location": 149,
+      "length": 2,
+      "start": 8.260000228881836,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 152,
+      "length": 3,
+      "start": 8.420000076293945,
+      "end": 8.579999923706055
+    },
+    {
+      "location": 156,
+      "length": 6,
+      "start": 8.579999923706055,
+      "end": 8.899999618530273
+    }
+  ]
+}

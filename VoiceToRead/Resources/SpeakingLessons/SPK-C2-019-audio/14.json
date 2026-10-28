@@ -1,0 +1,144 @@
+{
+  "text": "Sarah highlighted that the timeframe was tight, so we agreed on short written updates every day rather than waiting until the final draft.",
+  "duration": 10.220000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 6,
+      "length": 11,
+      "start": 0.6600000262260437,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.2799999713897705,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.7799999713897705,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 27,
+      "length": 9,
+      "start": 1.9800000190734863,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.559999942779541,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.0199999809265137,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 4.119999885559082,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 4.179999828338623,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 4.440000057220459,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 4.659999847412109,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 5.059999942779541,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 70,
+      "length": 7,
+      "start": 5.400000095367432,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 5.760000228881836,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 6.239999771118164,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 6.880000114440918,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 7.260000228881836,
+      "end": 7.920000076293945
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 7.920000076293945,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 108,
+      "length": 7,
+      "start": 8.4399995803833,
+      "end": 8.5600004196167
+    },
+    {
+      "location": 116,
+      "length": 5,
+      "start": 8.5600004196167,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 122,
+      "length": 3,
+      "start": 8.859999656677246,
+      "end": 9.079999923706055
+    },
+    {
+      "location": 126,
+      "length": 5,
+      "start": 9.079999923706055,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 132,
+      "length": 5,
+      "start": 9.460000038146973,
+      "end": 9.819999694824219
+    }
+  ]
+}

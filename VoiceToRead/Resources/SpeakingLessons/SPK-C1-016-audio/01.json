@@ -1,0 +1,174 @@
+{
+  "text": "I realized yesterday evening that I had missed confirming which materials were needed for this morning’s team client meeting, although I had been responsible for coordination all week.",
+  "duration": 12.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.3799999952316284,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 11,
+      "length": 9,
+      "start": 0.8999999761581421,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.0999999046325684,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.4800000190734863,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.680000066757202,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 40,
+      "length": 6,
+      "start": 3.0799999237060547,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 47,
+      "length": 10,
+      "start": 3.1600000858306885,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 3.700000047683716,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 64,
+      "length": 9,
+      "start": 4.119999885559082,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 4.639999866485596,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 79,
+      "length": 6,
+      "start": 4.980000019073486,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 5.239999771118164,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 5.699999809265137,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 5.960000038146973,
+      "end": 6.5
+    },
+    {
+      "location": 105,
+      "length": 4,
+      "start": 6.5,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 110,
+      "length": 6,
+      "start": 6.800000190734863,
+      "end": 7.21999979019165
+    },
+    {
+      "location": 117,
+      "length": 7,
+      "start": 7.21999979019165,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 126,
+      "length": 8,
+      "start": 8.319999694824219,
+      "end": 8.579999923706055
+    },
+    {
+      "location": 135,
+      "length": 1,
+      "start": 8.579999923706055,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 137,
+      "length": 3,
+      "start": 9.15999984741211,
+      "end": 9.319999694824219
+    },
+    {
+      "location": 141,
+      "length": 4,
+      "start": 9.319999694824219,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 146,
+      "length": 11,
+      "start": 9.460000038146973,
+      "end": 10.079999923706055
+    },
+    {
+      "location": 158,
+      "length": 3,
+      "start": 10.079999923706055,
+      "end": 10.520000457763672
+    },
+    {
+      "location": 162,
+      "length": 12,
+      "start": 10.520000457763672,
+      "end": 11.020000457763672
+    },
+    {
+      "location": 175,
+      "length": 3,
+      "start": 11.020000457763672,
+      "end": 11.5
+    },
+    {
+      "location": 179,
+      "length": 4,
+      "start": 11.5,
+      "end": 11.779999732971191
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "text": "Last Wednesday, my friend Jamie asked whether I’d be interested in helping plan a small celebration for our coworker Sasha’s promotion—we both agreed something simple would be nice for a change.",
+  "duration": 13.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.5400000214576721,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.559999942779541,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 19,
+      "length": 6,
+      "start": 1.8200000524520874,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.0799999237060547,
+      "end": 2.5
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.5,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.059999942779541,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.380000114440918,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 53,
+      "length": 10,
+      "start": 3.7799999713897705,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.5
+    },
+    {
+      "location": 67,
+      "length": 7,
+      "start": 4.5,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 80,
+      "length": 1,
+      "start": 5.239999771118164,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 5.420000076293945,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 88,
+      "length": 11,
+      "start": 5.820000171661377,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 100,
+      "length": 3,
+      "start": 6.360000133514404,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 6.940000057220459,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 108,
+      "length": 8,
+      "start": 7.159999847412109,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 117,
+      "length": 7,
+      "start": 7.820000171661377,
+      "end": 8.34000015258789
+    },
+    {
+      "location": 125,
+      "length": 9,
+      "start": 8.34000015258789,
+      "end": 9.760000228881836
+    },
+    {
+      "location": 135,
+      "length": 2,
+      "start": 8.34000015258789,
+      "end": 9.760000228881836
+    },
+    {
+      "location": 138,
+      "length": 4,
+      "start": 9.760000228881836,
+      "end": 10.220000267028809
+    },
+    {
+      "location": 143,
+      "length": 6,
+      "start": 10.220000267028809,
+      "end": 10.539999961853027
+    },
+    {
+      "location": 150,
+      "length": 9,
+      "start": 10.539999961853027,
+      "end": 11.039999961853027
+    },
+    {
+      "location": 160,
+      "length": 6,
+      "start": 11.039999961853027,
+      "end": 11.579999923706055
+    },
+    {
+      "location": 167,
+      "length": 5,
+      "start": 11.579999923706055,
+      "end": 12.0
+    },
+    {
+      "location": 173,
+      "length": 2,
+      "start": 12.0,
+      "end": 12.199999809265137
+    },
+    {
+      "location": 176,
+      "length": 4,
+      "start": 12.199999809265137,
+      "end": 12.420000076293945
+    },
+    {
+      "location": 181,
+      "length": 3,
+      "start": 12.420000076293945,
+      "end": 12.619999885559082
+    },
+    {
+      "location": 185,
+      "length": 1,
+      "start": 12.619999885559082,
+      "end": 12.800000190734863
+    },
+    {
+      "location": 187,
+      "length": 6,
+      "start": 12.800000190734863,
+      "end": 13.119999885559082
+    }
+  ]
+}

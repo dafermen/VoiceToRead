@@ -1,0 +1,84 @@
+{
+  "text": "I realized I hadn't paid enough attention when the instructor demonstrated the technique.",
+  "duration": 6.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.4000000059604645,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.0399999618530273,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.4600000381469727,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.7999999523162842,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.059999942779541,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 32,
+      "length": 9,
+      "start": 2.440000057220459,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.9200000762939453,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.4000000953674316,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 51,
+      "length": 10,
+      "start": 4.079999923706055,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 62,
+      "length": 12,
+      "start": 4.079999923706055,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 4.760000228881836,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 79,
+      "length": 9,
+      "start": 5.199999809265137,
+      "end": 5.320000171661377
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "text": "I wanted to know whether the course included one-on-one tutoring, so I asked directly about extra support.",
+  "duration": 7.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 1.100000023841858,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.340000033378601,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 1.659999966621399,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.8799999952316284,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.1600000858306885,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.4200000762939453,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 2.7200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 3.5999999046325684,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.740000009536743,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 56,
+      "length": 8,
+      "start": 4.079999923706055,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.159999847412109,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 69,
+      "length": 1,
+      "start": 5.260000228881836,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.679999828338623,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 77,
+      "length": 8,
+      "start": 5.800000190734863,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 6.340000152587891,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 6.760000228881836,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 98,
+      "length": 7,
+      "start": 7.159999847412109,
+      "end": 7.599999904632568
+    }
+  ]
+}

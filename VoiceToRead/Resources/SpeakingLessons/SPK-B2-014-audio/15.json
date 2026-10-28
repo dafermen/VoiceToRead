@@ -1,0 +1,96 @@
+{
+  "text": "During cleanup, a classmate commented, \"Your cup looks really smooth now—what did you change?\"",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 0.5,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.5800000429153442,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 18,
+      "length": 9,
+      "start": 1.7799999713897705,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 28,
+      "length": 9,
+      "start": 2.259999990463257,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.759999990463257,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.5399999618530273,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.9600000381469727,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 55,
+      "length": 6,
+      "start": 4.260000228881836,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.880000114440918,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 5.139999866485596,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 6.099999904632568,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 6.260000228881836,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 86,
+      "length": 6,
+      "start": 6.480000019073486,
+      "end": 6.860000133514404
+    }
+  ]
+}

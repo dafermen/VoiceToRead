@@ -1,0 +1,138 @@
+{
+  "text": "However, if I could use my weekends to study in a group, I might stay motivated because everybody can share their ideas.",
+  "duration": 9.119999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.0199999809265137,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.2799999713897705,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.559999942779541,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.7400000095367432,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.9800000190734863,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 27,
+      "length": 8,
+      "start": 2.299999952316284,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.700000047683716,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 3.0399999618530273,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.259999990463257,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 48,
+      "length": 1,
+      "start": 3.5399999618530273,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.8399999141693115,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 57,
+      "length": 1,
+      "start": 4.519999980926514,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.679999828338623,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 4.920000076293945,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 5.21999979019165,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 5.739999771118164,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 88,
+      "length": 9,
+      "start": 6.519999980926514,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 7.039999961853027,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 102,
+      "length": 5,
+      "start": 7.420000076293945,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 108,
+      "length": 5,
+      "start": 7.679999828338623,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 114,
+      "length": 5,
+      "start": 8.0600004196167,
+      "end": 8.4399995803833
+    }
+  ]
+}

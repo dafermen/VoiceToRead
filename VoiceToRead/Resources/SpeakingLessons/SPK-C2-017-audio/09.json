@@ -1,0 +1,96 @@
+{
+  "text": "Marc noted that some thrive by working independently and would rather have fewer mandatory meetings.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.5199999809265137,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.8999999761581421,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.600000023841858,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 1.940000057220459,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.4200000762939453,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.740000009536743,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 39,
+      "length": 13,
+      "start": 3.0799999237060547,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.8399999141693115,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 4.559999942779541,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.739999771118164,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 5.079999923706055,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.440000057220459,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 81,
+      "length": 9,
+      "start": 5.980000019073486,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 6.599999904632568,
+      "end": 7.0
+    }
+  ]
+}

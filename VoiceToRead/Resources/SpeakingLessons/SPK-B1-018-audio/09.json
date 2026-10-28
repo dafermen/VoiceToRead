@@ -1,0 +1,114 @@
+{
+  "text": "Everyone thought that was a good idea, since we could easily move inside if the weather changed suddenly.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 9,
+      "length": 7,
+      "start": 0.5600000023841858,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.0399999618530273,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 1.8200000524520874,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.0399999618530273,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 2.2799999713897705,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 3.3399999141693115,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.4600000381469727,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.5999999046325684,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 3.799999952316284,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.380000114440918,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 4.639999866485596,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.179999828338623,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.599999904632568,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 5.880000114440918,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 6.019999980926514,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 96,
+      "length": 8,
+      "start": 6.559999942779541,
+      "end": 6.960000038146973
+    }
+  ]
+}

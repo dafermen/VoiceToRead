@@ -1,0 +1,150 @@
+{
+  "text": "I acknowledged, \"If we meet the deadline, it’ll be with a few features left out, but the proposal will still offer a compelling solution.\"",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 2,
+      "length": 12,
+      "start": 0.5,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.659999966621399,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.8799999952316284,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 2.0999999046325684,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 32,
+      "length": 8,
+      "start": 2.3399999141693115,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 42,
+      "length": 5,
+      "start": 3.0999999046325684,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.240000009536743,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.4600000381469727,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 56,
+      "length": 1,
+      "start": 3.619999885559082,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 3.7799999713897705,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 62,
+      "length": 8,
+      "start": 4.019999980926514,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 4.420000076293945,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 4.699999809265137,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 81,
+      "length": 3,
+      "start": 5.420000076293945,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 5.599999904632568,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 8,
+      "start": 5.78000020980835,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 6.199999809265137,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 6.539999961853027,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 109,
+      "length": 5,
+      "start": 7.019999980926514,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 115,
+      "length": 1,
+      "start": 7.340000152587891,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 117,
+      "length": 10,
+      "start": 7.71999979019165,
+      "end": 8.079999923706055
+    },
+    {
+      "location": 128,
+      "length": 8,
+      "start": 8.079999923706055,
+      "end": 8.619999885559082
+    }
+  ]
+}

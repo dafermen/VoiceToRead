@@ -1,0 +1,114 @@
+{
+  "text": "Last week, I decided that I want to learn some new skills to help me change my job.",
+  "duration": 7.269999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5600000023841858,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.2799999713897705,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.7000000476837158,
+      "end": 2.0
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.240000009536743,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.4600000381469727,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.7200000286102295,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.9600000381469727,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.0999999046325684,
+      "end": 3.5
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.5,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 51,
+      "length": 6,
+      "start": 3.819999933242798,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 4.139999866485596,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.760000228881836,
+      "end": 5.0
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.0,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 5.320000171661377,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.639999866485596,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.960000038146973,
+      "end": 6.260000228881836
+    }
+  ]
+}

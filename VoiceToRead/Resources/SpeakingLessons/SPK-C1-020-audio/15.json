@@ -1,0 +1,132 @@
+{
+  "text": "By listing what I already had and what I still needed, I figured I could avoid getting stuck before even starting.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.4000000059604645,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.2400000095367432,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.3600000143051147,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.940000057220459,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.359999895095825,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.700000047683716,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 39,
+      "length": 1,
+      "start": 2.859999895095825,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.140000104904175,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 47,
+      "length": 6,
+      "start": 3.440000057220459,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 55,
+      "length": 1,
+      "start": 4.480000019073486,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 4.739999771118164,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 65,
+      "length": 1,
+      "start": 4.940000057220459,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 5.199999809265137,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 5.460000038146973,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 79,
+      "length": 7,
+      "start": 5.78000020980835,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 6.139999866485596,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 93,
+      "length": 6,
+      "start": 6.559999942779541,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 7.28000020980835,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 105,
+      "length": 8,
+      "start": 7.78000020980835,
+      "end": 8.119999885559082
+    }
+  ]
+}

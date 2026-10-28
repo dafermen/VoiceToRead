@@ -1,0 +1,114 @@
+{
+  "text": "She added, 'You could try the tram, which doesn’t follow main avenues and is less affected by traffic.'",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.41999998688697815,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.6200000047683716,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.8799999952316284,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.180000066757202,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.4200000762939453,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 3.240000009536743,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 3.4200000762939453,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.8399999141693115,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.179999828338623,
+      "end": 4.5
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 4.5,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 5.039999961853027,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 5.599999904632568,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.860000133514404,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 82,
+      "length": 8,
+      "start": 6.019999980926514,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 6.420000076293945,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 6.78000020980835,
+      "end": 7.039999961853027
+    }
+  ]
+}

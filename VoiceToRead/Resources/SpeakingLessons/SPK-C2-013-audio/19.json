@@ -1,0 +1,96 @@
+{
+  "text": "Looking back, I noticed that being explicit about expectations helped avoid confusion or misplaced effort.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.2799999713897705,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.399999976158142,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 1.659999966621399,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 1.940000057220459,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 35,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 2.7799999713897705,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 50,
+      "length": 12,
+      "start": 3.200000047683716,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.059999942779541,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 4.739999771118164,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 76,
+      "length": 9,
+      "start": 5.139999866485596,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 89,
+      "length": 9,
+      "start": 6.340000152587891,
+      "end": 6.900000095367432
+    },
+    {
+      "location": 99,
+      "length": 6,
+      "start": 6.900000095367432,
+      "end": 7.300000190734863
+    }
+  ]
+}

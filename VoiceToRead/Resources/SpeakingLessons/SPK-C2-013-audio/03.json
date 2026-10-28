@@ -1,0 +1,132 @@
+{
+  "text": "Even though I was a bit concerned about space, I agreed that a smaller setting would feel more personal and manageable.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.9399999976158142,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.2799999713897705,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.440000057220459,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 18,
+      "length": 1,
+      "start": 1.600000023841858,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.8200000524520874,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 24,
+      "length": 9,
+      "start": 2.0199999809265137,
+      "end": 2.5
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.5,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 2.9000000953674316,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 4.079999923706055,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 49,
+      "length": 6,
+      "start": 4.239999771118164,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 4.739999771118164,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 4.960000038146973,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 5.300000190734863,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 5.639999866485596,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 85,
+      "length": 4,
+      "start": 5.920000076293945,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.139999866485596,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 95,
+      "length": 8,
+      "start": 6.440000057220459,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 6.980000019073486,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 108,
+      "length": 10,
+      "start": 7.639999866485596,
+      "end": 8.0600004196167
+    }
+  ]
+}

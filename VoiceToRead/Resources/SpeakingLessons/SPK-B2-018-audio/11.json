@@ -1,0 +1,78 @@
+{
+  "text": "Chris asked whether everyone would be comfortable if the temperature dropped unexpectedly.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 6,
+      "length": 5,
+      "start": 0.47999998927116394,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 1.059999942779541,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 20,
+      "length": 8,
+      "start": 1.4800000190734863,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.059999942779541,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 2.3399999141693115,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 38,
+      "length": 11,
+      "start": 2.5799999237060547,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.0799999237060547,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.559999942779541,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 57,
+      "length": 11,
+      "start": 3.859999895095825,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 69,
+      "length": 7,
+      "start": 4.159999847412109,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 77,
+      "length": 12,
+      "start": 4.78000020980835,
+      "end": 5.659999847412109
+    }
+  ]
+}

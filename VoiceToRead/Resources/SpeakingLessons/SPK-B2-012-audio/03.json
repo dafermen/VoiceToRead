@@ -1,0 +1,132 @@
+{
+  "text": "I approached the concierge and asked, \"Could you tell me the best way to get to the art museum from here?\"",
+  "duration": 7.21999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 2,
+      "length": 10,
+      "start": 0.5600000023841858,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 0.9599999785423279,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 17,
+      "length": 9,
+      "start": 1.4199999570846558,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.0199999809265137,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 31,
+      "length": 5,
+      "start": 2.5399999618530273,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 3.180000066757202,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.680000066757202,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.880000114440918,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.059999942779541,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.239999771118164,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.380000114440918,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.679999828338623,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 4.940000057220459,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 5.239999771118164,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 5.340000152587891,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 80,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 5.860000133514404,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 95,
+      "length": 4,
+      "start": 6.199999809265137,
+      "end": 6.5
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 6.5,
+      "end": 6.980000019073486
+    }
+  ]
+}

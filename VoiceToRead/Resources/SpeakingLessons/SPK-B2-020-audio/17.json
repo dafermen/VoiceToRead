@@ -1,0 +1,102 @@
+{
+  "text": "Luis encouraged me by saying that anyone who keeps going, even slowly, will eventually see results.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 5,
+      "length": 10,
+      "start": 0.5799999833106995,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.1399999856948853,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.4800000190734863,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.7799999713897705,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.0199999809265137,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.380000114440918,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.859999895095825,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.1600000858306885,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 3.440000057220459,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 4.480000019073486,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.579999923706055,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 5.619999885559082,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 76,
+      "length": 10,
+      "start": 5.760000228881836,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.239999771118164,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 6.679999828338623,
+      "end": 7.199999809265137
+    }
+  ]
+}

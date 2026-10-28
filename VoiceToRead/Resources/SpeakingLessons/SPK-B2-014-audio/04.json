@@ -1,0 +1,96 @@
+{
+  "text": "When I entered the studio, the instructor welcomed us and introduced everyone to the tools.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 1.1200000047683716,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 1.340000033378601,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.600000023841858,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 19,
+      "length": 6,
+      "start": 1.940000057220459,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.9000000953674316,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 31,
+      "length": 10,
+      "start": 3.5399999618530273,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 42,
+      "length": 8,
+      "start": 3.5399999618530273,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 4.079999923706055,
+      "end": 4.5
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 4.5,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 58,
+      "length": 10,
+      "start": 5.079999923706055,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 69,
+      "length": 8,
+      "start": 5.519999980926514,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 6.21999979019165,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 81,
+      "length": 3,
+      "start": 6.420000076293945,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 6.659999847412109,
+      "end": 6.880000114440918
+    }
+  ]
+}

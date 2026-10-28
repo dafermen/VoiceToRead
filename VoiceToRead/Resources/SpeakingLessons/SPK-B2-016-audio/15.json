@@ -1,0 +1,102 @@
+{
+  "text": "A few hours later, several colleagues wrote to say they appreciated being informed rather than surprised.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 2,
+      "length": 3,
+      "start": 0.2800000011920929,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 6,
+      "length": 5,
+      "start": 0.6000000238418579,
+      "end": 1.0
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 1.0,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 2.0399999618530273,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 27,
+      "length": 10,
+      "start": 2.259999990463257,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.819999933242798,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.119999885559082,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 3.4000000953674316,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.559999942779541,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 56,
+      "length": 11,
+      "start": 3.759999990463257,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 4.420000076293945,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 4.800000190734863,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 5.440000057220459,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.239999771118164,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 95,
+      "length": 9,
+      "start": 6.599999904632568,
+      "end": 7.119999885559082
+    }
+  ]
+}

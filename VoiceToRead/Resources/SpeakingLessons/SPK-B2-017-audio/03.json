@@ -1,0 +1,108 @@
+{
+  "text": "Although I have taken online classes before, this time I am looking for more interaction and feedback.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 0.5400000214576721,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.2999999523162842,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.240000009536743,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 37,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.880000114440918,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 4.019999980926514,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 55,
+      "length": 1,
+      "start": 4.360000133514404,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.599999904632568,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 60,
+      "length": 7,
+      "start": 4.800000190734863,
+      "end": 5.0
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.0,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 5.420000076293945,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 77,
+      "length": 11,
+      "start": 5.699999809265137,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.260000228881836,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 93,
+      "length": 8,
+      "start": 6.800000190734863,
+      "end": 7.039999961853027
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "text": "That was true—often I’d start something with excitement, then let deadlines or small setbacks discourage me from finishing.",
+  "duration": 8.319999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.3400000035762787,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.5600000023841858,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 0.5600000023841858,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.8799999952316284,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.0999999046325684,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 30,
+      "length": 9,
+      "start": 2.4600000381469727,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 45,
+      "length": 10,
+      "start": 3.0399999618530273,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.28000020980835,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.400000095367432,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 66,
+      "length": 9,
+      "start": 4.679999828338623,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.199999809265137,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 5.460000038146973,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 85,
+      "length": 8,
+      "start": 5.800000190734863,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 94,
+      "length": 10,
+      "start": 6.360000133514404,
+      "end": 7.0
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 7.0,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 7.199999809265137,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 113,
+      "length": 9,
+      "start": 7.480000019073486,
+      "end": 7.78000020980835
+    }
+  ]
+}

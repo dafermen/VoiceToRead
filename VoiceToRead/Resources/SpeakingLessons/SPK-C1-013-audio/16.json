@@ -1,0 +1,138 @@
+{
+  "text": "It turned out she was free the following Friday, and she appreciated the fact that we asked her before finalizing the plans.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.25999999046325684
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.25999999046325684,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 0.6200000047683716,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.0800000429153442,
+      "end": 1.5
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.5,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.7400000095367432,
+      "end": 2.0
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 31,
+      "length": 9,
+      "start": 2.3399999141693115,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 2.5999999046325684,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.640000104904175,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.7200000286102295,
+      "end": 4.0
+    },
+    {
+      "location": 57,
+      "length": 11,
+      "start": 4.0,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.159999847412109,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 5.159999847412109,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.579999923706055,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 86,
+      "length": 5,
+      "start": 5.820000171661377,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 92,
+      "length": 3,
+      "start": 6.179999828338623,
+      "end": 6.5
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.5,
+      "end": 7.0
+    },
+    {
+      "location": 103,
+      "length": 10,
+      "start": 7.0,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 114,
+      "length": 3,
+      "start": 7.679999828338623,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 118,
+      "length": 5,
+      "start": 7.900000095367432,
+      "end": 8.199999809265137
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "text": "However, the reality of manipulating clay on the wheel was far more challenging than I had anticipated.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.0199999809265137,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.3600000143051147,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 24,
+      "length": 12,
+      "start": 2.3399999141693115,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.9200000762939453,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 3.2799999713897705,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.4800000190734863,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.6600000858306885,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 3.880000114440918,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.559999942779541,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.960000038146973,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 68,
+      "length": 11,
+      "start": 5.420000076293945,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.739999771118164,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 85,
+      "length": 1,
+      "start": 6.039999961853027,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.239999771118164,
+      "end": 6.5
+    },
+    {
+      "location": 91,
+      "length": 11,
+      "start": 6.5,
+      "end": 7.0
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "text": "Hannah reminded me that she used to skip sessions when her workload increased, so she wished she had discussed a pause option before enrolling.",
+  "duration": 10.819999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 7,
+      "length": 8,
+      "start": 0.41999998688697815,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 0.9399999976158142,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.2599999904632568,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 1.8600000143051147,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.119999885559082,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 41,
+      "length": 8,
+      "start": 2.740000009536743,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 3.3399999141693115,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 59,
+      "length": 8,
+      "start": 4.119999885559082,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 4.420000076293945,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 5.619999885559082,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 86,
+      "length": 6,
+      "start": 6.039999961853027,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 6.28000020980835,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 97,
+      "length": 3,
+      "start": 6.579999923706055,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 101,
+      "length": 9,
+      "start": 6.880000114440918,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 111,
+      "length": 1,
+      "start": 7.300000190734863,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 113,
+      "length": 5,
+      "start": 7.940000057220459,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 119,
+      "length": 6,
+      "start": 8.0600004196167,
+      "end": 8.619999885559082
+    },
+    {
+      "location": 126,
+      "length": 6,
+      "start": 8.619999885559082,
+      "end": 9.359999656677246
+    },
+    {
+      "location": 133,
+      "length": 9,
+      "start": 9.359999656677246,
+      "end": 9.760000228881836
+    }
+  ]
+}

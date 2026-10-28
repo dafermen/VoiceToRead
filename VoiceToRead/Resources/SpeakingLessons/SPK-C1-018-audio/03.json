@@ -1,0 +1,156 @@
+{
+  "text": "Mark, who used to hike every weekend, insisted that a gentle walk by the lake wouldn’t be strenuous, but agreed we should all feel comfortable.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.8199999928474426,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.1399999856948853,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.3600000143051147,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.7799999713897705,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 1.7799999713897705,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.240000009536743,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 3.4200000762939453,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.759999990463257,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 52,
+      "length": 1,
+      "start": 4.119999885559082,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 4.380000114440918,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.71999979019165,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.059999942779541,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 5.320000171661377,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.739999771118164,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.739999771118164,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 6.28000020980835,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 90,
+      "length": 9,
+      "start": 6.619999885559082,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 101,
+      "length": 3,
+      "start": 7.71999979019165,
+      "end": 8.0
+    },
+    {
+      "location": 105,
+      "length": 6,
+      "start": 8.0,
+      "end": 8.460000038146973
+    },
+    {
+      "location": 112,
+      "length": 2,
+      "start": 8.460000038146973,
+      "end": 8.960000038146973
+    },
+    {
+      "location": 115,
+      "length": 6,
+      "start": 8.960000038146973,
+      "end": 9.199999809265137
+    },
+    {
+      "location": 122,
+      "length": 3,
+      "start": 9.199999809265137,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 126,
+      "length": 4,
+      "start": 9.5600004196167,
+      "end": 9.800000190734863
+    },
+    {
+      "location": 131,
+      "length": 11,
+      "start": 9.800000190734863,
+      "end": 10.279999732971191
+    }
+  ]
+}

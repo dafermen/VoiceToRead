@@ -1,0 +1,144 @@
+{
+  "text": "Before buying an instrument, I talked to my coworker Luis, who recently bought a guitar and offered to lend me his old one.",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 7,
+      "length": 6,
+      "start": 0.5199999809265137,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 0.9399999976158142,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 17,
+      "length": 10,
+      "start": 1.3200000524520874,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 2.5199999809265137,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.7200000286102295,
+      "end": 3.0
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 3.0,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 41,
+      "length": 2,
+      "start": 3.240000009536743,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 44,
+      "length": 8,
+      "start": 3.4000000953674316,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 4.039999961853027,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 5.159999847412109,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 5.300000190734863,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.840000152587891,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 79,
+      "length": 1,
+      "start": 6.039999961853027,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.820000171661377,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 7.039999961853027,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 92,
+      "length": 7,
+      "start": 7.400000095367432,
+      "end": 7.639999866485596
+    },
+    {
+      "location": 100,
+      "length": 2,
+      "start": 7.639999866485596,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 8.119999885559082,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 108,
+      "length": 2,
+      "start": 8.119999885559082,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 8.399999618530273,
+      "end": 8.619999885559082
+    },
+    {
+      "location": 115,
+      "length": 3,
+      "start": 8.619999885559082,
+      "end": 8.880000114440918
+    },
+    {
+      "location": 119,
+      "length": 3,
+      "start": 8.880000114440918,
+      "end": 9.140000343322754
+    }
+  ]
+}

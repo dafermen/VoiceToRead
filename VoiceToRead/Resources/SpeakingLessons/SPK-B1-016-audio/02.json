@@ -1,0 +1,84 @@
+{
+  "text": "We were supposed to discuss our plan for the client presentation next week.",
+  "duration": 5.230000019073486,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.3400000035762787,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 8,
+      "length": 8,
+      "start": 0.6200000047683716,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.0399999618530273,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 1.7200000286102295,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 1.7200000286102295,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 32,
+      "length": 4,
+      "start": 2.0799999237060547,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 2.4800000190734863,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.7200000286102295,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 2.9000000953674316,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 52,
+      "length": 12,
+      "start": 3.259999990463257,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 3.9000000953674316,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.480000019073486,
+      "end": 4.760000228881836
+    }
+  ]
+}

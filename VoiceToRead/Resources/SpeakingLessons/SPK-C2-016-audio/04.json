@@ -1,0 +1,156 @@
+{
+  "text": "She looked up, a little surprised, and said, \"I noticed it was missing, which delayed consolidating the report, but I’m glad you brought it up.\"",
+  "duration": 10.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.6200000047683716,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 1,
+      "start": 1.3600000143051147,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.4800000190734863,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 24,
+      "length": 9,
+      "start": 1.7200000286102295,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 2.740000009536743,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 3.259999990463257,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 46,
+      "length": 1,
+      "start": 4.039999961853027,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 48,
+      "length": 7,
+      "start": 4.239999771118164,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 4.599999904632568,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.78000020980835,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 5.360000133514404,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 5.840000152587891,
+      "end": 6.0
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 6.0,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 86,
+      "length": 13,
+      "start": 6.420000076293945,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 100,
+      "length": 3,
+      "start": 7.260000228881836,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 104,
+      "length": 6,
+      "start": 7.559999942779541,
+      "end": 7.880000114440918
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 8.579999923706055,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 8.720000267028809,
+      "end": 9.039999961853027
+    },
+    {
+      "location": 120,
+      "length": 4,
+      "start": 9.039999961853027,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 125,
+      "length": 3,
+      "start": 9.239999771118164,
+      "end": 9.460000038146973
+    },
+    {
+      "location": 129,
+      "length": 7,
+      "start": 9.460000038146973,
+      "end": 9.680000305175781
+    },
+    {
+      "location": 137,
+      "length": 2,
+      "start": 9.680000305175781,
+      "end": 9.859999656677246
+    },
+    {
+      "location": 140,
+      "length": 2,
+      "start": 9.859999656677246,
+      "end": 10.079999923706055
+    }
+  ]
+}

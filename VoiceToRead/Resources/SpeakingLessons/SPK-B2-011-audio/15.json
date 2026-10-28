@@ -1,0 +1,108 @@
+{
+  "text": "She said I should have tried the tiramisu last time, since it might not always be available.",
+  "duration": 6.789999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 0.7200000286102295,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 1.2999999523162842,
+      "end": 1.5
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 1.7000000476837158,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 1.940000057220459,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 2.319999933242798,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.6600000858306885,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.2200000286102295,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.179999828338623,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.320000171661377,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.78000020980835,
+      "end": 5.099999904632568
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.099999904632568,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 5.519999980926514,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 82,
+      "length": 9,
+      "start": 5.840000152587891,
+      "end": 6.099999904632568
+    }
+  ]
+}

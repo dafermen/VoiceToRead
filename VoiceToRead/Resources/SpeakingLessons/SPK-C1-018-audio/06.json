@@ -1,0 +1,132 @@
+{
+  "text": "Rather than waiting for perfect weather, I suggested we pack extra layers and umbrellas, which would let us adapt without stress.",
+  "duration": 9.6899995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 0.8600000143051147,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 1.600000023841858,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 32,
+      "length": 7,
+      "start": 1.9800000190734863,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 3.0999999046325684,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 43,
+      "length": 9,
+      "start": 3.299999952316284,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 3.7799999713897705,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.139999866485596,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 61,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 4.980000019073486,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.320000171661377,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 78,
+      "length": 9,
+      "start": 5.78000020980835,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 6.900000095367432,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 95,
+      "length": 5,
+      "start": 7.019999980926514,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 101,
+      "length": 3,
+      "start": 7.28000020980835,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 7.400000095367432,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 108,
+      "length": 5,
+      "start": 7.679999828338623,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 114,
+      "length": 7,
+      "start": 8.0600004196167,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 122,
+      "length": 6,
+      "start": 8.640000343322754,
+      "end": 9.140000343322754
+    }
+  ]
+}

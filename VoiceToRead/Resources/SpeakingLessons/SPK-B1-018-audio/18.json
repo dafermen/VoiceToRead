@@ -1,0 +1,138 @@
+{
+  "text": "She said we should bring our things anyway, and if it didn't stop after thirty minutes, we would meet at the café.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.4000000059604645,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.7200000286102295,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 12,
+      "length": 6,
+      "start": 1.2000000476837158,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.4800000190734863,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.840000033378601,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.140000104904175,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 2.4800000190734863,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.5399999618530273,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.7799999713897705,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 54,
+      "length": 6,
+      "start": 4.019999980926514,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.300000190734863,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 4.639999866485596,
+      "end": 5.0
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.0,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 79,
+      "length": 7,
+      "start": 5.440000057220459,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 6.28000020980835,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 91,
+      "length": 5,
+      "start": 6.380000114440918,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 6.579999923706055,
+      "end": 7.0
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 7.0,
+      "end": 7.539999961853027
+    },
+    {
+      "location": 105,
+      "length": 3,
+      "start": 7.539999961853027,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 109,
+      "length": 4,
+      "start": 7.699999809265137,
+      "end": 7.980000019073486
+    }
+  ]
+}

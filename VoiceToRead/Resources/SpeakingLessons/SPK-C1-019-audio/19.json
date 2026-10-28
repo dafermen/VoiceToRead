@@ -1,0 +1,138 @@
+{
+  "text": "The client replied by midday, thanking us for our transparency and practical focus, and indicated that our solution was under serious consideration.",
+  "duration": 12.399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 0.9200000166893005,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.9800000190734863,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 3.6600000858306885,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 4.019999980926514,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 4.239999771118164,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 50,
+      "length": 12,
+      "start": 4.539999961853027,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 5.28000020980835,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 67,
+      "length": 9,
+      "start": 6.099999904632568,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 6.599999904632568,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 84,
+      "length": 3,
+      "start": 7.800000190734863,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 88,
+      "length": 9,
+      "start": 7.960000038146973,
+      "end": 8.479999542236328
+    },
+    {
+      "location": 98,
+      "length": 4,
+      "start": 8.479999542236328,
+      "end": 9.0600004196167
+    },
+    {
+      "location": 103,
+      "length": 3,
+      "start": 9.0600004196167,
+      "end": 9.34000015258789
+    },
+    {
+      "location": 107,
+      "length": 8,
+      "start": 9.34000015258789,
+      "end": 9.800000190734863
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 9.800000190734863,
+      "end": 10.260000228881836
+    },
+    {
+      "location": 120,
+      "length": 5,
+      "start": 10.260000228881836,
+      "end": 10.479999542236328
+    },
+    {
+      "location": 126,
+      "length": 7,
+      "start": 10.479999542236328,
+      "end": 11.15999984741211
+    },
+    {
+      "location": 134,
+      "length": 13,
+      "start": 11.15999984741211,
+      "end": 11.880000114440918
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "text": "We reached consensus that, given the available information, we would define boundaries ourselves and explain our rationale thoroughly in the proposal.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.41999998688697815,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 11,
+      "length": 9,
+      "start": 0.7799999713897705,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.440000057220459,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 2.5399999618530273,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.5399999618530273,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 37,
+      "length": 9,
+      "start": 2.9000000953674316,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 47,
+      "length": 11,
+      "start": 3.299999952316284,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.460000038146973,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 4.760000228881836,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 4.940000057220459,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 76,
+      "length": 10,
+      "start": 5.400000095367432,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 87,
+      "length": 9,
+      "start": 5.820000171661377,
+      "end": 6.559999942779541
+    },
+    {
+      "location": 97,
+      "length": 3,
+      "start": 6.559999942779541,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 101,
+      "length": 7,
+      "start": 7.119999885559082,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 109,
+      "length": 3,
+      "start": 7.659999847412109,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 113,
+      "length": 9,
+      "start": 8.100000381469727,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 123,
+      "length": 10,
+      "start": 8.4399995803833,
+      "end": 9.0600004196167
+    },
+    {
+      "location": 134,
+      "length": 2,
+      "start": 9.0600004196167,
+      "end": 9.479999542236328
+    },
+    {
+      "location": 137,
+      "length": 3,
+      "start": 9.479999542236328,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 141,
+      "length": 8,
+      "start": 9.720000267028809,
+      "end": 10.020000457763672
+    }
+  ]
+}

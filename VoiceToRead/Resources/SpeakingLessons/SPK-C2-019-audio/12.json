@@ -1,0 +1,126 @@
+{
+  "text": "James commented that my outline was useful, but suggested that we include risk assessments alongside recommendations to emphasize pragmatic choices.",
+  "duration": 11.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.5600000023841858,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.059999942779541,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.399999976158142,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 1.6399999856948853,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 2.2799999713897705,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.380000114440918,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 48,
+      "length": 9,
+      "start": 3.4800000190734863,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 3.9200000762939453,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.239999771118164,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 4.400000095367432,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 4.800000190734863,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 79,
+      "length": 11,
+      "start": 5.159999847412109,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 91,
+      "length": 9,
+      "start": 5.760000228881836,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 101,
+      "length": 15,
+      "start": 6.480000019073486,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 117,
+      "length": 2,
+      "start": 7.260000228881836,
+      "end": 8.539999961853027
+    },
+    {
+      "location": 120,
+      "length": 9,
+      "start": 8.539999961853027,
+      "end": 8.539999961853027
+    },
+    {
+      "location": 130,
+      "length": 9,
+      "start": 8.539999961853027,
+      "end": 9.140000343322754
+    },
+    {
+      "location": 140,
+      "length": 7,
+      "start": 9.140000343322754,
+      "end": 9.640000343322754
+    }
+  ]
+}

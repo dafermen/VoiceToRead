@@ -1,0 +1,126 @@
+{
+  "text": "Personally, I would rather spend time relaxing on a picnic blanket, chatting and sharing snacks rather than hiking for hours.",
+  "duration": 9.449999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.8999999761581421,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 1.6200000047683716,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 1.8200000524520874,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 2.180000066757202,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 2.5199999809265137,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 2.940000057220459,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.5199999809265137,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 50,
+      "length": 1,
+      "start": 3.8399999141693115,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 52,
+      "length": 6,
+      "start": 4.139999866485596,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 59,
+      "length": 7,
+      "start": 4.340000152587891,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 68,
+      "length": 8,
+      "start": 5.739999771118164,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 77,
+      "length": 3,
+      "start": 5.760000228881836,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 6.059999942779541,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 6.360000133514404,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 6.940000057220459,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 103,
+      "length": 4,
+      "start": 7.679999828338623,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 108,
+      "length": 6,
+      "start": 8.260000228881836,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 115,
+      "length": 3,
+      "start": 8.260000228881836,
+      "end": 8.800000190734863
+    },
+    {
+      "location": 119,
+      "length": 5,
+      "start": 8.800000190734863,
+      "end": 9.0600004196167
+    }
+  ]
+}

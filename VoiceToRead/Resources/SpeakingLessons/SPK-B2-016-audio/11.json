@@ -1,0 +1,114 @@
+{
+  "text": "Our manager listened and suggested that we notify everyone about the minor change to avoid further mix-ups.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.5400000214576721,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 12,
+      "length": 8,
+      "start": 1.0199999809265137,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 2.200000047683716,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 35,
+      "length": 4,
+      "start": 2.5399999618530273,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 2.940000057220459,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.200000047683716,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 3.7200000286102295,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 5.019999980926514,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 5.28000020980835,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.539999961853027,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 82,
+      "length": 2,
+      "start": 6.119999885559082,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 6.699999809265137,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 7.059999942779541,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 7.559999942779541,
+      "end": 7.880000114440918
+    },
+    {
+      "location": 103,
+      "length": 3,
+      "start": 7.880000114440918,
+      "end": 8.100000381469727
+    }
+  ]
+}

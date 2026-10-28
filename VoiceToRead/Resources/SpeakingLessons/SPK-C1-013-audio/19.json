@@ -1,0 +1,126 @@
+{
+  "text": "After it was all done, even Jamie admitted it had gone more smoothly than our previous attempts at group planning.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 6,
+      "length": 2,
+      "start": 0.41999998688697815,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.5400000214576721,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.059999942779541,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.7799999713897705,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 2.2200000286102295,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.5399999618530273,
+      "end": 3.0
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.0,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 3.9200000762939453,
+      "end": 4.0
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 4.480000019073486,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 4.900000095367432,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.559999942779541,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 78,
+      "length": 8,
+      "start": 5.800000190734863,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 87,
+      "length": 8,
+      "start": 6.320000171661377,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 96,
+      "length": 2,
+      "start": 6.739999771118164,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 99,
+      "length": 5,
+      "start": 7.28000020980835,
+      "end": 7.5
+    },
+    {
+      "location": 105,
+      "length": 8,
+      "start": 7.5,
+      "end": 7.820000171661377
+    }
+  ]
+}

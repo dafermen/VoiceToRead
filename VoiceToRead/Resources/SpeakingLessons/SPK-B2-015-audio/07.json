@@ -1,0 +1,114 @@
+{
+  "text": "We talked about supplies and agreed everyone would bring either paint or trash bags, depending on their choice.",
+  "duration": 7.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.3799999952316284,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 0.7200000286102295,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.1200000047683716,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.659999966621399,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.380000114440918,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 2.740000009536743,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.4200000762939453,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 3.6600000858306885,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 3.880000114440918,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 4.340000152587891,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 4.699999809265137,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 5.239999771118164,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.559999942779541,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 85,
+      "length": 9,
+      "start": 6.5,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 6.679999828338623,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 98,
+      "length": 5,
+      "start": 6.960000038146973,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 104,
+      "length": 6,
+      "start": 7.139999866485596,
+      "end": 7.519999980926514
+    }
+  ]
+}

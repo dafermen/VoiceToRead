@@ -1,0 +1,162 @@
+{
+  "text": "By the end of the session, I decided to ask the instructor for feedback, figuring there was no point pretending I was satisfied with my progress.",
+  "duration": 10.34000015258789,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.30000001192092896,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.9399999976158142,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.440000057220459,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.440000057220459,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 2.359999895095825,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 29,
+      "length": 7,
+      "start": 2.5199999809265137,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 37,
+      "length": 2,
+      "start": 2.940000057220459,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 3.5199999809265137,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.559999942779541,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 48,
+      "length": 10,
+      "start": 4.300000190734863,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 59,
+      "length": 3,
+      "start": 4.300000190734863,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 5.199999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 73,
+      "length": 8,
+      "start": 6.179999828338623,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 6.179999828338623,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.480000019073486,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 92,
+      "length": 2,
+      "start": 6.699999809265137,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 95,
+      "length": 5,
+      "start": 7.039999961853027,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 101,
+      "length": 10,
+      "start": 7.340000152587891,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 112,
+      "length": 1,
+      "start": 7.820000171661377,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 114,
+      "length": 3,
+      "start": 8.119999885559082,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 118,
+      "length": 9,
+      "start": 8.399999618530273,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 128,
+      "length": 4,
+      "start": 8.84000015258789,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 133,
+      "length": 2,
+      "start": 9.239999771118164,
+      "end": 9.539999961853027
+    },
+    {
+      "location": 136,
+      "length": 8,
+      "start": 9.539999961853027,
+      "end": 9.979999542236328
+    }
+  ]
+}

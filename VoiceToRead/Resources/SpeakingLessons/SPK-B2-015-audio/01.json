@@ -1,0 +1,102 @@
+{
+  "text": "Last month, I suggested we could organize a neighborhood volunteering day to improve our local park.",
+  "duration": 6.909999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.5,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 1.2200000286102295,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 14,
+      "length": 9,
+      "start": 1.4600000381469727,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.9199999570846558,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 2.200000047683716,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 2.5199999809265137,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 42,
+      "length": 1,
+      "start": 2.9000000953674316,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 44,
+      "length": 12,
+      "start": 3.200000047683716,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 57,
+      "length": 12,
+      "start": 3.5399999618530273,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 4.159999847412109,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 4.579999923706055,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 77,
+      "length": 7,
+      "start": 5.079999923706055,
+      "end": 5.5
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 5.5,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 89,
+      "length": 5,
+      "start": 5.78000020980835,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 95,
+      "length": 4,
+      "start": 6.139999866485596,
+      "end": 6.440000057220459
+    }
+  ]
+}

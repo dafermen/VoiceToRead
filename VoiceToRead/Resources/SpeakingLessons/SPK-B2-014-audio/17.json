@@ -1,0 +1,90 @@
+{
+  "text": "He replied, \"But doesn’t that make it take forever? I thought speed was important.\"",
+  "duration": 6.119999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.30000001192092896,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.0399999618530273,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 1.899999976158142,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.140000104904175,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 2.359999895095825,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 2.5399999618530273,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 2.759999990463257,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 52,
+      "length": 1,
+      "start": 3.799999952316284,
+      "end": 4.0
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 4.0,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.199999809265137,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.760000228881836,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 72,
+      "length": 9,
+      "start": 5.179999828338623,
+      "end": 6.019999980926514
+    }
+  ]
+}

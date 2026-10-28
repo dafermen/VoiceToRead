@@ -1,0 +1,132 @@
+{
+  "text": "Sarah wondered whether we should bring outdoor games or simply relax on the grass, as she wasn't sure what everyone preferred.",
+  "duration": 9.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 8,
+      "start": 0.5600000023841858,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.0800000429153442,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.5399999618530273,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 1.8200000524520874,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 2.0399999618530273,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 39,
+      "length": 7,
+      "start": 2.319999933242798,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 2.799999952316284,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 3.299999952316284,
+      "end": 4.0
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 4.0,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 63,
+      "length": 5,
+      "start": 4.420000076293945,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.980000019073486,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.260000228881836,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 5.420000076293945,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.920000076293945,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.440000057220459,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 90,
+      "length": 6,
+      "start": 6.659999847412109,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 97,
+      "length": 4,
+      "start": 6.980000019073486,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 102,
+      "length": 4,
+      "start": 7.300000190734863,
+      "end": 7.5
+    },
+    {
+      "location": 107,
+      "length": 8,
+      "start": 7.5,
+      "end": 7.940000057220459
+    },
+    {
+      "location": 116,
+      "length": 9,
+      "start": 7.940000057220459,
+      "end": 8.380000114440918
+    }
+  ]
+}

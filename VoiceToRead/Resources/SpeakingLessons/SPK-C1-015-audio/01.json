@@ -1,0 +1,132 @@
+{
+  "text": "After noticing several issues in our neighborhood, I decided to propose a volunteering day to address what we could collectively improve.",
+  "duration": 9.6899995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 8,
+      "start": 0.46000000834465027,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.0199999809265137,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 1.6399999856948853,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.0999999046325684,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.299999952316284,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 37,
+      "length": 12,
+      "start": 2.4800000190734863,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 51,
+      "length": 1,
+      "start": 3.5999999046325684,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 3.759999990463257,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 4.139999866485596,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 4.880000114440918,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 4.880000114440918,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 74,
+      "length": 12,
+      "start": 5.199999809265137,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 5.739999771118164,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 6.239999771118164,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 6.679999828338623,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 102,
+      "length": 4,
+      "start": 7.079999923706055,
+      "end": 7.320000171661377
+    },
+    {
+      "location": 107,
+      "length": 2,
+      "start": 7.320000171661377,
+      "end": 7.519999980926514
+    },
+    {
+      "location": 110,
+      "length": 5,
+      "start": 7.519999980926514,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 116,
+      "length": 12,
+      "start": 7.71999979019165,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 129,
+      "length": 7,
+      "start": 8.319999694824219,
+      "end": 9.0600004196167
+    }
+  ]
+}

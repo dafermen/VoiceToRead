@@ -1,0 +1,120 @@
+{
+  "text": "To avoid repeating past mistakes, I called an initial meeting, hoping to listen more before proposing a set plan.",
+  "duration": 9.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 3,
+      "length": 5,
+      "start": 0.2800000011920929,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 9,
+      "length": 9,
+      "start": 0.699999988079071,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.2200000286102295,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 24,
+      "length": 8,
+      "start": 1.8200000524520874,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 3.0,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 3.2200000286102295,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.440000057220459,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.6600000858306885,
+      "end": 4.0
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 4.0,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 5.099999904632568,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 5.119999885559082,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 5.539999961853027,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.71999979019165,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 85,
+      "length": 6,
+      "start": 6.199999809265137,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 92,
+      "length": 9,
+      "start": 6.739999771118164,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 102,
+      "length": 1,
+      "start": 7.260000228881836,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 7.679999828338623,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 108,
+      "length": 4,
+      "start": 7.960000038146973,
+      "end": 8.260000228881836
+    }
+  ]
+}

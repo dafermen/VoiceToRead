@@ -1,0 +1,144 @@
+{
+  "text": "Last Friday evening, a friend and I decided to treat ourselves to dinner at a popular new restaurant downtown after hearing mixed reviews.",
+  "duration": 10.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.6399999856948853,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 1.2200000286102295,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 21,
+      "length": 1,
+      "start": 2.2799999713897705,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 2.640000104904175,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.640000104904175,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 3.0799999237060547,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 3.4600000381469727,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.819999933242798,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 4.199999809265137,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 4.420000076293945,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.980000019073486,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 5.360000133514404,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.559999942779541,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 76,
+      "length": 1,
+      "start": 5.880000114440918,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 6.099999904632568,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.519999980926514,
+      "end": 7.0
+    },
+    {
+      "location": 90,
+      "length": 10,
+      "start": 7.0,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 101,
+      "length": 8,
+      "start": 7.260000228881836,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 110,
+      "length": 5,
+      "start": 7.960000038146973,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 116,
+      "length": 7,
+      "start": 8.739999771118164,
+      "end": 9.119999885559082
+    },
+    {
+      "location": 124,
+      "length": 5,
+      "start": 9.119999885559082,
+      "end": 9.600000381469727
+    },
+    {
+      "location": 130,
+      "length": 7,
+      "start": 9.600000381469727,
+      "end": 9.880000114440918
+    }
+  ]
+}

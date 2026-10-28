@@ -1,0 +1,102 @@
+{
+  "text": "He pointed to a convenience store right next to the exit, which sells umbrellas and snacks.",
+  "duration": 6.789999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.36000001430511475,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 0.7400000095367432,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.0199999809265137,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 16,
+      "length": 11,
+      "start": 1.2200000286102295,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 1.7799999713897705,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.1600000858306885,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.5199999809265137,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 2.799999952316284,
+      "end": 3.0
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.0,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 3.2200000286102295,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 3.5999999046325684,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 4.21999979019165,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 4.559999942779541,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 80,
+      "length": 3,
+      "start": 5.300000190734863,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 84,
+      "length": 6,
+      "start": 5.880000114440918,
+      "end": 6.260000228881836
+    }
+  ]
+}

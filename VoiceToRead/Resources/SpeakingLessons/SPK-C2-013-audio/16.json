@@ -1,0 +1,144 @@
+{
+  "text": "I mentioned that someone might want to bring something, so we should let guests know it isn’t necessary but welcome if they'd like.",
+  "duration": 9.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.6600000262260437,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.7200000286102295,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.0199999809265137,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.359999895095825,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.619999885559082,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.9600000381469727,
+      "end": 3.0
+    },
+    {
+      "location": 45,
+      "length": 9,
+      "start": 3.0,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 4.119999885559082,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.239999771118164,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.440000057220459,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.599999904632568,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 4.800000190734863,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.159999847412109,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 85,
+      "length": 2,
+      "start": 5.539999961853027,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 88,
+      "length": 5,
+      "start": 6.059999942779541,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 94,
+      "length": 9,
+      "start": 6.340000152587891,
+      "end": 7.0
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 7.0,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 108,
+      "length": 7,
+      "start": 7.599999904632568,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 116,
+      "length": 2,
+      "start": 8.0600004196167,
+      "end": 8.300000190734863
+    },
+    {
+      "location": 119,
+      "length": 6,
+      "start": 8.300000190734863,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 126,
+      "length": 4,
+      "start": 8.640000343322754,
+      "end": 8.859999656677246
+    }
+  ]
+}

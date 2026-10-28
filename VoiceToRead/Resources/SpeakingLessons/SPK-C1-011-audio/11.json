@@ -1,0 +1,144 @@
+{
+  "text": "While discussing drinks, I mentioned I had never tried their homemade lemonade, so I asked whether it was very sweet or more tart.",
+  "duration": 9.979999542236328,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 10,
+      "start": 0.46000000834465027,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.059999942779541,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 25,
+      "length": 1,
+      "start": 2.1600000858306885,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 27,
+      "length": 9,
+      "start": 2.4800000190734863,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 2.799999952316284,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.119999885559082,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.3399999141693115,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.640000104904175,
+      "end": 4.0
+    },
+    {
+      "location": 55,
+      "length": 5,
+      "start": 4.0,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 61,
+      "length": 8,
+      "start": 4.260000228881836,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 70,
+      "length": 8,
+      "start": 4.639999866485596,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 5.800000190734863,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 83,
+      "length": 1,
+      "start": 5.900000095367432,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 6.119999885559082,
+      "end": 6.579999923706055
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 6.579999923706055,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 7.179999828338623,
+      "end": 7.360000133514404
+    },
+    {
+      "location": 102,
+      "length": 3,
+      "start": 7.360000133514404,
+      "end": 7.579999923706055
+    },
+    {
+      "location": 106,
+      "length": 4,
+      "start": 7.579999923706055,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 111,
+      "length": 5,
+      "start": 8.020000457763672,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 117,
+      "length": 2,
+      "start": 8.319999694824219,
+      "end": 8.960000038146973
+    },
+    {
+      "location": 120,
+      "length": 4,
+      "start": 8.960000038146973,
+      "end": 9.539999961853027
+    },
+    {
+      "location": 125,
+      "length": 4,
+      "start": 9.539999961853027,
+      "end": 9.539999961853027
+    }
+  ]
+}

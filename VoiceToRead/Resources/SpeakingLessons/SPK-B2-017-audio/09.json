@@ -1,0 +1,126 @@
+{
+  "text": "The advisor replied, \"You might be interested to know that each student is paired with a mentor throughout the program.\"",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.3400000035762787,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 0.7599999904632568,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.340000033378601,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.180000066757202,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 32,
+      "length": 2,
+      "start": 2.4600000381469727,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 35,
+      "length": 10,
+      "start": 2.7799999713897705,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.0799999237060547,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.4600000381469727,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.619999885559082,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 3.859999895095825,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 4.179999828338623,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 4.559999942779541,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 4.920000076293945,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 5.079999923706055,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 87,
+      "length": 1,
+      "start": 5.300000190734863,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 5.800000190734863,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 96,
+      "length": 10,
+      "start": 5.800000190734863,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 107,
+      "length": 3,
+      "start": 6.519999980926514,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 111,
+      "length": 7,
+      "start": 6.760000228881836,
+      "end": 7.119999885559082
+    }
+  ]
+}

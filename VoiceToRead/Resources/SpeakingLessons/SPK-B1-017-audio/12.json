@@ -1,0 +1,102 @@
+{
+  "text": "So, today I called the classroom provider and asked whether I could visit before signing up.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 1.0399999618530273,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 10,
+      "length": 1,
+      "start": 1.3200000524520874,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 12,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.8600000143051147,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 23,
+      "length": 9,
+      "start": 2.0799999237060547,
+      "end": 2.5
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 2.5,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.0199999809265137,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.6600000858306885,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 52,
+      "length": 7,
+      "start": 4.019999980926514,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 60,
+      "length": 1,
+      "start": 4.320000171661377,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.519999980926514,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 4.71999979019165,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 74,
+      "length": 6,
+      "start": 5.019999980926514,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 5.440000057220459,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 89,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.059999942779541
+    }
+  ]
+}

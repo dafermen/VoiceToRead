@@ -1,0 +1,168 @@
+{
+  "text": "Rather than ignoring the weather, Olivia brought up the idea of choosing a café with a large terrace, so no one would be stranded by a downpour.",
+  "duration": 10.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 7,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 12,
+      "length": 8,
+      "start": 0.8399999737739563,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.1200000047683716,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.3399999141693115,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 2.6600000858306885,
+      "end": 3.0
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 3.0,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.1600000858306885,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.3399999141693115,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 4.0
+    },
+    {
+      "location": 64,
+      "length": 8,
+      "start": 4.0,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 73,
+      "length": 1,
+      "start": 4.239999771118164,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 4.519999980926514,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 4.860000133514404,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 85,
+      "length": 1,
+      "start": 5.199999809265137,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 5.460000038146973,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 93,
+      "length": 7,
+      "start": 5.659999847412109,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 6.639999866485596,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 105,
+      "length": 2,
+      "start": 6.840000152587891,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 7.159999847412109,
+      "end": 7.320000171661377
+    },
+    {
+      "location": 112,
+      "length": 5,
+      "start": 7.320000171661377,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 118,
+      "length": 2,
+      "start": 7.480000019073486,
+      "end": 7.800000190734863
+    },
+    {
+      "location": 121,
+      "length": 8,
+      "start": 7.800000190734863,
+      "end": 8.079999923706055
+    },
+    {
+      "location": 130,
+      "length": 2,
+      "start": 8.079999923706055,
+      "end": 8.399999618530273
+    },
+    {
+      "location": 133,
+      "length": 1,
+      "start": 8.399999618530273,
+      "end": 8.680000305175781
+    },
+    {
+      "location": 135,
+      "length": 8,
+      "start": 8.680000305175781,
+      "end": 9.039999961853027
+    }
+  ]
+}

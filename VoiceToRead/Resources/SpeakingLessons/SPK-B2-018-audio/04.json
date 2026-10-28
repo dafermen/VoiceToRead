@@ -1,0 +1,102 @@
+{
+  "text": "However, Zoe prefers to be active whenever we get together, saying she feels restless without moving.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.340000033378601,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 2.059999942779541,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 2.2799999713897705,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.4800000190734863,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.9200000762939453,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.2799999713897705,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.5199999809265137,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 3.7200000286102295,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 60,
+      "length": 6,
+      "start": 4.78000020980835,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 4.940000057220459,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.199999809265137,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 77,
+      "length": 8,
+      "start": 5.519999980926514,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 86,
+      "length": 7,
+      "start": 6.019999980926514,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 94,
+      "length": 6,
+      "start": 6.420000076293945,
+      "end": 6.800000190734863
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "text": "After glancing at the city’s clock tower, I reasoned that, by taking the tram, I would also avoid waiting in unpredictable bus queues.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 8,
+      "start": 0.5600000023841858,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.1799999475479126,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.5199999809265137,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 22,
+      "length": 6,
+      "start": 1.7599999904632568,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.1600000858306885,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 2.4600000381469727,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 42,
+      "length": 1,
+      "start": 3.440000057220459,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 44,
+      "length": 8,
+      "start": 3.700000047683716,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 4.139999866485596,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.400000095367432,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.599999904632568,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.940000057220459,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 73,
+      "length": 4,
+      "start": 5.199999809265137,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 79,
+      "length": 1,
+      "start": 5.920000076293945,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 81,
+      "length": 5,
+      "start": 6.159999847412109,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 6.320000171661377,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 6.840000152587891,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 98,
+      "length": 7,
+      "start": 7.179999828338623,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 106,
+      "length": 2,
+      "start": 7.659999847412109,
+      "end": 8.079999923706055
+    },
+    {
+      "location": 109,
+      "length": 13,
+      "start": 8.079999923706055,
+      "end": 8.720000267028809
+    },
+    {
+      "location": 123,
+      "length": 3,
+      "start": 8.720000267028809,
+      "end": 9.180000305175781
+    },
+    {
+      "location": 127,
+      "length": 6,
+      "start": 9.180000305175781,
+      "end": 9.600000381469727
+    }
+  ]
+}

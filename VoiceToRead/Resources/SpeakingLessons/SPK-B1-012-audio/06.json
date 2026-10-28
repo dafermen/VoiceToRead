@@ -1,0 +1,108 @@
+{
+  "text": "She replied, 'Yes, you'll see a big yellow sign that says \"Bakery\" and you can't miss it.'",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.7599999904632568,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.899999976158142,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 19,
+      "length": 6,
+      "start": 2.619999885559082,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.819999933242798,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 30,
+      "length": 1,
+      "start": 2.9800000190734863,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 3.559999942779541,
+      "end": 4.0
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.340000152587891,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 4.639999866485596,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 59,
+      "length": 6,
+      "start": 4.980000019073486,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.699999809265137,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 6.420000076293945,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 6.599999904632568,
+      "end": 7.059999942779541
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 7.059999942779541,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 7.099999904632568,
+      "end": 7.380000114440918
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "text": "Looking back, I realized what mattered wasn’t the location or perfect weather, but the way we managed to adapt and respect one another’s quirks.",
+  "duration": 10.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.47999998927116394,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.3799999952316284,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.5800000429153442,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.380000114440918,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 3.0
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.0,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 50,
+      "length": 8,
+      "start": 3.200000047683716,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 3.7799999713897705,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 4.159999847412109,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 70,
+      "length": 7,
+      "start": 4.619999885559082,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.480000019073486,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 83,
+      "length": 3,
+      "start": 5.619999885559082,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 5.78000020980835,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 5.960000038146973,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 6.159999847412109,
+      "end": 6.5
+    },
+    {
+      "location": 102,
+      "length": 2,
+      "start": 6.5,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 7.260000228881836,
+      "end": 7.260000228881836
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 7.260000228881836,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 115,
+      "length": 7,
+      "start": 7.679999828338623,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 123,
+      "length": 3,
+      "start": 8.15999984741211,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 127,
+      "length": 9,
+      "start": 8.420000076293945,
+      "end": 8.880000114440918
+    },
+    {
+      "location": 137,
+      "length": 6,
+      "start": 8.880000114440918,
+      "end": 9.279999732971191
+    }
+  ]
+}

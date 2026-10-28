@@ -1,0 +1,114 @@
+{
+  "text": "The person next to me, Daniel, noticed my frustration and said, \"It gets easier after practicing a bit.\"",
+  "duration": 8.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.30000001192092896,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.7799999713897705,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.1399999856948853,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.3799999952316284,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 1.899999976158142,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 3.180000066757202,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.180000066757202,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 42,
+      "length": 11,
+      "start": 3.4800000190734863,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 4.059999942779541,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 4.639999866485596,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 65,
+      "length": 2,
+      "start": 4.900000095367432,
+      "end": 5.5
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.5,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 5.800000190734863,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 80,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 86,
+      "length": 10,
+      "start": 6.659999847412109,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 97,
+      "length": 1,
+      "start": 7.179999828338623,
+      "end": 7.460000038146973
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 7.460000038146973,
+      "end": 7.659999847412109
+    }
+  ]
+}

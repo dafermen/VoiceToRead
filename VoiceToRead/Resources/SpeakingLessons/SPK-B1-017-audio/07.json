@@ -1,0 +1,102 @@
+{
+  "text": "The first school replied that teachers are always available in person before or after each class.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.3400000035762787,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.8199999928474426,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.4600000381469727,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.180000066757202,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.5799999237060547,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 3.200000047683716,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 50,
+      "length": 9,
+      "start": 3.7200000286102295,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.119999885559082,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.519999980926514,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 4.960000038146973,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 5.840000152587891,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 80,
+      "length": 5,
+      "start": 6.199999809265137,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.519999980926514,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 91,
+      "length": 5,
+      "start": 6.960000038146973,
+      "end": 7.340000152587891
+    }
+  ]
+}

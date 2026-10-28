@@ -1,0 +1,168 @@
+{
+  "text": "I said, \"I realize this probably put you in an uncomfortable spot, and I’m sorry to have disrupted your workflow—especially since it could have been avoided.\"",
+  "duration": 11.279999732971191,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.3400000035762787,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 1.2200000286102295,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 1.440000057220459,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.940000057220459,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 24,
+      "length": 8,
+      "start": 2.2799999713897705,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.759999990463257,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 3.0799999237060547,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 41,
+      "length": 2,
+      "start": 3.259999990463257,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.4800000190734863,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 47,
+      "length": 13,
+      "start": 3.740000009536743,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.099999904632568,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.21999979019165,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.260000228881836,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 75,
+      "length": 5,
+      "start": 5.559999942779541,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 81,
+      "length": 2,
+      "start": 5.820000171661377,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.059999942779541,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 89,
+      "length": 9,
+      "start": 6.420000076293945,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 99,
+      "length": 4,
+      "start": 6.699999809265137,
+      "end": 7.079999923706055
+    },
+    {
+      "location": 104,
+      "length": 8,
+      "start": 7.079999923706055,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 113,
+      "length": 10,
+      "start": 7.079999923706055,
+      "end": 8.739999771118164
+    },
+    {
+      "location": 124,
+      "length": 5,
+      "start": 8.739999771118164,
+      "end": 9.119999885559082
+    },
+    {
+      "location": 130,
+      "length": 2,
+      "start": 9.119999885559082,
+      "end": 9.260000228881836
+    },
+    {
+      "location": 133,
+      "length": 5,
+      "start": 9.260000228881836,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 139,
+      "length": 4,
+      "start": 9.4399995803833,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 144,
+      "length": 4,
+      "start": 9.5600004196167,
+      "end": 9.779999732971191
+    },
+    {
+      "location": 149,
+      "length": 7,
+      "start": 9.779999732971191,
+      "end": 10.300000190734863
+    }
+  ]
+}

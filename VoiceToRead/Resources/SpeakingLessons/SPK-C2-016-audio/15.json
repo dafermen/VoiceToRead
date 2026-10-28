@@ -1,0 +1,156 @@
+{
+  "text": "\"Carla, I want you to know this isn’t about formality—if you notice anything that could prevent issues in future, I’m open to your suggestions.\"",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 1,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 8,
+      "length": 1,
+      "start": 0.8199999928474426,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.3200000524520874,
+      "end": 1.5
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.5,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.8600000143051147,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.2799999713897705,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.5799999237060547,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 44,
+      "length": 9,
+      "start": 2.859999895095825,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 2.859999895095825,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.119999885559082,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 61,
+      "length": 6,
+      "start": 4.340000152587891,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 68,
+      "length": 8,
+      "start": 4.619999885559082,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.139999866485596,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 5.340000152587891,
+      "end": 5.5
+    },
+    {
+      "location": 88,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 5.800000190734863,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 103,
+      "length": 2,
+      "start": 6.179999828338623,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 106,
+      "length": 6,
+      "start": 6.380000114440918,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 114,
+      "length": 3,
+      "start": 7.239999771118164,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 118,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.760000228881836
+    },
+    {
+      "location": 123,
+      "length": 2,
+      "start": 7.760000228881836,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 126,
+      "length": 4,
+      "start": 7.960000038146973,
+      "end": 8.220000267028809
+    },
+    {
+      "location": 131,
+      "length": 11,
+      "start": 8.220000267028809,
+      "end": 8.979999542236328
+    }
+  ]
+}

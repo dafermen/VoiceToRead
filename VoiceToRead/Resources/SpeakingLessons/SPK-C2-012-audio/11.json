@@ -1,0 +1,156 @@
+{
+  "text": "Not wanting to assume too much, I asked if she would recommend waiting for the bus or continuing on foot given the time of day.",
+  "duration": 8.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.46000000834465027,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 0.8799999952316284,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 15,
+      "length": 6,
+      "start": 1.5800000429153442,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.600000023841858,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.9600000381469727,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 32,
+      "length": 1,
+      "start": 2.880000114440918,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 3.0199999809265137,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 3.3399999141693115,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.559999942779541,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.740000009536743,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 3.940000057220459,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 4.360000133514404,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 4.679999828338623,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 4.960000038146973,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 79,
+      "length": 3,
+      "start": 5.360000133514404,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.420000076293945,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 86,
+      "length": 10,
+      "start": 6.059999942779541,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 97,
+      "length": 2,
+      "start": 6.599999904632568,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 7.159999847412109,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 105,
+      "length": 5,
+      "start": 7.28000020980835,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 7.820000171661377,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 115,
+      "length": 4,
+      "start": 8.020000457763672,
+      "end": 8.239999771118164
+    },
+    {
+      "location": 120,
+      "length": 2,
+      "start": 8.239999771118164,
+      "end": 8.5
+    },
+    {
+      "location": 123,
+      "length": 3,
+      "start": 8.5,
+      "end": 8.600000381469727
+    }
+  ]
+}

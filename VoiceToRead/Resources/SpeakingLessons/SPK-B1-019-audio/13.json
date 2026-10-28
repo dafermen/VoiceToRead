@@ -1,0 +1,120 @@
+{
+  "text": "We talked honestly about what could be finished before Friday, rather than promising extra details we might not deliver.",
+  "duration": 7.340000152587891,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.30000001192092896,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 10,
+      "length": 8,
+      "start": 0.6000000238418579,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.1399999856948853,
+      "end": 1.5
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 1.7799999713897705,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 1.899999976158142,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 2.1600000858306885,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 48,
+      "length": 6,
+      "start": 2.4600000381469727,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 55,
+      "length": 6,
+      "start": 2.880000114440918,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.0,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.039999961853027,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 75,
+      "length": 9,
+      "start": 4.78000020980835,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 4.78000020980835,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 91,
+      "length": 7,
+      "start": 5.260000228881836,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 5.699999809265137,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 102,
+      "length": 5,
+      "start": 5.960000038146973,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 108,
+      "length": 3,
+      "start": 6.179999828338623,
+      "end": 6.460000038146973
+    },
+    {
+      "location": 112,
+      "length": 7,
+      "start": 6.460000038146973,
+      "end": 6.679999828338623
+    }
+  ]
+}

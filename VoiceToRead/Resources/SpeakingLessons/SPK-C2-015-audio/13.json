@@ -1,0 +1,144 @@
+{
+  "text": "She nodded and replied, \"That sounds doable—maybe they could hand out snacks or help greet volunteers,\" which seemed like a reasonable compromise.",
+  "duration": 10.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.47999998927116394,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 0.9399999976158142,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 7,
+      "start": 1.2400000095367432,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.200000047683716,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 2.5799999237060547,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 37,
+      "length": 6,
+      "start": 2.940000057220459,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 2.940000057220459,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 55,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.800000190734863,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.980000019073486,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 70,
+      "length": 6,
+      "start": 5.739999771118164,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 77,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 6.079999923706055,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.639999866485596
+    },
+    {
+      "location": 91,
+      "length": 10,
+      "start": 6.639999866485596,
+      "end": 7.71999979019165
+    },
+    {
+      "location": 104,
+      "length": 5,
+      "start": 7.71999979019165,
+      "end": 8.15999984741211
+    },
+    {
+      "location": 110,
+      "length": 6,
+      "start": 8.15999984741211,
+      "end": 8.4399995803833
+    },
+    {
+      "location": 117,
+      "length": 4,
+      "start": 8.4399995803833,
+      "end": 8.65999984741211
+    },
+    {
+      "location": 122,
+      "length": 1,
+      "start": 8.65999984741211,
+      "end": 8.9399995803833
+    },
+    {
+      "location": 124,
+      "length": 10,
+      "start": 8.9399995803833,
+      "end": 9.300000190734863
+    },
+    {
+      "location": 135,
+      "length": 10,
+      "start": 9.300000190734863,
+      "end": 9.779999732971191
+    }
+  ]
+}

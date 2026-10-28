@@ -1,0 +1,156 @@
+{
+  "text": "I conceded she was right; I could have sent a late message or asked for a quick review from anyone available, even outside regular hours.",
+  "duration": 9.399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.6399999856948853,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 1.0199999809265137,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.2599999904632568,
+      "end": 1.5
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.5,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.4600000381469727,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 2.5799999237060547,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.7200000286102295,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 2.9800000190734863,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 3.119999885559082,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.319999933242798,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 3.559999942779541,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 3.9800000190734863,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.28000020980835,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.579999923706055,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 4.760000228881836,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 4.960000038146973,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 80,
+      "length": 6,
+      "start": 5.179999828338623,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 87,
+      "length": 4,
+      "start": 5.480000019073486,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 92,
+      "length": 6,
+      "start": 5.800000190734863,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 99,
+      "length": 9,
+      "start": 6.260000228881836,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 110,
+      "length": 4,
+      "start": 7.320000171661377,
+      "end": 7.619999885559082
+    },
+    {
+      "location": 115,
+      "length": 7,
+      "start": 7.619999885559082,
+      "end": 8.079999923706055
+    },
+    {
+      "location": 123,
+      "length": 7,
+      "start": 8.079999923706055,
+      "end": 8.5600004196167
+    },
+    {
+      "location": 131,
+      "length": 5,
+      "start": 8.5600004196167,
+      "end": 9.020000457763672
+    }
+  ]
+}

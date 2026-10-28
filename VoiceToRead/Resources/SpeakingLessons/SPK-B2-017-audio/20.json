@@ -1,0 +1,120 @@
+{
+  "text": "I am glad I discussed my options, because thinking it through helped me choose what truly fits my needs.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 2,
+      "length": 2,
+      "start": 0.3199999928474426,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5400000214576721,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 10,
+      "length": 1,
+      "start": 1.0199999809265137,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 12,
+      "length": 9,
+      "start": 1.3799999952316284,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 1.9800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 34,
+      "length": 7,
+      "start": 3.0,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 42,
+      "length": 8,
+      "start": 3.2200000286102295,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 51,
+      "length": 2,
+      "start": 3.619999885559082,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 54,
+      "length": 7,
+      "start": 3.940000057220459,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.199999809265137,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.599999904632568,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.139999866485596,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.260000228881836,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 84,
+      "length": 5,
+      "start": 5.559999942779541,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.099999904632568,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 95,
+      "length": 2,
+      "start": 6.340000152587891,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 98,
+      "length": 5,
+      "start": 6.699999809265137,
+      "end": 6.960000038146973
+    }
+  ]
+}

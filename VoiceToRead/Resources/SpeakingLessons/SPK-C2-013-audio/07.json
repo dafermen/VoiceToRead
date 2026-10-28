@@ -1,0 +1,144 @@
+{
+  "text": "I wondered aloud if anyone not invited might feel overlooked, but perhaps, I said, everyone would appreciate a low-key evening for once.",
+  "duration": 10.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.3799999952316284,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 0.6600000262260437,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.2000000476837158,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 1.600000023841858,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.0799999237060547,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.4600000381469727,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.9200000762939453,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 50,
+      "length": 10,
+      "start": 3.9200000762939453,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 5.179999828338623,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 5.28000020980835,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 75,
+      "length": 1,
+      "start": 5.800000190734863,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 6.039999961853027,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 83,
+      "length": 8,
+      "start": 6.960000038146973,
+      "end": 7.300000190734863
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 7.300000190734863,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 98,
+      "length": 10,
+      "start": 7.599999904632568,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 109,
+      "length": 1,
+      "start": 8.199999809265137,
+      "end": 8.600000381469727
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 8.600000381469727,
+      "end": 8.920000076293945
+    },
+    {
+      "location": 115,
+      "length": 3,
+      "start": 8.920000076293945,
+      "end": 9.020000457763672
+    },
+    {
+      "location": 119,
+      "length": 7,
+      "start": 9.020000457763672,
+      "end": 9.359999656677246
+    },
+    {
+      "location": 127,
+      "length": 3,
+      "start": 9.359999656677246,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 131,
+      "length": 4,
+      "start": 9.720000267028809,
+      "end": 10.0
+    }
+  ]
+}

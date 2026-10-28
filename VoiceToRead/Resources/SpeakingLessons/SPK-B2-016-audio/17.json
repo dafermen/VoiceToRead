@@ -1,0 +1,102 @@
+{
+  "text": "She felt heard, and after talking, we found a fair exchange without upsetting anyone else’s arrangements.",
+  "duration": 8.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.6800000071525574,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 1.0800000429153442,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 2.3399999141693115,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 20,
+      "length": 5,
+      "start": 2.4000000953674316,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 2.740000009536743,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 3.859999895095825,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 4.059999942779541,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 44,
+      "length": 1,
+      "start": 4.239999771118164,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 4.539999961853027,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 4.739999771118164,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 60,
+      "length": 7,
+      "start": 5.340000152587891,
+      "end": 5.820000171661377
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 5.820000171661377,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 78,
+      "length": 6,
+      "start": 6.300000190734863,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 85,
+      "length": 6,
+      "start": 6.800000190734863,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 92,
+      "length": 12,
+      "start": 7.900000095367432,
+      "end": 7.900000095367432
+    }
+  ]
+}

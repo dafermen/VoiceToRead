@@ -1,0 +1,144 @@
+{
+  "text": "Dan said he admired my determination but wondered whether I was expecting too much from myself considering I’d barely had time to relax.",
+  "duration": 11.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.6200000047683716,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.159999966621399,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 1.559999942779541,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 23,
+      "length": 13,
+      "start": 2.6600000858306885,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 37,
+      "length": 3,
+      "start": 3.2799999713897705,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 41,
+      "length": 8,
+      "start": 4.159999847412109,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 4.659999847412109,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 58,
+      "length": 1,
+      "start": 5.059999942779541,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 5.340000152587891,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 64,
+      "length": 9,
+      "start": 5.539999961853027,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 6.039999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 6.539999961853027,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.760000228881836,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 88,
+      "length": 6,
+      "start": 7.019999980926514,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 95,
+      "length": 11,
+      "start": 7.699999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 107,
+      "length": 3,
+      "start": 8.699999809265137,
+      "end": 9.699999809265137
+    },
+    {
+      "location": 111,
+      "length": 6,
+      "start": 9.699999809265137,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 118,
+      "length": 3,
+      "start": 9.720000267028809,
+      "end": 10.020000457763672
+    },
+    {
+      "location": 122,
+      "length": 4,
+      "start": 10.020000457763672,
+      "end": 10.359999656677246
+    },
+    {
+      "location": 127,
+      "length": 2,
+      "start": 10.359999656677246,
+      "end": 11.15999984741211
+    },
+    {
+      "location": 130,
+      "length": 5,
+      "start": 11.15999984741211,
+      "end": 11.15999984741211
+    }
+  ]
+}

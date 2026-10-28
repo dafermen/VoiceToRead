@@ -1,0 +1,162 @@
+{
+  "text": "When I entered the meeting room, the missing reports were obvious, and my colleague Jacqui asked directly whether I had sent the document checklist in advance.",
+  "duration": 11.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.5799999833106995,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 7,
+      "length": 7,
+      "start": 0.9399999976158142,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.2599999904632568,
+      "end": 1.5
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 1.5,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 1.8200000524520874,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.5399999618530273,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 37,
+      "length": 7,
+      "start": 2.740000009536743,
+      "end": 3.0
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.0,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 3.4600000381469727,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 3.819999933242798,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.239999771118164,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 5.28000020980835,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 74,
+      "length": 9,
+      "start": 5.679999828338623,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 84,
+      "length": 6,
+      "start": 5.900000095367432,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 91,
+      "length": 5,
+      "start": 6.440000057220459,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 97,
+      "length": 8,
+      "start": 7.019999980926514,
+      "end": 7.78000020980835
+    },
+    {
+      "location": 106,
+      "length": 7,
+      "start": 7.78000020980835,
+      "end": 8.579999923706055
+    },
+    {
+      "location": 114,
+      "length": 1,
+      "start": 8.579999923706055,
+      "end": 8.819999694824219
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 8.819999694824219,
+      "end": 9.119999885559082
+    },
+    {
+      "location": 120,
+      "length": 4,
+      "start": 9.119999885559082,
+      "end": 9.319999694824219
+    },
+    {
+      "location": 125,
+      "length": 3,
+      "start": 9.319999694824219,
+      "end": 9.699999809265137
+    },
+    {
+      "location": 129,
+      "length": 8,
+      "start": 9.699999809265137,
+      "end": 10.0
+    },
+    {
+      "location": 138,
+      "length": 9,
+      "start": 10.0,
+      "end": 10.520000457763672
+    },
+    {
+      "location": 148,
+      "length": 2,
+      "start": 10.520000457763672,
+      "end": 10.960000038146973
+    },
+    {
+      "location": 151,
+      "length": 7,
+      "start": 10.960000038146973,
+      "end": 11.34000015258789
+    }
+  ]
+}

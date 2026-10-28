@@ -1,0 +1,126 @@
+{
+  "text": "When our food arrived, everything matched our requests exactly, and the trout was, in fact, a highlight of the evening.",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.4399999976158142,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.8399999737739563,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.159999966621399,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 23,
+      "length": 10,
+      "start": 2.5399999618530273,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 34,
+      "length": 7,
+      "start": 3.0199999809265137,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.4200000762939453,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 46,
+      "length": 8,
+      "start": 3.7799999713897705,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 55,
+      "length": 7,
+      "start": 4.199999809265137,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 5.579999923706055,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.639999866485596,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 72,
+      "length": 5,
+      "start": 6.019999980926514,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 6.039999961853027,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 6.599999904632568,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.840000152587891,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 92,
+      "length": 1,
+      "start": 7.579999923706055,
+      "end": 7.980000019073486
+    },
+    {
+      "location": 94,
+      "length": 9,
+      "start": 7.980000019073486,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 104,
+      "length": 2,
+      "start": 8.100000381469727,
+      "end": 8.460000038146973
+    },
+    {
+      "location": 107,
+      "length": 3,
+      "start": 8.460000038146973,
+      "end": 8.699999809265137
+    },
+    {
+      "location": 111,
+      "length": 7,
+      "start": 8.699999809265137,
+      "end": 8.819999694824219
+    }
+  ]
+}

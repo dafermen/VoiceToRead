@@ -1,0 +1,162 @@
+{
+  "text": "My friend then mentioned she had been looking forward to the wild mushroom risotto, although she recalled it used to be served with a side salad.",
+  "duration": 10.149999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.46000000834465027,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.5
+    },
+    {
+      "location": 15,
+      "length": 9,
+      "start": 1.5,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.9199999570846558,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.5799999237060547,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 2.759999990463257,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 2.940000057220459,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.299999952316284,
+      "end": 3.680000066757202
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 3.680000066757202,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 3.9000000953674316,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.159999847412109,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 66,
+      "length": 8,
+      "start": 4.599999904632568,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 75,
+      "length": 7,
+      "start": 5.019999980926514,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 84,
+      "length": 8,
+      "start": 6.199999809265137,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 6.300000190734863,
+      "end": 6.78000020980835
+    },
+    {
+      "location": 97,
+      "length": 8,
+      "start": 6.78000020980835,
+      "end": 7.159999847412109
+    },
+    {
+      "location": 106,
+      "length": 2,
+      "start": 7.159999847412109,
+      "end": 7.599999904632568
+    },
+    {
+      "location": 109,
+      "length": 4,
+      "start": 7.599999904632568,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 114,
+      "length": 2,
+      "start": 7.820000171661377,
+      "end": 8.0
+    },
+    {
+      "location": 117,
+      "length": 2,
+      "start": 8.0,
+      "end": 8.5
+    },
+    {
+      "location": 120,
+      "length": 6,
+      "start": 8.5,
+      "end": 8.5
+    },
+    {
+      "location": 127,
+      "length": 4,
+      "start": 8.5,
+      "end": 8.859999656677246
+    },
+    {
+      "location": 132,
+      "length": 1,
+      "start": 8.859999656677246,
+      "end": 9.239999771118164
+    },
+    {
+      "location": 134,
+      "length": 4,
+      "start": 9.239999771118164,
+      "end": 9.380000114440918
+    },
+    {
+      "location": 139,
+      "length": 5,
+      "start": 9.380000114440918,
+      "end": 9.699999809265137
+    }
+  ]
+}

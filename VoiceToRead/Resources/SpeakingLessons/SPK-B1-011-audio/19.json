@@ -1,0 +1,108 @@
+{
+  "text": "After finishing dinner, we agreed that we will probably come back and maybe try dessert next time.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.5199999809265137,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.0199999809265137,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.180000066757202,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.4800000190734863,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 2.740000009536743,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 3.0399999618530273,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 3.9200000762939453,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.300000190734863,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 4.699999809265137,
+      "end": 5.0
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.0,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 5.260000228881836,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 88,
+      "length": 4,
+      "start": 5.579999923706055,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 5.920000076293945,
+      "end": 6.199999809265137
+    }
+  ]
+}

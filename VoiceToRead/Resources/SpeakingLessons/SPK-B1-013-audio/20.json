@@ -1,0 +1,84 @@
+{
+  "text": "By working together without rushing, we created a simple plan that everyone likes.",
+  "duration": 6.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.41999998688697815,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 11,
+      "length": 8,
+      "start": 0.8399999737739563,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 1.3600000143051147,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 1.7599999904632568,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 37,
+      "length": 2,
+      "start": 2.799999952316284,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 40,
+      "length": 7,
+      "start": 2.9200000762939453,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 48,
+      "length": 1,
+      "start": 3.319999933242798,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.5999999046325684,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 3.940000057220459,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 67,
+      "length": 8,
+      "start": 4.679999828338623,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 76,
+      "length": 5,
+      "start": 5.199999809265137,
+      "end": 5.619999885559082
+    }
+  ]
+}

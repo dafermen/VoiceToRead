@@ -1,0 +1,90 @@
+{
+  "text": "I felt embarrassed, especially because Sam had sent an update before ending the call.",
+  "duration": 6.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.30000001192092896,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 7,
+      "length": 11,
+      "start": 0.5400000214576721,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 20,
+      "length": 10,
+      "start": 1.7400000095367432,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.3399999141693115,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.0799999237060547,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.3399999141693115,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 3.5799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 55,
+      "length": 6,
+      "start": 3.880000114440918,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.099999904632568,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 4.760000228881836,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.139999866485596,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.420000076293945,
+      "end": 5.599999904632568
+    }
+  ]
+}

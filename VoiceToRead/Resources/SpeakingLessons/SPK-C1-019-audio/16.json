@@ -1,0 +1,120 @@
+{
+  "text": "Maya conceded that, rather than delaying everything for perfection, we needed to deliver our best version under the circumstances.",
+  "duration": 9.6899995803833,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 5,
+      "length": 8,
+      "start": 0.5600000023841858,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.2400000095367432,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 2.200000047683716,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.259999990463257,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 32,
+      "length": 8,
+      "start": 2.7200000286102295,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 41,
+      "length": 10,
+      "start": 3.200000047683716,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.6600000858306885,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 56,
+      "length": 10,
+      "start": 3.9200000762939453,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 5.320000171661377,
+      "end": 5.5
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 5.5,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 78,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 6.360000133514404,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.360000133514404,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 93,
+      "length": 4,
+      "start": 6.739999771118164,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 98,
+      "length": 7,
+      "start": 7.139999866485596,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 106,
+      "length": 5,
+      "start": 7.659999847412109,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 8.199999809265137,
+      "end": 8.579999923706055
+    },
+    {
+      "location": 116,
+      "length": 13,
+      "start": 8.579999923706055,
+      "end": 9.100000381469727
+    }
+  ]
+}

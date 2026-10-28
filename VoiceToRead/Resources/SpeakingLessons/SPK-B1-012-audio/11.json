@@ -1,0 +1,120 @@
+{
+  "text": "As I continued on foot, I noticed people who were waiting were getting impatient because no buses had arrived.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 1,
+      "start": 0.41999998688697815,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.8199999928474426,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.2799999713897705,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.940000057220459,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 24,
+      "length": 1,
+      "start": 2.5999999046325684,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 26,
+      "length": 7,
+      "start": 3.0799999237060547,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 3.0799999237060547,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 3.5199999809265137,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.7200000286102295,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 50,
+      "length": 7,
+      "start": 3.9000000953674316,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 4.300000190734863,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 63,
+      "length": 7,
+      "start": 4.699999809265137,
+      "end": 5.0
+    },
+    {
+      "location": 71,
+      "length": 9,
+      "start": 5.0,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 5.559999942779541,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 89,
+      "length": 2,
+      "start": 6.300000190734863,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 92,
+      "length": 5,
+      "start": 6.760000228881836,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 6.980000019073486,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 102,
+      "length": 7,
+      "start": 7.440000057220459,
+      "end": 7.800000190734863
+    }
+  ]
+}

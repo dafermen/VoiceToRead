@@ -1,0 +1,102 @@
+{
+  "text": "We set the date and made sure it wouldn’t conflict with public holidays or work obligations.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.4000000059604645,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.6399999856948853,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.8999999761581421,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.2200000286102295,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.7999999523162842,
+      "end": 2.0
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.3399999141693115,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 2.5199999809265137,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 42,
+      "length": 8,
+      "start": 2.8399999141693115,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.299999952316284,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 3.7200000286102295,
+      "end": 4.0
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 4.0,
+      "end": 4.5
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 4.5,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 80,
+      "length": 11,
+      "start": 5.159999847412109,
+      "end": 5.71999979019165
+    }
+  ]
+}

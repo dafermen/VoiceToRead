@@ -1,0 +1,90 @@
+{
+  "text": "This visit helped me feel more comfortable asking clear questions when I order food.",
+  "duration": 5.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.41999998688697815,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.7200000286102295,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 18,
+      "length": 2,
+      "start": 1.0399999618530273,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.340000033378601,
+      "end": 1.5
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 31,
+      "length": 11,
+      "start": 1.8600000143051147,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 2.4000000953674316,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 2.9200000762939453,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 56,
+      "length": 9,
+      "start": 3.4200000762939453,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 3.940000057220459,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 71,
+      "length": 1,
+      "start": 4.199999809265137,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 4.599999904632568,
+      "end": 5.019999980926514
+    }
+  ]
+}

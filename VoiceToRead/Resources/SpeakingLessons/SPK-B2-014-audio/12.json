@@ -1,0 +1,120 @@
+{
+  "text": "Although part of me wanted to prove I could manage the bowl, I agreed and started with a cup.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.7599999904632568,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.2599999904632568,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.440000057220459,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 1.899999976158142,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 2.2200000286102295,
+      "end": 2.5
+    },
+    {
+      "location": 36,
+      "length": 1,
+      "start": 2.5,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.7200000286102295,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 44,
+      "length": 6,
+      "start": 2.9600000381469727,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.319999933242798,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.5999999046325684,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 4.599999904632568,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.800000190734863,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 5.239999771118164,
+      "end": 5.860000133514404
+    },
+    {
+      "location": 74,
+      "length": 7,
+      "start": 5.860000133514404,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.179999828338623,
+      "end": 6.460000038146973
+    },
+    {
+      "location": 87,
+      "length": 1,
+      "start": 6.460000038146973,
+      "end": 6.880000114440918
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.880000114440918,
+      "end": 6.880000114440918
+    }
+  ]
+}

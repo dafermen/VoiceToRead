@@ -1,0 +1,126 @@
+{
+  "text": "Even though that happened, everyone was able to find something useful to do by checking the list we made earlier.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.47999998927116394,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 17,
+      "length": 8,
+      "start": 1.2599999904632568,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 27,
+      "length": 8,
+      "start": 2.4800000190734863,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.9200000762939453,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 3.2200000286102295,
+      "end": 3.5
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.5,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.079999923706055,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 53,
+      "length": 9,
+      "start": 4.079999923706055,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 63,
+      "length": 6,
+      "start": 4.539999961853027,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 70,
+      "length": 2,
+      "start": 5.039999961853027,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.360000133514404,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.659999847412109,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 79,
+      "length": 8,
+      "start": 6.300000190734863,
+      "end": 6.599999904632568
+    },
+    {
+      "location": 88,
+      "length": 3,
+      "start": 6.599999904632568,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 92,
+      "length": 4,
+      "start": 6.940000057220459,
+      "end": 7.179999828338623
+    },
+    {
+      "location": 97,
+      "length": 2,
+      "start": 7.179999828338623,
+      "end": 7.5
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 7.5,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 105,
+      "length": 7,
+      "start": 7.699999809265137,
+      "end": 8.199999809265137
+    }
+  ]
+}

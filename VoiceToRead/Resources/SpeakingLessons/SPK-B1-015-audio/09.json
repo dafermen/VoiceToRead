@@ -1,0 +1,96 @@
+{
+  "text": "Lisa suggested coordinating a list, so no one would bring the same items by mistake.",
+  "duration": 5.679999828338623,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.5199999809265137,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 12,
+      "start": 1.2400000095367432,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 1.9199999570846558,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.4600000381469727,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.759999990463257,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 2.940000057220459,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.319999933242798,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.4600000381469727,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 3.640000104904175,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 3.819999933242798,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.039999961853027,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 4.400000095367432,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 4.639999866485596,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 76,
+      "length": 7,
+      "start": 4.960000038146973,
+      "end": 5.360000133514404
+    }
+  ]
+}

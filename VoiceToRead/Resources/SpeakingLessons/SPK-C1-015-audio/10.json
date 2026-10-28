@@ -1,0 +1,144 @@
+{
+  "text": "I said, \"Maybe we could start by cleaning the lot in the morning and paint the benches afterward, if there's enough energy left.\"",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 1.159999966621399,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.440000057220459,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.6799999475479126,
+      "end": 1.9199999570846558
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.9199999570846558,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 2.4600000381469727,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 2.680000066757202,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.180000066757202,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.359999895095825,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 3.619999885559082,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 3.7799999713897705,
+      "end": 4.5
+    },
+    {
+      "location": 69,
+      "length": 5,
+      "start": 4.5,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 4.760000228881836,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 79,
+      "length": 7,
+      "start": 5.179999828338623,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 87,
+      "length": 9,
+      "start": 5.300000190734863,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 98,
+      "length": 2,
+      "start": 6.360000133514404,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 101,
+      "length": 7,
+      "start": 6.480000019073486,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 6.739999771118164,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 116,
+      "length": 6,
+      "start": 7.039999961853027,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 123,
+      "length": 4,
+      "start": 7.380000114440918,
+      "end": 7.78000020980835
+    }
+  ]
+}

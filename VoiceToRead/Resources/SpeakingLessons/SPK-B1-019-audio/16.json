@@ -1,0 +1,114 @@
+{
+  "text": "On Thursday, Anna realized she had forgotten to include a new client request, but told us right away.",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 8,
+      "start": 0.41999998688697815,
+      "end": 1.0
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.6799999475479126,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 18,
+      "length": 8,
+      "start": 1.7599999904632568,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.3399999141693115,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.619999885559082,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 35,
+      "length": 9,
+      "start": 2.819999933242798,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.240000009536743,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 48,
+      "length": 7,
+      "start": 3.5399999618530273,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 56,
+      "length": 1,
+      "start": 3.880000114440918,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 58,
+      "length": 3,
+      "start": 4.079999923706055,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 4.360000133514404,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 69,
+      "length": 7,
+      "start": 4.619999885559082,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 5.71999979019165,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 5.900000095367432,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 87,
+      "length": 2,
+      "start": 6.119999885559082,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 90,
+      "length": 5,
+      "start": 6.380000114440918,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.739999771118164,
+      "end": 6.960000038146973
+    }
+  ]
+}

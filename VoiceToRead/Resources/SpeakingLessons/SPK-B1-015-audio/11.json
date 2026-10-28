@@ -1,0 +1,114 @@
+{
+  "text": "We decided that, before doing anything, we would ask the park staff if there were any special rules.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.4000000059604645,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.9399999976158142,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.7799999713897705,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.0399999618530273,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.380000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 3.4600000381469727,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.5799999237060547,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.819999933242798,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 4.159999847412109,
+      "end": 4.5
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 4.5,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 62,
+      "length": 5,
+      "start": 4.619999885559082,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 5.019999980926514,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.679999828338623,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.840000152587891,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 6.019999980926514,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 86,
+      "length": 7,
+      "start": 6.400000095367432,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 6.840000152587891,
+      "end": 7.179999828338623
+    }
+  ]
+}

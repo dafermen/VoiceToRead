@@ -1,0 +1,108 @@
+{
+  "text": "This month, our neighborhood group is planning to volunteer together to help clean up the local park.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.5400000214576721,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.2799999713897705,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 16,
+      "length": 12,
+      "start": 1.7000000476837158,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.140000104904175,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 2.5399999618530273,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 38,
+      "length": 8,
+      "start": 2.859999895095825,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.1600000858306885,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 50,
+      "length": 9,
+      "start": 3.619999885559082,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 4.059999942779541,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.71999979019165,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 5.300000190734863,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 5.599999904632568,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 83,
+      "length": 2,
+      "start": 5.900000095367432,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 86,
+      "length": 3,
+      "start": 6.179999828338623,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 90,
+      "length": 5,
+      "start": 6.400000095367432,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 96,
+      "length": 4,
+      "start": 6.760000228881836,
+      "end": 7.099999904632568
+    }
+  ]
+}

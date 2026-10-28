@@ -1,0 +1,96 @@
+{
+  "text": "Ben suggested that we could meet after work for something simple, like pizza and cake.",
+  "duration": 6.570000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 4,
+      "length": 9,
+      "start": 0.5400000214576721,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.100000023841858,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 19,
+      "length": 2,
+      "start": 1.7200000286102295,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 22,
+      "length": 5,
+      "start": 1.899999976158142,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.180000066757202,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 2.319999933242798,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 2.640000104904175,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.0199999809265137,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 48,
+      "length": 9,
+      "start": 3.5199999809265137,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 58,
+      "length": 6,
+      "start": 3.859999895095825,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.78000020980835,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.019999980926514,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 77,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 6.0
+    },
+    {
+      "location": 81,
+      "length": 4,
+      "start": 6.0,
+      "end": 6.28000020980835
+    }
+  ]
+}

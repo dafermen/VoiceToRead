@@ -1,0 +1,144 @@
+{
+  "text": "Next, I want to share a song with friends by the end of summer, even if I still make mistakes along the way.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 1,
+      "start": 0.8399999737739563,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 1.1799999475479126,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 13,
+      "length": 2,
+      "start": 1.399999976158142,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.7799999713897705,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.7799999713897705,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.059999942779541,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.299999952316284,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 34,
+      "length": 7,
+      "start": 2.5799999237060547,
+      "end": 2.9000000953674316
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 2.9000000953674316,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 3.5
+    },
+    {
+      "location": 53,
+      "length": 2,
+      "start": 3.5,
+      "end": 4.0
+    },
+    {
+      "location": 56,
+      "length": 6,
+      "start": 4.0,
+      "end": 4.0
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.699999809265137,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 4.840000152587891,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 5.039999961853027,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 5.28000020980835,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.539999961853027,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 85,
+      "length": 8,
+      "start": 5.760000228881836,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 6.239999771118164,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 100,
+      "length": 3,
+      "start": 6.619999885559082,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 104,
+      "length": 3,
+      "start": 6.760000228881836,
+      "end": 7.0
+    }
+  ]
+}

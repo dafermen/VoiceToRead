@@ -1,0 +1,150 @@
+{
+  "text": "While we were waiting for our food, my friend remarked that the restaurant’s background music was lively but not overwhelming, which helped us relax.",
+  "duration": 9.859999656677246,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 6,
+      "length": 2,
+      "start": 0.41999998688697815,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.6800000071525574,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 0.9200000166893005,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.1799999475479126,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 1.4600000381469727,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 1.7000000476837158,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.559999942779541,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 2.759999990463257,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 46,
+      "length": 8,
+      "start": 2.9600000381469727,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 64,
+      "length": 12,
+      "start": 4.019999980926514,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 77,
+      "length": 10,
+      "start": 4.559999942779541,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 88,
+      "length": 5,
+      "start": 4.940000057220459,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 5.340000152587891,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 98,
+      "length": 6,
+      "start": 5.619999885559082,
+      "end": 6.099999904632568
+    },
+    {
+      "location": 105,
+      "length": 3,
+      "start": 6.099999904632568,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 109,
+      "length": 3,
+      "start": 6.71999979019165,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 113,
+      "length": 12,
+      "start": 7.039999961853027,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 127,
+      "length": 5,
+      "start": 8.15999984741211,
+      "end": 8.420000076293945
+    },
+    {
+      "location": 133,
+      "length": 6,
+      "start": 8.420000076293945,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 140,
+      "length": 2,
+      "start": 8.640000343322754,
+      "end": 8.880000114440918
+    },
+    {
+      "location": 143,
+      "length": 5,
+      "start": 8.880000114440918,
+      "end": 9.380000114440918
+    }
+  ]
+}

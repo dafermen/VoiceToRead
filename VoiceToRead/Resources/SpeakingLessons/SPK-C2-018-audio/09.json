@@ -1,0 +1,162 @@
+{
+  "text": "Jon, still unsure, replied that he could go either way, as long as the day didn’t revolve around sitting indoors, which he emphasized more than once.",
+  "duration": 10.270000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 1.0399999618530273,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 1.3200000524520874,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 19,
+      "length": 7,
+      "start": 2.5399999618530273,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.759999990463257,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 32,
+      "length": 2,
+      "start": 3.0199999809265137,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 3.180000066757202,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 41,
+      "length": 2,
+      "start": 3.359999895095825,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 44,
+      "length": 6,
+      "start": 3.5799999237060547,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 4.78000020980835,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 4.880000114440918,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 5.059999942779541,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.28000020980835,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.380000114440918,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.659999847412109,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 82,
+      "length": 7,
+      "start": 5.940000057220459,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 90,
+      "length": 6,
+      "start": 6.420000076293945,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 6.739999771118164,
+      "end": 7.0
+    },
+    {
+      "location": 105,
+      "length": 7,
+      "start": 7.0,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 114,
+      "length": 5,
+      "start": 8.119999885559082,
+      "end": 8.300000190734863
+    },
+    {
+      "location": 120,
+      "length": 2,
+      "start": 8.300000190734863,
+      "end": 8.5
+    },
+    {
+      "location": 123,
+      "length": 10,
+      "start": 8.5,
+      "end": 9.0600004196167
+    },
+    {
+      "location": 134,
+      "length": 4,
+      "start": 9.0600004196167,
+      "end": 9.399999618530273
+    },
+    {
+      "location": 139,
+      "length": 4,
+      "start": 9.399999618530273,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 144,
+      "length": 4,
+      "start": 9.5600004196167,
+      "end": 9.920000076293945
+    }
+  ]
+}

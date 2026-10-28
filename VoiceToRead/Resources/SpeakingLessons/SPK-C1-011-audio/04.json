@@ -1,0 +1,138 @@
+{
+  "text": "When the server asked if we had any questions, I said, 'Could you please explain what’s included in the chef’s special tonight?'",
+  "duration": 9.569999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.41999998688697815,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 9,
+      "length": 6,
+      "start": 0.7799999713897705,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.059999942779541,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.8799999952316284,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 28,
+      "length": 3,
+      "start": 2.0199999809265137,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.200000047683716,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 36,
+      "length": 9,
+      "start": 2.5999999046325684,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 3.819999933242798,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 4.059999942779541,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 56,
+      "length": 5,
+      "start": 4.300000190734863,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 5.139999866485596,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 66,
+      "length": 6,
+      "start": 5.320000171661377,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 73,
+      "length": 7,
+      "start": 5.760000228881836,
+      "end": 6.239999771118164
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.239999771118164,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 88,
+      "length": 8,
+      "start": 6.71999979019165,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 97,
+      "length": 2,
+      "start": 7.099999904632568,
+      "end": 7.340000152587891
+    },
+    {
+      "location": 100,
+      "length": 3,
+      "start": 7.340000152587891,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 104,
+      "length": 6,
+      "start": 7.559999942779541,
+      "end": 7.900000095367432
+    },
+    {
+      "location": 111,
+      "length": 7,
+      "start": 7.900000095367432,
+      "end": 8.279999732971191
+    },
+    {
+      "location": 119,
+      "length": 7,
+      "start": 8.279999732971191,
+      "end": 8.699999809265137
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "text": "After hearing that, I felt comfortable ordering both the pizza and ravioli to share.",
+  "duration": 6.860000133514404,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 7,
+      "start": 0.46000000834465027,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 0.8999999761581421,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 20,
+      "length": 1,
+      "start": 1.6200000047683716,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.9600000381469727,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 27,
+      "length": 11,
+      "start": 2.0999999046325684,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 2.799999952316284,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 3.299999952316284,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.799999952316284,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 57,
+      "length": 5,
+      "start": 4.019999980926514,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 4.400000095367432,
+      "end": 5.139999866485596
+    },
+    {
+      "location": 67,
+      "length": 7,
+      "start": 5.139999866485596,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 75,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 78,
+      "length": 5,
+      "start": 6.300000190734863,
+      "end": 6.539999961853027
+    }
+  ]
+}

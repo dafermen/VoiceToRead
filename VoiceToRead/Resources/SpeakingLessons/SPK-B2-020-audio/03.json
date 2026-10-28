@@ -1,0 +1,90 @@
+{
+  "text": "Although I’ve listened to music for years, I never tried playing an instrument myself.",
+  "duration": 7.050000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 0.5799999833106995,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 14,
+      "length": 8,
+      "start": 1.2400000095367432,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.5800000429153442,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.0199999809265137,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 32,
+      "length": 3,
+      "start": 2.299999952316284,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.740000009536743,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 3.859999895095825,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.9800000190734863,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 51,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 4.900000095367432,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 65,
+      "length": 2,
+      "start": 5.28000020980835,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 68,
+      "length": 10,
+      "start": 5.659999847412109,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 79,
+      "length": 6,
+      "start": 5.960000038146973,
+      "end": 6.679999828338623
+    }
+  ]
+}

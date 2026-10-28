@@ -1,0 +1,126 @@
+{
+  "text": "There are evenings when, despite my best intentions, I end up answering emails rather than making progress on my story.",
+  "duration": 9.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.4000000059604645,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 10,
+      "length": 8,
+      "start": 0.7400000095367432,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.2200000286102295,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 2.2200000286102295,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.440000057220459,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 36,
+      "length": 4,
+      "start": 2.940000057220459,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 41,
+      "length": 10,
+      "start": 3.4000000953674316,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 53,
+      "length": 1,
+      "start": 4.579999923706055,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 55,
+      "length": 3,
+      "start": 4.760000228881836,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.960000038146973,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 62,
+      "length": 9,
+      "start": 5.639999866485596,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.639999866485596,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 79,
+      "length": 6,
+      "start": 6.260000228881836,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 86,
+      "length": 4,
+      "start": 6.800000190734863,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 91,
+      "length": 6,
+      "start": 7.119999885559082,
+      "end": 7.360000133514404
+    },
+    {
+      "location": 98,
+      "length": 8,
+      "start": 7.360000133514404,
+      "end": 7.960000038146973
+    },
+    {
+      "location": 107,
+      "length": 2,
+      "start": 7.960000038146973,
+      "end": 8.260000228881836
+    },
+    {
+      "location": 110,
+      "length": 2,
+      "start": 8.260000228881836,
+      "end": 8.5
+    },
+    {
+      "location": 113,
+      "length": 5,
+      "start": 8.5,
+      "end": 8.800000190734863
+    }
+  ]
+}

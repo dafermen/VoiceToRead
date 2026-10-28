@@ -1,0 +1,78 @@
+{
+  "text": "So far, I have finished three practice sketches and received good feedback.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.5199999809265137,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 8,
+      "length": 1,
+      "start": 0.9399999976158142,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.5800000429153442,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.8200000524520874,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.119999885559082,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 30,
+      "length": 8,
+      "start": 2.6600000858306885,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 3.0999999046325684,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.559999942779541,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 52,
+      "length": 8,
+      "start": 4.199999809265137,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.619999885559082,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 66,
+      "length": 8,
+      "start": 5.179999828338623,
+      "end": 5.559999942779541
+    }
+  ]
+}

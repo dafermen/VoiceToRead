@@ -1,0 +1,114 @@
+{
+  "text": "Still, Jamie argued that store-bought appetizers might lack the personal touch that makes a celebration feel special.",
+  "duration": 8.319999694824219,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 1.159999966621399,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.399999976158142,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.940000057220459,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.4600000381469727,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.740000009536743,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 38,
+      "length": 10,
+      "start": 2.9200000762939453,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 3.6600000858306885,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.059999942779541,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 4.320000171661377,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 64,
+      "length": 8,
+      "start": 4.559999942779541,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 73,
+      "length": 5,
+      "start": 5.059999942779541,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.519999980926514,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 84,
+      "length": 5,
+      "start": 6.039999961853027,
+      "end": 6.21999979019165
+    },
+    {
+      "location": 90,
+      "length": 1,
+      "start": 6.21999979019165,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 92,
+      "length": 11,
+      "start": 6.519999980926514,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 104,
+      "length": 4,
+      "start": 6.960000038146973,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 109,
+      "length": 7,
+      "start": 7.480000019073486,
+      "end": 7.900000095367432
+    }
+  ]
+}

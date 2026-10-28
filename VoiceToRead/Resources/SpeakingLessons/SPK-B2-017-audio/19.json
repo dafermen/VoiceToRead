@@ -1,0 +1,84 @@
+{
+  "text": "Tom admitted, \"It makes sense—you know your learning style better than anyone.\"",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.6000000238418579,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.2400000095367432,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.840000033378601,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.200000047683716,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.200000047683716,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 3.319999933242798,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 44,
+      "length": 8,
+      "start": 3.759999990463257,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.139999866485596,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 59,
+      "length": 6,
+      "start": 4.519999980926514,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.900000095367432,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 5.300000190734863,
+      "end": 5.599999904632568
+    }
+  ]
+}

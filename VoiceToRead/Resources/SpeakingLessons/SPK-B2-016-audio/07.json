@@ -1,0 +1,102 @@
+{
+  "text": "I answered that I understood her frustration, since I would also feel unsettled in her place.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.4399999976158142,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.1399999856948853,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 18,
+      "length": 10,
+      "start": 1.559999942779541,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.0799999237060547,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 33,
+      "length": 11,
+      "start": 2.440000057220459,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.680000066757202,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 52,
+      "length": 1,
+      "start": 3.9000000953674316,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 54,
+      "length": 5,
+      "start": 4.079999923706055,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.21999979019165,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 4.78000020980835,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 70,
+      "length": 9,
+      "start": 5.239999771118164,
+      "end": 5.840000152587891
+    },
+    {
+      "location": 80,
+      "length": 2,
+      "start": 5.840000152587891,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 83,
+      "length": 3,
+      "start": 6.079999923706055,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 6.28000020980835,
+      "end": 6.679999828338623
+    }
+  ]
+}

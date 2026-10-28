@@ -1,0 +1,84 @@
+{
+  "text": "By communicating openly and making timely corrections, we kept our week running smoothly.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 3,
+      "length": 13,
+      "start": 0.5199999809265137,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.2999999523162842,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.619999885559082,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.9200000762939453,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 42,
+      "length": 11,
+      "start": 3.4800000190734863,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 55,
+      "length": 2,
+      "start": 4.579999923706055,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 4.71999979019165,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 4.980000019073486,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 5.28000020980835,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 5.559999942779541,
+      "end": 6.0
+    },
+    {
+      "location": 80,
+      "length": 8,
+      "start": 6.0,
+      "end": 6.460000038146973
+    }
+  ]
+}

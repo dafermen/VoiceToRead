@@ -1,0 +1,156 @@
+{
+  "text": "Elaine opened by asking whether we truly understood what the client meant by 'comprehensive', since that word had appeared in several emails without much elaboration.",
+  "duration": 11.369999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 7,
+      "length": 6,
+      "start": 0.6600000262260437,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.4199999570846558,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.7400000095367432,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 2.140000104904175,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 32,
+      "length": 2,
+      "start": 2.4600000381469727,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 2.740000009536743,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 41,
+      "length": 10,
+      "start": 3.119999885559082,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 3.740000009536743,
+      "end": 4.0
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.0,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 61,
+      "length": 6,
+      "start": 4.199999809265137,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 4.480000019073486,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 4.800000190734863,
+      "end": 5.159999847412109
+    },
+    {
+      "location": 78,
+      "length": 13,
+      "start": 5.119999885559082,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 6.539999961853027,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 100,
+      "length": 4,
+      "start": 6.659999847412109,
+      "end": 6.980000019073486
+    },
+    {
+      "location": 105,
+      "length": 4,
+      "start": 6.980000019073486,
+      "end": 7.239999771118164
+    },
+    {
+      "location": 110,
+      "length": 3,
+      "start": 7.239999771118164,
+      "end": 7.5
+    },
+    {
+      "location": 114,
+      "length": 8,
+      "start": 7.5,
+      "end": 7.739999771118164
+    },
+    {
+      "location": 123,
+      "length": 2,
+      "start": 7.739999771118164,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 126,
+      "length": 7,
+      "start": 8.119999885559082,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 134,
+      "length": 6,
+      "start": 8.319999694824219,
+      "end": 8.84000015258789
+    },
+    {
+      "location": 141,
+      "length": 7,
+      "start": 8.84000015258789,
+      "end": 9.4399995803833
+    },
+    {
+      "location": 149,
+      "length": 4,
+      "start": 9.4399995803833,
+      "end": 9.739999771118164
+    },
+    {
+      "location": 154,
+      "length": 11,
+      "start": 9.739999771118164,
+      "end": 10.479999542236328
+    }
+  ]
+}

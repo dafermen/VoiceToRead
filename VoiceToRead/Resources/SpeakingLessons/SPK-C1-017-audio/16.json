@@ -1,0 +1,138 @@
+{
+  "text": "SkillSpring explained that, by joining their monthly plan, I would have coaching credits that could be paused for up to six weeks.",
+  "duration": 8.680000305175781,
+  "words": [
+    {
+      "location": 0,
+      "length": 11,
+      "start": 0.0,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 12,
+      "length": 9,
+      "start": 0.8799999952316284,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.5800000429153442,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.380000114440918,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.5799999237060547,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 2.859999895095825,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.140000104904175,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 59,
+      "length": 1,
+      "start": 4.380000114440918,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 61,
+      "length": 5,
+      "start": 4.539999961853027,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 4.679999828338623,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 72,
+      "length": 8,
+      "start": 4.940000057220459,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 81,
+      "length": 7,
+      "start": 5.340000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 89,
+      "length": 4,
+      "start": 5.71999979019165,
+      "end": 6.0
+    },
+    {
+      "location": 94,
+      "length": 5,
+      "start": 6.0,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 100,
+      "length": 2,
+      "start": 6.139999866485596,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 103,
+      "length": 6,
+      "start": 6.380000114440918,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 110,
+      "length": 3,
+      "start": 6.739999771118164,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 114,
+      "length": 2,
+      "start": 7.039999961853027,
+      "end": 7.139999866485596
+    },
+    {
+      "location": 117,
+      "length": 2,
+      "start": 7.139999866485596,
+      "end": 7.559999942779541
+    },
+    {
+      "location": 120,
+      "length": 3,
+      "start": 7.559999942779541,
+      "end": 7.739999771118164
+    },
+    {
+      "location": 124,
+      "length": 5,
+      "start": 7.739999771118164,
+      "end": 8.079999923706055
+    }
+  ]
+}

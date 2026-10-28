@@ -1,0 +1,144 @@
+{
+  "text": "The advisor said support would be 'responsive but not intrusive,' which, I sensed, implied a hands-off approach unless I specifically reached out.",
+  "duration": 12.520000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.3400000035762787,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.7799999713897705,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 17,
+      "length": 7,
+      "start": 1.3200000524520874,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.200000047683716,
+      "end": 2.5
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.5,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 35,
+      "length": 10,
+      "start": 3.0199999809265137,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 46,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 4.179999828338623,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 54,
+      "length": 9,
+      "start": 4.480000019073486,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 6.019999980926514,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 73,
+      "length": 1,
+      "start": 6.579999923706055,
+      "end": 6.679999828338623
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 6.679999828338623,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 83,
+      "length": 7,
+      "start": 7.659999847412109,
+      "end": 7.659999847412109
+    },
+    {
+      "location": 91,
+      "length": 1,
+      "start": 7.659999847412109,
+      "end": 8.479999542236328
+    },
+    {
+      "location": 93,
+      "length": 5,
+      "start": 8.479999542236328,
+      "end": 8.5600004196167
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 8.5600004196167,
+      "end": 8.779999732971191
+    },
+    {
+      "location": 103,
+      "length": 8,
+      "start": 8.779999732971191,
+      "end": 9.260000228881836
+    },
+    {
+      "location": 112,
+      "length": 6,
+      "start": 9.260000228881836,
+      "end": 9.9399995803833
+    },
+    {
+      "location": 119,
+      "length": 1,
+      "start": 9.9399995803833,
+      "end": 10.300000190734863
+    },
+    {
+      "location": 121,
+      "length": 12,
+      "start": 10.300000190734863,
+      "end": 10.859999656677246
+    },
+    {
+      "location": 134,
+      "length": 7,
+      "start": 10.859999656677246,
+      "end": 11.239999771118164
+    },
+    {
+      "location": 142,
+      "length": 3,
+      "start": 11.239999771118164,
+      "end": 11.579999923706055
+    }
+  ]
+}

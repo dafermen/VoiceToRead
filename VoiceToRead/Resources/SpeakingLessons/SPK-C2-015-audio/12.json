@@ -1,0 +1,138 @@
+{
+  "text": "To avoid dismissing her concern, I reformulated: \"Are you thinking we could assign kids to less safety-critical tasks so everyone’s comfortable?\"",
+  "duration": 11.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 3,
+      "length": 5,
+      "start": 0.8999999761581421,
+      "end": 1.4199999570846558
+    },
+    {
+      "location": 9,
+      "length": 10,
+      "start": 1.4199999570846558,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 2.059999942779541,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 24,
+      "length": 7,
+      "start": 2.259999990463257,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 33,
+      "length": 1,
+      "start": 3.5799999237060547,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 35,
+      "length": 12,
+      "start": 3.7200000286102295,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 5.300000190734863,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 58,
+      "length": 8,
+      "start": 5.699999809265137,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 67,
+      "length": 2,
+      "start": 5.980000019073486,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 6.199999809265137,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 6.440000057220459,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.739999771118164,
+      "end": 7.119999885559082
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 7.119999885559082,
+      "end": 7.440000057220459
+    },
+    {
+      "location": 91,
+      "length": 4,
+      "start": 7.440000057220459,
+      "end": 7.820000171661377
+    },
+    {
+      "location": 96,
+      "length": 6,
+      "start": 7.820000171661377,
+      "end": 8.199999809265137
+    },
+    {
+      "location": 103,
+      "length": 8,
+      "start": 8.199999809265137,
+      "end": 8.640000343322754
+    },
+    {
+      "location": 112,
+      "length": 5,
+      "start": 8.640000343322754,
+      "end": 9.15999984741211
+    },
+    {
+      "location": 118,
+      "length": 2,
+      "start": 9.15999984741211,
+      "end": 9.859999656677246
+    },
+    {
+      "location": 121,
+      "length": 10,
+      "start": 9.859999656677246,
+      "end": 10.479999542236328
+    },
+    {
+      "location": 132,
+      "length": 11,
+      "start": 10.479999542236328,
+      "end": 10.859999656677246
+    }
+  ]
+}

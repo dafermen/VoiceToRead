@@ -1,0 +1,132 @@
+{
+  "text": "I remembered I had tried the chef’s salad at another place, but it didn't have as much flavor as I expected.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 2,
+      "length": 10,
+      "start": 0.5,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 13,
+      "length": 1,
+      "start": 0.9800000190734863,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.3600000143051147,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.600000023841858,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 2.319999933242798,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.859999895095825,
+      "end": 3.0
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 3.0,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.319999933242798,
+      "end": 3.6600000858306885
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 3.6600000858306885,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 4.71999979019165,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 5.119999885559082,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 5.460000038146973,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.699999809265137,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 5.940000057220459,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 82,
+      "length": 4,
+      "start": 6.119999885559082,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 87,
+      "length": 6,
+      "start": 6.380000114440918,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 94,
+      "length": 2,
+      "start": 6.71999979019165,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 97,
+      "length": 1,
+      "start": 7.039999961853027,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 99,
+      "length": 8,
+      "start": 7.380000114440918,
+      "end": 7.679999828338623
+    }
+  ]
+}

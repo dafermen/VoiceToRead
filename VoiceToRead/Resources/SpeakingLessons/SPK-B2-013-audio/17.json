@@ -1,0 +1,114 @@
+{
+  "text": "Looking back, we realized that our last big party had felt overwhelming, so a relaxed evening sounded ideal.",
+  "duration": 7.920000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.1799999475479126,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 17,
+      "length": 8,
+      "start": 1.340000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.840000033378601,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.059999942779541,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 35,
+      "length": 4,
+      "start": 2.240000009536743,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 2.6600000858306885,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 44,
+      "length": 5,
+      "start": 3.0199999809265137,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 3.3399999141693115,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.640000104904175,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 59,
+      "length": 12,
+      "start": 3.9600000381469727,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.260000228881836,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 76,
+      "length": 1,
+      "start": 5.360000133514404,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 5.599999904632568,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 86,
+      "length": 7,
+      "start": 6.019999980926514,
+      "end": 6.480000019073486
+    },
+    {
+      "location": 94,
+      "length": 7,
+      "start": 6.480000019073486,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 102,
+      "length": 5,
+      "start": 7.039999961853027,
+      "end": 7.619999885559082
+    }
+  ]
+}

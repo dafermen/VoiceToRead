@@ -1,0 +1,156 @@
+{
+  "text": "Even though the restaurant was quite busy, we never felt neglected, and it was encouraging to see how readily the staff responded to our needs.",
+  "duration": 11.680000305175781,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.8399999737739563,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 1.2000000476837158,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.5199999809265137,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 16,
+      "length": 10,
+      "start": 1.940000057220459,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.140000104904175,
+      "end": 2.5
+    },
+    {
+      "location": 31,
+      "length": 5,
+      "start": 2.5,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.880000114440918,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.5999999046325684,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.740000009536743,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 4.139999866485596,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 57,
+      "length": 9,
+      "start": 4.460000038146973,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.559999942779541,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 5.579999923706055,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.699999809265137,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 79,
+      "length": 11,
+      "start": 5.980000019073486,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 91,
+      "length": 2,
+      "start": 6.400000095367432,
+      "end": 6.820000171661377
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 6.820000171661377,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 98,
+      "length": 3,
+      "start": 7.019999980926514,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 102,
+      "length": 7,
+      "start": 7.380000114440918,
+      "end": 7.739999771118164
+    },
+    {
+      "location": 110,
+      "length": 3,
+      "start": 7.739999771118164,
+      "end": 8.380000114440918
+    },
+    {
+      "location": 114,
+      "length": 5,
+      "start": 8.380000114440918,
+      "end": 8.380000114440918
+    },
+    {
+      "location": 120,
+      "length": 9,
+      "start": 8.380000114440918,
+      "end": 8.979999542236328
+    },
+    {
+      "location": 130,
+      "length": 2,
+      "start": 8.979999542236328,
+      "end": 9.260000228881836
+    },
+    {
+      "location": 133,
+      "length": 3,
+      "start": 9.260000228881836,
+      "end": 9.539999961853027
+    },
+    {
+      "location": 137,
+      "length": 5,
+      "start": 9.539999961853027,
+      "end": 9.800000190734863
+    }
+  ]
+}

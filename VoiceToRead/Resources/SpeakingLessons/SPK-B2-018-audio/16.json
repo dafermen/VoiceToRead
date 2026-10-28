@@ -1,0 +1,126 @@
+{
+  "text": "Since everyone liked that plan, we agreed to prepare for both options, just by packing light and checking weather updates.",
+  "duration": 9.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 8,
+      "start": 0.46000000834465027,
+      "end": 1.0
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.0,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.3200000524520874,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 26,
+      "length": 4,
+      "start": 1.6399999856948853,
+      "end": 2.0
+    },
+    {
+      "location": 32,
+      "length": 2,
+      "start": 2.5399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 2.9600000381469727,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.5999999046325684,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 3.9200000762939453,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 62,
+      "length": 7,
+      "start": 4.260000228881836,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 5.460000038146973,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 76,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 79,
+      "length": 7,
+      "start": 6.019999980926514,
+      "end": 6.340000152587891
+    },
+    {
+      "location": 87,
+      "length": 5,
+      "start": 6.340000152587891,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 93,
+      "length": 3,
+      "start": 6.840000152587891,
+      "end": 7.380000114440918
+    },
+    {
+      "location": 97,
+      "length": 8,
+      "start": 7.380000114440918,
+      "end": 7.679999828338623
+    },
+    {
+      "location": 106,
+      "length": 7,
+      "start": 7.679999828338623,
+      "end": 8.0600004196167
+    },
+    {
+      "location": 114,
+      "length": 7,
+      "start": 8.0600004196167,
+      "end": 8.479999542236328
+    }
+  ]
+}
