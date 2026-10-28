@@ -1,0 +1,104 @@
+{
+  "generation_mode": "built-in image_gen",
+  "covers": [
+    {
+      "story_id": "57100000-0000-4000-8000-000000000001",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000001.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: A little girl in a simple red hood carrying a basket along a sunny woodland path, a small grandmother's cottage in the distance and a calm curious wolf far to the side.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "909a099c263725760884ac68d701e3c62709b67b286622db4fb9a2a2c9d76841"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000002",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000002.png",
+      "mode": "built-in image_gen",
+      "prompt": "Create an original children's picture-book gouache illustration, landscape 16:9: a fairytale stone tower surrounded by a sunny flower garden, one long golden braid gently draped from its open upper window. Warm light, clear composition, inviting and peaceful. No text or lettering.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "10d2aaaec04395cd003a45b8417c59de3e1296d09b3765a5b7f7e2c4ac40c63b"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000003",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000003.png",
+      "mode": "built-in image_gen",
+      "prompt": "Create an original children's picture-book gouache illustration, landscape 16:9: three cheerful little pigs beside their cozy brick cottage, with straw and wooden cottages farther away on green hills. Warm daylight, friendly rounded characters, clear inviting composition. No text or lettering.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9e7915c4316adb42e76b0d9ffaec436f553f94ba0903b218fcb356ca8abe4a0f"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000004",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000004.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: A small gray duckling beside a peaceful pond, discovering its reflection as a graceful white swan, other friendly ducks nearby among reeds and flowers.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1541c5d8a5f575a54dd97604d48d1c0f7f3a528e973998f8e1f8312898713e60"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000005",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000005.png",
+      "mode": "built-in image_gen",
+      "prompt": "Create an original children's picture-book gouache illustration, horizontal 16:9. A small hand-carved wooden puppet with visible wooden joints and a long wooden nose, wearing only a plain green tunic, no hat, smiles beside a kindly elderly woodcarver in a sunlit workshop. Simple unique character design, soft warm color, clear silhouettes, no text, logos or signature.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1a966de37d6538c39b757030e92f88f46ad3968091dff92897edc0a7950999b1"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000006",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000006.png",
+      "mode": "built-in image_gen",
+      "prompt": "Create an original storybook gouache illustration, landscape 16:9: a cheerful young adult woman with short dark hair wearing a plain forest-green dress, gathering apples with seven friendly miners in simple work clothes outside a woodland cottage. Warm sunlit garden, welcoming faces, clear rounded shapes. No text or lettering, original character designs.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c5c2f9fbf84a9237e446a48f00d1d2d2b92013008c9fb7b30cdc999ff1ee5034"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000007",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000007.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: A young woman wearing an original soft lavender ball gown on a moonlit palace staircase, a delicate glass shoe on a step and a small carriage in the distance.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "b8b9e833f8ef583a44bfb95dd3932282380172348a421906712ccc84588e572f"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000008",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000008.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: A brother and sister holding hands at the edge of a sunny woodland clearing, looking at a whimsical gingerbread cottage decorated with colorful sweets; safe curious atmosphere.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "bdbc74bf4b736fa89a806f8d76492a7e5be7f97d7f89651b07e547a695dd2d76"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000009",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000009.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: A clever smiling tabby cat wearing sturdy brown boots and a small plain hat, standing proudly beside a humble young traveler, with a fairytale castle far behind.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "7915a65bbf9519578f1b99ec787baba1fe1dce9bbc279d676a23610b7f234e20"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000010",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000010.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: A friendly musician in a colorful patchwork coat playing a wooden flute along a bright medieval town street, a line of tiny mice following peacefully; focus on music and cooperation.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5b37f13ef9735244413e3117b0578afc1fd09f743ea4ab03dbf82e96008bd72e"
+    },
+    {
+      "story_id": "57100000-0000-4000-8000-000000000011",
+      "file": "VoiceToRead/Resources/StoryCovers/story-57100000-0000-4000-8000-000000000011.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: illustration-story. Create a standalone landscape 16:9 cover illustration for a traditional children's story in an accessible reading app. Original contemporary picture-book art, soft gouache texture, clear silhouettes, warm gentle daylight, friendly expressive characters, uncluttered scene readable as a small thumbnail, rich but restrained colors, rounded shapes and comfortable margins. No words, letters, title, text, watermark, logos, borders, UI or collage. No frightening violence; no imitation of any film adaptation or existing illustrator. Scene: An original storybook young space traveler wearing a simple teal coat, sitting on a tiny round planet beside a small flower under a clear starry sky, a friendly fox listening nearby; contemplative friendship, unique contemporary design, no replica of known book artwork.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2fe67b3337a4646edc7b8bb0a2495641669a3607b91c940689ff8e58e0db1570"
+    }
+  ]
+}

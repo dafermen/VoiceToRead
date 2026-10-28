@@ -22,6 +22,7 @@ struct StoryLibraryView: View {
                     ForEach(store.stories.sorted { $0.title.localizedStandardCompare($1.title) == .orderedAscending }) { story in
                         NavigationLink { StoryReaderView(store: store, storyID: story.id) } label: {
                             VStack(alignment: .leading, spacing: 6) {
+                                StoryLibraryCover(story: story).frame(maxWidth: 280)
                                 Text(verbatim: story.title).font(.headline)
                                 HStack {
                                     Text(story.sourceLanguage.pickerLabel)
@@ -62,6 +63,28 @@ struct StoryLibraryView: View {
             #endif
             failure = nil
         } catch { failure = error.localizedDescription }
+    }
+}
+
+/// A decorative library cover: the link's title already identifies the story to VoiceOver.
+private struct StoryLibraryCover: View {
+    let story: StoryDocument
+    private var local: UIImage? {
+        guard let name = StoryExampleCatalog.coverName(for: story),
+              let url = Bundle.main.url(forResource: name, withExtension: "png", subdirectory: "StoryCovers") else { return nil }
+        return UIImage(contentsOfFile: url.path)
+    }
+    var body: some View {
+        Group {
+            if let local { Image(uiImage: local).resizable().scaledToFill() }
+            else {
+                Rectangle().fill(Color.secondary.opacity(0.12))
+                    .overlay { Image(systemName: "book.closed").font(.largeTitle).foregroundStyle(.secondary) }
+            }
+        }
+        .frame(maxWidth: .infinity).aspectRatio(16 / 9, contentMode: .fit)
+        .clipped().clipShape(RoundedRectangle(cornerRadius: 12))
+        .accessibilityHidden(true)
     }
 }
 

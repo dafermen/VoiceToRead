@@ -176,6 +176,11 @@ final class StoryStore {
 
 /// Original short retellings; The Little Prince is a brief summary, not the book.
 enum StoryExampleCatalog {
+    // Covers are derived from the example identity; user archives are never rewritten.
+    static func coverName(for story: StoryDocument) -> String? {
+        guard let entry = entries.first(where: { $0.id == story.id }) ?? entries.first(where: { $0.matches(story) }) else { return nil }
+        return "story-" + entry.id.uuidString.lowercased()
+    }
     struct Entry {
         let id: UUID
         let title: String

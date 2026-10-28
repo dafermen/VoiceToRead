@@ -1,8 +1,30 @@
 import XCTest
+import UIKit
+import CryptoKit
 @testable import VoiceToRead
 
 @MainActor
 final class StoryTests: XCTestCase {
+    func testExampleCoversAreBundledAndFollowStableIdentityWithoutEditingStories() throws {
+        var hashes = Set<Data>()
+        for entry in StoryExampleCatalog.entries {
+            let story = try entry.document()
+            let name = try XCTUnwrap(StoryExampleCatalog.coverName(for: story))
+            let url = try XCTUnwrap(Bundle.main.url(forResource: name, withExtension: "png", subdirectory: "StoryCovers"))
+            let data = try Data(contentsOf: url)
+            let image = try XCTUnwrap(UIImage(data: data))
+            XCTAssertEqual(image.size.width / image.size.height, 16.0 / 9.0, accuracy: 0.025)
+            XCTAssertTrue(hashes.insert(Data(SHA256.hash(data: data))).inserted)
+            var renamed = story; renamed.title = "My edited title"
+            XCTAssertEqual(StoryExampleCatalog.coverName(for: renamed), name)
+            var legacy = story; legacy.id = UUID(); legacy.title = entry.aliases.first ?? entry.title
+            XCTAssertEqual(StoryExampleCatalog.coverName(for: legacy), name)
+        }
+        XCTAssertEqual(hashes.count, 11)
+        let custom = try StoryDocument.edited(title: "A different story", text: "My own text.", source: .english, target: .spanish)
+        XCTAssertNil(StoryExampleCatalog.coverName(for: custom))
+    }
+
     func testStoriesUseIndependentStorageAndSeedOnlyOnce() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }

@@ -86,3 +86,25 @@ translations; title/destination-only edits preserve them. Atomic writes and stal
 snapshot guards remain. Tests cover legacy decoding, switching, corrections,
 approvals, reopening, replacement isolation and source invalidation. XCTest was
 not executed on Windows; localization validation is run locally.
+
+## Illustrated story library
+
+The eleven built-in examples now have local landscape PNG covers, generated with
+built-in image_gen and visually inspected. Story cards follow the guided lesson
+library's 16:9, rounded-corner cover style and retain their titles and language
+labels. The reader layout is unchanged, keeping the reading area available.
+Custom stories have a neutral book cover. Images require no network or API key.
+
+The example's stable ID selects its artwork even after a title change. Existing
+archives with older random IDs use the catalog's existing normalized title/alias
+matching. No archive, story text, translation, approval, narration or confirmation
+is rewritten. The decorative image is hidden from VoiceOver; the existing link
+title and language labels continue to identify the destination.
+
+StoryCovers is bundled through a dedicated folder reference in the application
+resource phase. docs/story-cover-prompts.json records exact prompts, repository
+paths, dimensions and hashes. Local validation checked eleven unique 16:9 PNGs,
+identity/filename correspondence, resource registration, localization and diff
+format. XCTest adds native image decoding, uniqueness, renamed/legacy identity
+and custom-story fallback coverage. Xcode/XCTest and iPhone layout/VoiceOver
+verification cannot run locally on Windows and remain necessary on Apple devices.
