@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-011",
+  "number": 11,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Ordering Food at a Restaurant",
+    "es": "Pedir comida en un restaurante"
+  },
+  "category": {
+    "en": "Daily Life and Social Skills",
+    "es": "Vida cotidiana y habilidades sociales"
+  },
+  "main_topic": {
+    "en": "A restaurant visit: ask about the menu, explain preferences and clarify an order respectfully.",
+    "es": "Una visita a un restaurante: preguntar por el menú, explicar preferencias y aclarar un pedido con respeto."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos personas adultas pidiendo comida en un restaurante con un camarero, menú sobre la mesa, ambiente casual.",
+    "prompt": "Editorial photograph, two adults ordering food at a restaurant, talking to a server with the menu on the table, casual warm atmosphere, no visible text, realistic, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Solicitar información sobre el menú y los ingredientes.",
+    "Explicar y justificar preferencias alimenticias.",
+    "Comparar opciones de platos usando diversas estructuras de tiempo.",
+    "Respetar y clarificar pedidos durante diálogos reales.",
+    "Repetir y practicar frases clave de cortesía para ordenar comida."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday evening, I met my friend Clara for dinner at a new Italian restaurant downtown.",
+      "es": "Ayer por la tarde, me reuní con mi amiga Clara para cenar en un nuevo restaurante italiano en el centro."
+    },
+    {
+      "number": 2,
+      "function": "situation",
+      "en": "When we walked in, the place was buzzing with people, who seemed really excited about the menu.",
+      "es": "Cuando entramos, el lugar estaba lleno de gente, que parecía muy entusiasmada con el menú."
+    },
+    {
+      "number": 3,
+      "function": "question",
+      "en": "As soon as we sat down, I asked the waiter if he could recommend any vegetarian dishes.",
+      "es": "En cuanto nos sentamos, le pregunté al camarero si podía recomendar algún plato vegetariano."
+    },
+    {
+      "number": 4,
+      "function": "request",
+      "en": "He told me that the risotto was popular, but I wanted to know whether it contained any seafood.",
+      "es": "Me dijo que el risotto era popular, pero yo quería saber si contenía mariscos."
+    },
+    {
+      "number": 5,
+      "function": "clarification",
+      "en": "I explained that I don't eat fish, which sometimes surprises people in Italian restaurants.",
+      "es": "Expliqué que no como pescado, lo que a veces sorprende a la gente en los restaurantes italianos."
+    },
+    {
+      "number": 6,
+      "function": "comparison",
+      "en": "Clara was thinking of ordering pasta, but she had already tried their lasagna last week.",
+      "es": "Clara estaba pensando en pedir pasta, pero ya había probado su lasaña la semana pasada."
+    },
+    {
+      "number": 7,
+      "function": "preference",
+      "en": "We both agreed we might like to share two dishes rather than ordering just one for each of us.",
+      "es": "Ambas estuvimos de acuerdo en que tal vez nos gustaría compartir dos platos en lugar de pedir solo uno para cada una."
+    },
+    {
+      "number": 8,
+      "function": "negotiation",
+      "en": "He suggested we could try the mushroom ravioli and the margherita pizza, both of which sounded delicious.",
+      "es": "Él sugirió que podríamos probar los ravioles de champiñón y la pizza margarita, y ambos sonaban deliciosos."
+    },
+    {
+      "number": 9,
+      "function": "preference_justification",
+      "en": "I said I would prefer a lighter meal, since I had eaten a big lunch earlier.",
+      "es": "Le dije que prefería una comida más ligera, ya que había comido mucho al mediodía."
+    },
+    {
+      "number": 10,
+      "function": "clarifying",
+      "en": "Before confirming our order, I asked whether the ravioli contained any cream, because I sometimes avoid dairy.",
+      "es": "Antes de confirmar nuestro pedido, pregunté si los ravioles llevaban nata, porque a veces evito los lácteos."
+    },
+    {
+      "number": 11,
+      "function": "explanation",
+      "en": "The waiter explained that they use olive oil rather than adding cream to the sauce.",
+      "es": "El camarero explicó que usan aceite de oliva en lugar de añadir nata a la salsa."
+    },
+    {
+      "number": 12,
+      "function": "confirmation",
+      "en": "After hearing that, I felt comfortable ordering both the pizza and ravioli to share.",
+      "es": "Después de saber eso, me sentí cómoda pidiendo tanto la pizza como los ravioles para compartir."
+    },
+    {
+      "number": 13,
+      "function": "encounter",
+      "en": "While we were waiting, a couple at the next table told us the tiramisu had been their favorite dessert.",
+      "es": "Mientras esperábamos, una pareja en la mesa de al lado nos dijo que el tiramisú había sido su postre favorito."
+    },
+    {
+      "number": 14,
+      "function": "reaction",
+      "en": "Clara was tempted by dessert, though I explained I usually order coffee after a meal instead.",
+      "es": "Clara se sintió tentada por el postre, aunque le expliqué que normalmente yo pido café después de comer."
+    },
+    {
+      "number": 15,
+      "function": "objection_response",
+      "en": "She said I should have tried the tiramisu last time, since it might not always be available.",
+      "es": "Ella dijo que debí haber probado el tiramisú la vez pasada, ya que puede que no siempre esté disponible."
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "Although I used to avoid sweet desserts, I've become more open to sharing them when I'm with friends.",
+      "es": "Aunque solía evitar los postres dulces, ahora estoy más dispuesto a compartirlos cuando estoy con amigos."
+    },
+    {
+      "number": 17,
+      "function": "choice",
+      "en": "We decided to order one slice, so we could both taste it without feeling too full after eating.",
+      "es": "Decidimos pedir una porción, así ambas podríamos probarlo sin quedarnos demasiado llenas después de comer."
+    },
+    {
+      "number": 18,
+      "function": "aftermath",
+      "en": "After finishing our meal, the waiter asked if everything had been prepared to our liking.",
+      "es": "Al terminar la comida, el camarero preguntó si todo había estado a nuestro gusto."
+    },
+    {
+      "number": 19,
+      "function": "response",
+      "en": "I told him we had thoroughly enjoyed the food and that we would recommend the place.",
+      "es": "Le dije que habíamos disfrutado mucho la comida y que recomendaríamos el lugar."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "It was a memorable dinner, and next time, I will be less hesitant about trying new dishes.",
+      "es": "Fue una cena memorable, y la próxima vez, seré menos insegura a la hora de probar nuevos platos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "She said I should have tried the tiramisu last time, since it might not always be available.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "I said I would prefer a lighter meal, since I had eaten a big lunch earlier.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "When we walked in, the place was buzzing with people, who seemed really excited about the menu.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "I explained that I don't eat fish, which sometimes surprises people in Italian restaurants.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "As soon as we sat down, I asked the waiter if he could recommend any vegetarian dishes.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Clara was tempted by dessert, though I explained I usually order coffee after a meal instead.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "We both agreed we might like to share two dishes rather than ordering just one for each of us.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "We decided to order one slice, so we could both taste it without feeling too full after eating.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "walked in",
+      "meaning_es": "entramos",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "sat down",
+      "meaning_es": "nos sentamos",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "wanted to know",
+      "meaning_es": "quería saber",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "thinking of ordering",
+      "meaning_es": "pensando en pedir",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "might like to share",
+      "meaning_es": "nos gustaría compartir",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "try the mushroom ravioli",
+      "meaning_es": "probar los ravioles de champiñón",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "order one slice",
+      "meaning_es": "pedir una porción",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "had thoroughly enjoyed",
+      "meaning_es": "habíamos disfrutado mucho",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "As soon as we sat down,",
+              "I asked the waiter if he could recommend any vegetarian dishes."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "We both agreed",
+              "we might like to share two dishes",
+              "rather than ordering just one for each of us."
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "Although I used to avoid sweet desserts,",
+              "I've become more open to sharing them",
+              "when I'm with friends."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-011",
+    "number": "011",
+    "title_en": "Ordering Food at a Restaurant",
+    "title_es": "Pedir comida en un restaurante",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana y habilidades sociales",
+    "main_topic_es": "Una visita a un restaurante: preguntar por el menú y explicar preferencias",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

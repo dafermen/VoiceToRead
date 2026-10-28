@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-011",
+  "number": 11,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Ordering Food at a Restaurant",
+    "es": "Pedir comida en un restaurante"
+  },
+  "category": {
+    "en": "Daily Interactions",
+    "es": "Interacciones cotidianas"
+  },
+  "main_topic": {
+    "en": "A restaurant visit: ask about the menu, explain preferences and clarify an order respectfully.",
+    "es": "Una visita a un restaurante: preguntar sobre el menú, explicar preferencias y aclarar el pedido de manera respetuosa."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos dialogan con un camarero en un restaurante elegante, revisando un menú sobre la mesa.",
+    "prompt": "Realistic editorial photograph, two adults discussing the menu with a waiter in an elegant restaurant, menus open on the table, dim lighting, American setting, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Preguntar sobre platos y detalles del menú con matices.",
+    "Explicar preferencias personales de manera diplomática.",
+    "Negociar y clarificar pedidos usando lenguaje avanzado y matizado.",
+    "Reformular dudas o desacuerdos de manera respetuosa.",
+    "Practicar lectura y repetición de conversaciones realistas en un restaurante."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "arrival",
+      "en": "Last night, when we arrived at the restaurant, the host greeted us warmly and escorted us to a quiet table by the window.",
+      "es": "Anoche, cuando llegamos al restaurante, el anfitrión nos recibió cordialmente y nos acompañó a una mesa tranquila junto a la ventana."
+    },
+    {
+      "number": 2,
+      "function": "context_establishment",
+      "en": "As I took my seat, I noticed the menu featured seasonal options, although I wondered if some dishes might be available off-menu.",
+      "es": "Al sentarme, noté que el menú incluía opciones de temporada, aunque me preguntaba si algunos platos podrían estar disponibles fuera del menú."
+    },
+    {
+      "number": 3,
+      "function": "initiating_conversation",
+      "en": "When our waiter returned with water, I asked, \"Would you happen to have any chef specials tonight, or perhaps recommendations beyond what's listed?\"",
+      "es": "Cuando el camarero regresó con agua, pregunté: «¿Por casualidad tienen alguna especialidad del chef esta noche, o quizás recomendaciones más allá de lo que aparece en la carta?»"
+    },
+    {
+      "number": 4,
+      "function": "response_with_ambiguity",
+      "en": "He replied that the kitchen might prepare something unique if we had preferences, but he sounded slightly hesitant as though he was gauging our expectations.",
+      "es": "Él respondió que la cocina podría preparar algo especial si teníamos preferencias, pero pareció dudar un poco, como evaluando nuestras expectativas."
+    },
+    {
+      "number": 5,
+      "function": "clarifying_request",
+      "en": "I said, \"I tend to prefer lighter dishes, perhaps with fish or vegetables, rather than something heavy; could you suggest anything the chef enjoys preparing?\"",
+      "es": "Le comenté: «Suelo preferir platos ligeros, tal vez con pescado o vegetales, en lugar de algo pesado; ¿podría sugerirme algo que le guste preparar al chef?»"
+    },
+    {
+      "number": 6,
+      "function": "probing_for_details",
+      "en": "The waiter explained that they used to offer a citrus-marinated trout, which sometimes comes back when there's demand.",
+      "es": "El camarero explicó que solían ofrecer una trucha marinada en cítricos, que a veces regresa cuando hay demanda."
+    },
+    {
+      "number": 7,
+      "function": "negotiation_hesitation",
+      "en": "I expressed interest and asked whether the chef might be willing to make it tonight, even though I understood it might not be possible.",
+      "es": "Mostré interés y pregunté si el chef podría estar dispuesto a prepararlo esta noche, aunque entendía que podría no ser posible."
+    },
+    {
+      "number": 8,
+      "function": "tentative_promise",
+      "en": "\"I'll check with the kitchen and see what we can do,\" he assured, leaving just enough uncertainty that I didn't presume too much.",
+      "es": "«Voy a consultar con cocina y ver qué podemos hacer», aseguró, dejando suficiente margen de incertidumbre para que yo no supusiera demasiado."
+    },
+    {
+      "number": 9,
+      "function": "partner_input",
+      "en": "My friend then mentioned she had been looking forward to the wild mushroom risotto, although she recalled it used to be served with a side salad.",
+      "es": "Mi amiga entonces mencionó que tenía muchas ganas de comer el risotto de setas silvestres, aunque recordaba que solía servirse con ensalada."
+    },
+    {
+      "number": 10,
+      "function": "explicit_qualification",
+      "en": "She remarked, \"If you still offer the salad, I would really appreciate having that as well, but it's certainly not a problem if it's unavailable now.\"",
+      "es": "Ella comentó: «Si aún ofrecen la ensalada, agradecería mucho que la incluyeran, pero no es ningún problema si ya no está disponible.»"
+    },
+    {
+      "number": 11,
+      "function": "waiter_response_with_flexibility",
+      "en": "The waiter explained, \"We haven't had the side salad on the menu lately, but I could ask the kitchen to put something together without any dressing, if you prefer.\"",
+      "es": "El camarero explicó: «No hemos tenido la ensalada como acompañamiento últimamente, pero podría pedir a cocina que preparen algo sin aderezo, si prefiere.»"
+    },
+    {
+      "number": 12,
+      "function": "reformulation_of_preference",
+      "en": "My friend clarified, \"Actually, a little olive oil and lemon would be perfect—unless that's inconvenient, of course.\"",
+      "es": "Mi amiga aclaró: «En realidad, un poco de aceite de oliva y limón sería perfecto, a menos que resulte inconveniente.»"
+    },
+    {
+      "number": 13,
+      "function": "checking_understanding",
+      "en": "Wanting to ensure no miscommunication, I confirmed, \"Just to be sure, the risotto will be prepared without cream, as usual, right?\"",
+      "es": "Para evitar malentendidos, confirmé: «Solo para estar seguro, el risotto se preparará sin nata, como es habitual, ¿verdad?»"
+    },
+    {
+      "number": 14,
+      "function": "waiter_confirms",
+      "en": "\"That's right; our chef respects the traditional recipe, so there's never any cream in it,\" the waiter responded.",
+      "es": "«Así es; nuestro chef respeta la receta tradicional, así que nunca lleva nata», respondió el camarero."
+    },
+    {
+      "number": 15,
+      "function": "expressing_gratitude",
+      "en": "I thanked him, adding, \"We really appreciate your flexibility and attention to detail, especially when the menu changes seasonally.\"",
+      "es": "Le di las gracias, añadiendo: «Realmente valoramos su flexibilidad y atención al detalle, especialmente cuando el menú cambia cada temporada.»"
+    },
+    {
+      "number": 16,
+      "function": "waiter_reflection",
+      "en": "He replied, \"It's important for us to make your visit comfortable, even if that means adapting slightly to individual preferences.\"",
+      "es": "Él respondió: «Para nosotros es importante que su visita sea cómoda, aunque eso signifique adaptarnos un poco a las preferencias de cada cliente.»"
+    },
+    {
+      "number": 17,
+      "function": "order_completion",
+      "en": "After confirming the details, the waiter summarized our order back to us, pausing to check each change we had requested.",
+      "es": "Tras confirmar los detalles, el camarero resumió nuestro pedido, deteniéndose para verificar cada modificación que solicitamos."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "When our food arrived, everything matched our requests exactly, and the trout was, in fact, a highlight of the evening.",
+      "es": "Cuando llegó la comida, todo coincidía perfectamente con lo pedido y, de hecho, la trucha fue uno de los puntos altos de la noche."
+    },
+    {
+      "number": 19,
+      "function": "reflection_on_process",
+      "en": "We found that clarifying politely and suggesting options, rather than insisting, helped the staff accommodate us smoothly.",
+      "es": "Descubrimos que aclarar de forma educada y proponer opciones, en vez de insistir, ayudó al personal a adaptarse sin problemas."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "As we left, the host mentioned he hoped we would visit again, and I assured him that, after such a thoughtful experience, we certainly will.",
+      "es": "Al marcharnos, el anfitrión comentó que esperaba que volviéramos, y le aseguré que, tras una experiencia tan atenta, sin duda lo haremos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "example_en": "My friend then mentioned she had been looking forward to the wild mushroom risotto, although she recalled it used to be served with a side salad.",
+      "explanation_es": "Had been + verbo en -ing describe una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "After confirming the details, the waiter summarized our order back to us, pausing to check each change we had requested.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "He replied that the kitchen might prepare something unique if we had preferences, but he sounded slightly hesitant as though he was gauging our expectations.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "The waiter explained that they used to offer a citrus-marinated trout, which sometimes comes back when there's demand.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "As I took my seat, I noticed the menu featured seasonal options, although I wondered if some dishes might be available off-menu.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "I expressed interest and asked whether the chef might be willing to make it tonight, even though I understood it might not be possible.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "I said, \"I tend to prefer lighter dishes, perhaps with fish or vegetables, rather than something heavy; could you suggest anything the chef enjoys preparing?\"",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After confirming the details, the waiter summarized our order back to us, pausing to check each change we had requested.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Would you happen to have",
+      "meaning_es": "¿Tendría por casualidad...?",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "gauging our expectations",
+      "meaning_es": "intentando calibrar nuestras expectativas",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "I tend to prefer",
+      "meaning_es": "suelo preferir",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "when there's demand",
+      "meaning_es": "cuando hay demanda",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "might be willing to",
+      "meaning_es": "podría estar dispuesto a",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "put something together",
+      "meaning_es": "preparar algo",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Just to be sure",
+      "meaning_es": "solo para asegurarme",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "rather than insisting",
+      "meaning_es": "en vez de insistir",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos indicados por barras. Las barras marcan puntos naturales de pausa, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "When our waiter returned with water, I asked,",
+              "\"Would you happen to have any chef specials tonight, or perhaps recommendations beyond what's listed?\""
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I expressed interest and asked whether the chef might be willing to make it tonight,",
+              "even though I understood it might not be possible."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "We found that clarifying politely and suggesting options, rather than insisting,",
+              "helped the staff accommodate us smoothly."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-011",
+    "number": "011",
+    "title_en": "Ordering Food at a Restaurant",
+    "title_es": "Pedir comida en un restaurante",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Interacciones cotidianas",
+    "main_topic_es": "Visita a un restaurante: preguntar, explicar y clarificar un pedido",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

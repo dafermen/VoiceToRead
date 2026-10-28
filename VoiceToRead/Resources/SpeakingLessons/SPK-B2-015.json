@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-015",
+  "number": 15,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Helping in My Community",
+    "es": "Colaborar en mi comunidad"
+  },
+  "category": {
+    "en": "Community and Volunteering",
+    "es": "Comunidad y voluntariado"
+  },
+  "main_topic": {
+    "en": "Coordinate a neighborhood volunteering activity, ask what is useful, balance different contributions, negotiate and respond to objections.",
+    "es": "Coordinar una actividad de voluntariado en el barrio, preguntar qué es útil, equilibrar diferentes contribuciones, negociar y responder a objeciones."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Personas adultas organizando una actividad de voluntariado en un parque del vecindario.",
+    "prompt": "Realistic editorial photograph, diverse adults planning a community volunteering event in a neighborhood park, casual attire, group conversation, daylight, urban environment, 16:9 horizontal, no text visible",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Consultar sobre necesidades y preferencias para planificar una acción comunitaria.",
+    "Comparar y justificar distintas formas de ayuda comunitaria.",
+    "Explicar causas y consecuencias de opciones organizativas.",
+    "Negociar y responder a objeciones en interacciones colaborativas.",
+    "Practicar narración y diálogo con estructuras de nivel intermedio alto."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last month, I suggested we could organize a neighborhood volunteering day to improve our local park.",
+      "es": "El mes pasado, sugerí que podríamos organizar un día de voluntariado en el barrio para mejorar nuestro parque local."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "The idea came up because the playground equipment was getting old and the paths were filled with trash after winter.",
+      "es": "La idea surgió porque los juegos del parque estaban envejecidos y los caminos estaban llenos de basura después del invierno."
+    },
+    {
+      "number": 3,
+      "function": "initiative",
+      "en": "I posted in our community group to see if anyone would join, and was surprised that ten people replied in a single day.",
+      "es": "Publiqué en nuestro grupo comunitario para ver si alguien se sumaba, y me sorprendió que diez personas respondieran en un solo día."
+    },
+    {
+      "number": 4,
+      "function": "discussion",
+      "en": "During our first meeting, I asked whether people preferred painting the benches or cleaning the walking trails.",
+      "es": "En nuestra primera reunión, pregunté si la gente prefería pintar los bancos o limpiar los senderos."
+    },
+    {
+      "number": 5,
+      "function": "balance_options",
+      "en": "Some neighbors said, 'I'd rather paint the benches because it will brighten up the whole area,' while others wanted to clear the trails first.",
+      "es": "Algunos vecinos dijeron: 'Prefiero pintar los bancos porque alegrará todo el área', mientras que otros querían limpiar los senderos primero."
+    },
+    {
+      "number": 6,
+      "function": "negotiation",
+      "en": "I explained that if we divided into groups, we might get both jobs done efficiently.",
+      "es": "Expliqué que si nos dividíamos en grupos, podríamos hacer ambos trabajos de manera eficiente."
+    },
+    {
+      "number": 7,
+      "function": "planning",
+      "en": "We talked about supplies and agreed everyone would bring either paint or trash bags, depending on their choice.",
+      "es": "Hablamos sobre los materiales y acordamos que cada uno traería pintura o bolsas de basura, según su elección."
+    },
+    {
+      "number": 8,
+      "function": "concern",
+      "en": "However, Maria pointed out, 'Some of us can't bring supplies, but we can help by organizing snacks and drinks.'",
+      "es": "Sin embargo, María señaló: 'Algunos no pueden traer materiales, pero sí podemos ayudar organizando bocadillos y bebidas.'"
+    },
+    {
+      "number": 9,
+      "function": "response",
+      "en": "I appreciated her point and said, 'Every contribution matters, so let's include a team for refreshments.'",
+      "es": "Agradecí su aporte y dije: 'Toda contribución cuenta, así que incluyamos un equipo para los refrigerios.'"
+    },
+    {
+      "number": 10,
+      "function": "objection",
+      "en": "Even though Paolo was concerned there might not be enough people to finish all the work, I reassured him that we could always ask more neighbors next time.",
+      "es": "Aunque a Paolo le preocupaba que no hubiera suficientes personas para terminar todo el trabajo, le aseguré que siempre podríamos invitar a más vecinos la próxima vez."
+    },
+    {
+      "number": 11,
+      "function": "preparation",
+      "en": "The day before the event, I confirmed with each group about who was bringing what and when they would arrive.",
+      "es": "El día antes del evento, confirmé con cada grupo quién traería qué y a qué hora llegarían."
+    },
+    {
+      "number": 12,
+      "function": "reconsider",
+      "en": "Sarah told me, 'It might rain tomorrow, so we should have a plan B just in case.'",
+      "es": "Sarah me dijo: 'Puede que mañana llueva, así que deberíamos tener un plan B por si acaso.'"
+    },
+    {
+      "number": 13,
+      "function": "adaptation",
+      "en": "I agreed and sent a message that we could postpone the event by a week if needed.",
+      "es": "Estuve de acuerdo y mandé un mensaje diciendo que podríamos posponer el evento una semana si fuera necesario."
+    },
+    {
+      "number": 14,
+      "function": "execution",
+      "en": "Luckily, the weather was good, so everyone showed up with their supplies and a lot of energy.",
+      "es": "Por suerte, hizo buen tiempo, así que todos llegaron con sus materiales y mucha energía."
+    },
+    {
+      "number": 15,
+      "function": "work_in_progress",
+      "en": "While people were painting benches, others were picking up trash, and we had music playing to keep us motivated.",
+      "es": "Mientras algunos pintaban los bancos, otros recogían basura, y teníamos música para mantenernos animados."
+    },
+    {
+      "number": 16,
+      "function": "problem",
+      "en": "Suddenly we realized we had forgotten the brushes for painting, so a neighbor ran home to get some extra ones.",
+      "es": "De repente nos dimos cuenta de que habíamos olvidado las brochas para pintar, así que un vecino corrió a su casa a buscar unas de repuesto."
+    },
+    {
+      "number": 17,
+      "function": "support",
+      "en": "When the snacks arrived, it was a relief because we had been working for hours without stopping.",
+      "es": "Cuando llegaron los refrigerios, fue un alivio porque habíamos estado trabajando durante horas sin parar."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "By the end of the day, the park looked cleaner and brighter, and people who hadn't met before were talking and laughing together.",
+      "es": "Al final del día, el parque se veía más limpio y alegre, y personas que antes no se conocían estaban conversando y riendo juntas."
+    },
+    {
+      "number": 19,
+      "function": "evaluation",
+      "en": "Looking back, I'm glad I suggested splitting into groups rather than focusing on only one project.",
+      "es": "Al mirar atrás, me alegra haber propuesto dividirnos en grupos en vez de centrarnos en un solo proyecto."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "We agreed to meet again next month so our volunteering efforts would keep making a difference.",
+      "es": "Acordamos volver a reunirnos el mes próximo para que nuestros esfuerzos de voluntariado sigan marcando la diferencia."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "example_en": "When the snacks arrived, it was a relief because we had been working for hours without stopping.",
+      "explanation_es": "Had been + verbo en -ing describe una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Suddenly we realized we had forgotten the brushes for painting, so a neighbor ran home to get some extra ones.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "The idea came up because the playground equipment was getting old and the paths were filled with trash after winter.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "During our first meeting, I asked whether people preferred painting the benches or cleaning the walking trails.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though Paolo was concerned there might not be enough people to finish all the work, I reassured him that we could always ask more neighbors next time.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Looking back, I'm glad I suggested splitting into groups rather than focusing on only one project.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "When the snacks arrived, it was a relief because we had been working for hours without stopping.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "However, Maria pointed out, 'Some of us can't bring supplies, but we can help by organizing snacks and drinks.'",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 8
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "came up",
+      "meaning_es": "surgió",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "was surprised that",
+      "meaning_es": "me sorprendió que",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "asked whether",
+      "meaning_es": "pregunté si",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "pointed out",
+      "meaning_es": "señaló",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Every contribution matters",
+      "meaning_es": "toda contribución cuenta",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "just in case",
+      "meaning_es": "por si acaso",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "showed up with",
+      "meaning_es": "llegaron con",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "Looking back",
+      "meaning_es": "al mirar atrás",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "Some neighbors said,",
+              "'I'd rather paint the benches because it will brighten up the whole area,'",
+              "while others wanted to clear the trails first."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "I explained that",
+              "if we divided into groups,",
+              "we might get both jobs done efficiently."
+            ]
+          },
+          {
+            "source_paragraph": 17,
+            "segments": [
+              "When the snacks arrived,",
+              "it was a relief",
+              "because we had been working for hours without stopping."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-015",
+    "number": "015",
+    "title_en": "Helping in My Community",
+    "title_es": "Colaborar en mi comunidad",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Comunidad y voluntariado",
+    "main_topic_es": "Organizar una actividad de voluntariado con negociación",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Past perfect",
+      "Past continuous",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

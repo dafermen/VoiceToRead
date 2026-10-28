@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-017",
+  "number": 17,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Choosing a Course",
+    "es": "Elegir un curso"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Comparing learning courses and formats, discussing preferences, requirements, and objections.",
+    "es": "Comparar cursos y formatos de aprendizaje, discutir preferencias, requisitos y objeciones."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Adultos conversando en una recepción con folletos de cursos, escritorio moderno y ambiente educativo.",
+    "prompt": "Realistic editorial photograph, adults talking at a course provider's front desk, colorful brochures and a computer, modern educational reception, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar opciones de cursos y métodos de aprendizaje.",
+    "Justificar preferencias y requisitos personales.",
+    "Formular y responder preguntas sobre horarios y soporte.",
+    "Explicar causas y posibles resultados de decisiones.",
+    "Practicar narración y diálogo para defender una elección realista."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Recently, I decided to improve my professional skills, so I started researching different courses offered by local learning centers.",
+      "es": "Recientemente, decidí mejorar mis habilidades profesionales, así que comencé a investigar distintos cursos ofrecidos por centros educativos locales."
+    },
+    {
+      "number": 2,
+      "function": "comparison",
+      "en": "Some courses are online and self-paced, while others are in-person with fixed schedules.",
+      "es": "Algunos cursos son en línea y flexibles, mientras que otros son presenciales con horarios fijos."
+    },
+    {
+      "number": 3,
+      "function": "analysis",
+      "en": "Although I have taken online classes before, this time I am looking for more interaction and feedback.",
+      "es": "Aunque ya he tomado clases en línea antes, esta vez busco más interacción y retroalimentación."
+    },
+    {
+      "number": 4,
+      "function": "background",
+      "en": "Sarah, a colleague who had completed an in-person course at BrightPath Academy, recommended it because she felt supported by the instructors.",
+      "es": "Sarah, una colega que realizó un curso presencial en BrightPath Academy, me lo recomendó porque se sintió apoyada por los instructores."
+    },
+    {
+      "number": 5,
+      "function": "dialogue",
+      "en": "Last Monday, I called BrightPath Academy and asked whether I could visit to discuss their programs in detail.",
+      "es": "El lunes pasado, llamé a BrightPath Academy y pregunté si podía visitarlos para hablar de sus programas en detalle."
+    },
+    {
+      "number": 6,
+      "function": "scheduling",
+      "en": "The receptionist said, \"You can come by anytime between ten and four; we will be happy to answer all your questions.\"",
+      "es": "La recepcionista me dijo: \"Puede venir en cualquier momento entre las diez y las cuatro; estaremos encantados de responder a todas sus preguntas.\""
+    },
+    {
+      "number": 7,
+      "function": "event",
+      "en": "When I arrived, I met an advisor who explained that their evening courses were designed for working adults like me.",
+      "es": "Cuando llegué, conocí a una asesora que explicó que sus cursos vespertinos estaban diseñados para adultos trabajadores como yo."
+    },
+    {
+      "number": 8,
+      "function": "question",
+      "en": "I wanted to know whether the course included one-on-one tutoring, so I asked directly about extra support.",
+      "es": "Quise saber si el curso incluía asesorías individuales, así que pregunté directamente por apoyo extra."
+    },
+    {
+      "number": 9,
+      "function": "response",
+      "en": "The advisor replied, \"You might be interested to know that each student is paired with a mentor throughout the program.\"",
+      "es": "La asesora respondió: \"Puede interesarle saber que cada estudiante cuenta con un mentor durante todo el programa.\""
+    },
+    {
+      "number": 10,
+      "function": "evaluation",
+      "en": "That option gives me confidence, because I often struggle without having someone to review my work.",
+      "es": "Esa opción me da confianza, porque a menudo tengo dificultades si no hay alguien que revise mi trabajo."
+    },
+    {
+      "number": 11,
+      "function": "comparison",
+      "en": "By contrast, NetLearn offers purely online modules, which are flexible, but do not have scheduled live feedback.",
+      "es": "En cambio, NetLearn ofrece módulos completamente en línea, que son flexibles pero no tienen retroalimentación en vivo programada."
+    },
+    {
+      "number": 12,
+      "function": "objection",
+      "en": "My friend Tom prefers NetLearn and argued, \"You should have considered the freedom to study at your own pace, rather than committing to fixed evenings.\"",
+      "es": "Mi amigo Tom prefiere NetLearn y argumentó: \"Deberías haber considerado la libertad de estudiar a tu propio ritmo, en lugar de comprometerte a tardes fijas.\""
+    },
+    {
+      "number": 13,
+      "function": "justification",
+      "en": "I explained that I am more motivated when I have classmates and deadlines, which I would miss in a self-paced format.",
+      "es": "Expliqué que tengo más motivación cuando cuento con compañeros y fechas límites, algo que extrañaría en un formato flexible."
+    },
+    {
+      "number": 14,
+      "function": "reflection",
+      "en": "I also mentioned that last year, I nearly dropped out of an online course because nobody noticed when I stopped submitting assignments.",
+      "es": "También comenté que el año pasado casi abandoné un curso en línea porque nadie notó cuando dejé de entregar tareas."
+    },
+    {
+      "number": 15,
+      "function": "hypothetical",
+      "en": "If I had studied alone, I might not have finished at all.",
+      "es": "Si hubiera estudiado solo, quizá ni siquiera lo habría terminado."
+    },
+    {
+      "number": 16,
+      "function": "perspective",
+      "en": "Even though self-study can be convenient, it has not worked well for me in the past.",
+      "es": "Aunque el autoestudio puede ser conveniente, no me ha funcionado bien en el pasado."
+    },
+    {
+      "number": 17,
+      "function": "resolution",
+      "en": "After comparing both options, I signed up for BrightPath Academy’s evening course.",
+      "es": "Después de comparar ambas opciones, me inscribí en el curso vespertino de BrightPath Academy."
+    },
+    {
+      "number": 18,
+      "function": "result",
+      "en": "Now I feel I will succeed, because with group support and mentoring, I am less likely to stop halfway.",
+      "es": "Ahora siento que tendré éxito, porque con el apoyo del grupo y la mentoría es menos probable que quede a medias."
+    },
+    {
+      "number": 19,
+      "function": "reaction",
+      "en": "Tom admitted, \"It makes sense—you know your learning style better than anyone.\"",
+      "es": "Tom admitió: \"Tiene sentido; conoces tu propio estilo de aprendizaje mejor que nadie.\""
+    },
+    {
+      "number": 20,
+      "function": "close",
+      "en": "I am glad I discussed my options, because thinking it through helped me choose what truly fits my needs.",
+      "es": "Me alegro de haber conversado mis opciones, porque analizarlo me ayudó a elegir lo que realmente se acomoda a mis necesidades."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "My friend Tom prefers NetLearn and argued, \"You should have considered the freedom to study at your own pace, rather than committing to fixed evenings.\"",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Sarah, a colleague who had completed an in-person course at BrightPath Academy, recommended it because she felt supported by the instructors.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Although I have taken online classes before, this time I am looking for more interaction and feedback.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "By contrast, NetLearn offers purely online modules, which are flexible, but do not have scheduled live feedback.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Last Monday, I called BrightPath Academy and asked whether I could visit to discuss their programs in detail.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though self-study can be convenient, it has not worked well for me in the past.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "My friend Tom prefers NetLearn and argued, \"You should have considered the freedom to study at your own pace, rather than committing to fixed evenings.\"",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "That option gives me confidence, because I often struggle without having someone to review my work.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 10
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "discuss their programs in detail",
+      "meaning_es": "hablar de sus programas en detalle",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "come by",
+      "meaning_es": "pasar por aquí",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "designed for working adults",
+      "meaning_es": "diseñados para adultos que trabajan",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "paired with a mentor",
+      "meaning_es": "asignado a un mentor",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "review my work",
+      "meaning_es": "revisar mi trabajo",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "By contrast",
+      "meaning_es": "en cambio",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "at your own pace",
+      "meaning_es": "a tu propio ritmo",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "thinking it through",
+      "meaning_es": "pensarlo detenidamente",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "Last Monday, I called BrightPath Academy",
+              "and asked whether I could visit to discuss their programs in detail."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "My friend Tom prefers NetLearn and argued,",
+              "\"You should have considered the freedom to study at your own pace,",
+              "rather than committing to fixed evenings.\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "I am glad I discussed my options,",
+              "because thinking it through helped me choose what truly fits my needs."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-017",
+    "number": "017",
+    "title_en": "Choosing a Course",
+    "title_es": "Elegir un curso",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Comparar y elegir cursos según las necesidades y preferencias",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Present perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

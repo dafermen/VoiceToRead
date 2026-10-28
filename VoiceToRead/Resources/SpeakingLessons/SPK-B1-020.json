@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-020",
+  "number": 20,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Setting Goals for My Future",
+    "es": "Definir metas para mi futuro"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Discussing a personal learning or creative goal; competing priorities and practical next steps.",
+    "es": "Hablar de una meta personal de aprendizaje o creatividad, prioridades competitivas y próximos pasos prácticos."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Persona adulta planificando metas en un cuaderno en una mesa, con una taza de café y una ventana al fondo.",
+    "prompt": "Realistic editorial photo, adult sitting at a table, writing personal goals in a notebook, coffee and window in background, warm natural light, calm atmosphere, horizontal, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una meta personal de aprendizaje o creatividad.",
+    "Explicar prioridades y obstáculos que compiten.",
+    "Hablar sobre experiencias pasadas, planes presentes y futuros.",
+    "Usar expresiones para negociar y concretar próximos pasos.",
+    "Practicar la comprensión auditiva y la repetición oral."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Recently, I started thinking about my future and I set a goal to learn digital illustration.",
+      "es": "Recientemente, empecé a pensar en mi futuro y me propuse aprender ilustración digital."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "I love drawing, but I have never tried doing it on a computer before.",
+      "es": "Me encanta dibujar, pero nunca he intentado hacerlo en una computadora."
+    },
+    {
+      "number": 3,
+      "function": "comparison",
+      "en": "It feels more exciting to create art with new tools, rather than repeating old routines.",
+      "es": "Me resulta más emocionante crear arte con herramientas nuevas en vez de repetir las mismas rutinas."
+    },
+    {
+      "number": 4,
+      "function": "challenge",
+      "en": "However, my job keeps me busy, which makes it hard to find enough time after work.",
+      "es": "Sin embargo, mi trabajo me mantiene ocupado, lo que dificulta encontrar suficiente tiempo después del trabajo."
+    },
+    {
+      "number": 5,
+      "function": "detail",
+      "en": "On most days, I get home tired and just want to relax rather than starting anything new.",
+      "es": "La mayoría de los días llego a casa cansado y solo quiero descansar en vez de comenzar algo nuevo."
+    },
+    {
+      "number": 6,
+      "function": "experience",
+      "en": "Last year, I had tried taking a short art course online, but I gave up when I got too busy.",
+      "es": "El año pasado intenté tomar un curso corto de arte en línea, pero lo dejé cuando me puse demasiado ocupado."
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "Looking back, I should have planned my time better so I would not quit halfway through.",
+      "es": "Al mirar atrás, debí haber planeado mi tiempo mejor para no rendirme a la mitad."
+    },
+    {
+      "number": 8,
+      "function": "support",
+      "en": "My friend Emily, who is a graphic designer, encouraged me and offered to help if I get stuck.",
+      "es": "Mi amiga Emily, que es diseñadora gráfica, me animó y se ofreció a ayudar si me quedo atascado."
+    },
+    {
+      "number": 9,
+      "function": "decision",
+      "en": "We agreed that I could practice for one hour every Sunday and send her my progress.",
+      "es": "Acordamos que podría practicar una hora cada domingo y enviarle mis avances."
+    },
+    {
+      "number": 10,
+      "function": "reality",
+      "en": "Even though weekends seem free, I sometimes forget my goal because of family plans.",
+      "es": "Aunque los fines de semana parecen libres, a veces olvido mi meta por compromisos familiares."
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "Emily asked if I might set an alarm on my phone to remind me each Sunday.",
+      "es": "Emily preguntó si podría poner una alarma en mi teléfono para recordarme cada domingo."
+    },
+    {
+      "number": 12,
+      "function": "solution",
+      "en": "After talking, I realized that blocking the time in my calendar could solve part of the problem.",
+      "es": "Después de hablar, me di cuenta de que reservar ese tiempo en mi calendario podría solucionar parte del problema."
+    },
+    {
+      "number": 13,
+      "function": "detail",
+      "en": "Now, before scheduling anything else, I check if my art hour is already planned.",
+      "es": "Ahora, antes de programar alguna otra cosa, reviso si mi hora de arte ya está planeada."
+    },
+    {
+      "number": 14,
+      "function": "progress",
+      "en": "So far, I have finished three practice sketches and received good feedback.",
+      "es": "Hasta ahora, he terminado tres bocetos de práctica y he recibido buenos comentarios."
+    },
+    {
+      "number": 15,
+      "function": "setback",
+      "en": "Last weekend, I almost skipped drawing because our internet was down, but I drew on paper instead.",
+      "es": "El fin de semana pasado casi no dibujo porque no había internet, pero dibujé en papel en su lugar."
+    },
+    {
+      "number": 16,
+      "function": "support",
+      "en": "My brother noticed, and he offered to let me use his tablet if I need it in the future.",
+      "es": "Mi hermano se dio cuenta y se ofreció a prestarme su tableta si la necesito en el futuro."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "I have learned that small steps matter more than results at the beginning.",
+      "es": "He aprendido que los pequeños pasos importan más que los resultados al principio."
+    },
+    {
+      "number": 18,
+      "function": "future_plan",
+      "en": "Next month, I will join an online beginners’ group to keep me motivated.",
+      "es": "El próximo mes me uniré a un grupo de principiantes en línea para mantener mi motivación."
+    },
+    {
+      "number": 19,
+      "function": "goal",
+      "en": "My main goal is to draw digitally by the end of the year without feeling nervous.",
+      "es": "Mi objetivo principal es dibujar en digital para fin de año sin sentirme nervioso."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Even if I go slowly, I will continue as long as I remember why this goal matters to me.",
+      "es": "Aunque vaya despacio, seguiré adelante siempre que recuerde por qué esta meta es importante para mí."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "Looking back, I should have planned my time better so I would not quit halfway through.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Last year, I had tried taking a short art course online, but I gave up when I got too busy.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "I love drawing, but I have never tried doing it on a computer before.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "However, my job keeps me busy, which makes it hard to find enough time after work.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Emily asked if I might set an alarm on my phone to remind me each Sunday.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though weekends seem free, I sometimes forget my goal because of family plans.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "It feels more exciting to create art with new tools, rather than repeating old routines.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "My main goal is to draw digitally by the end of the year without feeling nervous.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 19
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "set a goal",
+      "meaning_es": "me propuse una meta",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "rather than starting anything new",
+      "meaning_es": "en vez de comenzar algo nuevo",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "quit halfway through",
+      "meaning_es": "abandonar a mitad de camino",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "if I get stuck",
+      "meaning_es": "si me atasco",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "send her my progress",
+      "meaning_es": "enviarle mis avances",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "because of family plans",
+      "meaning_es": "por los planes familiares",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "set an alarm",
+      "meaning_es": "poner una alarma",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "keep me motivated",
+      "meaning_es": "mantenerme motivado",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Recently, I started thinking about my future",
+              "and I set a goal to learn digital illustration."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Looking back, I should have planned my time better",
+              "so I would not quit halfway through."
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "So far, I have finished three practice sketches",
+              "and received good feedback."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-020",
+    "number": "020",
+    "title_en": "Setting Goals for My Future",
+    "title_es": "Definir metas para mi futuro",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Hablar de una meta personal y cómo avanzar a pesar de prioridades y dificultades.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Present perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

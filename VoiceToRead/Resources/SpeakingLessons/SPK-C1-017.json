@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-017",
+  "number": 17,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Choosing a Course",
+    "es": "Elegir un curso"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Comparing learning courses and formats, asking about fit, support and time, and discussing a realistic choice.",
+    "es": "Comparar cursos y formatos de aprendizaje, preguntar sobre compatibilidad, apoyo y tiempo, y discutir una elección realista."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos adultos conversando en una oficina con folletos de cursos sobre una mesa y portátiles abiertos.",
+    "prompt": "Realistic editorial photograph, two adult learners discussing course brochures at a table, modern office setting, laptops open, bright daylight, professional but friendly atmosphere, 16:9 horizontal.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar las ventajas y desventajas de diferentes cursos.",
+    "Preguntar y responder sobre el ajuste personal, apoyo y tiempo disponible.",
+    "Negociar expectativas y llegar a un compromiso realista.",
+    "Utilizar estructuras complejas y vocabulario flexible para matizar argumentos.",
+    "Practicar estrategias de lectura, repetición y pronunciación avanzada en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Monday, I sat at my desk browsing three different websites, each advertising an innovative method for adult language learning.",
+      "es": "El lunes pasado, me senté en mi escritorio explorando tres sitios web diferentes, cada uno promocionando un método innovador para el aprendizaje de idiomas en adultos."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "My supervisor had encouraged me to develop my English beyond emails, knowing that our new partnership required more fluent spoken communication.",
+      "es": "Mi supervisor me había animado a desarrollar mi inglés más allá de los correos, sabiendo que nuestra nueva alianza iba a requerir una comunicación oral más fluida."
+    },
+    {
+      "number": 3,
+      "function": "obstacle",
+      "en": "Although I wanted to enroll immediately, I hesitated because I feared committing to a format that could conflict with my unpredictable schedule.",
+      "es": "Aunque quería inscribirme de inmediato, dudé porque temía comprometerme con un formato que pudiera entrar en conflicto con mi horario impredecible."
+    },
+    {
+      "number": 4,
+      "function": "research",
+      "en": "I compared Conversate Live’s daily group sessions, BluePace’s flexible modules, and SkillSpring’s personalized coaching, trying to discern which format was actually more sustainable.",
+      "es": "Comparé las sesiones grupales diarias de Conversate Live, los módulos flexibles de BluePace y la tutoría personalizada de SkillSpring, intentando discernir cuál formato era verdaderamente más sostenible."
+    },
+    {
+      "number": 5,
+      "function": "consultation",
+      "en": "Before making any decision, I called my colleague Hannah, who had taken at least two of these courses last year.",
+      "es": "Antes de tomar una decisión, llamé a mi colega Hannah, quien había realizado al menos dos de estos cursos el año pasado."
+    },
+    {
+      "number": 6,
+      "function": "testimony",
+      "en": "She explained that BluePace had seemed great initially, but after a few weeks she felt isolated without live feedback.",
+      "es": "Ella explicó que BluePace le pareció genial al principio, pero después de unas semanas se sintió aislada sin retroalimentación en tiempo real."
+    },
+    {
+      "number": 7,
+      "function": "qualification",
+      "en": "However, she added, BluePace might work well for someone who prefers not to rely on group timing.",
+      "es": "Sin embargo, añadió, BluePace podría funcionar bien para alguien que prefiere no depender del horario de grupo."
+    },
+    {
+      "number": 8,
+      "function": "question",
+      "en": "When I asked whether SkillSpring’s coaching would actually fit my budget, she paused and said it could, but only if my company would reimburse part of the cost.",
+      "es": "Cuando pregunté si la tutoría de SkillSpring realmente se ajustaría a mi presupuesto, se detuvo y dijo que podría ser así, pero solo si mi empresa reembolsaba parte del costo."
+    },
+    {
+      "number": 9,
+      "function": "comparison",
+      "en": "It struck me that, rather than signing up for another generic video course, I should have weighed the value of authentic interaction.",
+      "es": "Me di cuenta de que, en vez de inscribirme en otro curso genérico por video, debí haber valorado la importancia de la interacción auténtica."
+    },
+    {
+      "number": 10,
+      "function": "negotiation",
+      "en": "I pointed out that while group classes were scheduled at set times, the one-on-one coaching was more adaptable, even though sessions had to be reserved far in advance.",
+      "es": "Comenté que, aunque las clases grupales estaban programadas en horarios fijos, la tutoría individual era más adaptable, aunque las sesiones debían reservarse con mucha antelación."
+    },
+    {
+      "number": 11,
+      "function": "reflection",
+      "en": "Hannah reminded me that she used to skip sessions when her workload increased, so she wished she had discussed a pause option before enrolling.",
+      "es": "Hannah me recordó que solía faltar a sesiones cuando aumentaba su carga de trabajo, por lo que hubiera deseado discutir una opción de pausa antes de inscribirse."
+    },
+    {
+      "number": 12,
+      "function": "concession",
+      "en": "Although I saw her point, I countered that I might not have the discipline to study in isolation for several months.",
+      "es": "Aunque entiendo su punto, repliqué que podría no tener la disciplina para estudiar en soledad durante varios meses."
+    },
+    {
+      "number": 13,
+      "function": "tension",
+      "en": "She admitted, \"To be fair, it was harder to keep going without someone checking on me every week.\"",
+      "es": "Ella admitió: \"Siendo justos, fue más difícil mantener el ritmo sin que alguien me revisara cada semana.\""
+    },
+    {
+      "number": 14,
+      "function": "solution",
+      "en": "After weighing every variable, I sent emails to all three providers, asking if they offered trial weeks or extra support for irregular schedules.",
+      "es": "Después de considerar cada variable, envié correos a los tres proveedores, preguntando si ofrecían semanas de prueba o soporte adicional para horarios irregulares."
+    },
+    {
+      "number": 15,
+      "function": "response",
+      "en": "Conversate Live replied quickly: they could arrange recorded sessions if I missed any group meeting.",
+      "es": "Conversate Live respondió rápido: podían ofrecer sesiones grabadas si perdía alguna reunión grupal."
+    },
+    {
+      "number": 16,
+      "function": "clarification",
+      "en": "SkillSpring explained that, by joining their monthly plan, I would have coaching credits that could be paused for up to six weeks.",
+      "es": "SkillSpring explicó que, al unirme a su plan mensual, tendría créditos de tutoría que podían pausarse hasta seis semanas."
+    },
+    {
+      "number": 17,
+      "function": "synthesis",
+      "en": "It was obvious that each company provided some flexibility, but only SkillSpring would let me pause and resume live coaching without penalty.",
+      "es": "Era evidente que cada empresa ofrecía cierta flexibilidad, pero solo SkillSpring me permitiría pausar y reanudar la tutoría en vivo sin penalización."
+    },
+    {
+      "number": 18,
+      "function": "decision",
+      "en": "Although I was tempted by the lower price of BluePace, I realized I should have considered my need for support above just saving money.",
+      "es": "Aunque me atraía el menor precio de BluePace, entendí que debía haber priorizado mi necesidad de apoyo por encima del simple ahorro."
+    },
+    {
+      "number": 19,
+      "function": "final choice",
+      "en": "By Thursday, after negotiating partial reimbursement with my supervisor, I signed up for SkillSpring, opting for alternate-week sessions and a built-in break before the summer project.",
+      "es": "Para el jueves, tras negociar un reembolso parcial con mi supervisor, me inscribí en SkillSpring, eligiendo sesiones semana por medio y una pausa programada antes del proyecto de verano."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "Now, rather than worrying about managing competing demands, I can move forward—knowing I have support and the option to adapt when life gets unpredictable.",
+      "es": "Ahora, en vez de preocuparme por gestionar demandas en conflicto, puedo avanzar, sabiendo que cuento con apoyo y la opción de adaptarme cuando la vida resulta impredecible."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "It struck me that, rather than signing up for another generic video course, I should have weighed the value of authentic interaction.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "My supervisor had encouraged me to develop my English beyond emails, knowing that our new partnership required more fluent spoken communication.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Before making any decision, I called my colleague Hannah, who had taken at least two of these courses last year.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "When I asked whether SkillSpring’s coaching would actually fit my budget, she paused and said it could, but only if my company would reimburse part of the cost.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I wanted to enroll immediately, I hesitated because I feared committing to a format that could conflict with my unpredictable schedule.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Now, rather than worrying about managing competing demands, I can move forward—knowing I have support and the option to adapt when life gets unpredictable.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "SkillSpring explained that, by joining their monthly plan, I would have coaching credits that could be paused for up to six weeks.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "Hannah reminded me that she used to skip sessions when her workload increased, so she wished she had discussed a pause option before enrolling.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 11
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "encouraged me to develop",
+      "meaning_es": "me animó a desarrollar",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "feared committing to",
+      "meaning_es": "temía comprometerme con",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "making any decision",
+      "meaning_es": "tomar una decisión",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "work well for",
+      "meaning_es": "funcionar bien para",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "fit my budget",
+      "meaning_es": "ajustarse a mi presupuesto",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "pointed out that",
+      "meaning_es": "comenté que / señalé que",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "keep going without",
+      "meaning_es": "mantener el ritmo sin",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "move forward—knowing",
+      "meaning_es": "avanzar, sabiendo",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos de las siguientes oraciones completas, marcados por barras para las pausas.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Although I wanted to enroll immediately,",
+              "I hesitated",
+              "because I feared committing to a format that could conflict with my unpredictable schedule."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "However,",
+              "she added,",
+              "BluePace might work well for someone who prefers not to rely on group timing."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "By Thursday,",
+              "after negotiating partial reimbursement with my supervisor,",
+              "I signed up for SkillSpring,",
+              "opting for alternate-week sessions and a built-in break",
+              "before the summer project."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-017",
+    "number": "017",
+    "title_en": "Choosing a Course",
+    "title_es": "Elegir un curso",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Comparación de cursos y negociación de expectativas realistas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

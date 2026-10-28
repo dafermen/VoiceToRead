@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-014",
+  "number": 14,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Learning a New Skill",
+    "es": "Aprender una habilidad nueva"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Joining a creative class, handling early difficulties, seeking feedback, qualifying and negotiating expectations for growth.",
+    "es": "Unirse a una clase creativa, afrontar dificultades iniciales, pedir retroalimentación, matizar y negociar expectativas para progresar."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Grupo de adultos participando en una clase creativa práctica, con materiales de arte y atención del instructor.",
+    "prompt": "Editorial realistic photo, diverse adults in a hands-on beginner art class, working with clay, focused instructor giving constructive feedback, large windows, casual workspace, no visible text, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una experiencia al aprender una habilidad nueva.",
+    "Explicar barreras iniciales y reacciones emocionales.",
+    "Solicitar retroalimentación específica y responder con matices.",
+    "Negociar expectativas y acordar pasos realistas para mejorar.",
+    "Utilizar frases de conciliación y estructura avanzada en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last month, I signed up for a beginner ceramics class because I’d been feeling the urge to create something tangible after long days spent at my computer.",
+      "es": "El mes pasado me inscribí en una clase de cerámica para principiantes porque sentía la necesidad de crear algo tangible después de muchos días frente al ordenador."
+    },
+    {
+      "number": 2,
+      "function": "expectation",
+      "en": "Although the instructor warned us at the start that working with clay takes patience and won’t be easy, I underestimated how tricky the basics might actually be.",
+      "es": "Aunque el instructor nos advirtió al principio que trabajar con arcilla requiere paciencia y no es fácil, subestimé cuán complicados podrían ser los conceptos básicos."
+    },
+    {
+      "number": 3,
+      "function": "challenge",
+      "en": "On my first attempt at the wheel, my bowl collapsed entirely, while most classmates seemed to handle the clay far more smoothly than I did.",
+      "es": "En mi primer intento en el torno, mi cuenco se desmoronó por completo, mientras que la mayoría de mis compañeros parecían manejar la arcilla mucho mejor que yo."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "I realized afterwards that I had been gripping the sides too tightly, which was probably a nervous response rather than a deliberate technique.",
+      "es": "Después me di cuenta de que había sujetado los bordes con demasiada fuerza, lo que probablemente fuera una reacción nerviosa más que una técnica intencionada."
+    },
+    {
+      "number": 5,
+      "function": "feeling",
+      "en": "While I was cleaning up the mess, I caught myself feeling more embarrassed than frustrated, which surprised me.",
+      "es": "Mientras limpiaba el desastre, me di cuenta de que sentía más vergüenza que frustración, lo cual me sorprendió."
+    },
+    {
+      "number": 6,
+      "function": "comparison",
+      "en": "Several of my peers had struggled at first as well, but they seemed to laugh it off and keep moving, whereas I fixated on my mistake longer.",
+      "es": "Varios de mis compañeros también tuvieron dificultades al principio, pero parecían tomárselo con humor y seguir adelante, mientras que yo me quedé estancado en mi error más tiempo."
+    },
+    {
+      "number": 7,
+      "function": "strategy",
+      "en": "After watching a few others, I tried loosening my grip and letting my hands guide rather than control the shape, which helped a little.",
+      "es": "Después de observar a algunos, intenté relajar las manos y dejar que guiaran la forma en vez de controlarla, lo cual ayudó un poco."
+    },
+    {
+      "number": 8,
+      "function": "difficulty",
+      "en": "Still, what I managed to make could hardly be called a bowl, even though I did avoid completely flattening it this time.",
+      "es": "Aun así, lo que logré hacer apenas podía llamarse cuenco, aunque esta vez al menos evité aplastarlo por completo."
+    },
+    {
+      "number": 9,
+      "function": "decision",
+      "en": "By the end of the session, I decided to ask the instructor for feedback, figuring there was no point pretending I was satisfied with my progress.",
+      "es": "Al final de la sesión, decidí pedirle retroalimentación al instructor, pensando que no tenía sentido fingir que estaba satisfecho con mi progreso."
+    },
+    {
+      "number": 10,
+      "function": "dialogue_request",
+      "en": "When I approached her and admitted that I was having more trouble than expected, she responded, \"You’re not alone—most people need several sessions before they find a comfortable rhythm.\"",
+      "es": "Cuando me acerqué a ella y admití que tenía más dificultades de las que esperaba, respondió: \"No eres el único, la mayoría necesita varias sesiones hasta encontrar el ritmo.\""
+    },
+    {
+      "number": 11,
+      "function": "dialogue_ask",
+      "en": "I asked, \"What would you say I should focus on for the next class, assuming I keep running into issues with even pressure?\"",
+      "es": "Pregunté: \"¿En qué dirías que debería enfocarme para la próxima clase, suponiendo que sigo teniendo problemas con la presión uniforme?\""
+    },
+    {
+      "number": 12,
+      "function": "dialogue_response",
+      "en": "She suggested, \"Try working a little more slowly and regularly pausing to check the thickness, rather than getting anxious and speeding through each step.\"",
+      "es": "Sugerió: \"Intenta trabajar un poco más despacio y parar de vez en cuando para revisar el grosor, en vez de ponerte ansioso y apresurarte en cada paso.\""
+    },
+    {
+      "number": 13,
+      "function": "dialogue_negotiate",
+      "en": "I replied, \"Slowing down makes sense, but I worry that if I check too often, I’ll lose momentum or the clay will dry out before I finish shaping it.\"",
+      "es": "Respondí: \"Tiene sentido ir más despacio, pero me preocupa que si reviso demasiado seguido, pierda el ritmo o la arcilla se seque antes de terminar de darle forma.\""
+    },
+    {
+      "number": 14,
+      "function": "dialogue_flexible",
+      "en": "She explained that she had noticed I kept my bowl on the wheel longer than most and said, \"That’s actually an advantage for learning, as it gives you more time to correct mistakes before moving on.\"",
+      "es": "Ella explicó que se había dado cuenta de que dejaba mi cuenco en el torno más tiempo que los demás y dijo: \"Eso en realidad es una ventaja para aprender, ya que te da más tiempo para corregir errores antes de continuar.\""
+    },
+    {
+      "number": 15,
+      "function": "dialogue_compromise",
+      "en": "We agreed that, rather than aiming for a perfect bowl, I would focus on maintaining even walls for just the bottom half at first, which would allow room to practice without so much pressure.",
+      "es": "Acordamos que, en vez de buscar un cuenco perfecto, me concentraría en mantener paredes uniformes solo en la mitad inferior al principio, lo que me permitiría practicar sin tanta presión."
+    },
+    {
+      "number": 16,
+      "function": "reflection_future",
+      "en": "In retrospect, I might have made more progress by accepting feedback earlier rather than waiting until I felt stuck.",
+      "es": "En retrospectiva, quizás habría avanzado más si hubiera aceptado retroalimentación antes en vez de esperar a sentirme estancado."
+    },
+    {
+      "number": 17,
+      "function": "alternative",
+      "en": "Even though it was difficult not to compare myself to classmates, I started to notice improvements once I stopped thinking I should have mastered everything after one lesson.",
+      "es": "Aunque me resultaba difícil no compararme con mis compañeros, empecé a notar mejoras cuando dejé de pensar que debería haberlo dominado todo tras una sola clase."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "By consciously balancing careful checking with steady movement, I found I could shape the clay more confidently, even if the results weren’t perfect.",
+      "es": "Al equilibrar deliberadamente las revisiones cuidadosas con un movimiento constante, descubrí que podía moldear el barro con mayor confianza, aunque los resultados no fueran perfectos."
+    },
+    {
+      "number": 19,
+      "function": "dialogue_finale",
+      "en": "After I finished my second bowl, the instructor smiled and said, \"That’s real progress—it’s clear you took our discussion seriously.\"",
+      "es": "Cuando terminé mi segundo cuenco, la instructora sonrió y dijo: \"Eso es un verdadero progreso—se nota que te tomaste en serio nuestra conversación.\""
+    },
+    {
+      "number": 20,
+      "function": "close",
+      "en": "I left the studio feeling that, although every skill brings its challenges, negotiating honest feedback and finding realistic goals made the process genuinely rewarding.",
+      "es": "Salí del estudio sintiendo que, aunque toda habilidad conlleva desafíos, negociar retroalimentación sincera y fijar metas realistas hizo que el proceso fuera realmente gratificante."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "Even though it was difficult not to compare myself to classmates, I started to notice improvements once I stopped thinking I should have mastered everything after one lesson.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Past perfect continuous",
+      "example_en": "I realized afterwards that I had been gripping the sides too tightly, which was probably a nervous response rather than a deliberate technique.",
+      "explanation_es": "Had been + verbo en -ing describe una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Several of my peers had struggled at first as well, but they seemed to laugh it off and keep moving, whereas I fixated on my mistake longer.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "While I was cleaning up the mess, I caught myself feeling more embarrassed than frustrated, which surprised me.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "After watching a few others, I tried loosening my grip and letting my hands guide rather than control the shape, which helped a little.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although the instructor warned us at the start that working with clay takes patience and won’t be easy, I underestimated how tricky the basics might actually be.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "She suggested, \"Try working a little more slowly and regularly pausing to check the thickness, rather than getting anxious and speeding through each step.\"",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "In retrospect, I might have made more progress by accepting feedback earlier rather than waiting until I felt stuck.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 16
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "signed up for",
+      "meaning_es": "me inscribí en",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "warned us at the start",
+      "meaning_es": "nos advirtió al principio",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "caught myself feeling",
+      "meaning_es": "me di cuenta de que sentía",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "laugh it off",
+      "meaning_es": "tomárselo con humor",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "ask the instructor for feedback",
+      "meaning_es": "pedirle retroalimentación al instructor",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "keep running into issues",
+      "meaning_es": "seguir teniendo problemas",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "moving on",
+      "meaning_es": "continuar",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "took our discussion seriously",
+      "meaning_es": "te tomaste en serio nuestra conversación",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces para practicar comprensión y pronunciación.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras señalan pausas naturales para entrenamiento, pero deben mantenerse las frases completas.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I realized afterwards that I had been gripping the sides too tightly,",
+              "which was probably a nervous response",
+              "rather than a deliberate technique."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "She suggested,",
+              "\"Try working a little more slowly and regularly pausing to check the thickness,",
+              "rather than getting anxious and speeding through each step.\""
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "By consciously balancing careful checking with steady movement,",
+              "I found I could shape the clay more confidently,",
+              "even if the results weren’t perfect."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos de la historia en voz alta, procurando claridad y ritmo natural, sin pausar innecesariamente entre oraciones.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-014",
+    "number": "014",
+    "title_en": "Learning a New Skill",
+    "title_es": "Aprender una habilidad nueva",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Unirse a una clase creativa, afrontar dificultades iniciales y negociar expectativas de mejora",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect continuous",
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Concessive clause",
+      "Rather than + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

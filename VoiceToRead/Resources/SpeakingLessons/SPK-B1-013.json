@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-013",
+  "number": 13,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Celebration",
+    "es": "Organizar una celebración"
+  },
+  "category": {
+    "en": "Everyday Communication",
+    "es": "Comunicación cotidiana"
+  },
+  "main_topic": {
+    "en": "Agreeing on a small celebration, deciding guests, assigning tasks, and discussing practical limits.",
+    "es": "Poner de acuerdo sobre una pequeña celebración, decidir invitados, asignar tareas y hablar de límites prácticos."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Grupo diverso de adultos planificando juntos una pequeña celebración, sentados alrededor de una mesa con blocs de notas y teléfonos.",
+    "prompt": "A realistic editorial photograph of a diverse group of adults planning a small celebration, seated around a table with notebooks, coffee, and smartphones, casual daylight setting. No visible text. Horizontal 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Plantear y aceptar ideas para una fiesta sencilla.",
+    "Elegir invitados y repartir tareas prácticas.",
+    "Expresar restricciones de presupuesto y tiempo.",
+    "Discutir experiencias pasadas y planes futuros.",
+    "Practicar comprensión y repetición oral clara."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, my friends and I started talking about having a celebration for our coworker's promotion.",
+      "es": "La semana pasada, mis amigos y yo comenzamos a hablar sobre hacer una celebración por el ascenso de nuestro compañero."
+    },
+    {
+      "number": 2,
+      "function": "invitation",
+      "en": "Ben suggested that we could meet after work for something simple, like pizza and cake.",
+      "es": "Ben sugirió que podríamos reunirnos después del trabajo para algo sencillo, como pizza y pastel."
+    },
+    {
+      "number": 3,
+      "function": "agreement",
+      "en": "Everyone agreed that a relaxed get-together would be nice, rather than planning a big party.",
+      "es": "Todos estuvieron de acuerdo en que una reunión relajada estaría bien, en vez de organizar una gran fiesta."
+    },
+    {
+      "number": 4,
+      "function": "past_experience",
+      "en": "We remembered how our last party was too crowded and exhausting for most of us.",
+      "es": "Recordamos cómo nuestra última fiesta estuvo demasiado llena y fue agotadora para la mayoría de nosotros."
+    },
+    {
+      "number": 5,
+      "function": "practical_limit",
+      "en": "Sarah mentioned that we should keep the guest list short, since the office closes early and space is limited.",
+      "es": "Sarah mencionó que deberíamos mantener la lista de invitados corta, ya que la oficina cierra temprano y el espacio es limitado."
+    },
+    {
+      "number": 6,
+      "function": "decision",
+      "en": "After talking a bit, we decided to invite just our small team and the manager.",
+      "es": "Después de hablar un poco, decidimos invitar solo a nuestro pequeño equipo y al gerente."
+    },
+    {
+      "number": 7,
+      "function": "suggestion",
+      "en": "David asked whether we needed decorations, or if keeping things simple would be better.",
+      "es": "David preguntó si necesitábamos decoraciones o si sería mejor mantener las cosas simples."
+    },
+    {
+      "number": 8,
+      "function": "agreement_simple",
+      "en": "Most people felt that a few balloons and a sign would be enough, even though some love big decorations.",
+      "es": "La mayoría pensó que algunos globos y un cartel serían suficientes, aunque a algunos les encantan las grandes decoraciones."
+    },
+    {
+      "number": 9,
+      "function": "task_assignment",
+      "en": "I offered to order the pizza before the celebration and pick up the cake on my way.",
+      "es": "Me ofrecí a pedir la pizza antes de la celebración y recoger el pastel de camino."
+    },
+    {
+      "number": 10,
+      "function": "task_assignment",
+      "en": "Sarah said she could buy drinks and napkins without spending too much money.",
+      "es": "Sarah dijo que podía comprar bebidas y servilletas sin gastar demasiado dinero."
+    },
+    {
+      "number": 11,
+      "function": "resource_check",
+      "en": "Someone asked if we should bring plates and cups, since the kitchen sometimes runs out.",
+      "es": "Alguien preguntó si deberíamos llevar platos y vasos, ya que a veces se acaban en la cocina."
+    },
+    {
+      "number": 12,
+      "function": "tension_budget",
+      "en": "Ben reminded us that we needed to set a budget, because we do not get extra funds from work.",
+      "es": "Ben nos recordó que debíamos fijar un presupuesto, porque no recibimos fondos extra del trabajo."
+    },
+    {
+      "number": 13,
+      "function": "solution_budget",
+      "en": "We agreed that everyone would give a few dollars, and I made a list of costs while we talked.",
+      "es": "Acordamos que todos aportarían unos pocos dólares, y yo hice una lista de los gastos mientras hablábamos."
+    },
+    {
+      "number": 14,
+      "function": "expectation",
+      "en": "This time, we planned everything ahead, so no one would end up doing all the work.",
+      "es": "Esta vez, planeamos todo con anticipación, para que nadie termine haciendo todo el trabajo."
+    },
+    {
+      "number": 15,
+      "function": "memory",
+      "en": "I remembered how I had forgotten the napkins last time and wanted to avoid small problems.",
+      "es": "Recordé cómo había olvidado las servilletas la vez pasada y quería evitar problemas pequeños."
+    },
+    {
+      "number": 16,
+      "function": "final_agreement",
+      "en": "We reviewed the plan together and made sure everyone knew what to do before leaving.",
+      "es": "Revisamos el plan juntos y nos aseguramos de que todos supieran qué hacer antes de irnos."
+    },
+    {
+      "number": 17,
+      "function": "doubt",
+      "en": "Someone said the manager might leave early, so we agreed to start right after work ends.",
+      "es": "Alguien dijo que el gerente podría irse temprano, así que acordamos empezar justo después de que termine el trabajo."
+    },
+    {
+      "number": 18,
+      "function": "anticipation",
+      "en": "Now, we are all looking forward to celebrating and making our coworker feel appreciated.",
+      "es": "Ahora, todos esperamos con entusiasmo la celebración y hacer que nuestro compañero se sienta valorado."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Although it is a small celebration, it means a lot because everyone is involved and helped plan it.",
+      "es": "Aunque es una pequeña celebración, significa mucho porque todos están involucrados y ayudaron a planearla."
+    },
+    {
+      "number": 20,
+      "function": "result",
+      "en": "By working together without rushing, we created a simple plan that everyone likes.",
+      "es": "Al trabajar juntos sin prisas, creamos un plan sencillo que a todos les gusta."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "I remembered how I had forgotten the napkins last time and wanted to avoid small problems.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "David asked whether we needed decorations, or if keeping things simple would be better.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Most people felt that a few balloons and a sign would be enough, even though some love big decorations.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Everyone agreed that a relaxed get-together would be nice, rather than planning a big party.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Sarah said she could buy drinks and napkins without spending too much money.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "By working together without rushing, we created a simple plan that everyone likes.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After talking a bit, we decided to invite just our small team and the manager.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "Someone said the manager might leave early, so we agreed to start right after work ends.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "started talking about",
+      "meaning_es": "empezaron a hablar sobre",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "keep the guest list short",
+      "meaning_es": "mantener la lista de invitados corta",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "decided to invite",
+      "meaning_es": "decidieron invitar",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "keeping things simple",
+      "meaning_es": "mantener las cosas simples",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "offered to order",
+      "meaning_es": "se ofreció a pedir",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "runs out",
+      "meaning_es": "se acaba",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "set a budget",
+      "meaning_es": "fijar un presupuesto",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "looking forward to",
+      "meaning_es": "esperar con entusiasmo",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Everyone agreed that a relaxed get-together would be nice,",
+              "rather than planning a big party."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "Ben reminded us that we needed to set a budget,",
+              "because we do not get extra funds from work."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Although it is a small celebration,",
+              "it means a lot",
+              "because everyone is involved and helped plan it."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-013",
+    "number": "013",
+    "title_en": "Planning a Celebration",
+    "title_es": "Organizar una celebración",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Comunicación cotidiana",
+    "main_topic_es": "Ponerse de acuerdo sobre una celebración y distribuir tareas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund",
+      "Might for possibility"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

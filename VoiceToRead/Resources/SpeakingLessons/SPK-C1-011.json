@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-011",
+  "number": 11,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Ordering Food at a Restaurant",
+    "es": "Pedir comida en un restaurante"
+  },
+  "category": {
+    "en": "Everyday Communication",
+    "es": "Comunicación cotidiana"
+  },
+  "main_topic": {
+    "en": "A restaurant visit: ask about the menu, explain preferences, clarify an order and negotiate expectations.",
+    "es": "Una visita a un restaurante: preguntar sobre el menú, explicar preferencias, aclarar un pedido y negociar expectativas."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Un adulto estadounidense hablando con un camarero en un restaurante elegante, pidiendo comida y aclarando el pedido.",
+    "prompt": "Realistic editorial photo, adult American diner speaking with a waiter at a stylish restaurant, ordering and clarifying food preferences, daylight, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Pedir detalles sobre el menú de manera educada y precisa.",
+    "Explicar preferencias y restricciones alimenticias de manera flexible.",
+    "Negociar y matizar expectativas al conversar con camareros o compañeros.",
+    "Interpretar y producir estructuras complejas para clarificar pedidos.",
+    "Practicar lectura y repetición fluida en un contexto realista."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "set_scene",
+      "en": "Last Friday evening, a friend and I decided to treat ourselves to dinner at a popular new restaurant downtown after hearing mixed reviews.",
+      "es": "El viernes pasado por la noche, un amigo y yo decidimos darnos un gusto en un popular restaurante nuevo en el centro después de escuchar opiniones variadas."
+    },
+    {
+      "number": 2,
+      "function": "seating",
+      "en": "Although we hadn’t made a reservation, the host was able to seat us after only twenty minutes, which felt unexpectedly fortunate.",
+      "es": "Aunque no habíamos hecho una reserva, el anfitrión pudo acomodarnos después de solo veinte minutos, lo cual nos pareció inesperadamente afortunado."
+    },
+    {
+      "number": 3,
+      "function": "observation",
+      "en": "Glancing over the menu, I realized that many dishes sounded appealing, but some ingredients weren't clearly described, so I wanted to ask for clarification.",
+      "es": "Al revisar el menú, me di cuenta de que muchos platos parecían apetitosos, pero algunos ingredientes no estaban claramente descritos, así que quise pedir una aclaración."
+    },
+    {
+      "number": 4,
+      "function": "request",
+      "en": "When the server asked if we had any questions, I said, 'Could you please explain what’s included in the chef’s special tonight?'",
+      "es": "Cuando el camarero preguntó si teníamos alguna duda, le dije: '¿Podría explicarme qué incluye el especial del chef esta noche?'"
+    },
+    {
+      "number": 5,
+      "function": "server_response",
+      "en": "She described the dish in detail, but I hesitated because I’m not used to eating spicy food and the description mentioned chili oil.",
+      "es": "Ella describió el plato con detalle, pero dudé porque no suelo comer comida picante y la descripción mencionaba aceite de chile."
+    },
+    {
+      "number": 6,
+      "function": "preference",
+      "en": "I clarified, 'I usually avoid very spicy options, so would it be possible to have the sauce served on the side rather than adding it directly?'",
+      "es": "Aclaré: 'Normalmente evito las opciones muy picantes, ¿sería posible poner la salsa aparte en lugar de añadirla directamente?'"
+    },
+    {
+      "number": 7,
+      "function": "negotiation",
+      "en": "The server replied that the kitchen could accommodate my request, although she noted that some spice might still remain because of the marinade used beforehand.",
+      "es": "La camarera respondió que la cocina podía atender mi petición, aunque señaló que aún podría quedar algo de picante debido al adobo utilizado previamente."
+    },
+    {
+      "number": 8,
+      "function": "decision",
+      "en": "After having thought about it, I decided to order the chef’s special anyway, while my friend, who is a vegetarian, wanted to inquire about alternatives.",
+      "es": "Después de pensarlo, decidí pedir el especial del chef de todos modos, mientras que mi amigo, que es vegetariano, quería consultar sobre alternativas."
+    },
+    {
+      "number": 9,
+      "function": "compromise",
+      "en": "My friend asked if the kitchen might prepare the mushroom risotto without parmesan, since she prefers to avoid dairy whenever possible.",
+      "es": "Mi amigo preguntó si la cocina podría preparar el risotto de champiñones sin parmesano, ya que prefiere evitar los lácteos siempre que es posible."
+    },
+    {
+      "number": 10,
+      "function": "server_compromise",
+      "en": "The server confirmed, 'They can make it without cheese and substitute olive oil for extra flavor, if you'd like.'",
+      "es": "La camarera confirmó: 'Pueden hacerlo sin queso y sustituirlo por aceite de oliva para dar más sabor, si lo desea.'"
+    },
+    {
+      "number": 11,
+      "function": "expectations",
+      "en": "While discussing drinks, I mentioned I had never tried their homemade lemonade, so I asked whether it was very sweet or more tart.",
+      "es": "Al hablar de las bebidas, mencioné que nunca había probado su limonada casera, así que pregunté si era muy dulce o más ácida."
+    },
+    {
+      "number": 12,
+      "function": "server_differentiates",
+      "en": "She explained, 'It tends to be more on the tart side, but we're able to sweeten it a bit more if you prefer.'",
+      "es": "Ella explicó: 'Tiende más a ser ácida, pero podemos endulzarla un poco más si lo prefiere.'"
+    },
+    {
+      "number": 13,
+      "function": "finalize_order",
+      "en": "Given that flexibility, I replied that a slightly tart lemonade sounded perfect without extra sugar, and my friend ordered sparkling water.",
+      "es": "Dada esa flexibilidad, respondí que una limonada ligeramente ácida sonaba perfecta sin azúcar extra, y mi amigo pidió agua con gas."
+    },
+    {
+      "number": 14,
+      "function": "surprise",
+      "en": "After we ordered, the server returned a few minutes later to confirm I wanted the chef’s special with the sauce on the side, which reassured me.",
+      "es": "Después de que ordenamos, la camarera regresó unos minutos después para confirmar que quería el especial del chef con la salsa aparte, lo que me tranquilizó."
+    },
+    {
+      "number": 15,
+      "function": "waiting",
+      "en": "While we were waiting for our food, my friend remarked that the restaurant’s background music was lively but not overwhelming, which helped us relax.",
+      "es": "Mientras esperábamos la comida, mi amigo comentó que la música de fondo del restaurante era animada pero no abrumadora, lo que nos ayudó a relajarnos."
+    },
+    {
+      "number": 16,
+      "function": "arrival_food",
+      "en": "Once the dishes arrived, I tasted the chef’s special and realized the flavors were bold, yet the heat was manageable since the sauce had been kept separate.",
+      "es": "Cuando llegaron los platos, probé el especial del chef y noté que los sabores eran intensos, pero el picante era manejable ya que la salsa se había mantenido aparte."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "I thanked the server for accommodating our requests, mentioning that her attention had made the experience much smoother than I had expected given the initial rush.",
+      "es": "Agradecí a la camarera por atender nuestras peticiones, mencionando que su atención había hecho la experiencia mucho más fluida de lo que esperaba dada la prisa inicial."
+    },
+    {
+      "number": 18,
+      "function": "evaluation",
+      "en": "Even though the restaurant was quite busy, we never felt neglected, and it was encouraging to see how readily the staff responded to our needs.",
+      "es": "Aunque el restaurante estaba bastante lleno, nunca nos sentimos desatendidos y fue alentador ver lo bien que el personal respondió a nuestras necesidades."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "Before leaving, I noted that I would probably return, given how effectively the team handled dietary preferences without making anything awkward.",
+      "es": "Antes de irnos, observé que probablemente volvería, dada la efectividad con la que el equipo manejó las preferencias alimentarias sin incomodidad alguna."
+    },
+    {
+      "number": 20,
+      "function": "future_expectation",
+      "en": "Next time, I might try something new from the menu by asking for recommendations, since this experience showed how much can be gained by clarifying and negotiating politely.",
+      "es": "La próxima vez, podría probar algo nuevo del menú pidiendo recomendaciones, pues esta experiencia demostró cuánto se puede ganar al aclarar y negociar con cortesía."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "Once the dishes arrived, I tasted the chef’s special and realized the flavors were bold, yet the heat was manageable since the sauce had been kept separate.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "While we were waiting for our food, my friend remarked that the restaurant’s background music was lively but not overwhelming, which helped us relax.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Although we hadn’t made a reservation, the host was able to seat us after only twenty minutes, which felt unexpectedly fortunate.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "When the server asked if we had any questions, I said, 'Could you please explain what’s included in the chef’s special tonight?'",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "The server replied that the kitchen could accommodate my request, although she noted that some spice might still remain because of the marinade used beforehand.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "I clarified, 'I usually avoid very spicy options, so would it be possible to have the sauce served on the side rather than adding it directly?'",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Before leaving, I noted that I would probably return, given how effectively the team handled dietary preferences without making anything awkward.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Next time, I might try something new from the menu by asking for recommendations, since this experience showed how much can be gained by clarifying and negotiating politely.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 20
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "treat ourselves to dinner",
+      "meaning_es": "darnos un gusto con una cena",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "was able to seat us",
+      "meaning_es": "pudo acomodarnos",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "ask for clarification",
+      "meaning_es": "pedir una aclaración",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Could you please explain",
+      "meaning_es": "¿Podría explicar...?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "accommodate my request",
+      "meaning_es": "atender mi petición",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "served on the side",
+      "meaning_es": "servido aparte",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "tends to be",
+      "meaning_es": "tiende a ser",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "handled dietary preferences",
+      "meaning_es": "manejó las preferencias alimentarias",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras representan pausas naturales en el discurso.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "Although we hadn’t made a reservation,",
+              "the host was able to seat us after only twenty minutes,",
+              "which felt unexpectedly fortunate."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "After having thought about it,",
+              "I decided to order the chef’s special anyway,",
+              "while my friend, who is a vegetarian,",
+              "wanted to inquire about alternatives."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Before leaving,",
+              "I noted that I would probably return,",
+              "given how effectively the team handled dietary preferences",
+              "without making anything awkward."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, manteniendo el ritmo y la entonación naturales.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-011",
+    "number": "011",
+    "title_en": "Ordering Food at a Restaurant",
+    "title_es": "Pedir comida en un restaurante",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Comunicación cotidiana",
+    "main_topic_es": "Una visita a un restaurante: pedir y negociar de manera flexible y precisa",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

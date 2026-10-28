@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-019",
+  "number": 19,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Working Together on a Deadline",
+    "es": "Trabajar juntos con una fecha límite"
+  },
+  "category": {
+    "en": "Professional Collaboration and Communication",
+    "es": "Colaboración y comunicación profesional"
+  },
+  "main_topic": {
+    "en": "Collaborative project management under deadline, negotiating expectations, clarifying roles, and reporting progress.",
+    "es": "Gestión colaborativa de proyectos con plazo, negociar expectativas, clarificar roles e informar avances."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Tres colegas reunidos debatiendo un proyecto con portátiles y papeles mientras miran un reloj de pared.",
+    "prompt": "Realistic editorial photograph, three diverse adults collaborating on a work project at a table with laptops, documents, a wall clock in view, office with natural lighting, 16:9 aspect",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Negociar y aclarar roles y expectativas en proyectos colaborativos.",
+    "Comunicar el progreso y los obstáculos de forma matizada y profesional.",
+    "Matizar acuerdos, prometer con cautela y ceder ante limitaciones.",
+    "Comparar prioridades y justificar decisiones bajo presión.",
+    "Practicar recursos flexibles y formales de negociación y acuerdo en inglés avanzado."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Friday, my manager assembled our small team to develop a client proposal due the following Wednesday, and she made it clear time was crucial.",
+      "es": "El viernes pasado, mi jefa reunió a nuestro pequeño equipo para preparar una propuesta para el cliente que debía entregarse el miércoles siguiente, y dejó claro que el tiempo era fundamental."
+    },
+    {
+      "number": 2,
+      "function": "role_assignment",
+      "en": "Although I usually wrote the technical sections, my colleague Maya suggested I could oversee the timeline since I had managed similar tasks before.",
+      "es": "Aunque normalmente escribía las secciones técnicas, mi compañera Maya propuso que yo podría supervisar el cronograma ya que había gestionado tareas similares antes."
+    },
+    {
+      "number": 3,
+      "function": "scope_setting",
+      "en": "We quickly agreed that, rather than attempting every advanced feature, it would be wiser to focus on what we could realistically deliver.",
+      "es": "Rápidamente acordamos que, en vez de intentar incluir todas las funciones avanzadas, sería más sensato centrarnos en lo que podríamos entregar realísticamente."
+    },
+    {
+      "number": 4,
+      "function": "anticipating_conflict",
+      "en": "By discussing priorities, we each shared concerns about promising too much, and agreed to clarify any uncertainties with the client before confirming the scope.",
+      "es": "Al hablar de prioridades, cada uno expresó su inquietud por prometer demasiado y acordamos aclarar cualquier duda con el cliente antes de definir el alcance."
+    },
+    {
+      "number": 5,
+      "function": "progress_update_1",
+      "en": "On Monday, Maya sent a quick update, but she admitted she wasn't sure if her data analysis would be ready on time.",
+      "es": "El lunes, Maya envió una actualización rápida, pero admitió que no estaba segura de si su análisis de datos estaría listo a tiempo."
+    },
+    {
+      "number": 6,
+      "function": "suggestion",
+      "en": "I offered to support her with some formatting, even though that meant postponing a section I had intended to polish further.",
+      "es": "Me ofrecí a ayudarle con el formato, aunque eso significaba posponer una sección que pretendía perfeccionar un poco más."
+    },
+    {
+      "number": 7,
+      "function": "negotiation_1",
+      "en": "Alex, who managed the visuals, proposed that the draft could be submitted without graphics first, in case there were last-minute changes.",
+      "es": "Alex, que se encargaba de los gráficos, propuso que enviáramos el borrador primero sin imágenes, en caso de que hubiera cambios de último momento."
+    },
+    {
+      "number": 8,
+      "function": "competing_constraints",
+      "en": "We debated whether skipping the visuals would weaken our presentation, but agreed it was better to ensure the core content was solid by the deadline.",
+      "es": "Debatimos si omitir los gráficos debilitaría nuestra presentación, pero acordamos que era mejor asegurar que el contenido principal fuera sólido para la fecha límite."
+    },
+    {
+      "number": 9,
+      "function": "qualifying_commitments",
+      "en": "I told the team, \"We can finish the draft by Tuesday evening as long as nobody adds new sections that haven’t been discussed.\"",
+      "es": "Le dije al equipo: \"Podemos terminar el borrador para el martes por la tarde siempre que nadie agregue nuevas secciones que no hayamos hablado.\""
+    },
+    {
+      "number": 10,
+      "function": "feedback_loop",
+      "en": "Maya pointed out she might have underestimated the workload and, after our call, admitted she should have flagged risks earlier.",
+      "es": "Maya señaló que quizá había subestimado la carga de trabajo y, después de nuestra llamada, admitió que debería haber señalado los riesgos antes."
+    },
+    {
+      "number": 11,
+      "function": "adjusting_expectations",
+      "en": "I acknowledged, \"If we meet the deadline, it’ll be with a few features left out, but the proposal will still offer a compelling solution.\"",
+      "es": "Reconocí: \"Si llegamos a la fecha límite, será dejando fuera algunas funciones, pero la propuesta seguirá siendo una solución convincente.\""
+    },
+    {
+      "number": 12,
+      "function": "compromise",
+      "en": "We decided not to mention the omitted features up front, but agreed to add a footnote outlining suggested future enhancements.",
+      "es": "Decidimos no mencionar de entrada las funciones omitidas, pero acordamos agregar una nota con mejoras sugeridas para el futuro."
+    },
+    {
+      "number": 13,
+      "function": "shortcut",
+      "en": "Alex shared a quick template that made updating the structure much more efficient, saving us time without sacrificing coherence.",
+      "es": "Alex compartió una plantilla rápida que hizo mucho más eficiente la actualización de la estructura, ahorrándonos tiempo sin sacrificar coherencia."
+    },
+    {
+      "number": 14,
+      "function": "sudden_obstacle",
+      "en": "Late Tuesday, the client emailed asking whether we could present an early preview, which put extra pressure on an already packed day.",
+      "es": "El martes por la noche el cliente envió un correo preguntando si podíamos hacer una vista previa antes, lo cual añadió presión a un día ya cargado."
+    },
+    {
+      "number": 15,
+      "function": "reasoning_through_limitations",
+      "en": "I explained, \"We could show a partial demo, but only if we clarify that it might not include every finalized detail.\"",
+      "es": "Expliqué: \"Podríamos mostrar una demostración parcial, pero solo si aclaramos que quizá no incluya todos los detalles finales.\""
+    },
+    {
+      "number": 16,
+      "function": "conceding_points",
+      "en": "Maya conceded that, rather than delaying everything for perfection, we needed to deliver our best version under the circumstances.",
+      "es": "Maya concedió que, en vez de retrasar todo por perfección, debíamos entregar nuestra mejor versión dadas las circunstancias."
+    },
+    {
+      "number": 17,
+      "function": "final_negotiation",
+      "en": "Before sending the draft, I double-checked with the team that, even though the proposal wasn't flawless, we all felt comfortable signing off on it.",
+      "es": "Antes de enviar el borrador, verifiqué con el equipo que, aunque la propuesta no era perfecta, todos nos sentíamos cómodos aprobándola."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "We submitted the proposal early Wednesday, including a note on realistic timelines and a list of enhancements recommended for future versions.",
+      "es": "Enviamos la propuesta el miércoles temprano, incluyendo una nota sobre los plazos realistas y una lista de mejoras recomendadas para futuras versiones."
+    },
+    {
+      "number": 19,
+      "function": "reaction",
+      "en": "The client replied by midday, thanking us for our transparency and practical focus, and indicated that our solution was under serious consideration.",
+      "es": "El cliente respondió al mediodía, agradeciéndonos la transparencia y el enfoque práctico, e indicó que nuestra solución estaba siendo considerada seriamente."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "Looking back, I realized that by communicating openly and qualifying our promises, we built trust and delivered without overextending ourselves.",
+      "es": "Al mirar atrás, me di cuenta de que al comunicar con transparencia y matizar nuestras promesas, generamos confianza y cumplimos sin excedernos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "Maya pointed out she might have underestimated the workload and, after our call, admitted she should have flagged risks earlier.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Although I usually wrote the technical sections, my colleague Maya suggested I could oversee the timeline since I had managed similar tasks before.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Alex, who managed the visuals, proposed that the draft could be submitted without graphics first, in case there were last-minute changes.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "I offered to support her with some formatting, even though that meant postponing a section I had intended to polish further.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "We quickly agreed that, rather than attempting every advanced feature, it would be wiser to focus on what we could realistically deliver.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Alex shared a quick template that made updating the structure much more efficient, saving us time without sacrificing coherence.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "By discussing priorities, we each shared concerns about promising too much, and agreed to clarify any uncertainties with the client before confirming the scope.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "Before sending the draft, I double-checked with the team that, even though the proposal wasn't flawless, we all felt comfortable signing off on it.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "time was crucial",
+      "meaning_es": "el tiempo era fundamental",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "focus on what we could realistically deliver",
+      "meaning_es": "centrarnos en lo que podríamos entregar realísticamente",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "clarify any uncertainties",
+      "meaning_es": "aclarar cualquier duda",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "offered to support her",
+      "meaning_es": "me ofrecí a ayudarle",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "proposed that the draft could be submitted",
+      "meaning_es": "propuso que enviáramos el borrador",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "underestimated the workload",
+      "meaning_es": "subestimado la carga de trabajo",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "double-checked with the team",
+      "meaning_es": "verifiqué con el equipo",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "communicating openly",
+      "meaning_es": "comunicar con transparencia",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Comprensión de lectura",
+        "instructions_es": "Lee cada párrafo en inglés; consulta la traducción y repítelo dos veces para consolidar la comprensión.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica las frases separadas por barras; cada segmento representa un grupo de sentido natural en la oración original.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "We quickly agreed that,",
+              "rather than attempting every advanced feature,",
+              "it would be wiser to focus on what we could realistically deliver."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "I told the team,",
+              "\"We can finish the draft by Tuesday evening",
+              "as long as nobody adds new sections that haven’t been discussed.\""
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "I acknowledged,",
+              "\"If we meet the deadline, it’ll be with a few features left out,",
+              "but the proposal will still offer a compelling solution.\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, prestando especial atención a la entonación y la fluidez.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-019",
+    "number": "019",
+    "title_en": "Working Together on a Deadline",
+    "title_es": "Trabajar juntos con una fecha límite",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Colaboración y comunicación profesional",
+    "main_topic_es": "Gestión colaborativa de proyectos con plazo y negociación de expectativas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Relative clause with who/which",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Comprensión de lectura",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

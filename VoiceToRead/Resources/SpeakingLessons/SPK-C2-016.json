@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-016",
+  "number": 16,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Owning a Mistake and Making It Right",
+    "es": "Reconocer un error y repararlo"
+  },
+  "category": {
+    "en": "Professional Communication and Relationships",
+    "es": "Comunicación profesional y relaciones"
+  },
+  "main_topic": {
+    "en": "Notice a real coordination mistake, explain without excuses, listen and agree a proportionate repair.",
+    "es": "Detectar un error real de coordinación, explicarlo sin excusas, escuchar y acordar una reparación proporcional."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos colegas adultos conversando en la oficina, uno reconoce un error y el otro escucha atentamente.",
+    "prompt": "Editorial candid photo, two adult colleagues in an office, one explaining a mistake calmly while the other listens and nods, natural daylight, neutral decor, both look professional and focused, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Redactar admisiones de responsabilidad usando matices adecuados.",
+    "Describir y analizar errores de coordinación en contextos profesionales.",
+    "Negociar soluciones proporcionales según el impacto del error.",
+    "Interpretar respuestas ambiguas e identificar sentimientos subyacentes.",
+    "Vocalizar acuerdos, matizar desacuerdos y reformular puntos delicados."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This morning, when I reviewed my calendar, I realized I had missed forwarding the final draft to Carla yesterday—even though she’d asked for it by noon.",
+      "es": "Esta mañana, al revisar mi agenda, me di cuenta de que no había enviado el borrador final a Carla ayer, aunque ella lo había solicitado antes del mediodía."
+    },
+    {
+      "number": 2,
+      "function": "admission",
+      "en": "Instead of rationalizing the oversight, I went directly to her office, prepared to acknowledge the error fully.",
+      "es": "En vez de justificar el descuido, fui directamente a su oficina, dispuesto a reconocer el error por completo."
+    },
+    {
+      "number": 3,
+      "function": "opening_dialogue",
+      "en": "\"Carla,\" I began, \"I should have messaged you the draft by noon yesterday, but I didn’t. There’s no excuse—I simply missed it.\"",
+      "es": "\"Carla\", empecé, \"debí haberte enviado el borrador antes del mediodía de ayer, pero no lo hice. No hay excusa, simplemente se me pasó.\""
+    },
+    {
+      "number": 4,
+      "function": "response",
+      "en": "She looked up, a little surprised, and said, \"I noticed it was missing, which delayed consolidating the report, but I’m glad you brought it up.\"",
+      "es": "Ella levantó la mirada, un poco sorprendida, y dijo: \"Noté que faltaba, lo que retrasó la consolidación del informe, pero me alegra que lo menciones.\""
+    },
+    {
+      "number": 5,
+      "function": "reflect_impact",
+      "en": "I asked whether my mistake had created further setbacks beyond today’s delay, emphasizing that my intention was to understand the impact, not diminish it.",
+      "es": "Le pregunté si mi error había causado más retrasos aparte del de hoy, subrayando que mi intención era comprender el impacto, no restarlo."
+    },
+    {
+      "number": 6,
+      "function": "clarify",
+      "en": "She said, \"It’s not catastrophic, but I had to put other tasks on hold while waiting—so it did disrupt my schedule.\"",
+      "es": "Ella respondió: \"No es catastrófico, pero tuve que dejar otras tareas en pausa mientras esperaba, así que sí alteró mi agenda.\""
+    },
+    {
+      "number": 7,
+      "function": "interpret_ambiguity",
+      "en": "Although she sounded matter-of-fact, I sensed a lingering irritation beneath her even tone, so I acknowledged that possibility openly.",
+      "es": "Aunque sonaba objetiva, percibí cierta irritación debajo de su tono neutral, así que lo reconocí abiertamente."
+    },
+    {
+      "number": 8,
+      "function": "restatement",
+      "en": "I said, \"I realize this probably put you in an uncomfortable spot, and I’m sorry to have disrupted your workflow—especially since it could have been avoided.\"",
+      "es": "Dije: \"Me doy cuenta de que esto seguramente te puso en una situación incómoda, y lamento haber interrumpido tu trabajo, sobre todo porque se podía haber evitado.\""
+    },
+    {
+      "number": 9,
+      "function": "response_neutral",
+      "en": "“I appreciate the directness,” she replied, adding that she would rather address these hiccups directly than resent them in silence.",
+      "es": "\"Agradezco tu franqueza\", respondió, añadiendo que prefería abordar estos contratiempos de forma directa y no guardar resentimiento en silencio."
+    },
+    {
+      "number": 10,
+      "function": "negotiate_repair",
+      "en": "Without pushing a predetermined solution, I asked, \"Would it help if I took over the summary section for you this afternoon to offset the lost time?\"",
+      "es": "Sin imponer una solución de antemano, pregunté: \"¿Te ayudaría si yo me hago cargo de la sección del resumen esta tarde para compensar el tiempo perdido?\""
+    },
+    {
+      "number": 11,
+      "function": "listen",
+      "en": "Carla paused, considering, then said, \"That would actually make a difference, since I'm still catching up.\"",
+      "es": "Carla se detuvo a pensar y luego dijo: \"Eso sí me ayudaría, ya que todavía estoy poniéndome al día.\""
+    },
+    {
+      "number": 12,
+      "function": "calibrate_proposal",
+      "en": "I suggested, \"Alternatively, if there’s a different part you’d rather delegate, I’m flexible—just let me know what’s most useful.\"",
+      "es": "Sugerí: \"O si prefieres delegar otra parte, soy flexible; dime qué te sería más útil.\""
+    },
+    {
+      "number": 13,
+      "function": "agree_action",
+      "en": "She responded, \"Since you know the summary background, it would save me the most time if you handle that while I focus on the charts.\"",
+      "es": "Ella respondió: \"Como ya conoces los antecedentes del resumen, ahorrarías más tiempo si te encargas tú y yo me centro en los gráficos.\""
+    },
+    {
+      "number": 14,
+      "function": "precise_outcome",
+      "en": "We agreed that I’d draft the summary and send it to her before four, checking in if I had questions rather than risking new gaps.",
+      "es": "Acordamos que yo prepararía el resumen y se lo enviaría antes de las cuatro, consultándole si surgía alguna duda en vez de arriesgar nuevos vacíos."
+    },
+    {
+      "number": 15,
+      "function": "bridge_register",
+      "en": "\"Carla, I want you to know this isn’t about formality—if you notice anything that could prevent issues in future, I’m open to your suggestions.\"",
+      "es": "\"Carla, quiero que sepas que esto no es sólo una formalidad. Si ves algo que pueda evitar problemas en el futuro, estoy atento a tus sugerencias.\""
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "She replied, \"Thank you. It helps to have things spelled out instead of assuming we’re on the same page when sometimes we aren’t.\"",
+      "es": "Respondió: \"Gracias. Es útil que todo quede claro y no asumir que estamos en sintonía cuando a veces no es así.\""
+    },
+    {
+      "number": 17,
+      "function": "tentative_conclusion",
+      "en": "Before leaving, I confirmed the next steps aloud and reiterated my openness to feedback, not presuming implicit agreement.",
+      "es": "Antes de irme, confirmé en voz alta los próximos pasos y volví a mostrarme abierto a comentarios, sin dar por hecho un acuerdo implícito."
+    },
+    {
+      "number": 18,
+      "function": "reformulate",
+      "en": "I clarified, \"If any part of my summary needs more context, please point it out. I’d rather hear suggestions early than after final submission.\"",
+      "es": "Aclaré: \"Si en mi resumen falta contexto, por favor indícalo. Prefiero recibir sugerencias antes que después del envío final.\""
+    },
+    {
+      "number": 19,
+      "function": "closure_dialogue",
+      "en": "She nodded, finally smiling, and said, \"Let’s just keep checking in if something slips through. No need to let it pile up.\"",
+      "es": "Asintió, sonriendo finalmente, y dijo: \"Mejor seguir revisando entre nosotros si algo se nos escapa, así no se acumulan los errores.\""
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "By being transparent and negotiating a concrete, proportionate repair, I regained her trust and our workflow quickly recovered.",
+      "es": "Al ser transparente y acordar una reparación concreta y proporcional, recuperé su confianza y nuestro flujo de trabajo se normalizó rápidamente."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "\"Carla,\" I began, \"I should have messaged you the draft by noon yesterday, but I didn’t. There’s no excuse—I simply missed it.\"",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "This morning, when I reviewed my calendar, I realized I had missed forwarding the final draft to Carla yesterday—even though she’d asked for it by noon.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "She looked up, a little surprised, and said, \"I noticed it was missing, which delayed consolidating the report, but I’m glad you brought it up.\"",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "She looked up, a little surprised, and said, \"I noticed it was missing, which delayed consolidating the report, but I’m glad you brought it up.\"",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I asked whether my mistake had created further setbacks beyond today’s delay, emphasizing that my intention was to understand the impact, not diminish it.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although she sounded matter-of-fact, I sensed a lingering irritation beneath her even tone, so I acknowledged that possibility openly.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "We agreed that I’d draft the summary and send it to her before four, checking in if I had questions rather than risking new gaps.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Without pushing a predetermined solution, I asked, \"Would it help if I took over the summary section for you this afternoon to offset the lost time?\"",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 10
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "had missed forwarding the final draft",
+      "meaning_es": "no había enviado a tiempo la versión final",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "There’s no excuse",
+      "meaning_es": "no hay excusa",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "understand the impact",
+      "meaning_es": "comprender el impacto",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "a lingering irritation",
+      "meaning_es": "una irritación que aún persistía",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "just let me know",
+      "meaning_es": "solo avísame",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "checking in if I had questions",
+      "meaning_es": "consultando si me surgían preguntas",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "have things spelled out",
+      "meaning_es": "tener las cosas explicadas con claridad",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "No need to let it pile up",
+      "meaning_es": "no hace falta dejar que se acumule",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "This morning,",
+              "when I reviewed my calendar,",
+              "I realized I had missed forwarding the final draft to Carla yesterday—even though she’d asked for it by noon."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "I asked whether my mistake",
+              "had created further setbacks beyond today’s delay,",
+              "emphasizing that my intention",
+              "was to understand the impact, not diminish it."
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "We agreed that I’d draft the summary",
+              "and send it to her before four,",
+              "checking in if I had questions",
+              "rather than risking new gaps."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-016",
+    "number": "016",
+    "title_en": "Owning a Mistake and Making It Right",
+    "title_es": "Reconocer un error y repararlo",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación profesional y relaciones",
+    "main_topic_es": "Reconocer errores de coordinación y reparar de forma proporcional",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

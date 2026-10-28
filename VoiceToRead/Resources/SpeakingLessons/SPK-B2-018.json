@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-018",
+  "number": 18,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Day Outdoors",
+    "es": "Planear un día al aire libre"
+  },
+  "category": {
+    "en": "Leisure and Social Life",
+    "es": "Ocio y vida social"
+  },
+  "main_topic": {
+    "en": "Arrange an easy outdoor outing with different preferences and weather conditions, justifying, comparing, and negotiating choices.",
+    "es": "Organizar una salida sencilla al aire libre considerando preferencias, condiciones del clima y negociando opciones."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Un grupo de adultos conversando y organizando una salida al parque al aire libre, con nubes y una manta de picnic.",
+    "prompt": "Editorial photograph, diverse adults planning an outdoor picnic in a city park, some clouds in the sky, people holding snacks and a phone, friendly atmosphere, vivid natural colors, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar y justificar diferentes preferencias para actividades al aire libre.",
+    "Explicar causas y consecuencias de distintas elecciones.",
+    "Negociar y responder amablemente a objeciones.",
+    "Sugerir alternativas cómodas ante cambios o incertidumbre.",
+    "Practicar la lectura y repetición de inglés natural con matices conversacionales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last weekend, I suggested to my friends that we should spend a day outdoors together, since the weather forecast was promising.",
+      "es": "El fin de semana pasado, sugerí a mis amigos que deberíamos pasar un día juntos al aire libre, ya que el pronóstico del tiempo era favorable."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "Everyone agreed in theory, but each of us had a slightly different idea of what would make the day enjoyable.",
+      "es": "Todos estuvimos de acuerdo en teoría, pero cada uno tenía una idea un poco diferente de lo que haría el día agradable."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "Personally, I would rather spend time relaxing on a picnic blanket, chatting and sharing snacks rather than hiking for hours.",
+      "es": "Personalmente, prefiero pasar el tiempo relajándome sobre una manta de picnic, conversando y compartiendo bocadillos en vez de hacer caminatas por horas."
+    },
+    {
+      "number": 4,
+      "function": "contrast",
+      "en": "However, Zoe prefers to be active whenever we get together, saying she feels restless without moving.",
+      "es": "Sin embargo, Zoe prefiere estar activa cuando nos reunimos, diciendo que se siente inquieta si no se mueve."
+    },
+    {
+      "number": 5,
+      "function": "justification",
+      "en": "I explained, 'After a long week, I find it more restful to just enjoy the outdoors without rushing from place to place.'",
+      "es": "Expliqué: 'Después de una semana larga, me resulta más relajante simplemente disfrutar del aire libre sin tener que ir de un sitio a otro.'"
+    },
+    {
+      "number": 6,
+      "function": "other_preference",
+      "en": "Chris, who has always been curious about local plants, proposed that we could visit the botanical gardens instead.",
+      "es": "Chris, que siempre ha sentido curiosidad por las plantas locales, propuso que podríamos visitar el jardín botánico en su lugar."
+    },
+    {
+      "number": 7,
+      "function": "alternative_option",
+      "en": "Maria added that if the weather changed, we might still have a good time by meeting at a café nearby, since we could talk in comfort.",
+      "es": "María añadió que si el clima cambiaba, aún podríamos pasarlo bien reuniéndonos en un café cercano, ya que podríamos conversar cómodamente."
+    },
+    {
+      "number": 8,
+      "function": "comparison",
+      "en": "Although walking through gardens sounds peaceful, I felt that sitting outside in the park would be more flexible for everyone.",
+      "es": "Aunque pasear por los jardines suena tranquilo, sentía que sentarnos afuera en el parque sería más flexible para todos."
+    },
+    {
+      "number": 9,
+      "function": "concern",
+      "en": "Zoe pointed out there could be crowds in the park, which might make it harder to find a quiet spot.",
+      "es": "Zoe señaló que podría haber multitudes en el parque, lo que podría dificultar encontrar un lugar tranquilo."
+    },
+    {
+      "number": 10,
+      "function": "response",
+      "en": "I responded, 'If we arrive before noon, we are much more likely to get a good location, and the park is big enough that we can spread out.'",
+      "es": "Respondí: 'Si llegamos antes del mediodía, tenemos muchas más posibilidades de conseguir un buen sitio, y el parque es lo suficientemente grande como para estar cómodos.'"
+    },
+    {
+      "number": 11,
+      "function": "objection",
+      "en": "Chris asked whether everyone would be comfortable if the temperature dropped unexpectedly.",
+      "es": "Chris preguntó si todos estarían cómodos en caso de que la temperatura bajara inesperadamente."
+    },
+    {
+      "number": 12,
+      "function": "solution",
+      "en": "Maria suggested bringing extra sweaters and a few thermoses of tea, which could help if it got chilly.",
+      "es": "María sugirió traer suéteres extra y algunos termos de té, lo cual podría ayudar si refrescaba."
+    },
+    {
+      "number": 13,
+      "function": "hypothetical",
+      "en": "I said, 'If the sky looks bad before we leave, we could easily switch to the café plan without wasting time.'",
+      "es": "Dije: 'Si el cielo se ve mal antes de salir, podríamos cambiar rápidamente al plan del café sin perder tiempo.'"
+    },
+    {
+      "number": 14,
+      "function": "qualification",
+      "en": "Chris admitted he would be happy with either option, as long as we weren't outside in heavy rain.",
+      "es": "Chris reconoció que estaría contento con cualquier opción, siempre que no estuviéramos al aire libre bajo una fuerte lluvia."
+    },
+    {
+      "number": 15,
+      "function": "negotiation",
+      "en": "Zoe said, 'What if we meet at the park first, and if it starts raining, just head straight to the café together?'",
+      "es": "Zoe dijo: '¿Qué pasa si primero nos encontramos en el parque y, si empieza a llover, vamos juntos directamente al café?'"
+    },
+    {
+      "number": 16,
+      "function": "support",
+      "en": "Since everyone liked that plan, we agreed to prepare for both options, just by packing light and checking weather updates.",
+      "es": "Como a todos les gustó ese plan, acordamos prepararnos para ambas opciones, solo empacando ligero y revisando el pronóstico del tiempo."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "Looking back, it was easier to coordinate everything after we listened to each other's reasons instead of insisting on only one way.",
+      "es": "Al mirar atrás, fue más sencillo coordinarnos después de escuchar las razones de cada quien en vez de insistir en una sola opción."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "On the actual day, we ended up spending most of our time outdoors, enjoying fresh air and good conversation, although dark clouds passed overhead.",
+      "es": "El día de la salida, terminamos pasando la mayor parte del tiempo al aire libre, disfrutando del aire fresco y una buena charla, aunque pasaron nubes oscuras sobre nosotros."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "When a short rain shower forced us to pack up, we just continued our afternoon at the café, without feeling disappointed.",
+      "es": "Cuando un chaparrón nos obligó a recoger las cosas, simplemente continuamos la tarde en el café, sin sentirnos decepcionados."
+    },
+    {
+      "number": 20,
+      "function": "closing",
+      "en": "Now we all agree that flexible plans work better for our group than sticking to a strict schedule.",
+      "es": "Ahora todos estamos de acuerdo en que los planes flexibles funcionan mejor para nuestro grupo que seguir un horario estricto."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect",
+      "example_en": "Chris, who has always been curious about local plants, proposed that we could visit the botanical gardens instead.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "Last weekend, I suggested to my friends that we should spend a day outdoors together, since the weather forecast was promising.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Zoe pointed out there could be crowds in the park, which might make it harder to find a quiet spot.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Chris asked whether everyone would be comfortable if the temperature dropped unexpectedly.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although walking through gardens sounds peaceful, I felt that sitting outside in the park would be more flexible for everyone.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Personally, I would rather spend time relaxing on a picnic blanket, chatting and sharing snacks rather than hiking for hours.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "However, Zoe prefers to be active whenever we get together, saying she feels restless without moving.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Maria added that if the weather changed, we might still have a good time by meeting at a café nearby, since we could talk in comfort.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 7
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "suggested to my friends",
+      "meaning_es": "sugerí a mis amigos",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "would rather spend time",
+      "meaning_es": "prefiero pasar el tiempo",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "proposed that we could",
+      "meaning_es": "propuso que podríamos",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "pointed out there could be",
+      "meaning_es": "señaló que podría haber",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "bringing extra sweaters",
+      "meaning_es": "traer suéteres extra",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "admitted he would be happy",
+      "meaning_es": "reconoció que estaría contento",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "What if we meet",
+      "meaning_es": "¿Qué pasa si nos encontramos",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "ended up spending",
+      "meaning_es": "terminamos pasando",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción, y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Personally, I would rather spend time relaxing on a picnic blanket, chatting and sharing snacks",
+              "rather than hiking for hours."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Maria added that if the weather changed,",
+              "we might still have a good time by meeting at a café nearby,",
+              "since we could talk in comfort."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "On the actual day,",
+              "we ended up spending most of our time outdoors, enjoying fresh air and good conversation,",
+              "although dark clouds passed overhead."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-018",
+    "number": "018",
+    "title_en": "Planning a Day Outdoors",
+    "title_es": "Planear un día al aire libre",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Ocio y vida social",
+    "main_topic_es": "Organizar una actividad sencilla al aire libre para un grupo con preferencias y clima variados.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

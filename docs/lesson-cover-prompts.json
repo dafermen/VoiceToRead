@@ -351,6 +351,366 @@
       "width": 1672,
       "height": 941,
       "sha256": "930063a7d147027dd91aa97b2124115392da1174ecff2f71f7d74796efb07196"
+    },
+    {
+      "lesson_id": "SPK-B1-011",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-011-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Remove the tiny artificial corner graphic or watermark-like glyph (top right on restaurant image, bottom right on celebration image). Fill that small area naturally to match its surrounding photograph. Preserve the photograph, people, lighting, colors, composition and landscape dimensions exactly. No added graphics, text or logos.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e6430ba6722c50f1ab38056b33f400757da7333a3bbe51ccb3fb92ab5c4c6bc3"
+    },
+    {
+      "lesson_id": "SPK-B1-012",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-012-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Standalone adult English guided lesson cover, landscape 16:9. Candid editorial photograph with soft daylight, natural proportions and hands, warm neutrals and subtle blue, clear central subject readable at thumbnail size, comfortable margins. No text or readable writing, logos, watermark, borders, collage or UI. Scene: An adult traveler asking a local shopkeeper for walking directions on a sunny city sidewalk, no readable signs.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5cdc10a17b6383927ae30d2cd2f55c2c40f153406dd432ed3b5f9d0e45a3343f"
+    },
+    {
+      "lesson_id": "SPK-B1-013",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-013-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Remove the tiny artificial corner graphic or watermark-like glyph (top right on restaurant image, bottom right on celebration image). Fill that small area naturally to match its surrounding photograph. Preserve the photograph, people, lighting, colors, composition and landscape dimensions exactly. No added graphics, text or logos.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "4564e6eb9e3a4ff432c35f059ca2cbbd65438447903fb7c234eb4119ec76fe24"
+    },
+    {
+      "lesson_id": "SPK-B1-014",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-014-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Photorealistic candid editorial photograph, adult English lesson cover, landscape 16:9, soft natural daylight, realistic anatomy, comfortable composition, warm neutral colors. No text, logos, watermark, corner graphics, frames or collage. Scene: A beginner adult woman learning watercolor painting at a bright art classroom table, brushes, watercolor palette and a small landscape painting, an instructor giving friendly feedback. This is painting, no clay or pottery.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "586e7b520a3c85f28be98140f2ece4b6e5105572e5bed60fb6c79f3e9017af85"
+    },
+    {
+      "lesson_id": "SPK-B1-015",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-015-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial, diverse adults talking and organizing a neighborhood volunteer clean-up in a green community park, clipboards, casual outdoor clothing, warm daylight, natural setting, no branding, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e7bea57ba2df2b39adc1f98e8735ac4bc86ed7c09c94175b99aa16cb9b033b91"
+    },
+    {
+      "lesson_id": "SPK-B1-016",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-016-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adult coworkers in an office, one apologizing to the other seriously while sitting at a desk with a computer, neutral daylight, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9c8809ed0eb2c59a2fab0edd7c05cfd3ef714fbe2dfa4cf177f3604d94f835d3"
+    },
+    {
+      "lesson_id": "SPK-B1-017",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-017-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial photograph: two adults in an office, reviewing course brochures together, one looking at a computer, various education materials on table, bright natural light, 16:9 horizontal, no visible text.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "835278a1a0dca8ba93e732d81ea2ab4c59eb9c53400bad7335ee1c2ce4935e81"
+    },
+    {
+      "lesson_id": "SPK-B1-018",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-018-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, diverse group of adults planning an easy outdoor outing, gathered on a park bench with phones, picnic basket, checking weather together, natural daylight, springtime, relaxed atmosphere, no text, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2f48405315f749355b0c5332bdbc8baeb6ae1ff3ebb1bf8e87c2c2b89023374b"
+    },
+    {
+      "lesson_id": "SPK-B1-019",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-019-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial photo, two adults working together at a table in a modern office, laptop, papers, whiteboard with sticky notes, collaborative teamwork, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d4d4b987ef9a33b5a8e67a3bf413a0084e0c359abc462c1be1c5e4a9d2ba1c34"
+    },
+    {
+      "lesson_id": "SPK-B1-020",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-020-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photo, adult sitting at a table, writing personal goals in a notebook, coffee and window in background, warm natural light, calm atmosphere, horizontal, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "a8ea2689445afabe58627749c29c357565db51478976e3e9c5b793c5a3e6552e"
+    },
+    {
+      "lesson_id": "SPK-B2-011",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-011-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial photograph, two adults ordering food at a restaurant, talking to a server with the menu on the table, casual warm atmosphere, no visible text, realistic, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c622666a5b0ecbe9c5e4d9fa3d5d3a7cfc7eaf13deae7e8e9f9f25e406f1577a"
+    },
+    {
+      "lesson_id": "SPK-B2-012",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-012-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adults in a modern city street, checking a paper map, visible direction signs and a bus stop, early afternoon, clear daylight, no visible text, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "abf7d6aec2a0fc60ea7b777ac5601f4b05e6ef0264a0d464c9a229249d178eda"
+    },
+    {
+      "lesson_id": "SPK-B2-013",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-013-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Photo-realistic editorial image of two diverse adults planning a small celebration at a table in a modern cafe, notebook, coffee, expressive gestures, daylight, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "52a90ab82558050151a4f1663cf2197c1479f8f4154ba25bad396132e7932ce9"
+    },
+    {
+      "lesson_id": "SPK-B2-014",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-014-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Photorealistic candid editorial photograph, adult English lesson cover, landscape 16:9, soft natural daylight, realistic anatomy, comfortable composition, warm neutral colors. No text, logos, watermark, corner graphics, frames or collage. Scene: An adult beginner carefully shaping a clay bowl at a pottery class, instructor offering patient guidance, clay tools and unfinished ceramic bowls on a wooden workbench. This is pottery, no painting canvases.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "bc0f0693e94645d765b4181e92378a2f30e567093090073ffee7a6101f4aafc3"
+    },
+    {
+      "lesson_id": "SPK-B2-015",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-015-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, diverse adults planning a community volunteering event in a neighborhood park, casual attire, group conversation, daylight, urban environment, 16:9 horizontal, no text visible",
+      "width": 1672,
+      "height": 941,
+      "sha256": "76cb34bbaf0187a0afb323c45b7fe1dfe7ba929fa2166d190529e801142b68e5"
+    },
+    {
+      "lesson_id": "SPK-B2-016",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-016-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial photograph, two adult coworkers have a serious but respectful conversation about an everyday coordination mistake at work, modern open-plan office, natural lighting, no visible text, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "0241e96eae0e5562cff70f8f5c64c8078672077c82c2fb6dbd35a34f224d354b"
+    },
+    {
+      "lesson_id": "SPK-B2-017",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-017-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, adults talking at a course provider's front desk, colorful brochures and a computer, modern educational reception, natural daylight, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "dd554ac616ed06449476f20ffa1ab7869b48cdd2985f0d9b17d813b0ef11dc81"
+    },
+    {
+      "lesson_id": "SPK-B2-018",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-018-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Remove only the tiny artificial corner icon or watermark-like glyph: bottom right for the outdoor B2 photo, top right for the C1 photo. Reconstruct that small area naturally. Preserve the photograph, people, scenery, composition, lighting, colors, dimensions. No added text, graphics, logos or watermark.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "856a630419563529d8f1a361fa5a84cc02344537fa8afc445432d775458601d8"
+    },
+    {
+      "lesson_id": "SPK-B2-019",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-019-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial, realistic photograph of a small diverse work team collaborating on a project in a modern office space, laptops, papers and a wall clock visible, natural daylight, 16:9, no visible text.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c3cf1018e0e824603c7819c1ef0e6607d427c26b677c69cbe705fd24da623d63"
+    },
+    {
+      "lesson_id": "SPK-B2-020",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-020-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial photo of a young adult planning life goals, papers, sticky notes, and calendar on a desk, thoughtful focus, daytime, modern workspace, 16:9 aspect ratio",
+      "width": 1672,
+      "height": 941,
+      "sha256": "4f22b31c720111db39c206fe62565f26499b3a352a2b07ec6e2c607e8575128e"
+    },
+    {
+      "lesson_id": "SPK-C1-011",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-011-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photo, adult American diner speaking with a waiter at a stylish restaurant, ordering and clarifying food preferences, daylight, no visible text, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "439393db7058c5e79bd597361cbbfd973916a80fa1facd699dcf8db687363677"
+    },
+    {
+      "lesson_id": "SPK-C1-012",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-012-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph of two adults on a busy city sidewalk, one holding a map, the other pointing in discussion, buses passing, tall buildings, midday, no visible text, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "071a58943f9f129accce01e51140d6bbf880ec1fb048d5793f63bb38e31f24b6"
+    },
+    {
+      "lesson_id": "SPK-C1-013",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-013-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, diverse group of adult friends planning a small celebration at home, sticky notes, snacks and drinks on a modern wooden table, indoor, natural light, no visible text, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9d07fe54de5ca3e016676b5bd20f7f94c3a253c05b32bc7c26ba051651c71826"
+    },
+    {
+      "lesson_id": "SPK-C1-014",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-014-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial realistic photo, diverse adults in a hands-on beginner art class, working with clay, focused instructor giving constructive feedback, large windows, casual workspace, no visible text, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "4c57e4d5b4a87093ee6e6b2bcc9a3cfa47f16261530dec773223e625c927934a"
+    },
+    {
+      "lesson_id": "SPK-C1-015",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-015-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, diverse group of adults in a neighborhood community room, planning a local volunteering event, maps, flipcharts, collaborative discussion, bright daylight, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "693dfd227a9eee8c7b840b3f072397f87f4bfdaace0421367eedec5c39351dc9"
+    },
+    {
+      "lesson_id": "SPK-C1-016",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-016-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adults discussing a missed calendar event, visible concern and understanding on their faces, modern office setting, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2dc3fd36b0a63fdf8c287a31480616a365e152e04f1d33565dccd3f8ce776618"
+    },
+    {
+      "lesson_id": "SPK-C1-017",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-017-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adult learners discussing course brochures at a table, modern office setting, laptops open, bright daylight, professional but friendly atmosphere, 16:9 horizontal.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d3548ab4223d6d038b917edd35b75fc4d66cec08dfb88c31f313e9b0d58cbf4d"
+    },
+    {
+      "lesson_id": "SPK-C1-018",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-018-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Remove only the tiny artificial corner icon or watermark-like glyph: bottom right for the outdoor B2 photo, top right for the C1 photo. Reconstruct that small area naturally. Preserve the photograph, people, scenery, composition, lighting, colors, dimensions. No added text, graphics, logos or watermark.",
+      "width": 1673,
+      "height": 940,
+      "sha256": "a0748abad700dff0c3915508c02f25b35539c273b20d8536d0193770d515f2d5"
+    },
+    {
+      "lesson_id": "SPK-C1-019",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-019-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, three diverse adults collaborating on a work project at a table with laptops, documents, a wall clock in view, office with natural lighting, 16:9 aspect",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2074e89a7629d58e0d7afb4eb760ee6731dfc942112b14a929812f1ac496579a"
+    },
+    {
+      "lesson_id": "SPK-C1-020",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-020-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adults discussing personal goals in a cozy cafe, notebooks and laptops on the table, warm morning light, urban background, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "cb44f8a19e1087badc3139b05f62faadc738e8f069639a3e3b5aa6df9d49d4fb"
+    },
+    {
+      "lesson_id": "SPK-C2-011",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-011-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adults discussing the menu with a waiter in an elegant restaurant, menus open on the table, dim lighting, American setting, no visible text, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2440e887dc5dbe08863e6ff26a5c4c209e4c49e6ed5fd775d1c49da0453b6e94"
+    },
+    {
+      "lesson_id": "SPK-C2-012",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-012-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Photorealistic editorial image: adults in business-casual clothing looking at a paper map and discussing directions, urban setting with city streets, modern buildings, daytime, no visible brand names, horizontal 16:9.",
+      "width": 1672,
+      "height": 940,
+      "sha256": "8d1caa04f9367b4d5c6efcb07baf4040a1d11206bbd824bace150b6f7a779f6e"
+    },
+    {
+      "lesson_id": "SPK-C2-013",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-013-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Realistic editorial photograph, two adults in a living room planning a small celebration, not making assumptions about customs or family roles, a notepad and coffee cups on the table, bright daylight, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d57f728d7d04f6bd6c878a6f7bca0b33134f7f4242acb760d2490fde635ed5bb"
+    },
+    {
+      "lesson_id": "SPK-C2-014",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-014-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Natural daylight editorial photo, adults in a creative beginner pottery class, shaping clay, focused expressions, collaborative atmosphere, hands with clay, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "bca6e01e828d6aa29d3f8aa798ef7b53bfa99b164179a584603879ba21f75ad7"
+    },
+    {
+      "lesson_id": "SPK-C2-015",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-015-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial realistic photograph, diverse group of neighbors coordinating a community volunteering activity outdoors in an urban park, people with clipboards, relaxed conversation, city background, sunny afternoon, no visible text, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9d30b68d08495751bd4a814a57e23b66ffca708f508bb8c7a435048f8423991b"
+    },
+    {
+      "lesson_id": "SPK-C2-016",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-016-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Adult English lesson cover, landscape 16:9. Soft natural daylight, candid editorial photography, warm neutral colors with subtle blue, realistic anatomy, uncluttered scene readable at thumbnail size, comfortable margins. No visible text, readable writing, logos, watermark, borders or collage. Scene: Editorial candid photo, two adult colleagues in an office, one explaining a mistake calmly while the other listens and nods, natural daylight, neutral decor, both look professional and focused, 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "cf5245fddec1bfcd483b8161e0f57d0739ca864bb7c8da25dc261be6326d2b26"
+    },
+    {
+      "lesson_id": "SPK-C2-017",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-017-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Photorealistic editorial photograph for adult English lesson cover, landscape 16:9. Soft daylight, natural anatomy, warm neutral colors, subtle blue, uncluttered composition readable at thumbnail size. No text, logos, watermark, corner graphics, borders or collage. Scene: Editorial photograph, two adults at a table in a modern home, comparing course brochures, laptop open, coffee, involved thoughtful expressions, horizontal 16:9, natural light, no visible text",
+      "width": 1672,
+      "height": 941,
+      "sha256": "a8412e67d987682e419d11d9f12050b199730878665458c0aaab85c4c9974062"
+    },
+    {
+      "lesson_id": "SPK-C2-018",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-018-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Photorealistic editorial photograph for adult English lesson cover, landscape 16:9. Soft daylight, natural anatomy, warm neutral colors, subtle blue, uncluttered composition readable at thumbnail size. No text, logos, watermark, corner graphics, borders or collage. Scene: Three adults sitting under trees in a public park, smiling and discussing plans with maps and snacks, a partly cloudy warm sky, one person suggests a backup plan, casual clothing, realistic editorial style, 16:9.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "7aada354060c8249e8f57e4838b0735711eb15b641167a7607c193134cf03ca4"
+    },
+    {
+      "lesson_id": "SPK-C2-019",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-019-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Photorealistic editorial photograph for adult English lesson cover, landscape 16:9. Soft daylight, natural anatomy, warm neutral colors, subtle blue, uncluttered composition readable at thumbnail size. No text, logos, watermark, corner graphics, borders or collage. Scene: Editorial photo, four business professionals in a modern office discussing a project in front of a whiteboard with notes and diagrams, collaborative atmosphere, natural daylight, horizontal 16:9",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f6fd155607781a5c5209a893426d8111e14b47eb7a7e17a39d6b4cdcc8427149"
+    },
+    {
+      "lesson_id": "SPK-C2-020",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-020-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Photorealistic editorial photograph for adult English lesson cover, landscape 16:9. Soft daylight, natural anatomy, warm neutral colors, subtle blue, uncluttered composition readable at thumbnail size. No text, logos, watermark, corner graphics, borders or collage. Scene: Realistic editorial photograph, two adults in a cafe discussing their personal goals, laptops and notebooks on table, warm lighting, candid moment, no visible text, 16:9 horizontal composition",
+      "width": 1672,
+      "height": 941,
+      "sha256": "8f2b9df347f2de8e87247d7537dd850f9057cf203b916b1800ef6314f7660473"
     }
   ],
   "preserved_original": {

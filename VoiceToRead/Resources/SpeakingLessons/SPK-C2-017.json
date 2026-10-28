@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-017",
+  "number": 17,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Choosing a Course",
+    "es": "Elegir un curso"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Comparing learning courses and formats, clarifying fit, support and timing, articulating a nuanced decision in conversation.",
+    "es": "Comparar cursos y formatos de aprendizaje, clarificar idoneidad, apoyo y horarios, articular una decisión matizada en conversación."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos comparando información de cursos en una mesa con catálogos, portátil y café.",
+    "prompt": "Editorial photograph, two adults at a table in a modern home, comparing course brochures, laptop open, coffee, involved thoughtful expressions, horizontal 16:9, natural light, no visible text",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Formular preguntas para analizar si un curso es adecuado.",
+    "Comparar modalidades y soportes educativos avanzados.",
+    "Expresar dudas, matices e interpretar ambigüedades.",
+    "Negociar y reformular desacuerdos con precisión.",
+    "Elaborar una decisión realista argumentando pros y contras."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last weekend, I sat with my colleague Marc to figure out which language course would genuinely suit my unpredictable schedule.",
+      "es": "El fin de semana pasado, me senté con mi colega Marc para averiguar qué curso de idiomas se adaptaría realmente a mi horario impredecible."
+    },
+    {
+      "number": 2,
+      "function": "initiate_decision",
+      "en": "Marc, who has recently completed two programs, suggested we compare the offerings by Horizon Lingua and SummitPath Learning.",
+      "es": "Marc, quien recientemente terminó dos programas, sugirió que comparáramos la oferta de Horizon Lingua y SummitPath Learning."
+    },
+    {
+      "number": 3,
+      "function": "background",
+      "en": "I used to prefer classroom settings, but since traveling resumed for work, I've relied more on asynchronous online modules.",
+      "es": "Yo solía preferir las clases presenciales, pero desde que retomé los viajes por trabajo, he dependido más de los módulos en línea asincrónicos."
+    },
+    {
+      "number": 4,
+      "function": "detail_comparison",
+      "en": "He pointed out that Horizon Lingua focuses on self-paced content, whereas SummitPath offers live interactive seminars.",
+      "es": "Él señaló que Horizon Lingua se centra en contenido a tu propio ritmo, mientras que SummitPath ofrece seminarios en vivo interactivos."
+    },
+    {
+      "number": 5,
+      "function": "ambiguity",
+      "en": "If 'self-paced' simply means uploading videos without feedback, I wondered, will I end up losing motivation altogether?",
+      "es": "Si 'a tu propio ritmo' significa simplemente cargar videos sin retroalimentación, me pregunté, ¿terminaré perdiendo la motivación por completo?"
+    },
+    {
+      "number": 6,
+      "function": "support_question",
+      "en": "I asked whether ongoing guidance was provided, or if support was limited to periodic generic emails.",
+      "es": "Pregunté si ofrecían orientación continua o si el apoyo se limitaba a correos electrónicos genéricos periódicos."
+    },
+    {
+      "number": 7,
+      "function": "response_detail",
+      "en": "Marc responded that, in his experience, SummitPath was more present for participants, while Horizon Lingua could feel quite distant.",
+      "es": "Marc respondió que, según su experiencia, SummitPath era más cercano para los participantes, mientras que Horizon Lingua podía sentirse bastante distante."
+    },
+    {
+      "number": 8,
+      "function": "qualification",
+      "en": "Even though I value flexibility, I said I might need a sense of connection to stay engaged over the long run.",
+      "es": "Aunque valoro la flexibilidad, dije que podría necesitar cierto sentido de conexión para mantenerme comprometido a largo plazo."
+    },
+    {
+      "number": 9,
+      "function": "alternative_view",
+      "en": "Marc noted that some thrive by working independently and would rather have fewer mandatory meetings.",
+      "es": "Marc señaló que algunos prosperan trabajando de forma independiente y preferirían tener menos reuniones obligatorias."
+    },
+    {
+      "number": 10,
+      "function": "personal_history",
+      "en": "I've joined several group classes before, but I ended up feeling overshadowed by more vocal participants.",
+      "es": "Me he apuntado a varias clases grupales antes, pero terminé sintiéndome opacado por participantes más expresivos."
+    },
+    {
+      "number": 11,
+      "function": "clarifying",
+      "en": "So, I clarified, it's not just about support but also about being able to actively contribute without pressure.",
+      "es": "Así que aclaré que no se trata solo del apoyo, sino también de poder contribuir activamente sin sentir presión."
+    },
+    {
+      "number": 12,
+      "function": "problem_solving",
+      "en": "He suggested alternating between live sessions and self-study weeks, but I wasn't sure this hybrid would work for me.",
+      "es": "Sugirió alternar entre sesiones en vivo y semanas de autoestudio, pero no estaba seguro de que este híbrido funcionara para mí."
+    },
+    {
+      "number": 13,
+      "function": "speculation",
+      "en": "If the hybrid format means constantly adjusting, participants might get distracted by trying to keep track of too many tasks.",
+      "es": "Si el formato híbrido implica estar ajustando siempre, los participantes podrían distraerse intentando seguir demasiadas tareas."
+    },
+    {
+      "number": 14,
+      "function": "testimony",
+      "en": "I had once signed up for a course that required adapting every week, and by the third month, I felt exhausted.",
+      "es": "Una vez me inscribí en un curso que exigía adaptarse cada semana y al tercer mes ya me sentía agotado."
+    },
+    {
+      "number": 15,
+      "function": "reformulation",
+      "en": "Maybe I should have focused less on versatility and more on continuity to avoid burning out.",
+      "es": "Quizá debería haberme centrado menos en la versatilidad y más en la continuidad para no terminar agotado."
+    },
+    {
+      "number": 16,
+      "function": "negotiating",
+      "en": "Marc pointed out that, from his perspective, the guidance at SummitPath was 'substantial'—though I got the impression that could mean anything from prompt replies to actual mentoring.",
+      "es": "Marc señaló que, según su punto de vista, la orientación en SummitPath era 'sustancial', aunque tuve la impresión de que eso podía significar cualquier cosa, desde respuestas rápidas hasta mentoría real."
+    },
+    {
+      "number": 17,
+      "function": "register_shift",
+      "en": "Out of curiosity, I phoned SummitPath and asked them to clarify, and their representative was careful not to overpromise.",
+      "es": "Por curiosidad, llamé a SummitPath y les pedí que aclararan; su representante fue prudente y evitó hacer promesas excesivas."
+    },
+    {
+      "number": 18,
+      "function": "interpretation",
+      "en": "The advisor said support would be 'responsive but not intrusive,' which, I sensed, implied a hands-off approach unless I specifically reached out.",
+      "es": "El asesor aseguró que el apoyo sería 'receptivo pero no intrusivo', lo cual, entendí, daba a entender una intervención limitada salvo que yo lo solicitara expresamente."
+    },
+    {
+      "number": 19,
+      "function": "decision",
+      "en": "After weighing it all, I decided to begin with Horizon Lingua, making peace with the trade-off—autonomy, perhaps at the cost of regular encouragement.",
+      "es": "Tras sopesarlo todo, decidí empezar con Horizon Lingua, aceptando el intercambio: autonomía, aunque quizás a costa de un ánimo regular."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "I might revisit SummitPath later if I find that, rather than learning independently, I end up missing the collaborative atmosphere.",
+      "es": "Tal vez considere SummitPath en el futuro si veo que, en lugar de aprender de manera independiente, termino echando de menos el ambiente colaborativo."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "Maybe I should have focused less on versatility and more on continuity to avoid burning out.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Marc, who has recently completed two programs, suggested we compare the offerings by Horizon Lingua and SummitPath Learning.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Marc, who has recently completed two programs, suggested we compare the offerings by Horizon Lingua and SummitPath Learning.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I asked whether ongoing guidance was provided, or if support was limited to periodic generic emails.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though I value flexibility, I said I might need a sense of connection to stay engaged over the long run.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "I might revisit SummitPath later if I find that, rather than learning independently, I end up missing the collaborative atmosphere.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Marc noted that some thrive by working independently and would rather have fewer mandatory meetings.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After weighing it all, I decided to begin with Horizon Lingua, making peace with the trade-off—autonomy, perhaps at the cost of regular encouragement.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 19
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "figure out",
+      "meaning_es": "averiguar",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "used to prefer",
+      "meaning_es": "solía preferir",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "pointed out",
+      "meaning_es": "señaló",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "end up losing motivation",
+      "meaning_es": "terminar perdiendo la motivación",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "asked whether",
+      "meaning_es": "pregunté si",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "stay engaged",
+      "meaning_es": "mantenerme comprometido",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "keep track of",
+      "meaning_es": "seguir/controlar",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "signed up for",
+      "meaning_es": "inscribirse en",
+      "source_paragraph": 14
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I used to prefer classroom settings,",
+              "but since traveling resumed for work,",
+              "I've relied more on asynchronous online modules."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "Even though I value flexibility,",
+              "I said I might need a sense of connection to stay engaged over the long run."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "Maybe I should have focused less on versatility and more on continuity to avoid burning out."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-017",
+    "number": "017",
+    "title_en": "Choosing a Course",
+    "title_es": "Elegir un curso",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Comparar cursos, analizar apoyo y tiempos, tomar una decisión argumentada",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Present perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

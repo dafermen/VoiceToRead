@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-012",
+  "number": 12,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Finding My Way Around a City",
+    "es": "Orientarme en una ciudad"
+  },
+  "category": {
+    "en": "Travel and Daily Situations",
+    "es": "Viajes y situaciones cotidianas"
+  },
+  "main_topic": {
+    "en": "Ask for and clarify directions to a local destination; compare a walking route and public transport.",
+    "es": "Pedir y aclarar direcciones a un destino local; comparar una ruta a pie y transporte público."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Dos adultos consultando un mapa en la calle de una ciudad moderna.",
+    "prompt": "Realistic editorial photograph, two adults standing on a modern city sidewalk, looking at a paper map and pointing, street details, casual clothing, urban background, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Pedir y entender direcciones en inglés.",
+    "Clarificar indicaciones y orientarse en la ciudad.",
+    "Comparar opciones para llegar a un destino usando rutas a pie y transporte público.",
+    "Describir experiencias pasadas al moverse por la ciudad.",
+    "Practicar expresiones cotidianas y lectura natural en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday, I decided to visit a famous art gallery in a city I didn't know well.",
+      "es": "Ayer decidí visitar una galería de arte famosa en una ciudad que no conocía bien."
+    },
+    {
+      "number": 2,
+      "function": "situation",
+      "en": "When I left my hotel, I realized I had forgotten the street name and had only a rough idea of the location.",
+      "es": "Al salir de mi hotel, me di cuenta de que había olvidado el nombre de la calle y solo tenía una idea aproximada de la ubicación."
+    },
+    {
+      "number": 3,
+      "function": "action_request",
+      "en": "I stopped a woman who was waiting at a bus stop and asked, 'Excuse me, could you tell me how to get to the art gallery?'",
+      "es": "Me detuve junto a una mujer que esperaba en una parada de autobús y le pregunté: 'Disculpe, ¿podría decirme cómo llegar a la galería de arte?'"
+    },
+    {
+      "number": 4,
+      "function": "response",
+      "en": "She smiled and explained, 'It's not far, but you have to go straight for three blocks and then turn left at the bakery.'",
+      "es": "Ella sonrió y explicó: 'No está lejos, pero tienes que ir derecho tres cuadras y luego girar a la izquierda en la panadería.'"
+    },
+    {
+      "number": 5,
+      "function": "clarification",
+      "en": "Even though I listened carefully, I was still unsure about the bakery, so I asked whether there was a sign on the corner.",
+      "es": "Aunque escuché con atención, todavía tenía dudas sobre la panadería, así que pregunté si había un letrero en la esquina."
+    },
+    {
+      "number": 6,
+      "function": "further_explanation",
+      "en": "She replied, 'Yes, you'll see a big yellow sign that says \"Bakery\" and you can't miss it.'",
+      "es": "Ella respondió: 'Sí, verás un letrero amarillo grande que dice \"Bakery\" y no te lo puedes perder.'"
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "After thanking her, I started walking but wondered whether it might be faster to take the bus instead of walking.",
+      "es": "Después de agradecerle, comencé a caminar pero me pregunté si podría ser más rápido tomar el autobús en lugar de caminar."
+    },
+    {
+      "number": 8,
+      "function": "public_transport_inquiry",
+      "en": "I asked a man who was checking his phone, 'Do you know if the bus goes near the art gallery or should I just walk?'",
+      "es": "Le pregunté a un hombre que revisaba su teléfono: '¿Sabe si el autobús pasa cerca de la galería de arte o mejor camino?'"
+    },
+    {
+      "number": 9,
+      "function": "contrast",
+      "en": "He said, 'The bus will drop you two blocks from the gallery, but sometimes traffic gets really slow around this time.'",
+      "es": "Él dijo: 'El autobús te deja a dos cuadras de la galería, pero a veces el tráfico se pone muy lento a esta hora.'"
+    },
+    {
+      "number": 10,
+      "function": "decision",
+      "en": "After hearing his advice, I decided I would rather keep walking than wait for a bus in heavy traffic.",
+      "es": "Después de escuchar su consejo, decidí que prefería seguir caminando en vez de esperar el autobús en tráfico pesado."
+    },
+    {
+      "number": 11,
+      "function": "observation",
+      "en": "As I continued on foot, I noticed people who were waiting were getting impatient because no buses had arrived.",
+      "es": "Mientras seguía a pie, noté que las personas que esperaban comenzaban a impacientarse porque no habían llegado autobuses."
+    },
+    {
+      "number": 12,
+      "function": "past_experience",
+      "en": "I remembered that the last time I traveled in a new city, I had gotten lost by following poor directions.",
+      "es": "Recordé que la última vez que viajé a una ciudad nueva, me había perdido por seguir indicaciones equivocadas."
+    },
+    {
+      "number": 13,
+      "function": "plan",
+      "en": "This time, I made sure to look for street signs before crossing each intersection.",
+      "es": "Esta vez, me aseguré de buscar los letreros de las calles antes de cruzar cada intersección."
+    },
+    {
+      "number": 14,
+      "function": "obstacle",
+      "en": "When I reached the bakery, I realized there was construction blocking the sidewalk on that corner.",
+      "es": "Cuando llegué a la panadería, me di cuenta de que había una obra bloqueando la acera en esa esquina."
+    },
+    {
+      "number": 15,
+      "function": "adjustment",
+      "en": "A worker pointed and said, 'You can get around this by walking on the other side of the street.'",
+      "es": "Un trabajador señaló y dijo: 'Puedes rodear esto caminando por el otro lado de la calle.'"
+    },
+    {
+      "number": 16,
+      "function": "appreciation",
+      "en": "I thanked him for the help and crossed carefully, making sure not to miss the next street I needed.",
+      "es": "Le agradecí por la ayuda y crucé con cuidado, asegurándome de no perder la siguiente calle que necesitaba."
+    },
+    {
+      "number": 17,
+      "function": "conclusion",
+      "en": "Finally, after ten more minutes, I found the art gallery just as someone else was arriving by bus.",
+      "es": "Finalmente, después de diez minutos más, encontré la galería de arte justo cuando otra persona llegaba en autobús."
+    },
+    {
+      "number": 18,
+      "function": "comparison",
+      "en": "We chatted briefly, and she said, 'I took the bus, but it was much slower than I expected because of the traffic.'",
+      "es": "Conversamos brevemente y ella dijo: 'Tomé el autobús, pero fue mucho más lento de lo que esperaba por el tráfico.'"
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "I realized that by walking, I had saved time, avoided waiting, and seen more of the neighborhood.",
+      "es": "Me di cuenta de que al caminar, había ahorrado tiempo, evitado esperar y conocido mejor el vecindario."
+    },
+    {
+      "number": 20,
+      "function": "future_intent",
+      "en": "Next time I'm in a new city, I'll ask clear questions, check for signs, and compare all my options before deciding.",
+      "es": "La próxima vez que esté en una ciudad nueva, haré preguntas claras, buscaré señales y compararé todas mis opciones antes de decidir."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "When I left my hotel, I realized I had forgotten the street name and had only a rough idea of the location.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "I stopped a woman who was waiting at a bus stop and asked, 'Excuse me, could you tell me how to get to the art gallery?'",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Even though I listened carefully, I was still unsure about the bakery, so I asked whether there was a sign on the corner.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though I listened carefully, I was still unsure about the bakery, so I asked whether there was a sign on the corner.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "I remembered that the last time I traveled in a new city, I had gotten lost by following poor directions.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After thanking her, I started walking but wondered whether it might be faster to take the bus instead of walking.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "After thanking her, I started walking but wondered whether it might be faster to take the bus instead of walking.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Could",
+      "example_en": "I stopped a woman who was waiting at a bus stop and asked, 'Excuse me, could you tell me how to get to the art gallery?'",
+      "explanation_es": "Could puede expresar capacidad, posibilidad o una petición según el contexto de la frase.",
+      "source_paragraph": 3
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "could you tell me how to get to",
+      "meaning_es": "¿podría decirme cómo llegar a",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "go straight for three blocks",
+      "meaning_es": "ve derecho tres cuadras",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "turn left at the bakery",
+      "meaning_es": "gira a la izquierda en la panadería",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "you can't miss it",
+      "meaning_es": "no te lo puedes perder",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "decided I would rather",
+      "meaning_es": "decidí que prefería",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "made sure to look for",
+      "meaning_es": "me aseguré de buscar",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "get around this by walking",
+      "meaning_es": "puedes rodear esto caminando",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "Next time I'm in a new city",
+      "meaning_es": "La próxima vez que esté en una ciudad nueva",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I stopped a woman who was waiting at a bus stop",
+              "and asked, 'Excuse me, could you tell me how to get to the art gallery?'"
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "Even though I listened carefully,",
+              "I was still unsure about the bakery,",
+              "so I asked whether there was a sign on the corner."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "After hearing his advice,",
+              "I decided I would rather keep walking than wait for a bus in heavy traffic."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-012",
+    "number": "012",
+    "title_en": "Finding My Way Around a City",
+    "title_es": "Orientarme en una ciudad",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Viajes y situaciones cotidianas",
+    "main_topic_es": "Pedir y aclarar direcciones; comparar caminar con transporte público",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Past continuous",
+      "Indirect question",
+      "Concessive clause",
+      "By + gerund",
+      "After/before + gerund",
+      "Might for possibility",
+      "Could"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

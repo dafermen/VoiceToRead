@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-012",
+  "number": 12,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Finding My Way Around a City",
+    "es": "Orientarme en una ciudad"
+  },
+  "category": {
+    "en": "Travel and Navigation",
+    "es": "Viajes y orientación"
+  },
+  "main_topic": {
+    "en": "Asking for and clarifying directions, choosing between walking and public transport, justifying preferences, and responding to objections.",
+    "es": "Pedir y aclarar direcciones, comparar rutas a pie y transporte público, justificar preferencias y responder a objeciones."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos adultos consultando un mapa en una ciudad moderna, con señales de dirección y parada de autobús cercana.",
+    "prompt": "Realistic editorial photograph, two adults in a modern city street, checking a paper map, visible direction signs and a bus stop, early afternoon, clear daylight, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Pedir y dar indicaciones claras para llegar a un destino local.",
+    "Comparar las ventajas y desventajas de caminar frente al transporte público.",
+    "Explicar preferencias personales y justificar opciones.",
+    "Aclarar o corregir malentendidos sobre direcciones.",
+    "Practicar expresiones y estructuras para responder a objeciones y negociar ruta."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This morning, I arrived in a new city for a conference and wanted to visit the local art museum before my first session.",
+      "es": "Esta mañana, llegué a una ciudad desconocida para una conferencia y quería visitar el museo de arte local antes de mi primera sesión."
+    },
+    {
+      "number": 2,
+      "function": "challenge",
+      "en": "I opened my phone's map app, but the directions looked confusing, so I decided to ask for help at my hotel lobby.",
+      "es": "Abrí la aplicación de mapas en mi teléfono, pero las indicaciones parecían confusas, así que decidí pedir ayuda en el vestíbulo del hotel."
+    },
+    {
+      "number": 3,
+      "function": "conversation_start",
+      "en": "I approached the concierge and asked, \"Could you tell me the best way to get to the art museum from here?\"",
+      "es": "Me acerqué al conserje y le pregunté: \"¿Podría decirme la mejor forma de ir al museo de arte desde aquí?\""
+    },
+    {
+      "number": 4,
+      "function": "suggestion",
+      "en": "He replied that walking was possible, although it would take about twenty minutes.",
+      "es": "Él respondió que era posible ir caminando, aunque me llevaría unos veinte minutos."
+    },
+    {
+      "number": 5,
+      "function": "alternative",
+      "en": "He mentioned there was a bus that stops right outside the hotel and drops passengers off directly in front of the museum.",
+      "es": "Comentó que había un autobús que para justo frente al hotel y deja a los pasajeros directamente en la entrada del museo."
+    },
+    {
+      "number": 6,
+      "function": "clarification",
+      "en": "Since I wasn't sure which was faster, I asked whether the bus might get stuck in traffic at this hour.",
+      "es": "Como no estaba seguro de cuál sería más rápido, pregunté si el autobús podría quedarse atascado en el tráfico a esa hora."
+    },
+    {
+      "number": 7,
+      "function": "explanation",
+      "en": "He said that, during the morning rush, buses can be delayed, but walking will always take about the same time.",
+      "es": "Dijo que, durante la hora pico de la mañana, los autobuses pueden retrasarse, pero caminar siempre llevará aproximadamente el mismo tiempo."
+    },
+    {
+      "number": 8,
+      "function": "objection",
+      "en": "I explained that I preferred walking rather than waiting for a late bus and missing the opening hour.",
+      "es": "Expliqué que prefería ir caminando en vez de esperar un autobús retrasado y perder el horario de apertura."
+    },
+    {
+      "number": 9,
+      "function": "counterargument",
+      "en": "He warned that the clouds could bring rain soon, which might make walking uncomfortable.",
+      "es": "Él advirtió que las nubes podrían traer lluvia en breve, lo que podría hacer incómodo caminar."
+    },
+    {
+      "number": 10,
+      "function": "negotiation",
+      "en": "I asked if I could buy an umbrella anywhere nearby, since I hadn’t packed one before leaving home.",
+      "es": "Pregunté si podía comprar un paraguas cerca, ya que no había empacado uno antes de salir de casa."
+    },
+    {
+      "number": 11,
+      "function": "solution",
+      "en": "He pointed to a convenience store right next to the exit, which sells umbrellas and snacks.",
+      "es": "Señaló una tienda de conveniencia junto a la salida que vendía paraguas y refrigerios."
+    },
+    {
+      "number": 12,
+      "function": "confirmation",
+      "en": "Once I bought an umbrella, I checked the map again and compared the walking route to the bus stops.",
+      "es": "Después de comprar un paraguas, revisé de nuevo el mapa y comparé la ruta a pie con las paradas de autobús."
+    },
+    {
+      "number": 13,
+      "function": "comparison",
+      "en": "Although the bus route was slightly shorter, the walking route followed a small river lined with gardens.",
+      "es": "Aunque la ruta del autobús era un poco más corta, el camino peatonal seguía un pequeño río con jardines a los lados."
+    },
+    {
+      "number": 14,
+      "function": "justification",
+      "en": "I decided to walk because I had heard the riverside path was beautiful and I might even spot interesting local cafés.",
+      "es": "Decidí ir a pie porque había oído que el sendero junto al río era precioso y tal vez podría descubrir cafés locales interesantes."
+    },
+    {
+      "number": 15,
+      "function": "description",
+      "en": "As I strolled along, I passed students and older couples who were enjoying the mild spring weather.",
+      "es": "Mientras caminaba, pasé junto a estudiantes y parejas mayores que disfrutaban del agradable clima primaveral."
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "By taking my time, I noticed murals and sculptures that I would have missed from the bus.",
+      "es": "Al caminar sin prisas, pude ver murales y esculturas que habría pasado por alto si hubiera tomado el autobús."
+    },
+    {
+      "number": 17,
+      "function": "re-evaluation",
+      "en": "Halfway there, I realized walking let me enjoy the city at my own pace and feel more connected to the place.",
+      "es": "A mitad de camino, me di cuenta de que caminar me permitía disfrutar la ciudad a mi propio ritmo y sentirme más conectado con el sitio."
+    },
+    {
+      "number": 18,
+      "function": "cause",
+      "en": "If it had started raining heavily, I would have caught the next bus, but the weather stayed pleasant.",
+      "es": "Si hubiera comenzado a llover fuerte, habría tomado el siguiente autobús, pero el clima se mantuvo agradable."
+    },
+    {
+      "number": 19,
+      "function": "engagement",
+      "en": "Arriving at the museum, I thanked the concierge in my mind for mentioning both options and for his helpful advice.",
+      "es": "Al llegar al museo, mentalmente agradecí al conserje por haber mencionado ambas opciones y su consejo útil."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "From now on, wherever I travel, I will always compare routes and ask locals about their favorite ways of getting around.",
+      "es": "A partir de ahora, viaje donde viaje, siempre compararé rutas y preguntaré a los lugareños sobre sus formas favoritas de moverse."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "If it had started raining heavily, I would have caught the next bus, but the weather stayed pleasant.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "As I strolled along, I passed students and older couples who were enjoying the mild spring weather.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "He warned that the clouds could bring rain soon, which might make walking uncomfortable.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Since I wasn't sure which was faster, I asked whether the bus might get stuck in traffic at this hour.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "He replied that walking was possible, although it would take about twenty minutes.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "I explained that I preferred walking rather than waiting for a late bus and missing the opening hour.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "By taking my time, I noticed murals and sculptures that I would have missed from the bus.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "I asked if I could buy an umbrella anywhere nearby, since I hadn’t packed one before leaving home.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 10
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "ask for help",
+      "meaning_es": "pedir ayuda",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "the best way to get to",
+      "meaning_es": "la mejor manera de llegar a",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "walking was possible",
+      "meaning_es": "era posible ir a pie",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "might make walking uncomfortable",
+      "meaning_es": "podría hacer incómodo caminar",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "before leaving home",
+      "meaning_es": "antes de salir de casa",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "lined with gardens",
+      "meaning_es": "bordeado de jardines",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "spot interesting local cafés",
+      "meaning_es": "descubrir cafeterías locales interesantes",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "the weather stayed pleasant",
+      "meaning_es": "el tiempo siguió siendo agradable",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras marcan pausas naturales de entrenamiento.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I approached the concierge",
+              "and asked, \"Could you tell me the best way",
+              "to get to the art museum from here?\""
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I explained that I preferred walking",
+              "rather than waiting for a late bus",
+              "and missing the opening hour."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "If it had started raining heavily,",
+              "I would have caught the next bus,",
+              "but the weather stayed pleasant."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta de principio a fin sin detenerte en cada oración; enfócate en claridad y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-012",
+    "number": "012",
+    "title_en": "Finding My Way Around a City",
+    "title_es": "Orientarme en una ciudad",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Viajes y orientación",
+    "main_topic_es": "Pedir indicaciones y comparar medios para orientarse",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

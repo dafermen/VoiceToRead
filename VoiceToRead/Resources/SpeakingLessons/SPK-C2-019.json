@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-019",
+  "number": 19,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Working Together on a Deadline",
+    "es": "Trabajar juntos con una fecha límite"
+  },
+  "category": {
+    "en": "Professional Communication",
+    "es": "Comunicación profesional"
+  },
+  "main_topic": {
+    "en": "Collaborative project management with deadlines, clarifying roles, communicating progress, agreeing on scope without overcommitting, and managing ambiguity in high-level teams.",
+    "es": "Gestión de proyectos colaborativos con fechas límite, clarificar roles, comunicar el progreso, acordar el alcance sin sobreprometer y gestionar la ambigüedad en equipos de alto nivel."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Cuatro profesionales debatiendo sobre un proyecto frente a una pizarra blanca con notas y diagramas en una oficina moderna.",
+    "prompt": "Editorial photo, four business professionals in a modern office discussing a project in front of a whiteboard with notes and diagrams, collaborative atmosphere, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Debatir y aclarar roles en proyectos colaborativos avanzados.",
+    "Comunicar el progreso usando matices y puntualizaciones.",
+    "Concordar sobre el alcance de tareas sin sobreprometer.",
+    "Interpretar la ambigüedad y reformular desacuerdos de forma diplomática.",
+    "Practicar lectura y repetición de inglés profesional y fluido."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday morning, our team gathered to launch a new client proposal, knowing that the submission deadline was just five days away.",
+      "es": "Ayer por la mañana, nuestro equipo se reunió para lanzar una propuesta a un cliente, sabiendo que sólo teníamos cinco días hasta la fecha límite de entrega."
+    },
+    {
+      "number": 2,
+      "function": "scope_clarification",
+      "en": "Elaine opened by asking whether we truly understood what the client meant by 'comprehensive', since that word had appeared in several emails without much elaboration.",
+      "es": "Elaine empezó preguntando si realmente comprendíamos qué quería decir el cliente con 'integral', ya que esa palabra había aparecido en varios correos sin mucha aclaración."
+    },
+    {
+      "number": 3,
+      "function": "interpretation",
+      "en": "I suggested that 'comprehensive' might mean including both strategic recommendations and clear roadmaps, rather than just providing a summary report.",
+      "es": "Sugerí que 'integral' podría significar incluir tanto recomendaciones estratégicas como hojas de ruta claras, en vez de limitarse a un simple informe resumido."
+    },
+    {
+      "number": 4,
+      "function": "qualification",
+      "en": "James, however, pointed out that we should have clarified this before starting, but we agreed that, given the time pressure, we’d move ahead based on our best judgement.",
+      "es": "Pero James señaló que deberíamos haber aclarado esto antes de empezar, aunque acordamos que, dado el poco tiempo, avanzaríamos usando nuestro mejor criterio."
+    },
+    {
+      "number": 5,
+      "function": "negotiate_roles",
+      "en": "Sarah volunteered to analyze last year’s market data, while I took responsibility for drafting the initial strategic framework.",
+      "es": "Sarah se ofreció a analizar los datos del mercado del año pasado, mientras yo asumía la responsabilidad de redactar el marco estratégico inicial."
+    },
+    {
+      "number": 6,
+      "function": "anticipate_risks",
+      "en": "Although everyone showed enthusiasm, I cautioned that without clear role boundaries we might duplicate efforts or miss key details.",
+      "es": "Aunque todos mostraron entusiasmo, advertí que sin límites claros de funciones podríamos duplicar esfuerzos o pasar por alto detalles clave."
+    },
+    {
+      "number": 7,
+      "function": "resolve_ambiguity",
+      "en": "To minimize overlap, each of us outlined our specific deliverables before leaving the meeting, so expectations were set.",
+      "es": "Para minimizar solapamientos, cada uno expuso sus entregables específicos antes de salir de la reunión, para que las expectativas quedaran claras."
+    },
+    {
+      "number": 8,
+      "function": "progress_update",
+      "en": "By the next afternoon, Sarah had sent through a data summary which, to my surprise, revealed some trends we hadn’t considered previously.",
+      "es": "A la tarde siguiente, Sarah ya había enviado un resumen de datos que, para mi sorpresa, mostraba tendencias que no habíamos considerado antes."
+    },
+    {
+      "number": 9,
+      "function": "calibrate_agreement",
+      "en": "I responded that these findings shifted some of my initial assumptions, although I wasn’t certain yet how they would affect our overall approach.",
+      "es": "Respondí que estos hallazgos cambiaban algunas de mis suposiciones iniciales, aunque aún no estaba seguro de cómo afectarían nuestro planteamiento general."
+    },
+    {
+      "number": 10,
+      "function": "probe_further",
+      "en": "Elaine asked if I could tentatively map out what I thought might change, so the team could react proactively rather than waiting.",
+      "es": "Elaine preguntó si podría esbozar tentativamente lo que creía que podría cambiar, para que el equipo pudiera reaccionar de forma proactiva en vez de esperar."
+    },
+    {
+      "number": 11,
+      "function": "suggestion",
+      "en": "Rather than waiting for all pieces to fall into place, I drafted a working outline showing different pathways based on the latest data.",
+      "es": "En lugar de esperar a que todo encajara, redacté un esquema de trabajo con diferentes opciones basadas en los nuevos datos."
+    },
+    {
+      "number": 12,
+      "function": "feedback",
+      "en": "James commented that my outline was useful, but suggested that we include risk assessments alongside recommendations to emphasize pragmatic choices.",
+      "es": "James comentó que mi esquema era útil, pero propuso que incluyéramos evaluaciones de riesgo junto con recomendaciones para recalcar opciones prácticas."
+    },
+    {
+      "number": 13,
+      "function": "reformulation",
+      "en": "Although my instinct was to push back, I instead reformulated his point by agreeing that a transparent discussion of potential pitfalls would add value.",
+      "es": "Aunque mi instinto era oponerme, preferí reformular su sugerencia, admitiendo que discutir abiertamente los posibles problemas aportaría valor."
+    },
+    {
+      "number": 14,
+      "function": "realignment",
+      "en": "Sarah highlighted that the timeframe was tight, so we agreed on short written updates every day rather than waiting until the final draft.",
+      "es": "Sarah señaló que el plazo era limitado, así que acordamos enviar actualizaciones escritas cortas cada día en vez de esperar al borrador final."
+    },
+    {
+      "number": 15,
+      "function": "negotiation",
+      "en": "We briefly debated whether to contact the client for confirmation about scope, but Elaine raised concerns that we might sound uncertain this late in the process.",
+      "es": "Debatimos brevemente si contactar al cliente para confirmar el alcance, pero Elaine temía que a estas alturas pareciéramos inseguros."
+    },
+    {
+      "number": 16,
+      "function": "consensus",
+      "en": "We reached consensus that, given the available information, we would define boundaries ourselves and explain our rationale thoroughly in the proposal.",
+      "es": "Llegamos al consenso de que, con la información disponible, definiríamos nosotros mismos los límites y explicaríamos nuestro razonamiento detalladamente en la propuesta."
+    },
+    {
+      "number": 17,
+      "function": "handle_tension",
+      "en": "When our opinions diverged about resource allocation, James diplomatically offered to shoulder the extra margin analysis after the others finished their parts.",
+      "es": "Cuando nuestras opiniones divergieron al repartir recursos, James se ofreció diplomáticamente a encargarse del análisis de márgenes extra después de que los demás terminaran sus partes."
+    },
+    {
+      "number": 18,
+      "function": "finalization",
+      "en": "After three days, we had a detailed draft and, before submitting it, each person reviewed the sections most relevant to their expertise.",
+      "es": "Después de tres días, teníamos un borrador detallado y, antes de enviarlo, cada uno revisó las secciones más afines a su área de experiencia."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "In the end, we delivered a proposal that felt robust without promising more than was feasible, which the client appreciated for its honesty and clarity.",
+      "es": "Al final, entregamos una propuesta sólida sin prometer más de lo posible, lo que el cliente agradeció por su honestidad y claridad."
+    },
+    {
+      "number": 20,
+      "function": "perspective",
+      "en": "Looking back, I realized our willingness to clarify uncertainty, recalibrate constantly and reformulate sensitive points made the collaboration genuinely effective.",
+      "es": "Al mirar atrás, vi que nuestra disposición a clarificar la incertidumbre, recalibrar constantemente y reformular aspectos delicados logró que la colaboración fuera realmente eficaz."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "James, however, pointed out that we should have clarified this before starting, but we agreed that, given the time pressure, we’d move ahead based on our best judgement.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Elaine opened by asking whether we truly understood what the client meant by 'comprehensive', since that word had appeared in several emails without much elaboration.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "In the end, we delivered a proposal that felt robust without promising more than was feasible, which the client appreciated for its honesty and clarity.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Elaine asked if I could tentatively map out what I thought might change, so the team could react proactively rather than waiting.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although everyone showed enthusiasm, I cautioned that without clear role boundaries we might duplicate efforts or miss key details.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than waiting for all pieces to fall into place, I drafted a working outline showing different pathways based on the latest data.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "In the end, we delivered a proposal that felt robust without promising more than was feasible, which the client appreciated for its honesty and clarity.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Although my instinct was to push back, I instead reformulated his point by agreeing that a transparent discussion of potential pitfalls would add value.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 13
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "move ahead",
+      "meaning_es": "avanzar",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "took responsibility for",
+      "meaning_es": "asumió la responsabilidad de",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "duplicate efforts",
+      "meaning_es": "duplicar esfuerzos",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "outlined our specific deliverables",
+      "meaning_es": "exponer nuestros entregables específicos",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "map out",
+      "meaning_es": "esbozar / planear en detalle",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "fall into place",
+      "meaning_es": "encajar / resolverse",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "push back",
+      "meaning_es": "oponerse / rechazar",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "reached consensus",
+      "meaning_es": "llegar a un consenso / acuerdo",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "Elaine opened by asking whether we truly understood what the client meant by 'comprehensive',",
+              "since that word had appeared in several emails",
+              "without much elaboration."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "By the next afternoon,",
+              "Sarah had sent through a data summary which,",
+              "to my surprise,",
+              "revealed some trends we hadn’t considered previously."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "In the end,",
+              "we delivered a proposal that felt robust",
+              "without promising more than was feasible,",
+              "which the client appreciated for its honesty and clarity."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-019",
+    "number": "019",
+    "title_en": "Working Together on a Deadline",
+    "title_es": "Trabajar juntos con una fecha límite",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación profesional",
+    "main_topic_es": "Gestión colaborativa avanzada con plazos y acuerdos precisos",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

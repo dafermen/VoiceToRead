@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-013",
+  "number": 13,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Celebration",
+    "es": "Organizar una celebración"
+  },
+  "category": {
+    "en": "Social Life and Relationships",
+    "es": "Vida social y relaciones"
+  },
+  "main_topic": {
+    "en": "Agreeing on a small celebration, justifying preferences, assigning tasks, discussing guests and constraints through comparison and negotiation.",
+    "es": "Ponerse de acuerdo para una pequeña celebración, justificar preferencias, asignar tareas y debatir invitados y limitaciones mediante comparación y negociación."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos personas adultas planeando una celebración pequeña, con una libreta y café sobre la mesa en un café moderno, discutiendo opciones.",
+    "prompt": "Photo-realistic editorial image of two diverse adults planning a small celebration at a table in a modern cafe, notebook, coffee, expressive gestures, daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Proponer y justificar opciones para una celebración pequeña.",
+    "Negociar tareas y decisiones prácticas sin suposiciones previas.",
+    "Comparar preferencias y explicar causas en inglés.",
+    "Responder a objeciones y sugerir alternativas educadamente.",
+    "Practicar fragmentos y entonación natural en conversaciones sociales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, I suggested to my friend Avery that we should organize a small gathering to unwind after a busy month.",
+      "es": "La semana pasada, le sugerí a mi amigo Avery que deberíamos organizar una pequeña reunión para relajarnos después de un mes ocupado."
+    },
+    {
+      "number": 2,
+      "function": "dialog",
+      "en": "\"It might be more relaxing if we keep things simple,\" Avery replied, looking thoughtful.",
+      "es": "\"Podría ser más relajante si lo hacemos sencillo,\" me respondió Avery, pensativo."
+    },
+    {
+      "number": 3,
+      "function": "justify",
+      "en": "I explained that a casual get-together would give everyone a chance to recharge without feeling pressured.",
+      "es": "Expliqué que una reunión informal permitiría a todos recargar energías sin sentirse presionados."
+    },
+    {
+      "number": 4,
+      "function": "compare",
+      "en": "We discussed various options, but I would rather have it at home than book an expensive venue.",
+      "es": "Discutimos varias opciones, pero preferiría hacerlo en casa en vez de reservar un local caro."
+    },
+    {
+      "number": 5,
+      "function": "preference",
+      "en": "Avery pointed out that hosting at home could make it easier for guests to relax and stay as long as they want.",
+      "es": "Avery señaló que organizarlo en casa podría facilitar que los invitados se relajen y se queden cuanto quieran."
+    },
+    {
+      "number": 6,
+      "function": "constraint",
+      "en": "However, I reminded them that space was limited, so inviting more than ten guests might make things uncomfortable.",
+      "es": "Sin embargo, le recordé que el espacio era limitado, así que invitar a más de diez personas podría resultar incómodo."
+    },
+    {
+      "number": 7,
+      "function": "dialog",
+      "en": "\"We could invite only close friends this time,\" Avery suggested, noting our previous difficulties coordinating bigger events.",
+      "es": "\"Podríamos invitar solo a los amigos más cercanos esta vez\", sugirió Avery, recordando nuestras dificultades al organizar reuniones grandes antes."
+    },
+    {
+      "number": 8,
+      "function": "explain",
+      "en": "After thinking it over, I realized that keeping it small would allow for better conversations.",
+      "es": "Después de pensarlo, me di cuenta de que hacerlo pequeño permitiría mejores conversaciones."
+    },
+    {
+      "number": 9,
+      "function": "assign",
+      "en": "We started assigning tasks and agreed that I would handle the invitations, while Avery would take care of snacks and drinks.",
+      "es": "Empezamos a asignar tareas y acordamos que yo me encargaría de las invitaciones y Avery de la comida y las bebidas."
+    },
+    {
+      "number": 10,
+      "function": "negotiate",
+      "en": "Although Avery usually prefers cooking, this time they chose to buy ready-made food to avoid last-minute stress.",
+      "es": "Aunque Avery suele preferir cocinar, esta vez eligió comprar comida preparada para evitar estrés de último momento."
+    },
+    {
+      "number": 11,
+      "function": "dialog",
+      "en": "\"If anyone asks whether they can bring something, just tell them a dessert would be nice,\" Avery said.",
+      "es": "\"Si alguien pregunta si puede traer algo, solo diles que un postre estaría bien\", dijo Avery."
+    },
+    {
+      "number": 12,
+      "function": "concern",
+      "en": "I was a bit worried that some guests might feel excluded if they weren’t invited, since we all used to gather in bigger groups.",
+      "es": "Me preocupaba que algunos se sintieran excluidos si no eran invitados, ya que antes nos juntábamos en grupos más grandes."
+    },
+    {
+      "number": 13,
+      "function": "justify",
+      "en": "Still, Avery reassured me that, given our constraints, we had to be realistic rather than risk overcrowding.",
+      "es": "Aun así, Avery me tranquilizó diciendo que, dadas nuestras limitaciones, teníamos que ser realistas en vez de correr el riesgo de que haya demasiada gente."
+    },
+    {
+      "number": 14,
+      "function": "alternative",
+      "en": "We decided to mention to others that we'd plan something larger another time, so no one would feel left out.",
+      "es": "Decidimos comentar a los demás que planearemos algo más grande en otra ocasión, para que nadie se sienta excluido."
+    },
+    {
+      "number": 15,
+      "function": "dialog",
+      "en": "\"By choosing a smaller group this time, we can actually talk to everyone without rushing,\" I said, trying to put things in perspective.",
+      "es": "\"Al elegir un grupo pequeño esta vez, realmente podemos hablar con todos sin apurarnos\", dije, intentando dar perspectiva."
+    },
+    {
+      "number": 16,
+      "function": "cause",
+      "en": "Part of our decision was based on how hectic our schedules had been recently.",
+      "es": "Parte de nuestra decisión se basaba en lo agitada que había estado nuestra agenda últimamente."
+    },
+    {
+      "number": 17,
+      "function": "reflect",
+      "en": "Looking back, we realized that our last big party had felt overwhelming, so a relaxed evening sounded ideal.",
+      "es": "Al recordar, nos dimos cuenta de que nuestra última gran fiesta fue abrumadora, así que una velada tranquila parecía ideal."
+    },
+    {
+      "number": 18,
+      "function": "arrange",
+      "en": "We set the date and made sure it wouldn’t conflict with public holidays or work obligations.",
+      "es": "Fijamos la fecha y nos aseguramos de que no coincidiera con días festivos ni compromisos laborales."
+    },
+    {
+      "number": 19,
+      "function": "expect",
+      "en": "If everything goes as planned, we will have a cozy evening and everyone will feel welcome.",
+      "es": "Si todo sale como planeamos, tendremos una noche acogedora y todos se sentirán bienvenidos."
+    },
+    {
+      "number": 20,
+      "function": "result",
+      "en": "In the end, I felt satisfied that, by openly discussing our preferences and limits, we created a plan that suited everyone.",
+      "es": "Al final, me sentí satisfecho porque al hablar abiertamente sobre nuestras preferencias y límites, creamos un plan que se adaptó a todos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "Part of our decision was based on how hectic our schedules had been recently.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although Avery usually prefers cooking, this time they chose to buy ready-made food to avoid last-minute stress.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "I explained that a casual get-together would give everyone a chance to recharge without feeling pressured.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "\"By choosing a smaller group this time, we can actually talk to everyone without rushing,\" I said, trying to put things in perspective.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After thinking it over, I realized that keeping it small would allow for better conversations.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Used to",
+      "example_en": "I was a bit worried that some guests might feel excluded if they weren’t invited, since we all used to gather in bigger groups.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "\"It might be more relaxing if we keep things simple,\" Avery replied, looking thoughtful.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Could",
+      "example_en": "Avery pointed out that hosting at home could make it easier for guests to relax and stay as long as they want.",
+      "explanation_es": "Could puede expresar capacidad, posibilidad o una petición según el contexto de la frase.",
+      "source_paragraph": 5
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "organize a small gathering",
+      "meaning_es": "organizar una pequeña reunión",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "keep things simple",
+      "meaning_es": "hacerlo sencillo / mantener las cosas simples",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "a chance to recharge",
+      "meaning_es": "una oportunidad para recargar energías",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "would rather have it at home",
+      "meaning_es": "preferiría hacerlo en casa",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "take care of",
+      "meaning_es": "encargarse de",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "buy ready-made food",
+      "meaning_es": "comprar comida preparada",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "feel left out",
+      "meaning_es": "sentirse excluido",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "goes as planned",
+      "meaning_es": "sale como planeamos",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los segmentos separados por barras. Las barras indican pausas para practicar, no puntuación ni sintaxis.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "\"It might be more relaxing if we keep things simple,\" Avery replied,",
+              "looking thoughtful."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "After thinking it over,",
+              "I realized that keeping it small would allow for better conversations."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "If everything goes as planned,",
+              "we will have a cozy evening and everyone will feel welcome."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte entre palabras. Concéntrate en claridad, ritmo y entonación natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-013",
+    "number": "013",
+    "title_en": "Planning a Celebration",
+    "title_es": "Organizar una celebración",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Vida social y relaciones",
+    "main_topic_es": "Ponerse de acuerdo sobre una celebración, tareas e invitados.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Concessive clause",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund",
+      "Used to",
+      "Might for possibility",
+      "Could"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

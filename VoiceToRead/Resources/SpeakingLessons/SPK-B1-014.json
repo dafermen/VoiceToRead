@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-014",
+  "number": 14,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Learning a New Skill",
+    "es": "Aprender una habilidad nueva"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Join a hands-on creative class, handle a difficulty, ask for feedback, and agree on a realistic improvement.",
+    "es": "Unirse a una clase creativa práctica, enfrentar una dificultad, pedir retroalimentación y acordar una forma realista de mejorar."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Adultos participando en una clase creativa práctica, trabajando con materiales artísticos y conversando.",
+    "prompt": "Brightly lit classroom with adults attending a beginner art class, painting and discussing, modern creative studio, positive atmosphere, 16:9 horizontal, no visible text",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir experiencias pasadas y actuales al aprender una nueva habilidad.",
+    "Explicar dificultades iniciales y pedir retroalimentación directa.",
+    "Proponer y acordar una forma práctica de mejorar.",
+    "Expresar intenciones y planes simples en el presente y futuro.",
+    "Practicar la lectura y repetición de inglés americano cotidiano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Last month, I joined a beginner painting class at the community center after seeing a flyer on the notice board.",
+      "es": "El mes pasado me uní a una clase de pintura para principiantes en el centro comunitario después de ver un cartel en el tablón de anuncios."
+    },
+    {
+      "number": 2,
+      "function": "expectation",
+      "en": "I thought painting would relax me and help me meet new people in my city.",
+      "es": "Pensé que la pintura me relajaría y me ayudaría a conocer gente nueva en mi ciudad."
+    },
+    {
+      "number": 3,
+      "function": "experience",
+      "en": "When I arrived, the teacher, Amanda, welcomed me warmly and showed me the art supplies.",
+      "es": "Cuando llegué, la profesora, Amanda, me recibió amablemente y me mostró los materiales de arte."
+    },
+    {
+      "number": 4,
+      "function": "first_task",
+      "en": "She asked us to paint a simple landscape, even though most of us had never held a paintbrush before.",
+      "es": "Nos pidió que pintáramos un paisaje sencillo, aunque la mayoría nunca habíamos sostenido un pincel antes."
+    },
+    {
+      "number": 5,
+      "function": "challenge",
+      "en": "I tried to copy a bright sunrise, but my colors kept mixing together on the page.",
+      "es": "Intenté copiar un amanecer brillante, pero mis colores se mezclaban en la página."
+    },
+    {
+      "number": 6,
+      "function": "reaction",
+      "en": "After a few minutes, I realized my painting looked muddy and not like what I wanted.",
+      "es": "Después de unos minutos, me di cuenta de que mi pintura se veía apagada y no como yo quería."
+    },
+    {
+      "number": 7,
+      "function": "peer_observation",
+      "en": "The person next to me, Daniel, noticed my frustration and said, \"It gets easier after practicing a bit.\"",
+      "es": "La persona a mi lado, Daniel, notó mi frustración y dijo: \"Es más fácil después de practicar un poco.\""
+    },
+    {
+      "number": 8,
+      "function": "advice",
+      "en": "\"You might want to use less water on your brush,\" he suggested, which sounded helpful.",
+      "es": "\"Quizás quieras usar menos agua en el pincel,\" sugirió, lo cual me pareció útil."
+    },
+    {
+      "number": 9,
+      "function": "attempt",
+      "en": "I tried his advice, but I still found it hard to control the paint, especially when I wanted sharp lines.",
+      "es": "Probé su consejo, pero todavía me resultó difícil controlar la pintura, especialmente cuando quería líneas definidas."
+    },
+    {
+      "number": 10,
+      "function": "asking_feedback",
+      "en": "During the break, I asked Amanda if my painting could be improved and what I should try next.",
+      "es": "Durante el descanso le pregunté a Amanda si mi pintura podía mejorar y qué debía intentar después."
+    },
+    {
+      "number": 11,
+      "function": "teacher_feedback",
+      "en": "She said, \"You are layering too many colors at once, which is why everything blends together.\"",
+      "es": "Ella dijo: \"Estás aplicando demasiados colores a la vez, por eso todo se mezcla.\""
+    },
+    {
+      "number": 12,
+      "function": "clarification",
+      "en": "Amanda explained that waiting for the first layer to dry would stop the colors from running together.",
+      "es": "Amanda explicó que esperar a que se seque la primera capa evitaría que los colores se mezclaran."
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "I realized I had been rushing, rather than taking my time between each step.",
+      "es": "Me di cuenta de que había estado apurado en vez de tomarme mi tiempo entre cada paso."
+    },
+    {
+      "number": 14,
+      "function": "negotiation",
+      "en": "She asked whether I could paint just the sky and wait before finishing the rest.",
+      "es": "Ella preguntó si podía pintar solo el cielo y esperar antes de terminar el resto."
+    },
+    {
+      "number": 15,
+      "function": "agreement",
+      "en": "I agreed to try this new approach, even though it meant leaving my work unfinished for a while.",
+      "es": "Acepté intentar este nuevo método, aunque significaba dejar mi trabajo sin terminar por un tiempo."
+    },
+    {
+      "number": 16,
+      "function": "new_try",
+      "en": "When I waited for the first layer to dry, the colors stayed brighter and my picture looked clearer.",
+      "es": "Cuando esperé que la primera capa se secara, los colores se mantuvieron más vivos y mi pintura se veía más clara."
+    },
+    {
+      "number": 17,
+      "function": "recognition",
+      "en": "Amanda noticed the difference and said, \"That was a good improvement.\"",
+      "es": "Amanda notó la diferencia y dijo: \"Eso fue una buena mejora.\""
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Looking back, I see that listening and changing my approach made me feel more confident.",
+      "es": "Al mirar atrás, veo que escuchar y cambiar mi método me hizo sentir más seguro."
+    },
+    {
+      "number": 19,
+      "function": "plan",
+      "en": "Next week, I will practice layering colors by painting simple objects, not entire scenes yet.",
+      "es": "La próxima semana practicaré superponer colores pintando objetos sencillos, no escenas completas todavía."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "If I keep asking for feedback and trying one new thing at a time, I know I will keep improving.",
+      "es": "Si sigo pidiendo retroalimentación y probando una cosa nueva a la vez, sé que seguiré mejorando."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "example_en": "I realized I had been rushing, rather than taking my time between each step.",
+      "explanation_es": "Had been + verbo en -ing describe una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "I realized I had been rushing, rather than taking my time between each step.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "\"You might want to use less water on your brush,\" he suggested, which sounded helpful.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "During the break, I asked Amanda if my painting could be improved and what I should try next.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "She asked us to paint a simple landscape, even though most of us had never held a paintbrush before.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "I realized I had been rushing, rather than taking my time between each step.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Next week, I will practice layering colors by painting simple objects, not entire scenes yet.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "Last month, I joined a beginner painting class at the community center after seeing a flyer on the notice board.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "help me meet new people",
+      "meaning_es": "ayudarme a conocer gente nueva",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "welcomed me warmly",
+      "meaning_es": "me recibió amablemente",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "tried to copy",
+      "meaning_es": "intenté copiar",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "noticed my frustration",
+      "meaning_es": "notó mi frustración",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "You might want to",
+      "meaning_es": "Quizás quieras",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "found it hard to",
+      "meaning_es": "me resultó difícil",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "asked Amanda if",
+      "meaning_es": "le pregunté a Amanda si",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "keep improving",
+      "meaning_es": "seguir mejorando",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, revisa la traducción al español y repite cada uno dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos entre barras. No son pausas de puntuación, sino grupos para entrenar la entonación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "She asked us to paint a simple landscape,",
+              "even though most of us had never held a paintbrush",
+              "before."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "\"You might want to use less water on your brush,\"",
+              "he suggested, which sounded helpful."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "If I keep asking for feedback and trying one new thing at a time,",
+              "I know I will keep improving."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte entre oraciones, priorizando claridad y ritmo natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-014",
+    "number": "014",
+    "title_en": "Learning a New Skill",
+    "title_es": "Aprender una habilidad nueva",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Unirse a una clase creativa y mejorar paso a paso",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Past perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

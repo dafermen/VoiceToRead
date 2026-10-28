@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-014",
+  "number": 14,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Learning a New Skill",
+    "es": "Aprender una habilidad nueva"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Join a beginner creative class, handle an early challenge, ask for feedback, and agree a realistic plan for improvement.",
+    "es": "Unirse a una clase creativa para principiantes, enfrentar una dificultad inicial, pedir retroalimentación y acordar una forma realista de mejorar."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Personas adultas participando en una clase creativa de iniciación, practicando una manualidad con instructor cerca.",
+    "prompt": "Editorial-quality photo, adults in a beginner creative workshop, people engaged in a hands-on artistic activity with bright materials and a supportive instructor, horizontal, 16:9, no visible text",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Justificar preferencias y comparar alternativas.",
+    "Describir una dificultad inicial y explicar causas.",
+    "Solicitar retroalimentación constructiva y responder a objeciones.",
+    "Negociar y acordar un plan de mejora realista.",
+    "Practicar tiempos verbales variados, modales y estructuras condicionales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I decided to take a beginner pottery class because I wanted to learn something creative after work.",
+      "es": "Decidí tomar una clase de cerámica para principiantes porque quería aprender algo creativo después del trabajo."
+    },
+    {
+      "number": 2,
+      "function": "comparison",
+      "en": "Although I considered painting, pottery seemed more hands-on, which I believed would suit me better.",
+      "es": "Aunque consideré la pintura, la cerámica parecía más práctica, lo que creía que se adaptaría mejor a mí."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "I’ve always preferred making things rather than just observing, so pottery felt like a natural fit.",
+      "es": "Siempre he preferido hacer cosas en lugar de solo observar, así que la cerámica me parecía adecuada."
+    },
+    {
+      "number": 4,
+      "function": "setting",
+      "en": "When I entered the studio, the instructor welcomed us and introduced everyone to the tools.",
+      "es": "Cuando entré al estudio, el instructor nos dio la bienvenida y nos presentó las herramientas."
+    },
+    {
+      "number": 5,
+      "function": "challenge",
+      "en": "My first attempt at shaping clay went wrong, as my bowl collapsed before I could finish it.",
+      "es": "Mi primer intento de moldear arcilla salió mal, ya que mi cuenco se derrumbó antes de que pudiera terminarlo."
+    },
+    {
+      "number": 6,
+      "function": "observation",
+      "en": "While others were making progress, I was struggling to keep the clay steady on the wheel.",
+      "es": "Mientras otros avanzaban, yo luchaba por mantener la arcilla estable en el torno."
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "I realized I hadn't paid enough attention when the instructor demonstrated the technique.",
+      "es": "Me di cuenta de que no había puesto suficiente atención cuando el instructor demostró la técnica."
+    },
+    {
+      "number": 8,
+      "function": "initiative",
+      "en": "After class, I asked the instructor, \"Could you watch me next time and tell me what I'm missing?\"",
+      "es": "Después de la clase, le pregunté al instructor: \"¿Podría verme la próxima vez y decirme qué me falta?\""
+    },
+    {
+      "number": 9,
+      "function": "feedback_request",
+      "en": "She nodded and said, \"I'd be happy to help; your main issue was the pressure you used on the clay.\"",
+      "es": "Ella asintió y dijo: \"Encantada de ayudarte; tu principal problema fue la presión que usaste sobre la arcilla.\""
+    },
+    {
+      "number": 10,
+      "function": "clarification",
+      "en": "I asked whether I should try making a bowl again or start with something simpler for now.",
+      "es": "Pregunté si debía intentar hacer un cuenco de nuevo o comenzar con algo más sencillo por ahora."
+    },
+    {
+      "number": 11,
+      "function": "advice",
+      "en": "The instructor replied, \"You might want to try a smaller cup before moving back to a bowl.\"",
+      "es": "La instructora respondió: \"Quizá quieras intentar una taza pequeña antes de volver a intentar un cuenco.\""
+    },
+    {
+      "number": 12,
+      "function": "agreement",
+      "en": "Although part of me wanted to prove I could manage the bowl, I agreed and started with a cup.",
+      "es": "Aunque parte de mí quería demostrar que podía con el cuenco, acepté y comencé con una taza."
+    },
+    {
+      "number": 13,
+      "function": "comparison_cause",
+      "en": "Making a cup required less clay and felt easier to control, even though it still took a few tries.",
+      "es": "Hacer una taza requería menos arcilla y era más fácil de controlar, aunque aún me costó varios intentos."
+    },
+    {
+      "number": 14,
+      "function": "progress",
+      "en": "By the third class, I had already managed to finish a cup that looked presentable.",
+      "es": "Para la tercera clase, ya había logrado terminar una taza que se veía presentable."
+    },
+    {
+      "number": 15,
+      "function": "conversation",
+      "en": "During cleanup, a classmate commented, \"Your cup looks really smooth now—what did you change?\"",
+      "es": "Durante la limpieza, un compañero comentó: \"Tu taza ahora se ve muy lisa—¿qué cambiaste?\""
+    },
+    {
+      "number": 16,
+      "function": "explanation",
+      "en": "I explained, \"I slowed down my movements and focused on even pressure, just as the instructor suggested.\"",
+      "es": "Expliqué: \"Reducí la velocidad de mis movimientos y me enfoqué en la presión uniforme, tal como sugirió la instructora.\""
+    },
+    {
+      "number": 17,
+      "function": "objection",
+      "en": "He replied, \"But doesn’t that make it take forever? I thought speed was important.\"",
+      "es": "Él respondió: \"¿Pero eso no lo hace demasiado lento? Yo pensaba que la velocidad era importante.\""
+    },
+    {
+      "number": 18,
+      "function": "negotiation",
+      "en": "I said, \"I’d rather get the technique right before worrying about speed, since mistakes set me back more.\"",
+      "es": "Dije: \"Prefiero aprender bien la técnica antes de preocuparme por la velocidad, ya que los errores me retrasan más.\""
+    },
+    {
+      "number": 19,
+      "function": "future_plan",
+      "en": "From now on, I’ll practice cups until it feels natural, and then I’ll try bowls again with more confidence.",
+      "es": "A partir de ahora, practicaré tazas hasta que se sienta natural, y luego intentaré hacer cuencos de nuevo con más confianza."
+    },
+    {
+      "number": 20,
+      "function": "reflection_outcome",
+      "en": "Looking back, I should have focused on the basics first, but I know that steady effort is the key to improvement.",
+      "es": "Al mirar atrás, debí haberme centrado en lo básico primero, pero sé que el esfuerzo constante es la clave para mejorar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "Looking back, I should have focused on the basics first, but I know that steady effort is the key to improvement.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "I’ve always preferred making things rather than just observing, so pottery felt like a natural fit.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "While others were making progress, I was struggling to keep the clay steady on the wheel.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Although I considered painting, pottery seemed more hands-on, which I believed would suit me better.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I asked whether I should try making a bowl again or start with something simpler for now.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although part of me wanted to prove I could manage the bowl, I agreed and started with a cup.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "The instructor replied, \"You might want to try a smaller cup before moving back to a bowl.\"",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "The instructor replied, \"You might want to try a smaller cup before moving back to a bowl.\"",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 11
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "take a beginner pottery class",
+      "meaning_es": "tomar una clase de cerámica para principiantes",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "seemed more hands-on",
+      "meaning_es": "parecía más práctico",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "introduced everyone to the tools",
+      "meaning_es": "presentó a todos las herramientas",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "went wrong",
+      "meaning_es": "salió mal",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "keep the clay steady",
+      "meaning_es": "mantener la arcilla estable",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Could you watch me",
+      "meaning_es": "¿Podría verme?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "You might want to try",
+      "meaning_es": "Quizá quieras intentar",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "set me back",
+      "meaning_es": "me retrasan",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica estos fragmentos separados por barras. Lee cada oración completa en partes, luego toda la oración.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "Although I considered painting, pottery seemed more hands-on,",
+              "which I believed would suit me better."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I asked whether I should try making a bowl again",
+              "or start with something simpler for now."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Looking back, I should have focused on the basics first,",
+              "but I know that steady effort is the key to improvement."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee en voz alta los veinte párrafos, enfocándote en la naturalidad y la comprensión.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-014",
+    "number": "014",
+    "title_en": "Learning a New Skill",
+    "title_es": "Aprender una habilidad nueva",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Clase creativa, desafíos y mejora realista",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Present perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "After/before + gerund",
+      "Might for possibility"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

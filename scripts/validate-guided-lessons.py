@@ -1,8 +1,10 @@
-"""Validate all bundled lesson resources, then publish the explicit forty-ID catalog."""
+"""Validate all bundled lesson resources, then publish the explicit eighty-ID catalog."""
 from pathlib import Path
 import json,hashlib,re,sys,struct
 r=Path(__file__).resolve().parents[1];folder=r/'VoiceToRead/Resources/SpeakingLessons'
-ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,11)]
+ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,21)]
+content_only='--content-only' in sys.argv
+assert not (content_only and '--publish' in sys.argv),'Publication requires complete audio and support validation'
 titles_by_level={
 'B1':['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job'],
 'B2':['Improving My English','My Daily Routine','At the Doctor’s Office','A Job Interview','My First Day at a New Job'],
@@ -10,6 +12,7 @@ titles_by_level={
 'C2':['Improving My English','A Job Interview','Mediating a Negotiation','An Ethical Dilemma','Disagreeing with Tact']
 }
 new_titles=['Travel Plans and Unexpected Changes','Finding a Place to Live','Shopping and Solving a Problem','Friendship and Difficult Conversations','Technology in Everyday Life']
+new_titles.extend(['Ordering Food at a Restaurant','Finding My Way Around a City','Planning a Celebration','Learning a New Skill','Helping in My Community','Owning a Mistake and Making It Right','Choosing a Course','Planning a Day Outdoors','Working Together on a Deadline','Setting Goals for My Future'])
 for titles in titles_by_level.values():titles.extend(new_titles)
 
 def support_fields(value,path=''):
@@ -49,6 +52,12 @@ for identifier in ids:
    assert 1<=chunk['source_paragraph']<=20 and all(chunk['segments'])
    if identifier!='SPK-B1-001':assert ' '.join(chunk['segments'])==d['paragraphs'][chunk['source_paragraph']-1]['en']
  current=tuple(p['en'] for p in d['paragraphs']);assert current not in alltext;alltext.add(current)
+ if content_only:
+  assert len(d['learning_objectives'])==5
+  assert all(p['en'].strip() and p['es'].strip() for p in d['paragraphs'])
+  if n>=11:assert all(2<=len(e['expression_en'].split())<=8 for e in d['essential_expressions'])
+  print(identifier+': lesson content and cover validated; audio/support not checked.',flush=True)
+  continue
  directory=folder/(identifier+'-audio');manifest=json.loads((directory/'manifest.json').read_text())
  assert manifest['lesson']==identifier and manifest['voice']=='marin' and manifest['base_speed']==0.85 and len(manifest['paragraphs'])==20
  for p,m in zip(d['paragraphs'],manifest['paragraphs']):
@@ -73,4 +82,5 @@ assert hashlib.sha256((folder/'SPK-B1-001.json').read_text(encoding='utf-8').enc
 assert not list(folder.rglob('*-review.json')),'Review files must be resolved before publication'
 assert not list(folder.rglob('.env*'))
 if '--publish' in sys.argv:(folder/'catalog.json').write_text(json.dumps(ids,indent=2)+'\n',encoding='utf-8')
-print(f'PASS: forty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); one hundred sixty support packs; forty distinct covers; original 001 unchanged.',flush=True)
+if content_only:print('PASS: eighty lesson texts and distinct covers; audio/support not checked, catalog NOT published.',flush=True)
+else:print(f'PASS: eighty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); three hundred twenty support packs; eighty distinct covers; original 001 unchanged.',flush=True)

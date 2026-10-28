@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-020",
+  "number": 20,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Setting Goals for My Future",
+    "es": "Definir metas para mi futuro"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Discussing personal learning or creative goals, competing priorities, and practical next steps.",
+    "es": "Hablar de metas personales de aprendizaje o creatividad, prioridades en conflicto y próximos pasos prácticos."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos conversan en una cafetería sobre metas y proyectos personales con computadoras y cuadernos en la mesa.",
+    "prompt": "Realistic editorial photograph, two adults in a cafe discussing their personal goals, laptops and notebooks on table, warm lighting, candid moment, no visible text, 16:9 horizontal composition",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Narrar un objetivo personal y desafíos relacionados con claridad avanzada.",
+    "Comparar prioridades y justificar elecciones en inglés natural.",
+    "Formular opiniones matizadas y responder a sugerencias de manera diplomática.",
+    "Reformular puntos sensibles para evitar malentendidos en una conversación realista.",
+    "Practicar comprensión y pronunciación de frases precisas y registro variado."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Recently, I set myself the goal of writing a novella before the end of the year, hoping it might develop both my craft and my confidence.",
+      "es": "Recientemente, me propuse como meta escribir una novela corta antes de que termine el año, esperando que pudiera desarrollar tanto mi técnica como mi confianza."
+    },
+    {
+      "number": 2,
+      "function": "conflict_introduction",
+      "en": "Although I was excited initially, I quickly realized how many competing demands there are, both at work and at home.",
+      "es": "Aunque al principio estaba emocionado, rápidamente me di cuenta de cuántas demandas en conflicto existen, tanto en el trabajo como en casa."
+    },
+    {
+      "number": 3,
+      "function": "challenge_experience",
+      "en": "There are evenings when, despite my best intentions, I end up answering emails rather than making progress on my story.",
+      "es": "Hay noches en las que, a pesar de mis mejores intenciones, termino respondiendo correos en lugar de avanzar con mi historia."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "One reason for this pattern, I think, is that immediate tasks seem more urgent than creative ones, which rarely have clear deadlines.",
+      "es": "Creo que una razón de este patrón es que las tareas inmediatas parecen más urgentes que las creativas, que rara vez tienen plazos claros."
+    },
+    {
+      "number": 5,
+      "function": "character_introduction",
+      "en": "Last weekend, my friend Maya—who’s published two novels herself—asked whether I’d considered joining her writing group.",
+      "es": "El fin de semana pasado, mi amiga Maya—que ya ha publicado dos novelas—me preguntó si había considerado unirme a su grupo de escritura."
+    },
+    {
+      "number": 6,
+      "function": "dialogue",
+      "en": "'It might motivate me,' I admitted, 'but I’m hesitant about sharing unfinished work in a group setting.'",
+      "es": "‘Podría motivarme’, admití, ‘pero me da reparo compartir trabajo sin terminar en grupo’."
+    },
+    {
+      "number": 7,
+      "function": "response",
+      "en": "She replied that many members had felt the same way at first, and that constructive feedback had actually become one of their most valued resources.",
+      "es": "Ella respondió que muchos miembros se habían sentido igual al principio, y que recibir comentarios constructivos se había convertido en uno de sus recursos más valorados."
+    },
+    {
+      "number": 8,
+      "function": "negotiation",
+      "en": "I told her I might stop by next week, provided I could rearrange my schedule a little.",
+      "es": "Le dije que podría pasarme la próxima semana, siempre y cuando pudiera reorganizar un poco mi agenda."
+    },
+    {
+      "number": 9,
+      "function": "perspective_shifting",
+      "en": "That evening, while I was walking home, I found myself weighing the risks and benefits of inviting others into my process, rather than going it alone.",
+      "es": "Esa tarde, mientras caminaba a casa, me sorprendí sopesando los riesgos y beneficios de invitar a otros a mi proceso, en lugar de hacerlo solo."
+    },
+    {
+      "number": 10,
+      "function": "exploration",
+      "en": "In the past, I used to guard early drafts so closely that sometimes I lost momentum altogether.",
+      "es": "En el pasado, solía proteger los primeros borradores con tanto celo que a veces perdía el impulso por completo."
+    },
+    {
+      "number": 11,
+      "function": "lesson_learned",
+      "en": "Looking back, I should have been a bit more open, since the isolation actually stifled my project rather than protecting it.",
+      "es": "Ahora que lo pienso, debería haber sido un poco más abierto, ya que el aislamiento en realidad frenó mi proyecto en lugar de protegerlo."
+    },
+    {
+      "number": 12,
+      "function": "internal_debate",
+      "en": "Still, sharing personal work requires a certain vulnerability, which can be difficult to navigate for perfectionists like me.",
+      "es": "Aun así, compartir trabajo personal requiere cierta vulnerabilidad, algo difícil de gestionar para perfeccionistas como yo."
+    },
+    {
+      "number": 13,
+      "function": "other_persons_view",
+      "en": "Maya added that unfinished doesn’t necessarily mean unworthy, though she emphasized that participants set their own boundaries.",
+      "es": "Maya añadió que inacabado no significa necesariamente sin valor, aunque recalcó que los participantes establecen sus propios límites."
+    },
+    {
+      "number": 14,
+      "function": "reformulation",
+      "en": "I clarified that my hesitation was more about feeling exposed than about distrust or pride.",
+      "es": "Aclaré que mi duda era más sobre sentirme expuesto que desconfianza o soberbia."
+    },
+    {
+      "number": 15,
+      "function": "agreement_with_reservation",
+      "en": "I agreed to give it a try, yet I reserved the option to stay silent and simply observe at first.",
+      "es": "Acepté intentarlo, aunque me reservé la opción de quedarme callado y solo observar al principio."
+    },
+    {
+      "number": 16,
+      "function": "follow_up_action",
+      "en": "Before joining the group, I drafted a few pages, focusing on a single scene without worrying about polishing every sentence.",
+      "es": "Antes de unirme al grupo, redacté algunas páginas, centrándome en una sola escena sin preocuparme por pulir cada frase."
+    },
+    {
+      "number": 17,
+      "function": "feedback_moment",
+      "en": "During the meeting, several people gave thoughtful reactions, and I realized that their uncertainty, rather than undermining me, actually mirrored my own.",
+      "es": "Durante la reunión, varias personas dieron opiniones reflexivas, y me di cuenta de que su incertidumbre, en vez de perjudicarme, reflejaba la mía."
+    },
+    {
+      "number": 18,
+      "function": "interpretation",
+      "en": "Afterward, Maya asked what I took from the discussion, and I said that much of the ambiguity could be interpreted as an invitation rather than a flaw.",
+      "es": "Después, Maya me preguntó qué saqué de la discusión, y respondí que mucha de la ambigüedad podía interpretarse como una invitación, y no como un defecto."
+    },
+    {
+      "number": 19,
+      "function": "resolution",
+      "en": "I left with a sense that, by tentatively opening up, I’d gained not only useful feedback but also a more nuanced understanding of creative risk.",
+      "es": "Salí con la sensación de que, al abrirme de forma cautelosa, había ganado no solo comentarios útiles sino también una comprensión más matizada del riesgo creativo."
+    },
+    {
+      "number": 20,
+      "function": "next_steps",
+      "en": "Now, I will continue drafting my novella—balancing solitary effort and collaborative exchange, without letting either side dictate the whole process.",
+      "es": "Ahora seguiré escribiendo mi novela corta—equilibrando el esfuerzo en solitario y el intercambio colaborativo, sin permitir que ninguna parte defina todo el proceso."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "Looking back, I should have been a bit more open, since the isolation actually stifled my project rather than protecting it.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "She replied that many members had felt the same way at first, and that constructive feedback had actually become one of their most valued resources.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "That evening, while I was walking home, I found myself weighing the risks and benefits of inviting others into my process, rather than going it alone.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "One reason for this pattern, I think, is that immediate tasks seem more urgent than creative ones, which rarely have clear deadlines.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Last weekend, my friend Maya—who’s published two novels herself—asked whether I’d considered joining her writing group.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I was excited initially, I quickly realized how many competing demands there are, both at work and at home.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "There are evenings when, despite my best intentions, I end up answering emails rather than making progress on my story.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Before joining the group, I drafted a few pages, focusing on a single scene without worrying about polishing every sentence.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 16
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "my craft and my confidence",
+      "meaning_es": "mi técnica y mi confianza",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "despite my best intentions",
+      "meaning_es": "pese a mis mejores intenciones",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "joining her writing group",
+      "meaning_es": "unirme a su grupo de escritura",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "rearrange my schedule",
+      "meaning_es": "reorganizar mi horario",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "lost momentum altogether",
+      "meaning_es": "perdí por completo el impulso",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "stifled my project",
+      "meaning_es": "frenó mi proyecto",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "a certain vulnerability",
+      "meaning_es": "cierta vulnerabilidad",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "a more nuanced understanding",
+      "meaning_es": "una comprensión con más matices",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Comprensión lectora",
+        "instructions_es": "Lee cada párrafo en inglés y repite en voz alta junto con la traducción, enfocándote en tono natural.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Lee cada frase dividida por barras; haz pausa en cada segmento para practicar pronunciación precisa.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Recently,",
+              "I set myself the goal of writing a novella",
+              "before the end of the year,",
+              "hoping it might develop both my craft and my confidence."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I told her",
+              "I might stop by next week, provided I could rearrange my schedule a little."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "I left with a sense that,",
+              "by tentatively opening up,",
+              "I’d gained not only useful feedback but also a more nuanced understanding of creative risk."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura continua",
+        "instructions_es": "Lee todos los párrafos en voz alta de corrido usando ritmo natural y sin detenerte demasiado en cada palabra.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-020",
+    "number": "020",
+    "title_en": "Setting Goals for My Future",
+    "title_es": "Definir metas para mi futuro",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Metas de aprendizaje, prioridades y próximos pasos",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Comprensión lectora",
+      "Repetición por fragmentos",
+      "Lectura continua"
+    ],
+    "estimated_minutes": 45
+  }
+}

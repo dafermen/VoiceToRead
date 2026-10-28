@@ -211,3 +211,58 @@ navigation coverage were updated; migration coverage checks untouched and edited
 legacy starters and reopening. Windows cannot run Xcode/XCTest or the iPhone UI;
 native compilation, accessibility layout and playback still need Xcode/iPhone
 verification. The development .env remains ignored and outside bundled resources.
+
+## Prepared extension: lessons 011–020 at all four levels
+
+Ten new topics have forty separately authored English/Spanish narratives:
+
+011 Ordering Food at a Restaurant / Pedir comida en un restaurante
+012 Finding My Way Around a City / Orientarme en una ciudad
+013 Planning a Celebration / Organizar una celebración
+014 Learning a New Skill / Aprender una habilidad nueva
+015 Helping in My Community / Colaborar en mi comunidad
+016 Owning a Mistake and Making It Right / Reconocer un error y repararlo
+017 Choosing a Course / Elegir un curso
+018 Planning a Day Outdoors / Planear un día al aire libre
+019 Working Together on a Deadline / Trabajar juntos con una fecha límite
+020 Setting Goals for My Future / Definir metas para mi futuro
+
+Each keeps twenty ordered English/Spanish paragraphs, eight grammar structures,
+eight short verbatim expressions, five learning objectives and three reading
+rounds. Grammar examples reference actual sentences; modal perfect constructions
+are distinguished from the present perfect. Expressions are two to eight words,
+with Spanish meanings. Complete chunk examples preserve all source words and
+punctuation. Levels use different situations and linguistic demands. These are
+authored learning materials targeted at CEFR levels, not certified assessments.
+Situations, providers and service interactions are fictional learning examples.
+
+The existing JSON schema, folder resource, level filter and local playback design
+support the extension without changes to conversation, listening, stories or user
+practice archives. No scores, progression rules or microphone behavior is added.
+Earlier lessons and generated assets are retained.
+
+Publication status: PENDING OFFLINE MEDIA. The development API reported HTTP 429,
+insufficient_quota / credit_balance_exhausted during support generation. No new
+audio was completed. Requests were stopped and completed partial support files
+retained when current. Support generated before a grammar correction was backed
+up outside the app and removed for regeneration. The active catalog remains at
+forty lessons; new IDs must not be published until all eighty lessons have complete
+audio, measured word timings, support packs and covers. Target totals are sixteen
+hundred audio clips, three hundred twenty support packs and eighty unique covers.
+
+The content-only validator checks texts and cover assets and explicitly cannot
+publish a catalog. Full validation with --publish remains required for release.
+The existing offline generators can resume per lesson after the developer API
+account has credit, using Marin at the approved base speed 0.85. The development
+.env remains ignored, is never logged, and is not copied into resources.
+
+Forty new built-in image_gen covers follow the existing editorial photo style;
+exact prompts, repository paths and hashes are recorded in lesson-cover-prompts.json
+after integration. Native resource tests are prepared for twenty
+lessons per level and eighty total, but cannot run locally on Windows. Xcode and
+iPhone playback/layout verification are required before claiming release readiness.
+
+Local checkpoint validation passed for all eighty lesson texts and unique covers.
+Audio/support validation was explicitly skipped; the active catalog is unchanged.
+The 011–020 extension is retained on a local work branch pending API credit and
+full media production. It has not been released to main or TestFlight.

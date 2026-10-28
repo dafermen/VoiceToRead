@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-013",
+  "number": 13,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Celebration",
+    "es": "Organizar una celebración"
+  },
+  "category": {
+    "en": "Social Life and Relationships",
+    "es": "Vida social y relaciones"
+  },
+  "main_topic": {
+    "en": "Negotiating the details of a small celebration, determining guests and practical limitations, and flexibly agreeing on roles.",
+    "es": "Negociar los detalles de una pequeña celebración, decidir sobre la lista de invitados y las limitaciones prácticas, y acordar papeles de forma flexible."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Grupo de amigos adultos debatiendo la organización de una celebración con notas adhesivas y bocadillos en una casa moderna.",
+    "prompt": "Realistic editorial photograph, diverse group of adult friends planning a small celebration at home, sticky notes, snacks and drinks on a modern wooden table, indoor, natural light, no visible text, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Negociar acuerdos sociales equilibrando limitaciones prácticas.",
+    "Justificar y matizar preferencias en discusiones grupales.",
+    "Conceder y defender puntos usando expresiones matizadas.",
+    "Emplear estructuras avanzadas para razonar y ceder.",
+    "Practicar la lectura, fragmentación y entonación fluida."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Wednesday, my friend Jamie asked whether I’d be interested in helping plan a small celebration for our coworker Sasha’s promotion—we both agreed something simple would be nice for a change.",
+      "es": "El miércoles pasado, mi amigo Jamie me preguntó si me interesaría ayudar a organizar una pequeña celebración por el ascenso de nuestra compañera Sasha; ambos coincidimos en que algo sencillo sería agradable por variar."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "Sasha enjoys close company rather than being the center of a big crowd, so we thought a relaxed evening with friends might suit her better than a formal dinner.",
+      "es": "A Sasha le gusta la compañía cercana en vez de ser el centro de atención de una multitud, así que pensamos que una velada relajada con amigos podría ser más apropiada que una cena formal."
+    },
+    {
+      "number": 3,
+      "function": "constraint",
+      "en": "Although we could invite more people, Jamie pointed out that Sasha’s apartment isn’t large, which forced us to consider how many guests would really fit comfortably.",
+      "es": "Aunque podríamos invitar a más personas, Jamie señaló que el departamento de Sasha no es grande, lo que nos obligó a considerar cuántos invitados cabrían realmente de manera cómoda."
+    },
+    {
+      "number": 4,
+      "function": "deliberation",
+      "en": "We made a list, keeping in mind that not everyone would be able to attend on short notice, so we might have room for a couple of extra guests after all.",
+      "es": "Hicimos una lista, considerando que no todos podrían asistir con tan poca anticipación, así que quizá tendríamos espacio para un par de invitados adicionales finalmente."
+    },
+    {
+      "number": 5,
+      "function": "negotiation",
+      "en": "Rather than deciding ourselves, we agreed to ask Sasha discreetly who she would like to be there, since her preferences should shape the guest list rather than ours.",
+      "es": "En vez de decidir nosotros, acordamos preguntarle discretamente a Sasha a quién le gustaría invitar, ya que sus preferencias deberían definir la lista de invitados en vez de las nuestras."
+    },
+    {
+      "number": 6,
+      "function": "discussion",
+      "en": "Jamie suggested that people might bring a dish to share, but I cautioned that Sasha might feel uncomfortable asking guests to contribute.",
+      "es": "Jamie sugirió que cada persona podría llevar un platillo para compartir, pero yo advertí que a Sasha quizá le incomodaría pedir a los invitados que colaboren."
+    },
+    {
+      "number": 7,
+      "function": "qualification",
+      "en": "Admittedly, people have offered to help in the past, though that doesn’t necessarily mean it would work this time.",
+      "es": "Es cierto que en ocasiones anteriores la gente se ha ofrecido a ayudar, aunque eso no necesariamente funcionaría en esta ocasión."
+    },
+    {
+      "number": 8,
+      "function": "compromise",
+      "en": "We might mention casually that everyone always brings something if they want, without making it an expectation or obligation.",
+      "es": "Podríamos comentar casualmente que todos suelen llevar algo si lo desean, sin que sea una expectativa ni obligación."
+    },
+    {
+      "number": 9,
+      "function": "counterpoint",
+      "en": "Even though I typically handle decorations, I told Jamie I’d prefer to help with setup this time, since I have a full week at work and limited time.",
+      "es": "Aunque normalmente yo me encargo de la decoración, le dije a Jamie que preferiría ayudar con la preparación en esta ocasión, ya que tengo una semana llena en el trabajo y dispondré de poco tiempo."
+    },
+    {
+      "number": 10,
+      "function": "shift",
+      "en": "Jamie was fine with taking over what I used to do, especially since he’d wanted to try his hand at arranging flowers.",
+      "es": "A Jamie le pareció bien encargarse de lo que yo solía hacer, especialmente porque quería probar su habilidad para arreglar flores."
+    },
+    {
+      "number": 11,
+      "function": "analysis",
+      "en": "Since we were both used to planning things last minute, it felt more realistic to keep the menu simple, using mostly ready-made snacks.",
+      "es": "Como ambos estábamos acostumbrados a organizar cosas a último momento, parecía más realista mantener el menú sencillo y usar sobre todo bocadillos ya preparados."
+    },
+    {
+      "number": 12,
+      "function": "reassessment",
+      "en": "Still, Jamie argued that store-bought appetizers might lack the personal touch that makes a celebration feel special.",
+      "es": "Aun así, Jamie argumentó que los aperitivos comprados podrían carecer de ese toque personal que hace especial una celebración."
+    },
+    {
+      "number": 13,
+      "function": "concession",
+      "en": "I conceded his point and suggested we could at least bake a cake together the night before, so that there would be one homemade element.",
+      "es": "Le concedí la razón y propuse que al menos horneáramos un pastel juntos la noche anterior, para que hubiera un detalle casero."
+    },
+    {
+      "number": 14,
+      "function": "expectations",
+      "en": "Rather than overcommitting, we agreed to skip extra decorations and invest our energy in the mood and music instead.",
+      "es": "En vez de excedernos, coincidimos en omitir decorado extra y dedicar la energía a la ambientación y la música."
+    },
+    {
+      "number": 15,
+      "function": "exploration",
+      "en": "I wondered if Sasha might have had other plans and suggested checking with her one more time before confirming anything.",
+      "es": "Me preguntaba si Sasha podría tener otros planes, por lo que sugerí consultarle una vez más antes de definir cualquier cosa."
+    },
+    {
+      "number": 16,
+      "function": "information",
+      "en": "It turned out she was free the following Friday, and she appreciated the fact that we asked her before finalizing the plans.",
+      "es": "Resultó que sí estaba libre el próximo viernes, y le agradeció que le consultáramos antes de finalizar los planes."
+    },
+    {
+      "number": 17,
+      "function": "solution",
+      "en": "We finalized the guest list with her input and sent out brief invitations, making it clear that no one should feel pressured to bring anything.",
+      "es": "Terminamos la lista de invitados con su opinión y enviamos invitaciones breves, dejando claro que nadie debía sentirse obligado a llevar nada."
+    },
+    {
+      "number": 18,
+      "function": "outcome",
+      "en": "By coordinating roles in advance, we managed to avoid last-minute confusion and each of us knew exactly what we’d take care of.",
+      "es": "Al coordinar los roles con antelación, evitamos confusiones de último minuto y cada quien sabía exactamente de qué se haría cargo."
+    },
+    {
+      "number": 19,
+      "function": "feedback",
+      "en": "After it was all done, even Jamie admitted it had gone more smoothly than our previous attempts at group planning.",
+      "es": "Después de todo, incluso Jamie admitió que todo había salido más fluido que en nuestros intentos anteriores de organizar en grupo."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "Looking back, I realized that by approaching the discussion with flexibility and openness, we avoided misunderstandings and created a genuinely enjoyable evening for Sasha.",
+      "es": "Al mirar atrás, comprendí que al abordar la conversación con flexibilidad y apertura, evitamos malentendidos y logramos una velada genuinamente especial para Sasha."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present perfect",
+      "example_en": "Admittedly, people have offered to help in the past, though that doesn’t necessarily mean it would work this time.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Although we could invite more people, Jamie pointed out that Sasha’s apartment isn’t large, which forced us to consider how many guests would really fit comfortably.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Last Wednesday, my friend Jamie asked whether I’d be interested in helping plan a small celebration for our coworker Sasha’s promotion—we both agreed something simple would be nice for a change.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though I typically handle decorations, I told Jamie I’d prefer to help with setup this time, since I have a full week at work and limited time.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Sasha enjoys close company rather than being the center of a big crowd, so we thought a relaxed evening with friends might suit her better than a formal dinner.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "We might mention casually that everyone always brings something if they want, without making it an expectation or obligation.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "By coordinating roles in advance, we managed to avoid last-minute confusion and each of us knew exactly what we’d take care of.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "I wondered if Sasha might have had other plans and suggested checking with her one more time before confirming anything.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 15
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "keeping in mind",
+      "meaning_es": "teniendo en cuenta",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "ask Sasha discreetly",
+      "meaning_es": "preguntar discretamente a Sasha",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "bring a dish to share",
+      "meaning_es": "llevar un platillo para compartir",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "have offered to help",
+      "meaning_es": "se han ofrecido a ayudar",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "try his hand at",
+      "meaning_es": "probar su habilidad en",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "felt more realistic",
+      "meaning_es": "parecía más realista",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "checking with her",
+      "meaning_es": "consultarle",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "take care of",
+      "meaning_es": "hacerse cargo de",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en voz alta en inglés, consulta la traducción al español, y repite dos veces para afianzar comprensión y entonación.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los siguientes fragmentos; las barras marcan pausas naturales para mejorar la fluidez.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last Wednesday,",
+              "my friend Jamie asked whether I’d be interested in helping plan a small celebration for our coworker Sasha’s promotion—we both agreed something simple would be nice for a change."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "Rather than deciding ourselves,",
+              "we agreed to ask Sasha discreetly who she would like to be there,",
+              "since her preferences should shape the guest list",
+              "rather than ours."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "By coordinating roles in advance,",
+              "we managed to avoid last-minute confusion and each of us knew exactly what we’d take care of."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos seguidos en voz alta; mantén el ritmo natural de la narración, sin detenerte tras cada fragmento.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-013",
+    "number": "013",
+    "title_en": "Planning a Celebration",
+    "title_es": "Organizar una celebración",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Vida social y relaciones",
+    "main_topic_es": "Negociar detalles de una celebración y roles de forma flexible",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

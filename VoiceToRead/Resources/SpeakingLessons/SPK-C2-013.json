@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-013",
+  "number": 13,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Celebration",
+    "es": "Organizar una celebración"
+  },
+  "category": {
+    "en": "Social Interaction and Negotiation",
+    "es": "Interacción social y negociación"
+  },
+  "main_topic": {
+    "en": "Agreeing on a celebration, negotiating guest lists, roles, practical constraints, and nuanced communication.",
+    "es": "Acordar una celebración, negociar invitados, funciones, limitaciones prácticas y comunicación matizada."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos adultos conversando en una sala mientras planean una pequeña celebración, con una libreta y tazas de café sobre la mesa.",
+    "prompt": "Realistic editorial photograph, two adults in a living room planning a small celebration, not making assumptions about customs or family roles, a notepad and coffee cups on the table, bright daylight, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Negociar acuerdos sobre eventos sociales en inglés avanzado.",
+    "Interpretar y responder a la ambigüedad conversacional.",
+    "Reformular puntos delicados usando matices en el registro.",
+    "Aclarar y calibrar desacuerdos o acuerdos de forma diplomática.",
+    "Practicar estructuras gramaticales avanzadas y expresiones idiomáticas en contexto natural."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Cara and I recently decided that we'd like to mark our friend's promotion, but neither of us felt a large gathering would be right.",
+      "es": "Recientemente, Cara y yo decidimos que nos gustaría celebrar el ascenso de nuestro amigo, pero ninguno sentía que una reunión grande fuera adecuada."
+    },
+    {
+      "number": 2,
+      "function": "clarification",
+      "en": "She asked if I thought a dinner at my place might suit both the occasion and our friend's personality, and I could see her point.",
+      "es": "Ella preguntó si pensaba que una cena en mi casa podría adaptarse tanto a la ocasión como a la personalidad de nuestro amigo, y entendí su idea."
+    },
+    {
+      "number": 3,
+      "function": "elaboration",
+      "en": "Even though I was a bit concerned about space, I agreed that a smaller setting would feel more personal and manageable.",
+      "es": "Aunque me preocupaba un poco el espacio, estuve de acuerdo en que un entorno más pequeño sería más personal y manejable."
+    },
+    {
+      "number": 4,
+      "function": "exploration",
+      "en": "Cara suggested inviting just four people, rather than trying to include the entire group, thinking it would encourage real conversation.",
+      "es": "Cara sugirió invitar solo a cuatro personas, en vez de incluir a todo el grupo, pensando que así se fomentaría una conversación auténtica."
+    },
+    {
+      "number": 5,
+      "function": "negotiation",
+      "en": "Before finalizing, I asked whether limiting the list might unintentionally exclude someone important to our friend.",
+      "es": "Antes de decidirlo, pregunté si limitar la lista podría excluir sin querer a alguien importante para nuestro amigo."
+    },
+    {
+      "number": 6,
+      "function": "interpretation",
+      "en": "We debated briefly, as Cara pointed out that our friend had often preferred quiet evenings and rarely attended larger parties.",
+      "es": "Debatimos brevemente, ya que Cara señaló que nuestro amigo solía preferir las veladas tranquilas y rara vez asistía a fiestas grandes."
+    },
+    {
+      "number": 7,
+      "function": "reformulation",
+      "en": "I wondered aloud if anyone not invited might feel overlooked, but perhaps, I said, everyone would appreciate a low-key evening for once.",
+      "es": "Me pregunté en voz alta si alguien no invitado podría sentirse ignorado, pero tal vez, dije, todos agradecerían una velada tranquila por una vez."
+    },
+    {
+      "number": 8,
+      "function": "agreement",
+      "en": "We settled on inviting Alex, Priya, Jon, and of course the guest of honor, since each had a close connection.",
+      "es": "Decidimos invitar a Alex, Priya, Jon y por supuesto al homenajeado, ya que todos tenían un vínculo estrecho."
+    },
+    {
+      "number": 9,
+      "function": "distribution",
+      "en": "Cara volunteered to handle invitations, while I said I could take care of the meal if she was willing to bring dessert.",
+      "es": "Cara se ofreció a encargarse de las invitaciones, mientras que yo dije que podría ocuparme de la comida si ella traía el postre."
+    },
+    {
+      "number": 10,
+      "function": "register_variation",
+      "en": "Instead of dividing everything by traditional roles, we decided to share cleanup duties and made a list to keep it practical.",
+      "es": "En vez de repartir las tareas según roles tradicionales, decidimos compartir la limpieza y elaboramos una lista para mantenerlo práctico."
+    },
+    {
+      "number": 11,
+      "function": "practical_constraint",
+      "en": "We talked through possible dates, and after checking everyone’s schedules, we found that only one Friday in May would work.",
+      "es": "Hablamos sobre las posibles fechas y, tras revisar las agendas de todos, vimos que solo un viernes de mayo funcionaba."
+    },
+    {
+      "number": 12,
+      "function": "sensitivity",
+      "en": "I hesitated before mentioning that I might have a late meeting that day, but Cara reassured me that she could set things up until I arrived.",
+      "es": "Dudé antes de mencionar que podría tener una reunión tardía ese día, pero Cara me aseguró que podría preparar todo antes de que yo llegara."
+    },
+    {
+      "number": 13,
+      "function": "contingency",
+      "en": "Since last-minute changes sometimes happen, we agreed to confirm with everyone a day in advance rather than assuming they'll remember.",
+      "es": "Como a veces surgen cambios de último momento, acordamos confirmar con todos un día antes, en vez de asumir que lo recordarían."
+    },
+    {
+      "number": 14,
+      "function": "recalibration",
+      "en": "There was a moment when I almost suggested we skip decorations, but Cara hesitated, so I offered that we could keep it simple—perhaps just flowers.",
+      "es": "Hubo un momento en el que estuve a punto de sugerir que no pusiéramos decoración, pero Cara vaciló, así que propuse que fuera sencillo, quizá solo flores."
+    },
+    {
+      "number": 15,
+      "function": "reasoning",
+      "en": "We both agreed that an uncluttered table would avoid distractions and make the evening less formal.",
+      "es": "Coincidimos en que una mesa sencilla evitaría distracciones y haría la velada menos formal."
+    },
+    {
+      "number": 16,
+      "function": "anticipation",
+      "en": "I mentioned that someone might want to bring something, so we should let guests know it isn’t necessary but welcome if they'd like.",
+      "es": "Comenté que quizá alguien querría traer algo, así que deberíamos avisar que no es necesario, pero bienvenido si así lo desean."
+    },
+    {
+      "number": 17,
+      "function": "qualification",
+      "en": "Although neither of us wanted speeches, I raised the idea of toasting briefly, just to acknowledge our friend’s accomplishment.",
+      "es": "Aunque ninguno de los dos quería discursos, propuse brindar brevemente solo para reconocer el logro de nuestro amigo."
+    },
+    {
+      "number": 18,
+      "function": "resolution",
+      "en": "We finalized our plans by dividing responsibilities without making assumptions about who would do what, and we made a shared list.",
+      "es": "Finalizamos nuestros planes repartiendo responsabilidades sin asumir quién haría qué, y creamos una lista compartida."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Looking back, I noticed that being explicit about expectations helped avoid confusion or misplaced effort.",
+      "es": "Al reflexionar, noté que ser explícitos sobre las expectativas ayudó a evitar confusiones o esfuerzos mal dirigidos."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "When the evening came, it unfolded simply and everyone seemed genuinely at ease, so the celebration felt intentional and warmly shared.",
+      "es": "Cuando llegó la noche, todo transcurrió con sencillez y todos parecían verdaderamente cómodos, así que la celebración resultó intencional y cálida."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous",
+      "example_en": "Cara volunteered to handle invitations, while I said I could take care of the meal if she was willing to bring dessert.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "She asked if I thought a dinner at my place might suit both the occasion and our friend's personality, and I could see her point.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though I was a bit concerned about space, I agreed that a smaller setting would feel more personal and manageable.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Cara suggested inviting just four people, rather than trying to include the entire group, thinking it would encourage real conversation.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "We finalized our plans by dividing responsibilities without making assumptions about who would do what, and we made a shared list.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "We finalized our plans by dividing responsibilities without making assumptions about who would do what, and we made a shared list.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "Before finalizing, I asked whether limiting the list might unintentionally exclude someone important to our friend.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "I wondered aloud if anyone not invited might feel overlooked, but perhaps, I said, everyone would appreciate a low-key evening for once.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 7
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "mark our friend's promotion",
+      "meaning_es": "celebrar el ascenso de nuestro amigo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "see her point",
+      "meaning_es": "entender su idea / punto de vista",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "agreed that a smaller setting",
+      "meaning_es": "estuve de acuerdo en que un entorno más pequeño",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "handle invitations",
+      "meaning_es": "encargarse de las invitaciones",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "take care of the meal",
+      "meaning_es": "ocuparse de la comida",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "talked through possible dates",
+      "meaning_es": "hablamos sobre las posibles fechas",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "set things up",
+      "meaning_es": "preparar todo / arreglar las cosas",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "made a shared list",
+      "meaning_es": "hicimos una lista compartida",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "She asked if I thought a dinner at my place might suit both the occasion and our friend's personality,",
+              "and I could see her point."
+            ]
+          },
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "Cara suggested inviting just four people,",
+              "rather than trying to include the entire group,",
+              "thinking it would encourage real conversation."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Looking back,",
+              "I noticed that being explicit about expectations helped avoid confusion or misplaced effort."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-013",
+    "number": "013",
+    "title_en": "Planning a Celebration",
+    "title_es": "Organizar una celebración",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Interacción social y negociación",
+    "main_topic_es": "Acordar una celebración, negociar invitados y limitaciones prácticas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund",
+      "Might for possibility"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

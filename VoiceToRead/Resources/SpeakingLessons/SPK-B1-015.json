@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-015",
+  "number": 15,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Helping in My Community",
+    "es": "Colaborar en mi comunidad"
+  },
+  "category": {
+    "en": "Community and Civic Life",
+    "es": "Comunidad y vida cívica"
+  },
+  "main_topic": {
+    "en": "Coordinating a neighborhood volunteering activity, balancing different contributions, and discussing what is most useful.",
+    "es": "Coordinar una actividad de voluntariado vecinal, equilibrar diferentes aportaciones y dialogar sobre lo más útil."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Personas adultas organizando una actividad de voluntariado en un parque del vecindario.",
+    "prompt": "Editorial, diverse adults talking and organizing a neighborhood volunteer clean-up in a green community park, clipboards, casual outdoor clothing, warm daylight, natural setting, no branding, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir planes para un evento de voluntariado vecinal.",
+    "Pedir o sugerir acciones útiles a otros.",
+    "Hablar de experiencias pasadas y compararlas con el presente.",
+    "Negociar y equilibrar contribuciones diferentes.",
+    "Ejercitar el uso de conectores y condicionales para coordinar actividades."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This month, our neighborhood group is planning to volunteer together to help clean up the local park.",
+      "es": "Este mes, nuestro grupo vecinal planea hacer voluntariado juntos para ayudar a limpiar el parque local."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "We thought it would be a good way to meet new neighbors and make our area nicer for everyone.",
+      "es": "Pensamos que sería una buena forma de conocer a nuevos vecinos y mejorar nuestro barrio para todos."
+    },
+    {
+      "number": 3,
+      "function": "personal_experience",
+      "en": "I had never organized something like this before, but I wanted to do my part and learn something new.",
+      "es": "Nunca había organizado algo así antes, pero quería cumplir con mi parte y aprender algo nuevo."
+    },
+    {
+      "number": 4,
+      "function": "problem",
+      "en": "Some neighbors were excited, while others said they were not sure what help was actually needed.",
+      "es": "Algunos vecinos estaban entusiasmados, pero otros decían que no estaban seguros de qué ayuda era realmente necesaria."
+    },
+    {
+      "number": 5,
+      "function": "conversation",
+      "en": "I asked my friend Sara, \"What do you think would be most useful for the park right now?\"",
+      "es": "Le pregunté a mi amiga Sara: \"¿Qué crees que sería más útil para el parque ahora mismo?\""
+    },
+    {
+      "number": 6,
+      "function": "response",
+      "en": "She replied, \"I think picking up trash is important, but we could also plant some flowers to make the space prettier.\"",
+      "es": "Ella respondió: \"Creo que recoger basura es importante, pero también podríamos plantar flores para embellecer el lugar.\""
+    },
+    {
+      "number": 7,
+      "function": "negotiation",
+      "en": "We discussed whether we should buy new plants or if we could use what people already had at home.",
+      "es": "Hablamos sobre si deberíamos comprar plantas nuevas o si podíamos usar lo que la gente ya tenía en casa."
+    },
+    {
+      "number": 8,
+      "function": "comparison",
+      "en": "In the past, most neighbors used to bring only tools, but this time we wanted more variety.",
+      "es": "Antes, la mayoría de los vecinos solían traer solo herramientas, pero esta vez queríamos más variedad."
+    },
+    {
+      "number": 9,
+      "function": "suggestion",
+      "en": "Lisa suggested coordinating a list, so no one would bring the same items by mistake.",
+      "es": "Lisa sugirió coordinar una lista para que nadie trajera los mismos objetos por error."
+    },
+    {
+      "number": 10,
+      "function": "challenge",
+      "en": "Although many people signed up quickly, not everyone agreed on what jobs should be the priority.",
+      "es": "Aunque muchas personas se apuntaron rápidamente, no todos estaban de acuerdo sobre qué tareas debían ser prioridad."
+    },
+    {
+      "number": 11,
+      "function": "solution",
+      "en": "We decided that, before doing anything, we would ask the park staff if there were any special rules.",
+      "es": "Decidimos que, antes de hacer nada, preguntaríamos al personal del parque si había reglas especiales."
+    },
+    {
+      "number": 12,
+      "function": "experience",
+      "en": "The staff explained, \"You should avoid planting near the playground and keep the main path clear for walkers.\"",
+      "es": "El personal explicó: \"Deben evitar plantar cerca del área de juegos y mantener limpio el camino principal para los caminantes.\""
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "After hearing this, I realized we needed to plan carefully so everyone’s help would be useful.",
+      "es": "Al escuchar esto, me di cuenta de que teníamos que planificar bien para que la ayuda de todos fuera útil."
+    },
+    {
+      "number": 14,
+      "function": "division_of_tasks",
+      "en": "We split into three groups: one for trash pickup, another for planting, and a third for helping kids paint signs.",
+      "es": "Nos dividimos en tres grupos: uno para recoger basura, otro para plantar y otro para ayudar a los niños a pintar carteles."
+    },
+    {
+      "number": 15,
+      "function": "complication",
+      "en": "On the day of the event, some people arrived late or forgot their supplies, which caused a little confusion.",
+      "es": "El día del evento, algunas personas llegaron tarde o se olvidaron de sus materiales, lo que causó un poco de confusión."
+    },
+    {
+      "number": 16,
+      "function": "adjustment",
+      "en": "Even though that happened, everyone was able to find something useful to do by checking the list we made earlier.",
+      "es": "Aun así, todos pudieron encontrar algo útil que hacer consultando la lista que habíamos hecho antes."
+    },
+    {
+      "number": 17,
+      "function": "positive_outcome",
+      "en": "By the end of the afternoon, the park looked cleaner, and people who hadn't met before were talking and laughing together.",
+      "es": "Al final de la tarde, el parque estaba más limpio y las personas que no se conocían charlaban y reían juntas."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Looking back, I think having clear plans and asking what is actually helpful made a big difference.",
+      "es": "Al mirar atrás, creo que tener planes claros y preguntar qué es realmente útil hizo una gran diferencia."
+    },
+    {
+      "number": 19,
+      "function": "future_intention",
+      "en": "We agreed that next time, we might add a picnic after volunteering, to make the day feel even more special.",
+      "es": "Acordamos que la próxima vez podríamos añadir un picnic después del voluntariado para que el día sea aún más especial."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "My neighbors and I will keep helping out, because working together brought our community a bit closer.",
+      "es": "Mis vecinos y yo seguiremos ayudando, porque trabajar juntos acercó un poco más a nuestra comunidad."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous",
+      "example_en": "By the end of the afternoon, the park looked cleaner, and people who hadn't met before were talking and laughing together.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "On the day of the event, some people arrived late or forgot their supplies, which caused a little confusion.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although many people signed up quickly, not everyone agreed on what jobs should be the priority.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Even though that happened, everyone was able to find something useful to do by checking the list we made earlier.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "We decided that, before doing anything, we would ask the park staff if there were any special rules.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Used to",
+      "example_en": "In the past, most neighbors used to bring only tools, but this time we wanted more variety.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "We agreed that next time, we might add a picnic after volunteering, to make the day feel even more special.",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Could",
+      "example_en": "She replied, \"I think picking up trash is important, but we could also plant some flowers to make the space prettier.\"",
+      "explanation_es": "Could puede expresar capacidad, posibilidad o una petición según el contexto de la frase.",
+      "source_paragraph": 6
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "do my part",
+      "meaning_es": "poner de mi parte",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "what help was actually needed",
+      "meaning_es": "qué ayuda se necesitaba realmente",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "What do you think",
+      "meaning_es": "¿Qué opinas?",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "more variety",
+      "meaning_es": "más variedad",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "by mistake",
+      "meaning_es": "por error",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "keep the main path clear",
+      "meaning_es": "mantener despejado el camino principal",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "plan carefully",
+      "meaning_es": "planificar con cuidado",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "a picnic after volunteering",
+      "meaning_es": "un pícnic después del voluntariado",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica estos fragmentos. Las barras indican pausas para practicar la pronunciación sin romper la oración.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I had never organized something like this",
+              "before,",
+              "but I wanted to do my part and learn something new."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "In the past,",
+              "most neighbors used to bring only tools,",
+              "but this time we wanted more variety."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "After hearing this,",
+              "I realized we needed to plan carefully so everyone’s help would be useful."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-015",
+    "number": "015",
+    "title_en": "Helping in My Community",
+    "title_es": "Colaborar en mi comunidad",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Comunidad y vida cívica",
+    "main_topic_es": "Coordinar voluntariado vecinal y equilibrar aportes",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous",
+      "Relative clause with who/which",
+      "Concessive clause",
+      "By + gerund",
+      "After/before + gerund",
+      "Used to",
+      "Might for possibility",
+      "Could"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

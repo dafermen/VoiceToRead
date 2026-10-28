@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-017",
+  "number": 17,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Choosing a Course",
+    "es": "Elegir un curso"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Compare learning courses and formats, ask questions about fit, support and time, discuss a realistic choice.",
+    "es": "Comparar cursos y formatos, preguntar sobre compatibilidad, apoyo y tiempo, debatir una elección realista."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Dos adultos conversan en una oficina mientras revisan folletos de cursos en diferentes formatos.",
+    "prompt": "Editorial photograph: two adults in an office, reviewing course brochures together, one looking at a computer, various education materials on table, bright natural light, 16:9 horizontal, no visible text.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Comparar dos cursos y formatos educativos de manera clara.",
+    "Hacer y responder preguntas prácticas sobre compatibilidad y apoyo.",
+    "Describir experiencias previas y expectativas futuras en aprendizaje.",
+    "Contrastar pros y contras usando inglés cotidiano.",
+    "Seleccionar cursos o formatos con justificación realista."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, I decided that I want to learn some new skills to help me change my job.",
+      "es": "La semana pasada, decidí que quiero aprender nuevas habilidades para ayudarme a cambiar de trabajo."
+    },
+    {
+      "number": 2,
+      "function": "setting",
+      "en": "My friend Emily, who has taken several courses, suggested that I look at two local course providers.",
+      "es": "Mi amiga Emily, quien ha tomado varios cursos, me sugirió que revisara dos proveedores de cursos locales."
+    },
+    {
+      "number": 3,
+      "function": "choice",
+      "en": "One offers weekend classes in person, and the other has flexible online lessons that I can do anytime.",
+      "es": "Uno ofrece clases presenciales los fines de semana y el otro tiene lecciones en línea flexibles que puedo hacer en cualquier momento."
+    },
+    {
+      "number": 4,
+      "function": "contrast",
+      "en": "Although I like studying with people, I might need something that fits my schedule better.",
+      "es": "Aunque me gusta estudiar con personas, podría necesitar algo que se adapte mejor a mi horario."
+    },
+    {
+      "number": 5,
+      "function": "background",
+      "en": "I used to take evening courses before, but I stopped because I was getting home too late and feeling tired.",
+      "es": "Solía tomar cursos nocturnos antes, pero lo dejé porque llegaba demasiado tarde a casa y me sentía cansado."
+    },
+    {
+      "number": 6,
+      "function": "question",
+      "en": "Yesterday, I emailed both providers to ask about the support they give during the course.",
+      "es": "Ayer, escribí a ambos proveedores para preguntar sobre el apoyo que ofrecen durante el curso."
+    },
+    {
+      "number": 7,
+      "function": "reply",
+      "en": "The first school replied that teachers are always available in person before or after each class.",
+      "es": "La primera escuela respondió que los profesores siempre están disponibles en persona antes o después de cada clase."
+    },
+    {
+      "number": 8,
+      "function": "reply",
+      "en": "The online provider wrote that they have a chat group and weekly video calls which I can join whenever I need help.",
+      "es": "El proveedor online escribió que tienen un grupo de chat y videollamadas semanales a las que puedo unirme cuando necesite ayuda."
+    },
+    {
+      "number": 9,
+      "function": "opinion",
+      "en": "I thought the online course sounded more flexible, but I wondered if I would feel isolated by not meeting classmates.",
+      "es": "Pensé que el curso online parecía más flexible, pero me pregunté si me sentiría aislado al no conocer a los compañeros."
+    },
+    {
+      "number": 10,
+      "function": "memory",
+      "en": "The last time I signed up for an online class, I had forgotten to check how much live support was included.",
+      "es": "La última vez que me apunté a una clase online, se me olvidó comprobar cuánta ayuda en vivo estaba incluida."
+    },
+    {
+      "number": 11,
+      "function": "reflection",
+      "en": "This time, I wanted to avoid that mistake and really understand what I was getting.",
+      "es": "Esta vez, quería evitar ese error y entender bien lo que estaba recibiendo."
+    },
+    {
+      "number": 12,
+      "function": "call",
+      "en": "So, today I called the classroom provider and asked whether I could visit before signing up.",
+      "es": "Por eso, hoy llamé al proveedor presencial y pregunté si podía visitarlos antes de inscribirme."
+    },
+    {
+      "number": 13,
+      "function": "answer",
+      "en": "They told me I could join a free trial class next Saturday, which made me feel welcome.",
+      "es": "Me dijeron que podía asistir a una clase de prueba gratuita el próximo sábado, lo que me hizo sentir bienvenido."
+    },
+    {
+      "number": 14,
+      "function": "decision",
+      "en": "After talking with Emily again, I realized I have to think about how much time I can really spend.",
+      "es": "Después de hablar de nuevo con Emily, me di cuenta de que tengo que pensar en cuánto tiempo puedo dedicar realmente."
+    },
+    {
+      "number": 15,
+      "function": "plan",
+      "en": "I work full time, so studying every evening would be difficult and I might get behind in my other tasks.",
+      "es": "Trabajo a tiempo completo, así que estudiar todas las noches sería complicado y podría atrasarme en mis otras tareas."
+    },
+    {
+      "number": 16,
+      "function": "vision",
+      "en": "However, if I could use my weekends to study in a group, I might stay motivated because everybody can share their ideas.",
+      "es": "Sin embargo, si pudiera usar los fines de semana para estudiar en grupo, podría mantener la motivación porque todos pueden compartir ideas."
+    },
+    {
+      "number": 17,
+      "function": "comparison",
+      "en": "The online provider, which specializes in flexible learning, sent me detailed course plans yesterday.",
+      "es": "El proveedor online, que se especializa en aprendizaje flexible, me envió planes de curso detallados ayer."
+    },
+    {
+      "number": 18,
+      "function": "realization",
+      "en": "Even though studying online would save me time traveling, I might miss practicing with people face to face.",
+      "es": "Aunque estudiar online me ahorraría tiempo de viaje, podría extrañar practicar con personas cara a cara."
+    },
+    {
+      "number": 19,
+      "function": "conclusion",
+      "en": "Finally, I've chosen to join the weekend class because I want clear support and I learn best by talking with others.",
+      "es": "Finalmente, he decidido unirme a la clase de los fines de semana porque quiero apoyo claro y aprendo mejor conversando con otros."
+    },
+    {
+      "number": 20,
+      "function": "result",
+      "en": "Next month, I will start my new course and I hope it gives me the confidence to reach my goals.",
+      "es": "El mes que viene, empezaré mi nuevo curso y espero que me dé la confianza para alcanzar mis metas."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "The last time I signed up for an online class, I had forgotten to check how much live support was included.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "My friend Emily, who has taken several courses, suggested that I look at two local course providers.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "I used to take evening courses before, but I stopped because I was getting home too late and feeling tired.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "They told me I could join a free trial class next Saturday, which made me feel welcome.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I thought the online course sounded more flexible, but I wondered if I would feel isolated by not meeting classmates.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I like studying with people, I might need something that fits my schedule better.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Finally, I've chosen to join the weekend class because I want clear support and I learn best by talking with others.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "So, today I called the classroom provider and asked whether I could visit before signing up.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 12
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "look at",
+      "meaning_es": "mirar; revisar",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "fits my schedule",
+      "meaning_es": "se adapta a mi horario",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "ask about",
+      "meaning_es": "preguntar sobre",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "join a free trial class",
+      "meaning_es": "unirse a una clase de prueba gratuita",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "get behind",
+      "meaning_es": "atrasarse",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "stay motivated",
+      "meaning_es": "mantener la motivación",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "face to face",
+      "meaning_es": "cara a cara",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "reach my goals",
+      "meaning_es": "alcanzar mis metas",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "One offers weekend classes in person,",
+              "and the other has flexible online lessons",
+              "that I can do anytime."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "The last time I signed up for an online class,",
+              "I had forgotten to check",
+              "how much live support was included."
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "However, if I could use my weekends to study in a group,",
+              "I might stay motivated",
+              "because everybody can share their ideas."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-017",
+    "number": "017",
+    "title_en": "Choosing a Course",
+    "title_es": "Elegir un curso",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Comparar cursos y formatos educativos",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Present perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-011",
+  "number": 11,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Ordering Food at a Restaurant",
+    "es": "Pedir comida en un restaurante"
+  },
+  "category": {
+    "en": "Travel and Daily Life",
+    "es": "Viajes y vida cotidiana"
+  },
+  "main_topic": {
+    "en": "A restaurant visit: ask about the menu, explain preferences and clarify an order respectfully.",
+    "es": "Una visita al restaurante: preguntar por el menú, explicar preferencias y aclarar un pedido de manera respetuosa."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Dos adultos pidiendo comida en un restaurante casual, mirando el menú mientras conversan con un camarero.",
+    "prompt": "Editorial, realistic photograph of two adults in a casual American restaurant, consulting the menu and speaking with a friendly server, table with water and glasses, natural daylight, 16:9, no visible text.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una experiencia visitando un restaurante.",
+    "Pedir recomendaciones y clarificar pedidos con educación.",
+    "Explicar preferencias y hacer solicitudes sencillas.",
+    "Hablar sobre costumbres pasadas y comparar opciones.",
+    "Practicar frases útiles para situaciones cotidianas en restaurantes."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Friday, I went to a new restaurant with my friend Lisa because we wanted to try something different.",
+      "es": "El viernes pasado fui a un restaurante nuevo con mi amiga Lisa porque queríamos probar algo diferente."
+    },
+    {
+      "number": 2,
+      "function": "environment",
+      "en": "The place was busy and smelled great, so we had to wait a few minutes before getting a table.",
+      "es": "El lugar estaba lleno y olía delicioso, así que tuvimos que esperar unos minutos antes de conseguir una mesa."
+    },
+    {
+      "number": 3,
+      "function": "situation",
+      "en": "A friendly waiter greeted us, handed us menus, and told us about a special dish that people often like.",
+      "es": "Un camarero amable nos saludó, nos entregó los menús y nos habló de un plato especial que suele gustar a la gente."
+    },
+    {
+      "number": 4,
+      "function": "preference",
+      "en": "I told him I try to eat light at night, so I asked whether there were any salads with chicken.",
+      "es": "Le dije que intento cenar ligero, así que le pregunté si había ensaladas con pollo."
+    },
+    {
+      "number": 5,
+      "function": "contrast",
+      "en": "Lisa, on the other hand, was thinking about ordering pasta, even though she usually avoids it during the week.",
+      "es": "Lisa, en cambio, pensaba pedir pasta, aunque normalmente la evita durante la semana."
+    },
+    {
+      "number": 6,
+      "function": "information",
+      "en": "The waiter explained which salads had chicken and described the pasta options clearly.",
+      "es": "El camarero explicó qué ensaladas llevaban pollo y describió claramente las opciones de pasta."
+    },
+    {
+      "number": 7,
+      "function": "experience",
+      "en": "I remembered I had tried the chef’s salad at another place, but it didn't have as much flavor as I expected.",
+      "es": "Recordé que había probado la ensalada del chef en otro lugar, pero no tenía tanto sabor como esperaba."
+    },
+    {
+      "number": 8,
+      "function": "decision",
+      "en": "So I asked, 'Could you tell me if your chef’s salad is popular here?' and the waiter smiled, saying many guests order it.",
+      "es": "Así que pregunté: '¿Podría decirme si la ensalada del chef es popular aquí?' y el camarero sonrió diciendo que muchos clientes la piden."
+    },
+    {
+      "number": 9,
+      "function": "clarification",
+      "en": "Before choosing, I checked whether the dressing comes on the side because I prefer adding it myself.",
+      "es": "Antes de decidir, comprobé si el aderezo venía aparte porque prefiero añadirlo yo mismo."
+    },
+    {
+      "number": 10,
+      "function": "action",
+      "en": "The waiter answered, 'Yes, of course, we can serve the dressing on the side,' so I was happy with that.",
+      "es": "El camarero contestó: 'Sí, por supuesto, podemos poner el aderezo aparte,' así que me alegré por eso."
+    },
+    {
+      "number": 11,
+      "function": "variation",
+      "en": "Lisa asked whether the pasta dish could be made without cheese, since she sometimes avoids dairy at night.",
+      "es": "Lisa preguntó si el plato de pasta podía hacerse sin queso, ya que a veces evita los lácteos por la noche."
+    },
+    {
+      "number": 12,
+      "function": "response",
+      "en": "The waiter explained, 'We make that dish fresh, so we can leave out the cheese if you prefer.'",
+      "es": "El camarero explicó: 'Preparamos ese plato al momento, así que podemos quitar el queso si prefieres.'"
+    },
+    {
+      "number": 13,
+      "function": "gratitude",
+      "en": "I thanked him for helping us choose, and Lisa said she appreciated how flexible the restaurant seemed.",
+      "es": "Le di las gracias por ayudarnos a elegir, y Lisa dijo que agradecía la flexibilidad del restaurante."
+    },
+    {
+      "number": 14,
+      "function": "past_habit",
+      "en": "When I was younger, I used to order the same food at every restaurant rather than trying something new.",
+      "es": "Cuando era más joven, solía pedir la misma comida en cada restaurante en vez de probar algo nuevo."
+    },
+    {
+      "number": 15,
+      "function": "reflection",
+      "en": "Now I like exploring different tastes and asking questions before making a choice.",
+      "es": "Ahora me gusta probar diferentes sabores y hacer preguntas antes de elegir."
+    },
+    {
+      "number": 16,
+      "function": "service",
+      "en": "After taking our orders, the waiter brought water and made sure we had everything we needed.",
+      "es": "Después de tomar nuestros pedidos, el camarero trajo agua y se aseguró de que tuviéramos todo lo necesario."
+    },
+    {
+      "number": 17,
+      "function": "expectation",
+      "en": "While we waited, I mentioned to Lisa that I hoped the meal would be as good as the reviews said it would be.",
+      "es": "Mientras esperábamos, le comenté a Lisa que esperaba que la comida fuera tan buena como decían las reseñas."
+    },
+    {
+      "number": 18,
+      "function": "delivery",
+      "en": "When the food arrived, everything looked fresh, and the waiter checked if our order was correct.",
+      "es": "Cuando llegó la comida, todo se veía fresco, y el camarero comprobó si nuestro pedido era correcto."
+    },
+    {
+      "number": 19,
+      "function": "future_intent",
+      "en": "After finishing dinner, we agreed that we will probably come back and maybe try dessert next time.",
+      "es": "Al terminar de cenar, acordamos que probablemente volveremos y quizás probaremos el postre la próxima vez."
+    },
+    {
+      "number": 20,
+      "function": "summary",
+      "en": "This visit helped me feel more comfortable asking clear questions when I order food.",
+      "es": "Esta visita me ayudó a sentirme más cómodo haciendo preguntas claras cuando pido comida."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "I remembered I had tried the chef’s salad at another place, but it didn't have as much flavor as I expected.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "Lisa, on the other hand, was thinking about ordering pasta, even though she usually avoids it during the week.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I told him I try to eat light at night, so I asked whether there were any salads with chicken.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Lisa, on the other hand, was thinking about ordering pasta, even though she usually avoids it during the week.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "When I was younger, I used to order the same food at every restaurant rather than trying something new.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "The place was busy and smelled great, so we had to wait a few minutes before getting a table.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Used to",
+      "example_en": "When I was younger, I used to order the same food at every restaurant rather than trying something new.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Could",
+      "example_en": "So I asked, 'Could you tell me if your chef’s salad is popular here?' and the waiter smiled, saying many guests order it.",
+      "explanation_es": "Could puede expresar capacidad, posibilidad o una petición según el contexto de la frase.",
+      "source_paragraph": 8
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "try something different",
+      "meaning_es": "probar algo diferente",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "had to wait",
+      "meaning_es": "tuvimos que esperar",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "greeted us",
+      "meaning_es": "nos saludó",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "on the other hand",
+      "meaning_es": "en cambio / por otro lado",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Could you tell me",
+      "meaning_es": "¿Podría decirme...?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "on the side",
+      "meaning_es": "aparte / a un lado (normalmente para comida)",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "leave out the cheese",
+      "meaning_es": "quitar el queso / sin queso",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "made sure we had everything",
+      "meaning_es": "se aseguró de que tuviéramos todo",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I told him I try to eat light at night,",
+              "so I asked whether there were any salads with chicken."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "So I asked, 'Could you tell me if your chef’s salad is popular here?'",
+              "and the waiter smiled, saying many guests order it."
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "When I was younger,",
+              "I used to order the same food at every restaurant",
+              "rather than trying something new."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-011",
+    "number": "011",
+    "title_en": "Ordering Food at a Restaurant",
+    "title_es": "Pedir comida en un restaurante",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Viajes y vida cotidiana",
+    "main_topic_es": "Visita a un restaurante: preguntas, preferencias y pedidos claros",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Past continuous",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "After/before + gerund",
+      "Used to",
+      "Could"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

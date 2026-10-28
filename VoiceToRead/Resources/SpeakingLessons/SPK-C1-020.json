@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-020",
+  "number": 20,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Setting Goals for My Future",
+    "es": "Definir metas para mi futuro"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Discussing a personal learning or creative goal, competing priorities and practical next steps with nuanced negotiation.",
+    "es": "Discutir una meta personal de aprendizaje o creativa, prioridades en competencia y pasos prácticos con negociación matizada."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos adultos conversando sobre metas personales en una cafetería, con cuadernos y portátiles sobre la mesa.",
+    "prompt": "Realistic editorial photograph, two adults discussing personal goals in a cozy cafe, notebooks and laptops on the table, warm morning light, urban background, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Razonar sobre prioridades y limitaciones personales.",
+    "Expresar metas de aprendizaje o creativas de manera concreta.",
+    "Negociar expectativas y próximos pasos con flexibilidad.",
+    "Matizar opiniones y reconocer concesiones en la conversación.",
+    "Practicar fragmentación y reconstrucción de frases complejas en inglés avanzado."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I’ve been thinking a lot about my creative side lately and realized I haven’t painted anything substantial since I started my new job last year.",
+      "es": "He estado pensando mucho en mi lado creativo últimamente y me di cuenta de que no he pintado nada sustancial desde que empecé mi nuevo trabajo el año pasado."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "Although I’m grateful for a steady income, I feel less fulfilled without time for art, which used to balance out the stress of routine.",
+      "es": "Aunque agradezco contar con un ingreso estable, me siento menos realizado sin tiempo para el arte, que antes equilibraba el estrés de la rutina."
+    },
+    {
+      "number": 3,
+      "function": "goal",
+      "en": "So I set a goal to complete a series of three canvases by the end of the year, which sounds ambitious given my packed calendar.",
+      "es": "Así que me fijé la meta de completar una serie de tres lienzos para fin de año, lo que suena ambicioso considerando mi agenda llena."
+    },
+    {
+      "number": 4,
+      "function": "conversation_intro",
+      "en": "Last weekend over coffee, I told my friend Dan about this plan, hoping for encouragement and maybe some accountability.",
+      "es": "El fin de semana pasado, durante un café, le conté a mi amigo Dan sobre este plan, esperando recibir ánimo y quizá algo de apoyo."
+    },
+    {
+      "number": 5,
+      "function": "friend_response",
+      "en": "Dan said he admired my determination but wondered whether I was expecting too much from myself considering I’d barely had time to relax.",
+      "es": "Dan me dijo que admiraba mi determinación pero se preguntaba si no estaría exigiéndome demasiado dado que apenas he tenido tiempo para relajarme."
+    },
+    {
+      "number": 6,
+      "function": "competing_priorities",
+      "en": "He mentioned that last year I had been caught up in so many commitments, which resulted in unfinished projects and constant exhaustion.",
+      "es": "Mencionó que el año pasado me había visto envuelto en tantos compromisos, lo que resultó en proyectos inconclusos y cansancio constante."
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "That was true—often I’d start something with excitement, then let deadlines or small setbacks discourage me from finishing.",
+      "es": "Eso era cierto; muchas veces comenzaba algo con entusiasmo, pero dejé que las fechas límite o pequeños contratiempos me desanimaran de terminarlo."
+    },
+    {
+      "number": 8,
+      "function": "qualification",
+      "en": "However, unlike last year, I now keep my weekends free, so I could dedicate some uninterrupted hours to painting if I manage my energy better.",
+      "es": "Sin embargo, a diferencia del año pasado, ahora tengo los fines de semana libres, así que podría dedicar unas horas continuas a pintar si gestiono mejor mi energía."
+    },
+    {
+      "number": 9,
+      "function": "clarification_request",
+      "en": "Dan asked if I could be happy with even a single finished painting, rather than risking disappointment by overcommitting.",
+      "es": "Dan preguntó si podría estar satisfecho incluso con un solo cuadro terminado, en vez de arriesgarme a la decepción por comprometerme demasiado."
+    },
+    {
+      "number": 10,
+      "function": "response",
+      "en": "I admitted there was wisdom in that, pointing out that, in the past, setting slightly lower goals had helped me avoid creative burnout.",
+      "es": "Reconocí que había sabiduría en eso, señalando que en el pasado, fijar metas algo más bajas me ayudó a evitar el agotamiento creativo."
+    },
+    {
+      "number": 11,
+      "function": "analysis",
+      "en": "Still, despite wanting to protect my well-being, I’m drawn to challenging myself, since producing more than one piece might push me beyond my comfort zone.",
+      "es": "Aun así, aunque quiero cuidar mi bienestar, me atrae un reto, ya que hacer más de una obra podría sacarme de mi zona de confort."
+    },
+    {
+      "number": 12,
+      "function": "negotiation",
+      "en": "We discussed whether committing to one painting, with the option to start others only after completing it, might offer both structure and flexibility.",
+      "es": "Discutimos si comprometerme con un cuadro, dejando la opción de empezar otros solo después de concluirlo, me daría estructura y flexibilidad a la vez."
+    },
+    {
+      "number": 13,
+      "function": "agreement",
+      "en": "Ultimately, we agreed that setting a minimum goal would help me feel accomplished, while allowing room for growth if I found extra motivation.",
+      "es": "Finalmente, estuvimos de acuerdo en que fijar una meta mínima me ayudaría a sentirme realizado y a la vez dejaría espacio para crecer si encontraba motivación extra."
+    },
+    {
+      "number": 14,
+      "function": "constraint",
+      "en": "There was also the matter of art supplies, which, I realized, I hadn’t restocked since moving—I should have planned ahead before committing.",
+      "es": "También estaba el asunto de los materiales, que, me di cuenta, no había repuesto desde que me mudé; debí haberme organizado antes de comprometerme."
+    },
+    {
+      "number": 15,
+      "function": "practical_step",
+      "en": "By listing what I already had and what I still needed, I figured I could avoid getting stuck before even starting.",
+      "es": "Al hacer una lista de lo que ya tenía y lo que aún necesitaba, pensé que podría evitar quedarme atascado antes de empezar siquiera."
+    },
+    {
+      "number": 16,
+      "function": "strategy_negotiation",
+      "en": "Dan suggested scheduling my studio time just like any important meeting, but also building in slack so that missing a session wouldn't make me quit.",
+      "es": "Dan sugirió organizar mis horas de estudio igual que cualquier reunión importante, pero también dejar margen para que faltar a una sesión no me lleve a abandonar."
+    },
+    {
+      "number": 17,
+      "function": "hesitation",
+      "en": "I hesitated because I’ve often been too rigid with plans and, as a result, let minor disruptions derail my enthusiasm.",
+      "es": "Dudé porque a menudo he sido demasiado rígido con los planes y, como resultado, dejé que pequeñas interrupciones arruinaran mi entusiasmo."
+    },
+    {
+      "number": 18,
+      "function": "solution",
+      "en": "Instead of strict weekly goals, I might focus on celebrating progress, even if that just means prepping a canvas or sketching ideas one evening.",
+      "es": "En vez de metas semanales estrictas, podría enfocarme en celebrar los avances, aunque solo signifique preparar un lienzo o bosquejar ideas una noche."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "We ended the conversation with me promising to text Dan after every milestone, since sharing small victories can sometimes provide the push I need.",
+      "es": "Terminamos la conversación con mi promesa de mandarle un mensaje a Dan tras cada logro, ya que compartir pequeños éxitos a veces me da el empujón que necesito."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "I left that café with a sense of renewed purpose, not from motivation alone, but from reasoning through the real barriers and adjusting my plans accordingly.",
+      "es": "Salí de esa cafetería con un sentido de propósito renovado, no solo por motivación, sino por haber razonado sobre los obstáculos reales y ajustado mis planes en consecuencia."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "There was also the matter of art supplies, which, I realized, I hadn’t restocked since moving—I should have planned ahead before committing.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "He mentioned that last year I had been caught up in so many commitments, which resulted in unfinished projects and constant exhaustion.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "I’ve been thinking a lot about my creative side lately and realized I haven’t painted anything substantial since I started my new job last year.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "Dan said he admired my determination but wondered whether I was expecting too much from myself considering I’d barely had time to relax.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Although I’m grateful for a steady income, I feel less fulfilled without time for art, which used to balance out the stress of routine.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Dan asked if I could be happy with even a single finished painting, rather than risking disappointment by overcommitting.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I’m grateful for a steady income, I feel less fulfilled without time for art, which used to balance out the stress of routine.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Dan asked if I could be happy with even a single finished painting, rather than risking disappointment by overcommitting.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 9
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "thinking a lot about",
+      "meaning_es": "pensando mucho en",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "balance out the stress",
+      "meaning_es": "equilibrar el estrés",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "caught up in",
+      "meaning_es": "atrapado en / envuelto en",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "manage my energy better",
+      "meaning_es": "gestionar mejor mi energía",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "there was wisdom in that",
+      "meaning_es": "había sabiduría en eso",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "push me beyond my comfort zone",
+      "meaning_es": "sacarme de mi zona de confort",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "planned ahead before committing",
+      "meaning_es": "planear con anticipación antes de comprometerse",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "building in slack",
+      "meaning_es": "dejar un margen / flexibilidad",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I’ve been thinking a lot about my creative side lately",
+              "and realized I haven’t painted anything substantial",
+              "since I started my new job last year."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "He mentioned that last year",
+              "I had been caught up in so many commitments,",
+              "which resulted in unfinished projects and constant exhaustion."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "Instead of strict weekly goals,",
+              "I might focus on celebrating progress,",
+              "even if that just means prepping a canvas or sketching ideas one evening."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-020",
+    "number": "020",
+    "title_en": "Setting Goals for My Future",
+    "title_es": "Definir metas para mi futuro",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Discutir metas personales, prioridades y negociación",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Present perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

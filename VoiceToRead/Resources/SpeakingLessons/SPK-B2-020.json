@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-020",
+  "number": 20,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Setting Goals for My Future",
+    "es": "Definir metas para mi futuro"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Discussing a personal learning or creative goal, competing priorities, and practical next steps.",
+    "es": "Discutir una meta de aprendizaje o creativa personal, prioridades en conflicto y pasos prácticos a seguir."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Joven adulto planificando su futuro con notas, calendario y bolígrafo en una mesa de trabajo.",
+    "prompt": "Editorial photo of a young adult planning life goals, papers, sticky notes, and calendar on a desk, thoughtful focus, daytime, modern workspace, 16:9 aspect ratio",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir y justificar metas personales de aprendizaje o creatividad.",
+    "Comparar opciones y responder a objeciones o dudas.",
+    "Explicar causas y prioridades que afectan las decisiones.",
+    "Utilizar diferentes tiempos verbales y modales en contextos cotidianos.",
+    "Practicar lectura, repetición y fluidez en discusiones naturales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last month at dinner, my friend Carla asked me what I wanted to achieve this year, which made me realize I hadn’t set clear goals yet.",
+      "es": "El mes pasado, durante la cena, mi amiga Carla me preguntó qué quería lograr este año, lo que me hizo darme cuenta de que aún no había establecido metas claras."
+    },
+    {
+      "number": 2,
+      "function": "personal_goal",
+      "en": "After thinking for a while, I decided that I wanted to learn to play the guitar because music has always helped me relax after work.",
+      "es": "Después de pensar un rato, decidí que quería aprender a tocar la guitarra porque la música siempre me ha ayudado a relajarme después del trabajo."
+    },
+    {
+      "number": 3,
+      "function": "motivation",
+      "en": "Although I’ve listened to music for years, I never tried playing an instrument myself.",
+      "es": "Aunque llevo años escuchando música, nunca intenté tocar un instrumento yo mismo."
+    },
+    {
+      "number": 4,
+      "function": "comparison",
+      "en": "Carla suggested that I take piano lessons because it might be easier, but I told her I'd rather play the guitar because I enjoy learning songs I already know.",
+      "es": "Carla sugirió que tomara clases de piano porque podría ser más fácil, pero le dije que preferiría tocar la guitarra porque disfruto aprender canciones que ya conozco."
+    },
+    {
+      "number": 5,
+      "function": "priorities",
+      "en": "However, I have a lot on my plate since I am also studying online and often work late.",
+      "es": "Sin embargo, tengo mucho entre manos porque también estoy estudiando en línea y a menudo trabajo hasta tarde."
+    },
+    {
+      "number": 6,
+      "function": "challenge",
+      "en": "I wondered if adding another activity might overwhelm me, given how little free time I usually have during the week.",
+      "es": "Me pregunté si añadir otra actividad podría abrumarme, teniendo en cuenta el poco tiempo libre que normalmente tengo durante la semana."
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "Still, I figured I would feel more balanced by having a creative goal, rather than just focusing on work and study every day.",
+      "es": "Aun así, pensé que me sentiría más equilibrado al tener una meta creativa, en lugar de centrarme solo en el trabajo y el estudio cada día."
+    },
+    {
+      "number": 8,
+      "function": "comparison",
+      "en": "When I was younger, I used to spend every evening practicing drawing, so I know I can make room for a hobby if I really want to.",
+      "es": "Cuando era más joven, solía dedicar todas las noches a practicar dibujo, así que sé que puedo hacer espacio para un pasatiempo si realmente quiero."
+    },
+    {
+      "number": 9,
+      "function": "planning",
+      "en": "Before buying an instrument, I talked to my coworker Luis, who recently bought a guitar and offered to lend me his old one.",
+      "es": "Antes de comprar un instrumento, hablé con mi compañero Luis, quien recientemente compró una guitarra y se ofreció a prestarme la suya vieja."
+    },
+    {
+      "number": 10,
+      "function": "detail",
+      "en": "He explained that I could start by watching free video lessons, which wouldn’t cost anything except my time.",
+      "es": "Él explicó que podía empezar viendo lecciones en video gratuitas, lo que no costaría nada salvo mi tiempo."
+    },
+    {
+      "number": 11,
+      "function": "obstacle",
+      "en": "Even though Luis warned me that my fingers might hurt at first, I thought that after a few weeks I would get used to it.",
+      "es": "Aunque Luis me advirtió que al principio me dolerían los dedos, pensé que después de unas semanas me acostumbraría."
+    },
+    {
+      "number": 12,
+      "function": "perspective",
+      "en": "Carla argued that I could just listen to music to relax, but I explained how creating something new helps me reset my mind.",
+      "es": "Carla argumentó que podría simplemente escuchar música para relajarme, pero le expliqué que crear algo nuevo me ayuda a aclarar la mente."
+    },
+    {
+      "number": 13,
+      "function": "negotiation",
+      "en": "She said I might drop the hobby when things get busy, so I promised I would pick one evening a week for practice before making a big commitment.",
+      "es": "Ella dijo que podría abandonar el pasatiempo cuando estuviera ocupado, así que prometí elegir una noche a la semana para practicar antes de comprometerme más."
+    },
+    {
+      "number": 14,
+      "function": "validation",
+      "en": "Trying this first step made my goal seem manageable, and my schedule didn’t suffer as much as I feared.",
+      "es": "Probar este primer paso hizo que mi meta pareciera manejable, y mi horario no se vio tan afectado como temía."
+    },
+    {
+      "number": 15,
+      "function": "action",
+      "en": "After a month, I realized that I had managed to learn three basic chords, and I kept looking forward to the next practice.",
+      "es": "Después de un mes, me di cuenta de que había logrado aprender tres acordes básicos y seguía esperando con ganas la próxima práctica."
+    },
+    {
+      "number": 16,
+      "function": "adjustment",
+      "en": "There were days when I skipped practice because I was too tired, but I tried not to get discouraged by occasional setbacks.",
+      "es": "Hubo días en los que me salté la práctica porque estaba muy cansado, pero intenté no desanimarme por los contratiempos ocasionales."
+    },
+    {
+      "number": 17,
+      "function": "support",
+      "en": "Luis encouraged me by saying that anyone who keeps going, even slowly, will eventually see results.",
+      "es": "Luis me animó diciendo que cualquiera que siga adelante, aunque sea despacio, finalmente verá resultados."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Looking back, I think setting this goal taught me that small steps can fit into a busy life if I organize my time honestly.",
+      "es": "Al mirar atrás, creo que fijar esta meta me enseñó que los pequeños pasos pueden encajar en una vida ocupada si organizo mi tiempo con honestidad."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "Now, I feel more able to manage competing priorities, and I have a new sense of accomplishment outside of work and study.",
+      "es": "Ahora, me siento más capaz de manejar prioridades en conflicto y tengo una nueva sensación de logro fuera del trabajo y el estudio."
+    },
+    {
+      "number": 20,
+      "function": "future",
+      "en": "Next, I want to share a song with friends by the end of summer, even if I still make mistakes along the way.",
+      "es": "Ahora quiero compartir una canción con mis amigos antes de que termine el verano, aunque todavía siga cometiendo errores en el camino."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "After a month, I realized that I had managed to learn three basic chords, and I kept looking forward to the next practice.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Although I’ve listened to music for years, I never tried playing an instrument myself.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Last month at dinner, my friend Carla asked me what I wanted to achieve this year, which made me realize I hadn’t set clear goals yet.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I wondered if adding another activity might overwhelm me, given how little free time I usually have during the week.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though Luis warned me that my fingers might hurt at first, I thought that after a few weeks I would get used to it.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Still, I figured I would feel more balanced by having a creative goal, rather than just focusing on work and study every day.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After thinking for a while, I decided that I wanted to learn to play the guitar because music has always helped me relax after work.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Used to",
+      "example_en": "When I was younger, I used to spend every evening practicing drawing, so I know I can make room for a hobby if I really want to.",
+      "explanation_es": "Used to + infinitivo describe una costumbre o situación pasada que ha cambiado.",
+      "source_paragraph": 8
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "set clear goals",
+      "meaning_es": "establecer metas claras",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "take piano lessons",
+      "meaning_es": "tomar clases de piano",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "have a lot on my plate",
+      "meaning_es": "tener mucho entre manos",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "make room for",
+      "meaning_es": "hacer espacio para",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "start by watching",
+      "meaning_es": "empezar viendo",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "get used to it",
+      "meaning_es": "acostumbrarse a eso",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "kept looking forward to",
+      "meaning_es": "seguía esperando con ganas",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "get discouraged by",
+      "meaning_es": "desanimarse por",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee y repite cada párrafo en inglés, usando la traducción española para aclarar el significado.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica estos fragmentos separados por barras para mejorar tu fluidez. Cada grupo corresponde a una oración del texto.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last month at dinner,",
+              "my friend Carla asked me",
+              "what I wanted to achieve this year,",
+              "which made me realize I hadn’t set clear goals yet."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "She said I might drop the hobby",
+              "when things get busy,",
+              "so I promised I would pick one evening a week for practice",
+              "before making a big commitment."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "After a month,",
+              "I realized that I had managed to learn three basic chords,",
+              "and I kept looking forward to the next practice."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en orden, en voz alta y con naturalidad, enfocándote en pronunciación, ritmo y tono.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-020",
+    "number": "020",
+    "title_en": "Setting Goals for My Future",
+    "title_es": "Definir metas para mi futuro",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Discutir metas personales y prioridades",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Present perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "By + gerund",
+      "After/before + gerund",
+      "Used to"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

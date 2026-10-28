@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-015",
+  "number": 15,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Helping in My Community",
+    "es": "Colaborar en mi comunidad"
+  },
+  "category": {
+    "en": "Civic Engagement and Society",
+    "es": "Compromiso cívico y sociedad"
+  },
+  "main_topic": {
+    "en": "Coordinating a neighborhood volunteering activity, negotiating usefulness and contributions, and reaching consensus.",
+    "es": "Coordinar una actividad de voluntariado vecinal, negociar la utilidad y las contribuciones, y lograr el consenso."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Vecinos adultos organizando actividades de voluntariado en una sala comunitaria, con papeles y pizarras en una mesa.",
+    "prompt": "Realistic editorial photograph, diverse group of adults in a neighborhood community room, planning a local volunteering event, maps, flipcharts, collaborative discussion, bright daylight, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Coordinar actividades colaborativas en la comunidad.",
+    "Preguntar y debatir sobre contribuciones útiles.",
+    "Negociar expectativas y equilibrar responsabilidades.",
+    "Matizar opiniones y ceder ante argumentos sólidos.",
+    "Practicar lectura guiada usando inglés avanzado y preciso."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "After noticing several issues in our neighborhood, I decided to propose a volunteering day to address what we could collectively improve.",
+      "es": "Al notar varios problemas en nuestro vecindario, decidí proponer un día de voluntariado para abordar lo que podríamos mejorar juntos."
+    },
+    {
+      "number": 2,
+      "function": "setting",
+      "en": "At our first planning meeting, around ten neighbors showed up, each bringing a different perspective about what mattered most.",
+      "es": "En nuestra primera reunión de planificación, asistieron unos diez vecinos, cada uno aportando una perspectiva diferente sobre lo más importante."
+    },
+    {
+      "number": 3,
+      "function": "initiative",
+      "en": "I opened the discussion by asking, \"What would actually be the most useful thing for us to do together on Saturday?\"",
+      "es": "Inicié la conversación preguntando: “¿Qué sería realmente lo más útil que podríamos hacer juntos el sábado?”"
+    },
+    {
+      "number": 4,
+      "function": "proposal",
+      "en": "Joanna immediately suggested painting the park benches, since they had looked neglected for months.",
+      "es": "Joanna sugirió de inmediato pintar los bancos del parque, ya que llevaban meses viéndose descuidados."
+    },
+    {
+      "number": 5,
+      "function": "alternative",
+      "en": "However, Mark pointed out that cleaning up the vacant lot by the main road should take priority because of the trash piling up.",
+      "es": "Sin embargo, Mark indicó que limpiar el terreno baldío junto a la carretera principal debería ser prioridad por la acumulación de basura."
+    },
+    {
+      "number": 6,
+      "function": "dialogue",
+      "en": "Someone else asked whether we might be able to split into two smaller groups, handling both tasks at the same time.",
+      "es": "Otra persona preguntó si podríamos dividirnos en dos grupos más pequeños para encargarnos de ambas tareas al mismo tiempo."
+    },
+    {
+      "number": 7,
+      "function": "constraint",
+      "en": "Although that idea sounded appealing, it became clear we might not have enough tools or people to do everything at once.",
+      "es": "Aunque la idea sonaba atractiva, se hizo evidente que quizá no tuviéramos suficientes herramientas ni personas para hacer todo a la vez."
+    },
+    {
+      "number": 8,
+      "function": "reflection",
+      "en": "I admitted, \"We should have checked how many paint sets are actually available before making promises.\"",
+      "es": "Reconocí: “Deberíamos haber comprobado cuántos kits de pintura hay disponibles antes de hacer promesas.”"
+    },
+    {
+      "number": 9,
+      "function": "negotiation",
+      "en": "Even though I used to think multitasking was always best, I started to wonder if focusing on one project would actually lead to a better result.",
+      "es": "Aunque antes solía pensar que hacer varias cosas a la vez era siempre lo mejor, empecé a preguntarme si concentrarnos en un solo proyecto sería realmente más efectivo."
+    },
+    {
+      "number": 10,
+      "function": "reasoning",
+      "en": "I said, \"Maybe we could start by cleaning the lot in the morning and paint the benches afterward, if there's enough energy left.\"",
+      "es": "Dije: “Quizá podríamos empezar limpiando el terreno por la mañana y pintar los bancos después, si nos queda energía.”"
+    },
+    {
+      "number": 11,
+      "function": "compromise",
+      "en": "Mark agreed, conceding that painting would be more fun after finishing the less pleasant job of picking up trash.",
+      "es": "Mark estuvo de acuerdo, admitiendo que pintar sería más divertido tras terminar la tarea menos agradable de recoger basura."
+    },
+    {
+      "number": 12,
+      "function": "balancing",
+      "en": "Still, Joanna worried some neighbors might not feel comfortable picking up garbage, especially those with back pain.",
+      "es": "Aun así, a Joanna le preocupaba que algunos vecinos no se sintieran cómodos recogiendo basura, sobre todo quienes tenían dolor de espalda."
+    },
+    {
+      "number": 13,
+      "function": "solution",
+      "en": "To balance that, I suggested we could have roles that don't require bending—like bagging or directing—so everyone could contribute without overexerting themselves.",
+      "es": "Para equilibrar eso, sugerí que podríamos tener funciones que no requieran agacharse, como embolsar o dirigir, para que todos pudieran participar sin sobreesfuerzo."
+    },
+    {
+      "number": 14,
+      "function": "expectations",
+      "en": "I reminded the group that, by spreading responsibilities, we might actually get more done and keep enthusiasm high.",
+      "es": "Recordé al grupo que, al repartir responsabilidades, podríamos hacer más cosas y mantener la motivación alta."
+    },
+    {
+      "number": 15,
+      "function": "doubt",
+      "en": "Somebody asked if people would really show up on Saturday, since it had rained the last two weekends.",
+      "es": "Alguien preguntó si la gente realmente vendría el sábado, ya que había llovido los dos últimos fines de semana."
+    },
+    {
+      "number": 16,
+      "function": "realism",
+      "en": "I admitted we might need a contingency plan, in case the weather made outdoor work impossible at the last minute.",
+      "es": "Reconocí que quizás necesitaríamos un plan alternativo, en caso de que el clima hiciera imposible el trabajo al aire libre en el último momento."
+    },
+    {
+      "number": 17,
+      "function": "commitment",
+      "en": "We agreed that, rather than canceling everything, we could move some parts indoors, such as preparing welcome flyers and coordinating future events.",
+      "es": "Acordamos que, en lugar de cancelar todo, podríamos trasladar algunas actividades al interior, como preparar folletos de bienvenida y coordinar eventos futuros."
+    },
+    {
+      "number": 18,
+      "function": "affirmation",
+      "en": "At the end of the meeting, I said, \"It's clear that everyone here wants to help, but our strengths and limitations are different.\"",
+      "es": "Al final de la reunión, dije: “Está claro que todos aquí queremos ayudar, pero nuestras fortalezas y limitaciones son diferentes.”"
+    },
+    {
+      "number": 19,
+      "function": "consensus",
+      "en": "With the plan in place, everyone agreed to check supplies in advance and follow up midweek by text before confirming tasks.",
+      "es": "Con el plan acordado, todos se comprometieron a verificar los materiales con antelación y a comunicarse a mitad de semana por mensaje antes de confirmar las tareas."
+    },
+    {
+      "number": 20,
+      "function": "outcome",
+      "en": "Looking back, I realized that, by negotiating so openly, we found a compromise that felt inclusive and practical for the whole neighborhood.",
+      "es": "Al mirar atrás, me di cuenta de que, negociando de manera tan abierta, encontramos un compromiso que resultó inclusivo y práctico para todo el vecindario."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Should have + past participle",
+      "example_en": "I admitted, \"We should have checked how many paint sets are actually available before making promises.\"",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "Joanna immediately suggested painting the park benches, since they had looked neglected for months.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Someone else asked whether we might be able to split into two smaller groups, handling both tasks at the same time.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although that idea sounded appealing, it became clear we might not have enough tools or people to do everything at once.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "We agreed that, rather than canceling everything, we could move some parts indoors, such as preparing welcome flyers and coordinating future events.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "To balance that, I suggested we could have roles that don't require bending—like bagging or directing—so everyone could contribute without overexerting themselves.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "I opened the discussion by asking, \"What would actually be the most useful thing for us to do together on Saturday?\"",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "After noticing several issues in our neighborhood, I decided to propose a volunteering day to address what we could collectively improve.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "should take priority",
+      "meaning_es": "debería ser prioridad",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "split into two smaller groups",
+      "meaning_es": "dividirse en dos grupos más pequeños",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "have enough tools",
+      "meaning_es": "tener suficientes herramientas",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "lead to a better result",
+      "meaning_es": "conducir a un mejor resultado",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "start by cleaning",
+      "meaning_es": "empezar limpiando",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "agreed, conceding that",
+      "meaning_es": "estuvo de acuerdo, admitiendo que",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "reminded the group that",
+      "meaning_es": "recordé al grupo que",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "found a compromise",
+      "meaning_es": "encontrar un compromiso",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I opened the discussion by asking,",
+              "\"What would actually be the most useful thing for us to do together on Saturday?\""
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I admitted,",
+              "\"We should have checked how many paint sets are actually available before making promises.\""
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "I reminded the group that,",
+              "by spreading responsibilities,",
+              "we might actually get more done and keep enthusiasm high."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-015",
+    "number": "015",
+    "title_en": "Helping in My Community",
+    "title_es": "Colaborar en mi comunidad",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Compromiso cívico y sociedad",
+    "main_topic_es": "Coordinar actividades vecinales y negociar expectativas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Should have + past participle",
+      "Past perfect",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

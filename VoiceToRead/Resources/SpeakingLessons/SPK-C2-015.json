@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-015",
+  "number": 15,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Helping in My Community",
+    "es": "Colaborar en mi comunidad"
+  },
+  "category": {
+    "en": "Community and Civic Life",
+    "es": "Comunidad y vida cívica"
+  },
+  "main_topic": {
+    "en": "Coordinate a neighborhood volunteering activity, ask what is useful, balance contributions, concrete negotiation and agreement.",
+    "es": "Coordinar una actividad de voluntariado vecinal, preguntar qué es útil, equilibrar contribuciones, negociación concreta y acuerdo."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Vecinos de diferentes edades y orígenes coordinando actividades de voluntariado comunitario en un parque del barrio.",
+    "prompt": "Editorial realistic photograph, diverse group of neighbors coordinating a community volunteering activity outdoors in an urban park, people with clipboards, relaxed conversation, city background, sunny afternoon, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Identificar necesidades específicas de la comunidad local.",
+    "Formular preguntas útiles sobre contribuciones y logística.",
+    "Comparar y negociar propuestas de voluntariado con matices y cortesía.",
+    "Expresar e interpretar acuerdos y desacuerdos con sensibilidad.",
+    "Practicar habilidades avanzadas de lectura y producción oral."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last month, I realized that our neighborhood green space had started looking neglected again, so I wondered how I could get more people involved this time.",
+      "es": "El mes pasado, me di cuenta de que nuestro espacio verde del barrio empezaba a verse descuidado otra vez, así que me pregunté cómo podría involucrar a más personas esta vez."
+    },
+    {
+      "number": 2,
+      "function": "reflection",
+      "en": "I remembered how, when I used to organize cleanups as a student, participation would drop unless tasks matched what people actually felt was helpful.",
+      "es": "Recordé que, cuando organizaba limpiezas siendo estudiante, la participación bajaba si las tareas no coincidían con lo que la gente sentía que era útil."
+    },
+    {
+      "number": 3,
+      "function": "intention",
+      "en": "To avoid repeating past mistakes, I called an initial meeting, hoping to listen more before proposing a set plan.",
+      "es": "Para evitar repetir errores pasados, convoqué una reunión inicial, con la esperanza de escuchar más antes de proponer un plan fijo."
+    },
+    {
+      "number": 4,
+      "function": "interaction",
+      "en": "As people arrived at the community room, I started by saying, \"I’d love to hear what you think might actually make the most difference out here.\"",
+      "es": "Cuando la gente llegó a la sala comunitaria, empecé diciendo: \"Me encantaría saber qué creen que realmente podría marcar más la diferencia aquí.\""
+    },
+    {
+      "number": 5,
+      "function": "question",
+      "en": "One neighbor, Arturo, immediately asked whether focusing only on visible litter might be too superficial rather than addressing root causes.",
+      "es": "Un vecino, Arturo, preguntó de inmediato si centrarse solo en la basura visible no sería demasiado superficial en vez de abordar las causas de fondo."
+    },
+    {
+      "number": 6,
+      "function": "exploration",
+      "en": "Even though I suspected removing litter would improve morale, I admitted he might be right, and suggested, \"We could pair cleanup with outreach about waste habits.\"",
+      "es": "Aunque sospechaba que quitar la basura mejoraría el ánimo, admití que podría tener razón y sugerí: \"Podríamos combinar la limpieza con actividades de concienciación sobre hábitos de desecho.\""
+    },
+    {
+      "number": 7,
+      "function": "negotiation",
+      "en": "Another volunteer, Shayna, said she had noticed that some neighbors, who are elderly, might not join manual work, but could help by chatting to those passing by.",
+      "es": "Otra voluntaria, Shayna, dijo que había notado que algunos vecinos mayores quizás no participen en las tareas manuales, pero podrían colaborar conversando con quienes pasen por allí."
+    },
+    {
+      "number": 8,
+      "function": "agreement",
+      "en": "Hearing that, I responded: \"That opens up ways for people to contribute without having to do the heavy lifting.\"",
+      "es": "Al escuchar eso, respondí: \"Eso abre vías para que las personas puedan colaborar sin necesariamente hacer el trabajo pesado.\""
+    },
+    {
+      "number": 9,
+      "function": "qualification",
+      "en": "Arturo pointed out, \"We ought to clarify what we mean by ‘help,’ so nobody feels their time isn’t valued,\" which struck me as both subtle and important.",
+      "es": "Arturo señaló: \"Deberíamos aclarar qué entendemos por 'ayudar', para que nadie sienta que su tiempo no se valora\", lo cual me pareció sutil e importante."
+    },
+    {
+      "number": 10,
+      "function": "clarification",
+      "en": "Rather than insisting on fixed roles, I emphasized, \"Let’s map out tasks and preferences, and see who feels comfortable doing what.\"",
+      "es": "En vez de insistir en roles fijos, destaqué: \"Hagamos una lista de tareas y preferencias, y veamos con qué se siente cómodo cada quien.\""
+    },
+    {
+      "number": 11,
+      "function": "tension",
+      "en": "Shayna seemed reluctant about involving children, so she cautiously mentioned she worried the activity might get chaotic if too many age groups joined at once.",
+      "es": "Shayna se mostró reticente a involucrar niños, así que mencionó con cautela que le preocupaba que la actividad podría volverse caótica si se sumaban demasiadas edades a la vez."
+    },
+    {
+      "number": 12,
+      "function": "reformulation",
+      "en": "To avoid dismissing her concern, I reformulated: \"Are you thinking we could assign kids to less safety-critical tasks so everyone’s comfortable?\"",
+      "es": "Para no desestimar su preocupación, reformulé: \"¿Estás pensando que podríamos asignar a los niños tareas menos críticas en seguridad, para que todos estén tranquilos?\""
+    },
+    {
+      "number": 13,
+      "function": "recalibration",
+      "en": "She nodded and replied, \"That sounds doable—maybe they could hand out snacks or help greet volunteers,\" which seemed like a reasonable compromise.",
+      "es": "Ella asintió y respondió: \"Eso suena viable; tal vez podrían repartir bocadillos o recibir a los voluntarios\", lo que pareció un compromiso razonable."
+    },
+    {
+      "number": 14,
+      "function": "interpretation",
+      "en": "At this stage, I realized that, although everyone agreed on the objective, enthusiasm varied a lot depending on how involved they felt.",
+      "es": "En este punto, me di cuenta de que, aunque todos estaban de acuerdo con el objetivo, el entusiasmo variaba mucho según cuán implicados se sintieran."
+    },
+    {
+      "number": 15,
+      "function": "feedback",
+      "en": "To gauge how people felt about the plan, I asked if anyone saw potential obstacles or had suggestions we hadn’t considered.",
+      "es": "Para conocer las opiniones sobre el plan, pregunté si alguien veía obstáculos potenciales o tenía sugerencias que no hubiéramos considerado."
+    },
+    {
+      "number": 16,
+      "function": "response",
+      "en": "Several people mentioned that past initiatives fizzled because communication stopped after the kickoff, not because of a lack of will.",
+      "es": "Varias personas mencionaron que otras iniciativas fracasaron porque la comunicación se interrumpió tras la apertura, no por falta de voluntad."
+    },
+    {
+      "number": 17,
+      "function": "solution",
+      "en": "To address this, I volunteered to set up a shared calendar, and Shayna offered to post weekly updates so contributions wouldn’t go unnoticed.",
+      "es": "Para solucionar esto, me ofrecí a crear un calendario compartido, y Shayna se comprometió a publicar actualizaciones semanales para que las contribuciones no pasaran desapercibidas."
+    },
+    {
+      "number": 18,
+      "function": "action",
+      "en": "After mapping everyone’s preferences, we agreed on a Saturday that worked for most and divided responsibilities according to what people felt able and willing to do.",
+      "es": "Tras hacer un mapa de preferencias, acordamos un sábado que funcionaba para la mayoría y repartimos responsabilidades según lo que cada persona se sintiera capaz y dispuesta a hacer."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "On the day, I saw neighbors who rarely interacted working side by side, and many said they’d be open to organizing more projects together.",
+      "es": "El día del evento, vi a vecinos que raramente convivían trabajando codo a codo, y muchos dijeron que estarían abiertos a hacer más proyectos juntos."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "It struck me that listening for ambiguity and balancing everyone’s contributions gave us more than a clean park—it gave us a stronger sense of community.",
+      "es": "Me di cuenta de que prestar atención a la ambigüedad y equilibrar las contribuciones nos dio más que un parque limpio: nos dio un mayor sentido de comunidad."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "Last month, I realized that our neighborhood green space had started looking neglected again, so I wondered how I could get more people involved this time.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Another volunteer, Shayna, said she had noticed that some neighbors, who are elderly, might not join manual work, but could help by chatting to those passing by.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "One neighbor, Arturo, immediately asked whether focusing only on visible litter might be too superficial rather than addressing root causes.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Even though I suspected removing litter would improve morale, I admitted he might be right, and suggested, \"We could pair cleanup with outreach about waste habits.\"",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than insisting on fixed roles, I emphasized, \"Let’s map out tasks and preferences, and see who feels comfortable doing what.\"",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Hearing that, I responded: \"That opens up ways for people to contribute without having to do the heavy lifting.\"",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "As people arrived at the community room, I started by saying, \"I’d love to hear what you think might actually make the most difference out here.\"",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "To avoid repeating past mistakes, I called an initial meeting, hoping to listen more before proposing a set plan.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 3
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "make the most difference",
+      "meaning_es": "tener el mayor impacto",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "addressing root causes",
+      "meaning_es": "abordar las causas de fondo",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "improve morale",
+      "meaning_es": "mejorar el ánimo",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "do the heavy lifting",
+      "meaning_es": "encargarse del trabajo más pesado",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "what we mean by",
+      "meaning_es": "a qué nos referimos con",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "map out tasks and preferences",
+      "meaning_es": "definir las tareas y preferencias",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "To avoid dismissing her concern",
+      "meaning_es": "para no restar importancia a su preocupación",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "contributions wouldn’t go unnoticed",
+      "meaning_es": "las contribuciones no pasarían desapercibidas",
+      "source_paragraph": 17
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica estos fragmentos de tres oraciones completas. Sigue las barras para pausar y entrenar el ritmo.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "As people arrived at the community room,",
+              "I started by saying,",
+              "\"I’d love to hear what you think might actually make the most difference out here.\""
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "Even though I suspected removing litter would improve morale,",
+              "I admitted he might be right,",
+              "and suggested, \"We could pair cleanup with outreach about waste habits.\""
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "Rather than insisting on fixed roles,",
+              "I emphasized, \"Let’s map out tasks and preferences,",
+              "and see who feels comfortable doing what.\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta seguido, priorizando claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-015",
+    "number": "015",
+    "title_en": "Helping in My Community",
+    "title_es": "Colaborar en mi comunidad",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunidad y vida cívica",
+    "main_topic_es": "Coordinar y negociar actividades de voluntariado vecinal",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

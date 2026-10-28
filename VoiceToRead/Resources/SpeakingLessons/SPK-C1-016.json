@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-016",
+  "number": 16,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Owning a Mistake and Making It Right",
+    "es": "Reconocer un error y repararlo"
+  },
+  "category": {
+    "en": "Work and Problem-Solving",
+    "es": "Trabajo y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "Noticing, explaining and correcting a real mistake in everyday coordination through negotiation and repair.",
+    "es": "Detectar, explicar y corregir un error real en la coordinación diaria mediante la negociación y la compensación."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos adultos conversando con papeles y calendario, uno explicando un error mientras el otro escucha en una oficina.",
+    "prompt": "Realistic editorial photograph, two adults discussing a missed calendar event, visible concern and understanding on their faces, modern office setting, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Explicar un error de coordinación en detalle sin justificarse.",
+    "Reconocer opiniones ajenas y negociar una reparación proporcionada.",
+    "Utilizar matices al aceptar responsabilidad y calificar afirmaciones.",
+    "Comparar prioridades y justificar limitaciones razonablemente.",
+    "Practicar expresiones avanzadas para admitir errores de manera profesional en inglés."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I realized yesterday evening that I had missed confirming which materials were needed for this morning’s team client meeting, although I had been responsible for coordination all week.",
+      "es": "Ayer por la tarde me di cuenta de que no había confirmado qué materiales se necesitaban para la reunión de equipo con el cliente esta mañana, aunque yo había sido responsable de la coordinación toda la semana."
+    },
+    {
+      "number": 2,
+      "function": "context_detail",
+      "en": "When I entered the meeting room, the missing reports were obvious, and my colleague Jacqui asked directly whether I had sent the document checklist in advance.",
+      "es": "Al entrar en la sala de reuniones, la falta de los informes era evidente, y mi compañera Jacqui me preguntó directamente si yo había enviado la lista de documentos con antelación."
+    },
+    {
+      "number": 3,
+      "function": "admission",
+      "en": "I replied without making excuses: I had not clarified the checklist, and that was an oversight on my part.",
+      "es": "Respondí sin excusas: no había aclarado la lista de documentos, y eso fue un descuido mío."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "Even though I was juggling two last-minute client requests yesterday, I admitted that I should have prioritized the team’s preparation over other emails.",
+      "es": "Aunque ayer estaba intentando gestionar dos solicitudes de clientes de última hora, admití que debería haber priorizado la preparación del equipo sobre otros correos electrónicos."
+    },
+    {
+      "number": 5,
+      "function": "reaction",
+      "en": "Jacqui, who had arrived early, said she could understand being pressed for time but felt frustrated to start a meeting incomplete.",
+      "es": "Jacqui, que había llegado temprano, dijo que podía entender la falta de tiempo pero que le frustraba empezar la reunión sin todo lo necesario."
+    },
+    {
+      "number": 6,
+      "function": "acknowledgement",
+      "en": "I agreed with her and recognized that missing the checklist created extra stress for everyone involved, not only for her.",
+      "es": "Estuve de acuerdo con ella y reconocí que no enviar la lista generó estrés extra para todos los implicados, no solo para ella."
+    },
+    {
+      "number": 7,
+      "function": "analysis",
+      "en": "It was clear that our usual process—which depends on one person confirming each task—had broken down precisely at the handoff point.",
+      "es": "Estaba claro que nuestro proceso habitual —que depende de que una persona confirme cada tarea— había fallado justo en el momento de la transferencia."
+    },
+    {
+      "number": 8,
+      "function": "exploration",
+      "en": "Rather than shifting responsibility, I suggested reviewing together where the chain had actually broken, so we could discuss a fair way to address it.",
+      "es": "En lugar de desviar la responsabilidad, propuse revisar juntos dónde se había roto realmente la cadena para poder hablar de una forma justa de solucionarlo."
+    },
+    {
+      "number": 9,
+      "function": "response",
+      "en": "Jacqui pointed out that if I had flagged the missing documents once I noticed late last night, some urgency could have been salvaged before the client arrived.",
+      "es": "Jacqui señaló que si yo hubiera advertido sobre los documentos faltantes en cuanto me di cuenta anoche, podríamos haber salvado algo de urgencia antes de que llegara el cliente."
+    },
+    {
+      "number": 10,
+      "function": "concession",
+      "en": "I conceded she was right; I could have sent a late message or asked for a quick review from anyone available, even outside regular hours.",
+      "es": "Le concedí la razón; podría haber enviado un mensaje tarde o solicitado una revisión rápida a quien estuviera disponible, incluso fuera del horario habitual."
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "Without minimizing the problem, I acknowledged the gap and asked how best to support the team so today’s disruption wouldn’t cause further problems.",
+      "es": "Sin minimizar el problema, reconocí la brecha y pregunté cómo podría apoyar al equipo para que el contratiempo de hoy no generara más dificultades."
+    },
+    {
+      "number": 12,
+      "function": "suggestion",
+      "en": "Because the client was patient and the meeting was rescheduled for later in the day, I offered to prepare all outstanding materials during lunch rather than waiting for tomorrow.",
+      "es": "Como el cliente mostró paciencia y la reunión se reprogramó para más tarde, me ofrecí a preparar todos los materiales pendientes durante la comida en vez de esperar hasta mañana."
+    },
+    {
+      "number": 13,
+      "function": "agreement",
+      "en": "Jacqui agreed that was a reasonable solution, provided that I shared the updated checklist with everyone and organized any last clarifications.",
+      "es": "Jacqui estuvo de acuerdo en que era una solución razonable, siempre y cuando compartiera la lista actualizada con todos y gestionara cualquier aclaración final."
+    },
+    {
+      "number": 14,
+      "function": "adjustment",
+      "en": "I confirmed that, after preparing the files, I would double-check responsibilities going forward so we wouldn’t repeat the same mistake.",
+      "es": "Confirmé que, después de preparar los archivos, revisaría dos veces las responsabilidades en adelante para no repetir el mismo error."
+    },
+    {
+      "number": 15,
+      "function": "reflection_contrast",
+      "en": "Looking back, I can see that assuming a routine process would always work left us with some blind spots we might have avoided by asking straightforward questions sooner.",
+      "es": "Al mirar atrás, veo que asumir que un proceso rutinario siempre funcionará nos dejó puntos ciegos que podríamos haber evitado haciendo preguntas directas antes."
+    },
+    {
+      "number": 16,
+      "function": "qualify_claims",
+      "en": "Although I had managed overlapping requests in the past without issue, this time competing demands led to a practical mistake I should have anticipated better.",
+      "es": "Aunque en el pasado había gestionado solicitudes simultáneas sin problema, en esta ocasión las demandas en conflicto provocaron un error práctico que debería haber previsto mejor."
+    },
+    {
+      "number": 17,
+      "function": "lesson",
+      "en": "Next time, rather than relying solely on habit, I will set reminders and checklists before the day ends, even if I believe everything’s under control.",
+      "es": "La próxima vez, en vez de depender solo de la costumbre, pondré recordatorios y listas antes de que finalice el día, aunque crea que todo está bajo control."
+    },
+    {
+      "number": 18,
+      "function": "shared_understanding",
+      "en": "Jacqui mentioned that she appreciated my open admission and willingness to fix the immediate issue without deflecting blame.",
+      "es": "Jacqui mencionó que agradecía mi sinceridad al admitir el error y mi disposición para solucionar el problema sin echar culpas."
+    },
+    {
+      "number": 19,
+      "function": "closure",
+      "en": "By the afternoon, the new checklist was circulated and files ready, and the rescheduled meeting ran smoothly, although we agreed better coordination was needed.",
+      "es": "Por la tarde, la nueva lista circuló y los archivos estaban listos, y la reunión reprogramada transcurrió sin problemas, aunque estuvimos de acuerdo en que hacía falta mejor coordinación."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Having owned my mistake and taken action, I learned that repair means addressing people’s concerns directly and staying solution-focused, not just explaining intentions.",
+      "es": "Al reconocer mi error y actuar, aprendí que compensar implica responder a las preocupaciones de los demás directamente y mantener el enfoque en la solución, no solo explicar mis intenciones."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Perfect participle clause",
+      "example_en": "Having owned my mistake and taken action, I learned that repair means addressing people’s concerns directly and staying solution-focused, not just explaining intentions.",
+      "explanation_es": "Having + participio presenta una acción completada antes de la acción principal.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Should have + past participle",
+      "example_en": "Even though I was juggling two last-minute client requests yesterday, I admitted that I should have prioritized the team’s preparation over other emails.",
+      "explanation_es": "Should have + participio permite valorar retrospectivamente una acción que habría sido conveniente.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "I realized yesterday evening that I had missed confirming which materials were needed for this morning’s team client meeting, although I had been responsible for coordination all week.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "Even though I was juggling two last-minute client requests yesterday, I admitted that I should have prioritized the team’s preparation over other emails.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Jacqui, who had arrived early, said she could understand being pressed for time but felt frustrated to start a meeting incomplete.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "When I entered the meeting room, the missing reports were obvious, and my colleague Jacqui asked directly whether I had sent the document checklist in advance.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I had managed overlapping requests in the past without issue, this time competing demands led to a practical mistake I should have anticipated better.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than shifting responsibility, I suggested reviewing together where the chain had actually broken, so we could discuss a fair way to address it.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 8
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "juggling two last-minute client requests",
+      "meaning_es": "gestionando dos solicitudes de clientes de última hora",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "pressed for time",
+      "meaning_es": "con poco tiempo disponible",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "pointed out that",
+      "meaning_es": "señaló que",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "asked how best to support",
+      "meaning_es": "pregunté cómo podría apoyar",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "offered to prepare",
+      "meaning_es": "me ofrecí a preparar",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "double-check responsibilities",
+      "meaning_es": "revisar dos veces las responsabilidades",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "set reminders and checklists",
+      "meaning_es": "poner recordatorios y listas",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "taken action",
+      "meaning_es": "actuar",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, revisa la traducción en español y repite cada uno dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas útiles para el entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I realized yesterday evening that I had missed confirming which materials were needed for this morning’s team client meeting,",
+              "although I had been responsible for coordination all week."
+            ]
+          },
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "Even though I was juggling two last-minute client requests yesterday,",
+              "I admitted that I should have prioritized the team’s preparation over other emails."
+            ]
+          },
+          {
+            "source_paragraph": 17,
+            "segments": [
+              "Next time,",
+              "rather than relying solely on habit,",
+              "I will set reminders and checklists",
+              "before the day ends,",
+              "even if I believe everything’s under control."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada frase; enfócate en claridad, ritmo y entonación naturales.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-016",
+    "number": "016",
+    "title_en": "Owning a Mistake and Making It Right",
+    "title_es": "Reconocer un error y repararlo",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y resolución de problemas",
+    "main_topic_es": "Detectar y reparar errores de coordinación realistas mediante negociación",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Perfect participle clause",
+      "Should have + past participle",
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

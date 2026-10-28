@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-014",
+  "number": 14,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Learning a New Skill",
+    "es": "Aprender una habilidad nueva"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Joining a hands-on creative class, handling difficulties, seeking feedback, negotiating improvement strategies.",
+    "es": "Unirse a una clase creativa práctica, manejar dificultades, pedir retroalimentación y negociar formas de mejorar."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Adultos participando en una clase creativa de cerámica, moldeando arcilla con atención y conversación.",
+    "prompt": "Natural daylight editorial photo, adults in a creative beginner pottery class, shaping clay, focused expressions, collaborative atmosphere, hands with clay, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Participar en conversaciones matizadas sobre dificultades al aprender nuevas habilidades.",
+    "Interpretar la ambigüedad y matizar desacuerdos respetuosamente.",
+    "Solicitar y analizar retroalimentación constructiva sobre el propio desempeño.",
+    "Negociar y acordar estrategias realistas de mejora.",
+    "Practicar la reformulación sensible y la calibración del acuerdo o desacuerdo."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last month, I decided to join a beginner ceramics course, imagining it would be a relaxing way to unwind after work.",
+      "es": "El mes pasado decidí apuntarme a un curso de cerámica para principiantes, pensando que sería una forma relajante de desconectar tras el trabajo."
+    },
+    {
+      "number": 2,
+      "function": "transition",
+      "en": "However, the reality of manipulating clay on the wheel was far more challenging than I had anticipated.",
+      "es": "Sin embargo, la realidad de manipular la arcilla en el torno fue mucho más desafiante de lo que había anticipado."
+    },
+    {
+      "number": 3,
+      "function": "description",
+      "en": "On my second session, while everyone else seemed to be shaping graceful bowls, my lump of clay collapsed for the third time.",
+      "es": "En mi segunda sesión, mientras los demás parecían moldear cuencos gráciles, mi trozo de arcilla se desmoronó por tercera vez."
+    },
+    {
+      "number": 4,
+      "function": "reflection",
+      "en": "I realized I was gripping the clay far too tightly, possibly because I was anxious about making mistakes in front of the group.",
+      "es": "Me di cuenta de que apretaba la arcilla con demasiada fuerza, quizás porque me inquietaba cometer errores frente al grupo."
+    },
+    {
+      "number": 5,
+      "function": "tentative_interpretation",
+      "en": "It occurred to me that my instructor, who offered minimal guidance so far, might intentionally be encouraging us to experiment without fear.",
+      "es": "Se me ocurrió que el instructor, que hasta entonces ofrecía una guía mínima, quizá estuviera fomentando deliberadamente que experimentáramos sin miedo."
+    },
+    {
+      "number": 6,
+      "function": "dialogue_intro",
+      "en": "During a break, I hesitantly approached Sam, the instructor, and said, \"Would you mind giving me some feedback on why my pieces keep collapsing?\"",
+      "es": "Durante una pausa, me acerqué dudoso a Sam, el instructor, y le dije: \"¿Te importaría darme algún comentario sobre por qué se me caen las piezas?\""
+    },
+    {
+      "number": 7,
+      "function": "dialogue_response",
+      "en": "Sam considered my question and replied, \"It could be that you're focusing more on perfection than on feeling the clay move beneath your hands.\"",
+      "es": "Sam reflexionó sobre mi pregunta y respondió: \"Puede que te estés centrando más en la perfección que en sentir cómo se desplaza la arcilla bajo tus manos.\""
+    },
+    {
+      "number": 8,
+      "function": "dialogue_inquiry",
+      "en": "Not entirely sure what he meant, I asked gently, \"Do you mean I should try to work faster, or just relax and be less judgmental of myself?\"",
+      "es": "Sin entender del todo a qué se refería, pregunté con delicadeza: \"¿Quieres decir que debería trabajar más rápido o simplemente relajarme y no juzgarme tanto?\""
+    },
+    {
+      "number": 9,
+      "function": "dialogue_clarification",
+      "en": "He smiled and said, \"Rather than rushing or fixating, try noticing how the material responds; you might discover your own rhythm without forcing an outcome.\"",
+      "es": "Él sonrió y dijo: \"En vez de apresurarte o fijarte en un resultado, intenta notar cómo responde el material; puede que descubras tu ritmo sin forzar el resultado.\""
+    },
+    {
+      "number": 10,
+      "function": "dialogue_followup",
+      "en": "His answer felt a bit ambiguous, so I reformulated: \"So I should focus on exploring the process, even though the bowls aren't turning out right?\"",
+      "es": "Su respuesta me pareció algo ambigua, así que reformulé: \"Entonces, ¿debería centrarme en explorar el proceso, aunque los cuencos no salgan bien?\""
+    },
+    {
+      "number": 11,
+      "function": "dialogue_affirmation",
+      "en": "Sam replied, \"Exactly. Skill will come over time, but curiosity and persistence are crucial, even if progress seems uneven.\"",
+      "es": "Sam respondió: \"Exacto. La habilidad llegará con el tiempo, pero la curiosidad y la perseverancia son esenciales, aunque el progreso parezca irregular.\""
+    },
+    {
+      "number": 12,
+      "function": "response_nuance",
+      "en": "I admitted, \"Honestly, I had hoped I'd be better at this by now, but I appreciate your emphasis on persistence rather than instant results.\"",
+      "es": "Reconocí: \"Sinceramente, esperaba que se me diera mejor a estas alturas, pero agradezco que priorices la constancia más que los resultados inmediatos.\""
+    },
+    {
+      "number": 13,
+      "function": "negotiation_intro",
+      "en": "I added, \"Would you be willing to watch my technique for a minute during the next exercise and let me know if there's one thing I should change immediately?\"",
+      "es": "Agregué: \"¿Estarías dispuesto a observar mi técnica un minuto en el próximo ejercicio y decirme si hay algo que debería cambiar ya?\""
+    },
+    {
+      "number": 14,
+      "function": "negotiation_response",
+      "en": "He agreed, saying, \"I can do that, and after, we could discuss what might be a realistic next step for you.\"",
+      "es": "Él accedió diciendo: \"Puedo hacerlo, y después podríamos comentar cuál podría ser un próximo paso realista para ti.\""
+    },
+    {
+      "number": 15,
+      "function": "observation",
+      "en": "A few minutes later, Sam quietly observed as I tried centering the clay again, this time focusing less on outcome and more on the sensation.",
+      "es": "Unos minutos después, Sam observó sin intervenir mientras intentaba centrar la arcilla, esta vez más atento a la sensación que al resultado."
+    },
+    {
+      "number": 16,
+      "function": "feedback_given",
+      "en": "Afterwards, he pointed out, \"You tended to tense your shoulders that time, which undermines the stability you're trying to achieve.\"",
+      "es": "Posteriormente, señaló: \"Tendiste a tensar los hombros esta vez, y eso te resta estabilidad justo cuando la necesitas.\""
+    },
+    {
+      "number": 17,
+      "function": "reaction",
+      "en": "I hadn't noticed this before, and acknowledged, \"That's definitely something I can pay attention to before gripping the clay next time.\"",
+      "es": "No me había dado cuenta antes y reconocí: \"Sin duda es algo a lo que puedo prestar atención antes de sujetar la arcilla la próxima vez.\""
+    },
+    {
+      "number": 18,
+      "function": "analyzing_tension",
+      "en": "We both agreed that, rather than mastering form immediately, reducing tension without losing focus might be more productive for me at this stage.",
+      "es": "Ambos coincidimos en que, en vez de dominar la forma ya, reducir la tensión sin perder la concentración podría ser más provechoso para mí en este momento."
+    },
+    {
+      "number": 19,
+      "function": "outcome_reflection",
+      "en": "By the end of class, although my bowl looked wonky, I felt unexpectedly proud, knowing I had begun to adjust both my approach and my expectations.",
+      "es": "Al final de la clase, aunque mi cuenco quedó irregular, me sentí inesperadamente orgulloso al saber que ya había empezado a ajustar tanto mi enfoque como mis expectativas."
+    },
+    {
+      "number": 20,
+      "function": "resolution",
+      "en": "Walking home, I realized I might never make perfect pottery, but asking for feedback had set me on a better path to learning than striving alone.",
+      "es": "Caminando a casa, me di cuenta de que quizá nunca haré cerámica perfecta, pero pedir retroalimentación me había puesto en una mejor senda de aprendizaje que intentarlo solo."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "However, the reality of manipulating clay on the wheel was far more challenging than I had anticipated.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "I realized I was gripping the clay far too tightly, possibly because I was anxious about making mistakes in front of the group.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "It occurred to me that my instructor, who offered minimal guidance so far, might intentionally be encouraging us to experiment without fear.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "His answer felt a bit ambiguous, so I reformulated: \"So I should focus on exploring the process, even though the bowls aren't turning out right?\"",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "He smiled and said, \"Rather than rushing or fixating, try noticing how the material responds; you might discover your own rhythm without forcing an outcome.\"",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "We both agreed that, rather than mastering form immediately, reducing tension without losing focus might be more productive for me at this stage.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "I hadn't noticed this before, and acknowledged, \"That's definitely something I can pay attention to before gripping the clay next time.\"",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Might for possibility",
+      "example_en": "He agreed, saying, \"I can do that, and after, we could discuss what might be a realistic next step for you.\"",
+      "explanation_es": "Might + infinitivo presenta una posibilidad sin darla por segura.",
+      "source_paragraph": 14
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "join a beginner ceramics course",
+      "meaning_es": "apuntarme a un curso de cerámica para principiantes",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "far more challenging than",
+      "meaning_es": "mucho más desafiante que",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "gripping the clay far too tightly",
+      "meaning_es": "apretaba la arcilla con demasiada fuerza",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "It occurred to me that",
+      "meaning_es": "Se me ocurrió que",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Would you mind giving me",
+      "meaning_es": "¿Te importaría darme",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "try noticing how the material responds",
+      "meaning_es": "intenta notar cómo responde el material",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "pay attention to",
+      "meaning_es": "prestar atención a",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "set me on a better path",
+      "meaning_es": "me había puesto en una mejor senda",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "It occurred to me that my instructor, who offered minimal guidance so far, might intentionally be encouraging us to experiment without fear."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "His answer felt a bit ambiguous,",
+              "so I reformulated:",
+              "\"So I should focus on exploring the process,",
+              "even though the bowls aren't turning out right?\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Walking home,",
+              "I realized I might never make perfect pottery,",
+              "but asking for feedback had set me on a better path to learning than striving alone."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-014",
+    "number": "014",
+    "title_en": "Learning a New Skill",
+    "title_es": "Aprender una habilidad nueva",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Unirse a una clase creativa, gestionar dificultades y negociar cómo mejorar",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "After/before + gerund",
+      "Might for possibility"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

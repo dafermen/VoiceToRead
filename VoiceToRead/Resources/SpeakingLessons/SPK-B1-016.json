@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-016",
+  "number": 16,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Owning a Mistake and Making It Right",
+    "es": "Reconocer un error y repararlo"
+  },
+  "category": {
+    "en": "Everyday Problem Solving",
+    "es": "Resolución de problemas cotidianos"
+  },
+  "main_topic": {
+    "en": "Notice a real everyday coordination mistake, explain it without excuses, listen and agree a proportionate repair.",
+    "es": "Detectar un error cotidiano de coordinación, explicarlo sin excusas, escuchar y acordar una solución proporcionada."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Dos compañeros de trabajo en oficina, uno ofrece disculpas mientras el otro escucha con atención, ambos junto a una computadora.",
+    "prompt": "Realistic editorial photograph, two adult coworkers in an office, one apologizing to the other seriously while sitting at a desk with a computer, neutral daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir un error cotidiano y sus detalles.",
+    "Explicar una situación pasada y cómo cambió después.",
+    "Ofrecer una reparación proporcional en inglés claro.",
+    "Practicar vocabulario útil para disculpas y acuerdos.",
+    "Leer y repetir conversaciones de coordinación reales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This morning, I realized I had missed an important group call with my project team.",
+      "es": "Esta mañana, me di cuenta de que había perdido una llamada importante con mi equipo de proyecto."
+    },
+    {
+      "number": 2,
+      "function": "background",
+      "en": "We were supposed to discuss our plan for the client presentation next week.",
+      "es": "Se suponía que íbamos a hablar sobre nuestro plan para la presentación con el cliente la próxima semana."
+    },
+    {
+      "number": 3,
+      "function": "discovery",
+      "en": "When I checked my phone, I saw three messages from my colleague, Sam, asking if everything was okay.",
+      "es": "Al revisar mi teléfono, vi tres mensajes de mi compañero, Sam, preguntando si todo estaba bien."
+    },
+    {
+      "number": 4,
+      "function": "cause",
+      "en": "I remembered that I had put the meeting on my personal calendar, but I forgot to set a reminder.",
+      "es": "Recordé que había puesto la reunión en mi calendario personal, pero olvidé poner un recordatorio."
+    },
+    {
+      "number": 5,
+      "function": "feeling",
+      "en": "I felt embarrassed, especially because Sam had sent an update before ending the call.",
+      "es": "Me sentí avergonzado, especialmente porque Sam había enviado una actualización antes de terminar la llamada."
+    },
+    {
+      "number": 6,
+      "function": "reflection",
+      "en": "Although I wanted to explain how busy I was yesterday, I decided to just admit the mistake.",
+      "es": "Aunque quería explicar lo ocupado que estuve ayer, decidí simplemente admitir el error."
+    },
+    {
+      "number": 7,
+      "function": "admission",
+      "en": "Right away, I called Sam and said, \"I missed the meeting, and that's my responsibility.\"",
+      "es": "De inmediato, llamé a Sam y le dije: \"No asistí a la reunión, y es mi responsabilidad.\""
+    },
+    {
+      "number": 8,
+      "function": "reaction",
+      "en": "Sam listened patiently and replied, \"These things happen, but we lost time on updates.\"",
+      "es": "Sam escuchó con paciencia y respondió: \"Estas cosas pasan, pero perdimos tiempo con las actualizaciones.\""
+    },
+    {
+      "number": 9,
+      "function": "specifics",
+      "en": "He explained that the team had been waiting for my input on the design changes.",
+      "es": "Explicó que el equipo había estado esperando mi opinión sobre los cambios de diseño."
+    },
+    {
+      "number": 10,
+      "function": "offer",
+      "en": "I asked Sam, \"How can I help catch up without making things complicated for everyone?\"",
+      "es": "Le pregunté a Sam: \"¿Cómo puedo ayudar a ponerme al día sin complicarles las cosas a todos?\""
+    },
+    {
+      "number": 11,
+      "function": "suggestion",
+      "en": "He suggested I send the missing updates by email and meet with him after lunch.",
+      "es": "Sugerió que enviara las actualizaciones faltantes por correo electrónico y que nos reuniéramos después del almuerzo."
+    },
+    {
+      "number": 12,
+      "function": "acceptance",
+      "en": "I agreed and wrote the summary before emailing it to the group.",
+      "es": "Estuve de acuerdo y redacté el resumen antes de enviarlo al grupo."
+    },
+    {
+      "number": 13,
+      "function": "action",
+      "en": "After lunch, I met Sam in our office and listened closely while he reviewed the main points.",
+      "es": "Después del almuerzo, me reuní con Sam en la oficina y escuché atentamente mientras repasaba los puntos principales."
+    },
+    {
+      "number": 14,
+      "function": "collaboration",
+      "en": "Together, we checked the design slides and adjusted a few details to save time later.",
+      "es": "Juntos revisamos las diapositivas de diseño y ajustamos algunos detalles para ahorrar tiempo después."
+    },
+    {
+      "number": 15,
+      "function": "justification",
+      "en": "Sam said, \"I'm glad you owned it right away rather than avoiding the issue.\"",
+      "es": "Sam dijo: \"Me alegra que lo hayas asumido enseguida en lugar de evitar el problema.\""
+    },
+    {
+      "number": 16,
+      "function": "plan",
+      "en": "I promised I would set calendar reminders from now on to avoid missing meetings.",
+      "es": "Prometí que pondría recordatorios en el calendario a partir de ahora para no perder más reuniones."
+    },
+    {
+      "number": 17,
+      "function": "appreciation",
+      "en": "Before leaving, I told Sam I appreciated his clear feedback and patience with my mistake.",
+      "es": "Antes de irme, le dije a Sam que agradecía su comentario claro y su paciencia con mi error."
+    },
+    {
+      "number": 18,
+      "function": "reflection_future",
+      "en": "Missing the meeting reminded me that good communication means fixing problems directly.",
+      "es": "Perderme la reunión me recordó que una buena comunicación implica arreglar los problemas directamente."
+    },
+    {
+      "number": 19,
+      "function": "habit_change",
+      "en": "Now, I plan to double-check my schedule every morning before starting work.",
+      "es": "Ahora planeo revisar mi agenda dos veces cada mañana antes de comenzar a trabajar."
+    },
+    {
+      "number": 20,
+      "function": "concrete_outcome",
+      "en": "By handling the mistake quickly, I kept my team's trust and learned how to prevent it next time.",
+      "es": "Al solucionar el error rápidamente, mantuve la confianza de mi equipo y aprendí cómo evitarlo la próxima vez."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect continuous",
+      "example_en": "He explained that the team had been waiting for my input on the design changes.",
+      "explanation_es": "Had been + verbo en -ing describe una actividad que se prolongó hasta un momento pasado.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Past perfect",
+      "example_en": "This morning, I realized I had missed an important group call with my project team.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I wanted to explain how busy I was yesterday, I decided to just admit the mistake.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Sam said, \"I'm glad you owned it right away rather than avoiding the issue.\"",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "I asked Sam, \"How can I help catch up without making things complicated for everyone?\"",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "By handling the mistake quickly, I kept my team's trust and learned how to prevent it next time.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "After/before + gerund",
+      "example_en": "I felt embarrassed, especially because Sam had sent an update before ending the call.",
+      "explanation_es": "After o before seguido de -ing indica cuándo ocurre una acción respecto de otra.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Reported speech",
+      "example_en": "He explained that the team had been waiting for my input on the design changes.",
+      "explanation_es": "Una cláusula con that después de un verbo de comunicación reproduce el contenido de lo dicho.",
+      "source_paragraph": 9
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "set a reminder",
+      "meaning_es": "poner un recordatorio",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "admit the mistake",
+      "meaning_es": "admitir el error",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Right away",
+      "meaning_es": "De inmediato",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "These things happen",
+      "meaning_es": "Estas cosas pasan",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "catch up",
+      "meaning_es": "ponerse al día",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "listened closely",
+      "meaning_es": "escuché atentamente",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "save time",
+      "meaning_es": "ahorrar tiempo",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "double-check my schedule",
+      "meaning_es": "revisar mi agenda dos veces",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "This morning,",
+              "I realized I had missed an important group call with my project team."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I asked Sam,",
+              "\"How can I help catch up",
+              "without making things complicated for everyone?\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "By handling the mistake quickly,",
+              "I kept my team's trust and learned how to prevent it next time."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-016",
+    "number": "016",
+    "title_en": "Owning a Mistake and Making It Right",
+    "title_es": "Reconocer un error y repararlo",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Resolución de problemas cotidianos",
+    "main_topic_es": "Detectar y reparar errores cotidianos de coordinación",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect continuous",
+      "Past perfect",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund",
+      "After/before + gerund",
+      "Reported speech"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

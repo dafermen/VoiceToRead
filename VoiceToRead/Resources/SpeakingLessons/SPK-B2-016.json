@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-016",
+  "number": 16,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Owning a Mistake and Making It Right",
+    "es": "Reconocer un error y repararlo"
+  },
+  "category": {
+    "en": "Everyday Communication and Relationships",
+    "es": "Comunicación cotidiana y relaciones"
+  },
+  "main_topic": {
+    "en": "Notice a real coordination mistake, explain it honestly, listen, and negotiate a fair solution.",
+    "es": "Detectar un error en la coordinación, explicarlo sin excusas, escuchar y negociar una reparación justa."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos colegas adultos conversando sobre un error administrativo en una oficina moderna, uno escucha atento y el otro explica con calma.",
+    "prompt": "Editorial photograph, two adult coworkers have a serious but respectful conversation about an everyday coordination mistake at work, modern open-plan office, natural lighting, no visible text, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Reconocer y describir un error en la coordinación diaria.",
+    "Explicar las causas y aceptar responsabilidades sin excusas.",
+    "Comparar opciones y justificar preferencias realistas.",
+    "Escuchar objecciones y acordar soluciones proporcionadas.",
+    "Practicar lenguaje natural para resolver desentendidos laborales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Yesterday morning, I realized that I had missed an important step while preparing the team’s weekly schedule.",
+      "es": "Ayer por la mañana, me di cuenta de que había pasado por alto un paso importante al preparar el horario semanal del equipo."
+    },
+    {
+      "number": 2,
+      "function": "realization",
+      "en": "A colleague emailed me, asking whether I could clarify why her shift was not assigned.",
+      "es": "Una colega me envió un correo preguntando si podía aclarar por qué no se le había asignado turno."
+    },
+    {
+      "number": 3,
+      "function": "review",
+      "en": "I checked the file and saw that, although I had updated most shifts, I had left out two people without realizing it.",
+      "es": "Revisé el archivo y vi que, aunque actualicé la mayoría de los turnos, dejé fuera a dos personas sin darme cuenta."
+    },
+    {
+      "number": 4,
+      "function": "explanation",
+      "en": "I told her, 'You're right, I made a mistake in the assignment; I should have double-checked before sending it.'",
+      "es": "Le dije: 'Tienes razón, cometí un error en la asignación; debí haberlo revisado dos veces antes de enviarlo.'"
+    },
+    {
+      "number": 5,
+      "function": "responsibility",
+      "en": "Rather than making excuses, I wanted to own the error so that we could find a solution together.",
+      "es": "En lugar de poner excusas, quise asumir el error para que pudiéramos encontrar una solución juntos."
+    },
+    {
+      "number": 6,
+      "function": "dialogue_request",
+      "en": "She replied that her plans for the week depended on the work schedule, which had already changed once.",
+      "es": "Ella respondió que sus planes de la semana dependían del horario, el cual ya había cambiado una vez."
+    },
+    {
+      "number": 7,
+      "function": "contrast",
+      "en": "I answered that I understood her frustration, since I would also feel unsettled in her place.",
+      "es": "Respondí que entendía su frustración, ya que yo también me sentiría incómodo en su lugar."
+    },
+    {
+      "number": 8,
+      "function": "compare",
+      "en": "We discussed two options: keeping the new draft or adjusting shifts to match her original availability.",
+      "es": "Discutimos dos opciones: mantener el nuevo borrador o ajustar los turnos para coincidir con su disponibilidad original."
+    },
+    {
+      "number": 9,
+      "function": "preference",
+      "en": "She explained that fixing it would help her avoid canceling an appointment, and I agreed it was reasonable.",
+      "es": "Ella explicó que corregirlo le ayudaría a no cancelar una cita, y estuve de acuerdo en que era razonable."
+    },
+    {
+      "number": 10,
+      "function": "solution",
+      "en": "Before updating the schedule, I asked if anyone else might also be affected by the correction.",
+      "es": "Antes de actualizar el horario, pregunté si alguien más podría verse afectado por la corrección."
+    },
+    {
+      "number": 11,
+      "function": "listening",
+      "en": "Our manager listened and suggested that we notify everyone about the minor change to avoid further mix-ups.",
+      "es": "Nuestra gerente escuchó y sugirió que notificáramos a todos sobre el cambio menor para evitar más confusiones."
+    },
+    {
+      "number": 12,
+      "function": "agreement",
+      "en": "I offered to send a message explaining the adjustment, and my colleague appreciated my honesty.",
+      "es": "Me ofrecí a enviar un mensaje explicando el ajuste, y mi colega agradeció mi sinceridad."
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "While it would have been easier to blame the system, I realized that acknowledging my mistake built more trust.",
+      "es": "Aunque habría sido más fácil culpar al sistema, me di cuenta de que admitir mi error generó más confianza."
+    },
+    {
+      "number": 14,
+      "function": "process",
+      "en": "After reviewing all the names, I updated the document and triple-checked that all shifts matched everyone’s requests.",
+      "es": "Después de revisar todos los nombres, actualicé el documento y comprobé tres veces que los turnos coincidieran con las solicitudes de todos."
+    },
+    {
+      "number": 15,
+      "function": "feedback",
+      "en": "A few hours later, several colleagues wrote to say they appreciated being informed rather than surprised.",
+      "es": "Unas horas después, varios colegas escribieron para decir que valoraban haber sido informados en vez de sorprendidos."
+    },
+    {
+      "number": 16,
+      "function": "objection",
+      "en": "One person mentioned she might have trouble swapping shifts on short notice, so I suggested we discuss her needs individually.",
+      "es": "Una persona mencionó que podría tener problemas para cambiar turnos con poca antelación, así que sugerí que habláramos de sus necesidades de manera individual."
+    },
+    {
+      "number": 17,
+      "function": "negotiation",
+      "en": "She felt heard, and after talking, we found a fair exchange without upsetting anyone else’s arrangements.",
+      "es": "Ella se sintió escuchada y, tras hablar, encontramos un intercambio justo sin afectar los arreglos de los demás."
+    },
+    {
+      "number": 18,
+      "function": "conclusion",
+      "en": "By communicating openly and making timely corrections, we kept our week running smoothly.",
+      "es": "Comunicándonos abiertamente y corrigiendo a tiempo, logramos que la semana transcurriera sin problemas."
+    },
+    {
+      "number": 19,
+      "function": "lesson",
+      "en": "If I ever notice a similar issue, I will address it directly before it causes inconvenience.",
+      "es": "Si alguna vez noto un problema similar, lo abordaré directamente antes de que cause molestias."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "Next time, I’ll be even more careful, but I’ve learned that owning mistakes strengthens professional relationships.",
+      "es": "La próxima vez, tendré aún más cuidado, pero he aprendido que reconocer los errores fortalece las relaciones profesionales."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "Yesterday morning, I realized that I had missed an important step while preparing the team’s weekly schedule.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "Next time, I’ll be even more careful, but I’ve learned that owning mistakes strengthens professional relationships.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "She replied that her plans for the week depended on the work schedule, which had already changed once.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Before updating the schedule, I asked if anyone else might also be affected by the correction.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "I checked the file and saw that, although I had updated most shifts, I had left out two people without realizing it.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than making excuses, I wanted to own the error so that we could find a solution together.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "She felt heard, and after talking, we found a fair exchange without upsetting anyone else’s arrangements.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "By communicating openly and making timely corrections, we kept our week running smoothly.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 18
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "missed an important step",
+      "meaning_es": "pasé por alto un paso importante",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "left out two people",
+      "meaning_es": "dejé fuera a dos personas",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "double-checked before sending",
+      "meaning_es": "revisado dos veces antes de enviar",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "own the error",
+      "meaning_es": "asumir el error",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "adjusting shifts to match",
+      "meaning_es": "ajustar los turnos para coincidir",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "appreciated being informed",
+      "meaning_es": "valoraban haber sido informados",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "swapping shifts on short notice",
+      "meaning_es": "cambiar turnos con poca antelación",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "found a fair exchange",
+      "meaning_es": "encontramos un intercambio justo",
+      "source_paragraph": 17
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras; estos no marcan puntuación, solo frases para repetición.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I checked the file and saw that,",
+              "although I had updated most shifts,",
+              "I had left out two people",
+              "without realizing it."
+            ]
+          },
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I told her,",
+              "'You're right,",
+              "I made a mistake in the assignment;",
+              "I should have double-checked",
+              "before sending it.'"
+            ]
+          },
+          {
+            "source_paragraph": 17,
+            "segments": [
+              "She felt heard,",
+              "and",
+              "after talking,",
+              "we found a fair exchange",
+              "without upsetting anyone else’s arrangements."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta seguidos, concentrándote en la claridad y la entonación natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-016",
+    "number": "016",
+    "title_en": "Owning a Mistake and Making It Right",
+    "title_es": "Reconocer un error y repararlo",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación cotidiana y relaciones",
+    "main_topic_es": "Reconocer errores y negociar soluciones profesionales",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Present perfect",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

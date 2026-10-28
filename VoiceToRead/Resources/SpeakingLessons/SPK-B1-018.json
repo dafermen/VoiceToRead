@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-018",
+  "number": 18,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Day Outdoors",
+    "es": "Planear un día al aire libre"
+  },
+  "category": {
+    "en": "Everyday Life and Socializing",
+    "es": "Vida cotidiana y socialización"
+  },
+  "main_topic": {
+    "en": "Arranging a simple outdoor outing with different preferences and changing conditions.",
+    "es": "Organizar una salida sencilla al aire libre considerando diferentes preferencias y condiciones cambiantes."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Grupo de adultos organizando una salida al parque, revisando el clima y conversando en un banco al aire libre.",
+    "prompt": "Realistic editorial photograph, diverse group of adults planning an easy outdoor outing, gathered on a park bench with phones, picnic basket, checking weather together, natural daylight, springtime, relaxed atmosphere, no text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Expresar preferencias para actividades al aire libre.",
+    "Proponer y cambiar planes según el clima o el ambiente.",
+    "Justificar cambios o alternativas en una conversación.",
+    "Describir experiencias previas y expectativas para una salida.",
+    "Practicar expresiones útiles para negociar y acordar planes en inglés."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, I suggested to my friends that we should spend a day outdoors together, since everyone seemed to need a little break.",
+      "es": "La semana pasada, les sugerí a mis amigos que pasáramos un día al aire libre juntos, ya que todos parecían necesitar un pequeño descanso."
+    },
+    {
+      "number": 2,
+      "function": "intention",
+      "en": "I wanted something simple and fun, like a walk in the park, because nobody was interested in anything extreme.",
+      "es": "Quería algo sencillo y divertido, como una caminata por el parque, porque a nadie le interesaba hacer nada extremo."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "Maria said she would rather have a picnic at the lake than join a long hike.",
+      "es": "María dijo que prefería hacer un picnic en el lago antes que unirse a una caminata larga."
+    },
+    {
+      "number": 4,
+      "function": "disagreement",
+      "en": "Although Alex loves picnics, he was worried about possible rain because the weather forecast was not clear.",
+      "es": "Aunque a Alex le encantan los picnics, estaba preocupado por la posible lluvia porque el pronóstico del tiempo no era claro."
+    },
+    {
+      "number": 5,
+      "function": "information",
+      "en": "I checked the forecast again and told them that it might rain just after noon.",
+      "es": "Revisé el pronóstico de nuevo y les dije que podría llover justo después del mediodía."
+    },
+    {
+      "number": 6,
+      "function": "suggestion",
+      "en": "We could still meet earlier, by bringing some light jackets and an umbrella, just in case.",
+      "es": "Aún podríamos reunirnos antes, llevando chaquetas ligeras y un paraguas, por si acaso."
+    },
+    {
+      "number": 7,
+      "function": "experience",
+      "en": "Last summer, I had planned a similar outing, but we ended up staying in because of heavy rain.",
+      "es": "El verano pasado, había planeado una salida parecida, pero terminamos quedándonos en casa por la fuerte lluvia."
+    },
+    {
+      "number": 8,
+      "function": "proposal",
+      "en": "This time, I suggested we choose a spot near the park café, which has a covered patio.",
+      "es": "Esta vez, sugerí que eligiéramos un lugar cerca del café del parque, que tiene una terraza techada."
+    },
+    {
+      "number": 9,
+      "function": "agreement",
+      "en": "Everyone thought that was a good idea, since we could easily move inside if the weather changed suddenly.",
+      "es": "A todos les pareció una buena idea, ya que podríamos mudarnos fácilmente al interior si el clima cambiaba de repente."
+    },
+    {
+      "number": 10,
+      "function": "negotiation",
+      "en": "Even though Maria really wanted the lake, she said the café was fine if we all stayed together.",
+      "es": "Aunque María realmente quería el lago, dijo que el café estaba bien si todos permanecíamos juntos."
+    },
+    {
+      "number": 11,
+      "function": "detail",
+      "en": "I asked whether anyone wanted to bring board games or cards, rather than just chatting the whole time.",
+      "es": "Pregunté si alguien quería traer juegos de mesa o cartas, en lugar de solo conversar todo el tiempo."
+    },
+    {
+      "number": 12,
+      "function": "past_habit",
+      "en": "We used to bring games every weekend, but lately, we have simply been talking and enjoying the open air.",
+      "es": "Solíamos llevar juegos cada fin de semana, pero últimamente, simplemente hemos estado conversando y disfrutando el aire libre."
+    },
+    {
+      "number": 13,
+      "function": "planning",
+      "en": "Alex had already packed a small speaker, so we could play music without bothering other visitors.",
+      "es": "Alex ya había empacado un pequeño altavoz, así que podríamos poner música sin molestar a los demás visitantes."
+    },
+    {
+      "number": 14,
+      "function": "option",
+      "en": "If the park got too noisy, we could always move to the museum café next door.",
+      "es": "Si el parque se volvía muy ruidoso, siempre podríamos mudarnos al café del museo que está al lado."
+    },
+    {
+      "number": 15,
+      "function": "decision",
+      "en": "After much discussion, we agreed to meet at eleven in the morning, before the sun became too strong.",
+      "es": "Después de mucha discusión, acordamos encontrarnos a las once de la mañana, antes de que el sol estuviera muy fuerte."
+    },
+    {
+      "number": 16,
+      "function": "anticipation",
+      "en": "On Saturday, I was checking the sky every hour because I wanted our plans to work out.",
+      "es": "El sábado, estuve revisando el cielo cada hora porque quería que nuestros planes resultaran bien."
+    },
+    {
+      "number": 17,
+      "function": "problem",
+      "en": "Just before I left home, it started raining, so I called Maria to ask if we should wait.",
+      "es": "Justo antes de salir de casa, empezó a llover, así que llamé a María para preguntar si debíamos esperar."
+    },
+    {
+      "number": 18,
+      "function": "solution",
+      "en": "She said we should bring our things anyway, and if it didn't stop after thirty minutes, we would meet at the café.",
+      "es": "Ella dijo que debíamos llevar nuestras cosas de todos modos y, si no paraba después de treinta minutos, nos encontraríamos en el café."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "By the time we arrived at the park, the rain had almost stopped and the fresh air made everything feel calm.",
+      "es": "Cuando llegamos al parque, la lluvia casi había parado y el aire fresco hizo que todo se sintiera tranquilo."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "In the end, we enjoyed a relaxed afternoon, talking and laughing under the trees, without worrying about the weather.",
+      "es": "Al final, disfrutamos de una tarde tranquila, conversando y riendo bajo los árboles, sin preocuparnos por el clima."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "Last summer, I had planned a similar outing, but we ended up staying in because of heavy rain.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "We used to bring games every weekend, but lately, we have simply been talking and enjoying the open air.",
+      "explanation_es": "Have/has + participio conecta una experiencia o un resultado pasado con el presente.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "On Saturday, I was checking the sky every hour because I wanted our plans to work out.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "This time, I suggested we choose a spot near the park café, which has a covered patio.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "I asked whether anyone wanted to bring board games or cards, rather than just chatting the whole time.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although Alex loves picnics, he was worried about possible rain because the weather forecast was not clear.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "Alex had already packed a small speaker, so we could play music without bothering other visitors.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "We could still meet earlier, by bringing some light jackets and an umbrella, just in case.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 6
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "spend a day outdoors",
+      "meaning_es": "pasar un día al aire libre",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "would rather have",
+      "meaning_es": "preferiría tener",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "just in case",
+      "meaning_es": "por si acaso",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "ended up staying in",
+      "meaning_es": "terminamos quedándonos en casa",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "used to bring",
+      "meaning_es": "solíamos llevar",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "move to the museum café",
+      "meaning_es": "mudarnos al café del museo",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "agreed to meet",
+      "meaning_es": "acordamos encontrarnos",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "work out",
+      "meaning_es": "resultar bien",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Maria said she would rather have a picnic at the lake",
+              "than join a long hike."
+            ]
+          },
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "Although Alex loves picnics,",
+              "he was worried about possible rain",
+              "because the weather forecast was not clear."
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "If the park got too noisy,",
+              "we could always move to the museum café next door."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-018",
+    "number": "018",
+    "title_en": "Planning a Day Outdoors",
+    "title_es": "Planear un día al aire libre",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana y socialización",
+    "main_topic_es": "Organizar una salida sencilla al aire libre y consideraciones para alternativas cómodas",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Present perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

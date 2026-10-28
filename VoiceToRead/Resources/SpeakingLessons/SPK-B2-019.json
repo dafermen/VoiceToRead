@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-019",
+  "number": 19,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Working Together on a Deadline",
+    "es": "Trabajar juntos con una fecha límite"
+  },
+  "category": {
+    "en": "Work and Collaboration",
+    "es": "Trabajo y colaboración"
+  },
+  "main_topic": {
+    "en": "Collaborative projects with deadlines, clarifying roles, tracking progress, communicating boundaries and expectations.",
+    "es": "Proyectos colaborativos con fecha límite, aclarar roles, seguimiento de avances, comunicar límites y expectativas."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Equipo pequeño de trabajo colaborando en una oficina moderna, con computadoras y papeles, mirando un reloj de pared.",
+    "prompt": "Editorial, realistic photograph of a small diverse work team collaborating on a project in a modern office space, laptops, papers and a wall clock visible, natural daylight, 16:9, no visible text.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir y clarificar roles al trabajar en equipo.",
+    "Comparar y justificar métodos de colaboración.",
+    "Pedir y dar actualizaciones del progreso.",
+    "Negociar el alcance y los compromisos.",
+    "Responder a objeciones de manera diplomática."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Monday, my manager asked whether I could help coordinate a small project that needed to be finished within two weeks.",
+      "es": "El lunes pasado, mi jefe me preguntó si podía ayudar a coordinar un pequeño proyecto que debía terminarse en dos semanas."
+    },
+    {
+      "number": 2,
+      "function": "setup",
+      "en": "Although I already had several tasks, I agreed because I knew teamwork was essential for this client.",
+      "es": "Aunque ya tenía varias tareas, acepté porque sabía que el trabajo en equipo era esencial para este cliente."
+    },
+    {
+      "number": 3,
+      "function": "introduction",
+      "en": "Our team of four gathered for a quick meeting; I suggested that we clarify everyone's responsibilities before starting.",
+      "es": "Nuestro equipo de cuatro personas se reunió para una reunión breve; sugerí que aclaráramos las responsabilidades de cada uno antes de empezar."
+    },
+    {
+      "number": 4,
+      "function": "negotiation",
+      "en": "June, who had managed similar projects before, volunteered to create the initial timeline and shared what worked for her previously.",
+      "es": "June, quien había gestionado proyectos similares antes, se ofreció para crear el cronograma inicial y compartió lo que le había funcionado previamente."
+    },
+    {
+      "number": 5,
+      "function": "options",
+      "en": "Instead of dividing the work strictly by tasks, we discussed whether grouping by skill made more sense.",
+      "es": "En lugar de dividir el trabajo estrictamente por tareas, discutimos si tenía más sentido agrupar por habilidades."
+    },
+    {
+      "number": 6,
+      "function": "justification",
+      "en": "I argued that matching assignments to each person's strengths might help us meet the deadline without sacrificing quality.",
+      "es": "Yo argumenté que asignar tareas según las fortalezas de cada uno podría ayudarnos a cumplir la fecha límite sin sacrificar la calidad."
+    },
+    {
+      "number": 7,
+      "function": "agreement",
+      "en": "Everyone agreed that this was a good idea, so roles were set based on what we did best.",
+      "es": "Todos estuvieron de acuerdo en que era una buena idea, así que los roles se asignaron según lo que mejor hacíamos."
+    },
+    {
+      "number": 8,
+      "function": "compromise",
+      "en": "Even though some team members usually preferred to work independently, they were willing to share updates each day.",
+      "es": "Aunque algunos miembros del equipo solían preferir trabajar de forma independiente, estaban dispuestos a compartir actualizaciones cada día."
+    },
+    {
+      "number": 9,
+      "function": "progress",
+      "en": "By Friday, we had completed the planning phase and started drafting the main report together.",
+      "es": "Para el viernes, habíamos terminado la fase de planificación y comenzamos a redactar el informe principal juntos."
+    },
+    {
+      "number": 10,
+      "function": "issue",
+      "en": "When I noticed the design section was taking longer than expected, I asked if anyone needed extra help.",
+      "es": "Cuando noté que la sección de diseño tardaba más de lo esperado, pregunté si alguien necesitaba ayuda extra."
+    },
+    {
+      "number": 11,
+      "function": "solution",
+      "en": "Rather than risking delays, June and Carlos decided to exchange a few minor responsibilities and caught up by Saturday.",
+      "es": "En lugar de arriesgar retrasos, June y Carlos decidieron intercambiar algunas responsabilidades menores y se pusieron al día para el sábado."
+    },
+    {
+      "number": 12,
+      "function": "clarification",
+      "en": "I reminded the team not to take on new requests from other departments without checking with everyone first.",
+      "es": "Recordé al equipo que no aceptáramos nuevas solicitudes de otros departamentos sin consultar a todos primero."
+    },
+    {
+      "number": 13,
+      "function": "objection",
+      "en": "One teammate asked if postponing a few edits could hurt our chances of success.",
+      "es": "Un compañero preguntó si posponer algunas ediciones podía afectar nuestras posibilidades de éxito."
+    },
+    {
+      "number": 14,
+      "function": "explanation",
+      "en": "I explained that, while additional edits might improve the document, sticking to the agreed scope would protect our timeline.",
+      "es": "Expliqué que, aunque las ediciones adicionales podrían mejorar el documento, mantenernos dentro del alcance acordado protegería nuestro cronograma."
+    },
+    {
+      "number": 15,
+      "function": "negotiation",
+      "en": "We decided to address only the edits that related directly to the client's initial requirements.",
+      "es": "Decidimos abordar solo las ediciones que estaban directamente relacionadas con los requisitos iniciales del cliente."
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "Looking back, I realized we might have overpromised if we hadn't agreed to set those boundaries early.",
+      "es": "Al reflexionar, me di cuenta de que podríamos haber prometido de más si no hubiéramos acordado fijar esos límites al principio."
+    },
+    {
+      "number": 17,
+      "function": "communication",
+      "en": "Throughout the process, I made sure everyone felt heard by encouraging regular feedback.",
+      "es": "Durante todo el proceso, me aseguré de que todos se sintieran escuchados animando a dar retroalimentación regularmente."
+    },
+    {
+      "number": 18,
+      "function": "closure",
+      "en": "By the following Wednesday, we had finished and reviewed the project before our internal deadline.",
+      "es": "Para el miércoles siguiente, habíamos terminado y revisado el proyecto antes de nuestra fecha límite interna."
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "Our manager praised the team, who had delivered a high-quality result without working late nights.",
+      "es": "Nuestro jefe felicitó al equipo, que había entregado un resultado de alta calidad sin trabajar hasta tarde."
+    },
+    {
+      "number": 20,
+      "function": "final_reflection",
+      "en": "Next time, I will suggest clarifying deliverables and roles even earlier to avoid unnecessary stress.",
+      "es": "La próxima vez, sugeriré clarificar los entregables y los roles aún antes para evitar estrés innecesario."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past perfect",
+      "example_en": "June, who had managed similar projects before, volunteered to create the initial timeline and shared what worked for her previously.",
+      "explanation_es": "Had + participio sitúa una acción o situación antes de otro momento pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "Even though some team members usually preferred to work independently, they were willing to share updates each day.",
+      "explanation_es": "Was/were + verbo en -ing muestra una acción en desarrollo en un momento pasado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Relative clause with who/which",
+      "example_en": "Our manager praised the team, who had delivered a high-quality result without working late nights.",
+      "explanation_es": "Una cláusula con who o which separada por coma añade información sobre una persona, una cosa o la situación anterior.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Indirect question",
+      "example_en": "Last Monday, my manager asked whether I could help coordinate a small project that needed to be finished within two weeks.",
+      "explanation_es": "Una pregunta subordinada con whether o if mantiene el orden afirmativo de sujeto y verbo.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Concessive clause",
+      "example_en": "Although I already had several tasks, I agreed because I knew teamwork was essential for this client.",
+      "explanation_es": "Although, even though o though introduce una concesión o un contraste con la idea principal.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Rather than + gerund",
+      "example_en": "Rather than risking delays, June and Carlos decided to exchange a few minor responsibilities and caught up by Saturday.",
+      "explanation_es": "Rather than seguido de -ing contrasta una alternativa con la acción elegida.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Without + gerund",
+      "example_en": "I argued that matching assignments to each person's strengths might help us meet the deadline without sacrificing quality.",
+      "explanation_es": "Without + verbo en -ing expresa una acción que no se realiza.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "By + gerund",
+      "example_en": "Throughout the process, I made sure everyone felt heard by encouraging regular feedback.",
+      "explanation_es": "By + verbo en -ing expresa el medio o la manera de realizar algo.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "asked whether I could help",
+      "meaning_es": "preguntó si podía ayudar",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "agreed because I knew",
+      "meaning_es": "acepté porque sabía",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "clarify everyone's responsibilities",
+      "meaning_es": "aclarar las responsabilidades de cada uno",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "volunteered to create",
+      "meaning_es": "se ofreció para crear",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "matching assignments to each person's strengths",
+      "meaning_es": "asignar tareas según las fortalezas de cada uno",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "were willing to share updates",
+      "meaning_es": "estaban dispuestos a compartir actualizaciones",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "caught up by Saturday",
+      "meaning_es": "se pusieron al día para el sábado",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "sticking to the agreed scope",
+      "meaning_es": "mantenernos dentro del alcance acordado",
+      "source_paragraph": 14
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelos dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos de las oraciones completos divididos por barras. Haz pausas en cada barra.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last Monday,",
+              "my manager asked whether I could help coordinate a small project that needed to be finished within two weeks."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "By Friday,",
+              "we had completed the planning phase and started drafting the main report together."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "Our manager praised the team,",
+              "who had delivered a high-quality result",
+              "without working late nights."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta priorizando la claridad y el ritmo natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-019",
+    "number": "019",
+    "title_en": "Working Together on a Deadline",
+    "title_es": "Trabajar juntos con una fecha límite",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y colaboración",
+    "main_topic_es": "Proyectos colaborativos con fechas límite y comunicación de roles",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past perfect",
+      "Past continuous",
+      "Relative clause with who/which",
+      "Indirect question",
+      "Concessive clause",
+      "Rather than + gerund",
+      "Without + gerund",
+      "By + gerund"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}
