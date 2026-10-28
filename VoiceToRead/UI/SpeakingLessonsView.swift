@@ -57,6 +57,7 @@ private struct SpeakingLessonCover: View {
         .frame(maxWidth: .infinity).aspectRatio(16 / 9, contentMode: .fit)
         .clipped().clipShape(RoundedRectangle(cornerRadius: 12))
         .accessibilityElement(children: .ignore).accessibilityLabel(Text(verbatim: altText ?? lesson.image.altEs))
+        .accessibilityAddTraits(.isImage).accessibilityIdentifier("guidedCover-" + lesson.id)
     }
     private var coverSymbol: String {
         if lesson.level == "C1" || lesson.level == "C2" {

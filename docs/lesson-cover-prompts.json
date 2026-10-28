@@ -1,0 +1,181 @@
+{
+  "generation_mode": "built-in image_gen",
+  "new_covers": [
+    {
+      "lesson_id": "SPK-B1-002",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-002-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Create one horizontal 16:9 editorial photograph for an adult English-learning iPhone app lesson titled My Daily Routine, level B1. A candid morning at home: an adult preparing a simple breakfast at a kitchen counter, with a small notebook nearby, soft morning daylight through a window. Natural human proportions, ordinary modern home, relaxed purposeful mood, realistic skin and materials, restrained warm neutral palette with subtle blue accents. Wide composition, clear main subject with comfortable margins so the scene reads at a small thumbnail size. No words, typography, readable writing, labels, logos, watermarks, collages, borders, or UI. This is a standalone lesson cover, not a screenshot.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "b8664c21091e617a05724226bce09d2460f1645c40de918f4b33da8847a0c9ef"
+    },
+    {
+      "lesson_id": "SPK-B1-003",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-003-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: one horizontal 16:9 editorial photograph for an adult English-learning app lesson, At the Doctor's Office, B1. Scene: An adult patient in ordinary casual clothes calmly asking a doctor a question across a desk in a bright modern consultation room; attentive faces, a closed notebook, no procedures or distress. Style: candid realistic lifestyle photography, natural human proportions and skin textures, soft window daylight, restrained warm neutral palette with subtle blue accents, clean ordinary contemporary environments. Wide composition with comfortable margins, main faces and hands fully framed and readable at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI. Standalone lesson cover.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "075609d1a390df1f1f786d66d089c82ee59b02e58825311a075888513cbd7424"
+    },
+    {
+      "lesson_id": "SPK-B1-004",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-004-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: one horizontal 16:9 editorial photograph for an adult English-learning app lesson, A Job Interview, B1. Scene: A young adult candidate with a simple portfolio seated across from a friendly interviewer in a modest bright office, natural eye contact and welcoming body language. Style: candid realistic lifestyle photography, natural human proportions and skin textures, soft window daylight, restrained warm neutral palette with subtle blue accents, clean ordinary contemporary environments. Wide composition with comfortable margins, main faces and hands fully framed and readable at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI. Standalone lesson cover.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2df34199c438dfa875710992309fea5c0f774f559bc29ca49f0c5b57dbbcd8c1"
+    },
+    {
+      "lesson_id": "SPK-B1-005",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-005-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: one horizontal 16:9 editorial photograph for an adult English-learning app lesson, My First Day at a New Job, B1. Scene: Two coworkers welcoming a new adult colleague at a tidy shared office workstation, a friendly introduction, laptop screen angled away with no readable content. Style: candid realistic lifestyle photography, natural human proportions and skin textures, soft window daylight, restrained warm neutral palette with subtle blue accents, clean ordinary contemporary environments. Wide composition with comfortable margins, main faces and hands fully framed and readable at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI. Standalone lesson cover.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "bd075e5de0b174ca4513e46d788f7ee30b4d34df847a519b0c02fd17c08e1eab"
+    },
+    {
+      "lesson_id": "SPK-B2-001",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-001-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: one horizontal 16:9 editorial photograph for an adult English-learning app lesson, Improving My English, B2. Scene: An adult learner wearing headphones at a desk discussing a notebook with a tutor, natural conversational gestures, a comfortable home study with books and soft daylight. Style: candid realistic lifestyle photography, natural human proportions and skin textures, soft window daylight, restrained warm neutral palette with subtle blue accents, clean ordinary contemporary environments. Wide composition with comfortable margins, main faces and hands fully framed and readable at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI. Standalone lesson cover.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "45955f7c08cfca3bd4ba799c03e054423a0ddf181f2cd2a288dab2aa66f93322"
+    },
+    {
+      "lesson_id": "SPK-B2-002",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-002-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, My Daily Routine, B2. Scene: Two adult partners planning their morning together at a kitchen table with a weekly planner and breakfast; thoughtful collaboration and ordinary everyday household setting. Candid realistic lifestyle photography, natural human proportions and skin textures, soft window daylight, restrained warm neutral palette with subtle blue accents, contemporary setting. Wide composition, comfortable margins, expressive faces and hands fully framed, readable as a small thumbnail. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "728dd01b1fac8ab9d256c6b118ad77e8569807e0b7842d547ecd8ea16f26dfcd"
+    },
+    {
+      "lesson_id": "SPK-B2-003",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-003-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, At the Doctor's Office, B2. Scene: An adult patient referring to a small notebook while a doctor listens attentively at a consultation desk; the focus is clarifying information, calm empathetic interaction, no examination or distress. Candid realistic lifestyle photography, natural human proportions and skin textures, soft window daylight, restrained warm neutral palette with subtle blue accents, contemporary setting. Wide composition, comfortable margins, expressive faces and hands fully framed, readable as a small thumbnail. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "24d8e1956247b807c341f9a33b4bc51bc7caad0b94ce37d33a3743b442a31cde"
+    },
+    {
+      "lesson_id": "SPK-B2-004",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-004-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, A Job Interview, B2. Scene: An adult male candidate presenting a portfolio to two attentive interviewers, a woman and a man, in a bright contemporary office. A candid moment of discussing past work experience, thoughtful rather than posed. Candid realistic photography, natural varied adult cast and believable hands, soft window daylight, warm neutral materials and subtle blue accents, clean contemporary setting. Wide composition with comfortable margins and clear main action, faces fully framed, readable at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "01341cdfcb81dded7d290acb56ab1943ba442078fac6be7ae10c365e06e4db8f"
+    },
+    {
+      "lesson_id": "SPK-B2-005",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B2-005-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, My First Day at a New Job, B2. Scene: A new adult employee and a woman colleague reviewing a laptop workflow side by side at a modern office desk, another team member nearby listening; friendly professional mentoring, laptop screen not readable. Candid realistic photography, natural varied adult cast and believable hands, soft window daylight, warm neutral materials and subtle blue accents, clean contemporary setting. Wide composition with comfortable margins and clear main action, faces fully framed, readable at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 940,
+      "sha256": "c06a4144e56e08b840d074e68c68669151792c865b0cd3f9c4bf14f6db497dc0"
+    },
+    {
+      "lesson_id": "SPK-C1-001",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-001-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Improving My English, C1. Scene: An adult learner and a tutor thoughtfully reviewing a study plan together at a desk in a quiet library, notebooks and closed books, engaged exchange about learning strategies. Realistic candid lifestyle photography with natural varied adults, accurate anatomy and believable gestures, soft daylight, warm neutral palette and subtle blue accents, contemporary environment. Wide thumbnail-friendly framing with clear faces and comfortable margins. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "12968eec07418d4fc78fdb5a4acadb8da24f919ab04535690d90e01bd77705eb"
+    },
+    {
+      "lesson_id": "SPK-C1-002",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-002-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, A Job Interview, C1. Scene: A mature professional woman candidate in a thoughtful senior-role interview with a small two-person panel, open portfolio on a meeting table, calm confidence and attentive discussion. Realistic candid lifestyle photography with natural varied adults, accurate anatomy and believable gestures, soft daylight, warm neutral palette and subtle blue accents, contemporary environment. Wide thumbnail-friendly framing with clear faces and comfortable margins. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "dae15836f33a85e2da8156d78bfec8f20f585a9bc92733329200a7d6ca244eb3"
+    },
+    {
+      "lesson_id": "SPK-C1-003",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-003-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Resolving a Conflict, C1. Scene: Two adult colleagues, a Black man and an East Asian woman, calmly resolving a project disagreement across a meeting table. Both listening respectfully, open relaxed hands, a plain project folder between them, no confrontation or anger. Candid realistic photography, believable anatomy and expressions, soft window daylight, warm neutral palette with subtle blue accents, clean contemporary office. Wide composition with comfortable margins, clear primary action and fully framed faces. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3bf569b376ff98a9cab14ddc9668dbf1e75ce17371281d0f1dcd998a8858d61b"
+    },
+    {
+      "lesson_id": "SPK-C1-004",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-004-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Defending a Proposal, C1. Scene: An adult professional presenting an improvement proposal to three colleagues around a meeting table, a minimal abstract diagram on a whiteboard with no writing, engaged respectful questions, natural conversational gestures. Candid realistic photography, believable anatomy and expressions, soft window daylight, warm neutral palette with subtle blue accents, clean contemporary office. Wide composition with comfortable margins, clear primary action and fully framed faces. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "88977305b202c0069477763d5a45a307842b779e74b242cef708506abf6ff740"
+    },
+    {
+      "lesson_id": "SPK-C1-005",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C1-005-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Discussing Social Change, C1. Scene: A small group of adult neighbors of different ages, including a wheelchair user, discussing shared park improvements beside a broad accessible park path, benches and open green space visible, respectful community conversation. Candid realistic lifestyle photography, varied adult cast, believable anatomy and gestures, soft natural daylight, restrained warm neutrals with subtle blue accents. Wide composition with comfortable margins and clear primary action, important faces fully framed, readable as a thumbnail. No text, readable writing, signs, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e7517d3dfa18f660606c833d4b65d8c56737bcd0149e1fa02eee5439127921a9"
+    },
+    {
+      "lesson_id": "SPK-C2-001",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-001-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Improving My English, C2. Scene: Three adult colleagues engaged in a nuanced friendly conversation in a quiet café meeting corner, a thoughtful listener noticing tone and expression, no teaching props, natural attentive faces and understated gestures. Candid realistic lifestyle photography, varied adult cast, believable anatomy and gestures, soft natural daylight, restrained warm neutrals with subtle blue accents. Wide composition with comfortable margins and clear primary action, important faces fully framed, readable as a thumbnail. No text, readable writing, signs, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "03b6762418b75d5cdd60ebcbaf788f06a98447dc778c59b1fc713089881755ad"
+    },
+    {
+      "lesson_id": "SPK-C2-002",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-002-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, A Job Interview, C2. Scene: An experienced adult candidate in a composed executive interview, seated with an interviewer across a contemporary meeting table, a thoughtful pause and subtle attentive expressions, understated professional clothing and closed portfolio. Realistic candid photography, varied adults with natural anatomy and gestures, soft window daylight, restrained warm neutral palette with subtle blue accents, tidy modern office. Wide thumbnail-friendly composition with comfortable margins and fully framed faces. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3a9e36ac5a43ee9aa88759190ee0d417d07a07dbfed7946282194c1381ee9ea6"
+    },
+    {
+      "lesson_id": "SPK-C2-003",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-003-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Mediating a Negotiation, C2. Scene: Three adult coworkers in a balanced meeting: a neutral mediator between two colleagues listening to each other's viewpoints, open hands and a shared project folder, calm constructive negotiation rather than a staged handshake. Realistic candid photography, varied adults with natural anatomy and gestures, soft window daylight, restrained warm neutral palette with subtle blue accents, tidy modern office. Wide thumbnail-friendly composition with comfortable margins and fully framed faces. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e0a12c9088679f8c5c80108c60ed740f7fe557603ff71d20f9a46caa3e30a9b2"
+    },
+    {
+      "lesson_id": "SPK-C2-004",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-004-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, An Ethical Dilemma, C2. Scene: Two adult colleagues privately and thoughtfully checking a report together at a desk, one pointing gently at an unlabelled document while the other listens, an honest mistake being discussed respectfully, serious but calm faces, no secrecy theatrics. Natural candid photography, varied adults with believable anatomy and expressions, soft window daylight, warm neutral palette with subtle blue accents, modern uncluttered office. Wide composition with comfortable margins, fully framed faces and hands, clear subject at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "98aee2ae79cea3122f76ef53b0cdd7a1913f26bf82b52a10fa585ca97c52b9af"
+    },
+    {
+      "lesson_id": "SPK-C2-005",
+      "file": "VoiceToRead/Resources/SpeakingLessons/SPK-C2-005-cover.png",
+      "mode": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset: horizontal 16:9 editorial photograph for an adult English-learning app lesson, Disagreeing with Tact, C2. Scene: Two adult professionals in a respectful conversation across a meeting table, one offering a measured alternative with an open hand while the other listens thoughtfully, calm disagreement and constructive collaboration. Natural candid photography, varied adults with believable anatomy and expressions, soft window daylight, warm neutral palette with subtle blue accents, modern uncluttered office. Wide composition with comfortable margins, fully framed faces and hands, clear subject at thumbnail size. No text, readable writing, logos, watermarks, borders, collages or UI.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "909045eb5f3c4c505f5afcc6928e2acf9f1f6802da0e7c86fbda9e408b61a786"
+    }
+  ],
+  "preserved_original": {
+    "lesson_id": "SPK-B1-001",
+    "file": "VoiceToRead/Resources/SpeakingLessons/SPK-B1-001-cover.png",
+    "sha256": "77295081f82f93f434ec99385b58dea560bd086d51b482f4ec487c192a6fa8e6"
+  }
+}

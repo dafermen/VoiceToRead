@@ -1,6 +1,6 @@
 """Validate all bundled lesson resources, then publish the explicit twenty-ID catalog."""
 from pathlib import Path
-import json,hashlib,re,sys
+import json,hashlib,re,sys,struct
 r=Path(__file__).resolve().parents[1];folder=r/'VoiceToRead/Resources/SpeakingLessons'
 ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,6)]
 titles_by_level={
@@ -17,11 +17,15 @@ def support_fields(value,path=''):
   for i,v in enumerate(value):result.update(support_fields(v,f'{path}.{i}'))
  elif isinstance(value,str) and (path.endswith(('.es','_es')) or path.startswith('learning_objectives.') or path.startswith('lesson_card.activities_es.') or path=='lesson_card.language'):result[path]=value
  return result
-alltext=set();bytes_audio=0;audio_count=0
+alltext=set();bytes_audio=0;audio_count=0;cover_hashes=set()
 for identifier in ids:
  d=json.loads((folder/(identifier+'.json')).read_text(encoding='utf-8'));level=identifier.split('-')[1];n=int(identifier[-3:])
  assert d['id']==identifier and d['level']==level and d['number']==n
  assert d['title']['en']==titles_by_level[level][n-1] and d['language']=='en-US'
+ cover=(folder/(identifier+'-cover.png')).read_bytes()
+ assert cover[:8]==b'\x89PNG\r\n\x1a\n'
+ width,height=struct.unpack('>II',cover[16:24]);assert height>0 and abs(width/height-16/9)<0.025
+ fingerprint=hashlib.sha256(cover).hexdigest();assert fingerprint not in cover_hashes;cover_hashes.add(fingerprint)
  c=d['lesson_card']
  assert c['id']==d['id'] and c['level']==level and int(c['number'])==n
  assert c['title_en']==d['title']['en'] and c['title_es']==d['title']['es']
@@ -66,4 +70,4 @@ assert hashlib.sha256((folder/'SPK-B1-001.json').read_text(encoding='utf-8').enc
 assert not list(folder.rglob('*-review.json')),'Review files must be resolved before publication'
 assert not list(folder.rglob('.env*'))
 if '--publish' in sys.argv:(folder/'catalog.json').write_text(json.dumps(ids,indent=2)+'\n',encoding='utf-8')
-print(f'PASS: twenty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); eighty support packs; original 001 unchanged.',flush=True)
+print(f'PASS: twenty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); eighty support packs; twenty distinct covers; original 001 unchanged.',flush=True)

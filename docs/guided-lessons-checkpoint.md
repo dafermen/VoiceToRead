@@ -147,3 +147,22 @@ XCTest resource coverage and level-navigation tests include all four levels;
 these cannot be executed locally on Windows. Xcode/iPhone playback/layout and
 native-speaker editorial checks remain necessary. The API key stays in the
 ignored development .env and is not copied into resources or the iPhone app.
+
+
+## Illustrated lesson covers
+
+All twenty guided lessons now have a local 16:9 PNG cover. Nineteen new editorial
+photographs were created with the built-in image_gen tool and visually inspected;
+the supplied SPK-B1-001 cover is preserved byte-for-byte. The originals were copied
+without image conversion, resizing or replacement of existing media. Images load
+through the existing lesson-ID cover convention in both library and detail reader,
+and are included in the existing SpeakingLessons resource folder for offline use.
+No lesson JSON, support text, audio or playback controls were modified.
+
+docs/lesson-cover-prompts.json records the exact prompt set, built-in mode, saved
+repository paths, dimensions and hashes. Each new image matches the lesson theme,
+with consistent candid photography, daylight, warm neutrals and subtle blue accents.
+The cover accessibility labels remain; image traits and stable IDs were added.
+The resource validator requires twenty distinct landscape PNGs; XCTest adds native
+UIImage decoding and uniqueness coverage, with a reader image accessibility check.
+XCTest and iPhone visual verification cannot be run locally on Windows.

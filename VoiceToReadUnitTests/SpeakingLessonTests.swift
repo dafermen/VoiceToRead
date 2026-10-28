@@ -1,5 +1,7 @@
 import XCTest
 import AVFoundation
+import UIKit
+import CryptoKit
 @testable import VoiceToRead
 
 final class SpeakingLessonTests: XCTestCase {
@@ -95,6 +97,20 @@ final class SpeakingLessonTests: XCTestCase {
             XCTAssertEqual(b1.title.en, b2.title.en)
             XCTAssertNotEqual(b1.paragraphs.map(\.en), b2.paragraphs.map(\.en))
         }
+    }
+
+    func testEveryLessonHasAUniqueDecodableLandscapeCover() throws {
+        let lessons = try SpeakingLessonCatalog.load()
+        var fingerprints = Set<Data>()
+        for lesson in lessons {
+            let url = try XCTUnwrap(Bundle.main.url(forResource: lesson.id + "-cover", withExtension: "png", subdirectory: "SpeakingLessons"))
+            let data = try Data(contentsOf: url)
+            let cover = try XCTUnwrap(UIImage(data: data))
+            XCTAssertGreaterThan(cover.size.height, 0)
+            XCTAssertEqual(cover.size.width / cover.size.height, 16.0 / 9.0, accuracy: 0.025)
+            XCTAssertTrue(fingerprints.insert(Data(SHA256.hash(data: data))).inserted)
+        }
+        XCTAssertEqual(fingerprints.count, 20)
     }
 
     func testInvalidLessonsAreRejectedBeforeRendering() throws {

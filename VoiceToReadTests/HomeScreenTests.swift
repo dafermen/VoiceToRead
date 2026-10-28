@@ -212,6 +212,7 @@ final class HomeScreenTests: XCTestCase {
         lesson.tap()
         let begin = app.buttons["beginGuidedReading"]
         XCTAssertTrue(begin.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.images["guidedCover-SPK-B1-001"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["Start attempt"].exists)
         XCTAssertFalse(app.staticTexts["How did this phrase feel?"].exists)
         begin.tap()
