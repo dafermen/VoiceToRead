@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-001",
+  "number": 1,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Improving My English",
+    "es": "Mejorando mi inglés"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Learning English, overcoming speaking difficulties, building confidence, and setting goals.",
+    "es": "Aprender inglés, superar dificultades al hablar, desarrollar confianza y establecer metas."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Persona adulta practicando inglés en un escritorio con cuaderno, portátil y audífonos.",
+    "prompt": "Realistic editorial photograph, adult learner studying English at home, notebook, laptop and headphones on a desk, warm natural daylight, modern apartment, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una situación actual y experiencias previas.",
+    "Explicar dificultades y sus causas.",
+    "Comparar hábitos del pasado con los del presente.",
+    "Expresar planes, condiciones y metas.",
+    "Practicar lectura y repetición con inglés americano natural."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "These days, I'm working on improving my English because I know it can open new doors in my personal and professional life.",
+      "es": "Actualmente estoy trabajando para mejorar mi inglés porque sé que puede abrirme nuevas oportunidades en mi vida personal y profesional."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "Although I understand a lot when I read, speaking is still difficult for me sometimes.",
+      "es": "Aunque entiendo bastante cuando leo, hablar todavía me resulta difícil a veces."
+    },
+    {
+      "number": 3,
+      "function": "experience",
+      "en": "I've studied English for several years, but I haven't always practiced it regularly.",
+      "es": "He estudiado inglés durante varios años, pero no siempre lo he practicado con regularidad."
+    },
+    {
+      "number": 4,
+      "function": "challenge",
+      "en": "The biggest challenge is finding the right words when I want to express an idea quickly.",
+      "es": "El mayor desafío es encontrar las palabras adecuadas cuando quiero expresar una idea rápidamente."
+    },
+    {
+      "number": 5,
+      "function": "detail",
+      "en": "Sometimes I know what I want to say, but I need extra time to put the sentence together.",
+      "es": "A veces sé lo que quiero decir, pero necesito más tiempo para construir la oración."
+    },
+    {
+      "number": 6,
+      "function": "cause",
+      "en": "One reason is that I often think in Spanish before I speak in English.",
+      "es": "Una razón es que a menudo pienso en español antes de hablar en inglés."
+    },
+    {
+      "number": 7,
+      "function": "past_habit",
+      "en": "I used to translate almost every sentence in my head, and that made conversations slower.",
+      "es": "Antes solía traducir casi todas las oraciones en mi mente, y eso hacía que las conversaciones fueran más lentas."
+    },
+    {
+      "number": 8,
+      "function": "change",
+      "en": "Now I'm trying to use simple English sentences without translating every word.",
+      "es": "Ahora estoy intentando usar oraciones sencillas en inglés sin traducir cada palabra."
+    },
+    {
+      "number": 9,
+      "function": "example",
+      "en": "For example, when I talk about my day, I start with familiar expressions and add more details.",
+      "es": "Por ejemplo, cuando hablo de mi día, comienzo con expresiones conocidas y agrego más detalles."
+    },
+    {
+      "number": 10,
+      "function": "observation",
+      "en": "I've noticed that this small change helps me feel more comfortable when I speak.",
+      "es": "He notado que este pequeño cambio me ayuda a sentirme más cómodo cuando hablo."
+    },
+    {
+      "number": 11,
+      "function": "limitation",
+      "en": "Of course, I still make mistakes, especially with verb tenses and pronunciation.",
+      "es": "Por supuesto, todavía cometo errores, especialmente con los tiempos verbales y la pronunciación."
+    },
+    {
+      "number": 12,
+      "function": "perspective",
+      "en": "However, I understand that making mistakes is a normal part of learning a language.",
+      "es": "Sin embargo, entiendo que cometer errores es una parte normal de aprender un idioma."
+    },
+    {
+      "number": 13,
+      "function": "plan",
+      "en": "Right now, I'm planning to practice speaking for at least fifteen minutes every day.",
+      "es": "En este momento, planeo practicar conversación durante al menos quince minutos todos los días."
+    },
+    {
+      "number": 14,
+      "function": "action",
+      "en": "I'm also going to listen to short conversations and repeat useful phrases out loud.",
+      "es": "También voy a escuchar conversaciones cortas y repetir frases útiles en voz alta."
+    },
+    {
+      "number": 15,
+      "function": "condition",
+      "en": "If I practice consistently, I'll become more confident and respond more naturally.",
+      "es": "Si practico con constancia, ganaré más confianza y responderé de manera más natural."
+    },
+    {
+      "number": 16,
+      "function": "strategy",
+      "en": "When I don't understand something, I'll ask the other person to repeat it more slowly.",
+      "es": "Cuando no entienda algo, le pediré a la otra persona que lo repita más despacio."
+    },
+    {
+      "number": 17,
+      "function": "expectation",
+      "en": "In a few months, I hope I'll be able to have longer conversations without stopping so often.",
+      "es": "Dentro de unos meses, espero poder mantener conversaciones más largas sin detenerme tan seguido."
+    },
+    {
+      "number": 18,
+      "function": "goal",
+      "en": "I'd also like to feel comfortable speaking English in meetings, while traveling, and in everyday situations.",
+      "es": "También me gustaría sentirme cómodo hablando inglés en reuniones, al viajar y en situaciones cotidianas."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Looking back, I've realized that progress doesn't happen overnight; it comes from small, regular efforts.",
+      "es": "Al mirar atrás, me he dado cuenta de que el progreso no ocurre de la noche a la mañana; llega gracias a pequeños esfuerzos constantes."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "I may not speak perfectly yet, but every day I have another chance to learn, practice, and improve.",
+      "es": "Puede que todavía no hable perfectamente, pero cada día tengo otra oportunidad de aprender, practicar y mejorar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple",
+      "example_en": "I understand a lot when I read.",
+      "explanation_es": "Hábitos y hechos generales.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Present continuous",
+      "example_en": "I'm working on improving my English.",
+      "explanation_es": "Proceso que ocurre en la etapa actual.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present perfect",
+      "example_en": "I've studied English for several years.",
+      "explanation_es": "Experiencia que comenzó en el pasado y continúa o importa ahora.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Used to",
+      "example_en": "I used to translate almost every sentence.",
+      "explanation_es": "Hábito anterior que ha cambiado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Going to",
+      "example_en": "I'm also going to listen to short conversations.",
+      "explanation_es": "Plan o intención.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "First conditional",
+      "example_en": "If I practice consistently, I'll become more confident.",
+      "explanation_es": "Consecuencia futura posible de una condición realista.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Would like to",
+      "example_en": "I'd also like to feel comfortable speaking English.",
+      "explanation_es": "Deseo o aspiración.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Hope + will be able to",
+      "example_en": "I hope I'll be able to have longer conversations.",
+      "explanation_es": "Expectativa de capacidad futura.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "open new doors",
+      "meaning_es": "abrir nuevas oportunidades",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "find the right words",
+      "meaning_es": "encontrar las palabras adecuadas",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "put the sentence together",
+      "meaning_es": "construir la oración",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "in my head",
+      "meaning_es": "en mi mente",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "out loud",
+      "meaning_es": "en voz alta",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "make mistakes",
+      "meaning_es": "cometer errores",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "practice consistently",
+      "meaning_es": "practicar con constancia",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "doesn't happen overnight",
+      "meaning_es": "no ocurre de la noche a la mañana",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces."
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "These days",
+              "I'm working on improving my English",
+              "because I know",
+              "it can open new doors"
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I used to translate",
+              "almost every sentence in my head",
+              "and that made",
+              "conversations slower"
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "If I practice consistently",
+              "I'll become more confident",
+              "and respond more naturally"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación."
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-001",
+    "number": "001",
+    "title_en": "Improving My English",
+    "title_es": "Mejorando mi inglés",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Aprender inglés y desarrollar confianza",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple",
+      "Present continuous",
+      "Present perfect",
+      "Used to",
+      "Going to",
+      "First conditional",
+      "Would like to",
+      "Hope + will be able to"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

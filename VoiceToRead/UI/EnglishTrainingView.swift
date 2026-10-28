@@ -12,6 +12,11 @@ struct EnglishTrainingLibraryView: View {
             if let store {
                 List {
                     Section {
+                        NavigationLink { SpeakingLessonLibraryView() } label: {
+                            Label("Guided lessons", systemImage: "book.closed")
+                        }.accessibilityIdentifier("guidedLessonsEntry")
+                    }
+                    Section {
                         Text("Choose the source and practice languages, write one phrase per line, then review the translations before practising.")
                         Text("Trainings stay on this device. Round results are temporary.").font(.caption).foregroundStyle(.secondary)
                     }

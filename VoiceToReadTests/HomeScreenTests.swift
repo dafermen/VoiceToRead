@@ -186,6 +186,36 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    func testGuidedLessonRendersBundledContentWithoutRecording() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training"]
+        app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Train"].tap()
+        let entry = app.buttons["guidedLessonsEntry"]
+        XCTAssertTrue(entry.waitForExistence(timeout: 10))
+        entry.tap()
+        let lesson = app.buttons["guidedLesson-SPK-B1-001"]
+        XCTAssertTrue(lesson.waitForExistence(timeout: 5))
+        lesson.tap()
+        let begin = app.buttons["beginGuidedReading"]
+        XCTAssertTrue(begin.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["Start attempt"].exists)
+        XCTAssertFalse(app.staticTexts["How did this phrase feel?"].exists)
+        begin.tap()
+        XCTAssertTrue(app.staticTexts["lessonEnglish-1"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["lessonSpanish-1"].exists)
+        XCTAssertTrue(app.buttons["lessonPlay-1"].exists)
+        XCTAssertTrue(app.staticTexts["lessonEnglish-1"].label.contains("These days, I'm working"))
+        for _ in 0..<24 where !app.staticTexts["lessonEnglish-20"].isHittable { app.swipeUp() }
+        XCTAssertTrue(app.staticTexts["lessonEnglish-20"].exists)
+        for _ in 0..<8 where !app.buttons["Lesson card"].isHittable { app.swipeUp() }
+        XCTAssertTrue(app.buttons["Lesson card"].exists)
+    }
+
+    @MainActor
     func testCommunicationHomeTablet() throws {
         guard UIDevice.current.userInterfaceIdiom == .pad else { throw XCTSkip("Tablet layout") }
         let app = XCUIApplication()

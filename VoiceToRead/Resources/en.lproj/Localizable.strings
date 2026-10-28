@@ -1218,3 +1218,31 @@
 "Changing the original text or its language clears all translations and approvals for this story. Other stories stay unchanged." = "Changing the original text or its language clears all translations and approvals for this story. Other stories stay unchanged.";
 
 "Only the selected language's translation and corrections are replaced after translation succeeds. Other languages are kept. An adult must review the new version." = "Only the selected language's translation and corrections are replaced after translation succeeds. Other languages are kept. An adult must review the new version.";
+
+"Guided lessons" = "Guided lessons";
+
+"The guided lessons could not be opened. Your trainings are unchanged." = "The guided lessons could not be opened. Your trainings are unchanged.";
+
+"%@ · %lld min" = "%@ · %lld min";
+
+"Begin reading" = "Begin reading";
+
+"Topic and objectives" = "Topic and objectives";
+
+"Part A · Bilingual story" = "Part A · Bilingual story";
+
+"Part B · Grammar and expressions" = "Part B · Grammar and expressions";
+
+"Part C · Reading practice" = "Part C · Reading practice";
+
+"Grammar" = "Grammar";
+
+"Essential expressions" = "Essential expressions";
+
+"Lesson card" = "Lesson card";
+
+"%lld paragraphs" = "%lld paragraphs";
+
+"%lld essential expressions" = "%lld essential expressions";
+
+"%lld minutes" = "%lld minutes";

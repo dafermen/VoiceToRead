@@ -1218,3 +1218,31 @@
 "Changing the original text or its language clears all translations and approvals for this story. Other stories stay unchanged." = "Cambiar el texto original o su idioma elimina todas las traducciones y aprobaciones de este cuento. Los demás cuentos no cambian.";
 
 "Only the selected language's translation and corrections are replaced after translation succeeds. Other languages are kept. An adult must review the new version." = "Solo se reemplazan la traducción y las correcciones del idioma seleccionado cuando termina la traducción. Los demás idiomas se conservan. Un adulto debe revisar la nueva versión.";
+
+"Guided lessons" = "Lecciones guiadas";
+
+"The guided lessons could not be opened. Your trainings are unchanged." = "No se pudieron abrir las lecciones guiadas. Tus entrenamientos no han cambiado.";
+
+"%@ · %lld min" = "%@ · %lld min";
+
+"Begin reading" = "Comenzar lectura";
+
+"Topic and objectives" = "Tema y objetivos";
+
+"Part A · Bilingual story" = "Parte A · Historia bilingüe";
+
+"Part B · Grammar and expressions" = "Parte B · Gramática y expresiones";
+
+"Part C · Reading practice" = "Parte C · Práctica de lectura";
+
+"Grammar" = "Gramática";
+
+"Essential expressions" = "Expresiones esenciales";
+
+"Lesson card" = "Ficha de la lección";
+
+"%lld paragraphs" = "%lld párrafos";
+
+"%lld essential expressions" = "%lld expresiones esenciales";
+
+"%lld minutes" = "%lld minutos";
