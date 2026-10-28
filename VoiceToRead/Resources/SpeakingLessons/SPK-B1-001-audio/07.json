@@ -1,0 +1,96 @@
+{
+  "text": "I used to translate almost every sentence in my head, and that made conversations slower.",
+  "duration": 7.820000171661377,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 1.2599999904632568,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 1.559999942779541,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 10,
+      "length": 9,
+      "start": 2.380000114440918,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 2.380000114440918,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 27,
+      "length": 5,
+      "start": 3.0399999618530273,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 3.5999999046325684,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 3.940000057220459,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 4.159999847412109,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.400000095367432,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 5.360000133514404,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 5.460000038146973,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 5.71999979019165,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 68,
+      "length": 13,
+      "start": 5.960000038146973,
+      "end": 6.800000190734863
+    },
+    {
+      "location": 82,
+      "length": 6,
+      "start": 6.800000190734863,
+      "end": 7.28000020980835
+    }
+  ]
+}

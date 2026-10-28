@@ -1,0 +1,96 @@
+{
+  "text": "Although I understand a lot when I read, speaking is still difficult for me sometimes.",
+  "duration": 6.449999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 0.5400000214576721,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 11,
+      "length": 10,
+      "start": 1.0199999809265137,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 1.5399999618530273,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.8200000524520874,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 33,
+      "length": 1,
+      "start": 2.180000066757202,
+      "end": 2.5799999237060547
+    },
+    {
+      "location": 35,
+      "length": 4,
+      "start": 2.5799999237060547,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 41,
+      "length": 8,
+      "start": 3.5,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 50,
+      "length": 2,
+      "start": 3.5999999046325684,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.019999980926514,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 59,
+      "length": 9,
+      "start": 4.420000076293945,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 69,
+      "length": 3,
+      "start": 4.800000190734863,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 73,
+      "length": 2,
+      "start": 5.079999923706055,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 76,
+      "length": 9,
+      "start": 5.300000190734863,
+      "end": 5.78000020980835
+    }
+  ]
+}

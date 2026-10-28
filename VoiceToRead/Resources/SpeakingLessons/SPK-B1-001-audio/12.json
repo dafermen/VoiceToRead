@@ -1,0 +1,90 @@
+{
+  "text": "However, I understand that making mistakes is a normal part of learning a language.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 0.8999999761581421,
+      "end": 1.5
+    },
+    {
+      "location": 11,
+      "length": 10,
+      "start": 1.5,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 2.0399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 2.9800000190734863,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.5799999237060547,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 46,
+      "length": 1,
+      "start": 4.199999809265137,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 48,
+      "length": 6,
+      "start": 4.480000019073486,
+      "end": 4.820000171661377
+    },
+    {
+      "location": 55,
+      "length": 4,
+      "start": 4.820000171661377,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 5.320000171661377,
+      "end": 5.800000190734863
+    },
+    {
+      "location": 63,
+      "length": 8,
+      "start": 5.800000190734863,
+      "end": 6.0
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 6.0,
+      "end": 6.619999885559082
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 6.619999885559082,
+      "end": 6.619999885559082
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "text": "Right now, I'm planning to practice speaking for at least fifteen minutes every day.",
+  "duration": 5.639999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.3799999952316284,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 11,
+      "length": 3,
+      "start": 0.9800000190734863,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 8,
+      "start": 1.2400000095367432,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.5199999809265137,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 27,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 36,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 45,
+      "length": 3,
+      "start": 2.680000066757202,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 49,
+      "length": 2,
+      "start": 3.059999942779541,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 3.2200000286102295,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 3.4600000381469727,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 3.940000057220459,
+      "end": 4.380000114440918
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 4.380000114440918,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 80,
+      "length": 3,
+      "start": 5.039999961853027,
+      "end": 5.28000020980835
+    }
+  ]
+}

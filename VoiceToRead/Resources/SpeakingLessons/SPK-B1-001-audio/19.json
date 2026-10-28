@@ -1,0 +1,96 @@
+{
+  "text": "Looking back, I've realized that progress doesn't happen overnight; it comes from small, regular efforts.",
+  "duration": 8.640000343322754,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.46000000834465027,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.340000033378601,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 19,
+      "length": 8,
+      "start": 1.6399999856948853,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.140000104904175,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 2.859999895095825,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 3.380000114440918,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 50,
+      "length": 6,
+      "start": 3.859999895095825,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 57,
+      "length": 9,
+      "start": 4.300000190734863,
+      "end": 4.800000190734863
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 5.679999828338623,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.71999979019165,
+      "end": 6.0
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 6.0,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 6.320000171661377,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 89,
+      "length": 7,
+      "start": 7.420000076293945,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 97,
+      "length": 7,
+      "start": 7.699999809265137,
+      "end": 8.079999923706055
+    }
+  ]
+}

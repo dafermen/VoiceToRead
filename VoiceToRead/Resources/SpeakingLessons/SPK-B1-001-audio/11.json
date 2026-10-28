@@ -1,0 +1,78 @@
+{
+  "text": "Of course, I still make mistakes, especially with verb tenses and pronunciation.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.3199999928474426,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.1399999856948853,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 13,
+      "length": 5,
+      "start": 1.5399999618530273,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.899999976158142,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 24,
+      "length": 8,
+      "start": 2.200000047683716,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 34,
+      "length": 10,
+      "start": 3.3399999141693115,
+      "end": 4.0
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 4.460000038146973,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 55,
+      "length": 6,
+      "start": 4.699999809265137,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 5.119999885559082,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 66,
+      "length": 13,
+      "start": 5.880000114440918,
+      "end": 6.340000152587891
+    }
+  ]
+}

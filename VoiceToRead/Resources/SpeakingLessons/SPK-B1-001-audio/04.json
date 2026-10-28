@@ -1,0 +1,102 @@
+{
+  "text": "The biggest challenge is finding the right words when I want to express an idea quickly.",
+  "duration": 7.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.2800000011920929
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.2800000011920929,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 12,
+      "length": 9,
+      "start": 1.0199999809265137,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.840000033378601,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 25,
+      "length": 7,
+      "start": 2.5199999809265137,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.9200000762939453,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 3.2200000286102295,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.640000104904175,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 4.079999923706055,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 54,
+      "length": 1,
+      "start": 4.599999904632568,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.860000133514404,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 5.059999942779541,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 5.739999771118164,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 72,
+      "length": 2,
+      "start": 5.739999771118164,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 6.420000076293945,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 6.420000076293945,
+      "end": 7.0
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "text": "I'm also going to listen to short conversations and repeat useful phrases out loud.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.3199999928474426,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.8199999928474426,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.0800000429153442,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.4600000381469727,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.5800000429153442,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 1.9600000381469727,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 34,
+      "length": 13,
+      "start": 2.259999990463257,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.0199999809265137,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 52,
+      "length": 6,
+      "start": 3.9600000381469727,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 59,
+      "length": 6,
+      "start": 4.440000057220459,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 66,
+      "length": 7,
+      "start": 5.199999809265137,
+      "end": 5.679999828338623
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.679999828338623,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 6.260000228881836,
+      "end": 6.360000133514404
+    }
+  ]
+}

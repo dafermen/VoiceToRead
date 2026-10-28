@@ -1,4 +1,5 @@
 import XCTest
+import AVFoundation
 @testable import VoiceToRead
 
 final class SpeakingLessonTests: XCTestCase {
@@ -25,6 +26,39 @@ final class SpeakingLessonTests: XCTestCase {
         XCTAssertNil(lesson.image.assetUrl)
         XCTAssertNotNil(Bundle.main.url(forResource: lesson.id + "-cover", withExtension: "png", subdirectory: "SpeakingLessons"))
     }
+    func testOfflineAudioAndWordRangesMatchEveryParagraph() throws {
+        let (lesson, _) = try fixture()
+        for paragraph in lesson.paragraphs {
+            let name = String(format: "%02d", paragraph.number)
+            let directory = "SpeakingLessons/\(lesson.id)-audio"
+            let audioURL = try XCTUnwrap(Bundle.main.url(forResource: name, withExtension: "mp3", subdirectory: directory))
+            XCTAssertGreaterThan(try Data(contentsOf: audioURL).count, 1_000)
+            let timingURL = try XCTUnwrap(Bundle.main.url(forResource: name, withExtension: "json", subdirectory: directory))
+            let timing = try JSONDecoder().decode(GuidedWordTiming.self, from: Data(contentsOf: timingURL))
+            XCTAssertNoThrow(try timing.validate(expected: paragraph.en))
+            let decodedAudio = try AVAudioPlayer(contentsOf: audioURL)
+            XCTAssertGreaterThan(decodedAudio.duration, 0)
+            XCTAssertLessThanOrEqual(timing.words.map(\.end).max() ?? 0, decodedAudio.duration + 0.25)
+            let word = try XCTUnwrap(timing.words.first { $0.end > $0.start })
+            XCTAssertNotNil(timing.range(at: (word.start + word.end) / 2))
+            XCTAssertNil(timing.range(at: -1))
+            XCTAssertThrowsError(try timing.validate(expected: "Changed paragraph"))
+        }
+    }
+    func testSupportPacksContainEveryTranslatedParagraphAndExplanation() throws {
+        let (lesson, _) = try fixture()
+        for language in [CaptureLanguage.french, .korean, .japanese, .chinese] {
+            let pack = try XCTUnwrap(GuidedLessonSupport.load(lesson: lesson, language: language))
+            XCTAssertEqual(pack.locale, language.code)
+            for i in 0..<20 { XCTAssertFalse(pack.text("paragraphs.\(i).es", fallback: "").isEmpty) }
+            for i in 0..<8 {
+                XCTAssertFalse(pack.text("grammar.\(i).explanation_es", fallback: "").isEmpty)
+                XCTAssertFalse(pack.text("essential_expressions.\(i).meaning_es", fallback: "").isEmpty)
+            }
+            for i in 0..<3 { XCTAssertFalse(pack.text("reading_practice.rounds.\(i).instructions_es", fallback: "").isEmpty) }
+        }
+    }
+
     func testInvalidLessonsAreRejectedBeforeRendering() throws {
         let (_, original) = try fixture()
         func rejected(_ mutate: (inout [String: Any]) -> Void) throws {

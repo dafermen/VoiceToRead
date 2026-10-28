@@ -1,0 +1,90 @@
+{
+  "text": "I've noticed that this small change helps me feel more comfortable when I speak.",
+  "duration": 5.230000019073486,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 7,
+      "start": 0.5,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 0.7599999904632568,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.1200000047683716,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 1.3799999952316284,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 29,
+      "length": 6,
+      "start": 1.7799999713897705,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 2.259999990463257,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 2.619999885559082,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 2.940000057220459,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 50,
+      "length": 4,
+      "start": 3.0799999237060547,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 55,
+      "length": 11,
+      "start": 3.440000057220459,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 3.859999895095825,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 72,
+      "length": 1,
+      "start": 4.179999828338623,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 74,
+      "length": 5,
+      "start": 4.480000019073486,
+      "end": 4.71999979019165
+    }
+  ]
+}

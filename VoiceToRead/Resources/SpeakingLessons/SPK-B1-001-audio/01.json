@@ -1,0 +1,138 @@
+{
+  "text": "These days, I'm working on improving my English because I know it can open new doors in my personal and professional life.",
+  "duration": 7.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.6399999856948853,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 1.100000023841858,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 27,
+      "length": 9,
+      "start": 2.180000066757202,
+      "end": 2.4800000190734863
+    },
+    {
+      "location": 37,
+      "length": 2,
+      "start": 2.4800000190734863,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 40,
+      "length": 7,
+      "start": 2.799999952316284,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 48,
+      "length": 7,
+      "start": 3.1600000858306885,
+      "end": 3.5
+    },
+    {
+      "location": 56,
+      "length": 1,
+      "start": 3.5,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 58,
+      "length": 4,
+      "start": 3.759999990463257,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 3.9200000762939453,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 4.059999942779541,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.300000190734863,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 4.460000038146973,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 79,
+      "length": 5,
+      "start": 4.840000152587891,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 85,
+      "length": 2,
+      "start": 5.079999923706055,
+      "end": 5.300000190734863
+    },
+    {
+      "location": 88,
+      "length": 2,
+      "start": 5.300000190734863,
+      "end": 5.5
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 5.5,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 100,
+      "length": 3,
+      "start": 5.940000057220459,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 104,
+      "length": 12,
+      "start": 6.28000020980835,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 117,
+      "length": 4,
+      "start": 6.659999847412109,
+      "end": 7.119999885559082
+    }
+  ]
+}

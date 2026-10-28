@@ -209,6 +209,11 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.staticTexts["lessonSpanish-1"].exists)
         XCTAssertTrue(app.buttons["lessonPlay-1"].exists)
         XCTAssertTrue(app.staticTexts["lessonEnglish-1"].label.contains("These days, I'm working"))
+        app.buttons["lessonPlay-1"].tap()
+        XCTAssertTrue(app.buttons["guidedStopPlayback"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.buttons["lessonPlay-1"].label, "Stop")
+        app.buttons["guidedStopPlayback"].tap()
+        XCTAssertEqual(app.buttons["lessonPlay-1"].label, "Play")
         for _ in 0..<24 where !app.staticTexts["lessonEnglish-20"].isHittable { app.swipeUp() }
         XCTAssertTrue(app.staticTexts["lessonEnglish-20"].exists)
         for _ in 0..<8 where !app.buttons["Lesson card"].isHittable { app.swipeUp() }
