@@ -95,6 +95,249 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
         try edited(title: sampleTitle, text: samplePracticeText)
     }
 
+    // Everyday source texts; translations continue to use the existing review flow.
+    static let additionalPracticeExamples: [(title: String, text: String)] = [
+        ("Mi rutina diaria", """
+        Me levanto a las siete.
+        Primero preparo el desayuno.
+        Después me visto para salir.
+        Normalmente voy al trabajo en autobús.
+        Al mediodía hago una pausa.
+        Como con mis compañeros.
+        Por la tarde regreso a casa.
+        A veces salgo a caminar.
+        Por la noche leo un poco.
+        Intento acostarme temprano.
+        """),
+        ("En una cafetería", """
+        Buenos días, quisiera un café.
+        ¿Tienen leche sin lactosa?
+        Prefiero una taza pequeña.
+        También quiero un sándwich.
+        ¿Qué ingredientes lleva?
+        Para llevar, por favor.
+        ¿Cuánto cuesta en total?
+        ¿Puedo pagar con tarjeta?
+        ¿Dónde puedo recoger mi pedido?
+        Muchas gracias, que tenga buen día.
+        """),
+        ("Comprar alimentos", """
+        Necesito comprar fruta y verduras.
+        ¿Dónde están los tomates?
+        Quisiera medio kilo de manzanas.
+        ¿Estas naranjas son dulces?
+        Busco pan sin semillas.
+        ¿Cuánto cuesta esta botella de agua?
+        No necesito una bolsa.
+        ¿Dónde está la caja?
+        Creo que falta un producto.
+        Gracias por ayudarme.
+        """),
+        ("Pedir indicaciones", """
+        Disculpe, estoy buscando la estación.
+        ¿Está cerca de aquí?
+        ¿Puedo llegar caminando?
+        ¿Tengo que cruzar esta calle?
+        ¿Debo girar a la derecha?
+        ¿Cuánto tiempo se tarda?
+        ¿Hay algún punto de referencia?
+        Creo que me equivoqué de camino.
+        ¿Podría mostrarme en el mapa?
+        Gracias, ahora entiendo cómo llegar.
+        """),
+        ("Usar el transporte público", """
+        Quiero ir al centro.
+        ¿Este autobús pasa por el hospital?
+        ¿Dónde compro un billete?
+        ¿Cuánto cuesta el viaje?
+        ¿Puedo pagar con tarjeta?
+        ¿Tengo que cambiar de autobús?
+        Avíseme cuando lleguemos, por favor.
+        Creo que esta es mi parada.
+        ¿A qué hora sale el último tren?
+        Muchas gracias por la información.
+        """),
+        ("Llegar a un hotel", """
+        Buenas tardes, tengo una reserva.
+        La reserva está a mi nombre.
+        Me quedaré tres noches.
+        ¿Necesita mi documento de identidad?
+        ¿A qué hora sirven el desayuno?
+        ¿Dónde está el ascensor?
+        ¿La habitación tiene conexión a internet?
+        ¿Podría darme otra toalla?
+        ¿A qué hora debo dejar la habitación?
+        Gracias, la habitación está muy bien.
+        """),
+        ("Pedir comida", """
+        Quisiera ver el menú, por favor.
+        ¿Qué plato recomienda?
+        Soy alérgico a los frutos secos.
+        ¿Este plato lleva leche?
+        Prefiero algo sin picante.
+        Para beber quiero agua.
+        ¿Podemos pedir una porción para compartir?
+        La comida está muy rica.
+        ¿Podría traer la cuenta?
+        Gracias por atendernos.
+        """),
+        ("Comprar ropa", """
+        Estoy buscando una chaqueta.
+        ¿Tiene este modelo en otro color?
+        Necesito una talla más grande.
+        ¿Puedo probármela?
+        ¿Dónde están los probadores?
+        Me gusta, pero me queda larga.
+        ¿Cuánto cuesta esta camisa?
+        ¿Puedo cambiarla si no me queda bien?
+        Quisiera llevar esta.
+        ¿Puede darme el recibo, por favor?
+        """),
+        ("Organizar una cita", """
+        ¿Tienes tiempo para reunirnos?
+        Podemos vernos esta semana.
+        El martes por la mañana no puedo.
+        ¿Te viene bien el jueves?
+        Prefiero reunirnos por la tarde.
+        ¿A qué hora nos encontramos?
+        Podemos ir a la cafetería de la esquina.
+        Voy a llegar diez minutos tarde.
+        Perdona por el cambio de planes.
+        Gracias, nos vemos el jueves.
+        """),
+        ("Hablar con un compañero", """
+        Hola, ¿cómo va tu día?
+        ¿En qué estás trabajando?
+        Necesito ayuda con este documento.
+        ¿Puedes explicarme el primer paso?
+        Creo que entendí la idea.
+        Voy a revisar los detalles.
+        ¿Cuándo tenemos que terminar?
+        Podemos dividir el trabajo.
+        Te enviaré mi parte esta tarde.
+        Gracias por trabajar conmigo.
+        """),
+        ("Una entrevista de trabajo", """
+        Gracias por recibirme.
+        Me gustaría contarle sobre mi experiencia.
+        He trabajado con equipos pequeños.
+        Me gusta aprender cosas nuevas.
+        Una de mis fortalezas es la organización.
+        Cuando tengo dudas, hago preguntas.
+        Estoy mejorando mi inglés.
+        Me interesa este puesto por sus responsabilidades.
+        ¿Cómo sería un día normal en este trabajo?
+        Gracias por considerar mi solicitud.
+        """),
+        ("Describir mi casa", """
+        Vivo en un apartamento pequeño.
+        Mi casa tiene dos habitaciones.
+        La cocina está junto a la sala.
+        Hay una mesa cerca de la ventana.
+        Me gusta la luz de la mañana.
+        Mi lugar favorito es el balcón.
+        Los fines de semana limpio la casa.
+        A veces invito a mis amigos.
+        El barrio es tranquilo.
+        Me siento a gusto en casa.
+        """),
+        ("Hablar de mi familia", """
+        Mi familia vive en otra ciudad.
+        Tengo una hermana y un hermano.
+        Mi hermana trabaja en una escuela.
+        Mi hermano está estudiando.
+        Hablamos por teléfono cada semana.
+        A mi madre le gusta cocinar.
+        A mi padre le gusta caminar.
+        Cuando nos reunimos, comemos juntos.
+        Tenemos muchas historias divertidas.
+        Me gustaría visitarlos pronto.
+        """),
+        ("Mis pasatiempos", """
+        En mi tiempo libre me gusta leer.
+        También disfruto escuchar música.
+        Los sábados salgo a caminar.
+        A veces cocino una receta nueva.
+        Me gustaría aprender a tocar la guitarra.
+        Prefiero las actividades tranquilas.
+        Mi amigo disfruta jugar al fútbol.
+        A veces hacemos planes juntos.
+        No necesito gastar mucho para divertirme.
+        ¿Qué te gusta hacer a ti?
+        """),
+        ("Planes para un viaje", """
+        Me gustaría viajar el próximo mes.
+        Quiero visitar una ciudad nueva.
+        Primero necesito elegir las fechas.
+        Voy a comparar los precios.
+        Prefiero un vuelo por la mañana.
+        Todavía no he reservado el hotel.
+        Quiero conocer los lugares más importantes.
+        También necesito tiempo para descansar.
+        Voy a llevar una maleta pequeña.
+        Espero disfrutar mucho del viaje.
+        """),
+        ("Pedir ayuda con el teléfono", """
+        Mi teléfono no se conecta a internet.
+        ¿Puedes ayudarme un momento?
+        No encuentro esta opción.
+        ¿Dónde tengo que presionar?
+        Creo que olvidé mi contraseña.
+        Voy a intentarlo otra vez.
+        Ahora veo el mensaje.
+        ¿Puedes explicarlo más despacio?
+        Ya funciona correctamente.
+        Gracias por tu paciencia.
+        """),
+        ("Expresar gustos y opiniones", """
+        Me gusta aprender con ejemplos.
+        Prefiero escuchar antes de responder.
+        Creo que esta idea puede funcionar.
+        Estoy de acuerdo con la primera parte.
+        Tengo una opinión diferente.
+        ¿Puedes contarme por qué piensas eso?
+        No estoy seguro de haber entendido.
+        Para mí, lo más importante es practicar.
+        Podemos buscar otra solución.
+        Gracias por compartir tu punto de vista.
+        """),
+        ("Contar lo que hice ayer", """
+        Ayer me levanté un poco tarde.
+        Desayuné antes de salir.
+        Por la mañana fui al supermercado.
+        Después hablé con un amigo.
+        Preparamos algo sencillo para comer.
+        Por la tarde empezó a llover.
+        Decidí quedarme en casa.
+        Vi una película en inglés.
+        Aprendí algunas palabras nuevas.
+        Fue un día tranquilo.
+        """),
+        ("Mis metas de aprendizaje", """
+        Quiero comunicarme con más confianza.
+        Mi meta es practicar un poco cada día.
+        Voy a empezar con frases cortas.
+        Necesito escuchar diferentes ejemplos.
+        A veces me cuesta recordar las palabras.
+        No pasa nada si cometo errores.
+        Puedo repetir una frase varias veces.
+        Voy a revisar lo que aprendí.
+        Me gustaría mantener una conversación sencilla.
+        Cada pequeño paso me ayuda a mejorar.
+        """),
+    ]
+    static func samplePractices() throws -> [Self] {
+        let entries = [(title: sampleTitle, text: samplePracticeText)] + additionalPracticeExamples
+        let date = Date()
+        return try entries.enumerated().map { index, entry in
+            var practice = try edited(title: entry.title, text: entry.text)
+            let suffix = String(index + 1)
+            practice.id = UUID(uuidString: "72E00000-0000-4000-8000-" + String(repeating: "0", count: 12 - suffix.count) + suffix)!
+            practice.updatedAt = date.addingTimeInterval(-Double(index))
+            return practice
+        }
+    }
+
     // Legacy text remains for existing stories and safe identification of an untouched starter.
 
     static let firstText = """
@@ -157,30 +400,30 @@ final class EnglishTrainingStore {
                     throw EnglishTrainingFailure.unsupportedFile
                 }
                 trainings = archive.trainings
-                if archive.sampleRevision == nil, let index = trainings.firstIndex(where: { $0.title == "Los tres cerditos" }) {
-                    let old = trainings[index]
-                    let legacyLines = EnglishTraining.firstText.components(separatedBy: .newlines)
-                        .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
-                    let untouched = old.sourceLanguage == .spanish && old.targetLanguage == .english &&
-                        old.phrases.map(\.spanish) == legacyLines &&
-                        old.phrases.allSatisfy { $0.english.isEmpty && !$0.reviewed && $0.needsPractice }
-                    if untouched {
-                        var sample = try EnglishTraining.samplePractice(); sample.id = old.id
-                        trainings[index] = sample
-                    } else if !trainings.contains(where: { $0.title == EnglishTraining.sampleTitle }) {
-                        trainings.append(try EnglishTraining.samplePractice())
+                if (archive.sampleRevision ?? 0) < 2 {
+                    // Preserve the complete previous archive before removing the retired story example.
+                    let backup = folder.appendingPathComponent("trainings-before-samples-v2.json")
+                    if !FileManager.default.fileExists(atPath: backup.path) {
+                        try Data(contentsOf: file).write(to: backup, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
+                    }
+                    let retired = trainings.filter { $0.title.trimmingCharacters(in: .whitespacesAndNewlines).localizedCaseInsensitiveCompare("Los tres cerditos") == .orderedSame }
+                    trainings.removeAll { practice in retired.contains { $0.id == practice.id } }
+                    for var sample in try EnglishTraining.samplePractices() {
+                        if trainings.contains(where: { $0.id == sample.id || $0.title == sample.title }) { continue }
+                        if sample.title == EnglishTraining.sampleTitle, let old = retired.first { sample.id = old.id }
+                        trainings.append(sample)
                     }
                     try persist(trainings)
                 }
             } catch { throw EnglishTrainingFailure.unsupportedFile }
         } else {
-            trainings = [try EnglishTraining.samplePractice()]
+            trainings = try EnglishTraining.samplePractices()
             try persist(trainings)
         }
     }
     func training(_ id: UUID) -> EnglishTraining? { trainings.first { $0.id == id } }
     private func persist(_ values: [EnglishTraining]) throws {
-        let data = try JSONEncoder().encode(Archive(trainings: values, sampleRevision: 1))
+        let data = try JSONEncoder().encode(Archive(trainings: values, sampleRevision: 2))
         try data.write(to: file, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
     }
     func save(_ training: EnglishTraining) throws {

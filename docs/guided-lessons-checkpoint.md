@@ -264,3 +264,30 @@ behavior changes are included. Earlier lesson IDs and assets remain unchanged.
 The local development .env remains ignored and is excluded from bundled resources
 and Git. API generation uses the developer key only during resource preparation;
 no developer key is shipped in the app.
+
+
+## Twenty everyday examples in My practices
+
+My practices now seeds twenty distinct Spanish-to-English source examples: the
+existing twenty-phrase introduction and nineteen ten-phrase everyday situations,
+210 source phrases in total. Translation and review continue through the existing
+flow; no pretranslated answers, paid generation, microphone or audio behavior is
+added. Stable sample IDs and archive sampleRevision 2 make insertion one-time.
+Existing practices with matching sample titles or IDs are preserved, including
+their language pair, phrase IDs, corrections and review state. Additional user
+practices remain alongside the sample library.
+
+The retired Los tres cerditos practice is removed from the active practice list
+during this migration, as requested. The complete previous archive is retained as
+trainings-before-samples-v2.json with protected atomic storage, so any corrections
+to that example remain recoverable. Its ID is reused for the introductory example
+when no introduction already exists. The story module and its source text are
+unchanged. Unreadable archives still fail without being replaced.
+
+Migration tests cover fresh seeding, reopening, legacy language defaults, backup
+contents, preservation of a custom practice sharing a sample title, uniqueness and
+avoiding reinsertion after sample removal. Content lengths/counts, unchanged story
+source, localization and diff whitespace were checked on Windows; native XCTest
+execution and compilation remain with Xcode. Listening save/discard controls,
+guided playback controls and guided practice modes are unchanged in this commit;
+their UI alternatives were discussed separately.

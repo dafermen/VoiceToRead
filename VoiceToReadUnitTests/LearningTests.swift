@@ -215,10 +215,14 @@ import AVFoundation
 
 
 extension LearningTests {
-    func testIndependentTrainingSeedsTwentyPhrasesOnlyOnce() throws {
+    func testIndependentTrainingSeedsTwentyEverydayPracticesOnlyOnce() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = try EnglishTrainingStore(directory: directory)
+        XCTAssertEqual(store.trainings.count, 20)
+        XCTAssertEqual(Set(store.trainings.map(\.id)).count, 20)
+        XCTAssertEqual(Set(store.trainings.map(\.title)).count, 20)
+        XCTAssertTrue(store.trainings.allSatisfy { $0.valid && !$0.ready && $0.sourceLanguage == .spanish && $0.targetLanguage == .english })
         let first = try XCTUnwrap(store.trainings.first)
         XCTAssertEqual(first.title, "Presentarme y conversar")
         XCTAssertEqual(first.phrases.count, 20)
@@ -231,7 +235,7 @@ extension LearningTests {
         try store.save(second)
         let reopened = try EnglishTrainingStore(directory: directory)
         XCTAssertEqual(reopened.trainings, store.trainings)
-        XCTAssertEqual(reopened.trainings.count, 2)
+        XCTAssertEqual(reopened.trainings.count, 21)
         XCTAssertEqual(try Data(contentsOf: sibling), Data("preserve".utf8))
     }
 
@@ -386,7 +390,7 @@ extension LearningTests {
 
 
 extension LearningTests {
-    func testLegacyTrainingArchiveDefaultsLanguagesWithoutRewritingOrLosingCorrections() throws {
+    func testLegacyTrainingArchiveDefaultsLanguagesAndBacksUpBeforeAddingExamples() throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         defer { try? FileManager.default.removeItem(at: directory) }
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
@@ -402,11 +406,12 @@ extension LearningTests {
         let saved = try XCTUnwrap(store.training(original.id))
         XCTAssertEqual(saved, original)
         XCTAssertEqual(saved.sourceLanguage, .spanish); XCTAssertEqual(saved.targetLanguage, .english)
-        XCTAssertEqual(try Data(contentsOf: file), bytes, "Opening legacy data must not rewrite it")
+        XCTAssertEqual(try Data(contentsOf: directory.appendingPathComponent("trainings-before-samples-v2.json")), bytes)
+        XCTAssertEqual(store.trainings.count, 21)
         try store.save(EnglishTraining.edited(title: "French", text: "Hello", sourceLanguage: .english, targetLanguage: .french))
         let reopened = try EnglishTrainingStore(directory: directory)
         XCTAssertEqual(reopened.training(original.id), original)
-        XCTAssertEqual(reopened.trainings.count, 2)
+        XCTAssertEqual(reopened.trainings.count, 22)
         let archive = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: file)) as? [String: Any])
         XCTAssertEqual(archive["version"] as? Int, 2)
     }
@@ -498,7 +503,7 @@ extension LearningTests {
 
 
 extension LearningTests {
-    func testLegacyPracticeExampleMigrationPreservesEditedTranslations() throws {
+    func testRetiredStoryPracticeIsRemovedFromListAndPreservedInBackup() throws {
         struct LegacyArchive: Codable { var version = 2; var trainings: [EnglishTraining] }
         for edited in [false, true] {
             let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
@@ -514,14 +519,36 @@ extension LearningTests {
             try JSONEncoder().encode(LegacyArchive(trainings: [old])).write(to: file)
             let store = try EnglishTrainingStore(directory: directory)
             XCTAssertTrue(store.trainings.contains { $0.title == EnglishTraining.sampleTitle })
-            if edited {
-                XCTAssertEqual(store.training(old.id), old)
-                XCTAssertEqual(store.trainings.count, 2)
-            } else {
-                XCTAssertEqual(store.trainings.count, 1)
-                XCTAssertEqual(store.training(old.id)?.title, EnglishTraining.sampleTitle)
-            }
+            XCTAssertEqual(store.trainings.count, 20)
+            XCTAssertFalse(store.trainings.contains { $0.title == "Los tres cerditos" })
+            XCTAssertEqual(store.training(old.id)?.title, EnglishTraining.sampleTitle)
+            let backup = try JSONDecoder().decode(LegacyArchive.self, from: Data(contentsOf: directory.appendingPathComponent("trainings-before-samples-v2.json")))
+            XCTAssertEqual(backup.trainings, [old], "Retired example corrections remain recoverable")
             XCTAssertEqual(try EnglishTrainingStore(directory: directory).trainings, store.trainings)
         }
+    }
+}
+
+extension LearningTests {
+    func testSampleExpansionKeepsExistingPracticeAndDoesNotReinsertRemovedSample() throws {
+        struct OldArchive: Codable { var version = 2; var trainings: [EnglishTraining]; var sampleRevision = 1 }
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        var custom = try EnglishTraining.edited(title: EnglishTraining.sampleTitle, text: "Mi frase personalizada")
+        custom.phrases[0].english = "My custom phrase"; custom.phrases[0].reviewed = true
+        let file = directory.appendingPathComponent("trainings.json")
+        try JSONEncoder().encode(OldArchive(trainings: [custom])).write(to: file)
+        let store = try EnglishTrainingStore(directory: directory)
+        XCTAssertEqual(store.trainings.count, 20)
+        XCTAssertEqual(store.training(custom.id), custom)
+        XCTAssertEqual(store.trainings.filter { $0.title == custom.title }.count, 1)
+        var archive = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: file)) as? [String: Any])
+        var practices = try XCTUnwrap(archive["trainings"] as? [[String: Any]])
+        practices.removeLast(); archive["trainings"] = practices
+        try JSONSerialization.data(withJSONObject: archive).write(to: file)
+        let reopened = try EnglishTrainingStore(directory: directory)
+        XCTAssertEqual(reopened.trainings.count, 19, "Completed sample migration is not repeated")
+        XCTAssertEqual(reopened.training(custom.id), custom)
     }
 }
