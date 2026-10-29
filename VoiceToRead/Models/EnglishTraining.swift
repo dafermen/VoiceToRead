@@ -17,13 +17,15 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
     var updatedAt = Date()
     var sourceLanguage: CaptureLanguage = .spanish
     var targetLanguage: CaptureLanguage = .english
+    var showPracticeResponse = false
+    var slowPracticeExample = true
 
     init(id: UUID = UUID(), title: String, phrases: [EnglishTrainingPhrase], updatedAt: Date = Date(),
          sourceLanguage: CaptureLanguage = .spanish, targetLanguage: CaptureLanguage = .english) {
         self.id = id; self.title = title; self.phrases = phrases; self.updatedAt = updatedAt
         self.sourceLanguage = sourceLanguage; self.targetLanguage = targetLanguage
     }
-    private enum CodingKeys: String, CodingKey { case id, title, phrases, updatedAt, sourceLanguage, targetLanguage }
+    private enum CodingKeys: String, CodingKey { case id, title, phrases, updatedAt, sourceLanguage, targetLanguage, showPracticeResponse, slowPracticeExample }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(UUID.self, forKey: .id)
@@ -33,6 +35,8 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
         // Existing installations have no language keys. Keep their phrases and corrections.
         sourceLanguage = try values.decodeIfPresent(CaptureLanguage.self, forKey: .sourceLanguage) ?? .spanish
         targetLanguage = try values.decodeIfPresent(CaptureLanguage.self, forKey: .targetLanguage) ?? .english
+        showPracticeResponse = try values.decodeIfPresent(Bool.self, forKey: .showPracticeResponse) ?? false
+        slowPracticeExample = try values.decodeIfPresent(Bool.self, forKey: .slowPracticeExample) ?? true
     }
     var ready: Bool { !phrases.isEmpty && phrases.allSatisfy { !$0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty } }
     var source: [ReviewParagraph] { phrases.map { ReviewParagraph(id: $0.id, text: $0.spanish) } }
@@ -432,6 +436,13 @@ final class EnglishTrainingStore {
         if let index = values.firstIndex(where: { $0.id == training.id }) { values[index] = training }
         else { values.append(training) }
         try persist(values); trainings = values
+    }
+    func setPracticePresentation(_ id: UUID, showResponse: Bool? = nil, slowExample: Bool? = nil) throws {
+        guard var training = training(id) else { throw EnglishTrainingFailure.changed }
+        if let showResponse { training.showPracticeResponse = showResponse }
+        if let slowExample { training.slowPracticeExample = slowExample }
+        // A display preference does not alter phrases, corrections or library ordering.
+        try save(training)
     }
     func saveEnglish(_ id: UUID, source: [ReviewParagraph], values: [UUID: String],
                      language: CaptureLanguage = .spanish, targetLanguage: CaptureLanguage = .english) throws {

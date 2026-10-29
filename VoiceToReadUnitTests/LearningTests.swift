@@ -552,3 +552,41 @@ extension LearningTests {
         XCTAssertEqual(reopened.training(custom.id), custom)
     }
 }
+
+extension LearningTests {
+    func testTrainingPresentationPersistsIndependentlyWithoutChangingPhrases() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        let first = try XCTUnwrap(store.trainings.first)
+        let second = try XCTUnwrap(store.trainings.dropFirst().first)
+        XCTAssertFalse(first.showPracticeResponse)
+        XCTAssertTrue(first.slowPracticeExample)
+        try store.setPracticePresentation(first.id, showResponse: true, slowExample: false)
+        let reopened = try EnglishTrainingStore(directory: directory)
+        let saved = try XCTUnwrap(reopened.training(first.id))
+        XCTAssertTrue(saved.showPracticeResponse)
+        XCTAssertFalse(saved.slowPracticeExample)
+        XCTAssertEqual(saved.phrases, first.phrases)
+        XCTAssertEqual(saved.updatedAt, first.updatedAt)
+        XCTAssertEqual(saved.sourceLanguage, first.sourceLanguage)
+        XCTAssertEqual(saved.targetLanguage, first.targetLanguage)
+        XCTAssertEqual(reopened.training(second.id), second)
+        try reopened.setPracticePresentation(first.id, showResponse: false)
+        let hidden = try XCTUnwrap(try EnglishTrainingStore(directory: directory).training(first.id))
+        XCTAssertFalse(hidden.showPracticeResponse)
+        XCTAssertFalse(hidden.slowPracticeExample, "Changing visibility must retain the selected speed")
+        XCTAssertThrowsError(try reopened.setPracticePresentation(UUID(), showResponse: true))
+    }
+
+    func testOldTrainingDefaultsToHiddenResponseAndSlowExampleWithoutLosingCorrections() throws {
+        var original = try EnglishTraining.edited(title: "Existing", text: "Hola")
+        original.phrases[0].english = "My greeting"; original.phrases[0].reviewed = true
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: JSONEncoder().encode(original)) as? [String: Any])
+        json.removeValue(forKey: "showPracticeResponse"); json.removeValue(forKey: "slowPracticeExample")
+        let decoded = try JSONDecoder().decode(EnglishTraining.self, from: JSONSerialization.data(withJSONObject: json))
+        XCTAssertEqual(decoded, original)
+        XCTAssertFalse(decoded.showPracticeResponse)
+        XCTAssertTrue(decoded.slowPracticeExample)
+    }
+}

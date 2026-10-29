@@ -291,3 +291,35 @@ source, localization and diff whitespace were checked on Windows; native XCTest
 execution and compilation remain with Xcode. Listening save/discard controls,
 guided playback controls and guided practice modes are unchanged in this commit;
 their UI alternatives were discussed separately.
+
+
+## Personal practice response visibility and example startup
+
+Each personal training now stores showPracticeResponse and slowPracticeExample.
+Missing keys decode as false and true respectively, preserving old phrases,
+translations, IDs, language pairs and review state. Visibility survives previous/
+next navigation, repeat rounds and reopening. Listening no longer reveals a hidden
+response automatically. The existing Show/Hide button is retained. The slow
+example switch starts enabled for new and existing unconfigured trainings; an
+explicit later pace selection is retained independently for each training.
+Preference writes do not change updatedAt or library ordering and use the existing
+protected atomic archive storage. Guided lessons and stories do not use these
+personal-training preferences.
+
+Only the personal-training example path waits 350 ms after output-session
+activation before queuing its unchanged speech utterance. Stop, navigation,
+recording and interruption cleanup cancel the pending task and invalidate its
+generation token, preventing delayed speech after cancellation. Native word-range
+callbacks remain the highlight source. Other playback paths retain their startup.
+This addresses a possible route-startup cause of clipped first words; the actual
+reported device symptom still requires physical iPhone confirmation.
+
+Regression coverage checks per-training independence, hidden/slow legacy defaults,
+unchanged phrase data and timestamps, previous selected pace on reopen, and
+response visibility across phrase changes and app relaunch. Localization and diff
+checks passed locally. Native compilation/XCTest cannot run on this Windows host.
+On iPhone, verify first playback and playback immediately after recording, with
+speaker and Bluetooth; use short first words such as I and We. Press Stop, Next,
+Back, or record during the 350 ms lead-in and verify no old example starts later.
+No microphone permissions, recognition rules, translations or session behavior
+are changed by these adjustments.

@@ -319,8 +319,8 @@ private struct TrainingPracticeView: View {
     let trainingID: UUID
     @State private var round: EnglishTrainingRound
     @State private var index = 0
-    @State private var revealed = false
-    @State private var slow = false
+    private var revealed: Bool { store.training(trainingID)?.showPracticeResponse ?? false }
+    private var slow: Bool { store.training(trainingID)?.slowPracticeExample ?? true }
     @State private var practice: PronunciationPractice
     private let targetLanguage: CaptureLanguage
     @State private var localRecognitionAvailable = true
@@ -353,15 +353,16 @@ private struct TrainingPracticeView: View {
                         }
                         Text(phrase.spanish).font(.title2).textSelection(.enabled).accessibilityIdentifier("trainingPrompt")
                         HStack {
-                            Button(uiKey(revealed ? "Hide response" : "Show response"), systemImage: "eye") { revealed.toggle() }
+                            Button(uiKey(revealed ? "Hide response" : "Show response"), systemImage: "eye") { savePresentation(showResponse: !revealed) }
                                 .disabled(busy).accessibilityIdentifier("revealTrainingResponse")
                             Button(uiKey(practice.activity == .example ? "Stop example" : "Listen to example"),
                                    systemImage: practice.activity == .example ? "stop.circle" : "speaker.wave.2") {
                                 if practice.activity == .example { practice.stopPlayback() }
-                                else { revealed = true; practice.listen(phrase.english, slow: slow) }
+                                else { practice.listen(phrase.english, slow: slow) }
                             }.disabled(busy)
                         }.labelStyle(InlinePreferenceLabelStyle()).frame(minHeight: 44)
-                        Toggle("Slow example", isOn: $slow).disabled(busy)
+                        Toggle("Slow example", isOn: Binding(get: { slow }, set: { savePresentation(slowExample: $0) }))
+                            .disabled(busy).accessibilityIdentifier("trainingSlowExample")
                         if revealed {
                             TrainingSpokenText(text: phrase.english, progress: practice.exampleProgress)
                                 .font(.title3).textSelection(.enabled).accessibilityIdentifier("trainingExpected")
@@ -425,7 +426,7 @@ private struct TrainingPracticeView: View {
                 }.padding()
             }
             .onChange(of: practice.activity) { _, activity in
-                if activity == .example { proxy.scrollTo("trainingExpected", anchor: .center) }
+                if activity == .example && revealed { proxy.scrollTo("trainingExpected", anchor: .center) }
             }
         }
         .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
@@ -454,7 +455,11 @@ private struct TrainingPracticeView: View {
         if let heard = practice.heard, let phrase = current {
             round.record(phraseID: phrase.id, expected: phrase.english, heard: heard)
         }
-        practice.reset(); revealed = false; index = max(0, value)
+        practice.reset(); index = max(0, value)
+    }
+    private func savePresentation(showResponse: Bool? = nil, slowExample: Bool? = nil) {
+        do { try store.setPracticePresentation(trainingID, showResponse: showResponse, slowExample: slowExample) }
+        catch { practice.message = error.localizedDescription }
     }
     private func refreshLanguageSupport() {
         voiceAvailable = PlaybackVoicePreference.voice(for: targetLanguage) != nil

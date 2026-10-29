@@ -1720,6 +1720,8 @@ final class HomeScreenTests: XCTestCase {
         start.tap()
         XCTAssertTrue(app.staticTexts["trainingPrompt"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hola, me llamo Alex.")
+        XCTAssertEqual(app.switches["trainingSlowExample"].value as? String, "1")
+        app.switches["trainingSlowExample"].tap()
         XCTAssertFalse(app.staticTexts["trainingExpected"].exists)
         XCTAssertFalse(app.alerts.firstMatch.exists, "Opening training must not request microphone access")
         app.buttons["revealTrainingResponse"].tap()
@@ -1727,10 +1729,18 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.staticTexts["How did this phrase feel?"].exists)
         XCTAssertFalse(app.buttons["Needs practice"].exists)
         XCTAssertFalse(app.buttons["I feel comfortable"].exists)
-        for _ in 0..<20 {
+        for step in 0..<20 {
             let next = app.buttons["trainingNext"]
             if !next.isHittable { app.swipeUp() }
             next.tap()
+            if step == 0 {
+                XCTAssertTrue(app.staticTexts["trainingExpected"].exists, "Visibility remains selected on the next phrase")
+                let reveal = app.buttons["revealTrainingResponse"]
+                if !reveal.isHittable { app.swipeDown() }
+                reveal.tap()
+            } else if step < 19 {
+                XCTAssertFalse(app.staticTexts["trainingExpected"].exists, "Hidden responses stay hidden across phrases")
+            }
         }
         XCTAssertTrue(app.staticTexts["trainingRoundSummary"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.descendants(matching: .any)["trainingUnattemptedCount"].firstMatch.label.contains("20"))
@@ -1745,6 +1755,8 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.buttons["Review phrases to practise"].exists)
         app.buttons["startEnglishTraining"].tap()
         XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hola, me llamo Alex.")
+        XCTAssertFalse(app.staticTexts["trainingExpected"].exists)
+        XCTAssertEqual(app.switches["trainingSlowExample"].value as? String, "0", "Selected pace persists for this training")
     }
 
     @MainActor

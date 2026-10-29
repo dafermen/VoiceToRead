@@ -157,11 +157,18 @@ final class PronunciationPractice {
                 exampleObserver.current = (utterance, generation)
             }
             activity = .example
-            synthesizer.speak(utterance)
             let token = generation
+            if !highlightExampleWords { synthesizer.speak(utterance) }
             ticker = Task { @MainActor [weak self] in
+                if self?.highlightExampleWords == true {
+                    // Training only: allow the newly activated output route to settle.
+                    // Stop, navigation and interruptions invalidate this pending start.
+                    do { try await Task.sleep(for: .milliseconds(350)) } catch { return }
+                    guard let self, self.generation == token, !Task.isCancelled else { return }
+                    self.synthesizer.speak(utterance)
+                }
                 // Give the speech engine time to start before checking completion.
-                try? await Task.sleep(for: .milliseconds(500))
+                do { try await Task.sleep(for: .milliseconds(500)) } catch { return }
                 while let self, self.generation == token, !Task.isCancelled {
                     if !self.synthesizer.isSpeaking { self.stopActivity(); return }
                     do { try await Task.sleep(for: .milliseconds(100)) } catch { return }
