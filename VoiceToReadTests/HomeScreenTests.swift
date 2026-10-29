@@ -2738,3 +2738,63 @@ extension HomeScreenTests {
         XCTAssertEqual(app.staticTexts["listeningStatus"].label, "Ready")
     }
 }
+
+extension HomeScreenTests {
+    @MainActor
+    func testPodcastKaraokeRotationKeepsPlaybackPositionAndReaderPreferences() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        XCUIDevice.shared.orientation = .portrait
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Train"].tap()
+        let podcasts = app.buttons["trainingPodcastsEntry"]
+        if !podcasts.isHittable { app.swipeUp() }
+        podcasts.tap()
+        app.buttons["podcast-POD-B1B2-001"].tap()
+        let expand = app.buttons["podcastFullScreen"]
+        XCTAssertTrue(expand.waitForExistence(timeout: 5))
+        let normal = app.segmentedControls["podcastSpeed"].buttons["Normal · 1×"]
+        normal.tap()
+        app.switches["podcastShowTranscript"].tap()
+        let play = app.buttons["podcastPlayPause"]
+        play.tap()
+        XCTAssertEqual(play.label, "Pause")
+        expand.tap()
+        let text = app.textViews["podcastKaraokeText"]
+        XCTAssertTrue(text.waitForExistence(timeout: 5))
+        XCTAssertEqual(play.label, "Pause", "Entering fullscreen must not pause or replace the player")
+        let hiddenTabs = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == false"), object: app.tabBars.firstMatch)
+        XCTAssertEqual(XCTWaiter.wait(for: [hiddenTabs], timeout: 5), .completed)
+        play.tap()
+        XCTAssertEqual(play.label, "Play")
+        let timeline = app.staticTexts["podcastTimeline"].label
+        let paragraph = text.value as? String
+        XCTAssertFalse(paragraph?.isEmpty ?? true, "Fullscreen shows the active fragment, even if narration has already advanced")
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in text.frame.width > text.frame.height }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
+        XCTAssertEqual(play.label, "Play")
+        XCTAssertEqual(app.staticTexts["podcastTimeline"].label, timeline)
+        XCTAssertEqual(text.value as? String, paragraph)
+        XCTAssertTrue(app.buttons["podcastFullScreenExit"].isHittable)
+        app.buttons["podcastKaraokeOptions"].tap()
+        if app.buttons["podcastLargerText"].isEnabled { app.buttons["podcastLargerText"].tap() }
+        else { app.buttons["podcastSmallerText"].tap() }
+        XCTAssertEqual(app.staticTexts["podcastTimeline"].label, timeline)
+        XCTAssertEqual(text.value as? String, paragraph)
+        app.buttons["podcastFullScreenExit"].tap()
+        XCUIDevice.shared.orientation = .portrait
+        XCTAssertTrue(expand.waitForExistence(timeout: 5))
+        XCTAssertEqual(play.label, "Play")
+        XCTAssertEqual(app.staticTexts["podcastTimeline"].label, timeline)
+        XCTAssertEqual(app.switches["podcastShowTranscript"].value as? String, "0")
+        XCTAssertTrue(normal.isSelected)
+        play.tap()
+        XCTAssertEqual(play.label, "Pause")
+        app.buttons["podcastStop"].tap()
+        XCTAssertEqual(app.staticTexts["podcastCurrentFragment"].label, "Fragment 1 of 30")
+    }
+}

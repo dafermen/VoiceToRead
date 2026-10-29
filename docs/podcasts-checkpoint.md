@@ -69,3 +69,39 @@ Xcode/XCTest and iPhone UI cannot be executed on Windows. Xcode Cloud archive an
 physical-device checks remain required: first/last word highlight, fragment
 transitions, both speeds, manual scrolling/follow off, larger text/VoiceOver,
 headphone disconnect, interruptions, tabs/back navigation and airplane-mode play.
+
+
+## Fullscreen word-following reader
+
+The podcast reader now has an expand icon in its navigation bar. Expanded reading
+hides the app navigation/tab bars and status bar while retaining safe areas and
+a visible collapse button. It shows only the current English fragment in large
+text, with the optional Spanish translation below at a smaller size. Previous,
+Play/Pause, Stop and Next remain in the compact footer, retaining accessible labels
+and the user's button-name preference. Reading options control translation,
+follow mode and text size (28–72 points before Dynamic Type scaling, initially 40).
+Text size is retained specifically for podcast fullscreen reading.
+
+A stable outer ZStack owns the existing PodcastPlayback instance and lifecycle
+modifiers. Expanding, collapsing, rotating and font changes never start, stop,
+seek, replace or regenerate audio. The ordinary transcript visibility, translation,
+pace and follow settings remain selected on return. The normal reader follows the
+current fragment on reappearance when follow mode is on.
+
+The fullscreen UITextView wraps and scrolls long fragments, using the existing
+measured UTF-16 ranges without changing their offsets. Translation is appended
+after the English text and excluded from highlight ranges. Word-following scrolls
+only for actual word-range changes and reflows on bounds-size changes during
+rotation. Manual dragging/deceleration is respected, and follow mode can be
+disabled. Dynamic Type, system colors and selectable native text support the
+existing accessibility behavior. The audio data/service, stories, guided lessons,
+personal practices and capture paths are unchanged.
+
+UI regression coverage enters fullscreen during playback, pauses, rotates to
+landscape, changes text size, returns to portrait/normal mode and verifies the same
+paused time, transcript visibility and speed before resuming. The ordinary podcast
+playback regression remains in place. Localization/diff checks run on Windows;
+native Xcode/XCTest execution and visual iPhone/iPad checks remain pending. On a
+device verify portrait and both landscape directions, VoiceOver/larger text,
+follow on/off, long fragments, optional translation, track changes and exit while
+playing; the current word and all controls must remain usable inside safe areas.

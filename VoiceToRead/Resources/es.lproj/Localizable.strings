@@ -1320,3 +1320,7 @@
 "Play fragment %lld" = "Reproducir fragmento %lld";
 
 "Podcast audio could not start. Please try again." = "No se pudo iniciar el audio del podcast. Inténtalo de nuevo.";
+
+"Larger text" = "Texto más grande";
+
+"Smaller text" = "Texto más pequeño";
