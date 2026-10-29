@@ -454,7 +454,8 @@ struct SessionMediaView: View {
     private var sourceSelectors: some View {
         HStack {
             Menu {
-                PlaybackPreferenceControls()
+                PlaybackPreferenceControls(showOriginal: reading == language.mode || reading == .both,
+                                           showTranslation: currentTranslation && reading != language.mode)
             } label: {
                 Label { Text("Reading speed") }
                     icon: { Image(systemName: "speedometer") }
@@ -917,28 +918,45 @@ struct PlaybackLaunchStyle: ButtonStyle {
     }
 }
 
-/// Shared controls persist locally for both the full player and inline listening.
+/// Contextual submenus retain the same locally persisted playback preferences.
 struct PlaybackPreferenceControls: View {
+    let showOriginal: Bool
+    let showTranslation: Bool
     @AppStorage("originalPlaybackSpeed") private var original = TranslationSpeechSpeed.normal
     @AppStorage("translationSpeechSpeed") private var translation = TranslationSpeechSpeed.normal
     @AppStorage("playbackLanguageGap") private var gap = 0
+
+    init(showOriginal: Bool = true, showTranslation: Bool = true) {
+        self.showOriginal = showOriginal; self.showTranslation = showTranslation
+    }
+
     var body: some View {
-        Section("Original speed") {
-            Picker("Original speed", selection: $original) {
-                ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        if showOriginal {
+            Menu("Original speed") {
+                Picker("Original speed", selection: $original) {
+                    ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+                }
             }
+            .accessibilityValue(Text(LocalizedStringKey(original.rawValue)))
+            .accessibilityIdentifier("playbackOriginalSpeedMenu")
         }
-        Section("Translation speed") {
-            Picker("Translation speed", selection: $translation) {
-                ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+        if showTranslation {
+            Menu("Translation speed") {
+                Picker("Translation speed", selection: $translation) {
+                    ForEach(TranslationSpeechSpeed.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+                }
             }
+            .accessibilityValue(Text(LocalizedStringKey(translation.rawValue)))
+            .accessibilityIdentifier("playbackTranslationSpeedMenu")
         }
-        Section("Pause between languages") {
-            Picker("Pause between languages", selection: $gap) {
-                Text("No pause").tag(0)
-                Text("1 second").tag(1)
-                Text("2 seconds").tag(2)
-            }
+        if showOriginal && showTranslation {
+            Menu("Pause between languages") {
+                Picker("Pause between languages", selection: $gap) {
+                    Text("No pause").tag(0)
+                    Text("1 second").tag(1)
+                    Text("2 seconds").tag(2)
+                }
+            }.accessibilityIdentifier("playbackLanguageGapMenu")
         }
     }
 }

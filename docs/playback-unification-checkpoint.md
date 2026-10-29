@@ -37,3 +37,23 @@ La API real de traducción requiere SDK compatible e iOS/iPadOS 18+. En el simul
 4. VoiceOver, tamaño de letra, alto contraste, papel, orientación y párrafos extensos con personas que usan estas ayudas. Las pruebas automáticas no certifican accesibilidad universal.
 
 La documentación de usuario, guía junior, notas de revisión y ficha EN/ES se actualizaron. Antes de enviar a App Store, regenerar/seleccionar capturas comerciales acordes con la interfaz final y completar la aceptación física. El ZIP de entrega sigue siendo material para revisar, no una publicación.
+
+
+## Menús de velocidad identificados por contexto
+
+Velocidad de lectura ahora abre submenús explícitos: Velocidad del original,
+Velocidad de la traducción y Pausa entre idiomas. Cada uno conserva su Picker y
+sus selecciones existentes. Solo Original muestra el primer submenú; solo
+Traducción muestra el segundo; Ambos muestra los tres, siempre que exista una
+traducción vigente. El mismo selector se reutiliza en Opciones de reproducción.
+La velocidad seleccionada se expone también como valor accesible de cada submenú.
+
+Las claves originalPlaybackSpeed, translationSpeechSpeed y playbackLanguageGap,
+sus valores, velocidades reales y observadores de reproducción permanecen
+iguales. Ocultar una opción por contexto no cambia su valor guardado. No se
+modifican grabaciones, voz, subtítulos, edición, exportación ni confirmaciones.
+
+La regresión UI de lectura bilingüe comprueba los tres contextos y que Lenta,
+Normal y Rápida aparezcan una sola vez dentro de su submenú. Localización y diff
+comprobados en Windows; la ejecución nativa de XCTest y la apariencia del menú
+de iOS quedan pendientes de Xcode/iPhone.

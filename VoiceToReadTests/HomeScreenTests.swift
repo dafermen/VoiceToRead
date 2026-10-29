@@ -1912,8 +1912,22 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["translatedMediaButton"].tap()
         let play = app.buttons["recordingPlayButton"]
         XCTAssertTrue(play.waitForExistence(timeout: 5))
-        app.buttons["playbackTextMenu"].tap()
-        app.buttons["Both"].tap()
+        for selection in ["Original", "Translation", "Both"] {
+            app.buttons["playbackTextMenu"].tap()
+            app.buttons[selection].tap()
+            app.buttons["playbackAudioMenu"].tap()
+            XCTAssertEqual(app.buttons["playbackOriginalSpeedMenu"].exists, selection != "Translation")
+            XCTAssertEqual(app.buttons["playbackTranslationSpeedMenu"].exists, selection != "Original")
+            XCTAssertEqual(app.buttons["playbackLanguageGapMenu"].exists, selection == "Both")
+            XCTAssertFalse(app.buttons["Slow"].exists, "The first menu must show named categories, not repeated speeds")
+            if selection == "Both" {
+                app.buttons["playbackOriginalSpeedMenu"].tap()
+                for speed in ["Slow", "Normal", "Fast"] {
+                    XCTAssertEqual(app.buttons.matching(identifier: speed).count, 1, "Each speed appears only once inside its submenu")
+                }
+            }
+            app.navigationBars["Audio & subtitles"].tap()
+        }
         for mode in ["Continuous", "At my pace"] {
             app.buttons[mode].tap()
             XCTAssertTrue(app.buttons["editPlaybackOriginalButton"].isHittable)
