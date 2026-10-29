@@ -109,10 +109,12 @@ final class HomeScreenTests: XCTestCase {
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
-        let stories = mode.buttons["Stories"]
-        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: stories)
+        XCTAssertFalse(mode.buttons["Stories"].exists)
+        let train = mode.buttons["Train"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: train)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
-        stories.tap()
+        train.tap()
+        app.buttons["trainingStoriesEntry"].tap()
         let add = app.buttons["newStory"]
         XCTAssertTrue(add.waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["fullScreenButton"].exists)
@@ -2637,4 +2639,33 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["Stop"].tap()
     }
 
+}
+
+extension HomeScreenTests {
+    @MainActor
+    func testPodcastEntryAndVisiblePlaybackWithoutMicrophonePrompt() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        XCTAssertFalse(mode.buttons["Stories"].exists)
+        mode.buttons["Train"].tap()
+        XCTAssertTrue(app.buttons["trainingStoriesEntry"].waitForExistence(timeout: 5))
+        let podcasts = app.buttons["trainingPodcastsEntry"]
+        if !podcasts.isHittable { app.swipeUp() }
+        podcasts.tap()
+        app.buttons["podcast-POD-B1B2-001"].tap()
+        let play = app.buttons["podcastPlayPause"]
+        XCTAssertTrue(play.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.alerts.firstMatch.exists)
+        play.tap()
+        XCTAssertEqual(play.label, "Pause")
+        XCTAssertTrue(app.buttons["podcastStop"].isEnabled)
+        play.tap()
+        XCTAssertEqual(play.label, "Play")
+        app.buttons["podcastStop"].tap()
+        XCTAssertEqual(app.staticTexts["podcastCurrentFragment"].label, "Fragment 1 of 30")
+        XCTAssertFalse(app.alerts.firstMatch.exists)
+    }
 }

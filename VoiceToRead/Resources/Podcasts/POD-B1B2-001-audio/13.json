@@ -1,0 +1,336 @@
+{
+  "text": "Do not worry about naming every sound change. Start by noticing where words seem to join and which words receive more attention. In the sentence, the library tells us the original place, while raining explains the change. The speaker may give those important words more energy. Listening for them can help you follow the story.",
+  "duration": 23.639999389648438,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 3,
+      "length": 3,
+      "start": 0.3400000035762787,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.6200000047683716,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 13,
+      "length": 5,
+      "start": 0.8999999761581421,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 19,
+      "length": 6,
+      "start": 1.340000033378601,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 1.559999942779541,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 32,
+      "length": 5,
+      "start": 2.180000066757202,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 38,
+      "length": 6,
+      "start": 2.559999942779541,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.759999990463257,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 52,
+      "length": 2,
+      "start": 3.759999990463257,
+      "end": 4.079999923706055
+    },
+    {
+      "location": 55,
+      "length": 8,
+      "start": 4.079999923706055,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 4.440000057220459,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 4.860000133514404,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 5.21999979019165,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 81,
+      "length": 2,
+      "start": 5.519999980926514,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 5.940000057220459,
+      "end": 6.059999942779541
+    },
+    {
+      "location": 89,
+      "length": 3,
+      "start": 6.059999942779541,
+      "end": 6.71999979019165
+    },
+    {
+      "location": 93,
+      "length": 5,
+      "start": 6.71999979019165,
+      "end": 7.039999961853027
+    },
+    {
+      "location": 99,
+      "length": 5,
+      "start": 7.039999961853027,
+      "end": 7.400000095367432
+    },
+    {
+      "location": 105,
+      "length": 7,
+      "start": 7.400000095367432,
+      "end": 7.860000133514404
+    },
+    {
+      "location": 113,
+      "length": 4,
+      "start": 7.860000133514404,
+      "end": 8.220000267028809
+    },
+    {
+      "location": 118,
+      "length": 9,
+      "start": 8.220000267028809,
+      "end": 8.619999885559082
+    },
+    {
+      "location": 129,
+      "length": 2,
+      "start": 9.420000076293945,
+      "end": 9.5
+    },
+    {
+      "location": 132,
+      "length": 3,
+      "start": 9.5,
+      "end": 10.180000305175781
+    },
+    {
+      "location": 136,
+      "length": 8,
+      "start": 10.180000305175781,
+      "end": 10.180000305175781
+    },
+    {
+      "location": 146,
+      "length": 3,
+      "start": 10.619999885559082,
+      "end": 10.760000228881836
+    },
+    {
+      "location": 150,
+      "length": 7,
+      "start": 10.760000228881836,
+      "end": 11.199999809265137
+    },
+    {
+      "location": 158,
+      "length": 5,
+      "start": 11.199999809265137,
+      "end": 11.65999984741211
+    },
+    {
+      "location": 164,
+      "length": 2,
+      "start": 11.65999984741211,
+      "end": 11.899999618530273
+    },
+    {
+      "location": 167,
+      "length": 3,
+      "start": 11.899999618530273,
+      "end": 12.140000343322754
+    },
+    {
+      "location": 171,
+      "length": 8,
+      "start": 12.140000343322754,
+      "end": 12.5
+    },
+    {
+      "location": 180,
+      "length": 5,
+      "start": 12.5,
+      "end": 13.020000457763672
+    },
+    {
+      "location": 187,
+      "length": 5,
+      "start": 13.5,
+      "end": 13.800000190734863
+    },
+    {
+      "location": 193,
+      "length": 7,
+      "start": 13.800000190734863,
+      "end": 14.15999984741211
+    },
+    {
+      "location": 201,
+      "length": 8,
+      "start": 14.15999984741211,
+      "end": 14.800000190734863
+    },
+    {
+      "location": 210,
+      "length": 3,
+      "start": 14.800000190734863,
+      "end": 15.0600004196167
+    },
+    {
+      "location": 214,
+      "length": 6,
+      "start": 15.0600004196167,
+      "end": 15.520000457763672
+    },
+    {
+      "location": 222,
+      "length": 3,
+      "start": 16.219999313354492,
+      "end": 16.479999542236328
+    },
+    {
+      "location": 226,
+      "length": 7,
+      "start": 16.479999542236328,
+      "end": 16.799999237060547
+    },
+    {
+      "location": 234,
+      "length": 3,
+      "start": 16.799999237060547,
+      "end": 17.299999237060547
+    },
+    {
+      "location": 238,
+      "length": 4,
+      "start": 17.299999237060547,
+      "end": 17.479999542236328
+    },
+    {
+      "location": 243,
+      "length": 5,
+      "start": 17.479999542236328,
+      "end": 17.799999237060547
+    },
+    {
+      "location": 249,
+      "length": 9,
+      "start": 17.799999237060547,
+      "end": 18.31999969482422
+    },
+    {
+      "location": 259,
+      "length": 5,
+      "start": 18.31999969482422,
+      "end": 18.68000030517578
+    },
+    {
+      "location": 265,
+      "length": 4,
+      "start": 18.68000030517578,
+      "end": 19.100000381469727
+    },
+    {
+      "location": 270,
+      "length": 6,
+      "start": 19.100000381469727,
+      "end": 19.540000915527344
+    },
+    {
+      "location": 278,
+      "length": 9,
+      "start": 20.68000030517578,
+      "end": 20.68000030517578
+    },
+    {
+      "location": 288,
+      "length": 3,
+      "start": 20.68000030517578,
+      "end": 21.020000457763672
+    },
+    {
+      "location": 292,
+      "length": 4,
+      "start": 21.020000457763672,
+      "end": 21.239999771118164
+    },
+    {
+      "location": 297,
+      "length": 3,
+      "start": 21.239999771118164,
+      "end": 21.760000228881836
+    },
+    {
+      "location": 301,
+      "length": 4,
+      "start": 21.760000228881836,
+      "end": 22.020000457763672
+    },
+    {
+      "location": 306,
+      "length": 3,
+      "start": 22.020000457763672,
+      "end": 22.299999237060547
+    },
+    {
+      "location": 310,
+      "length": 6,
+      "start": 22.299999237060547,
+      "end": 22.579999923706055
+    },
+    {
+      "location": 317,
+      "length": 3,
+      "start": 22.579999923706055,
+      "end": 22.940000534057617
+    },
+    {
+      "location": 321,
+      "length": 5,
+      "start": 22.940000534057617,
+      "end": 23.200000762939453
+    }
+  ]
+}

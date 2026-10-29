@@ -1,0 +1,330 @@
+{
+  "text": "For your second listen, open the text. Find one place where your ears and your expectations disagreed. Perhaps you thought the speaker said one word, but the sentence contains two. Read that part slowly, then listen again. The aim is to connect the sound with its meaning, rather than simply collect more written words.",
+  "duration": 22.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.30000001192092896
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.30000001192092896,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 9,
+      "length": 6,
+      "start": 0.6200000047683716,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 0.9599999785423279,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.0999999046325684,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 2.559999942779541,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 3.5,
+      "end": 3.5
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.5,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.940000057220459,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 54,
+      "length": 5,
+      "start": 4.239999771118164,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.460000038146973,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 4.659999847412109,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 70,
+      "length": 3,
+      "start": 4.980000019073486,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.239999771118164,
+      "end": 5.619999885559082
+    },
+    {
+      "location": 79,
+      "length": 12,
+      "start": 5.619999885559082,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 92,
+      "length": 9,
+      "start": 6.039999961853027,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 103,
+      "length": 7,
+      "start": 8.079999923706055,
+      "end": 8.100000381469727
+    },
+    {
+      "location": 111,
+      "length": 3,
+      "start": 8.100000381469727,
+      "end": 8.380000114440918
+    },
+    {
+      "location": 115,
+      "length": 7,
+      "start": 8.380000114440918,
+      "end": 8.520000457763672
+    },
+    {
+      "location": 123,
+      "length": 3,
+      "start": 8.520000457763672,
+      "end": 8.800000190734863
+    },
+    {
+      "location": 127,
+      "length": 7,
+      "start": 8.800000190734863,
+      "end": 9.0
+    },
+    {
+      "location": 135,
+      "length": 4,
+      "start": 9.0,
+      "end": 9.34000015258789
+    },
+    {
+      "location": 140,
+      "length": 3,
+      "start": 9.34000015258789,
+      "end": 9.65999984741211
+    },
+    {
+      "location": 144,
+      "length": 4,
+      "start": 9.65999984741211,
+      "end": 9.84000015258789
+    },
+    {
+      "location": 150,
+      "length": 3,
+      "start": 10.579999923706055,
+      "end": 10.619999885559082
+    },
+    {
+      "location": 154,
+      "length": 3,
+      "start": 10.619999885559082,
+      "end": 11.260000228881836
+    },
+    {
+      "location": 158,
+      "length": 8,
+      "start": 11.260000228881836,
+      "end": 11.260000228881836
+    },
+    {
+      "location": 167,
+      "length": 8,
+      "start": 11.260000228881836,
+      "end": 11.760000228881836
+    },
+    {
+      "location": 176,
+      "length": 3,
+      "start": 11.760000228881836,
+      "end": 12.239999771118164
+    },
+    {
+      "location": 181,
+      "length": 4,
+      "start": 13.539999961853027,
+      "end": 13.539999961853027
+    },
+    {
+      "location": 186,
+      "length": 4,
+      "start": 13.539999961853027,
+      "end": 13.84000015258789
+    },
+    {
+      "location": 191,
+      "length": 4,
+      "start": 13.84000015258789,
+      "end": 14.079999923706055
+    },
+    {
+      "location": 196,
+      "length": 6,
+      "start": 14.079999923706055,
+      "end": 14.539999961853027
+    },
+    {
+      "location": 204,
+      "length": 4,
+      "start": 14.819999694824219,
+      "end": 15.199999809265137
+    },
+    {
+      "location": 209,
+      "length": 6,
+      "start": 15.199999809265137,
+      "end": 15.479999542236328
+    },
+    {
+      "location": 216,
+      "length": 5,
+      "start": 15.479999542236328,
+      "end": 15.84000015258789
+    },
+    {
+      "location": 223,
+      "length": 3,
+      "start": 16.639999389648438,
+      "end": 16.860000610351562
+    },
+    {
+      "location": 227,
+      "length": 3,
+      "start": 16.860000610351562,
+      "end": 17.1200008392334
+    },
+    {
+      "location": 231,
+      "length": 2,
+      "start": 17.1200008392334,
+      "end": 17.31999969482422
+    },
+    {
+      "location": 234,
+      "length": 2,
+      "start": 17.31999969482422,
+      "end": 17.780000686645508
+    },
+    {
+      "location": 237,
+      "length": 7,
+      "start": 17.780000686645508,
+      "end": 17.780000686645508
+    },
+    {
+      "location": 245,
+      "length": 3,
+      "start": 17.780000686645508,
+      "end": 18.100000381469727
+    },
+    {
+      "location": 249,
+      "length": 5,
+      "start": 18.100000381469727,
+      "end": 18.440000534057617
+    },
+    {
+      "location": 255,
+      "length": 4,
+      "start": 18.440000534057617,
+      "end": 18.700000762939453
+    },
+    {
+      "location": 260,
+      "length": 3,
+      "start": 18.700000762939453,
+      "end": 18.979999542236328
+    },
+    {
+      "location": 264,
+      "length": 7,
+      "start": 18.979999542236328,
+      "end": 19.34000015258789
+    },
+    {
+      "location": 273,
+      "length": 6,
+      "start": 20.020000457763672,
+      "end": 20.059999465942383
+    },
+    {
+      "location": 280,
+      "length": 4,
+      "start": 20.059999465942383,
+      "end": 20.459999084472656
+    },
+    {
+      "location": 285,
+      "length": 6,
+      "start": 20.459999084472656,
+      "end": 20.799999237060547
+    },
+    {
+      "location": 292,
+      "length": 7,
+      "start": 20.799999237060547,
+      "end": 21.219999313354492
+    },
+    {
+      "location": 300,
+      "length": 4,
+      "start": 21.219999313354492,
+      "end": 21.719999313354492
+    },
+    {
+      "location": 305,
+      "length": 7,
+      "start": 21.719999313354492,
+      "end": 22.0
+    },
+    {
+      "location": 313,
+      "length": 5,
+      "start": 22.0,
+      "end": 22.440000534057617
+    }
+  ]
+}

@@ -397,7 +397,7 @@ enum HomeDestination: Hashable { case listen, sessions, englishTraining, respons
 @MainActor
 struct CommunicationHomeView: View {
     let coordinator: SessionCoordinator
-    private enum Module: Hashable { case talk, listen, train, stories }
+    private enum Module: Hashable { case talk, listen, train }
     @State private var module: Module = .talk
     @Environment(\.dynamicTypeSize) private var typeSize
     @State private var fullScreen = false
@@ -410,13 +410,12 @@ struct CommunicationHomeView: View {
             Text("Talk").tag(Module.talk)
             Text("Listen").tag(Module.listen)
             Text("Train").tag(Module.train)
-            Text("Stories").tag(Module.stories)
         }.pickerStyle(.segmented).accessibilityIdentifier("communicationMode")
     }
     private var moduleGrid: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 6) {
             moduleButton("Talk", .talk); moduleButton("Listen", .listen)
-            moduleButton("Train", .train); moduleButton("Stories", .stories)
+            moduleButton("Train", .train)
         }.accessibilityElement(children: .contain).accessibilityIdentifier("communicationModeGrid")
     }
     private func moduleButton(_ title: LocalizedStringKey, _ selection: Module) -> some View {
@@ -440,9 +439,7 @@ struct CommunicationHomeView: View {
                     }
                 }.padding(.horizontal).padding(.vertical, 8).disabled(audioBusy)
             }
-            if module == .stories {
-                StoryLibraryView()
-            } else if module == .train {
+            if module == .train {
                 EnglishTrainingLibraryView()
             } else if module == .listen {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)

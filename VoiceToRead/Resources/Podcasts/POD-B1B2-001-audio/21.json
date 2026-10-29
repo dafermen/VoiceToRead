@@ -1,0 +1,342 @@
+{
+  "text": "The next question is how to turn this into a habit. Choose a time that already exists in your day. You might listen after breakfast, while sitting on the bus, or before an evening walk. Keep the activity safe and comfortable. When you need to concentrate on traffic or another task, save focused listening for later.",
+  "duration": 21.09000015258789,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.23999999463558197
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.23999999463558197,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 9,
+      "length": 8,
+      "start": 0.6200000047683716,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 18,
+      "length": 2,
+      "start": 1.0399999618530273,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.3200000524520874,
+      "end": 1.5
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.5,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 1.7999999523162842,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.259999990463257
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 2.259999990463257,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 2.5199999809265137,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 3.180000066757202,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 52,
+      "length": 6,
+      "start": 4.139999866485596,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 59,
+      "length": 1,
+      "start": 4.139999866485596,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.360000133514404,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.579999923706055,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 71,
+      "length": 7,
+      "start": 4.840000152587891,
+      "end": 5.400000095367432
+    },
+    {
+      "location": 79,
+      "length": 6,
+      "start": 5.400000095367432,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 86,
+      "length": 2,
+      "start": 5.78000020980835,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 89,
+      "length": 4,
+      "start": 5.980000019073486,
+      "end": 6.139999866485596
+    },
+    {
+      "location": 94,
+      "length": 3,
+      "start": 6.139999866485596,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 99,
+      "length": 3,
+      "start": 7.119999885559082,
+      "end": 7.199999809265137
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 7.199999809265137,
+      "end": 7.420000076293945
+    },
+    {
+      "location": 109,
+      "length": 6,
+      "start": 7.420000076293945,
+      "end": 7.699999809265137
+    },
+    {
+      "location": 116,
+      "length": 5,
+      "start": 7.699999809265137,
+      "end": 8.020000457763672
+    },
+    {
+      "location": 122,
+      "length": 9,
+      "start": 8.020000457763672,
+      "end": 8.520000457763672
+    },
+    {
+      "location": 133,
+      "length": 5,
+      "start": 8.739999771118164,
+      "end": 9.199999809265137
+    },
+    {
+      "location": 139,
+      "length": 7,
+      "start": 9.199999809265137,
+      "end": 9.359999656677246
+    },
+    {
+      "location": 147,
+      "length": 2,
+      "start": 9.359999656677246,
+      "end": 9.5600004196167
+    },
+    {
+      "location": 150,
+      "length": 3,
+      "start": 9.5600004196167,
+      "end": 9.920000076293945
+    },
+    {
+      "location": 154,
+      "length": 3,
+      "start": 9.920000076293945,
+      "end": 9.960000038146973
+    },
+    {
+      "location": 159,
+      "length": 2,
+      "start": 10.279999732971191,
+      "end": 10.579999923706055
+    },
+    {
+      "location": 162,
+      "length": 6,
+      "start": 10.579999923706055,
+      "end": 10.84000015258789
+    },
+    {
+      "location": 169,
+      "length": 2,
+      "start": 10.84000015258789,
+      "end": 11.220000267028809
+    },
+    {
+      "location": 172,
+      "length": 7,
+      "start": 11.220000267028809,
+      "end": 11.399999618530273
+    },
+    {
+      "location": 180,
+      "length": 4,
+      "start": 11.399999618530273,
+      "end": 11.800000190734863
+    },
+    {
+      "location": 186,
+      "length": 4,
+      "start": 12.65999984741211,
+      "end": 12.699999809265137
+    },
+    {
+      "location": 191,
+      "length": 3,
+      "start": 12.699999809265137,
+      "end": 13.0
+    },
+    {
+      "location": 195,
+      "length": 8,
+      "start": 13.0,
+      "end": 13.380000114440918
+    },
+    {
+      "location": 204,
+      "length": 4,
+      "start": 13.380000114440918,
+      "end": 13.859999656677246
+    },
+    {
+      "location": 209,
+      "length": 3,
+      "start": 13.859999656677246,
+      "end": 14.579999923706055
+    },
+    {
+      "location": 213,
+      "length": 11,
+      "start": 14.579999923706055,
+      "end": 14.579999923706055
+    },
+    {
+      "location": 226,
+      "length": 4,
+      "start": 15.399999618530273,
+      "end": 15.520000457763672
+    },
+    {
+      "location": 231,
+      "length": 3,
+      "start": 15.520000457763672,
+      "end": 15.680000305175781
+    },
+    {
+      "location": 235,
+      "length": 4,
+      "start": 15.680000305175781,
+      "end": 15.819999694824219
+    },
+    {
+      "location": 240,
+      "length": 2,
+      "start": 15.819999694824219,
+      "end": 16.479999542236328
+    },
+    {
+      "location": 243,
+      "length": 11,
+      "start": 16.479999542236328,
+      "end": 16.479999542236328
+    },
+    {
+      "location": 255,
+      "length": 2,
+      "start": 16.479999542236328,
+      "end": 16.979999542236328
+    },
+    {
+      "location": 258,
+      "length": 7,
+      "start": 16.979999542236328,
+      "end": 17.18000030517578
+    },
+    {
+      "location": 266,
+      "length": 2,
+      "start": 17.18000030517578,
+      "end": 17.479999542236328
+    },
+    {
+      "location": 269,
+      "length": 7,
+      "start": 17.479999542236328,
+      "end": 17.799999237060547
+    },
+    {
+      "location": 277,
+      "length": 4,
+      "start": 17.799999237060547,
+      "end": 18.299999237060547
+    },
+    {
+      "location": 283,
+      "length": 4,
+      "start": 18.860000610351562,
+      "end": 19.1200008392334
+    },
+    {
+      "location": 288,
+      "length": 7,
+      "start": 19.1200008392334,
+      "end": 19.639999389648438
+    },
+    {
+      "location": 296,
+      "length": 9,
+      "start": 19.639999389648438,
+      "end": 19.959999084472656
+    },
+    {
+      "location": 306,
+      "length": 3,
+      "start": 19.959999084472656,
+      "end": 20.579999923706055
+    },
+    {
+      "location": 310,
+      "length": 5,
+      "start": 20.579999923706055,
+      "end": 20.579999923706055
+    }
+  ]
+}

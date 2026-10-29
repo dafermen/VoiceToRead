@@ -24,6 +24,24 @@ struct EnglishTrainingLibraryView: View {
                     }.padding(.vertical, 8)
                 }.accessibilityIdentifier("personalPracticesEntry")
             }
+            Section {
+                NavigationLink { StoryLibraryView() } label: {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Stories", systemImage: "book.closed").font(.headline)
+                        Text("Read and listen to stories, with word highlighting.")
+                            .font(.subheadline).foregroundStyle(.secondary)
+                    }.padding(.vertical, 8)
+                }.accessibilityIdentifier("trainingStoriesEntry")
+            }
+            Section {
+                NavigationLink { PodcastLibraryView() } label: {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Podcasts", systemImage: "headphones").font(.headline)
+                        Text("Listen to English episodes and follow the words at your pace.")
+                            .font(.subheadline).foregroundStyle(.secondary)
+                    }.padding(.vertical, 8)
+                }.accessibilityIdentifier("trainingPodcastsEntry")
+            }
         }
         .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
     }

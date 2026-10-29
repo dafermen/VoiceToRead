@@ -1292,3 +1292,31 @@
 "Practise with your own texts and the languages you choose." = "Practise with your own texts and the languages you choose.";
 
 "Create practice" = "Create practice";
+
+"Podcasts" = "Podcasts";
+
+"Read and listen to stories, with word highlighting." = "Read and listen to stories, with word highlighting.";
+
+"Listen to English episodes and follow the words at your pace." = "Listen to English episodes and follow the words at your pace.";
+
+"Listen to short English episodes, follow the words and replay a fragment at your pace." = "Listen to short English episodes, follow the words and replay a fragment at your pace.";
+
+"The podcasts could not be opened. Please try again." = "The podcasts could not be opened. Please try again.";
+
+"Show transcript" = "Show transcript";
+
+"Follow narration" = "Follow narration";
+
+"Listening without text" = "Listening without text";
+
+"Turn on Show transcript whenever you want to check the words." = "Turn on Show transcript whenever you want to check the words.";
+
+"Episode progress" = "Episode progress";
+
+"Fragment %lld" = "Fragment %lld";
+
+"Fragment %lld of %lld" = "Fragment %lld of %lld";
+
+"Play fragment %lld" = "Play fragment %lld";
+
+"Podcast audio could not start. Please try again." = "Podcast audio could not start. Please try again.";

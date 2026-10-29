@@ -1292,3 +1292,31 @@
 "Practise with your own texts and the languages you choose." = "Practica con tus propios textos y los idiomas que elijas.";
 
 "Create practice" = "Crear práctica";
+
+"Podcasts" = "Podcasts";
+
+"Read and listen to stories, with word highlighting." = "Lee y escucha cuentos con resaltado por palabra.";
+
+"Listen to English episodes and follow the words at your pace." = "Escucha episodios en inglés y sigue las palabras a tu ritmo.";
+
+"Listen to short English episodes, follow the words and replay a fragment at your pace." = "Escucha episodios breves en inglés, sigue las palabras y repite un fragmento a tu ritmo.";
+
+"The podcasts could not be opened. Please try again." = "No se pudieron abrir los podcasts. Inténtalo de nuevo.";
+
+"Show transcript" = "Mostrar texto";
+
+"Follow narration" = "Seguir la narración";
+
+"Listening without text" = "Escuchando sin texto";
+
+"Turn on Show transcript whenever you want to check the words." = "Activa Mostrar texto cuando quieras consultar las palabras.";
+
+"Episode progress" = "Progreso del episodio";
+
+"Fragment %lld" = "Fragmento %lld";
+
+"Fragment %lld of %lld" = "Fragmento %lld de %lld";
+
+"Play fragment %lld" = "Reproducir fragmento %lld";
+
+"Podcast audio could not start. Please try again." = "No se pudo iniciar el audio del podcast. Inténtalo de nuevo.";
