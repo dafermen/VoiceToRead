@@ -14,6 +14,25 @@ final class HomeScreenTests: XCTestCase {
     }
 
     @MainActor
+    private func openCommunicationSaved(in app: XCUIApplication) {
+        if !app.buttons["listeningSavedSessions"].exists {
+            app.tabBars.buttons["Home"].tap()
+            for _ in 0..<5 where !communicationMode(in: app).exists {
+                let back = app.navigationBars.buttons.element(boundBy: 0)
+                guard back.exists else { break }
+                back.tap()
+            }
+            let mode = communicationMode(in: app)
+            XCTAssertTrue(mode.waitForExistence(timeout: 5))
+            mode.buttons["Listen"].tap()
+        }
+        let saved = app.buttons["listeningSavedSessions"]
+        XCTAssertTrue(saved.waitForExistence(timeout: 5))
+        if !saved.isHittable { app.swipeDown() }
+        saved.tap()
+    }
+
+    @MainActor
     private func playConversationTranslation(_ app: XCUIApplication, timeout: TimeInterval) {
         let button = app.buttons["conversationTranslationPlayback"]
         XCTAssertTrue(button.waitForExistence(timeout: timeout))
@@ -47,7 +66,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
         listening.tap()
         XCTAssertTrue(mode.waitForExistence(timeout: 5))
-        app.tabBars.buttons["Saved"].tap()
+        openCommunicationSaved(in: app)
         let library = app.buttons["sessionLibraryOptions"]
         XCTAssertTrue(library.waitForExistence(timeout: 5))
         XCTAssertLessThan(library.frame.midX, app.frame.midX)
@@ -68,6 +87,9 @@ final class HomeScreenTests: XCTestCase {
         mode.buttons["Listen"].tap()
         let primary = app.buttons["primaryCaptionAction"]
         XCTAssertTrue(primary.waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["listeningStatus"].label, "Ready")
+        XCTAssertFalse(app.tabBars.buttons["Saved"].exists)
+        XCTAssertTrue(app.buttons["listeningSavedSessions"].isHittable)
         XCTAssertLessThan(primary.frame.midY, mode.frame.midY)
         let headerSize = primary.frame.size
         let fullScreen = app.buttons["fullScreenButton"]
@@ -76,6 +98,7 @@ final class HomeScreenTests: XCTestCase {
         let pause = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
         XCTAssertEqual(XCTWaiter.wait(for: [pause], timeout: 10), .completed)
         XCTAssertFalse(mode.buttons["Train"].isEnabled)
+        XCTAssertTrue(app.buttons["listeningSavedSessions"].isHittable, "Browsing history remains available during capture")
         let stop = app.buttons["stopCaptionAction"]
         XCTAssertTrue(stop.isHittable)
         XCTAssertEqual(stop.frame.width, headerSize.width, accuracy: 1)
@@ -85,6 +108,7 @@ final class HomeScreenTests: XCTestCase {
         let resume = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Resume'"), object: primary)
         XCTAssertEqual(XCTWaiter.wait(for: [resume], timeout: 10), .completed)
         XCTAssertTrue(stop.isHittable)
+        XCTAssertTrue(app.buttons["listeningSavedSessions"].isHittable)
         primary.tap()
         let recording = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
         XCTAssertEqual(XCTWaiter.wait(for: [recording], timeout: 10), .completed)
@@ -251,7 +275,7 @@ final class HomeScreenTests: XCTestCase {
         let home = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); home.name = "Communication-iPad"; home.lifetime = .keepAlways; add(home)
         mode.buttons["Listen"].tap()
         XCTAssertTrue(app.buttons["primaryCaptionAction"].waitForExistence(timeout: 5))
-        app.tabBars.buttons["Saved"].tap()
+        openCommunicationSaved(in: app)
         XCTAssertTrue(app.staticTexts["Review sample"].waitForExistence(timeout: 5))
     }
 
@@ -313,7 +337,7 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue((app.buttons["conversationTranslationPlayback"].value as? String ?? "").contains("English"), "My written reply must use my language, not the previous speaker's direction")
         XCTAssertEqual(app.staticTexts["conversationSourceText"].label, "Gracias")
         let written = XCTAttachment(screenshot: XCUIScreen.main.screenshot()); written.name = "Communication-written-reply"; written.lifetime = .keepAlways; add(written)
-        app.tabBars.buttons["Saved"].tap()
+        openCommunicationSaved(in: app)
         XCTAssertTrue(app.staticTexts["Review sample"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["savedLanguagePractice"].exists)
         app.tabBars.buttons["Home"].tap()
@@ -1847,7 +1871,7 @@ final class HomeScreenTests: XCTestCase {
         app.buttons["saveEnglishTraining"].tap()
         XCTAssertTrue(app.staticTexts["Travel"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["Presentarme y conversar"].exists)
-        app.tabBars.buttons["Saved"].tap()
+        openCommunicationSaved(in: app)
         XCTAssertFalse(app.buttons["savedLanguagePractice"].exists)
         app.staticTexts["Review sample"].tap()
         XCTAssertFalse(app.buttons["learnEnglishButton"].exists)
@@ -2667,5 +2691,36 @@ extension HomeScreenTests {
         app.buttons["podcastStop"].tap()
         XCTAssertEqual(app.staticTexts["podcastCurrentFragment"].label, "Fragment 1 of 30")
         XCTAssertFalse(app.alerts.firstMatch.exists)
+    }
+}
+
+extension HomeScreenTests {
+    @MainActor
+    func testListenSavedEntryFitsAndReturnsToListeningWithLargeText() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        XCTAssertFalse(app.tabBars.buttons["Saved"].exists)
+        XCTAssertFalse(app.tabBars.buttons["Sessions"].exists)
+        mode.buttons["Listen"].tap()
+        let saved = app.buttons["listeningSavedSessions"]
+        XCTAssertTrue(saved.waitForExistence(timeout: 5))
+        if !saved.isHittable { app.swipeUp() }
+        XCTAssertTrue(saved.isHittable)
+        XCTAssertGreaterThanOrEqual(saved.frame.width, 44)
+        XCTAssertGreaterThanOrEqual(saved.frame.height, 44)
+        XCTAssertLessThanOrEqual(saved.frame.maxX, app.frame.maxX)
+        XCTAssertGreaterThanOrEqual(saved.frame.minX, app.frame.minX)
+        let status = app.staticTexts["listeningStatus"]
+        XCTAssertEqual(status.label, "Ready")
+        XCTAssertGreaterThanOrEqual(saved.frame.minY, status.frame.maxY)
+        saved.tap()
+        XCTAssertTrue(app.buttons["sessionLibraryOptions"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["fullScreenButton"].exists, "Saved history must not inherit the listening fullscreen accessory")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssertTrue(app.buttons["listeningSavedSessions"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["listeningStatus"].label, "Ready")
     }
 }

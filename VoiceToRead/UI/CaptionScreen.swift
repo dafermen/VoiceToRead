@@ -49,7 +49,7 @@ struct CaptionScreen: View {
                 if communicationLayout && !isFullScreen {
                     CommunicationHeader {
                         LanguagePairOptions(model: model, settings: settings, homeLayout: true)
-                    } status: { status }
+                    } status: { communicationStatus }
                 }
                 if !communicationLayout && !compact && !isFullScreen {
                     Group {
@@ -334,6 +334,40 @@ struct CaptionScreen: View {
             .accessibilityLabel("Microphone level")
             .accessibilityValue("\(Int(model.inputLevel * 100)) percent")
             .accessibilityIdentifier("captureLevelMeter")
+    }
+
+    private var communicationStatus: some View {
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                stackedCommunicationStatus
+            } else {
+                ViewThatFits(in: .horizontal) {
+                    HStack(alignment: .firstTextBaseline, spacing: 12) {
+                        status.fixedSize(horizontal: true, vertical: true)
+                        Spacer(minLength: 12)
+                        savedSessionsLink.fixedSize(horizontal: true, vertical: true)
+                    }
+                    stackedCommunicationStatus
+                }
+            }
+        }.frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var stackedCommunicationStatus: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            status
+            HStack { Spacer(minLength: 0); savedSessionsLink }
+        }
+    }
+
+    private var savedSessionsLink: some View {
+        NavigationLink(value: HomeDestination.sessions) {
+            Label("Saved", systemImage: "clock")
+                .font(.subheadline)
+        }
+        .labelStyle(InlinePreferenceLabelStyle())
+        .frame(minWidth: 44, minHeight: 44)
+        .accessibilityIdentifier("listeningSavedSessions")
     }
 
     private var status: some View {
@@ -819,7 +853,7 @@ struct CaptionScreen: View {
 
     private var statusTitle: String {
         switch model.state {
-        case .idle: return communicationLayout ? "Ready to listen" : "Ready"
+        case .idle: return "Ready"
         case .preparing: return "Preparing"
         case .listening: return "Transcribing"
         case .stopping: return "Finishing"

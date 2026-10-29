@@ -26,8 +26,10 @@ struct AppRootView: View {
                 })) {
                     homeNavigation(coordinator: coordinator).tag(0)
                     .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.conversationHome || coordinator.settings.simpleMode ? "Home" : "Captions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "captions.bubble") } }
-                    SessionLibraryView(coordinator: coordinator).tag(1)
-                        .tabItem { Label { Text(verbatim: InterfaceLocalization.string(coordinator.settings.conversationHome ? "Saved" : "Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
+                    if !coordinator.settings.conversationHome {
+                        SessionLibraryView(coordinator: coordinator).tag(1)
+                            .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Sessions", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "clock") } }
+                    }
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }.tag(2)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
@@ -123,7 +125,7 @@ struct AppRootView: View {
     }
 
     @ViewBuilder private var homeFullScreenButton: some View {
-        if selectedTab == 0, let control = fullScreenControl, !control.isFullScreen {
+        if selectedTab == 0, !homePath.contains(.sessions), let control = fullScreenControl, !control.isFullScreen {
             Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") {
                 control.selection.wrappedValue = true
             }

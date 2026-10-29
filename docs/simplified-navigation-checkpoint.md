@@ -23,3 +23,33 @@ Se conserva el esquema y los datos de marcadores/notas anteriores. Favoritos de 
 El titular pidió una nueva compilación para App Store Connect/TestFlight. El código de la app sigue siendo el validado en `6717215`; este registro activa un nuevo cambio en `main` para el workflow Default.
 
 La ejecución anterior `00b43544-37e8-4f38-9cc7-ec8587ce003f` terminó Archive iOS correctamente, sin errores y con dos advertencias, pero su estado global en GitHub seguía pendiente al solicitar el reintento. No se pudo confirmar su disponibilidad en TestFlight. No confundir el éxito de Archive con procesamiento/distribución completados: comprobar el nuevo flujo y la asignación al grupo Dev antes de anunciar disponibilidad en el iPhone.
+
+
+## Guardado dentro de Escuchar
+
+En el inicio de comunicación (Conversar/Escuchar/Entrenar), Guardado deja de ser
+una pestaña global. La barra inferior contiene Inicio y Ajustes. El acceso con el
+icono de reloj y el nombre Guardado se coloca a la derecha del estado de Escuchar;
+el estado inicial se acorta a Listo. El nombre respeta Mostrar nombre de los
+botones y el título accesible se conserva en modo solo icono. El área táctil es
+de al menos 44 puntos. No se cambia el acceso Sesiones del inicio clásico.
+
+El encabezado alinea las primeras líneas de texto cuando caben. ViewThatFits usa
+una segunda línea con Guardado alineado a la derecha cuando falta ancho; los
+tamaños de accesibilidad usan esa disposición directamente. No se fija una altura
+que recorte los textos. El acceso permanece disponible al grabar, pausar y terminar,
+igual que la pestaña anterior. El historial conserva sus restricciones existentes
+de edición/reproducción mientras hay captura activa.
+
+La navegación usa el destino HomeDestination.sessions ya existente. Volver regresa
+al lector y al mismo coordinador de sesión. No hay migración ni cambios en guardado,
+favoritos, búsqueda, borradores, papelera, restauración ni confirmaciones. El
+accesorio de pantalla completa del lector se oculta mientras el historial está en
+la ruta de Inicio, para evitar que quede encima de esa ventana.
+
+Las pruebas UI existentes acceden ahora desde Escuchar. Se añade cobertura de texto
+grande, ajuste al ancho, tamaño táctil, regreso al lector, ausencia de Guardado en
+la barra inferior y acceso durante captura/pausa. Localización y comprobación de
+diff verificadas en Windows; Xcode/XCTest y revisión visual en iPhone/iPad quedan
+pendientes de compilación nativa. Los archivos del almacén de sesiones y del
+historial no fueron modificados.
