@@ -2798,3 +2798,45 @@ extension HomeScreenTests {
         XCTAssertEqual(app.staticTexts["podcastCurrentFragment"].label, "Fragment 1 of 30")
     }
 }
+
+extension HomeScreenTests {
+    @MainActor
+    func testVerbReferenceFiltersConjugationsWithoutRecording() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Train"].tap()
+        let entry = app.buttons["trainingVerbsEntry"]
+        for _ in 0..<6 where !entry.isHittable { app.swipeUp() }
+        XCTAssertTrue(entry.isHittable)
+        entry.tap()
+        let group = app.buttons["verbGroupFilter"]
+        XCTAssertTrue(group.waitForExistence(timeout: 5))
+        group.tap()
+        app.buttons["AAB"].tap()
+        XCTAssertTrue(app.buttons["verb-beat"].exists)
+        XCTAssertFalse(app.buttons["verb-write"].exists)
+        app.buttons["verb-beat"].tap()
+        let tense = app.buttons["verbTenseFilter"]
+        XCTAssertTrue(tense.waitForExistence(timeout: 5))
+        tense.tap()
+        app.buttons["Simple past"].tap()
+        app.buttons["verbSentenceFilter"].tap()
+        app.buttons["Negative"].tap()
+        app.buttons["verbDetailFilters"].tap()
+        app.buttons["verbPronounFilter"].tap()
+        app.buttons["She"].tap()
+        XCTAssertEqual(app.switches["verbSlowPronunciation"].value as? String, "1")
+        let sentence = app.staticTexts["She did not beat a drum."]
+        for _ in 0..<6 where !sentence.isHittable { app.swipeUp() }
+        XCTAssertTrue(sentence.isHittable)
+        XCTAssertFalse(app.staticTexts["She beat a drum."].exists)
+        let play = app.buttons["verbAudio-Simple past-She-Negative"]
+        XCTAssertTrue(play.isHittable)
+        XCTAssertGreaterThanOrEqual(play.frame.width, 44)
+        XCTAssertGreaterThanOrEqual(play.frame.height, 44)
+        XCTAssertFalse(app.alerts.firstMatch.exists, "Reading conjugations must not request microphone access")
+    }
+}

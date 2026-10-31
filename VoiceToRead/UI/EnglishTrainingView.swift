@@ -42,6 +42,15 @@ struct EnglishTrainingLibraryView: View {
                     }.padding(.vertical, 8)
                 }.accessibilityIdentifier("trainingPodcastsEntry")
             }
+            Section {
+                NavigationLink { VerbReferenceLibraryView() } label: {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Verbs and sentences", systemImage: "text.book.closed").font(.headline)
+                        Text("Explore English conjugations and listen to verbs and examples.")
+                            .font(.subheadline).foregroundStyle(.secondary)
+                    }.padding(.vertical, 8)
+                }.accessibilityIdentifier("trainingVerbsEntry")
+            }
         }
         .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
     }
