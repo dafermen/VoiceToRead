@@ -1733,9 +1733,8 @@ final class HomeScreenTests: XCTestCase {
         app.staticTexts["Presentarme y conversar"].tap()
         let start = app.buttons["startEnglishTraining"]
         XCTAssertTrue(start.waitForExistence(timeout: 5))
-        XCTAssertFalse(start.isEnabled)
         XCTAssertLessThan(start.frame.midY, app.buttons["editTrainingSource"].frame.midY)
-        app.buttons["prepareTrainingEnglish"].tap()
+        XCTAssertFalse(app.buttons["prepareTrainingEnglish"].exists, "Translation preparation is automatic")
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
         app.buttons["reviewTrainingEnglish"].tap()
@@ -1802,7 +1801,7 @@ final class HomeScreenTests: XCTestCase {
         app.textViews["trainingSpanishInput"].tap(); app.textViews["trainingSpanishInput"].typeText("Hello\nThanks")
         app.buttons["saveEnglishTraining"].tap()
         app.staticTexts["My languages"].tap()
-        app.buttons["prepareTrainingEnglish"].tap()
+        XCTAssertFalse(app.buttons["prepareTrainingEnglish"].exists, "Translation preparation is automatic")
         let start = app.buttons["startEnglishTraining"]
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
@@ -1813,6 +1812,7 @@ final class HomeScreenTests: XCTestCase {
         translated.tap(); translated.typeText(" corrected")
         let correction = translated.value as? String
         app.buttons["saveTrainingEnglish"].tap()
+        app.buttons["trainingOptions"].tap()
         app.buttons["retranslateTraining"].tap()
         XCTAssertTrue(app.buttons["confirmTrainingRetranslation"].waitForExistence(timeout: 5))
         app.buttons["Cancel"].lastMatch.tap()

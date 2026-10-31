@@ -39,6 +39,11 @@ struct EnglishTraining: Codable, Equatable, Identifiable {
         slowPracticeExample = try values.decodeIfPresent(Bool.self, forKey: .slowPracticeExample) ?? true
     }
     var ready: Bool { !phrases.isEmpty && phrases.allSatisfy { !$0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty } }
+    /// Automatic preparation fills only absent responses; existing corrections are never queued.
+    var missingTranslationSource: [ReviewParagraph] {
+        phrases.filter { $0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+            .map { ReviewParagraph(id: $0.id, text: $0.spanish) }
+    }
     var source: [ReviewParagraph] { phrases.map { ReviewParagraph(id: $0.id, text: $0.spanish) } }
     var valid: Bool {
         sourceLanguage != targetLanguage &&
@@ -468,7 +473,7 @@ final class EnglishTrainingStore {
         }
         guard source.map(\.id) == responses.map(\.id), responses.allSatisfy({ !$0.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && $0.text.count <= 1000 }) else { throw EnglishTrainingFailure.invalidTranslation }
         for (original, translated) in zip(source, responses) {
-            guard let index = training.phrases.firstIndex(where: { $0.id == original.id && $0.spanish == original.text && ($0.english.isEmpty || snapshot != nil) }) else { throw EnglishTrainingFailure.changed }
+            guard let index = training.phrases.firstIndex(where: { $0.id == original.id && $0.spanish == original.text && ($0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || snapshot != nil) }) else { throw EnglishTrainingFailure.changed }
             training.phrases[index].english = translated.text.trimmingCharacters(in: .whitespacesAndNewlines)
             training.phrases[index].reviewed = false; training.phrases[index].needsPractice = true
         }

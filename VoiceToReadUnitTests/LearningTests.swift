@@ -590,3 +590,39 @@ extension LearningTests {
         XCTAssertTrue(decoded.slowPracticeExample)
     }
 }
+
+extension LearningTests {
+    func testAutomaticMissingTranslationsPreserveCorrectionsAndAcceptOnlyTheRequestedBatch() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        var training = try EnglishTraining.edited(title: "Automatic translations", text: "Hola\nGracias\nAdiós")
+        training.phrases[0].english = "My corrected greeting"
+        training.phrases[0].reviewed = true
+        training.phrases[0].needsPractice = false
+        training.phrases[1].english = "  \n"
+        training.showPracticeResponse = true
+        training.slowPracticeExample = false
+        try store.save(training)
+        let corrected = training.phrases[0]
+        let pending = training.missingTranslationSource
+        XCTAssertEqual(pending.map(\.id), Array(training.phrases.dropFirst()).map(\.id))
+        XCTAssertFalse(training.ready)
+        let responses = zip(pending, ["Thank you", "Goodbye"]).map { ReviewParagraph(id: $0.0.id, text: $0.1) }
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: pending, responses: Array(responses.reversed())))
+        XCTAssertEqual(store.training(training.id), training, "Failed preparation cannot partly overwrite a saved practice")
+        try store.acceptTranslation(training.id, source: pending, responses: responses)
+        let completed = try XCTUnwrap(store.training(training.id))
+        XCTAssertTrue(completed.ready)
+        XCTAssertTrue(completed.missingTranslationSource.isEmpty, "Reopening a ready practice has nothing to translate")
+        XCTAssertEqual(completed.phrases[0], corrected)
+        XCTAssertTrue(completed.showPracticeResponse)
+        XCTAssertFalse(completed.slowPracticeExample)
+        XCTAssertThrowsError(try store.acceptTranslation(training.id, source: pending, responses: responses))
+        XCTAssertEqual(store.training(training.id), completed, "Late or duplicated results cannot replace existing responses")
+        let expanded = try EnglishTraining.edited(title: completed.title,
+            text: completed.phrases.map(\.spanish).joined(separator: "\n") + "\nBuenos días", previous: completed)
+        XCTAssertEqual(expanded.missingTranslationSource.map(\.text), ["Buenos días"])
+        XCTAssertEqual(expanded.phrases[0], corrected, "Editing phrases retains unchanged corrections")
+    }
+}

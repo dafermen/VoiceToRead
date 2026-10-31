@@ -262,27 +262,33 @@ private struct EnglishTrainingDetailView: View {
                                 .id(training.updatedAt)
                         } label: { Label("Start practice", systemImage: "mic") }
                             .disabled(!training.ready || job != nil).accessibilityIdentifier("startEnglishTraining")
+                        if let job {
+                            Text("Translating phrases… \(progress) of \(job.source.count)")
+                                .font(.subheadline).foregroundStyle(.secondary)
+                                .accessibilityIdentifier("trainingTranslationProgress")
+                            ProgressView(value: Double(progress), total: Double(max(1, job.source.count)))
+                            Button("Cancel translation") { cancelTranslation() }
+                                .accessibilityIdentifier("cancelTrainingTranslation")
+                        }
+                        if let failure {
+                            Text(LocalizedStringKey(failure)).foregroundStyle(.red)
+                                .accessibilityIdentifier("trainingTranslationFailure")
+                            Button("Retry") {
+                                if training.ready { confirmingRetranslation = true }
+                                else { translate(training) }
+                            }.disabled(job != nil || !TranslationJob.supported)
+                                .accessibilityIdentifier("retryTrainingTranslation")
+                        }
                     }
                     Section {
                         TrainingLanguagePair(training: training)
                         Button("Edit phrases and languages", systemImage: "pencil") { editingSource = true }
                             .disabled(job != nil).accessibilityIdentifier("editTrainingSource")
-                        Button("Prepare translations", systemImage: "character.bubble") { translate(training) }
-                            .disabled(job != nil || training.ready || !TranslationJob.supported)
-                            .accessibilityIdentifier("prepareTrainingEnglish")
-                        Button("Translate again", systemImage: "arrow.clockwise") {
-                            if training.phrases.contains(where: { !$0.english.isEmpty }) { confirmingRetranslation = true }
-                            else { translate(training, replaceAll: true) }
-                        }.disabled(job != nil || !TranslationJob.supported).accessibilityIdentifier("retranslateTraining")
                         Button("Review translations", systemImage: "text.badge.checkmark") { editingEnglish = true }
                             .disabled(job != nil).accessibilityIdentifier("reviewTrainingEnglish")
                         if !TranslationJob.supported { Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription)).font(.caption) }
-                        if let job {
-                            ProgressView(value: Double(progress), total: Double(max(1, job.source.count)))
-                            Button("Cancel translation") { self.job = nil; replacementSnapshot = nil }
-                        }
-                        if let failure { Text(LocalizedStringKey(failure)).foregroundStyle(.red) }
-                        Text("Review the translations before practising. You can correct the automatic translation.").font(.caption).foregroundStyle(.secondary)
+                        Text("Translations are prepared automatically. You can review and correct them whenever you like.")
+                            .font(.caption).foregroundStyle(.secondary)
                     }
                     Section("Phrases") {
                         ForEach(training.phrases) { phrase in
@@ -294,17 +300,28 @@ private struct EnglishTrainingDetailView: View {
                     }
                 }
                 .navigationTitle(training.title).navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Menu {
+                            Button("Translate again", systemImage: "arrow.clockwise") { confirmingRetranslation = true }
+                                .disabled(job != nil || !TranslationJob.supported || training.phrases.allSatisfy { $0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty })
+                                .accessibilityIdentifier("retranslateTraining")
+                        } label: { Label("Practice options", systemImage: "ellipsis.circle").labelStyle(.iconOnly) }
+                            .accessibilityIdentifier("trainingOptions")
+                    }
+                }
                 .sheet(isPresented: $editingSource, onDismiss: {
                     guard translateAfterEditing else { return }
                     translateAfterEditing = false
-                    if let current = self.training { translate(current) }
+                    failure = nil
+                    prepareIfNeeded()
                 }) {
                     TrainingSourceEditor(previous: training) { updated in
                         try store.save(updated)
-                        translateAfterEditing = updated.sourceLanguage != training.sourceLanguage || updated.targetLanguage != training.targetLanguage
+                        translateAfterEditing = true
                     }
                 }
-                .sheet(isPresented: $editingEnglish) { TrainingEnglishEditor(store: store, training: training) }
+                .sheet(isPresented: $editingEnglish, onDismiss: { prepareIfNeeded() }) { TrainingEnglishEditor(store: store, training: training) }
                 .confirmationDialog("Translate all phrases again?", isPresented: $confirmingRetranslation, titleVisibility: .visible) {
                     Button("Replace translations", role: .destructive) { translate(training, replaceAll: true) }
                         .accessibilityIdentifier("confirmTrainingRetranslation")
@@ -327,11 +344,23 @@ private struct EnglishTrainingDetailView: View {
                 }.id(job.id)
             }
         }
+        .onAppear { prepareIfNeeded() }
         .onDisappear { job = nil; replacementSnapshot = nil; translateAfterEditing = false }
     }
+    private func prepareIfNeeded() {
+        guard job == nil, failure == nil, !editingSource, !editingEnglish,
+              TranslationJob.supported, let current = training, !current.ready else { return }
+        translate(current)
+    }
+    private func cancelTranslation() {
+        // Invalidate the job before removing its runner, so late callbacks cannot save results.
+        job = nil; replacementSnapshot = nil
+        failure = "Translation cancelled. Your saved translations are unchanged."
+    }
     private func translate(_ training: EnglishTraining, replaceAll: Bool = false) {
+        guard job == nil else { return }
         guard TranslationJob.supported else { failure = TranslationFailure.unsupported.localizedDescription; return }
-        let missing = training.phrases.filter { replaceAll || $0.english.isEmpty }.map { ReviewParagraph(id: $0.id, text: $0.spanish) }
+        let missing = replaceAll ? training.source : training.missingTranslationSource
         guard !missing.isEmpty else { return }
         failure = nil; progress = 0
         replacementSnapshot = replaceAll ? training : nil

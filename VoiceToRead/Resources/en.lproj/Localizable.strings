@@ -1379,3 +1379,7 @@
 "Use app language" = "Use app language";
 "Translation language" = "Translation language";
 "Meanings vary with context and may not match word for word." = "Meanings vary with context and may not match word for word.";
+"Translating phrases… %lld of %lld" = "Translating phrases… %lld of %lld";
+"Translations are prepared automatically. You can review and correct them whenever you like." = "Translations are prepared automatically. You can review and correct them whenever you like.";
+"Translation cancelled. Your saved translations are unchanged." = "Translation cancelled. Your saved translations are unchanged.";
+"Practice options" = "Practice options";

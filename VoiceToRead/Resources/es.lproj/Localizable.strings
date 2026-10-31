@@ -1379,3 +1379,7 @@
 "Use app language" = "Usar idioma de la app";
 "Translation language" = "Idioma de traducción";
 "Meanings vary with context and may not match word for word." = "Las equivalencias dependen del contexto y del idioma.";
+"Translating phrases… %lld of %lld" = "Traduciendo frases… %lld de %lld";
+"Translations are prepared automatically. You can review and correct them whenever you like." = "Las traducciones se preparan automáticamente. Puedes revisarlas y corregirlas cuando quieras.";
+"Translation cancelled. Your saved translations are unchanged." = "Traducción cancelada. Se conservan las traducciones guardadas.";
+"Practice options" = "Opciones de práctica";
