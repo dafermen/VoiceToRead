@@ -71,6 +71,15 @@
         "past-was": "past of be: I / he / she / it",
         "past-were": "past of be: you / we / they"
       }
+    },
+    "ipaUS": {
+      "base": "/biː/",
+      "past": "/wɑːz/ /wɝː/",
+      "participle": "/bɪn/",
+      "third": "/ɪz/",
+      "ing": "/ˈbiːɪŋ/",
+      "past-was": "/wɑːz/",
+      "past-were": "/wɝː/"
     }
   },
   {
@@ -133,6 +142,13 @@
         "ing": "-ing form of beat",
         "meaning": "strike repeatedly"
       }
+    },
+    "ipaUS": {
+      "base": "/biːt/",
+      "past": "/biːt/",
+      "participle": "/ˈbiːtən/",
+      "third": "/biːts/",
+      "ing": "/ˈbiːtɪŋ/"
     }
   },
   {
@@ -195,6 +211,13 @@
         "ing": "-ing form of become",
         "meaning": "begin to be something"
       }
+    },
+    "ipaUS": {
+      "base": "/bɪˈkʌm/",
+      "past": "/bɪˈkeɪm/",
+      "participle": "/bɪˈkʌm/",
+      "third": "/bɪˈkʌmz/",
+      "ing": "/bɪˈkʌmɪŋ/"
     }
   },
   {
@@ -257,6 +280,13 @@
         "ing": "-ing form of bring",
         "meaning": "carry something to a place"
       }
+    },
+    "ipaUS": {
+      "base": "/brɪŋ/",
+      "past": "/brɑːt/",
+      "participle": "/brɑːt/",
+      "third": "/brɪŋz/",
+      "ing": "/ˈbrɪŋɪŋ/"
     }
   },
   {
@@ -319,6 +349,13 @@
         "ing": "-ing form of build",
         "meaning": "make a structure"
       }
+    },
+    "ipaUS": {
+      "base": "/bɪld/",
+      "past": "/bɪlt/",
+      "participle": "/bɪlt/",
+      "third": "/bɪldz/",
+      "ing": "/ˈbɪldɪŋ/"
     }
   },
   {
@@ -381,6 +418,13 @@
         "ing": "-ing form of buy",
         "meaning": "get something by paying"
       }
+    },
+    "ipaUS": {
+      "base": "/baɪ/",
+      "past": "/bɑːt/",
+      "participle": "/bɑːt/",
+      "third": "/baɪz/",
+      "ing": "/ˈbaɪɪŋ/"
     }
   },
   {
@@ -443,6 +487,13 @@
         "ing": "-ing form of come",
         "meaning": "move toward a place"
       }
+    },
+    "ipaUS": {
+      "base": "/kʌm/",
+      "past": "/keɪm/",
+      "participle": "/kʌm/",
+      "third": "/kʌmz/",
+      "ing": "/ˈkʌmɪŋ/"
     }
   },
   {
@@ -505,6 +556,13 @@
         "ing": "-ing form of cut",
         "meaning": "divide with a sharp tool"
       }
+    },
+    "ipaUS": {
+      "base": "/kʌt/",
+      "past": "/kʌt/",
+      "participle": "/kʌt/",
+      "third": "/kʌts/",
+      "ing": "/ˈkʌtɪŋ/"
     }
   },
   {
@@ -567,6 +625,13 @@
         "ing": "-ing form of do",
         "meaning": "perform an action"
       }
+    },
+    "ipaUS": {
+      "base": "/duː/",
+      "past": "/dɪd/",
+      "participle": "/dʌn/",
+      "third": "/dʌz/",
+      "ing": "/ˈduːɪŋ/"
     }
   },
   {
@@ -629,6 +694,13 @@
         "ing": "-ing form of drink",
         "meaning": "take liquid into the mouth"
       }
+    },
+    "ipaUS": {
+      "base": "/drɪŋk/",
+      "past": "/dræŋk/",
+      "participle": "/drʌŋk/",
+      "third": "/drɪŋks/",
+      "ing": "/ˈdrɪŋkɪŋ/"
     }
   },
   {
@@ -691,6 +763,13 @@
         "ing": "-ing form of eat",
         "meaning": "take in food"
       }
+    },
+    "ipaUS": {
+      "base": "/iːt/",
+      "past": "/eɪt/",
+      "participle": "/ˈiːtən/",
+      "third": "/iːts/",
+      "ing": "/ˈiːtɪŋ/"
     }
   },
   {
@@ -753,6 +832,13 @@
         "ing": "-ing form of give",
         "meaning": "provide something to someone"
       }
+    },
+    "ipaUS": {
+      "base": "/ɡɪv/",
+      "past": "/ɡeɪv/",
+      "participle": "/ˈɡɪvən/",
+      "third": "/ɡɪvz/",
+      "ing": "/ˈɡɪvɪŋ/"
     }
   },
   {
@@ -815,6 +901,13 @@
         "ing": "-ing form of go",
         "meaning": "move to another place"
       }
+    },
+    "ipaUS": {
+      "base": "/ɡoʊ/",
+      "past": "/went/",
+      "participle": "/ɡɑːn/",
+      "third": "/ɡoʊz/",
+      "ing": "/ˈɡoʊɪŋ/"
     }
   },
   {
@@ -877,6 +970,13 @@
         "ing": "-ing form of have",
         "meaning": "eat a meal (in this example)"
       }
+    },
+    "ipaUS": {
+      "base": "/hæv/",
+      "past": "/hæd/",
+      "participle": "/hæd/",
+      "third": "/hæz/",
+      "ing": "/ˈhævɪŋ/"
     }
   },
   {
@@ -939,6 +1039,13 @@
         "ing": "-ing form of hit",
         "meaning": "strike something"
       }
+    },
+    "ipaUS": {
+      "base": "/hɪt/",
+      "past": "/hɪt/",
+      "participle": "/hɪt/",
+      "third": "/hɪts/",
+      "ing": "/ˈhɪtɪŋ/"
     }
   },
   {
@@ -1001,6 +1108,13 @@
         "ing": "-ing form of know",
         "meaning": "have information"
       }
+    },
+    "ipaUS": {
+      "base": "/noʊ/",
+      "past": "/nuː/",
+      "participle": "/noʊn/",
+      "third": "/noʊz/",
+      "ing": "/ˈnoʊɪŋ/"
     }
   },
   {
@@ -1063,6 +1177,13 @@
         "ing": "-ing form of play",
         "meaning": "take part in a game"
       }
+    },
+    "ipaUS": {
+      "base": "/pleɪ/",
+      "past": "/pleɪd/",
+      "participle": "/pleɪd/",
+      "third": "/pleɪz/",
+      "ing": "/ˈpleɪɪŋ/"
     }
   },
   {
@@ -1125,6 +1246,13 @@
         "ing": "-ing form of put",
         "meaning": "place something somewhere"
       }
+    },
+    "ipaUS": {
+      "base": "/pʊt/",
+      "past": "/pʊt/",
+      "participle": "/pʊt/",
+      "third": "/pʊts/",
+      "ing": "/ˈpʊtɪŋ/"
     }
   },
   {
@@ -1187,6 +1315,13 @@
         "ing": "-ing form of run",
         "meaning": "move quickly on foot"
       }
+    },
+    "ipaUS": {
+      "base": "/rʌn/",
+      "past": "/ræn/",
+      "participle": "/rʌn/",
+      "third": "/rʌnz/",
+      "ing": "/ˈrʌnɪŋ/"
     }
   },
   {
@@ -1249,6 +1384,13 @@
         "ing": "-ing form of see",
         "meaning": "notice with the eyes"
       }
+    },
+    "ipaUS": {
+      "base": "/siː/",
+      "past": "/sɑː/",
+      "participle": "/siːn/",
+      "third": "/siːz/",
+      "ing": "/ˈsiːɪŋ/"
     }
   },
   {
@@ -1311,6 +1453,13 @@
         "ing": "-ing form of set",
         "meaning": "prepare or arrange something"
       }
+    },
+    "ipaUS": {
+      "base": "/set/",
+      "past": "/set/",
+      "participle": "/set/",
+      "third": "/sets/",
+      "ing": "/ˈsetɪŋ/"
     }
   },
   {
@@ -1373,6 +1522,13 @@
         "ing": "-ing form of speak",
         "meaning": "communicate using words"
       }
+    },
+    "ipaUS": {
+      "base": "/spiːk/",
+      "past": "/spoʊk/",
+      "participle": "/ˈspoʊkən/",
+      "third": "/spiːks/",
+      "ing": "/ˈspiːkɪŋ/"
     }
   },
   {
@@ -1435,6 +1591,13 @@
         "ing": "-ing form of study",
         "meaning": "learn about a subject"
       }
+    },
+    "ipaUS": {
+      "base": "/ˈstʌdi/",
+      "past": "/ˈstʌdid/",
+      "participle": "/ˈstʌdid/",
+      "third": "/ˈstʌdiz/",
+      "ing": "/ˈstʌdiɪŋ/"
     }
   },
   {
@@ -1497,6 +1660,13 @@
         "ing": "-ing form of take",
         "meaning": "have a break (in this example)"
       }
+    },
+    "ipaUS": {
+      "base": "/teɪk/",
+      "past": "/tʊk/",
+      "participle": "/ˈteɪkən/",
+      "third": "/teɪks/",
+      "ing": "/ˈteɪkɪŋ/"
     }
   },
   {
@@ -1559,6 +1729,13 @@
         "ing": "-ing form of teach",
         "meaning": "help someone learn"
       }
+    },
+    "ipaUS": {
+      "base": "/tiːtʃ/",
+      "past": "/tɑːt/",
+      "participle": "/tɑːt/",
+      "third": "/ˈtiːtʃɪz/",
+      "ing": "/ˈtiːtʃɪŋ/"
     }
   },
   {
@@ -1621,6 +1798,13 @@
         "ing": "-ing form of think",
         "meaning": "consider an idea"
       }
+    },
+    "ipaUS": {
+      "base": "/θɪŋk/",
+      "past": "/θɑːt/",
+      "participle": "/θɑːt/",
+      "third": "/θɪŋks/",
+      "ing": "/ˈθɪŋkɪŋ/"
     }
   },
   {
@@ -1683,6 +1867,13 @@
         "ing": "-ing form of work",
         "meaning": "do a job or task"
       }
+    },
+    "ipaUS": {
+      "base": "/wɝːk/",
+      "past": "/wɝːkt/",
+      "participle": "/wɝːkt/",
+      "third": "/wɝːks/",
+      "ing": "/ˈwɝːkɪŋ/"
     }
   },
   {
@@ -1745,6 +1936,13 @@
         "ing": "-ing form of write",
         "meaning": "put words into written form"
       }
+    },
+    "ipaUS": {
+      "base": "/raɪt/",
+      "past": "/roʊt/",
+      "participle": "/ˈrɪtən/",
+      "third": "/raɪts/",
+      "ing": "/ˈraɪtɪŋ/"
     }
   }
 ]

@@ -66,11 +66,19 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
     let regular: Bool
     let continuous: Bool
     let translations: [String: [String: String]]
+    let ipaUS: [String: String]
     func meaning(in language: CaptureLanguage) -> String {
         translations[language.code]?["meaning"] ?? (language == .spanish ? meaningEs : meaningEn)
     }
     func translatedForm(_ form: String, language: CaptureLanguage) -> String? {
         translations[language.code]?[form]
+    }
+    func pronunciation(_ form: String) -> String? { ipaUS[form] }
+    func translatedPronunciation(_ form: String, language: CaptureLanguage) -> String {
+        [translatedForm(form, language: language), pronunciation(form)].compactMap { $0 }.joined(separator: "  ")
+    }
+    func meaningAndPronunciation(in language: CaptureLanguage) -> String {
+        [meaning(in: language), pronunciation("base")].compactMap { $0 }.joined(separator: "  ")
     }
     var id: String { base }
     /// Patterns compare spelling. Read is deliberately absent from this first catalog:
@@ -135,6 +143,10 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
         else { throw CatalogFailure.invalid }
         for verb in verbs {
             let keys = ["meaning", "base", "past", "participle", "third", "ing"] + (verb.base == "be" ? ["past-was", "past-were"] : [])
+            guard keys.filter({ $0 != "meaning" }).allSatisfy({
+                let ipa = verb.ipaUS[$0] ?? ""
+                return ipa.hasPrefix("/") && ipa.hasSuffix("/") && ipa.count > 2
+            }) else { throw CatalogFailure.invalid }
             guard CaptureLanguage.allCases.allSatisfy({ language in
                 keys.allSatisfy { !(verb.translations[language.code]?[$0] ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
             }) else { throw CatalogFailure.invalid }
@@ -150,5 +162,26 @@ enum VerbTranslationPreference {
     static func language(saved: String, interfaceAtSelection: String, currentInterface: String) -> CaptureLanguage {
         if interfaceAtSelection == currentInterface, let value = CaptureLanguage(rawValue: saved) { return value }
         return CaptureLanguage.allCases.first { $0.code == currentInterface } ?? .english
+    }
+}
+
+/// Manual, independent marks keyed by the stable English base form. These never assess
+/// pronunciation or alter personal practices, examples, audio or the conjugation catalog.
+struct VerbLibraryMarks: Codable, Equatable {
+    var favorites: Set<String> = []
+    var completed: Set<String> = []
+    init(favorites: Set<String> = [], completed: Set<String> = []) {
+        self.favorites = favorites; self.completed = completed
+    }
+    init(data: Data) { self = (try? JSONDecoder().decode(Self.self, from: data)) ?? Self() }
+    var data: Data { (try? JSONEncoder().encode(self)) ?? Data() }
+    mutating func toggleFavorite(_ id: String) {
+        if favorites.contains(id) { favorites.remove(id) } else { favorites.insert(id) }
+    }
+    mutating func toggleCompleted(_ id: String) {
+        if completed.contains(id) { completed.remove(id) } else { completed.insert(id) }
+    }
+    func includes(_ id: String, favoritesOnly: Bool, completedOnly: Bool) -> Bool {
+        (!favoritesOnly || favorites.contains(id)) && (!completedOnly || completed.contains(id))
     }
 }

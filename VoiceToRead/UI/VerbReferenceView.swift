@@ -7,6 +7,11 @@ struct VerbReferenceLibraryView: View {
     @State private var pattern: VerbPattern = .all
     @State private var tense: VerbTense = .all
     @State private var failed = false
+    @State private var favoritesOnly = false
+    @State private var completedOnly = false
+    @AppStorage("verbReferenceMarks") private var marksData = Data()
+    @Environment(\.dynamicTypeSize) private var typeSize
+    private var marks: VerbLibraryMarks { VerbLibraryMarks(data: marksData) }
     @Environment(AppSettings.self) private var settings
     @AppStorage("verbReferenceTranslationLocale") private var translationLocale = ""
     @AppStorage("verbReferenceInterfaceAtSelection") private var interfaceAtSelection = ""
@@ -20,7 +25,11 @@ struct VerbReferenceLibraryView: View {
             interfaceAtSelection = settings.interfaceLanguage.rawValue
         })
     }
-    private var matches: [ConjugationVerb] { ConjugationVerb.matching(verbs, query: query, pattern: pattern, tense: tense) }
+    private var matches: [ConjugationVerb] {
+        ConjugationVerb.matching(verbs, query: query, pattern: pattern, tense: tense).filter {
+            marks.includes($0.id, favoritesOnly: favoritesOnly, completedOnly: completedOnly)
+        }
+    }
     var body: some View {
         List {
             Section {
@@ -36,6 +45,12 @@ struct VerbReferenceLibraryView: View {
                     .accessibilityIdentifier("verbLibraryTranslationLanguage")
                 Text(LocalizedStringKey(pattern.explanation)).font(.caption).foregroundStyle(.secondary)
             }
+            Section {
+                markFilters
+                if favoritesOnly && completedOnly {
+                    Text("Favorites marked as done").font(.caption).foregroundStyle(.secondary)
+                }
+            }
             if failed {
                 Section {
                     Text("The verb reference could not be opened. Please try again.")
@@ -44,21 +59,11 @@ struct VerbReferenceLibraryView: View {
             } else if matches.isEmpty && !verbs.isEmpty {
                 Section {
                     ContentUnavailableView.search(text: query)
-                    Button("Clear filters") { query = ""; pattern = .all; tense = .all }
+                    Button("Clear filters") { query = ""; pattern = .all; tense = .all; favoritesOnly = false; completedOnly = false }
                 }
             } else {
                 Section("Choose a verb") {
-                    ForEach(matches) { verb in
-                        NavigationLink { VerbConjugationView(verb: verb, initialTense: tense) } label: {
-                            VStack(alignment: .leading, spacing: 6) {
-                                Text(verbatim: verb.base).font(.headline)
-                                Text(verbatim: verb.meaning(in: translationLanguage))
-                                    .font(.subheadline).foregroundStyle(.secondary)
-                                Text(verbatim: "\(verb.base) · \(verb.past) · \(verb.participle)")
-                                    .font(.caption).foregroundStyle(.secondary)
-                            }.padding(.vertical, 6)
-                        }.accessibilityIdentifier("verb-" + verb.base)
-                    }
+                    ForEach(matches) { verb in verbRow(verb) }
                 }
             }
         }
@@ -67,6 +72,66 @@ struct VerbReferenceLibraryView: View {
         .task { if verbs.isEmpty { load() } }
         .onAppear { followAppLanguage() }
         .onChange(of: settings.interfaceLanguage) { _, _ in translationLocale = ""; interfaceAtSelection = "" }
+    }
+    private var markFilters: some View {
+        let layout = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 8)) : AnyLayout(HStackLayout(spacing: 12))
+        return layout {
+            markFilter("Favorite verbs", symbol: favoritesOnly ? "star.fill" : "star", selected: favoritesOnly) { favoritesOnly.toggle() }
+                .accessibilityIdentifier("verbFavoritesFilter")
+            markFilter("Completed verbs", symbol: completedOnly ? "checkmark.square.fill" : "square", selected: completedOnly) { completedOnly.toggle() }
+                .accessibilityIdentifier("verbCompletedFilter")
+        }
+    }
+    private func markFilter(_ title: String, symbol: String, selected: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Label(LocalizedStringKey(title), systemImage: symbol)
+                .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
+                .frame(maxWidth: .infinity, minHeight: 44)
+                .foregroundStyle(selected ? Color.accentColor : Color.secondary)
+                .background(selected ? Color.accentColor.opacity(0.12) : Color.secondary.opacity(0.06), in: RoundedRectangle(cornerRadius: 10))
+        }.buttonStyle(.plain)
+            .accessibilityLabel(Text(LocalizedStringKey(title)))
+            .accessibilityValue(Text(LocalizedStringKey(selected ? "On" : "Off")))
+            .accessibilityAddTraits(selected ? .isSelected : [])
+    }
+    private func verbRow(_ verb: ConjugationVerb) -> some View {
+        let layout = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(spacing: 8))
+        return layout {
+            NavigationLink { VerbConjugationView(verb: verb, initialTense: tense) } label: {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(verbatim: verb.base).font(.headline)
+                    Text(verbatim: verb.meaningAndPronunciation(in: translationLanguage)).font(.subheadline).foregroundStyle(.secondary)
+                    Text(verbatim: "\(verb.base) · \(verb.past) · \(verb.participle)").font(.caption).foregroundStyle(.secondary)
+                }.padding(.vertical, 6).frame(maxWidth: .infinity, alignment: .leading)
+            }.accessibilityIdentifier("verb-" + verb.base)
+            let actions = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(spacing: 8))
+            actions {
+                markButton(verb, favorite: true)
+                markButton(verb, favorite: false)
+            }.fixedSize(horizontal: !typeSize.isAccessibilitySize, vertical: false)
+        }
+    }
+    private func markButton(_ verb: ConjugationVerb, favorite: Bool) -> some View {
+        let selected = favorite ? marks.favorites.contains(verb.id) : marks.completed.contains(verb.id)
+        let symbol = favorite ? (selected ? "star.fill" : "star") : (selected ? "checkmark.square.fill" : "square")
+        let action = favorite ? (selected ? "Remove favorite" : "Add favorite") : (selected ? "Mark as not done" : "Mark as done")
+        return Button {
+            var updated = marks
+            if favorite { updated.toggleFavorite(verb.id) } else { updated.toggleCompleted(verb.id) }
+            marksData = updated.data
+        } label: {
+            VStack(spacing: 3) {
+                Image(systemName: symbol).font(.system(size: 20, weight: .medium))
+                    .foregroundStyle(selected ? (favorite ? Color.orange : Color.green) : Color.secondary)
+                if settings.showButtonNames {
+                    Text(LocalizedStringKey(favorite ? "Favorite verb" : "Completed verb")).font(.caption2).foregroundStyle(.secondary)
+                }
+            }.frame(minWidth: 44, minHeight: 44)
+        }.buttonStyle(.borderless)
+            .accessibilityLabel(Text(LocalizedStringKey(action)) + Text(verbatim: ": " + verb.base))
+            .accessibilityValue(Text(LocalizedStringKey(selected ? "On" : "Off")))
+            .accessibilityAddTraits(selected ? .isSelected : [])
+            .accessibilityIdentifier((favorite ? "verbFavorite-" : "verbCompleted-") + verb.base)
     }
     private func followAppLanguage() {
         if interfaceAtSelection != settings.interfaceLanguage.rawValue { translationLocale = ""; interfaceAtSelection = "" }
@@ -111,7 +176,7 @@ private struct VerbConjugationView: View {
     var body: some View {
         List {
             Section {
-                Text(verbatim: verb.meaning(in: translationLanguage)).font(.headline)
+                Text(verbatim: verb.meaningAndPronunciation(in: translationLanguage)).font(.headline)
                 Text(LocalizedStringKey(verb.pattern.explanation)).font(.caption).foregroundStyle(.secondary)
                 Picker("Verb tense", selection: $tense) {
                     Text("All tenses").tag(VerbTense.all)
@@ -145,7 +210,7 @@ private struct VerbConjugationView: View {
                 }
                 if let message = player.message { interfaceMessage(message).font(.subheadline).foregroundStyle(.red) }
             }
-            Section("Verb pronunciation") {
+            Section {
                 wordRow("Base form", word: verb.base, id: "base")
                 if verb.base == "be" {
                     wordRow("Simple past", word: "was", id: "past-was")
@@ -154,7 +219,7 @@ private struct VerbConjugationView: View {
                 wordRow("Past participle", word: verb.participle, id: "participle")
                 wordRow("He / she / it", word: verb.thirdPerson, id: "third")
                 wordRow("-ing form", word: verb.ing, id: "ing")
-            }
+            } header: { Text("Verb pronunciation") } footer: { Text("IPA · American English") }
             ForEach(tenses) { item in
                 Section {
                     Text(LocalizedStringKey(item.explanation)).font(.subheadline).foregroundStyle(.secondary)
@@ -187,8 +252,8 @@ private struct VerbConjugationView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(LocalizedStringKey(label)).font(.caption).foregroundStyle(.secondary)
                 Text(verbatim: word).font(.title3).textSelection(.enabled)
-                if let translation = verb.translatedForm(id, language: translationLanguage) {
-                    Text(verbatim: translation).font(.caption).foregroundStyle(.secondary)
+                if verb.translatedForm(id, language: translationLanguage) != nil {
+                    Text(verbatim: verb.translatedPronunciation(id, language: translationLanguage)).font(.caption).foregroundStyle(.secondary)
                         .textSelection(.enabled).accessibilityIdentifier("verbGloss-" + id)
                 }
             }.frame(maxWidth: .infinity, alignment: .leading)

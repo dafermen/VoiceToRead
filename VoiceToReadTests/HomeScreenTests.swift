@@ -2862,15 +2862,72 @@ extension HomeScreenTests {
         be.tap()
         let base = app.staticTexts["verbGloss-base"]
         for _ in 0..<4 where !base.isHittable { app.swipeUp() }
-        XCTAssertEqual(base.label, "ser / estar")
+        XCTAssertEqual(base.label, "ser / estar  /biː/")
         for _ in 0..<6 where !app.buttons["verbTranslationLanguage"].isHittable { app.swipeDown() }
         app.buttons["verbTranslationLanguage"].tap(); app.buttons["French · Français"].tap()
         for _ in 0..<4 where !base.isHittable { app.swipeUp() }
-        XCTAssertEqual(base.label, "être")
+        XCTAssertEqual(base.label, "être  /biː/")
         for _ in 0..<6 where !app.buttons["verbUseAppLanguage"].isHittable { app.swipeDown() }
         app.buttons["verbUseAppLanguage"].tap()
         for _ in 0..<4 where !base.isHittable { app.swipeUp() }
-        XCTAssertEqual(base.label, "exist or be in a state")
+        XCTAssertEqual(base.label, "exist or be in a state  /biː/")
         XCTAssertFalse(app.alerts.firstMatch.exists)
+    }
+}
+
+extension HomeScreenTests {
+    @MainActor
+    func testVerbMarksDoNotNavigateAndPersistWithCombinedFilters() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-interfaceLanguage", "en"]
+        func openVerbs() {
+            let mode = communicationMode(in: app)
+            XCTAssertTrue(mode.waitForExistence(timeout: 20))
+            mode.buttons["Train"].tap()
+            let entry = app.buttons["trainingVerbsEntry"]
+            for _ in 0..<6 where !entry.isHittable { app.swipeUp() }
+            entry.tap()
+            XCTAssertTrue(app.buttons["verbFavoritesFilter"].waitForExistence(timeout: 5))
+        }
+        func revealMarks(_ base: String) {
+            for _ in 0..<6 where !app.buttons["verbFavoritesFilter"].isHittable { app.swipeDown() }
+            for _ in 0..<5 where !app.buttons["verbFavorite-" + base].isHittable { app.swipeUp() }
+        }
+        func revealFilters() {
+            for _ in 0..<6 where !app.buttons["verbFavoritesFilter"].isHittable { app.swipeDown() }
+        }
+        app.launch(); openVerbs()
+        for base in ["be", "beat"] {
+            revealMarks(base)
+            for prefix in ["verbFavorite-", "verbCompleted-"] {
+                let mark = app.buttons[prefix + base]
+                if mark.value as? String == "On" { mark.tap() }
+                XCTAssertGreaterThanOrEqual(mark.frame.width, 44)
+                XCTAssertGreaterThanOrEqual(mark.frame.height, 44)
+            }
+        }
+        revealMarks("be")
+        app.buttons["verbFavorite-be"].tap()
+        app.buttons["verbCompleted-be"].tap()
+        XCTAssertTrue(app.navigationBars["Verbs and sentences"].exists, "Marking a verb must not open its conjugations")
+        revealMarks("beat"); app.buttons["verbFavorite-beat"].tap()
+        app.terminate(); app.launch(); openVerbs()
+        revealMarks("be")
+        XCTAssertEqual(app.buttons["verbFavorite-be"].value as? String, "On")
+        XCTAssertEqual(app.buttons["verbCompleted-be"].value as? String, "On")
+        revealFilters(); app.buttons["verbFavoritesFilter"].tap()
+        revealMarks("beat")
+        XCTAssertTrue(app.buttons["verb-beat"].exists)
+        revealFilters(); app.buttons["verbCompletedFilter"].tap()
+        revealMarks("be")
+        XCTAssertTrue(app.buttons["verb-be"].exists)
+        XCTAssertFalse(app.buttons["verb-beat"].exists, "Combined filters require both marks")
+        app.buttons["verbFavorite-be"].tap()
+        XCTAssertFalse(app.buttons["verb-be"].exists)
+        revealFilters(); app.buttons["verbFavoritesFilter"].tap(); app.buttons["verbCompletedFilter"].tap()
+        revealMarks("be")
+        XCTAssertEqual(app.buttons["verbCompleted-be"].value as? String, "On", "Removing a favorite retains Done")
+        app.buttons["verbCompleted-be"].tap()
+        revealMarks("beat"); app.buttons["verbFavorite-beat"].tap()
     }
 }

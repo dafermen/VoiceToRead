@@ -93,3 +93,60 @@ extension VerbConjugationTests {
         }
     }
 }
+
+extension VerbConjugationTests {
+    func testEveryWordFormHasIPAIndependentOfTranslationLanguage() throws {
+        for verb in try ConjugationVerb.load() {
+            let forms = ["base", "participle", "third", "ing"] + (verb.base == "be" ? ["past-was", "past-were"] : ["past"])
+            for form in forms {
+                let ipa = try XCTUnwrap(verb.pronunciation(form))
+                XCTAssertTrue(ipa.hasPrefix("/") && ipa.hasSuffix("/"))
+                for language in CaptureLanguage.allCases {
+                    let display = verb.translatedPronunciation(form, language: language)
+                    XCTAssertTrue(display.hasSuffix(ipa))
+                    XCTAssertTrue(display.hasPrefix(try XCTUnwrap(verb.translatedForm(form, language: language))))
+                }
+            }
+        }
+        XCTAssertEqual(try verb("become").translatedPronunciation("base", language: .spanish), "convertirse en  /bɪˈkʌm/")
+        XCTAssertEqual(try verb("do").pronunciation("third"), "/dʌz/")
+        XCTAssertEqual(try verb("be").pronunciation("participle"), "/bɪn/")
+        XCTAssertEqual(try verb("work").pronunciation("past"), "/wɝːkt/")
+    }
+    func testVerbMarksToggleIndependentlyAndSurvivePreferenceReload() throws {
+        let suite = "VerbMarksTests-" + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        var marks = VerbLibraryMarks()
+        marks.toggleFavorite("become")
+        XCTAssertTrue(marks.favorites.contains("become"))
+        XCTAssertFalse(marks.completed.contains("become"))
+        marks.toggleCompleted("become")
+        marks.toggleFavorite("write")
+        defaults.set(marks.data, forKey: "verbReferenceMarks")
+        let restored = VerbLibraryMarks(data: try XCTUnwrap(defaults.data(forKey: "verbReferenceMarks")))
+        XCTAssertEqual(restored, marks)
+        marks.toggleFavorite("become")
+        XCTAssertFalse(marks.favorites.contains("become"))
+        XCTAssertTrue(marks.completed.contains("become"))
+        marks.toggleCompleted("become")
+        XCTAssertFalse(marks.completed.contains("become"))
+        XCTAssertTrue(marks.favorites.contains("write"))
+        XCTAssertEqual(VerbLibraryMarks(data: Data("invalid".utf8)), VerbLibraryMarks())
+    }
+    func testVerbMarkFiltersCombineByIntersectionWithTheExistingFilters() throws {
+        let verbs = try ConjugationVerb.load()
+        let marks = VerbLibraryMarks(favorites: ["become", "run", "write"], completed: ["run", "buy"])
+        func matches(favorites: Bool, completed: Bool, pattern: VerbPattern = .all, query: String = "") -> [String] {
+            ConjugationVerb.matching(verbs, query: query, pattern: pattern, tense: .all)
+                .filter { marks.includes($0.id, favoritesOnly: favorites, completedOnly: completed) }.map(\.id)
+        }
+        XCTAssertEqual(matches(favorites: false, completed: false).count, verbs.count)
+        XCTAssertEqual(matches(favorites: true, completed: false), ["become", "run", "write"])
+        XCTAssertEqual(matches(favorites: false, completed: true), ["buy", "run"])
+        XCTAssertEqual(matches(favorites: true, completed: true), ["run"])
+        XCTAssertEqual(matches(favorites: true, completed: false, pattern: .aba), ["become", "run"])
+        XCTAssertEqual(matches(favorites: true, completed: true, query: "written"), [])
+        XCTAssertEqual(marks.favorites, ["become", "run", "write"], "Filtering never changes the marks")
+    }
+}

@@ -1383,3 +1383,13 @@
 "Translations are prepared automatically. You can review and correct them whenever you like." = "Las traducciones se preparan automáticamente. Puedes revisarlas y corregirlas cuando quieras.";
 "Translation cancelled. Your saved translations are unchanged." = "Traducción cancelada. Se conservan las traducciones guardadas.";
 "Practice options" = "Opciones de práctica";
+"Favorites marked as done" = "Favoritos marcados como realizados";
+"Add favorite" = "Añadir a favoritos";
+"Remove favorite" = "Quitar de favoritos";
+"Mark as done" = "Marcar como realizado";
+"Mark as not done" = "Marcar como no realizado";
+"IPA · American English" = "AFI · Inglés americano";
+"Favorite verbs" = "Favoritos";
+"Completed verbs" = "Realizados";
+"Favorite verb" = "Favorito";
+"Completed verb" = "Realizado";
