@@ -60,3 +60,36 @@ final class VerbConjugationTests: XCTestCase {
         }
     }
 }
+
+extension VerbConjugationTests {
+    func testEveryDisplayedWordHasAGlossInEverySupportLanguage() throws {
+        for verb in try ConjugationVerb.load() {
+            let keys = ["base", "participle", "third", "ing"] + (verb.base == "be" ? ["past-was", "past-were"] : ["past"])
+            for language in CaptureLanguage.allCases {
+                XCTAssertFalse(verb.meaning(in: language).isEmpty)
+                for key in keys { XCTAssertFalse(try XCTUnwrap(verb.translatedForm(key, language: language)).isEmpty) }
+            }
+        }
+        let be = try verb("be")
+        XCTAssertEqual(be.translatedForm("base", language: .spanish), "ser / estar")
+        XCTAssertEqual(be.translatedForm("third", language: .spanish), "es / está")
+        XCTAssertNotEqual(be.translatedForm("past-was", language: .spanish), be.translatedForm("past-were", language: .spanish))
+        XCTAssertEqual(try verb("write").translatedForm("base", language: .french), "écrire")
+        XCTAssertEqual(try verb("write").translatedForm("base", language: .japanese), "書く")
+        XCTAssertEqual(try verb("study").translatedForm("base", language: .chinese), "学习")
+    }
+    func testTranslationDefaultAndManualOverrideFollowAppSettings() {
+        XCTAssertEqual(VerbTranslationPreference.language(saved: "", interfaceAtSelection: "", currentInterface: "es"), .spanish)
+        XCTAssertEqual(VerbTranslationPreference.language(saved: "", interfaceAtSelection: "", currentInterface: "en"), .english)
+        XCTAssertEqual(VerbTranslationPreference.language(saved: "fr-FR", interfaceAtSelection: "es", currentInterface: "es"), .french)
+        XCTAssertEqual(VerbTranslationPreference.language(saved: "fr-FR", interfaceAtSelection: "es", currentInterface: "en"), .english)
+        XCTAssertEqual(VerbTranslationPreference.language(saved: "invalid", interfaceAtSelection: "es", currentInterface: "es"), .spanish)
+        XCTAssertEqual(VerbTranslationPreference.language(saved: "", interfaceAtSelection: "", currentInterface: "fr"), .french)
+    }
+    func testSearchFindsMeaningsInTheAdditionalLanguages() throws {
+        let verbs = try ConjugationVerb.load()
+        for (text, base) in [("acheter", "buy"), ("書く", "write"), ("마시다", "drink"), ("学习", "study")] {
+            XCTAssertEqual(ConjugationVerb.matching(verbs, query: text, pattern: .all, tense: .all).map(\.base), [base])
+        }
+    }
+}

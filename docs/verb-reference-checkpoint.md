@@ -28,3 +28,23 @@ the conjugation engine, exceptions, filtering/search and all supported combinati
 test covers entry, AAB filtering, tense/form/pronoun selections, slow default and touch targets.
 Native Swift compilation, XCTest/XCUI execution, VoiceOver, playback and visual iPhone checks
 require Xcode/macOS and have not been run on Windows.
+
+## Per-form translation update
+
+Each pronunciation row now places its contextual translation below the English word, using
+the same caption font and secondary color as the form label. All 28 verbs include English
+glosses and Spanish, French, Korean, Japanese and simplified Chinese equivalents. Was and
+were have separate glosses. English inflections do not map one-to-one to target-language
+conjugations; a short visible note states that meanings depend on context.
+
+The existing LanguagePickerControl appears below the library/detail filters. Its choice is
+shared within this module and survives navigation. Initially it follows the interface language;
+a manual override is remembered until Use app language or a change of interface language in
+Settings. A stale choice is discarded on reentry. Interface menus remain in the application's
+currently supported English/Spanish locales; choosing French content does not change the
+global interface. Search also accepts the new meanings. No API call or download is needed.
+
+Additional XCTest coverage checks translation completeness, representative meanings, default/
+override selection, settings changes and multilingual search. XCUI coverage checks Spanish,
+French and return-to-app-language behavior. Native tests and visual verification remain pending
+on macOS/iPhone; Windows checks cover resource integrity, localization and project references.

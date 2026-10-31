@@ -1376,3 +1376,6 @@
 "ABC" = "ABC";
 "ABA" = "ABA";
 "AAB" = "AAB";
+"Use app language" = "Usar idioma de la app";
+"Translation language" = "Idioma de traducción";
+"Meanings vary with context and may not match word for word." = "Las equivalencias dependen del contexto y del idioma.";

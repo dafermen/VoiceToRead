@@ -9,7 +9,69 @@
     "meaningEn": "exist or be in a state",
     "complement": "ready",
     "regular": false,
-    "continuous": false
+    "continuous": false,
+    "translations": {
+      "es": {
+        "base": "ser / estar",
+        "past": "era / estaba",
+        "participle": "sido / estado",
+        "third": "es / está",
+        "ing": "siendo / estando",
+        "meaning": "ser / estar",
+        "past-was": "era / estaba",
+        "past-were": "eras / estabas / éramos / estábamos / erais / estabais / eran / estaban"
+      },
+      "fr": {
+        "base": "être",
+        "past": "était",
+        "participle": "été",
+        "third": "est",
+        "ing": "étant",
+        "meaning": "être",
+        "past-was": "étais / était",
+        "past-were": "étais / étions / étiez / étaient"
+      },
+      "ko": {
+        "base": "이다 / 있다",
+        "past": "이었다 / 있었다",
+        "participle": "이었다 / 있었다",
+        "third": "이다 / 있다",
+        "ing": "인 / 있는",
+        "meaning": "이다 / 있다",
+        "past-was": "이었다 / 있었다",
+        "past-were": "이었다 / 있었다"
+      },
+      "ja": {
+        "base": "である / いる",
+        "past": "だった / いた",
+        "participle": "だった / いた",
+        "third": "である / いる",
+        "ing": "である / いる",
+        "meaning": "である / いる",
+        "past-was": "だった / いた",
+        "past-were": "だった / いた"
+      },
+      "zh-Hans": {
+        "base": "是 / 处于",
+        "past": "曾是 / 曾处于",
+        "participle": "曾是 / 曾处于",
+        "third": "是 / 处于",
+        "ing": "是 / 处于",
+        "meaning": "是 / 处于",
+        "past-was": "曾是 / 曾处于",
+        "past-were": "曾是 / 曾处于"
+      },
+      "en": {
+        "base": "exist or be in a state",
+        "past": "past of be",
+        "participle": "past participle of be",
+        "third": "he / she / it: exist or be in a state",
+        "ing": "-ing form of be",
+        "meaning": "exist or be in a state",
+        "past-was": "past of be: I / he / she / it",
+        "past-were": "past of be: you / we / they"
+      }
+    }
   },
   {
     "base": "beat",
@@ -21,7 +83,57 @@
     "meaningEn": "strike repeatedly",
     "complement": "a drum",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "golpear",
+        "past": "golpeó",
+        "participle": "golpeado",
+        "third": "golpea",
+        "ing": "golpeando",
+        "meaning": "golpear"
+      },
+      "fr": {
+        "base": "frapper",
+        "past": "a frappé",
+        "participle": "frappé",
+        "third": "frappe",
+        "ing": "en frappant",
+        "meaning": "frapper"
+      },
+      "ko": {
+        "base": "두드리다",
+        "past": "두드렸다",
+        "participle": "두드렸다",
+        "third": "두드리다",
+        "ing": "두드리고 있는",
+        "meaning": "두드리다"
+      },
+      "ja": {
+        "base": "たたく",
+        "past": "たたいた",
+        "participle": "たたいた",
+        "third": "たたく",
+        "ing": "たたいている",
+        "meaning": "たたく"
+      },
+      "zh-Hans": {
+        "base": "敲打",
+        "past": "敲打了",
+        "participle": "敲打了",
+        "third": "敲打",
+        "ing": "正在敲打",
+        "meaning": "敲打"
+      },
+      "en": {
+        "base": "strike repeatedly",
+        "past": "past of beat",
+        "participle": "past participle of beat",
+        "third": "he / she / it: strike repeatedly",
+        "ing": "-ing form of beat",
+        "meaning": "strike repeatedly"
+      }
+    }
   },
   {
     "base": "become",
@@ -33,7 +145,57 @@
     "meaningEn": "begin to be something",
     "complement": "a teacher",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "convertirse en",
+        "past": "se convirtió en",
+        "participle": "convertido en",
+        "third": "se convierte en",
+        "ing": "convirtiéndose en",
+        "meaning": "convertirse en"
+      },
+      "fr": {
+        "base": "devenir",
+        "past": "est devenu",
+        "participle": "devenu",
+        "third": "devient",
+        "ing": "en devenant",
+        "meaning": "devenir"
+      },
+      "ko": {
+        "base": "되다",
+        "past": "되었다",
+        "participle": "되었다",
+        "third": "되다",
+        "ing": "되어 가는",
+        "meaning": "되다"
+      },
+      "ja": {
+        "base": "なる",
+        "past": "なった",
+        "participle": "なった",
+        "third": "なる",
+        "ing": "なりつつある",
+        "meaning": "なる"
+      },
+      "zh-Hans": {
+        "base": "成为",
+        "past": "成为了",
+        "participle": "成为了",
+        "third": "成为",
+        "ing": "正在成为",
+        "meaning": "成为"
+      },
+      "en": {
+        "base": "begin to be something",
+        "past": "past of become",
+        "participle": "past participle of become",
+        "third": "he / she / it: begin to be something",
+        "ing": "-ing form of become",
+        "meaning": "begin to be something"
+      }
+    }
   },
   {
     "base": "bring",
@@ -45,7 +207,57 @@
     "meaningEn": "carry something to a place",
     "complement": "a notebook",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "traer",
+        "past": "trajo",
+        "participle": "traído",
+        "third": "trae",
+        "ing": "trayendo",
+        "meaning": "traer"
+      },
+      "fr": {
+        "base": "apporter",
+        "past": "a apporté",
+        "participle": "apporté",
+        "third": "apporte",
+        "ing": "en apportant",
+        "meaning": "apporter"
+      },
+      "ko": {
+        "base": "가져오다",
+        "past": "가져왔다",
+        "participle": "가져왔다",
+        "third": "가져오다",
+        "ing": "가져오고 있는",
+        "meaning": "가져오다"
+      },
+      "ja": {
+        "base": "持ってくる",
+        "past": "持ってきた",
+        "participle": "持ってきた",
+        "third": "持ってくる",
+        "ing": "持ってきている",
+        "meaning": "持ってくる"
+      },
+      "zh-Hans": {
+        "base": "带来",
+        "past": "带来了",
+        "participle": "带来了",
+        "third": "带来",
+        "ing": "正在带来",
+        "meaning": "带来"
+      },
+      "en": {
+        "base": "carry something to a place",
+        "past": "past of bring",
+        "participle": "past participle of bring",
+        "third": "he / she / it: carry something to a place",
+        "ing": "-ing form of bring",
+        "meaning": "carry something to a place"
+      }
+    }
   },
   {
     "base": "build",
@@ -57,7 +269,57 @@
     "meaningEn": "make a structure",
     "complement": "a house",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "construir",
+        "past": "construyó",
+        "participle": "construido",
+        "third": "construye",
+        "ing": "construyendo",
+        "meaning": "construir"
+      },
+      "fr": {
+        "base": "construire",
+        "past": "a construit",
+        "participle": "construit",
+        "third": "construit",
+        "ing": "en construisant",
+        "meaning": "construire"
+      },
+      "ko": {
+        "base": "짓다",
+        "past": "지었다",
+        "participle": "지었다",
+        "third": "짓다",
+        "ing": "짓고 있는",
+        "meaning": "짓다"
+      },
+      "ja": {
+        "base": "建てる",
+        "past": "建てた",
+        "participle": "建てた",
+        "third": "建てる",
+        "ing": "建てている",
+        "meaning": "建てる"
+      },
+      "zh-Hans": {
+        "base": "建造",
+        "past": "建造了",
+        "participle": "建造了",
+        "third": "建造",
+        "ing": "正在建造",
+        "meaning": "建造"
+      },
+      "en": {
+        "base": "make a structure",
+        "past": "past of build",
+        "participle": "past participle of build",
+        "third": "he / she / it: make a structure",
+        "ing": "-ing form of build",
+        "meaning": "make a structure"
+      }
+    }
   },
   {
     "base": "buy",
@@ -69,7 +331,57 @@
     "meaningEn": "get something by paying",
     "complement": "fresh bread",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "comprar",
+        "past": "compró",
+        "participle": "comprado",
+        "third": "compra",
+        "ing": "comprando",
+        "meaning": "comprar"
+      },
+      "fr": {
+        "base": "acheter",
+        "past": "a acheté",
+        "participle": "acheté",
+        "third": "achète",
+        "ing": "en achetant",
+        "meaning": "acheter"
+      },
+      "ko": {
+        "base": "사다",
+        "past": "샀다",
+        "participle": "샀다",
+        "third": "사다",
+        "ing": "사고 있는",
+        "meaning": "사다"
+      },
+      "ja": {
+        "base": "買う",
+        "past": "買った",
+        "participle": "買った",
+        "third": "買う",
+        "ing": "買っている",
+        "meaning": "買う"
+      },
+      "zh-Hans": {
+        "base": "买",
+        "past": "买了",
+        "participle": "买了",
+        "third": "买",
+        "ing": "正在买",
+        "meaning": "买"
+      },
+      "en": {
+        "base": "get something by paying",
+        "past": "past of buy",
+        "participle": "past participle of buy",
+        "third": "he / she / it: get something by paying",
+        "ing": "-ing form of buy",
+        "meaning": "get something by paying"
+      }
+    }
   },
   {
     "base": "come",
@@ -81,7 +393,57 @@
     "meaningEn": "move toward a place",
     "complement": "to class",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "venir",
+        "past": "vino",
+        "participle": "venido",
+        "third": "viene",
+        "ing": "viniendo",
+        "meaning": "venir"
+      },
+      "fr": {
+        "base": "venir",
+        "past": "est venu",
+        "participle": "venu",
+        "third": "vient",
+        "ing": "en venant",
+        "meaning": "venir"
+      },
+      "ko": {
+        "base": "오다",
+        "past": "왔다",
+        "participle": "왔다",
+        "third": "오다",
+        "ing": "오고 있는",
+        "meaning": "오다"
+      },
+      "ja": {
+        "base": "来る",
+        "past": "来た",
+        "participle": "来た",
+        "third": "来る",
+        "ing": "来ている",
+        "meaning": "来る"
+      },
+      "zh-Hans": {
+        "base": "来",
+        "past": "来了",
+        "participle": "来了",
+        "third": "来",
+        "ing": "正在来",
+        "meaning": "来"
+      },
+      "en": {
+        "base": "move toward a place",
+        "past": "past of come",
+        "participle": "past participle of come",
+        "third": "he / she / it: move toward a place",
+        "ing": "-ing form of come",
+        "meaning": "move toward a place"
+      }
+    }
   },
   {
     "base": "cut",
@@ -93,7 +455,57 @@
     "meaningEn": "divide with a sharp tool",
     "complement": "the paper",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "cortar",
+        "past": "cortó",
+        "participle": "cortado",
+        "third": "corta",
+        "ing": "cortando",
+        "meaning": "cortar"
+      },
+      "fr": {
+        "base": "couper",
+        "past": "a coupé",
+        "participle": "coupé",
+        "third": "coupe",
+        "ing": "en coupant",
+        "meaning": "couper"
+      },
+      "ko": {
+        "base": "자르다",
+        "past": "잘랐다",
+        "participle": "잘랐다",
+        "third": "자르다",
+        "ing": "자르고 있는",
+        "meaning": "자르다"
+      },
+      "ja": {
+        "base": "切る",
+        "past": "切った",
+        "participle": "切った",
+        "third": "切る",
+        "ing": "切っている",
+        "meaning": "切る"
+      },
+      "zh-Hans": {
+        "base": "剪 / 切",
+        "past": "剪了 / 切了",
+        "participle": "剪了 / 切了",
+        "third": "剪 / 切",
+        "ing": "正在剪 / 切",
+        "meaning": "剪 / 切"
+      },
+      "en": {
+        "base": "divide with a sharp tool",
+        "past": "past of cut",
+        "participle": "past participle of cut",
+        "third": "he / she / it: divide with a sharp tool",
+        "ing": "-ing form of cut",
+        "meaning": "divide with a sharp tool"
+      }
+    }
   },
   {
     "base": "do",
@@ -105,7 +517,57 @@
     "meaningEn": "perform an action",
     "complement": "the homework",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "hacer",
+        "past": "hizo",
+        "participle": "hecho",
+        "third": "hace",
+        "ing": "haciendo",
+        "meaning": "hacer"
+      },
+      "fr": {
+        "base": "faire",
+        "past": "a fait",
+        "participle": "fait",
+        "third": "fait",
+        "ing": "en faisant",
+        "meaning": "faire"
+      },
+      "ko": {
+        "base": "하다",
+        "past": "했다",
+        "participle": "했다",
+        "third": "하다",
+        "ing": "하고 있는",
+        "meaning": "하다"
+      },
+      "ja": {
+        "base": "する",
+        "past": "した",
+        "participle": "した",
+        "third": "する",
+        "ing": "している",
+        "meaning": "する"
+      },
+      "zh-Hans": {
+        "base": "做",
+        "past": "做了",
+        "participle": "做了",
+        "third": "做",
+        "ing": "正在做",
+        "meaning": "做"
+      },
+      "en": {
+        "base": "perform an action",
+        "past": "past of do",
+        "participle": "past participle of do",
+        "third": "he / she / it: perform an action",
+        "ing": "-ing form of do",
+        "meaning": "perform an action"
+      }
+    }
   },
   {
     "base": "drink",
@@ -117,7 +579,57 @@
     "meaningEn": "take liquid into the mouth",
     "complement": "water",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "beber",
+        "past": "bebió",
+        "participle": "bebido",
+        "third": "bebe",
+        "ing": "bebiendo",
+        "meaning": "beber"
+      },
+      "fr": {
+        "base": "boire",
+        "past": "a bu",
+        "participle": "bu",
+        "third": "boit",
+        "ing": "en buvant",
+        "meaning": "boire"
+      },
+      "ko": {
+        "base": "마시다",
+        "past": "마셨다",
+        "participle": "마셨다",
+        "third": "마시다",
+        "ing": "마시고 있는",
+        "meaning": "마시다"
+      },
+      "ja": {
+        "base": "飲む",
+        "past": "飲んだ",
+        "participle": "飲んだ",
+        "third": "飲む",
+        "ing": "飲んでいる",
+        "meaning": "飲む"
+      },
+      "zh-Hans": {
+        "base": "喝",
+        "past": "喝了",
+        "participle": "喝了",
+        "third": "喝",
+        "ing": "正在喝",
+        "meaning": "喝"
+      },
+      "en": {
+        "base": "take liquid into the mouth",
+        "past": "past of drink",
+        "participle": "past participle of drink",
+        "third": "he / she / it: take liquid into the mouth",
+        "ing": "-ing form of drink",
+        "meaning": "take liquid into the mouth"
+      }
+    }
   },
   {
     "base": "eat",
@@ -129,7 +641,57 @@
     "meaningEn": "take in food",
     "complement": "an apple",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "comer",
+        "past": "comió",
+        "participle": "comido",
+        "third": "come",
+        "ing": "comiendo",
+        "meaning": "comer"
+      },
+      "fr": {
+        "base": "manger",
+        "past": "a mangé",
+        "participle": "mangé",
+        "third": "mange",
+        "ing": "en mangeant",
+        "meaning": "manger"
+      },
+      "ko": {
+        "base": "먹다",
+        "past": "먹었다",
+        "participle": "먹었다",
+        "third": "먹다",
+        "ing": "먹고 있는",
+        "meaning": "먹다"
+      },
+      "ja": {
+        "base": "食べる",
+        "past": "食べた",
+        "participle": "食べた",
+        "third": "食べる",
+        "ing": "食べている",
+        "meaning": "食べる"
+      },
+      "zh-Hans": {
+        "base": "吃",
+        "past": "吃了",
+        "participle": "吃了",
+        "third": "吃",
+        "ing": "正在吃",
+        "meaning": "吃"
+      },
+      "en": {
+        "base": "take in food",
+        "past": "past of eat",
+        "participle": "past participle of eat",
+        "third": "he / she / it: take in food",
+        "ing": "-ing form of eat",
+        "meaning": "take in food"
+      }
+    }
   },
   {
     "base": "give",
@@ -141,7 +703,57 @@
     "meaningEn": "provide something to someone",
     "complement": "a clear answer",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "dar",
+        "past": "dio",
+        "participle": "dado",
+        "third": "da",
+        "ing": "dando",
+        "meaning": "dar"
+      },
+      "fr": {
+        "base": "donner",
+        "past": "a donné",
+        "participle": "donné",
+        "third": "donne",
+        "ing": "en donnant",
+        "meaning": "donner"
+      },
+      "ko": {
+        "base": "주다",
+        "past": "주었다",
+        "participle": "주었다",
+        "third": "주다",
+        "ing": "주고 있는",
+        "meaning": "주다"
+      },
+      "ja": {
+        "base": "与える",
+        "past": "与えた",
+        "participle": "与えた",
+        "third": "与える",
+        "ing": "与えている",
+        "meaning": "与える"
+      },
+      "zh-Hans": {
+        "base": "给",
+        "past": "给了",
+        "participle": "给了",
+        "third": "给",
+        "ing": "正在给",
+        "meaning": "给"
+      },
+      "en": {
+        "base": "provide something to someone",
+        "past": "past of give",
+        "participle": "past participle of give",
+        "third": "he / she / it: provide something to someone",
+        "ing": "-ing form of give",
+        "meaning": "provide something to someone"
+      }
+    }
   },
   {
     "base": "go",
@@ -153,7 +765,57 @@
     "meaningEn": "move to another place",
     "complement": "to school",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "ir",
+        "past": "fue",
+        "participle": "ido",
+        "third": "va",
+        "ing": "yendo",
+        "meaning": "ir"
+      },
+      "fr": {
+        "base": "aller",
+        "past": "est allé",
+        "participle": "allé",
+        "third": "va",
+        "ing": "en allant",
+        "meaning": "aller"
+      },
+      "ko": {
+        "base": "가다",
+        "past": "갔다",
+        "participle": "갔다",
+        "third": "가다",
+        "ing": "가고 있는",
+        "meaning": "가다"
+      },
+      "ja": {
+        "base": "行く",
+        "past": "行った",
+        "participle": "行った",
+        "third": "行く",
+        "ing": "行っている",
+        "meaning": "行く"
+      },
+      "zh-Hans": {
+        "base": "去",
+        "past": "去了",
+        "participle": "去了",
+        "third": "去",
+        "ing": "正在去",
+        "meaning": "去"
+      },
+      "en": {
+        "base": "move to another place",
+        "past": "past of go",
+        "participle": "past participle of go",
+        "third": "he / she / it: move to another place",
+        "ing": "-ing form of go",
+        "meaning": "move to another place"
+      }
+    }
   },
   {
     "base": "have",
@@ -165,7 +827,57 @@
     "meaningEn": "eat a meal (in this example)",
     "complement": "lunch",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "tomar / comer",
+        "past": "tomó / comió",
+        "participle": "tomado / comido",
+        "third": "toma / come",
+        "ing": "tomando / comiendo",
+        "meaning": "tomar / comer"
+      },
+      "fr": {
+        "base": "prendre un repas",
+        "past": "a pris un repas",
+        "participle": "pris un repas",
+        "third": "prend un repas",
+        "ing": "en prenant un repas",
+        "meaning": "prendre un repas"
+      },
+      "ko": {
+        "base": "식사하다",
+        "past": "식사했다",
+        "participle": "식사했다",
+        "third": "식사하다",
+        "ing": "식사하고 있는",
+        "meaning": "식사하다"
+      },
+      "ja": {
+        "base": "食事をする",
+        "past": "食事をした",
+        "participle": "食事をした",
+        "third": "食事をする",
+        "ing": "食事をしている",
+        "meaning": "食事をする"
+      },
+      "zh-Hans": {
+        "base": "用餐",
+        "past": "用过餐",
+        "participle": "用过餐",
+        "third": "用餐",
+        "ing": "正在用餐",
+        "meaning": "用餐"
+      },
+      "en": {
+        "base": "eat a meal (in this example)",
+        "past": "past of have",
+        "participle": "past participle of have",
+        "third": "he / she / it: eat a meal (in this example)",
+        "ing": "-ing form of have",
+        "meaning": "eat a meal (in this example)"
+      }
+    }
   },
   {
     "base": "hit",
@@ -177,7 +889,57 @@
     "meaningEn": "strike something",
     "complement": "a ball",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "golpear",
+        "past": "golpeó",
+        "participle": "golpeado",
+        "third": "golpea",
+        "ing": "golpeando",
+        "meaning": "golpear"
+      },
+      "fr": {
+        "base": "frapper",
+        "past": "a frappé",
+        "participle": "frappé",
+        "third": "frappe",
+        "ing": "en frappant",
+        "meaning": "frapper"
+      },
+      "ko": {
+        "base": "치다",
+        "past": "쳤다",
+        "participle": "쳤다",
+        "third": "치다",
+        "ing": "치고 있는",
+        "meaning": "치다"
+      },
+      "ja": {
+        "base": "打つ",
+        "past": "打った",
+        "participle": "打った",
+        "third": "打つ",
+        "ing": "打っている",
+        "meaning": "打つ"
+      },
+      "zh-Hans": {
+        "base": "击打",
+        "past": "击打了",
+        "participle": "击打了",
+        "third": "击打",
+        "ing": "正在击打",
+        "meaning": "击打"
+      },
+      "en": {
+        "base": "strike something",
+        "past": "past of hit",
+        "participle": "past participle of hit",
+        "third": "he / she / it: strike something",
+        "ing": "-ing form of hit",
+        "meaning": "strike something"
+      }
+    }
   },
   {
     "base": "know",
@@ -189,7 +951,57 @@
     "meaningEn": "have information",
     "complement": "the answer",
     "regular": false,
-    "continuous": false
+    "continuous": false,
+    "translations": {
+      "es": {
+        "base": "saber / conocer",
+        "past": "supo / conoció",
+        "participle": "sabido / conocido",
+        "third": "sabe / conoce",
+        "ing": "sabiendo / conociendo",
+        "meaning": "saber / conocer"
+      },
+      "fr": {
+        "base": "savoir / connaître",
+        "past": "savait / connaissait",
+        "participle": "su / connu",
+        "third": "sait / connaît",
+        "ing": "sachant / connaissant",
+        "meaning": "savoir / connaître"
+      },
+      "ko": {
+        "base": "알다",
+        "past": "알았다",
+        "participle": "알았다",
+        "third": "알다",
+        "ing": "알고 있는",
+        "meaning": "알다"
+      },
+      "ja": {
+        "base": "知っている",
+        "past": "知っていた",
+        "participle": "知っていた",
+        "third": "知っている",
+        "ing": "知っている",
+        "meaning": "知っている"
+      },
+      "zh-Hans": {
+        "base": "知道 / 认识",
+        "past": "当时知道 / 当时认识",
+        "participle": "当时知道 / 当时认识",
+        "third": "知道 / 认识",
+        "ing": "知道 / 认识",
+        "meaning": "知道 / 认识"
+      },
+      "en": {
+        "base": "have information",
+        "past": "past of know",
+        "participle": "past participle of know",
+        "third": "he / she / it: have information",
+        "ing": "-ing form of know",
+        "meaning": "have information"
+      }
+    }
   },
   {
     "base": "play",
@@ -201,7 +1013,57 @@
     "meaningEn": "take part in a game",
     "complement": "a game",
     "regular": true,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "jugar",
+        "past": "jugó",
+        "participle": "jugado",
+        "third": "juega",
+        "ing": "jugando",
+        "meaning": "jugar"
+      },
+      "fr": {
+        "base": "jouer",
+        "past": "a joué",
+        "participle": "joué",
+        "third": "joue",
+        "ing": "en jouant",
+        "meaning": "jouer"
+      },
+      "ko": {
+        "base": "게임을 하다",
+        "past": "게임을 했다",
+        "participle": "게임을 했다",
+        "third": "게임을 하다",
+        "ing": "게임을 하고 있는",
+        "meaning": "게임을 하다"
+      },
+      "ja": {
+        "base": "遊ぶ",
+        "past": "遊んだ",
+        "participle": "遊んだ",
+        "third": "遊ぶ",
+        "ing": "遊んでいる",
+        "meaning": "遊ぶ"
+      },
+      "zh-Hans": {
+        "base": "玩",
+        "past": "玩了",
+        "participle": "玩了",
+        "third": "玩",
+        "ing": "正在玩",
+        "meaning": "玩"
+      },
+      "en": {
+        "base": "take part in a game",
+        "past": "past of play",
+        "participle": "past participle of play",
+        "third": "he / she / it: take part in a game",
+        "ing": "-ing form of play",
+        "meaning": "take part in a game"
+      }
+    }
   },
   {
     "base": "put",
@@ -213,7 +1075,57 @@
     "meaningEn": "place something somewhere",
     "complement": "a book on the table",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "poner",
+        "past": "puso",
+        "participle": "puesto",
+        "third": "pone",
+        "ing": "poniendo",
+        "meaning": "poner"
+      },
+      "fr": {
+        "base": "mettre",
+        "past": "a mis",
+        "participle": "mis",
+        "third": "met",
+        "ing": "en mettant",
+        "meaning": "mettre"
+      },
+      "ko": {
+        "base": "놓다",
+        "past": "놓았다",
+        "participle": "놓았다",
+        "third": "놓다",
+        "ing": "놓고 있는",
+        "meaning": "놓다"
+      },
+      "ja": {
+        "base": "置く",
+        "past": "置いた",
+        "participle": "置いた",
+        "third": "置く",
+        "ing": "置いている",
+        "meaning": "置く"
+      },
+      "zh-Hans": {
+        "base": "放",
+        "past": "放了",
+        "participle": "放了",
+        "third": "放",
+        "ing": "正在放",
+        "meaning": "放"
+      },
+      "en": {
+        "base": "place something somewhere",
+        "past": "past of put",
+        "participle": "past participle of put",
+        "third": "he / she / it: place something somewhere",
+        "ing": "-ing form of put",
+        "meaning": "place something somewhere"
+      }
+    }
   },
   {
     "base": "run",
@@ -225,7 +1137,57 @@
     "meaningEn": "move quickly on foot",
     "complement": "in the park",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "correr",
+        "past": "corrió",
+        "participle": "corrido",
+        "third": "corre",
+        "ing": "corriendo",
+        "meaning": "correr"
+      },
+      "fr": {
+        "base": "courir",
+        "past": "a couru",
+        "participle": "couru",
+        "third": "court",
+        "ing": "en courant",
+        "meaning": "courir"
+      },
+      "ko": {
+        "base": "달리다",
+        "past": "달렸다",
+        "participle": "달렸다",
+        "third": "달리다",
+        "ing": "달리고 있는",
+        "meaning": "달리다"
+      },
+      "ja": {
+        "base": "走る",
+        "past": "走った",
+        "participle": "走った",
+        "third": "走る",
+        "ing": "走っている",
+        "meaning": "走る"
+      },
+      "zh-Hans": {
+        "base": "跑步",
+        "past": "跑过步",
+        "participle": "跑过步",
+        "third": "跑步",
+        "ing": "正在跑步",
+        "meaning": "跑步"
+      },
+      "en": {
+        "base": "move quickly on foot",
+        "past": "past of run",
+        "participle": "past participle of run",
+        "third": "he / she / it: move quickly on foot",
+        "ing": "-ing form of run",
+        "meaning": "move quickly on foot"
+      }
+    }
   },
   {
     "base": "see",
@@ -237,7 +1199,57 @@
     "meaningEn": "notice with the eyes",
     "complement": "a bird",
     "regular": false,
-    "continuous": false
+    "continuous": false,
+    "translations": {
+      "es": {
+        "base": "ver",
+        "past": "vio",
+        "participle": "visto",
+        "third": "ve",
+        "ing": "viendo",
+        "meaning": "ver"
+      },
+      "fr": {
+        "base": "voir",
+        "past": "a vu",
+        "participle": "vu",
+        "third": "voit",
+        "ing": "en voyant",
+        "meaning": "voir"
+      },
+      "ko": {
+        "base": "보다",
+        "past": "보았다",
+        "participle": "보았다",
+        "third": "보다",
+        "ing": "보고 있는",
+        "meaning": "보다"
+      },
+      "ja": {
+        "base": "見る",
+        "past": "見た",
+        "participle": "見た",
+        "third": "見る",
+        "ing": "見ている",
+        "meaning": "見る"
+      },
+      "zh-Hans": {
+        "base": "看见",
+        "past": "看见了",
+        "participle": "看见了",
+        "third": "看见",
+        "ing": "看着",
+        "meaning": "看见"
+      },
+      "en": {
+        "base": "notice with the eyes",
+        "past": "past of see",
+        "participle": "past participle of see",
+        "third": "he / she / it: notice with the eyes",
+        "ing": "-ing form of see",
+        "meaning": "notice with the eyes"
+      }
+    }
   },
   {
     "base": "set",
@@ -249,7 +1261,57 @@
     "meaningEn": "prepare or arrange something",
     "complement": "the table",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "poner / preparar",
+        "past": "puso / preparó",
+        "participle": "puesto / preparado",
+        "third": "pone / prepara",
+        "ing": "poniendo / preparando",
+        "meaning": "poner / preparar"
+      },
+      "fr": {
+        "base": "mettre / préparer",
+        "past": "a mis / a préparé",
+        "participle": "mis / préparé",
+        "third": "met / prépare",
+        "ing": "en mettant / en préparant",
+        "meaning": "mettre / préparer"
+      },
+      "ko": {
+        "base": "차리다 / 준비하다",
+        "past": "차렸다 / 준비했다",
+        "participle": "차렸다 / 준비했다",
+        "third": "차리다 / 준비하다",
+        "ing": "차리고 있는 / 준비하고 있는",
+        "meaning": "차리다 / 준비하다"
+      },
+      "ja": {
+        "base": "用意する",
+        "past": "用意した",
+        "participle": "用意した",
+        "third": "用意する",
+        "ing": "用意している",
+        "meaning": "用意する"
+      },
+      "zh-Hans": {
+        "base": "摆放 / 准备",
+        "past": "摆放了 / 准备了",
+        "participle": "摆放了 / 准备了",
+        "third": "摆放 / 准备",
+        "ing": "正在摆放 / 准备",
+        "meaning": "摆放 / 准备"
+      },
+      "en": {
+        "base": "prepare or arrange something",
+        "past": "past of set",
+        "participle": "past participle of set",
+        "third": "he / she / it: prepare or arrange something",
+        "ing": "-ing form of set",
+        "meaning": "prepare or arrange something"
+      }
+    }
   },
   {
     "base": "speak",
@@ -261,7 +1323,57 @@
     "meaningEn": "communicate using words",
     "complement": "English",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "hablar",
+        "past": "habló",
+        "participle": "hablado",
+        "third": "habla",
+        "ing": "hablando",
+        "meaning": "hablar"
+      },
+      "fr": {
+        "base": "parler",
+        "past": "a parlé",
+        "participle": "parlé",
+        "third": "parle",
+        "ing": "en parlant",
+        "meaning": "parler"
+      },
+      "ko": {
+        "base": "말하다",
+        "past": "말했다",
+        "participle": "말했다",
+        "third": "말하다",
+        "ing": "말하고 있는",
+        "meaning": "말하다"
+      },
+      "ja": {
+        "base": "話す",
+        "past": "話した",
+        "participle": "話した",
+        "third": "話す",
+        "ing": "話している",
+        "meaning": "話す"
+      },
+      "zh-Hans": {
+        "base": "说话",
+        "past": "说过话",
+        "participle": "说过话",
+        "third": "说话",
+        "ing": "正在说话",
+        "meaning": "说话"
+      },
+      "en": {
+        "base": "communicate using words",
+        "past": "past of speak",
+        "participle": "past participle of speak",
+        "third": "he / she / it: communicate using words",
+        "ing": "-ing form of speak",
+        "meaning": "communicate using words"
+      }
+    }
   },
   {
     "base": "study",
@@ -273,7 +1385,57 @@
     "meaningEn": "learn about a subject",
     "complement": "English",
     "regular": true,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "estudiar",
+        "past": "estudió",
+        "participle": "estudiado",
+        "third": "estudia",
+        "ing": "estudiando",
+        "meaning": "estudiar"
+      },
+      "fr": {
+        "base": "étudier",
+        "past": "a étudié",
+        "participle": "étudié",
+        "third": "étudie",
+        "ing": "en étudiant",
+        "meaning": "étudier"
+      },
+      "ko": {
+        "base": "공부하다",
+        "past": "공부했다",
+        "participle": "공부했다",
+        "third": "공부하다",
+        "ing": "공부하고 있는",
+        "meaning": "공부하다"
+      },
+      "ja": {
+        "base": "勉強する",
+        "past": "勉強した",
+        "participle": "勉強した",
+        "third": "勉強する",
+        "ing": "勉強している",
+        "meaning": "勉強する"
+      },
+      "zh-Hans": {
+        "base": "学习",
+        "past": "学习过",
+        "participle": "学习过",
+        "third": "学习",
+        "ing": "正在学习",
+        "meaning": "学习"
+      },
+      "en": {
+        "base": "learn about a subject",
+        "past": "past of study",
+        "participle": "past participle of study",
+        "third": "he / she / it: learn about a subject",
+        "ing": "-ing form of study",
+        "meaning": "learn about a subject"
+      }
+    }
   },
   {
     "base": "take",
@@ -285,7 +1447,57 @@
     "meaningEn": "have a break (in this example)",
     "complement": "a short break",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "tomar",
+        "past": "tomó",
+        "participle": "tomado",
+        "third": "toma",
+        "ing": "tomando",
+        "meaning": "tomar"
+      },
+      "fr": {
+        "base": "prendre",
+        "past": "a pris",
+        "participle": "pris",
+        "third": "prend",
+        "ing": "en prenant",
+        "meaning": "prendre"
+      },
+      "ko": {
+        "base": "취하다",
+        "past": "취했다",
+        "participle": "취했다",
+        "third": "취하다",
+        "ing": "취하고 있는",
+        "meaning": "취하다"
+      },
+      "ja": {
+        "base": "取る",
+        "past": "取った",
+        "participle": "取った",
+        "third": "取る",
+        "ing": "取っている",
+        "meaning": "取る"
+      },
+      "zh-Hans": {
+        "base": "休息（在此例中）",
+        "past": "休息过",
+        "participle": "休息过",
+        "third": "休息（在此例中）",
+        "ing": "正在休息",
+        "meaning": "休息（在此例中）"
+      },
+      "en": {
+        "base": "have a break (in this example)",
+        "past": "past of take",
+        "participle": "past participle of take",
+        "third": "he / she / it: have a break (in this example)",
+        "ing": "-ing form of take",
+        "meaning": "have a break (in this example)"
+      }
+    }
   },
   {
     "base": "teach",
@@ -297,7 +1509,57 @@
     "meaningEn": "help someone learn",
     "complement": "English",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "enseñar",
+        "past": "enseñó",
+        "participle": "enseñado",
+        "third": "enseña",
+        "ing": "enseñando",
+        "meaning": "enseñar"
+      },
+      "fr": {
+        "base": "enseigner",
+        "past": "a enseigné",
+        "participle": "enseigné",
+        "third": "enseigne",
+        "ing": "en enseignant",
+        "meaning": "enseigner"
+      },
+      "ko": {
+        "base": "가르치다",
+        "past": "가르쳤다",
+        "participle": "가르쳤다",
+        "third": "가르치다",
+        "ing": "가르치고 있는",
+        "meaning": "가르치다"
+      },
+      "ja": {
+        "base": "教える",
+        "past": "教えた",
+        "participle": "教えた",
+        "third": "教える",
+        "ing": "教えている",
+        "meaning": "教える"
+      },
+      "zh-Hans": {
+        "base": "教",
+        "past": "教过",
+        "participle": "教过",
+        "third": "教",
+        "ing": "正在教",
+        "meaning": "教"
+      },
+      "en": {
+        "base": "help someone learn",
+        "past": "past of teach",
+        "participle": "past participle of teach",
+        "third": "he / she / it: help someone learn",
+        "ing": "-ing form of teach",
+        "meaning": "help someone learn"
+      }
+    }
   },
   {
     "base": "think",
@@ -309,7 +1571,57 @@
     "meaningEn": "consider an idea",
     "complement": "about the plan",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "pensar",
+        "past": "pensó",
+        "participle": "pensado",
+        "third": "piensa",
+        "ing": "pensando",
+        "meaning": "pensar"
+      },
+      "fr": {
+        "base": "penser",
+        "past": "a pensé",
+        "participle": "pensé",
+        "third": "pense",
+        "ing": "en pensant",
+        "meaning": "penser"
+      },
+      "ko": {
+        "base": "생각하다",
+        "past": "생각했다",
+        "participle": "생각했다",
+        "third": "생각하다",
+        "ing": "생각하고 있는",
+        "meaning": "생각하다"
+      },
+      "ja": {
+        "base": "考える",
+        "past": "考えた",
+        "participle": "考えた",
+        "third": "考える",
+        "ing": "考えている",
+        "meaning": "考える"
+      },
+      "zh-Hans": {
+        "base": "思考",
+        "past": "思考过",
+        "participle": "思考过",
+        "third": "思考",
+        "ing": "正在思考",
+        "meaning": "思考"
+      },
+      "en": {
+        "base": "consider an idea",
+        "past": "past of think",
+        "participle": "past participle of think",
+        "third": "he / she / it: consider an idea",
+        "ing": "-ing form of think",
+        "meaning": "consider an idea"
+      }
+    }
   },
   {
     "base": "work",
@@ -321,7 +1633,57 @@
     "meaningEn": "do a job or task",
     "complement": "at the library",
     "regular": true,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "trabajar",
+        "past": "trabajó",
+        "participle": "trabajado",
+        "third": "trabaja",
+        "ing": "trabajando",
+        "meaning": "trabajar"
+      },
+      "fr": {
+        "base": "travailler",
+        "past": "a travaillé",
+        "participle": "travaillé",
+        "third": "travaille",
+        "ing": "en travaillant",
+        "meaning": "travailler"
+      },
+      "ko": {
+        "base": "일하다",
+        "past": "일했다",
+        "participle": "일했다",
+        "third": "일하다",
+        "ing": "일하고 있는",
+        "meaning": "일하다"
+      },
+      "ja": {
+        "base": "働く",
+        "past": "働いた",
+        "participle": "働いた",
+        "third": "働く",
+        "ing": "働いている",
+        "meaning": "働く"
+      },
+      "zh-Hans": {
+        "base": "工作",
+        "past": "工作过",
+        "participle": "工作过",
+        "third": "工作",
+        "ing": "正在工作",
+        "meaning": "工作"
+      },
+      "en": {
+        "base": "do a job or task",
+        "past": "past of work",
+        "participle": "past participle of work",
+        "third": "he / she / it: do a job or task",
+        "ing": "-ing form of work",
+        "meaning": "do a job or task"
+      }
+    }
   },
   {
     "base": "write",
@@ -333,6 +1695,56 @@
     "meaningEn": "put words into written form",
     "complement": "a message",
     "regular": false,
-    "continuous": true
+    "continuous": true,
+    "translations": {
+      "es": {
+        "base": "escribir",
+        "past": "escribió",
+        "participle": "escrito",
+        "third": "escribe",
+        "ing": "escribiendo",
+        "meaning": "escribir"
+      },
+      "fr": {
+        "base": "écrire",
+        "past": "a écrit",
+        "participle": "écrit",
+        "third": "écrit",
+        "ing": "en écrivant",
+        "meaning": "écrire"
+      },
+      "ko": {
+        "base": "쓰다",
+        "past": "썼다",
+        "participle": "썼다",
+        "third": "쓰다",
+        "ing": "쓰고 있는",
+        "meaning": "쓰다"
+      },
+      "ja": {
+        "base": "書く",
+        "past": "書いた",
+        "participle": "書いた",
+        "third": "書く",
+        "ing": "書いている",
+        "meaning": "書く"
+      },
+      "zh-Hans": {
+        "base": "写",
+        "past": "写过",
+        "participle": "写过",
+        "third": "写",
+        "ing": "正在写",
+        "meaning": "写"
+      },
+      "en": {
+        "base": "put words into written form",
+        "past": "past of write",
+        "participle": "past participle of write",
+        "third": "he / she / it: put words into written form",
+        "ing": "-ing form of write",
+        "meaning": "put words into written form"
+      }
+    }
   }
 ]

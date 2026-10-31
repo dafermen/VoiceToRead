@@ -1376,3 +1376,6 @@
 "ABC" = "ABC";
 "ABA" = "ABA";
 "AAB" = "AAB";
+"Use app language" = "Use app language";
+"Translation language" = "Translation language";
+"Meanings vary with context and may not match word for word." = "Meanings vary with context and may not match word for word.";

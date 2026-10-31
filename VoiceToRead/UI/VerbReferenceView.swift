@@ -7,7 +7,19 @@ struct VerbReferenceLibraryView: View {
     @State private var pattern: VerbPattern = .all
     @State private var tense: VerbTense = .all
     @State private var failed = false
-    @Environment(\.locale) private var locale
+    @Environment(AppSettings.self) private var settings
+    @AppStorage("verbReferenceTranslationLocale") private var translationLocale = ""
+    @AppStorage("verbReferenceInterfaceAtSelection") private var interfaceAtSelection = ""
+    private var translationLanguage: CaptureLanguage {
+        VerbTranslationPreference.language(saved: translationLocale, interfaceAtSelection: interfaceAtSelection,
+                                           currentInterface: settings.interfaceLanguage.rawValue)
+    }
+    private var translationSelection: Binding<CaptureLanguage> {
+        Binding(get: { translationLanguage }, set: {
+            translationLocale = $0.rawValue
+            interfaceAtSelection = settings.interfaceLanguage.rawValue
+        })
+    }
     private var matches: [ConjugationVerb] { ConjugationVerb.matching(verbs, query: query, pattern: pattern, tense: tense) }
     var body: some View {
         List {
@@ -19,6 +31,9 @@ struct VerbReferenceLibraryView: View {
                 Picker("Verb tense", selection: $tense) {
                     ForEach(VerbTense.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
                 }.accessibilityIdentifier("verbLibraryTenseFilter")
+                LanguagePickerControl(title: "Translation language", selection: translationSelection,
+                                      choices: CaptureLanguage.allCases, showRole: true)
+                    .accessibilityIdentifier("verbLibraryTranslationLanguage")
                 Text(LocalizedStringKey(pattern.explanation)).font(.caption).foregroundStyle(.secondary)
             }
             if failed {
@@ -37,7 +52,7 @@ struct VerbReferenceLibraryView: View {
                         NavigationLink { VerbConjugationView(verb: verb, initialTense: tense) } label: {
                             VStack(alignment: .leading, spacing: 6) {
                                 Text(verbatim: verb.base).font(.headline)
-                                Text(verbatim: locale.language.languageCode?.identifier == "es" ? verb.meaningEs : verb.meaningEn)
+                                Text(verbatim: verb.meaning(in: translationLanguage))
                                     .font(.subheadline).foregroundStyle(.secondary)
                                 Text(verbatim: "\(verb.base) · \(verb.past) · \(verb.participle)")
                                     .font(.caption).foregroundStyle(.secondary)
@@ -50,6 +65,11 @@ struct VerbReferenceLibraryView: View {
         .searchable(text: $query, prompt: "Search verb or meaning")
         .navigationTitle("Verbs and sentences").navigationBarTitleDisplayMode(.inline)
         .task { if verbs.isEmpty { load() } }
+        .onAppear { followAppLanguage() }
+        .onChange(of: settings.interfaceLanguage) { _, _ in translationLocale = ""; interfaceAtSelection = "" }
+    }
+    private func followAppLanguage() {
+        if interfaceAtSelection != settings.interfaceLanguage.rawValue { translationLocale = ""; interfaceAtSelection = "" }
     }
     private func load() {
         do { verbs = try ConjugationVerb.load(); failed = false }
@@ -68,7 +88,18 @@ private struct VerbConjugationView: View {
     @State private var activeClip: String?
     @Environment(AppSettings.self) private var settings
     @Environment(\.scenePhase) private var scenePhase
-    @Environment(\.locale) private var locale
+    @AppStorage("verbReferenceTranslationLocale") private var translationLocale = ""
+    @AppStorage("verbReferenceInterfaceAtSelection") private var interfaceAtSelection = ""
+    private var translationLanguage: CaptureLanguage {
+        VerbTranslationPreference.language(saved: translationLocale, interfaceAtSelection: interfaceAtSelection,
+                                           currentInterface: settings.interfaceLanguage.rawValue)
+    }
+    private var translationSelection: Binding<CaptureLanguage> {
+        Binding(get: { translationLanguage }, set: {
+            translationLocale = $0.rawValue
+            interfaceAtSelection = settings.interfaceLanguage.rawValue
+        })
+    }
     @ScaledMetric(relativeTo: .body) private var minimumTextSize = 20.0
     init(verb: ConjugationVerb, initialTense: VerbTense) {
         self.verb = verb
@@ -80,7 +111,7 @@ private struct VerbConjugationView: View {
     var body: some View {
         List {
             Section {
-                Text(verbatim: locale.language.languageCode?.identifier == "es" ? verb.meaningEs : verb.meaningEn).font(.headline)
+                Text(verbatim: verb.meaning(in: translationLanguage)).font(.headline)
                 Text(LocalizedStringKey(verb.pattern.explanation)).font(.caption).foregroundStyle(.secondary)
                 Picker("Verb tense", selection: $tense) {
                     Text("All tenses").tag(VerbTense.all)
@@ -99,6 +130,15 @@ private struct VerbConjugationView: View {
                     Toggle("Slow pronunciation", isOn: $slow).accessibilityIdentifier("verbSlowPronunciation")
                     Button("Clear filters") { tense = .all; form = .all; subject = .all }
                 }.accessibilityIdentifier("verbDetailFilters")
+                LanguagePickerControl(title: "Translation language", selection: translationSelection,
+                                      choices: CaptureLanguage.allCases, showRole: true)
+                    .accessibilityIdentifier("verbTranslationLanguage")
+                if !translationLocale.isEmpty && interfaceAtSelection == settings.interfaceLanguage.rawValue {
+                    Button("Use app language") { translationLocale = ""; interfaceAtSelection = "" }
+                        .font(.subheadline).accessibilityIdentifier("verbUseAppLanguage")
+                }
+                Text("Meanings vary with context and may not match word for word.")
+                    .font(.caption).foregroundStyle(.secondary)
                 if !verb.continuous {
                     Text("This meaning is shown in simple and perfect forms. Continuous forms are omitted to keep the examples natural.")
                         .font(.caption).foregroundStyle(.secondary)
@@ -132,19 +172,25 @@ private struct VerbConjugationView: View {
             }
         }
         .navigationTitle(verb.base).navigationBarTitleDisplayMode(.inline)
-        .onAppear { player.observeInterruptions() }
+        .onAppear { followAppLanguage(); player.observeInterruptions() }
+        .onChange(of: settings.interfaceLanguage) { _, _ in translationLocale = ""; interfaceAtSelection = "" }
         .onDisappear { player.close() }
         .onChange(of: scenePhase) { _, phase in if phase != .active { stop() } }
         .onChange(of: tense) { _, _ in stop() }
         .onChange(of: form) { _, _ in stop() }
         .onChange(of: subject) { _, _ in stop() }
         .onChange(of: slow) { _, _ in stop() }
+        .onChange(of: translationLanguage) { _, _ in stop() }
     }
     private func wordRow(_ label: String, word: String, id: String) -> some View {
         HStack(alignment: .center, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(LocalizedStringKey(label)).font(.caption).foregroundStyle(.secondary)
                 Text(verbatim: word).font(.title3).textSelection(.enabled)
+                if let translation = verb.translatedForm(id, language: translationLanguage) {
+                    Text(verbatim: translation).font(.caption).foregroundStyle(.secondary)
+                        .textSelection(.enabled).accessibilityIdentifier("verbGloss-" + id)
+                }
             }.frame(maxWidth: .infinity, alignment: .leading)
             audioButton(text: word, id: "word-" + id)
         }
@@ -177,6 +223,9 @@ private struct VerbConjugationView: View {
         .buttonStyle(.borderless)
         .accessibilityLabel(Text(LocalizedStringKey(playing ? "Stop" : "Play")) + Text(verbatim: ": " + text))
         .accessibilityIdentifier("verbAudio-" + id)
+    }
+    private func followAppLanguage() {
+        if interfaceAtSelection != settings.interfaceLanguage.rawValue { translationLocale = ""; interfaceAtSelection = "" }
     }
     private func stop() { player.stop(); activeClip = nil }
 }

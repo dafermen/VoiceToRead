@@ -2840,3 +2840,37 @@ extension HomeScreenTests {
         XCTAssertFalse(app.alerts.firstMatch.exists, "Reading conjugations must not request microphone access")
     }
 }
+
+extension HomeScreenTests {
+    @MainActor
+    func testVerbGlossLanguageCanChangeAndReturnToTheAppLanguage() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels",
+                               "-interfaceLanguage", "en"]
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Train"].tap()
+        let entry = app.buttons["trainingVerbsEntry"]
+        for _ in 0..<6 where !entry.isHittable { app.swipeUp() }
+        entry.tap()
+        let selector = app.buttons["verbLibraryTranslationLanguage"]
+        XCTAssertTrue(selector.waitForExistence(timeout: 5))
+        selector.tap(); app.buttons["Spanish · Español"].tap()
+        let be = app.buttons["verb-be"]
+        for _ in 0..<3 where !be.isHittable { app.swipeUp() }
+        be.tap()
+        let base = app.staticTexts["verbGloss-base"]
+        for _ in 0..<4 where !base.isHittable { app.swipeUp() }
+        XCTAssertEqual(base.label, "ser / estar")
+        for _ in 0..<6 where !app.buttons["verbTranslationLanguage"].isHittable { app.swipeDown() }
+        app.buttons["verbTranslationLanguage"].tap(); app.buttons["French · Français"].tap()
+        for _ in 0..<4 where !base.isHittable { app.swipeUp() }
+        XCTAssertEqual(base.label, "être")
+        for _ in 0..<6 where !app.buttons["verbUseAppLanguage"].isHittable { app.swipeDown() }
+        app.buttons["verbUseAppLanguage"].tap()
+        for _ in 0..<4 where !base.isHittable { app.swipeUp() }
+        XCTAssertEqual(base.label, "exist or be in a state")
+        XCTAssertFalse(app.alerts.firstMatch.exists)
+    }
+}

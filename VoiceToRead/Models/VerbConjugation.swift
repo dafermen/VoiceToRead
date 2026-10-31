@@ -65,6 +65,13 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
     let complement: String
     let regular: Bool
     let continuous: Bool
+    let translations: [String: [String: String]]
+    func meaning(in language: CaptureLanguage) -> String {
+        translations[language.code]?["meaning"] ?? (language == .spanish ? meaningEs : meaningEn)
+    }
+    func translatedForm(_ form: String, language: CaptureLanguage) -> String? {
+        translations[language.code]?[form]
+    }
     var id: String { base }
     /// Patterns compare spelling. Read is deliberately absent from this first catalog:
     /// equal spelling alone would conceal its changing pronunciation.
@@ -117,7 +124,7 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
         let search = query.trimmingCharacters(in: .whitespacesAndNewlines)
         return catalog.filter {
             (pattern == .all || $0.pattern == pattern) && (tense == .all || $0.supports(tense)) &&
-            (search.isEmpty || [$0.base, $0.past, $0.participle, $0.meaningEs, $0.meaningEn].contains { $0.localizedStandardContains(search) })
+            (search.isEmpty || ([$0.base, $0.past, $0.participle, $0.meaningEs, $0.meaningEn] + $0.translations.values.compactMap { $0["meaning"] }).contains { $0.localizedStandardContains(search) })
         }.sorted { $0.base < $1.base }
     }
     static func load(bundle: Bundle = .main) throws -> [Self] {
@@ -126,7 +133,22 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
         guard !verbs.isEmpty, Set(verbs.map(\.base)).count == verbs.count,
               verbs.allSatisfy({ ![$0.base, $0.past, $0.participle, $0.thirdPerson, $0.ing, $0.meaningEs, $0.meaningEn, $0.complement].contains(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) })
         else { throw CatalogFailure.invalid }
+        for verb in verbs {
+            let keys = ["meaning", "base", "past", "participle", "third", "ing"] + (verb.base == "be" ? ["past-was", "past-were"] : [])
+            guard CaptureLanguage.allCases.allSatisfy({ language in
+                keys.allSatisfy { !(verb.translations[language.code]?[$0] ?? "").trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+            }) else { throw CatalogFailure.invalid }
+        }
         return verbs.sorted { $0.base < $1.base }
     }
     private enum CatalogFailure: Error { case invalid }
+}
+
+/// A manual content-language choice is separate from interface localization. Changing the
+/// interface in Settings returns this reference to the new app language, even after reopening.
+enum VerbTranslationPreference {
+    static func language(saved: String, interfaceAtSelection: String, currentInterface: String) -> CaptureLanguage {
+        if interfaceAtSelection == currentInterface, let value = CaptureLanguage(rawValue: saved) { return value }
+        return CaptureLanguage.allCases.first { $0.code == currentInterface } ?? .english
+    }
 }
