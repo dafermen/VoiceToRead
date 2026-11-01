@@ -578,18 +578,23 @@ final class HomeScreenTests: XCTestCase {
         expand.tap()
         let exit = app.buttons["conversationFullScreenButton"]
         XCTAssertTrue(exit.waitForExistence(timeout: 8))
-        XCTAssertTrue(app.buttons["conversationWriteReply"].isHittable)
-        XCTAssertTrue(app.buttons["newConversationButton"].isHittable)
-        XCTAssertTrue(trainingEntry(in: app).isHittable)
+        for id in ["conversationWriteReply", "newConversationButton", "englishTrainingEntry", "conversationOptions", "conversationCancel", "conversationTranslate"] {
+            XCTAssertFalse(app.buttons[id].exists, "Fullscreen hides auxiliary action: " + id)
+        }
+        XCTAssertFalse(app.descendants(matching: .any).matching(identifier: "conversationActionBar").firstMatch.exists)
+        XCTAssertFalse(app.staticTexts["Choose who speaks to begin."].exists)
         XCTAssertFalse(communicationMode(in: app).exists)
-        XCTAssertTrue(app.buttons["conversationSpanishTurn"].exists)
-        XCTAssertTrue(app.buttons["conversationEnglishTurn"].exists)
-        app.buttons["conversationOptions"].tap()
-        XCTAssertTrue(app.sliders.firstMatch.waitForExistence(timeout: 5))
-        app.navigationBars["Reading options"].buttons["Done"].tap()
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].isHittable)
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].isHittable)
+        XCTAssertEqual(exit.label, "Exit full screen")
         exit.tap()
         XCTAssertTrue(app.buttons["conversationFirstLanguage"].waitForExistence(timeout: 5))
         XCTAssertEqual(exit.label, "Full screen")
+        XCTAssertTrue(app.buttons["conversationWriteReply"].isHittable)
+        XCTAssertTrue(app.buttons["newConversationButton"].isHittable)
+        app.buttons["conversationOptions"].tap()
+        XCTAssertTrue(app.sliders.firstMatch.waitForExistence(timeout: 5))
+        app.navigationBars["Reading options"].buttons["Done"].tap()
     }
 
     @MainActor
@@ -2992,5 +2997,46 @@ extension HomeScreenTests {
         app.buttons["stopCaptionAction"].tap()
         XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 15))
         XCTAssertTrue(app.buttons["discardSessionButton"].exists)
+    }
+}
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testConversationFullscreenKeepsCardsAndRestoresTheirPlaybackActions() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launch()
+        let write = app.buttons["conversationWriteReply"]
+        XCTAssertTrue(write.waitForExistence(timeout: 20))
+        write.tap()
+        let input = app.textViews["conversationSource"]
+        XCTAssertTrue(input.waitForExistence(timeout: 5))
+        input.tap(); input.typeText("Hola, buenos días.")
+        app.buttons["conversationApply"].tap()
+        let translated = app.staticTexts["conversationTranslation"]
+        XCTAssertTrue(translated.waitForExistence(timeout: 10))
+        let original = app.staticTexts["conversationSourceText"].label
+        let translation = translated.label
+        let expand = app.buttons["conversationFullScreenButton"]
+        expand.tap()
+        XCTAssertEqual(app.staticTexts["conversationSourceText"].label, original)
+        XCTAssertEqual(translated.label, translation)
+        XCTAssertFalse(app.buttons["conversationOriginalPlayback"].exists)
+        XCTAssertFalse(app.buttons["conversationTranslationPlayback"].exists)
+        XCTAssertFalse(app.buttons["conversationOptions"].exists)
+        XCTAssertFalse(write.exists)
+        XCTAssertTrue(app.buttons["conversationSpanishTurn"].isHittable)
+        XCTAssertTrue(app.buttons["conversationEnglishTurn"].isHittable)
+        expand.tap()
+        XCTAssertEqual(app.staticTexts["conversationSourceText"].label, original)
+        XCTAssertEqual(translated.label, translation)
+        XCTAssertTrue(app.buttons["conversationOriginalPlayback"].isHittable)
+        XCTAssertTrue(app.buttons["conversationTranslationPlayback"].isHittable)
+        XCTAssertTrue(write.isHittable)
+        app.buttons["newConversationButton"].tap()
+        XCTAssertTrue(app.buttons["confirmNewConversation"].waitForExistence(timeout: 5))
+        app.buttons["Cancel"].tap()
+        XCTAssertEqual(app.staticTexts["conversationSourceText"].label, original)
     }
 }

@@ -308,12 +308,12 @@ struct SpeakTranslateView: View {
             VStack(spacing: 0) {
                 if !fullScreen {
                     pairControls.padding(.horizontal, 16).padding(.vertical, 8)
+                    conversationBar
                 }
-                conversationBar
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
                         if dynamicTypeSize.isAccessibilitySize && !fullScreen { turnControls }
-                        if model.busy {
+                        if model.busy && !fullScreen {
                             Button("Cancel", systemImage: "xmark.circle") { model.cancel() }
                                 .disabled(model.phase == .cancelling).frame(minHeight: 44)
                                 .accessibilityIdentifier("conversationCancel")
@@ -328,7 +328,7 @@ struct SpeakTranslateView: View {
                         }
                         TranslationCompatibilityNotice(source: first, target: second, available: $translationAvailable)
                         messageCards
-                        translationRetry
+                        if !fullScreen { translationRetry }
                         speechPreparation
                     }.padding()
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -353,13 +353,13 @@ struct SpeakTranslateView: View {
         .preference(key: CommunicationFullScreenKey.self, value: fullScreen)
         .modifier(HomeFullScreenSource(selection: $fullScreen, hosted: embedded, identifier: "conversationFullScreenButton"))
         .toolbar {
-            if !embedded { DoneToolbar { model.cancel(); dismiss() } }
             if !fullScreen {
+                if !embedded { DoneToolbar { model.cancel(); dismiss() } }
                 HomeCircleToolbarItem { newConversationAction }
-            }
-            ToolbarItem(placement: .topBarLeading) {
-                Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
-                    .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
+                        .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
+                }
             }
         }
         .sheet(isPresented: $showingOptions) { options }
@@ -430,7 +430,6 @@ struct SpeakTranslateView: View {
             .labelStyle(InlinePreferenceLabelStyle()).font(.caption)
             .frame(minWidth: 44, minHeight: 44).disabled(!model.canEdit)
             .accessibilityLabel("Write a reply").accessibilityIdentifier("conversationWriteReply")
-            if fullScreen { newConversationAction }
         }
     }
 
@@ -452,14 +451,14 @@ struct SpeakTranslateView: View {
                 } else {
                     Text(LocalizedStringKey(readiness.description)).font(.caption).foregroundStyle(.secondary)
                 }
-                if readiness == .missingAssets || readiness == .authorizationRequired {
+                if !fullScreen && (readiness == .missingAssets || readiness == .authorizationRequired) {
                     Button(uiKey(readiness == .authorizationRequired ? "Allow Speech Recognition" : "Install speech model"), systemImage: "arrow.down.circle") {
                         model.prepareSpeechModel(install: true)
                     }.labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44)
                         .disabled(!model.canEdit || model.capture.preparationPending)
                         .accessibilityIdentifier("conversationInstallSpeechModel")
                     Text("Model installation needs Internet and may require additional storage.").font(.caption).foregroundStyle(.secondary)
-                } else if model.canEdit {
+                } else if !fullScreen && model.canEdit {
                     Button("Refresh Checks", systemImage: "arrow.clockwise") { model.prepareSpeechModel() }
                         .labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44)
                         .accessibilityIdentifier("conversationRefreshSpeechModel")
@@ -504,9 +503,6 @@ struct SpeakTranslateView: View {
                     .accessibilityIdentifier("conversationFullScreenButton")
             }
             if fullScreen {
-                Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
-                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
-                    .disabled(!model.canEdit).accessibilityIdentifier("conversationOptions")
                 Button("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left") { fullScreen = false }
                     .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
                     .accessibilityIdentifier("conversationFullScreenButton")
@@ -543,15 +539,15 @@ struct SpeakTranslateView: View {
         if !model.source.isEmpty {
             PlaybackTextCard(text: model.source, language: model.language, translated: false,
                              settings: settings, identifier: "conversationSourceText", speaking: model.isPlaying(.original),
-                             playback: { model.togglePlayback(.original) }, playbackEnabled: !model.busy,
+                             playback: fullScreen ? nil : { model.togglePlayback(.original) }, playbackEnabled: !model.busy,
                              playbackIdentifier: "conversationOriginalPlayback", showsSpeakingLabel: false)
-        } else if !model.busy {
+        } else if !model.busy && !fullScreen {
             CommunicationEmptyHint(title: "Choose who speaks to begin.")
         }
         if !model.translated.isEmpty {
             PlaybackTextCard(text: model.translated, language: model.target, translated: true,
                              settings: settings, identifier: "conversationTranslation", speaking: model.isPlaying(.translation),
-                             playback: { model.togglePlayback(.translation) }, playbackEnabled: !model.busy,
+                             playback: fullScreen ? nil : { model.togglePlayback(.translation) }, playbackEnabled: !model.busy,
                              playbackIdentifier: "conversationTranslationPlayback", showsSpeakingLabel: false)
         }
     }
