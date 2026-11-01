@@ -149,7 +149,8 @@ private struct VerbConjugationView: View {
     @State private var form: VerbSentenceForm = .all
     @State private var subject: VerbSubject = .all
     @State private var slow = true
-    @State private var player = TranslationSpeechPlayer()
+    @State private var speechOutput: AppleTranslationSpeechOutput
+    @State private var player: TranslationSpeechPlayer
     @State private var activeClip: String?
     @Environment(AppSettings.self) private var settings
     @Environment(\.scenePhase) private var scenePhase
@@ -169,15 +170,24 @@ private struct VerbConjugationView: View {
     init(verb: ConjugationVerb, initialTense: VerbTense) {
         self.verb = verb
         _tense = State(initialValue: initialTense)
+        let output = AppleTranslationSpeechOutput()
+        _speechOutput = State(initialValue: output)
+        _player = State(initialValue: TranslationSpeechPlayer(output: output))
     }
     private var tenses: [VerbTense] { VerbTense.concrete.filter { verb.supports($0) && (tense == .all || tense == $0) } }
-    private var subjects: [VerbSubject] { VerbSubject.concrete.filter { subject == .all || subject == $0 } }
+    private var subjects: [VerbSubject] { verb.subjects.filter { subject == .all || subject == $0 } }
     private var forms: [VerbSentenceForm] { VerbSentenceForm.concrete.filter { form == .all || form == $0 } }
     var body: some View {
         List {
             Section {
                 Text(verbatim: verb.meaningAndPronunciation(in: translationLanguage)).font(.headline)
                 Text(LocalizedStringKey(verb.pattern.explanation)).font(.caption).foregroundStyle(.secondary)
+                if verb.base == "read" {
+                    Text("The spelling stays the same, but the pronunciation changes in the past.").font(.caption).foregroundStyle(.secondary)
+                }
+                if verb.subjects.count < VerbSubject.concrete.count {
+                    Text("Examples use the pronouns appropriate for this meaning.").font(.caption).foregroundStyle(.secondary)
+                }
                 Picker("Verb tense", selection: $tense) {
                     Text("All tenses").tag(VerbTense.all)
                     ForEach(VerbTense.concrete.filter { verb.supports($0) }) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
@@ -187,7 +197,7 @@ private struct VerbConjugationView: View {
                 }.accessibilityIdentifier("verbSentenceFilter")
                 DisclosureGroup("Filters and pronunciation") {
                     Picker("Pronoun", selection: $subject) {
-                        ForEach(VerbSubject.allCases) { value in
+                        ForEach([VerbSubject.all] + verb.subjects) { value in
                             if value == .all { Text("All pronouns").tag(value) }
                             else { Text(verbatim: value.rawValue).tag(value) }
                         }
@@ -228,7 +238,7 @@ private struct VerbConjugationView: View {
                             Text(verbatim: person.rawValue).font(.headline).foregroundStyle(.secondary)
                             ForEach(forms) { kind in
                                 if let sentence = verb.sentence(tense: item, form: kind, subject: person) {
-                                    example(sentence, kind: kind, id: item.rawValue + "-" + person.rawValue + "-" + kind.rawValue)
+                                    example(sentence, kind: kind, tense: item, subject: person, id: item.rawValue + "-" + person.rawValue + "-" + kind.rawValue)
                                 }
                             }
                         }.padding(.vertical, 8)
@@ -257,10 +267,11 @@ private struct VerbConjugationView: View {
                         .textSelection(.enabled).accessibilityIdentifier("verbGloss-" + id)
                 }
             }.frame(maxWidth: .infinity, alignment: .leading)
-            audioButton(text: word, id: "word-" + id)
+            audioButton(text: word, id: "word-" + id, pronunciations: ["read", "lead", "tear", "say"].contains(verb.base)
+                ? (verb.pronunciation(id).map { [word: String($0.dropFirst().dropLast())] } ?? [:]) : [:])
         }
     }
-    private func example(_ sentence: String, kind: VerbSentenceForm, id: String) -> some View {
+    private func example(_ sentence: String, kind: VerbSentenceForm, tense: VerbTense, subject: VerbSubject, id: String) -> some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(LocalizedStringKey(kind.rawValue)).font(.caption).foregroundStyle(.secondary)
@@ -268,15 +279,16 @@ private struct VerbConjugationView: View {
                     .font(.system(size: max(minimumTextSize, settings.captionSize), weight: settings.boldCaptions ? .semibold : .regular))
                     .lineSpacing(settings.lineSpacing).textSelection(.enabled)
             }.frame(maxWidth: .infinity, alignment: .leading)
-            audioButton(text: sentence, id: id)
+            audioButton(text: sentence, id: id, pronunciations: verb.speechPronunciations(tense: tense, form: kind, subject: subject))
         }.accessibilityIdentifier("conjugation-" + id)
     }
-    private func audioButton(text: String, id: String) -> some View {
+    private func audioButton(text: String, id: String, pronunciations: [String: String] = [:]) -> some View {
         let playing = activeClip == id && player.state != .idle
         return Button {
             if playing { stop() }
             else {
                 activeClip = id
+                speechOutput.pronunciationOverrides = pronunciations
                 player.start([ReviewParagraph(id: UUID(), text: text)], language: .english, speed: slow ? .slow : .normal)
             }
         } label: {

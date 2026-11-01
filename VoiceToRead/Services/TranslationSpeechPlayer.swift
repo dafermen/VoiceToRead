@@ -17,11 +17,26 @@ final class AppleTranslationSpeechOutput: NSObject, TranslationSpeechOutput, AVS
     var onFinish: ((UUID) -> Void)?
     private let synthesizer = AVSpeechSynthesizer()
     private var current: (utterance: AVSpeechUtterance, token: UUID)?
+    // Empty for all existing callers. The verb reference opts in for ambiguous word forms.
+    var pronunciationOverrides: [String: String] = [:]
+    static func attributedText(_ text: String, pronunciations: [String: String]) -> NSAttributedString {
+        let result = NSMutableAttributedString(string: text)
+        for (word, ipa) in pronunciations where !word.isEmpty && !ipa.isEmpty {
+            let pattern = "(?<![\\p{L}])" + NSRegularExpression.escapedPattern(for: word) + "(?![\\p{L}])"
+            guard let regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive) else { continue }
+            for match in regex.matches(in: text, range: NSRange(text.startIndex..., in: text)) {
+                result.addAttribute(NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute), value: ipa, range: match.range)
+            }
+        }
+        return result
+    }
+
 
     override init() { super.init(); synthesizer.delegate = self }
     func speak(_ text: String, language: CaptureLanguage, rate: Float, token: UUID) throws {
         guard let voice = PlaybackVoicePreference.voice(for: language) else { throw TranslationSpeechFailure.voiceUnavailable }
-        let utterance = AVSpeechUtterance(string: text)
+        let utterance = pronunciationOverrides.isEmpty ? AVSpeechUtterance(string: text)
+            : AVSpeechUtterance(attributedString: Self.attributedText(text, pronunciations: pronunciationOverrides))
         utterance.voice = voice
         utterance.rate = rate
         current = (utterance, token)

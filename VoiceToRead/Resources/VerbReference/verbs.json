@@ -1,5 +1,74 @@
 [
   {
+    "base": "arise",
+    "past": "arose",
+    "participle": "arisen",
+    "thirdPerson": "arises",
+    "ing": "arising",
+    "meaningEs": "surgir",
+    "complement": "from small changes",
+    "meaningEn": "come into being",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "surgir",
+        "base": "surgir",
+        "past": "surgió",
+        "participle": "surgido",
+        "third": "surge",
+        "ing": "surgiendo"
+      },
+      "fr": {
+        "meaning": "survenir",
+        "base": "survenir",
+        "past": "est survenu",
+        "participle": "survenu",
+        "third": "survient",
+        "ing": "en survenant"
+      },
+      "ko": {
+        "meaning": "발생하다",
+        "base": "발생하다",
+        "past": "발생했다",
+        "participle": "발생한",
+        "third": "발생한다",
+        "ing": "발생하는 중"
+      },
+      "ja": {
+        "meaning": "生じる",
+        "base": "生じる",
+        "past": "生じた",
+        "participle": "生じた",
+        "third": "生じる",
+        "ing": "生じている"
+      },
+      "zh-Hans": {
+        "meaning": "产生",
+        "base": "产生",
+        "past": "产生了",
+        "participle": "已产生",
+        "third": "产生",
+        "ing": "正在产生"
+      },
+      "en": {
+        "meaning": "come into being",
+        "base": "arise",
+        "past": "arose",
+        "participle": "arisen",
+        "third": "arises",
+        "ing": "arising"
+      }
+    },
+    "ipaUS": {
+      "base": "/əˈraɪz/",
+      "past": "/əˈroʊz/",
+      "participle": "/əˈrɪzən/",
+      "third": "/əˈraɪzɪz/",
+      "ing": "/əˈraɪzɪŋ/"
+    }
+  },
+  {
     "base": "be",
     "past": "was / were",
     "participle": "been",
@@ -221,6 +290,489 @@
     }
   },
   {
+    "base": "begin",
+    "past": "began",
+    "participle": "begun",
+    "thirdPerson": "begins",
+    "ing": "beginning",
+    "meaningEs": "empezar",
+    "complement": "a new project",
+    "meaningEn": "start",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "empezar",
+        "base": "empezar",
+        "past": "empezó",
+        "participle": "empezado",
+        "third": "empieza",
+        "ing": "empezando"
+      },
+      "fr": {
+        "meaning": "commencer",
+        "base": "commencer",
+        "past": "a commencé",
+        "participle": "commencé",
+        "third": "commence",
+        "ing": "en commençant"
+      },
+      "ko": {
+        "meaning": "시작하다",
+        "base": "시작하다",
+        "past": "시작했다",
+        "participle": "시작한",
+        "third": "시작한다",
+        "ing": "시작하는 중"
+      },
+      "ja": {
+        "meaning": "始める",
+        "base": "始める",
+        "past": "始めた",
+        "participle": "始めた",
+        "third": "始める",
+        "ing": "始めている"
+      },
+      "zh-Hans": {
+        "meaning": "开始",
+        "base": "开始",
+        "past": "开始了",
+        "participle": "已开始",
+        "third": "开始",
+        "ing": "正在开始"
+      },
+      "en": {
+        "meaning": "start",
+        "base": "begin",
+        "past": "began",
+        "participle": "begun",
+        "third": "begins",
+        "ing": "beginning"
+      }
+    },
+    "ipaUS": {
+      "base": "/bɪˈɡɪn/",
+      "past": "/bɪˈɡæn/",
+      "participle": "/bɪˈɡʌn/",
+      "third": "/bɪˈɡɪnz/",
+      "ing": "/bɪˈɡɪnɪŋ/"
+    }
+  },
+  {
+    "base": "bend",
+    "past": "bent",
+    "participle": "bent",
+    "thirdPerson": "bends",
+    "ing": "bending",
+    "meaningEs": "doblar",
+    "complement": "a wire",
+    "meaningEn": "make something curve",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "doblar",
+        "base": "doblar",
+        "past": "dobló",
+        "participle": "doblado",
+        "third": "dobla",
+        "ing": "doblando"
+      },
+      "fr": {
+        "meaning": "courber",
+        "base": "courber",
+        "past": "a courbé",
+        "participle": "courbé",
+        "third": "courbe",
+        "ing": "en courbant"
+      },
+      "ko": {
+        "meaning": "구부리다",
+        "base": "구부리다",
+        "past": "구부렸다",
+        "participle": "구부린",
+        "third": "구부린다",
+        "ing": "구부리는 중"
+      },
+      "ja": {
+        "meaning": "曲げる",
+        "base": "曲げる",
+        "past": "曲げた",
+        "participle": "曲げた",
+        "third": "曲げる",
+        "ing": "曲げている"
+      },
+      "zh-Hans": {
+        "meaning": "弯曲",
+        "base": "弯曲",
+        "past": "弯曲了",
+        "participle": "已弯曲",
+        "third": "弯曲",
+        "ing": "正在弯曲"
+      },
+      "en": {
+        "meaning": "make something curve",
+        "base": "bend",
+        "past": "bent",
+        "participle": "bent",
+        "third": "bends",
+        "ing": "bending"
+      }
+    },
+    "ipaUS": {
+      "base": "/bɛnd/",
+      "past": "/bɛnt/",
+      "participle": "/bɛnt/",
+      "third": "/bɛndz/",
+      "ing": "/ˈbɛndɪŋ/"
+    }
+  },
+  {
+    "base": "bet",
+    "past": "bet",
+    "participle": "bet",
+    "thirdPerson": "bets",
+    "ing": "betting",
+    "meaningEs": "apostar",
+    "complement": "on a result",
+    "meaningEn": "risk money on a result",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "apostar",
+        "base": "apostar",
+        "past": "apostó",
+        "participle": "apostado",
+        "third": "apuesta",
+        "ing": "apostando"
+      },
+      "fr": {
+        "meaning": "parier",
+        "base": "parier",
+        "past": "a parié",
+        "participle": "parié",
+        "third": "parie",
+        "ing": "en pariant"
+      },
+      "ko": {
+        "meaning": "내기하다",
+        "base": "내기하다",
+        "past": "내기했다",
+        "participle": "내기한",
+        "third": "내기한다",
+        "ing": "내기하는 중"
+      },
+      "ja": {
+        "meaning": "賭ける",
+        "base": "賭ける",
+        "past": "賭けた",
+        "participle": "賭けた",
+        "third": "賭ける",
+        "ing": "賭けている"
+      },
+      "zh-Hans": {
+        "meaning": "打赌",
+        "base": "打赌",
+        "past": "打了赌",
+        "participle": "打过赌",
+        "third": "打赌",
+        "ing": "正在打赌"
+      },
+      "en": {
+        "meaning": "risk money on a result",
+        "base": "bet",
+        "past": "bet",
+        "participle": "bet",
+        "third": "bets",
+        "ing": "betting"
+      }
+    },
+    "ipaUS": {
+      "base": "/bɛt/",
+      "past": "/bɛt/",
+      "participle": "/bɛt/",
+      "third": "/bɛts/",
+      "ing": "/ˈbɛtɪŋ/"
+    }
+  },
+  {
+    "base": "bid",
+    "past": "bid",
+    "participle": "bid",
+    "thirdPerson": "bids",
+    "ing": "bidding",
+    "meaningEs": "pujar",
+    "complement": "at the auction",
+    "meaningEn": "offer a price at auction",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "pujar",
+        "base": "pujar",
+        "past": "pujó",
+        "participle": "pujado",
+        "third": "puja",
+        "ing": "pujando"
+      },
+      "fr": {
+        "meaning": "enchérir",
+        "base": "enchérir",
+        "past": "a enchéri",
+        "participle": "enchéri",
+        "third": "enchérit",
+        "ing": "en enchérissant"
+      },
+      "ko": {
+        "meaning": "입찰하다",
+        "base": "입찰하다",
+        "past": "입찰했다",
+        "participle": "입찰한",
+        "third": "입찰한다",
+        "ing": "입찰하는 중"
+      },
+      "ja": {
+        "meaning": "入札する",
+        "base": "入札する",
+        "past": "入札した",
+        "participle": "入札した",
+        "third": "入札する",
+        "ing": "入札している"
+      },
+      "zh-Hans": {
+        "meaning": "出价",
+        "base": "出价",
+        "past": "出价了",
+        "participle": "已出价",
+        "third": "出价",
+        "ing": "正在出价"
+      },
+      "en": {
+        "meaning": "offer a price at auction",
+        "base": "bid",
+        "past": "bid",
+        "participle": "bid",
+        "third": "bids",
+        "ing": "bidding"
+      }
+    },
+    "ipaUS": {
+      "base": "/bɪd/",
+      "past": "/bɪd/",
+      "participle": "/bɪd/",
+      "third": "/bɪdz/",
+      "ing": "/ˈbɪdɪŋ/"
+    }
+  },
+  {
+    "base": "bite",
+    "past": "bit",
+    "participle": "bitten",
+    "thirdPerson": "bites",
+    "ing": "biting",
+    "meaningEs": "morder",
+    "complement": "an apple",
+    "meaningEn": "use the teeth to cut into",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "morder",
+        "base": "morder",
+        "past": "mordió",
+        "participle": "mordido",
+        "third": "muerde",
+        "ing": "mordiendo"
+      },
+      "fr": {
+        "meaning": "mordre",
+        "base": "mordre",
+        "past": "a mordu",
+        "participle": "mordu",
+        "third": "mord",
+        "ing": "en mordant"
+      },
+      "ko": {
+        "meaning": "물다",
+        "base": "물다",
+        "past": "물었다",
+        "participle": "문",
+        "third": "문다",
+        "ing": "물고 있다"
+      },
+      "ja": {
+        "meaning": "かむ",
+        "base": "かむ",
+        "past": "かんだ",
+        "participle": "かんだ",
+        "third": "かむ",
+        "ing": "かんでいる"
+      },
+      "zh-Hans": {
+        "meaning": "咬",
+        "base": "咬",
+        "past": "咬了",
+        "participle": "咬过",
+        "third": "咬",
+        "ing": "正在咬"
+      },
+      "en": {
+        "meaning": "use the teeth to cut into",
+        "base": "bite",
+        "past": "bit",
+        "participle": "bitten",
+        "third": "bites",
+        "ing": "biting"
+      }
+    },
+    "ipaUS": {
+      "base": "/baɪt/",
+      "past": "/bɪt/",
+      "participle": "/ˈbɪtən/",
+      "third": "/baɪts/",
+      "ing": "/ˈbaɪtɪŋ/"
+    }
+  },
+  {
+    "base": "blow",
+    "past": "blew",
+    "participle": "blown",
+    "thirdPerson": "blows",
+    "ing": "blowing",
+    "meaningEs": "soplar",
+    "complement": "the candles out",
+    "meaningEn": "force air out from the mouth",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "soplar",
+        "base": "soplar",
+        "past": "sopló",
+        "participle": "soplado",
+        "third": "sopla",
+        "ing": "soplando"
+      },
+      "fr": {
+        "meaning": "souffler",
+        "base": "souffler",
+        "past": "a soufflé",
+        "participle": "soufflé",
+        "third": "souffle",
+        "ing": "en soufflant"
+      },
+      "ko": {
+        "meaning": "불다",
+        "base": "불다",
+        "past": "불었다",
+        "participle": "분",
+        "third": "분다",
+        "ing": "불고 있다"
+      },
+      "ja": {
+        "meaning": "吹く",
+        "base": "吹く",
+        "past": "吹いた",
+        "participle": "吹いた",
+        "third": "吹く",
+        "ing": "吹いている"
+      },
+      "zh-Hans": {
+        "meaning": "吹",
+        "base": "吹",
+        "past": "吹了",
+        "participle": "吹过",
+        "third": "吹",
+        "ing": "正在吹"
+      },
+      "en": {
+        "meaning": "force air out from the mouth",
+        "base": "blow",
+        "past": "blew",
+        "participle": "blown",
+        "third": "blows",
+        "ing": "blowing"
+      }
+    },
+    "ipaUS": {
+      "base": "/bloʊ/",
+      "past": "/blu/",
+      "participle": "/bloʊn/",
+      "third": "/bloʊz/",
+      "ing": "/ˈbloʊɪŋ/"
+    }
+  },
+  {
+    "base": "break",
+    "past": "broke",
+    "participle": "broken",
+    "thirdPerson": "breaks",
+    "ing": "breaking",
+    "meaningEs": "romper",
+    "complement": "a glass",
+    "meaningEn": "cause to come apart into pieces",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "romper",
+        "base": "romper",
+        "past": "rompió",
+        "participle": "roto",
+        "third": "rompe",
+        "ing": "rompiendo"
+      },
+      "fr": {
+        "meaning": "casser",
+        "base": "casser",
+        "past": "a cassé",
+        "participle": "cassé",
+        "third": "casse",
+        "ing": "en cassant"
+      },
+      "ko": {
+        "meaning": "깨다",
+        "base": "깨다",
+        "past": "깼다",
+        "participle": "깬",
+        "third": "깬다",
+        "ing": "깨고 있다"
+      },
+      "ja": {
+        "meaning": "壊す",
+        "base": "壊す",
+        "past": "壊した",
+        "participle": "壊した",
+        "third": "壊す",
+        "ing": "壊している"
+      },
+      "zh-Hans": {
+        "meaning": "打破",
+        "base": "打破",
+        "past": "打破了",
+        "participle": "打破过",
+        "third": "打破",
+        "ing": "正在打破"
+      },
+      "en": {
+        "meaning": "cause to come apart into pieces",
+        "base": "break",
+        "past": "broke",
+        "participle": "broken",
+        "third": "breaks",
+        "ing": "breaking"
+      }
+    },
+    "ipaUS": {
+      "base": "/breɪk/",
+      "past": "/broʊk/",
+      "participle": "/ˈbroʊkən/",
+      "third": "/breɪks/",
+      "ing": "/ˈbreɪkɪŋ/"
+    }
+  },
+  {
     "base": "bring",
     "past": "brought",
     "participle": "brought",
@@ -287,6 +839,75 @@
       "participle": "/brɑːt/",
       "third": "/brɪŋz/",
       "ing": "/ˈbrɪŋɪŋ/"
+    }
+  },
+  {
+    "base": "broadcast",
+    "past": "broadcast",
+    "participle": "broadcast",
+    "thirdPerson": "broadcasts",
+    "ing": "broadcasting",
+    "meaningEs": "transmitir",
+    "complement": "the news",
+    "meaningEn": "transmit by radio or television",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "transmitir",
+        "base": "transmitir",
+        "past": "transmitió",
+        "participle": "transmitido",
+        "third": "transmite",
+        "ing": "transmitiendo"
+      },
+      "fr": {
+        "meaning": "diffuser",
+        "base": "diffuser",
+        "past": "a diffusé",
+        "participle": "diffusé",
+        "third": "diffuse",
+        "ing": "en diffusant"
+      },
+      "ko": {
+        "meaning": "방송하다",
+        "base": "방송하다",
+        "past": "방송했다",
+        "participle": "방송한",
+        "third": "방송한다",
+        "ing": "방송하는 중"
+      },
+      "ja": {
+        "meaning": "放送する",
+        "base": "放送する",
+        "past": "放送した",
+        "participle": "放送した",
+        "third": "放送する",
+        "ing": "放送している"
+      },
+      "zh-Hans": {
+        "meaning": "播送",
+        "base": "播送",
+        "past": "播送了",
+        "participle": "播送过",
+        "third": "播送",
+        "ing": "正在播送"
+      },
+      "en": {
+        "meaning": "transmit by radio or television",
+        "base": "broadcast",
+        "past": "broadcast",
+        "participle": "broadcast",
+        "third": "broadcasts",
+        "ing": "broadcasting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˈbrɔːdˌkæst/",
+      "past": "/ˈbrɔːdˌkæst/",
+      "participle": "/ˈbrɔːdˌkæst/",
+      "third": "/ˈbrɔːdˌkæsts/",
+      "ing": "/ˈbrɔːdˌkæstɪŋ/"
     }
   },
   {
@@ -359,6 +980,144 @@
     }
   },
   {
+    "base": "burn",
+    "past": "burnt",
+    "participle": "burnt",
+    "thirdPerson": "burns",
+    "ing": "burning",
+    "meaningEs": "quemar",
+    "complement": "the toast",
+    "meaningEn": "damage with fire or heat",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "quemar",
+        "base": "quemar",
+        "past": "quemó",
+        "participle": "quemado",
+        "third": "quema",
+        "ing": "quemando"
+      },
+      "fr": {
+        "meaning": "brûler",
+        "base": "brûler",
+        "past": "a brûlé",
+        "participle": "brûlé",
+        "third": "brûle",
+        "ing": "en brûlant"
+      },
+      "ko": {
+        "meaning": "태우다",
+        "base": "태우다",
+        "past": "태웠다",
+        "participle": "태운",
+        "third": "태운다",
+        "ing": "태우는 중"
+      },
+      "ja": {
+        "meaning": "焦がす",
+        "base": "焦がす",
+        "past": "焦がした",
+        "participle": "焦がした",
+        "third": "焦がす",
+        "ing": "焦がしている"
+      },
+      "zh-Hans": {
+        "meaning": "烤焦",
+        "base": "烤焦",
+        "past": "烤焦了",
+        "participle": "已烤焦",
+        "third": "烤焦",
+        "ing": "正在烤焦"
+      },
+      "en": {
+        "meaning": "damage with fire or heat",
+        "base": "burn",
+        "past": "burnt",
+        "participle": "burnt",
+        "third": "burns",
+        "ing": "burning"
+      }
+    },
+    "ipaUS": {
+      "base": "/bɜrn/",
+      "past": "/bɜrnt/",
+      "participle": "/bɜrnt/",
+      "third": "/bɜrnz/",
+      "ing": "/ˈbɜrnɪŋ/"
+    }
+  },
+  {
+    "base": "burst",
+    "past": "burst",
+    "participle": "burst",
+    "thirdPerson": "bursts",
+    "ing": "bursting",
+    "meaningEs": "reventar",
+    "complement": "under pressure",
+    "meaningEn": "break open suddenly",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "reventar",
+        "base": "reventar",
+        "past": "reventó",
+        "participle": "reventado",
+        "third": "revienta",
+        "ing": "reventando"
+      },
+      "fr": {
+        "meaning": "éclater",
+        "base": "éclater",
+        "past": "a éclaté",
+        "participle": "éclaté",
+        "third": "éclate",
+        "ing": "en éclatant"
+      },
+      "ko": {
+        "meaning": "터지다",
+        "base": "터지다",
+        "past": "터졌다",
+        "participle": "터진",
+        "third": "터진다",
+        "ing": "터지는 중"
+      },
+      "ja": {
+        "meaning": "破裂する",
+        "base": "破裂する",
+        "past": "破裂した",
+        "participle": "破裂した",
+        "third": "破裂する",
+        "ing": "破裂している"
+      },
+      "zh-Hans": {
+        "meaning": "爆裂",
+        "base": "爆裂",
+        "past": "爆裂了",
+        "participle": "爆裂过",
+        "third": "爆裂",
+        "ing": "正在爆裂"
+      },
+      "en": {
+        "meaning": "break open suddenly",
+        "base": "burst",
+        "past": "burst",
+        "participle": "burst",
+        "third": "bursts",
+        "ing": "bursting"
+      }
+    },
+    "ipaUS": {
+      "base": "/bɝst/",
+      "past": "/bɝst/",
+      "participle": "/bɝst/",
+      "third": "/bɝsts/",
+      "ing": "/ˈbɝstɪŋ/"
+    }
+  },
+  {
     "base": "buy",
     "past": "bought",
     "participle": "bought",
@@ -425,6 +1184,213 @@
       "participle": "/bɑːt/",
       "third": "/baɪz/",
       "ing": "/ˈbaɪɪŋ/"
+    }
+  },
+  {
+    "base": "cast",
+    "past": "cast",
+    "participle": "cast",
+    "thirdPerson": "casts",
+    "ing": "casting",
+    "meaningEs": "lanzar",
+    "complement": "a fishing line",
+    "meaningEn": "throw in a particular direction",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "lanzar",
+        "base": "lanzar",
+        "past": "lanzó",
+        "participle": "lanzado",
+        "third": "lanza",
+        "ing": "lanzando"
+      },
+      "fr": {
+        "meaning": "lancer",
+        "base": "lancer",
+        "past": "a lancé",
+        "participle": "lancé",
+        "third": "lance",
+        "ing": "en lançant"
+      },
+      "ko": {
+        "meaning": "던지다",
+        "base": "던지다",
+        "past": "던졌다",
+        "participle": "던진",
+        "third": "던진다",
+        "ing": "던지는 중"
+      },
+      "ja": {
+        "meaning": "投げる",
+        "base": "投げる",
+        "past": "投げた",
+        "participle": "投げた",
+        "third": "投げる",
+        "ing": "投げている"
+      },
+      "zh-Hans": {
+        "meaning": "抛",
+        "base": "抛",
+        "past": "抛了",
+        "participle": "抛过",
+        "third": "抛",
+        "ing": "正在抛"
+      },
+      "en": {
+        "meaning": "throw in a particular direction",
+        "base": "cast",
+        "past": "cast",
+        "participle": "cast",
+        "third": "casts",
+        "ing": "casting"
+      }
+    },
+    "ipaUS": {
+      "base": "/kæst/",
+      "past": "/kæst/",
+      "participle": "/kæst/",
+      "third": "/kæsts/",
+      "ing": "/ˈkæstɪŋ/"
+    }
+  },
+  {
+    "base": "catch",
+    "past": "caught",
+    "participle": "caught",
+    "thirdPerson": "catches",
+    "ing": "catching",
+    "meaningEs": "atrapar",
+    "complement": "a ball",
+    "meaningEn": "capture or seize",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "atrapar",
+        "base": "atrapar",
+        "past": "atrapó",
+        "participle": "atrapado",
+        "third": "atrapa",
+        "ing": "atrapando"
+      },
+      "fr": {
+        "meaning": "attraper",
+        "base": "attraper",
+        "past": "a attrapé",
+        "participle": "attrapé",
+        "third": "attrape",
+        "ing": "en attrapant"
+      },
+      "ko": {
+        "meaning": "잡다",
+        "base": "잡다",
+        "past": "잡았다",
+        "participle": "잡은",
+        "third": "잡는다",
+        "ing": "잡는 중"
+      },
+      "ja": {
+        "meaning": "捕まえる",
+        "base": "捕まえる",
+        "past": "捕まえた",
+        "participle": "捕まえた",
+        "third": "捕まえる",
+        "ing": "捕まえている"
+      },
+      "zh-Hans": {
+        "meaning": "抓住",
+        "base": "抓住",
+        "past": "抓住了",
+        "participle": "已抓住",
+        "third": "抓住",
+        "ing": "正在抓住"
+      },
+      "en": {
+        "meaning": "capture or seize",
+        "base": "catch",
+        "past": "caught",
+        "participle": "caught",
+        "third": "catches",
+        "ing": "catching"
+      }
+    },
+    "ipaUS": {
+      "base": "/kætʃ/",
+      "past": "/kɔt/",
+      "participle": "/kɔt/",
+      "third": "/kætʃəz/",
+      "ing": "/ˈkætʃɪŋ/"
+    }
+  },
+  {
+    "base": "choose",
+    "past": "chose",
+    "participle": "chosen",
+    "thirdPerson": "chooses",
+    "ing": "choosing",
+    "meaningEs": "elegir",
+    "complement": "a different route",
+    "meaningEn": "select from options",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "elegir",
+        "base": "elegir",
+        "past": "eligió",
+        "participle": "elegido",
+        "third": "elige",
+        "ing": "eligiendo"
+      },
+      "fr": {
+        "meaning": "choisir",
+        "base": "choisir",
+        "past": "a choisi",
+        "participle": "choisi",
+        "third": "choisit",
+        "ing": "en choisissant"
+      },
+      "ko": {
+        "meaning": "고르다",
+        "base": "고르다",
+        "past": "골랐다",
+        "participle": "고른",
+        "third": "고른다",
+        "ing": "고르고 있다"
+      },
+      "ja": {
+        "meaning": "選ぶ",
+        "base": "選ぶ",
+        "past": "選んだ",
+        "participle": "選んだ",
+        "third": "選ぶ",
+        "ing": "選んでいる"
+      },
+      "zh-Hans": {
+        "meaning": "选择",
+        "base": "选择",
+        "past": "选择了",
+        "participle": "选择过",
+        "third": "选择",
+        "ing": "正在选择"
+      },
+      "en": {
+        "meaning": "select from options",
+        "base": "choose",
+        "past": "chose",
+        "participle": "chosen",
+        "third": "chooses",
+        "ing": "choosing"
+      }
+    },
+    "ipaUS": {
+      "base": "/tʃuz/",
+      "past": "/tʃoʊz/",
+      "participle": "/ˈtʃoʊzən/",
+      "third": "/tʃuzɪz/",
+      "ing": "/ˈtʃuzɪŋ/"
     }
   },
   {
@@ -497,6 +1463,213 @@
     }
   },
   {
+    "base": "cost",
+    "past": "cost",
+    "participle": "cost",
+    "thirdPerson": "costs",
+    "ing": "costing",
+    "meaningEs": "costar",
+    "complement": "ten dollars",
+    "meaningEn": "require a payment",
+    "regular": false,
+    "continuous": false,
+    "translations": {
+      "es": {
+        "meaning": "costar",
+        "base": "costar",
+        "past": "costó",
+        "participle": "costado",
+        "third": "cuesta",
+        "ing": "costando"
+      },
+      "fr": {
+        "meaning": "coûter",
+        "base": "coûter",
+        "past": "a coûté",
+        "participle": "coûté",
+        "third": "coûte",
+        "ing": "en coûtant"
+      },
+      "ko": {
+        "meaning": "값이 들다",
+        "base": "값이 들다",
+        "past": "값이 들었다",
+        "participle": "값이 든",
+        "third": "값이 든다",
+        "ing": "값이 드는 중"
+      },
+      "ja": {
+        "meaning": "費用がかかる",
+        "base": "費用がかかる",
+        "past": "費用がかかった",
+        "participle": "費用がかかった",
+        "third": "費用がかかる",
+        "ing": "費用がかかっている"
+      },
+      "zh-Hans": {
+        "meaning": "花费",
+        "base": "花费",
+        "past": "花费了",
+        "participle": "花费过",
+        "third": "花费",
+        "ing": "正在花费"
+      },
+      "en": {
+        "meaning": "require a payment",
+        "base": "cost",
+        "past": "cost",
+        "participle": "cost",
+        "third": "costs",
+        "ing": "costing"
+      }
+    },
+    "ipaUS": {
+      "base": "/kɔst/",
+      "past": "/kɔst/",
+      "participle": "/kɔst/",
+      "third": "/kɔsts/",
+      "ing": "/ˈkɔstɪŋ/"
+    }
+  },
+  {
+    "base": "creep",
+    "past": "crept",
+    "participle": "crept",
+    "thirdPerson": "creeps",
+    "ing": "creeping",
+    "meaningEs": "avanzar sigilosamente",
+    "complement": "through the hallway",
+    "meaningEn": "move slowly and carefully",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "avanzar sigilosamente",
+        "base": "avanzar sigilosamente",
+        "past": "avanzó sigilosamente",
+        "participle": "avanzado sigilosamente",
+        "third": "avanza sigilosamente",
+        "ing": "avanzando sigilosamente"
+      },
+      "fr": {
+        "meaning": "se faufiler",
+        "base": "se faufiler",
+        "past": "s'est faufilé",
+        "participle": "faufilé",
+        "third": "se faufile",
+        "ing": "en se faufilant"
+      },
+      "ko": {
+        "meaning": "살금살금 움직이다",
+        "base": "살금살금 움직이다",
+        "past": "살금살금 움직였다",
+        "participle": "살금살금 움직인",
+        "third": "살금살금 움직인다",
+        "ing": "살금살금 움직이는 중"
+      },
+      "ja": {
+        "meaning": "忍び歩く",
+        "base": "忍び歩く",
+        "past": "忍び歩いた",
+        "participle": "忍び歩いた",
+        "third": "忍び歩く",
+        "ing": "忍び歩いている"
+      },
+      "zh-Hans": {
+        "meaning": "悄悄移动",
+        "base": "悄悄移动",
+        "past": "悄悄移动了",
+        "participle": "已悄悄移动",
+        "third": "悄悄移动",
+        "ing": "正在悄悄移动"
+      },
+      "en": {
+        "meaning": "move slowly and carefully",
+        "base": "creep",
+        "past": "crept",
+        "participle": "crept",
+        "third": "creeps",
+        "ing": "creeping"
+      }
+    },
+    "ipaUS": {
+      "base": "/krip/",
+      "past": "/krɛpt/",
+      "participle": "/krɛpt/",
+      "third": "/krips/",
+      "ing": "/ˈkripɪŋ/"
+    }
+  },
+  {
+    "base": "crow",
+    "past": "crowed",
+    "participle": "crowed",
+    "thirdPerson": "crows",
+    "ing": "crowing",
+    "meaningEs": "cantar como un gallo",
+    "complement": "at dawn",
+    "meaningEn": "(of a rooster) to make its call",
+    "regular": true,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "cantar como un gallo",
+        "base": "cantar como un gallo",
+        "past": "cantó como un gallo",
+        "participle": "cantado como un gallo",
+        "third": "canta como un gallo",
+        "ing": "cantando como un gallo"
+      },
+      "fr": {
+        "meaning": "chanter (coq)",
+        "base": "chanter",
+        "past": "a chanté",
+        "participle": "chanté",
+        "third": "chante",
+        "ing": "en chantant"
+      },
+      "ko": {
+        "meaning": "꼬끼오 울다",
+        "base": "꼬끼오 울다",
+        "past": "꼬끼오 울었다",
+        "participle": "꼬끼오 운",
+        "third": "꼬끼오 운다",
+        "ing": "꼬끼오 울고 있다"
+      },
+      "ja": {
+        "meaning": "鳴く（雄鶏）",
+        "base": "鳴く",
+        "past": "鳴いた",
+        "participle": "鳴いた",
+        "third": "鳴く",
+        "ing": "鳴いている"
+      },
+      "zh-Hans": {
+        "meaning": "打鸣",
+        "base": "打鸣",
+        "past": "打鸣了",
+        "participle": "已打鸣",
+        "third": "打鸣",
+        "ing": "正在打鸣"
+      },
+      "en": {
+        "meaning": "(of a rooster) to make its call",
+        "base": "crow",
+        "past": "crowed",
+        "participle": "crowed",
+        "third": "crows",
+        "ing": "crowing"
+      }
+    },
+    "ipaUS": {
+      "base": "/kroʊ/",
+      "past": "/ˈkroʊd/",
+      "participle": "/ˈkroʊd/",
+      "third": "/kroʊz/",
+      "ing": "/ˈkroʊɪŋ/"
+    }
+  },
+  {
     "base": "cut",
     "past": "cut",
     "participle": "cut",
@@ -563,6 +1736,75 @@
       "participle": "/kʌt/",
       "third": "/kʌts/",
       "ing": "/ˈkʌtɪŋ/"
+    }
+  },
+  {
+    "base": "deal",
+    "past": "dealt",
+    "participle": "dealt",
+    "thirdPerson": "deals",
+    "ing": "dealing",
+    "meaningEs": "ocuparse",
+    "complement": "with a problem",
+    "meaningEn": "handle a problem or situation",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "ocuparse",
+        "base": "ocuparse",
+        "past": "se ocupó",
+        "participle": "ocupado",
+        "third": "se ocupa",
+        "ing": "ocupándose"
+      },
+      "fr": {
+        "meaning": "s'occuper",
+        "base": "s'occuper",
+        "past": "s'est occupé",
+        "participle": "occupé",
+        "third": "s'occupe",
+        "ing": "en s'occupant"
+      },
+      "ko": {
+        "meaning": "처리하다",
+        "base": "처리하다",
+        "past": "처리했다",
+        "participle": "처리한",
+        "third": "처리한다",
+        "ing": "처리하는 중"
+      },
+      "ja": {
+        "meaning": "対処する",
+        "base": "対処する",
+        "past": "対処した",
+        "participle": "対処した",
+        "third": "対処する",
+        "ing": "対処している"
+      },
+      "zh-Hans": {
+        "meaning": "处理",
+        "base": "处理",
+        "past": "处理了",
+        "participle": "已处理",
+        "third": "处理",
+        "ing": "处理中"
+      },
+      "en": {
+        "meaning": "handle a problem or situation",
+        "base": "deal",
+        "past": "dealt",
+        "participle": "dealt",
+        "third": "deals",
+        "ing": "dealing"
+      }
+    },
+    "ipaUS": {
+      "base": "/diːl/",
+      "past": "/dɛlt/",
+      "participle": "/dɛlt/",
+      "third": "/diːlz/",
+      "ing": "/ˈdiːlɪŋ/"
     }
   },
   {
@@ -635,6 +1877,144 @@
     }
   },
   {
+    "base": "draw",
+    "past": "drew",
+    "participle": "drawn",
+    "thirdPerson": "draws",
+    "ing": "drawing",
+    "meaningEs": "dibujar",
+    "complement": "a picture",
+    "meaningEn": "make a picture with lines",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "dibujar",
+        "base": "dibujar",
+        "past": "dibujó",
+        "participle": "dibujado",
+        "third": "dibuja",
+        "ing": "dibujando"
+      },
+      "fr": {
+        "meaning": "dessiner",
+        "base": "dessiner",
+        "past": "a dessiné",
+        "participle": "dessiné",
+        "third": "dessine",
+        "ing": "en dessinant"
+      },
+      "ko": {
+        "meaning": "그리다",
+        "base": "그리다",
+        "past": "그렸다",
+        "participle": "그린",
+        "third": "그린다",
+        "ing": "그리고 있다"
+      },
+      "ja": {
+        "meaning": "描く",
+        "base": "描く",
+        "past": "描いた",
+        "participle": "描いた",
+        "third": "描く",
+        "ing": "描いている"
+      },
+      "zh-Hans": {
+        "meaning": "画",
+        "base": "画",
+        "past": "画了",
+        "participle": "画过",
+        "third": "画",
+        "ing": "正在画"
+      },
+      "en": {
+        "meaning": "make a picture with lines",
+        "base": "draw",
+        "past": "drew",
+        "participle": "drawn",
+        "third": "draws",
+        "ing": "drawing"
+      }
+    },
+    "ipaUS": {
+      "base": "/drɔ/",
+      "past": "/dru/",
+      "participle": "/drɔn/",
+      "third": "/drɔz/",
+      "ing": "/ˈdrɔɪŋ/"
+    }
+  },
+  {
+    "base": "dream",
+    "past": "dreamt",
+    "participle": "dreamt",
+    "thirdPerson": "dreams",
+    "ing": "dreaming",
+    "meaningEs": "soñar",
+    "complement": "about a holiday",
+    "meaningEn": "have visions or thoughts during sleep",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "soñar",
+        "base": "soñar",
+        "past": "soñó",
+        "participle": "soñado",
+        "third": "sueña",
+        "ing": "soñando"
+      },
+      "fr": {
+        "meaning": "rêver",
+        "base": "rêver",
+        "past": "a rêvé",
+        "participle": "rêvé",
+        "third": "rêve",
+        "ing": "en rêvant"
+      },
+      "ko": {
+        "meaning": "꿈꾸다",
+        "base": "꿈꾸다",
+        "past": "꿈꿨다",
+        "participle": "꿈꾼",
+        "third": "꿈꾼다",
+        "ing": "꿈꾸는 중"
+      },
+      "ja": {
+        "meaning": "夢を見る",
+        "base": "夢を見る",
+        "past": "夢を見た",
+        "participle": "夢を見た",
+        "third": "夢を見る",
+        "ing": "夢を見ている"
+      },
+      "zh-Hans": {
+        "meaning": "做梦",
+        "base": "做梦",
+        "past": "做了梦",
+        "participle": "做过梦",
+        "third": "做梦",
+        "ing": "做梦中"
+      },
+      "en": {
+        "meaning": "have visions or thoughts during sleep",
+        "base": "dream",
+        "past": "dreamt",
+        "participle": "dreamt",
+        "third": "dreams",
+        "ing": "dreaming"
+      }
+    },
+    "ipaUS": {
+      "base": "/dɹiːm/",
+      "past": "/drɛmt/",
+      "participle": "/drɛmt/",
+      "third": "/dɹiːmz/",
+      "ing": "/ˈdɹiːmɪŋ/"
+    }
+  },
+  {
     "base": "drink",
     "past": "drank",
     "participle": "drunk",
@@ -704,6 +2084,75 @@
     }
   },
   {
+    "base": "drive",
+    "past": "drove",
+    "participle": "driven",
+    "thirdPerson": "drives",
+    "ing": "driving",
+    "meaningEs": "conducir",
+    "complement": "a car",
+    "meaningEn": "control a vehicle",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "conducir",
+        "base": "conducir",
+        "past": "condujo",
+        "participle": "conducido",
+        "third": "conduce",
+        "ing": "conduciendo"
+      },
+      "fr": {
+        "meaning": "conduire",
+        "base": "conduire",
+        "past": "a conduit",
+        "participle": "conduit",
+        "third": "conduit",
+        "ing": "en conduisant"
+      },
+      "ko": {
+        "meaning": "운전하다",
+        "base": "운전하다",
+        "past": "운전했다",
+        "participle": "운전한",
+        "third": "운전한다",
+        "ing": "운전하고 있다"
+      },
+      "ja": {
+        "meaning": "運転する",
+        "base": "運転する",
+        "past": "運転した",
+        "participle": "運転した",
+        "third": "運転する",
+        "ing": "運転している"
+      },
+      "zh-Hans": {
+        "meaning": "开车",
+        "base": "开车",
+        "past": "开车了",
+        "participle": "开过车",
+        "third": "开车",
+        "ing": "正在开车"
+      },
+      "en": {
+        "meaning": "control a vehicle",
+        "base": "drive",
+        "past": "drove",
+        "participle": "driven",
+        "third": "drives",
+        "ing": "driving"
+      }
+    },
+    "ipaUS": {
+      "base": "/draɪv/",
+      "past": "/droʊv/",
+      "participle": "/ˈdrɪvən/",
+      "third": "/draɪvz/",
+      "ing": "/ˈdraɪvɪŋ/"
+    }
+  },
+  {
     "base": "eat",
     "past": "ate",
     "participle": "eaten",
@@ -770,6 +2219,765 @@
       "participle": "/ˈiːtən/",
       "third": "/iːts/",
       "ing": "/ˈiːtɪŋ/"
+    }
+  },
+  {
+    "base": "fall",
+    "past": "fell",
+    "participle": "fallen",
+    "thirdPerson": "falls",
+    "ing": "falling",
+    "meaningEs": "caer",
+    "complement": "into the water",
+    "meaningEn": "to drop downward by gravity",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "caer",
+        "base": "caer",
+        "past": "cayó",
+        "participle": "caído",
+        "third": "cae",
+        "ing": "cayendo"
+      },
+      "fr": {
+        "meaning": "tomber",
+        "base": "tomber",
+        "past": "est tombé",
+        "participle": "tombé",
+        "third": "tombe",
+        "ing": "en tombant"
+      },
+      "ko": {
+        "meaning": "떨어지다",
+        "base": "떨어지다",
+        "past": "떨어졌다",
+        "participle": "떨어진",
+        "third": "떨어진다",
+        "ing": "떨어지고 있다"
+      },
+      "ja": {
+        "meaning": "落ちる",
+        "base": "落ちる",
+        "past": "落ちた",
+        "participle": "落ちた",
+        "third": "落ちる",
+        "ing": "落ちている"
+      },
+      "zh-Hans": {
+        "meaning": "掉下",
+        "base": "掉下",
+        "past": "掉下了",
+        "participle": "已掉下",
+        "third": "掉下",
+        "ing": "正在掉下"
+      },
+      "en": {
+        "meaning": "to drop downward by gravity",
+        "base": "fall",
+        "past": "fell",
+        "participle": "fallen",
+        "third": "falls",
+        "ing": "falling"
+      }
+    },
+    "ipaUS": {
+      "base": "/fɔl/",
+      "past": "/fɛl/",
+      "participle": "/ˈfɔlən/",
+      "third": "/fɔlz/",
+      "ing": "/ˈfɔlɪŋ/"
+    }
+  },
+  {
+    "base": "feel",
+    "past": "felt",
+    "participle": "felt",
+    "thirdPerson": "feels",
+    "ing": "feeling",
+    "meaningEs": "sentirse",
+    "complement": "confident",
+    "meaningEn": "experience a physical or emotional state",
+    "regular": false,
+    "continuous": false,
+    "translations": {
+      "es": {
+        "meaning": "sentirse",
+        "base": "sentirse",
+        "past": "se sintió",
+        "participle": "sentido",
+        "third": "se siente",
+        "ing": "sintiéndose"
+      },
+      "fr": {
+        "meaning": "se sentir",
+        "base": "se sentir",
+        "past": "s'est senti",
+        "participle": "senti",
+        "third": "se sent",
+        "ing": "en se sentant"
+      },
+      "ko": {
+        "meaning": "느끼다",
+        "base": "느끼다",
+        "past": "느꼈다",
+        "participle": "느낀",
+        "third": "느낀다",
+        "ing": "느끼는 중"
+      },
+      "ja": {
+        "meaning": "感じる",
+        "base": "感じる",
+        "past": "感じた",
+        "participle": "感じた",
+        "third": "感じる",
+        "ing": "感じている"
+      },
+      "zh-Hans": {
+        "meaning": "感觉",
+        "base": "感觉",
+        "past": "感觉了",
+        "participle": "已感觉",
+        "third": "感觉",
+        "ing": "感觉中"
+      },
+      "en": {
+        "meaning": "experience a physical or emotional state",
+        "base": "feel",
+        "past": "felt",
+        "participle": "felt",
+        "third": "feels",
+        "ing": "feeling"
+      }
+    },
+    "ipaUS": {
+      "base": "/fil/",
+      "past": "/fɛlt/",
+      "participle": "/fɛlt/",
+      "third": "/filz/",
+      "ing": "/ˈfilɪŋ/"
+    }
+  },
+  {
+    "base": "find",
+    "past": "found",
+    "participle": "found",
+    "thirdPerson": "finds",
+    "ing": "finding",
+    "meaningEs": "encontrar",
+    "complement": "new ideas",
+    "meaningEn": "discover or locate something",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "encontrar",
+        "base": "encontrar",
+        "past": "encontró",
+        "participle": "encontrado",
+        "third": "encuentra",
+        "ing": "encontrando"
+      },
+      "fr": {
+        "meaning": "trouver",
+        "base": "trouver",
+        "past": "a trouvé",
+        "participle": "trouvé",
+        "third": "trouve",
+        "ing": "en trouvant"
+      },
+      "ko": {
+        "meaning": "찾다",
+        "base": "찾다",
+        "past": "찾았다",
+        "participle": "찾은",
+        "third": "찾는다",
+        "ing": "찾는 중"
+      },
+      "ja": {
+        "meaning": "見つける",
+        "base": "見つける",
+        "past": "見つけた",
+        "participle": "見つけた",
+        "third": "見つける",
+        "ing": "見つけている"
+      },
+      "zh-Hans": {
+        "meaning": "找到",
+        "base": "找到",
+        "past": "找到了",
+        "participle": "已找到",
+        "third": "找到",
+        "ing": "找到中"
+      },
+      "en": {
+        "meaning": "discover or locate something",
+        "base": "find",
+        "past": "found",
+        "participle": "found",
+        "third": "finds",
+        "ing": "finding"
+      }
+    },
+    "ipaUS": {
+      "base": "/faɪnd/",
+      "past": "/faʊnd/",
+      "participle": "/faʊnd/",
+      "third": "/faɪndz/",
+      "ing": "/ˈfaɪndɪŋ/"
+    }
+  },
+  {
+    "base": "fit",
+    "past": "fit",
+    "participle": "fit",
+    "thirdPerson": "fits",
+    "ing": "fitting",
+    "meaningEs": "caber",
+    "complement": "in the space",
+    "meaningEn": "be the correct size",
+    "regular": false,
+    "continuous": false,
+    "translations": {
+      "es": {
+        "meaning": "caber",
+        "base": "caber",
+        "past": "cupo",
+        "participle": "cabido",
+        "third": "cabe",
+        "ing": "cabiendo"
+      },
+      "fr": {
+        "meaning": "tenir dans",
+        "base": "tenir dans",
+        "past": "a tenu dans",
+        "participle": "tenu dans",
+        "third": "tient dans",
+        "ing": "en tenant dans"
+      },
+      "ko": {
+        "meaning": "맞다",
+        "base": "맞다",
+        "past": "맞았다",
+        "participle": "맞은",
+        "third": "맞는다",
+        "ing": "맞는 중"
+      },
+      "ja": {
+        "meaning": "収まる",
+        "base": "収まる",
+        "past": "収まった",
+        "participle": "収まった",
+        "third": "収まる",
+        "ing": "収まっている"
+      },
+      "zh-Hans": {
+        "meaning": "放得下",
+        "base": "放得下",
+        "past": "曾放得下",
+        "participle": "放得下的",
+        "third": "放得下",
+        "ing": "放得下"
+      },
+      "en": {
+        "meaning": "be the correct size",
+        "base": "fit",
+        "past": "fit",
+        "participle": "fit",
+        "third": "fits",
+        "ing": "fitting"
+      }
+    },
+    "ipaUS": {
+      "base": "/fɪt/",
+      "past": "/fɪt/",
+      "participle": "/fɪt/",
+      "third": "/fɪts/",
+      "ing": "/ˈfɪtɪŋ/"
+    }
+  },
+  {
+    "base": "fly",
+    "past": "flew",
+    "participle": "flown",
+    "thirdPerson": "flies",
+    "ing": "flying",
+    "meaningEs": "volar",
+    "complement": "over the city",
+    "meaningEn": "to move through the air",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "volar",
+        "base": "volar",
+        "past": "voló",
+        "participle": "volado",
+        "third": "vuela",
+        "ing": "volando"
+      },
+      "fr": {
+        "meaning": "voler",
+        "base": "voler",
+        "past": "a volé",
+        "participle": "volé",
+        "third": "vole",
+        "ing": "en volant"
+      },
+      "ko": {
+        "meaning": "날다",
+        "base": "날다",
+        "past": "날았다",
+        "participle": "날은",
+        "third": "난다",
+        "ing": "날고 있다"
+      },
+      "ja": {
+        "meaning": "飛ぶ",
+        "base": "飛ぶ",
+        "past": "飛んだ",
+        "participle": "飛んだ",
+        "third": "飛ぶ",
+        "ing": "飛んでいる"
+      },
+      "zh-Hans": {
+        "meaning": "飞",
+        "base": "飞",
+        "past": "飞了",
+        "participle": "已飞",
+        "third": "飞",
+        "ing": "正在飞"
+      },
+      "en": {
+        "meaning": "to move through the air",
+        "base": "fly",
+        "past": "flew",
+        "participle": "flown",
+        "third": "flies",
+        "ing": "flying"
+      }
+    },
+    "ipaUS": {
+      "base": "/flaɪ/",
+      "past": "/flu/",
+      "participle": "/floʊn/",
+      "third": "/flaɪz/",
+      "ing": "/ˈflaɪɪŋ/"
+    }
+  },
+  {
+    "base": "forbid",
+    "past": "forbade",
+    "participle": "forbidden",
+    "thirdPerson": "forbids",
+    "ing": "forbidding",
+    "meaningEs": "prohibir",
+    "complement": "smoking",
+    "meaningEn": "to order not to allow",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "prohibir",
+        "base": "prohibir",
+        "past": "prohibió",
+        "participle": "prohibido",
+        "third": "prohíbe",
+        "ing": "prohibiendo"
+      },
+      "fr": {
+        "meaning": "interdire",
+        "base": "interdire",
+        "past": "a interdit",
+        "participle": "interdit",
+        "third": "interdit",
+        "ing": "en interdisant"
+      },
+      "ko": {
+        "meaning": "금지하다",
+        "base": "금지하다",
+        "past": "금지했다",
+        "participle": "금지된",
+        "third": "금지한다",
+        "ing": "금지하고 있다"
+      },
+      "ja": {
+        "meaning": "禁じる",
+        "base": "禁じる",
+        "past": "禁じた",
+        "participle": "禁じた",
+        "third": "禁じる",
+        "ing": "禁じている"
+      },
+      "zh-Hans": {
+        "meaning": "禁止",
+        "base": "禁止",
+        "past": "禁止了",
+        "participle": "被禁止",
+        "third": "禁止",
+        "ing": "正在禁止"
+      },
+      "en": {
+        "meaning": "to order not to allow",
+        "base": "forbid",
+        "past": "forbade",
+        "participle": "forbidden",
+        "third": "forbids",
+        "ing": "forbidding"
+      }
+    },
+    "ipaUS": {
+      "base": "/fərˈbɪd/",
+      "past": "/fərˈbæd/",
+      "participle": "/fərˈbɪdən/",
+      "third": "/fərˈbɪdz/",
+      "ing": "/fərˈbɪdɪŋ/"
+    }
+  },
+  {
+    "base": "forecast",
+    "past": "forecast",
+    "participle": "forecast",
+    "thirdPerson": "forecasts",
+    "ing": "forecasting",
+    "meaningEs": "pronosticar",
+    "complement": "the weather",
+    "meaningEn": "predict future events",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "pronosticar",
+        "base": "pronosticar",
+        "past": "pronosticó",
+        "participle": "pronosticado",
+        "third": "pronostica",
+        "ing": "pronosticando"
+      },
+      "fr": {
+        "meaning": "prédire",
+        "base": "prédire",
+        "past": "a prédit",
+        "participle": "prédit",
+        "third": "prédit",
+        "ing": "en prédisant"
+      },
+      "ko": {
+        "meaning": "예측하다",
+        "base": "예측하다",
+        "past": "예측했다",
+        "participle": "예측한",
+        "third": "예측한다",
+        "ing": "예측하는 중"
+      },
+      "ja": {
+        "meaning": "予想する",
+        "base": "予想する",
+        "past": "予想した",
+        "participle": "予想した",
+        "third": "予想する",
+        "ing": "予想している"
+      },
+      "zh-Hans": {
+        "meaning": "预测",
+        "base": "预测",
+        "past": "预测了",
+        "participle": "已预测",
+        "third": "预测",
+        "ing": "正在预测"
+      },
+      "en": {
+        "meaning": "predict future events",
+        "base": "forecast",
+        "past": "forecast",
+        "participle": "forecast",
+        "third": "forecasts",
+        "ing": "forecasting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˈfɔrˌkæst/",
+      "past": "/ˈfɔrˌkæst/",
+      "participle": "/ˈfɔrˌkæst/",
+      "third": "/ˈfɔrˌkæsts/",
+      "ing": "/ˈfɔrˌkæstɪŋ/"
+    }
+  },
+  {
+    "base": "forget",
+    "past": "forgot",
+    "participle": "forgotten",
+    "thirdPerson": "forgets",
+    "ing": "forgetting",
+    "meaningEs": "olvidar",
+    "complement": "important details",
+    "meaningEn": "to not remember",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "olvidar",
+        "base": "olvidar",
+        "past": "olvidó",
+        "participle": "olvidado",
+        "third": "olvida",
+        "ing": "olvidando"
+      },
+      "fr": {
+        "meaning": "oublier",
+        "base": "oublier",
+        "past": "a oublié",
+        "participle": "oublié",
+        "third": "oublie",
+        "ing": "en oubliant"
+      },
+      "ko": {
+        "meaning": "잊다",
+        "base": "잊다",
+        "past": "잊었다",
+        "participle": "잊은",
+        "third": "잊는다",
+        "ing": "잊고 있다"
+      },
+      "ja": {
+        "meaning": "忘れる",
+        "base": "忘れる",
+        "past": "忘れた",
+        "participle": "忘れた",
+        "third": "忘れる",
+        "ing": "忘れている"
+      },
+      "zh-Hans": {
+        "meaning": "忘记",
+        "base": "忘记",
+        "past": "忘记了",
+        "participle": "已忘记",
+        "third": "忘记",
+        "ing": "正在忘记"
+      },
+      "en": {
+        "meaning": "to not remember",
+        "base": "forget",
+        "past": "forgot",
+        "participle": "forgotten",
+        "third": "forgets",
+        "ing": "forgetting"
+      }
+    },
+    "ipaUS": {
+      "base": "/fərˈɡɛt/",
+      "past": "/fərˈɡɑt/",
+      "participle": "/fərˈɡɑtən/",
+      "third": "/fərˈɡɛts/",
+      "ing": "/fərˈɡɛtɪŋ/"
+    }
+  },
+  {
+    "base": "forgive",
+    "past": "forgave",
+    "participle": "forgiven",
+    "thirdPerson": "forgives",
+    "ing": "forgiving",
+    "meaningEs": "perdonar",
+    "complement": "a mistake",
+    "meaningEn": "to stop blaming for a fault",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "perdonar",
+        "base": "perdonar",
+        "past": "perdonó",
+        "participle": "perdonado",
+        "third": "perdona",
+        "ing": "perdonando"
+      },
+      "fr": {
+        "meaning": "pardonner",
+        "base": "pardonner",
+        "past": "a pardonné",
+        "participle": "pardonné",
+        "third": "pardonne",
+        "ing": "en pardonnant"
+      },
+      "ko": {
+        "meaning": "용서하다",
+        "base": "용서하다",
+        "past": "용서했다",
+        "participle": "용서한",
+        "third": "용서한다",
+        "ing": "용서하고 있다"
+      },
+      "ja": {
+        "meaning": "許す",
+        "base": "許す",
+        "past": "許した",
+        "participle": "許した",
+        "third": "許す",
+        "ing": "許している"
+      },
+      "zh-Hans": {
+        "meaning": "原谅",
+        "base": "原谅",
+        "past": "原谅了",
+        "participle": "已原谅",
+        "third": "原谅",
+        "ing": "正在原谅"
+      },
+      "en": {
+        "meaning": "to stop blaming for a fault",
+        "base": "forgive",
+        "past": "forgave",
+        "participle": "forgiven",
+        "third": "forgives",
+        "ing": "forgiving"
+      }
+    },
+    "ipaUS": {
+      "base": "/fərˈɡɪv/",
+      "past": "/fərˈɡeɪv/",
+      "participle": "/fərˈɡɪvən/",
+      "third": "/fərˈɡɪvz/",
+      "ing": "/fərˈɡɪvɪŋ/"
+    }
+  },
+  {
+    "base": "freeze",
+    "past": "froze",
+    "participle": "frozen",
+    "thirdPerson": "freezes",
+    "ing": "freezing",
+    "meaningEs": "congelar",
+    "complement": "the vegetables",
+    "meaningEn": "to turn into ice by cold",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "congelar",
+        "base": "congelar",
+        "past": "congeló",
+        "participle": "congelado",
+        "third": "congela",
+        "ing": "congelando"
+      },
+      "fr": {
+        "meaning": "congeler",
+        "base": "congeler",
+        "past": "a congelé",
+        "participle": "congelé",
+        "third": "congèle",
+        "ing": "en congelant"
+      },
+      "ko": {
+        "meaning": "얼리다",
+        "base": "얼리다",
+        "past": "얼렸다",
+        "participle": "얼린",
+        "third": "얼린다",
+        "ing": "얼리고 있다"
+      },
+      "ja": {
+        "meaning": "凍らせる",
+        "base": "凍らせる",
+        "past": "凍らせた",
+        "participle": "凍らせた",
+        "third": "凍らせる",
+        "ing": "凍らせている"
+      },
+      "zh-Hans": {
+        "meaning": "冷冻",
+        "base": "冷冻",
+        "past": "冷冻了",
+        "participle": "已冷冻",
+        "third": "冷冻",
+        "ing": "正在冷冻"
+      },
+      "en": {
+        "meaning": "to turn into ice by cold",
+        "base": "freeze",
+        "past": "froze",
+        "participle": "frozen",
+        "third": "freezes",
+        "ing": "freezing"
+      }
+    },
+    "ipaUS": {
+      "base": "/friz/",
+      "past": "/froʊz/",
+      "participle": "/ˈfroʊzən/",
+      "third": "/frizɪz/",
+      "ing": "/ˈfrizɪŋ/"
+    }
+  },
+  {
+    "base": "get",
+    "past": "got",
+    "participle": "gotten",
+    "thirdPerson": "gets",
+    "ing": "getting",
+    "meaningEs": "obtener",
+    "complement": "good results",
+    "meaningEn": "obtain or receive something",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "obtener",
+        "base": "obtener",
+        "past": "obtuvo",
+        "participle": "obtenido",
+        "third": "obtiene",
+        "ing": "obteniendo"
+      },
+      "fr": {
+        "meaning": "obtenir",
+        "base": "obtenir",
+        "past": "a obtenu",
+        "participle": "obtenu",
+        "third": "obtient",
+        "ing": "en obtenant"
+      },
+      "ko": {
+        "meaning": "얻다",
+        "base": "얻다",
+        "past": "얻었다",
+        "participle": "얻은",
+        "third": "얻는다",
+        "ing": "얻는 중"
+      },
+      "ja": {
+        "meaning": "得る",
+        "base": "得る",
+        "past": "得た",
+        "participle": "得た",
+        "third": "得る",
+        "ing": "得ている"
+      },
+      "zh-Hans": {
+        "meaning": "获得",
+        "base": "获得",
+        "past": "获得了",
+        "participle": "已获得",
+        "third": "获得",
+        "ing": "获得中"
+      },
+      "en": {
+        "meaning": "obtain or receive something",
+        "base": "get",
+        "past": "got",
+        "participle": "gotten",
+        "third": "gets",
+        "ing": "getting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ɡɛt/",
+      "past": "/ɡɑt/",
+      "participle": "/ˈɡɑtən/",
+      "third": "/ɡɛts/",
+      "ing": "/ˈɡɛtɪŋ/"
     }
   },
   {
@@ -911,6 +3119,75 @@
     }
   },
   {
+    "base": "grow",
+    "past": "grew",
+    "participle": "grown",
+    "thirdPerson": "grows",
+    "ing": "growing",
+    "meaningEs": "cultivar",
+    "complement": "vegetables",
+    "meaningEn": "cultivate plants or vegetables",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "cultivar",
+        "base": "cultivar",
+        "past": "cultivó",
+        "participle": "cultivado",
+        "third": "cultiva",
+        "ing": "cultivando"
+      },
+      "fr": {
+        "meaning": "cultiver",
+        "base": "cultiver",
+        "past": "a cultivé",
+        "participle": "cultivé",
+        "third": "cultive",
+        "ing": "en cultivant"
+      },
+      "ko": {
+        "meaning": "재배하다",
+        "base": "재배하다",
+        "past": "재배했다",
+        "participle": "재배된",
+        "third": "재배한다",
+        "ing": "재배하고 있다"
+      },
+      "ja": {
+        "meaning": "育てる",
+        "base": "育てる",
+        "past": "育てた",
+        "participle": "育てた",
+        "third": "育てる",
+        "ing": "育てている"
+      },
+      "zh-Hans": {
+        "meaning": "种植",
+        "base": "种植",
+        "past": "种植了",
+        "participle": "种植过的",
+        "third": "种植",
+        "ing": "正在种植"
+      },
+      "en": {
+        "meaning": "cultivate plants or vegetables",
+        "base": "grow",
+        "past": "grew",
+        "participle": "grown",
+        "third": "grows",
+        "ing": "growing"
+      }
+    },
+    "ipaUS": {
+      "base": "/ɡroʊ/",
+      "past": "/ɡruː/",
+      "participle": "/ɡroʊn/",
+      "third": "/ɡroʊz/",
+      "ing": "/ˈɡroʊ.ɪŋ/"
+    }
+  },
+  {
     "base": "have",
     "past": "had",
     "participle": "had",
@@ -977,6 +3254,144 @@
       "participle": "/hæd/",
       "third": "/hæz/",
       "ing": "/ˈhævɪŋ/"
+    }
+  },
+  {
+    "base": "hear",
+    "past": "heard",
+    "participle": "heard",
+    "thirdPerson": "hears",
+    "ing": "hearing",
+    "meaningEs": "oír",
+    "complement": "a strange noise",
+    "meaningEn": "perceive sound with the ears",
+    "regular": false,
+    "continuous": false,
+    "translations": {
+      "es": {
+        "meaning": "oír",
+        "base": "oír",
+        "past": "oyó",
+        "participle": "oído",
+        "third": "oye",
+        "ing": "oyendo"
+      },
+      "fr": {
+        "meaning": "entendre",
+        "base": "entendre",
+        "past": "a entendu",
+        "participle": "entendu",
+        "third": "entend",
+        "ing": "en entendant"
+      },
+      "ko": {
+        "meaning": "듣다",
+        "base": "듣다",
+        "past": "들었다",
+        "participle": "들은",
+        "third": "듣는다",
+        "ing": "듣는 중"
+      },
+      "ja": {
+        "meaning": "聞こえる",
+        "base": "聞こえる",
+        "past": "聞こえた",
+        "participle": "聞こえた",
+        "third": "聞こえる",
+        "ing": "聞こえている"
+      },
+      "zh-Hans": {
+        "meaning": "听见",
+        "base": "听见",
+        "past": "听见了",
+        "participle": "已听见",
+        "third": "听见",
+        "ing": "听见"
+      },
+      "en": {
+        "meaning": "perceive sound with the ears",
+        "base": "hear",
+        "past": "heard",
+        "participle": "heard",
+        "third": "hears",
+        "ing": "hearing"
+      }
+    },
+    "ipaUS": {
+      "base": "/hɪɹ/",
+      "past": "/hɜrd/",
+      "participle": "/hɜrd/",
+      "third": "/hɪɹz/",
+      "ing": "/ˈhɪrɪŋ/"
+    }
+  },
+  {
+    "base": "hew",
+    "past": "hewed",
+    "participle": "hewn",
+    "thirdPerson": "hews",
+    "ing": "hewing",
+    "meaningEs": "labrar",
+    "complement": "stone",
+    "meaningEn": "to cut or shape (stone, wood) with a tool",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "labrar",
+        "base": "labrar",
+        "past": "labró",
+        "participle": "labrado",
+        "third": "labra",
+        "ing": "labrando"
+      },
+      "fr": {
+        "meaning": "tailler",
+        "base": "tailler",
+        "past": "a taillé",
+        "participle": "taillé",
+        "third": "taille",
+        "ing": "en taillant"
+      },
+      "ko": {
+        "meaning": "깎다",
+        "base": "깎다",
+        "past": "깎았다",
+        "participle": "깎은",
+        "third": "깎는다",
+        "ing": "깎는 중"
+      },
+      "ja": {
+        "meaning": "切り出す",
+        "base": "切り出す",
+        "past": "切り出した",
+        "participle": "切り出した",
+        "third": "切り出す",
+        "ing": "切り出している"
+      },
+      "zh-Hans": {
+        "meaning": "凿",
+        "base": "凿",
+        "past": "凿了",
+        "participle": "已凿",
+        "third": "凿",
+        "ing": "正在凿"
+      },
+      "en": {
+        "meaning": "to cut or shape (stone, wood) with a tool",
+        "base": "hew",
+        "past": "hewed",
+        "participle": "hewn",
+        "third": "hews",
+        "ing": "hewing"
+      }
+    },
+    "ipaUS": {
+      "base": "/hju/",
+      "past": "/hjud/",
+      "participle": "/hjun/",
+      "third": "/hjuz/",
+      "ing": "/ˈhjuɪŋ/"
     }
   },
   {
@@ -1049,6 +3464,213 @@
     }
   },
   {
+    "base": "hurt",
+    "past": "hurt",
+    "participle": "hurt",
+    "thirdPerson": "hurts",
+    "ing": "hurting",
+    "meaningEs": "lastimar",
+    "complement": "a finger",
+    "meaningEn": "cause pain",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "lastimar",
+        "base": "lastimar",
+        "past": "lastimó",
+        "participle": "lastimado",
+        "third": "lastima",
+        "ing": "lastimando"
+      },
+      "fr": {
+        "meaning": "blesser",
+        "base": "blesser",
+        "past": "a blessé",
+        "participle": "blessé",
+        "third": "blesse",
+        "ing": "en blessant"
+      },
+      "ko": {
+        "meaning": "다치게 하다",
+        "base": "다치게 하다",
+        "past": "다치게 했다",
+        "participle": "다치게 한",
+        "third": "다치게 한다",
+        "ing": "다치게 하는 중"
+      },
+      "ja": {
+        "meaning": "傷つける",
+        "base": "傷つける",
+        "past": "傷つけた",
+        "participle": "傷つけた",
+        "third": "傷つける",
+        "ing": "傷つけている"
+      },
+      "zh-Hans": {
+        "meaning": "伤害",
+        "base": "伤害",
+        "past": "伤害了",
+        "participle": "已伤害",
+        "third": "伤害",
+        "ing": "正在伤害"
+      },
+      "en": {
+        "meaning": "cause pain",
+        "base": "hurt",
+        "past": "hurt",
+        "participle": "hurt",
+        "third": "hurts",
+        "ing": "hurting"
+      }
+    },
+    "ipaUS": {
+      "base": "/hɝt/",
+      "past": "/hɝt/",
+      "participle": "/hɝt/",
+      "third": "/hɝts/",
+      "ing": "/ˈhɝtɪŋ/"
+    }
+  },
+  {
+    "base": "interweave",
+    "past": "interwove",
+    "participle": "interwoven",
+    "thirdPerson": "interweaves",
+    "ing": "interweaving",
+    "meaningEs": "entrelazar",
+    "complement": "colored threads",
+    "meaningEn": "blend or weave together elements, threads, or parts",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "entrelazar",
+        "base": "entrelazar",
+        "past": "entrelazó",
+        "participle": "entrelazado",
+        "third": "entrelaza",
+        "ing": "entrelazando"
+      },
+      "fr": {
+        "meaning": "entrelacer",
+        "base": "entrelacer",
+        "past": "a entrelacé",
+        "participle": "entrelacé",
+        "third": "entrelace",
+        "ing": "en entrelaçant"
+      },
+      "ko": {
+        "meaning": "엮다",
+        "base": "엮다",
+        "past": "엮었다",
+        "participle": "엮인",
+        "third": "엮는다",
+        "ing": "엮고 있다"
+      },
+      "ja": {
+        "meaning": "織り交ぜる",
+        "base": "織り交ぜる",
+        "past": "織り交ぜた",
+        "participle": "織り交ぜた",
+        "third": "織り交ぜる",
+        "ing": "織り交ぜている"
+      },
+      "zh-Hans": {
+        "meaning": "交织",
+        "base": "交织",
+        "past": "交织了",
+        "participle": "交织的",
+        "third": "交织",
+        "ing": "正在交织"
+      },
+      "en": {
+        "meaning": "blend or weave together elements, threads, or parts",
+        "base": "interweave",
+        "past": "interwove",
+        "participle": "interwoven",
+        "third": "interweaves",
+        "ing": "interweaving"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌɪn.tɚˈwiːv/",
+      "past": "/ˌɪn.tɚˈwoʊv/",
+      "participle": "/ˌɪn.tɚˈwoʊ.vən/",
+      "third": "/ˌɪn.tɚˈwiːvz/",
+      "ing": "/ˌɪn.tɚˈwiːv.ɪŋ/"
+    }
+  },
+  {
+    "base": "keep",
+    "past": "kept",
+    "participle": "kept",
+    "thirdPerson": "keeps",
+    "ing": "keeping",
+    "meaningEs": "guardar",
+    "complement": "a spare key",
+    "meaningEn": "to continue to have or maintain possession",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "guardar",
+        "base": "guardar",
+        "past": "guardó",
+        "participle": "guardado",
+        "third": "guarda",
+        "ing": "guardando"
+      },
+      "fr": {
+        "meaning": "garder",
+        "base": "garder",
+        "past": "a gardé",
+        "participle": "gardé",
+        "third": "garde",
+        "ing": "en gardant"
+      },
+      "ko": {
+        "meaning": "보관하다",
+        "base": "보관하다",
+        "past": "보관했다",
+        "participle": "보관한",
+        "third": "보관한다",
+        "ing": "보관하면서"
+      },
+      "ja": {
+        "meaning": "保管する",
+        "base": "保管する",
+        "past": "保管した",
+        "participle": "保管した",
+        "third": "保管する",
+        "ing": "保管している"
+      },
+      "zh-Hans": {
+        "meaning": "保存",
+        "base": "保存",
+        "past": "保存了",
+        "participle": "保存过的",
+        "third": "保存",
+        "ing": "保存着"
+      },
+      "en": {
+        "meaning": "to continue to have or maintain possession",
+        "base": "keep",
+        "past": "kept",
+        "participle": "kept",
+        "third": "keeps",
+        "ing": "keeping"
+      }
+    },
+    "ipaUS": {
+      "base": "/kip/",
+      "past": "/kɛpt/",
+      "participle": "/kɛpt/",
+      "third": "/kips/",
+      "ing": "/ˈkipɪŋ/"
+    }
+  },
+  {
     "base": "know",
     "past": "knew",
     "participle": "known",
@@ -1115,6 +3737,1317 @@
       "participle": "/noʊn/",
       "third": "/noʊz/",
       "ing": "/ˈnoʊɪŋ/"
+    }
+  },
+  {
+    "base": "lead",
+    "past": "led",
+    "participle": "led",
+    "thirdPerson": "leads",
+    "ing": "leading",
+    "meaningEs": "dirigir",
+    "complement": "a team",
+    "meaningEn": "to direct or guide a group",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "dirigir",
+        "base": "dirigir",
+        "past": "dirigió",
+        "participle": "dirigido",
+        "third": "dirige",
+        "ing": "dirigiendo"
+      },
+      "fr": {
+        "meaning": "diriger",
+        "base": "diriger",
+        "past": "a dirigé",
+        "participle": "dirigé",
+        "third": "dirige",
+        "ing": "en dirigeant"
+      },
+      "ko": {
+        "meaning": "이끌다",
+        "base": "이끌다",
+        "past": "이끌었다",
+        "participle": "이끈",
+        "third": "이끈다",
+        "ing": "이끌면서"
+      },
+      "ja": {
+        "meaning": "率いる",
+        "base": "率いる",
+        "past": "率いた",
+        "participle": "率いた",
+        "third": "率いる",
+        "ing": "率いている"
+      },
+      "zh-Hans": {
+        "meaning": "带领",
+        "base": "带领",
+        "past": "带领了",
+        "participle": "带领过的",
+        "third": "带领",
+        "ing": "带领着"
+      },
+      "en": {
+        "meaning": "to direct or guide a group",
+        "base": "lead",
+        "past": "led",
+        "participle": "led",
+        "third": "leads",
+        "ing": "leading"
+      }
+    },
+    "ipaUS": {
+      "base": "/lid/",
+      "past": "/lɛd/",
+      "participle": "/lɛd/",
+      "third": "/lidz/",
+      "ing": "/ˈlidɪŋ/"
+    }
+  },
+  {
+    "base": "learn",
+    "past": "learnt",
+    "participle": "learnt",
+    "thirdPerson": "learns",
+    "ing": "learning",
+    "meaningEs": "aprender",
+    "complement": "new words",
+    "meaningEn": "to acquire knowledge or a new skill",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "aprender",
+        "base": "aprender",
+        "past": "aprendió",
+        "participle": "aprendido",
+        "third": "aprende",
+        "ing": "aprendiendo"
+      },
+      "fr": {
+        "meaning": "apprendre",
+        "base": "apprendre",
+        "past": "a appris",
+        "participle": "appris",
+        "third": "apprend",
+        "ing": "en apprenant"
+      },
+      "ko": {
+        "meaning": "배우다",
+        "base": "배우다",
+        "past": "배웠다",
+        "participle": "배운",
+        "third": "배운다",
+        "ing": "배우면서"
+      },
+      "ja": {
+        "meaning": "学ぶ",
+        "base": "学ぶ",
+        "past": "学んだ",
+        "participle": "学んだ",
+        "third": "学ぶ",
+        "ing": "学んでいる"
+      },
+      "zh-Hans": {
+        "meaning": "学习",
+        "base": "学习",
+        "past": "学了",
+        "participle": "学过的",
+        "third": "学习",
+        "ing": "学习着"
+      },
+      "en": {
+        "meaning": "to acquire knowledge or a new skill",
+        "base": "learn",
+        "past": "learnt",
+        "participle": "learnt",
+        "third": "learns",
+        "ing": "learning"
+      }
+    },
+    "ipaUS": {
+      "base": "/lɜrn/",
+      "past": "/lɜrnt/",
+      "participle": "/lɜrnt/",
+      "third": "/lɜrnz/",
+      "ing": "/ˈlɜrnɪŋ/"
+    }
+  },
+  {
+    "base": "leave",
+    "past": "left",
+    "participle": "left",
+    "thirdPerson": "leaves",
+    "ing": "leaving",
+    "meaningEs": "salir",
+    "complement": "the office",
+    "meaningEn": "to go away from a place",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "salir",
+        "base": "salir",
+        "past": "salió",
+        "participle": "salido",
+        "third": "sale",
+        "ing": "saliendo"
+      },
+      "fr": {
+        "meaning": "partir",
+        "base": "partir",
+        "past": "est parti",
+        "participle": "parti",
+        "third": "part",
+        "ing": "en partant"
+      },
+      "ko": {
+        "meaning": "떠나다",
+        "base": "떠나다",
+        "past": "떠났다",
+        "participle": "떠난",
+        "third": "떠난다",
+        "ing": "떠나면서"
+      },
+      "ja": {
+        "meaning": "出る",
+        "base": "出る",
+        "past": "出た",
+        "participle": "出た",
+        "third": "出る",
+        "ing": "出ている"
+      },
+      "zh-Hans": {
+        "meaning": "离开",
+        "base": "离开",
+        "past": "离开了",
+        "participle": "离开过的",
+        "third": "离开",
+        "ing": "离开着"
+      },
+      "en": {
+        "meaning": "to go away from a place",
+        "base": "leave",
+        "past": "left",
+        "participle": "left",
+        "third": "leaves",
+        "ing": "leaving"
+      }
+    },
+    "ipaUS": {
+      "base": "/liv/",
+      "past": "/lɛft/",
+      "participle": "/lɛft/",
+      "third": "/livz/",
+      "ing": "/ˈlivɪŋ/"
+    }
+  },
+  {
+    "base": "lend",
+    "past": "lent",
+    "participle": "lent",
+    "thirdPerson": "lends",
+    "ing": "lending",
+    "meaningEs": "prestar",
+    "complement": "a book to a friend",
+    "meaningEn": "to give something to someone for temporary use",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "prestar",
+        "base": "prestar",
+        "past": "prestó",
+        "participle": "prestado",
+        "third": "presta",
+        "ing": "prestando"
+      },
+      "fr": {
+        "meaning": "prêter",
+        "base": "prêter",
+        "past": "a prêté",
+        "participle": "prêté",
+        "third": "prête",
+        "ing": "en prêtant"
+      },
+      "ko": {
+        "meaning": "빌려주다",
+        "base": "빌려주다",
+        "past": "빌려줬다",
+        "participle": "빌려준",
+        "third": "빌려준다",
+        "ing": "빌려주면서"
+      },
+      "ja": {
+        "meaning": "貸す",
+        "base": "貸す",
+        "past": "貸した",
+        "participle": "貸した",
+        "third": "貸す",
+        "ing": "貸している"
+      },
+      "zh-Hans": {
+        "meaning": "借出",
+        "base": "借出",
+        "past": "借出了",
+        "participle": "借出过的",
+        "third": "借出",
+        "ing": "借出着"
+      },
+      "en": {
+        "meaning": "to give something to someone for temporary use",
+        "base": "lend",
+        "past": "lent",
+        "participle": "lent",
+        "third": "lends",
+        "ing": "lending"
+      }
+    },
+    "ipaUS": {
+      "base": "/lɛnd/",
+      "past": "/lɛnt/",
+      "participle": "/lɛnt/",
+      "third": "/lɛndz/",
+      "ing": "/ˈlɛndɪŋ/"
+    }
+  },
+  {
+    "base": "let",
+    "past": "let",
+    "participle": "let",
+    "thirdPerson": "lets",
+    "ing": "letting",
+    "meaningEs": "permitir",
+    "complement": "the dog out",
+    "meaningEn": "allow or permit",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "permitir",
+        "base": "permitir",
+        "past": "permitió",
+        "participle": "permitido",
+        "third": "permite",
+        "ing": "permitiendo"
+      },
+      "fr": {
+        "meaning": "laisser",
+        "base": "laisser",
+        "past": "a laissé",
+        "participle": "laissé",
+        "third": "laisse",
+        "ing": "en laissant"
+      },
+      "ko": {
+        "meaning": "허락하다",
+        "base": "허락하다",
+        "past": "허락했다",
+        "participle": "허락한",
+        "third": "허락한다",
+        "ing": "허락하는 중"
+      },
+      "ja": {
+        "meaning": "許可する",
+        "base": "許可する",
+        "past": "許可した",
+        "participle": "許可した",
+        "third": "許可する",
+        "ing": "許可している"
+      },
+      "zh-Hans": {
+        "meaning": "允许",
+        "base": "允许",
+        "past": "允许了",
+        "participle": "已允许",
+        "third": "允许",
+        "ing": "正在允许"
+      },
+      "en": {
+        "meaning": "allow or permit",
+        "base": "let",
+        "past": "let",
+        "participle": "let",
+        "third": "lets",
+        "ing": "letting"
+      }
+    },
+    "ipaUS": {
+      "base": "/lɛt/",
+      "past": "/lɛt/",
+      "participle": "/lɛt/",
+      "third": "/lɛts/",
+      "ing": "/ˈlɛtɪŋ/"
+    }
+  },
+  {
+    "base": "lie",
+    "past": "lay",
+    "participle": "lain",
+    "thirdPerson": "lies",
+    "ing": "lying",
+    "meaningEs": "estar acostado",
+    "complement": "on the sofa",
+    "meaningEn": "be in a horizontal position, recline",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "estar acostado",
+        "base": "estar acostado",
+        "past": "estuvo acostado",
+        "participle": "estado acostado",
+        "third": "está acostado",
+        "ing": "estando acostado"
+      },
+      "fr": {
+        "meaning": "être allongé",
+        "base": "être allongé",
+        "past": "a été allongé",
+        "participle": "allongé",
+        "third": "est allongé",
+        "ing": "en étant allongé"
+      },
+      "ko": {
+        "meaning": "누워 있다",
+        "base": "누워 있다",
+        "past": "누워 있었다",
+        "participle": "누웠던",
+        "third": "누워 있다",
+        "ing": "누워 있는 중"
+      },
+      "ja": {
+        "meaning": "横になる",
+        "base": "横になる",
+        "past": "横になった",
+        "participle": "横になった",
+        "third": "横になる",
+        "ing": "横になっている"
+      },
+      "zh-Hans": {
+        "meaning": "躺着",
+        "base": "躺着",
+        "past": "躺着了",
+        "participle": "躺过",
+        "third": "躺着",
+        "ing": "正在躺着"
+      },
+      "en": {
+        "meaning": "be in a horizontal position, recline",
+        "base": "lie",
+        "past": "lay",
+        "participle": "lain",
+        "third": "lies",
+        "ing": "lying"
+      }
+    },
+    "ipaUS": {
+      "base": "/laɪ/",
+      "past": "/leɪ/",
+      "participle": "/leɪn/",
+      "third": "/laɪz/",
+      "ing": "/ˈlaɪ.ɪŋ/"
+    }
+  },
+  {
+    "base": "light",
+    "past": "lit",
+    "participle": "lit",
+    "thirdPerson": "lights",
+    "ing": "lighting",
+    "meaningEs": "encender",
+    "complement": "a candle",
+    "meaningEn": "to make something start burning",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "encender",
+        "base": "encender",
+        "past": "encendió",
+        "participle": "encendido",
+        "third": "enciende",
+        "ing": "encendiendo"
+      },
+      "fr": {
+        "meaning": "allumer",
+        "base": "allumer",
+        "past": "a allumé",
+        "participle": "allumé",
+        "third": "allume",
+        "ing": "en allumant"
+      },
+      "ko": {
+        "meaning": "불을 붙이다",
+        "base": "불을 붙이다",
+        "past": "불을 붙였다",
+        "participle": "불을 붙인",
+        "third": "불을 붙인다",
+        "ing": "불을 붙이면서"
+      },
+      "ja": {
+        "meaning": "火をつける",
+        "base": "火をつける",
+        "past": "火をつけた",
+        "participle": "火をつけた",
+        "third": "火をつける",
+        "ing": "火をつけている"
+      },
+      "zh-Hans": {
+        "meaning": "点燃",
+        "base": "点燃",
+        "past": "点燃了",
+        "participle": "点燃过的",
+        "third": "点燃",
+        "ing": "点燃着"
+      },
+      "en": {
+        "meaning": "to make something start burning",
+        "base": "light",
+        "past": "lit",
+        "participle": "lit",
+        "third": "lights",
+        "ing": "lighting"
+      }
+    },
+    "ipaUS": {
+      "base": "/laɪt/",
+      "past": "/lɪt/",
+      "participle": "/lɪt/",
+      "third": "/laɪts/",
+      "ing": "/ˈlaɪtɪŋ/"
+    }
+  },
+  {
+    "base": "lose",
+    "past": "lost",
+    "participle": "lost",
+    "thirdPerson": "loses",
+    "ing": "losing",
+    "meaningEs": "perder",
+    "complement": "the game",
+    "meaningEn": "fail to win a competition",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "perder",
+        "base": "perder",
+        "past": "perdió",
+        "participle": "perdido",
+        "third": "pierde",
+        "ing": "perdiendo"
+      },
+      "fr": {
+        "meaning": "perdre",
+        "base": "perdre",
+        "past": "a perdu",
+        "participle": "perdu",
+        "third": "perd",
+        "ing": "en perdant"
+      },
+      "ko": {
+        "meaning": "지다",
+        "base": "지다",
+        "past": "졌다",
+        "participle": "진",
+        "third": "진다",
+        "ing": "지고 있다"
+      },
+      "ja": {
+        "meaning": "負ける",
+        "base": "負ける",
+        "past": "負けた",
+        "participle": "負けた",
+        "third": "負ける",
+        "ing": "負けている"
+      },
+      "zh-Hans": {
+        "meaning": "输掉",
+        "base": "输掉",
+        "past": "输了",
+        "participle": "输掉的",
+        "third": "输掉",
+        "ing": "正在输"
+      },
+      "en": {
+        "meaning": "fail to win a competition",
+        "base": "lose",
+        "past": "lost",
+        "participle": "lost",
+        "third": "loses",
+        "ing": "losing"
+      }
+    },
+    "ipaUS": {
+      "base": "/luːz/",
+      "past": "/lɔst/",
+      "participle": "/lɔst/",
+      "third": "/ˈluːzɪz/",
+      "ing": "/ˈluːzɪŋ/"
+    }
+  },
+  {
+    "base": "make",
+    "past": "made",
+    "participle": "made",
+    "thirdPerson": "makes",
+    "ing": "making",
+    "meaningEs": "hacer",
+    "complement": "a plan",
+    "meaningEn": "create or produce",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "hacer",
+        "base": "hacer",
+        "past": "hizo",
+        "participle": "hecho",
+        "third": "hace",
+        "ing": "haciendo"
+      },
+      "fr": {
+        "meaning": "faire",
+        "base": "faire",
+        "past": "a fait",
+        "participle": "fait",
+        "third": "fait",
+        "ing": "en faisant"
+      },
+      "ko": {
+        "meaning": "만들다",
+        "base": "만들다",
+        "past": "만들었다",
+        "participle": "만든",
+        "third": "만든다",
+        "ing": "만들고 있다"
+      },
+      "ja": {
+        "meaning": "作る",
+        "base": "作る",
+        "past": "作った",
+        "participle": "作った",
+        "third": "作る",
+        "ing": "作っている"
+      },
+      "zh-Hans": {
+        "meaning": "制造",
+        "base": "制造",
+        "past": "制造了",
+        "participle": "制造的",
+        "third": "制造",
+        "ing": "正在制造"
+      },
+      "en": {
+        "meaning": "create or produce",
+        "base": "make",
+        "past": "made",
+        "participle": "made",
+        "third": "makes",
+        "ing": "making"
+      }
+    },
+    "ipaUS": {
+      "base": "/meɪk/",
+      "past": "/meɪd/",
+      "participle": "/meɪd/",
+      "third": "/meɪks/",
+      "ing": "/ˈmeɪkɪŋ/"
+    }
+  },
+  {
+    "base": "mean",
+    "past": "meant",
+    "participle": "meant",
+    "thirdPerson": "means",
+    "ing": "meaning",
+    "meaningEs": "significar",
+    "complement": "the same thing",
+    "meaningEn": "have as a meaning",
+    "regular": false,
+    "continuous": false,
+    "translations": {
+      "es": {
+        "meaning": "significar",
+        "base": "significar",
+        "past": "significó",
+        "participle": "significado",
+        "third": "significa",
+        "ing": "significando"
+      },
+      "fr": {
+        "meaning": "signifier",
+        "base": "signifier",
+        "past": "a signifié",
+        "participle": "signifié",
+        "third": "signifie",
+        "ing": "en signifiant"
+      },
+      "ko": {
+        "meaning": "의미하다",
+        "base": "의미하다",
+        "past": "의미했다",
+        "participle": "의미한",
+        "third": "의미한다",
+        "ing": "의미하고 있다"
+      },
+      "ja": {
+        "meaning": "意味する",
+        "base": "意味する",
+        "past": "意味した",
+        "participle": "意味した",
+        "third": "意味する",
+        "ing": "意味している"
+      },
+      "zh-Hans": {
+        "meaning": "意味着",
+        "base": "意味着",
+        "past": "意味着了",
+        "participle": "意味着的",
+        "third": "意味着",
+        "ing": "意味着"
+      },
+      "en": {
+        "meaning": "have as a meaning",
+        "base": "mean",
+        "past": "meant",
+        "participle": "meant",
+        "third": "means",
+        "ing": "meaning"
+      }
+    },
+    "ipaUS": {
+      "base": "/miːn/",
+      "past": "/mɛnt/",
+      "participle": "/mɛnt/",
+      "third": "/miːnz/",
+      "ing": "/ˈmiːnɪŋ/"
+    }
+  },
+  {
+    "base": "meet",
+    "past": "met",
+    "participle": "met",
+    "thirdPerson": "meets",
+    "ing": "meeting",
+    "meaningEs": "conocer",
+    "complement": "new people",
+    "meaningEn": "come into contact with",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "conocer",
+        "base": "conocer",
+        "past": "conoció",
+        "participle": "conocido",
+        "third": "conoce",
+        "ing": "conociendo"
+      },
+      "fr": {
+        "meaning": "rencontrer",
+        "base": "rencontrer",
+        "past": "a rencontré",
+        "participle": "rencontré",
+        "third": "rencontre",
+        "ing": "en rencontrant"
+      },
+      "ko": {
+        "meaning": "만나다",
+        "base": "만나다",
+        "past": "만났다",
+        "participle": "만난",
+        "third": "만난다",
+        "ing": "만나고 있다"
+      },
+      "ja": {
+        "meaning": "会う",
+        "base": "会う",
+        "past": "会った",
+        "participle": "会った",
+        "third": "会う",
+        "ing": "会っている"
+      },
+      "zh-Hans": {
+        "meaning": "遇见",
+        "base": "遇见",
+        "past": "遇见了",
+        "participle": "遇见的",
+        "third": "遇见",
+        "ing": "正在遇见"
+      },
+      "en": {
+        "meaning": "come into contact with",
+        "base": "meet",
+        "past": "met",
+        "participle": "met",
+        "third": "meets",
+        "ing": "meeting"
+      }
+    },
+    "ipaUS": {
+      "base": "/miːt/",
+      "past": "/mɛt/",
+      "participle": "/mɛt/",
+      "third": "/miːts/",
+      "ing": "/ˈmiːtɪŋ/"
+    }
+  },
+  {
+    "base": "mistake",
+    "past": "mistook",
+    "participle": "mistaken",
+    "thirdPerson": "mistakes",
+    "ing": "mistaking",
+    "meaningEs": "confundir",
+    "complement": "one word for another",
+    "meaningEn": "confuse something for something else",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "confundir",
+        "base": "confundir",
+        "past": "confundió",
+        "participle": "confundido",
+        "third": "confunde",
+        "ing": "confundiendo"
+      },
+      "fr": {
+        "meaning": "confondre",
+        "base": "confondre",
+        "past": "a confondu",
+        "participle": "confondu",
+        "third": "confond",
+        "ing": "en confondant"
+      },
+      "ko": {
+        "meaning": "혼동하다",
+        "base": "혼동하다",
+        "past": "혼동했다",
+        "participle": "혼동된",
+        "third": "혼동한다",
+        "ing": "혼동하고 있다"
+      },
+      "ja": {
+        "meaning": "間違える",
+        "base": "間違える",
+        "past": "間違えた",
+        "participle": "間違えた",
+        "third": "間違える",
+        "ing": "間違えている"
+      },
+      "zh-Hans": {
+        "meaning": "混淆",
+        "base": "混淆",
+        "past": "混淆了",
+        "participle": "混淆的",
+        "third": "混淆",
+        "ing": "正在混淆"
+      },
+      "en": {
+        "meaning": "confuse something for something else",
+        "base": "mistake",
+        "past": "mistook",
+        "participle": "mistaken",
+        "third": "mistakes",
+        "ing": "mistaking"
+      }
+    },
+    "ipaUS": {
+      "base": "/mɪˈsteɪk/",
+      "past": "/mɪˈstʊk/",
+      "participle": "/mɪˈsteɪkən/",
+      "third": "/mɪˈsteɪks/",
+      "ing": "/mɪˈsteɪkɪŋ/"
+    }
+  },
+  {
+    "base": "mow",
+    "past": "mowed",
+    "participle": "mown",
+    "thirdPerson": "mows",
+    "ing": "mowing",
+    "meaningEs": "cortar el césped",
+    "complement": "the lawn",
+    "meaningEn": "to cut grass (the lawn) with a machine or tool",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "cortar el césped",
+        "base": "cortar el césped",
+        "past": "cortó el césped",
+        "participle": "cortado el césped",
+        "third": "corta el césped",
+        "ing": "cortando el césped"
+      },
+      "fr": {
+        "meaning": "tondre",
+        "base": "tondre",
+        "past": "a tondu",
+        "participle": "tondu",
+        "third": "tond",
+        "ing": "en tondant"
+      },
+      "ko": {
+        "meaning": "잔디를 깎다",
+        "base": "잔디를 깎다",
+        "past": "잔디를 깎았다",
+        "participle": "잔디를 깎은",
+        "third": "잔디를 깎는다",
+        "ing": "잔디를 깎는 중"
+      },
+      "ja": {
+        "meaning": "芝生を刈る",
+        "base": "芝生を刈る",
+        "past": "芝生を刈った",
+        "participle": "芝生を刈った",
+        "third": "芝生を刈る",
+        "ing": "芝生を刈っている"
+      },
+      "zh-Hans": {
+        "meaning": "割草",
+        "base": "割草",
+        "past": "割了草",
+        "participle": "已割草",
+        "third": "割草",
+        "ing": "正在割草"
+      },
+      "en": {
+        "meaning": "to cut grass (the lawn) with a machine or tool",
+        "base": "mow",
+        "past": "mowed",
+        "participle": "mown",
+        "third": "mows",
+        "ing": "mowing"
+      }
+    },
+    "ipaUS": {
+      "base": "/moʊ/",
+      "past": "/moʊd/",
+      "participle": "/moʊn/",
+      "third": "/moʊz/",
+      "ing": "/ˈmoʊɪŋ/"
+    }
+  },
+  {
+    "base": "offset",
+    "past": "offset",
+    "participle": "offset",
+    "thirdPerson": "offsets",
+    "ing": "offsetting",
+    "meaningEs": "compensar",
+    "complement": "the extra costs",
+    "meaningEn": "counterbalance",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "compensar",
+        "base": "compensar",
+        "past": "compensó",
+        "participle": "compensado",
+        "third": "compensa",
+        "ing": "compensando"
+      },
+      "fr": {
+        "meaning": "compenser",
+        "base": "compenser",
+        "past": "a compensé",
+        "participle": "compensé",
+        "third": "compense",
+        "ing": "en compensant"
+      },
+      "ko": {
+        "meaning": "상쇄하다",
+        "base": "상쇄하다",
+        "past": "상쇄했다",
+        "participle": "상쇄한",
+        "third": "상쇄한다",
+        "ing": "상쇄하는 중"
+      },
+      "ja": {
+        "meaning": "相殺する",
+        "base": "相殺する",
+        "past": "相殺した",
+        "participle": "相殺した",
+        "third": "相殺する",
+        "ing": "相殺している"
+      },
+      "zh-Hans": {
+        "meaning": "抵消",
+        "base": "抵消",
+        "past": "抵消了",
+        "participle": "已抵消",
+        "third": "抵消",
+        "ing": "正在抵消"
+      },
+      "en": {
+        "meaning": "counterbalance",
+        "base": "offset",
+        "past": "offset",
+        "participle": "offset",
+        "third": "offsets",
+        "ing": "offsetting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˈɔfˌsɛt/",
+      "past": "/ˈɔfˌsɛt/",
+      "participle": "/ˈɔfˌsɛt/",
+      "third": "/ˈɔfˌsɛts/",
+      "ing": "/ˈɔfˌsɛtɪŋ/"
+    }
+  },
+  {
+    "base": "overcome",
+    "past": "overcame",
+    "participle": "overcome",
+    "thirdPerson": "overcomes",
+    "ing": "overcoming",
+    "meaningEs": "superar",
+    "complement": "a challenge",
+    "meaningEn": "to successfully deal with",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "superar",
+        "base": "superar",
+        "past": "superó",
+        "participle": "superado",
+        "third": "supera",
+        "ing": "superando"
+      },
+      "fr": {
+        "meaning": "surmonter",
+        "base": "surmonter",
+        "past": "a surmonté",
+        "participle": "surmonté",
+        "third": "surmonte",
+        "ing": "en surmontant"
+      },
+      "ko": {
+        "meaning": "극복하다",
+        "base": "극복하다",
+        "past": "극복했다",
+        "participle": "극복한",
+        "third": "극복한다",
+        "ing": "극복하는 중"
+      },
+      "ja": {
+        "meaning": "克服する",
+        "base": "克服する",
+        "past": "克服した",
+        "participle": "克服した",
+        "third": "克服する",
+        "ing": "克服している"
+      },
+      "zh-Hans": {
+        "meaning": "克服",
+        "base": "克服",
+        "past": "克服了",
+        "participle": "已克服",
+        "third": "克服",
+        "ing": "正在克服"
+      },
+      "en": {
+        "meaning": "to successfully deal with",
+        "base": "overcome",
+        "past": "overcame",
+        "participle": "overcome",
+        "third": "overcomes",
+        "ing": "overcoming"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌoʊvərˈkʌm/",
+      "past": "/ˌoʊvərˈkeɪm/",
+      "participle": "/ˌoʊvərˈkʌm/",
+      "third": "/ˌoʊvərˈkʌmz/",
+      "ing": "/ˌoʊvərˈkʌmɪŋ/"
+    }
+  },
+  {
+    "base": "overdo",
+    "past": "overdid",
+    "participle": "overdone",
+    "thirdPerson": "overdoes",
+    "ing": "overdoing",
+    "meaningEs": "excederse",
+    "complement": "the exercise",
+    "meaningEn": "do something to an excessive degree",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "excederse",
+        "base": "excederse",
+        "past": "se excedió",
+        "participle": "excedido",
+        "third": "se excede",
+        "ing": "excediéndose"
+      },
+      "fr": {
+        "meaning": "exagérer",
+        "base": "exagérer",
+        "past": "a exagéré",
+        "participle": "exagéré",
+        "third": "exagère",
+        "ing": "en exagérant"
+      },
+      "ko": {
+        "meaning": "과하게 하다",
+        "base": "과하게 하다",
+        "past": "과하게 했다",
+        "participle": "과하게 한",
+        "third": "과하게 한다",
+        "ing": "과하게 하고 있다"
+      },
+      "ja": {
+        "meaning": "やりすぎる",
+        "base": "やりすぎる",
+        "past": "やりすぎた",
+        "participle": "やりすぎた",
+        "third": "やりすぎる",
+        "ing": "やりすぎている"
+      },
+      "zh-Hans": {
+        "meaning": "做得过度",
+        "base": "做得过度",
+        "past": "做得过度了",
+        "participle": "做得过度的",
+        "third": "做得过度",
+        "ing": "正在做得过度"
+      },
+      "en": {
+        "meaning": "do something to an excessive degree",
+        "base": "overdo",
+        "past": "overdid",
+        "participle": "overdone",
+        "third": "overdoes",
+        "ing": "overdoing"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌoʊvɚˈduː/",
+      "past": "/ˌoʊvɚˈdɪd/",
+      "participle": "/ˌoʊvɚˈdʌn/",
+      "third": "/ˌoʊvɚˈduːz/",
+      "ing": "/ˌoʊvɚˈduːɪŋ/"
+    }
+  },
+  {
+    "base": "oversee",
+    "past": "oversaw",
+    "participle": "overseen",
+    "thirdPerson": "oversees",
+    "ing": "overseeing",
+    "meaningEs": "supervisar",
+    "complement": "the project",
+    "meaningEn": "supervise or manage an activity or project",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "supervisar",
+        "base": "supervisar",
+        "past": "supervisó",
+        "participle": "supervisado",
+        "third": "supervisa",
+        "ing": "supervisando"
+      },
+      "fr": {
+        "meaning": "superviser",
+        "base": "superviser",
+        "past": "a supervisé",
+        "participle": "supervisé",
+        "third": "supervise",
+        "ing": "en supervisant"
+      },
+      "ko": {
+        "meaning": "감독하다",
+        "base": "감독하다",
+        "past": "감독했다",
+        "participle": "감독된",
+        "third": "감독한다",
+        "ing": "감독하고 있다"
+      },
+      "ja": {
+        "meaning": "監督する",
+        "base": "監督する",
+        "past": "監督した",
+        "participle": "監督した",
+        "third": "監督する",
+        "ing": "監督している"
+      },
+      "zh-Hans": {
+        "meaning": "监督",
+        "base": "监督",
+        "past": "监督了",
+        "participle": "监督过的",
+        "third": "监督",
+        "ing": "正在监督"
+      },
+      "en": {
+        "meaning": "supervise or manage an activity or project",
+        "base": "oversee",
+        "past": "oversaw",
+        "participle": "overseen",
+        "third": "oversees",
+        "ing": "overseeing"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌoʊvɚˈsiː/",
+      "past": "/ˌoʊvɚˈsɑː/",
+      "participle": "/ˌoʊvɚˈsiːn/",
+      "third": "/ˌoʊvɚˈsiːz/",
+      "ing": "/ˌoʊvɚˈsiːɪŋ/"
+    }
+  },
+  {
+    "base": "overtake",
+    "past": "overtook",
+    "participle": "overtaken",
+    "thirdPerson": "overtakes",
+    "ing": "overtaking",
+    "meaningEs": "adelantar",
+    "complement": "a slow vehicle",
+    "meaningEn": "to move past while traveling in the same direction",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "adelantar",
+        "base": "adelantar",
+        "past": "adelantó",
+        "participle": "adelantado",
+        "third": "adelanta",
+        "ing": "adelantando"
+      },
+      "fr": {
+        "meaning": "dépasser",
+        "base": "dépasser",
+        "past": "a dépassé",
+        "participle": "dépassé",
+        "third": "dépasse",
+        "ing": "en dépassant"
+      },
+      "ko": {
+        "meaning": "앞지르다",
+        "base": "앞지르다",
+        "past": "앞질렀다",
+        "participle": "앞지른",
+        "third": "앞지른다",
+        "ing": "앞지르고 있다"
+      },
+      "ja": {
+        "meaning": "追い越す",
+        "base": "追い越す",
+        "past": "追い越した",
+        "participle": "追い越した",
+        "third": "追い越す",
+        "ing": "追い越している"
+      },
+      "zh-Hans": {
+        "meaning": "超车",
+        "base": "超车",
+        "past": "超车了",
+        "participle": "已超车",
+        "third": "超车",
+        "ing": "正在超车"
+      },
+      "en": {
+        "meaning": "to move past while traveling in the same direction",
+        "base": "overtake",
+        "past": "overtook",
+        "participle": "overtaken",
+        "third": "overtakes",
+        "ing": "overtaking"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌoʊvərˈteɪk/",
+      "past": "/ˌoʊvərˈtʊk/",
+      "participle": "/ˌoʊvərˈteɪkən/",
+      "third": "/ˌoʊvərˈteɪks/",
+      "ing": "/ˌoʊvərˈteɪkɪŋ/"
+    }
+  },
+  {
+    "base": "pay",
+    "past": "paid",
+    "participle": "paid",
+    "thirdPerson": "pays",
+    "ing": "paying",
+    "meaningEs": "pagar",
+    "complement": "the bill",
+    "meaningEn": "give money for something",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "pagar",
+        "base": "pagar",
+        "past": "pagó",
+        "participle": "pagado",
+        "third": "paga",
+        "ing": "pagando"
+      },
+      "fr": {
+        "meaning": "payer",
+        "base": "payer",
+        "past": "a payé",
+        "participle": "payé",
+        "third": "paye",
+        "ing": "en payant"
+      },
+      "ko": {
+        "meaning": "지불하다",
+        "base": "지불하다",
+        "past": "지불했다",
+        "participle": "지불한",
+        "third": "지불한다",
+        "ing": "지불하고 있다"
+      },
+      "ja": {
+        "meaning": "支払う",
+        "base": "支払う",
+        "past": "支払った",
+        "participle": "支払った",
+        "third": "支払う",
+        "ing": "支払っている"
+      },
+      "zh-Hans": {
+        "meaning": "支付",
+        "base": "支付",
+        "past": "支付了",
+        "participle": "支付的",
+        "third": "支付",
+        "ing": "正在支付"
+      },
+      "en": {
+        "meaning": "give money for something",
+        "base": "pay",
+        "past": "paid",
+        "participle": "paid",
+        "third": "pays",
+        "ing": "paying"
+      }
+    },
+    "ipaUS": {
+      "base": "/peɪ/",
+      "past": "/peɪd/",
+      "participle": "/peɪd/",
+      "third": "/peɪz/",
+      "ing": "/ˈpeɪɪŋ/"
     }
   },
   {
@@ -1187,6 +5120,75 @@
     }
   },
   {
+    "base": "prove",
+    "past": "proved",
+    "participle": "proven",
+    "thirdPerson": "proves",
+    "ing": "proving",
+    "meaningEs": "demostrar",
+    "complement": "a point",
+    "meaningEn": "to show something is true or correct",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "demostrar",
+        "base": "demostrar",
+        "past": "demostró",
+        "participle": "demostrado",
+        "third": "demuestra",
+        "ing": "demostrando"
+      },
+      "fr": {
+        "meaning": "prouver",
+        "base": "prouver",
+        "past": "a prouvé",
+        "participle": "prouvé",
+        "third": "prouve",
+        "ing": "en prouvant"
+      },
+      "ko": {
+        "meaning": "증명하다",
+        "base": "증명하다",
+        "past": "증명했다",
+        "participle": "증명한",
+        "third": "증명한다",
+        "ing": "증명하는 중"
+      },
+      "ja": {
+        "meaning": "証明する",
+        "base": "証明する",
+        "past": "証明した",
+        "participle": "証明した",
+        "third": "証明する",
+        "ing": "証明している"
+      },
+      "zh-Hans": {
+        "meaning": "证明",
+        "base": "证明",
+        "past": "证明了",
+        "participle": "已证明",
+        "third": "证明",
+        "ing": "正在证明"
+      },
+      "en": {
+        "meaning": "to show something is true or correct",
+        "base": "prove",
+        "past": "proved",
+        "participle": "proven",
+        "third": "proves",
+        "ing": "proving"
+      }
+    },
+    "ipaUS": {
+      "base": "/pruv/",
+      "past": "/pruvd/",
+      "participle": "/ˈpruvən/",
+      "third": "/pruvz/",
+      "ing": "/ˈpruvɪŋ/"
+    }
+  },
+  {
     "base": "put",
     "past": "put",
     "participle": "put",
@@ -1253,6 +5255,558 @@
       "participle": "/pʊt/",
       "third": "/pʊts/",
       "ing": "/ˈpʊtɪŋ/"
+    }
+  },
+  {
+    "base": "quit",
+    "past": "quit",
+    "participle": "quit",
+    "thirdPerson": "quits",
+    "ing": "quitting",
+    "meaningEs": "dejar",
+    "complement": "the job",
+    "meaningEn": "stop or leave",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "dejar",
+        "base": "dejar",
+        "past": "dejó",
+        "participle": "dejado",
+        "third": "deja",
+        "ing": "dejando"
+      },
+      "fr": {
+        "meaning": "quitter",
+        "base": "quitter",
+        "past": "a quitté",
+        "participle": "quitté",
+        "third": "quitte",
+        "ing": "en quittant"
+      },
+      "ko": {
+        "meaning": "그만두다",
+        "base": "그만두다",
+        "past": "그만두었다",
+        "participle": "그만둔",
+        "third": "그만둔다",
+        "ing": "그만두는 중"
+      },
+      "ja": {
+        "meaning": "やめる",
+        "base": "やめる",
+        "past": "やめた",
+        "participle": "やめた",
+        "third": "やめる",
+        "ing": "やめている"
+      },
+      "zh-Hans": {
+        "meaning": "辞职",
+        "base": "辞职",
+        "past": "辞职了",
+        "participle": "已辞职",
+        "third": "辞职",
+        "ing": "正在辞职"
+      },
+      "en": {
+        "meaning": "stop or leave",
+        "base": "quit",
+        "past": "quit",
+        "participle": "quit",
+        "third": "quits",
+        "ing": "quitting"
+      }
+    },
+    "ipaUS": {
+      "base": "/kwɪt/",
+      "past": "/kwɪt/",
+      "participle": "/kwɪt/",
+      "third": "/kwɪts/",
+      "ing": "/ˈkwɪtɪŋ/"
+    }
+  },
+  {
+    "base": "read",
+    "past": "read",
+    "participle": "read",
+    "thirdPerson": "reads",
+    "ing": "reading",
+    "meaningEs": "leer",
+    "complement": "a book",
+    "meaningEn": "look at and understand written words",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "leer",
+        "base": "leer",
+        "past": "leyó",
+        "participle": "leído",
+        "third": "lee",
+        "ing": "leyendo"
+      },
+      "fr": {
+        "meaning": "lire",
+        "base": "lire",
+        "past": "a lu",
+        "participle": "lu",
+        "third": "lit",
+        "ing": "en lisant"
+      },
+      "ko": {
+        "meaning": "읽다",
+        "base": "읽다",
+        "past": "읽었다",
+        "participle": "읽은",
+        "third": "읽는다",
+        "ing": "읽는 중"
+      },
+      "ja": {
+        "meaning": "読む",
+        "base": "読む",
+        "past": "読んだ",
+        "participle": "読んだ",
+        "third": "読む",
+        "ing": "読んでいる"
+      },
+      "zh-Hans": {
+        "meaning": "读",
+        "base": "读",
+        "past": "读了",
+        "participle": "已读",
+        "third": "读",
+        "ing": "正在读"
+      },
+      "en": {
+        "meaning": "look at and understand written words",
+        "base": "read",
+        "past": "read",
+        "participle": "read",
+        "third": "reads",
+        "ing": "reading"
+      }
+    },
+    "ipaUS": {
+      "base": "/riːd/",
+      "past": "/rɛd/",
+      "participle": "/rɛd/",
+      "third": "/riːdz/",
+      "ing": "/ˈriːdɪŋ/"
+    }
+  },
+  {
+    "base": "reset",
+    "past": "reset",
+    "participle": "reset",
+    "thirdPerson": "resets",
+    "ing": "resetting",
+    "meaningEs": "reiniciar",
+    "complement": "the timer",
+    "meaningEn": "to set again or to its initial state",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "reiniciar",
+        "base": "reiniciar",
+        "past": "reinició",
+        "participle": "reiniciado",
+        "third": "reinicia",
+        "ing": "reiniciando"
+      },
+      "fr": {
+        "meaning": "réinitialiser",
+        "base": "réinitialiser",
+        "past": "a réinitialisé",
+        "participle": "réinitialisé",
+        "third": "réinitialise",
+        "ing": "en réinitialisant"
+      },
+      "ko": {
+        "meaning": "재설정하다",
+        "base": "재설정하다",
+        "past": "재설정했다",
+        "participle": "재설정한",
+        "third": "재설정한다",
+        "ing": "재설정하는 중"
+      },
+      "ja": {
+        "meaning": "リセットする",
+        "base": "リセットする",
+        "past": "リセットした",
+        "participle": "リセットした",
+        "third": "リセットする",
+        "ing": "リセットしている"
+      },
+      "zh-Hans": {
+        "meaning": "重置",
+        "base": "重置",
+        "past": "重置了",
+        "participle": "已重置",
+        "third": "重置",
+        "ing": "重置中"
+      },
+      "en": {
+        "meaning": "to set again or to its initial state",
+        "base": "reset",
+        "past": "reset",
+        "participle": "reset",
+        "third": "resets",
+        "ing": "resetting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌriːˈsɛt/",
+      "past": "/ˌriːˈsɛt/",
+      "participle": "/ˌriːˈsɛt/",
+      "third": "/ˌriːˈsɛts/",
+      "ing": "/ˌriːˈsɛtɪŋ/"
+    }
+  },
+  {
+    "base": "rewrite",
+    "past": "rewrote",
+    "participle": "rewritten",
+    "thirdPerson": "rewrites",
+    "ing": "rewriting",
+    "meaningEs": "reescribir",
+    "complement": "a paragraph",
+    "meaningEn": "to write something again in a different way",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "reescribir",
+        "base": "reescribir",
+        "past": "reescribió",
+        "participle": "reescrito",
+        "third": "reescribe",
+        "ing": "reescribiendo"
+      },
+      "fr": {
+        "meaning": "réécrire",
+        "base": "réécrire",
+        "past": "a réécrit",
+        "participle": "réécrit",
+        "third": "réécrit",
+        "ing": "en réécrivant"
+      },
+      "ko": {
+        "meaning": "다시 쓰다",
+        "base": "다시 쓰다",
+        "past": "다시 썼다",
+        "participle": "다시 쓴",
+        "third": "다시 쓴다",
+        "ing": "다시 쓰고 있다"
+      },
+      "ja": {
+        "meaning": "書き直す",
+        "base": "書き直す",
+        "past": "書き直した",
+        "participle": "書き直した",
+        "third": "書き直す",
+        "ing": "書き直している"
+      },
+      "zh-Hans": {
+        "meaning": "重写",
+        "base": "重写",
+        "past": "重写了",
+        "participle": "已重写",
+        "third": "重写",
+        "ing": "正在重写"
+      },
+      "en": {
+        "meaning": "to write something again in a different way",
+        "base": "rewrite",
+        "past": "rewrote",
+        "participle": "rewritten",
+        "third": "rewrites",
+        "ing": "rewriting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌriːˈraɪt/",
+      "past": "/ˌriːˈroʊt/",
+      "participle": "/ˌriːˈrɪtən/",
+      "third": "/ˌriːˈraɪts/",
+      "ing": "/ˌriːˈraɪtɪŋ/"
+    }
+  },
+  {
+    "base": "rid",
+    "past": "rid",
+    "participle": "rid",
+    "thirdPerson": "rids",
+    "ing": "ridding",
+    "meaningEs": "librar",
+    "complement": "the room of dust",
+    "meaningEn": "to make free from something unwanted",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "librar",
+        "base": "librar",
+        "past": "libró",
+        "participle": "librado",
+        "third": "libra",
+        "ing": "librando"
+      },
+      "fr": {
+        "meaning": "débarrasser",
+        "base": "débarrasser",
+        "past": "a débarrassé",
+        "participle": "débarrassé",
+        "third": "débarrasse",
+        "ing": "en débarrassant"
+      },
+      "ko": {
+        "meaning": "없애다",
+        "base": "없애다",
+        "past": "없앴다",
+        "participle": "없앤",
+        "third": "없앤다",
+        "ing": "없애는 중"
+      },
+      "ja": {
+        "meaning": "取り除く",
+        "base": "取り除く",
+        "past": "取り除いた",
+        "participle": "取り除いた",
+        "third": "取り除く",
+        "ing": "取り除いている"
+      },
+      "zh-Hans": {
+        "meaning": "去除",
+        "base": "去除",
+        "past": "去除了",
+        "participle": "已去除",
+        "third": "去除",
+        "ing": "去除中"
+      },
+      "en": {
+        "meaning": "to make free from something unwanted",
+        "base": "rid",
+        "past": "rid",
+        "participle": "rid",
+        "third": "rids",
+        "ing": "ridding"
+      }
+    },
+    "ipaUS": {
+      "base": "/rɪd/",
+      "past": "/rɪd/",
+      "participle": "/rɪd/",
+      "third": "/rɪdz/",
+      "ing": "/ˈrɪdɪŋ/"
+    }
+  },
+  {
+    "base": "ride",
+    "past": "rode",
+    "participle": "ridden",
+    "thirdPerson": "rides",
+    "ing": "riding",
+    "meaningEs": "montar",
+    "complement": "a bicycle",
+    "meaningEn": "to travel on or in a vehicle or animal",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "montar",
+        "base": "montar",
+        "past": "montó",
+        "participle": "montado",
+        "third": "monta",
+        "ing": "montando"
+      },
+      "fr": {
+        "meaning": "monter",
+        "base": "monter",
+        "past": "a monté",
+        "participle": "monté",
+        "third": "monte",
+        "ing": "en montant"
+      },
+      "ko": {
+        "meaning": "타다",
+        "base": "타다",
+        "past": "탔다",
+        "participle": "탄",
+        "third": "탄다",
+        "ing": "타고 있다"
+      },
+      "ja": {
+        "meaning": "乗る",
+        "base": "乗る",
+        "past": "乗った",
+        "participle": "乗った",
+        "third": "乗る",
+        "ing": "乗っている"
+      },
+      "zh-Hans": {
+        "meaning": "骑",
+        "base": "骑",
+        "past": "骑了",
+        "participle": "已经骑",
+        "third": "骑",
+        "ing": "正在骑"
+      },
+      "en": {
+        "meaning": "to travel on or in a vehicle or animal",
+        "base": "ride",
+        "past": "rode",
+        "participle": "ridden",
+        "third": "rides",
+        "ing": "riding"
+      }
+    },
+    "ipaUS": {
+      "base": "/raɪd/",
+      "past": "/roʊd/",
+      "participle": "/ˈrɪdən/",
+      "third": "/raɪdz/",
+      "ing": "/ˈraɪdɪŋ/"
+    }
+  },
+  {
+    "base": "ring",
+    "past": "rang",
+    "participle": "rung",
+    "thirdPerson": "rings",
+    "ing": "ringing",
+    "meaningEs": "hacer sonar",
+    "complement": "the bell",
+    "meaningEn": "to make a bell produce sound",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "hacer sonar",
+        "base": "hacer sonar",
+        "past": "hizo sonar",
+        "participle": "hecho sonar",
+        "third": "hace sonar",
+        "ing": "haciendo sonar"
+      },
+      "fr": {
+        "meaning": "faire sonner",
+        "base": "faire sonner",
+        "past": "a fait sonner",
+        "participle": "fait sonner",
+        "third": "fait sonner",
+        "ing": "en faisant sonner"
+      },
+      "ko": {
+        "meaning": "울리다",
+        "base": "울리다",
+        "past": "울렸다",
+        "participle": "울린",
+        "third": "울린다",
+        "ing": "울리고 있다"
+      },
+      "ja": {
+        "meaning": "鳴らす",
+        "base": "鳴らす",
+        "past": "鳴らした",
+        "participle": "鳴らした",
+        "third": "鳴らす",
+        "ing": "鳴らしている"
+      },
+      "zh-Hans": {
+        "meaning": "敲响",
+        "base": "敲响",
+        "past": "敲响了",
+        "participle": "已经敲响",
+        "third": "敲响",
+        "ing": "正在敲响"
+      },
+      "en": {
+        "meaning": "to make a bell produce sound",
+        "base": "ring",
+        "past": "rang",
+        "participle": "rung",
+        "third": "rings",
+        "ing": "ringing"
+      }
+    },
+    "ipaUS": {
+      "base": "/rɪŋ/",
+      "past": "/ræŋ/",
+      "participle": "/rʌŋ/",
+      "third": "/rɪŋz/",
+      "ing": "/ˈrɪŋɪŋ/"
+    }
+  },
+  {
+    "base": "rise",
+    "past": "rose",
+    "participle": "risen",
+    "thirdPerson": "rises",
+    "ing": "rising",
+    "meaningEs": "levantarse",
+    "complement": "early",
+    "meaningEn": "to get up from lying or sitting",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "levantarse",
+        "base": "levantarse",
+        "past": "se levantó",
+        "participle": "levantado",
+        "third": "se levanta",
+        "ing": "levantándose"
+      },
+      "fr": {
+        "meaning": "se lever",
+        "base": "se lever",
+        "past": "s'est levé",
+        "participle": "levé",
+        "third": "se lève",
+        "ing": "en se levant"
+      },
+      "ko": {
+        "meaning": "일어나다",
+        "base": "일어나다",
+        "past": "일어났다",
+        "participle": "일어난",
+        "third": "일어난다",
+        "ing": "일어나고 있다"
+      },
+      "ja": {
+        "meaning": "起きる",
+        "base": "起きる",
+        "past": "起きた",
+        "participle": "起きた",
+        "third": "起きる",
+        "ing": "起きている"
+      },
+      "zh-Hans": {
+        "meaning": "起身",
+        "base": "起身",
+        "past": "起身了",
+        "participle": "已经起身",
+        "third": "起身",
+        "ing": "正在起身"
+      },
+      "en": {
+        "meaning": "to get up from lying or sitting",
+        "base": "rise",
+        "past": "rose",
+        "participle": "risen",
+        "third": "rises",
+        "ing": "rising"
+      }
+    },
+    "ipaUS": {
+      "base": "/raɪz/",
+      "past": "/roʊz/",
+      "participle": "/ˈrɪzən/",
+      "third": "/raɪzɪz/",
+      "ing": "/ˈraɪzɪŋ/"
     }
   },
   {
@@ -1325,6 +5879,75 @@
     }
   },
   {
+    "base": "say",
+    "past": "said",
+    "participle": "said",
+    "thirdPerson": "says",
+    "ing": "saying",
+    "meaningEs": "decir",
+    "complement": "hello",
+    "meaningEn": "speak words",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "decir",
+        "base": "decir",
+        "past": "dijo",
+        "participle": "dicho",
+        "third": "dice",
+        "ing": "diciendo"
+      },
+      "fr": {
+        "meaning": "dire",
+        "base": "dire",
+        "past": "a dit",
+        "participle": "dit",
+        "third": "dit",
+        "ing": "en disant"
+      },
+      "ko": {
+        "meaning": "말하다",
+        "base": "말하다",
+        "past": "말했다",
+        "participle": "말한",
+        "third": "말한다",
+        "ing": "말하고 있다"
+      },
+      "ja": {
+        "meaning": "言う",
+        "base": "言う",
+        "past": "言った",
+        "participle": "言った",
+        "third": "言う",
+        "ing": "言っている"
+      },
+      "zh-Hans": {
+        "meaning": "说",
+        "base": "说",
+        "past": "说了",
+        "participle": "说的",
+        "third": "说",
+        "ing": "正在说"
+      },
+      "en": {
+        "meaning": "speak words",
+        "base": "say",
+        "past": "said",
+        "participle": "said",
+        "third": "says",
+        "ing": "saying"
+      }
+    },
+    "ipaUS": {
+      "base": "/seɪ/",
+      "past": "/sɛd/",
+      "participle": "/sɛd/",
+      "third": "/sɛz/",
+      "ing": "/ˈseɪɪŋ/"
+    }
+  },
+  {
     "base": "see",
     "past": "saw",
     "participle": "seen",
@@ -1391,6 +6014,144 @@
       "participle": "/siːn/",
       "third": "/siːz/",
       "ing": "/ˈsiːɪŋ/"
+    }
+  },
+  {
+    "base": "sell",
+    "past": "sold",
+    "participle": "sold",
+    "thirdPerson": "sells",
+    "ing": "selling",
+    "meaningEs": "vender",
+    "complement": "fresh bread",
+    "meaningEn": "exchange for money",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "vender",
+        "base": "vender",
+        "past": "vendió",
+        "participle": "vendido",
+        "third": "vende",
+        "ing": "vendiendo"
+      },
+      "fr": {
+        "meaning": "vendre",
+        "base": "vendre",
+        "past": "a vendu",
+        "participle": "vendu",
+        "third": "vend",
+        "ing": "en vendant"
+      },
+      "ko": {
+        "meaning": "판매하다",
+        "base": "판매하다",
+        "past": "판매했다",
+        "participle": "판매된",
+        "third": "판매한다",
+        "ing": "판매하고 있다"
+      },
+      "ja": {
+        "meaning": "売る",
+        "base": "売る",
+        "past": "売った",
+        "participle": "売った",
+        "third": "売る",
+        "ing": "売っている"
+      },
+      "zh-Hans": {
+        "meaning": "卖",
+        "base": "卖",
+        "past": "卖了",
+        "participle": "卖过",
+        "third": "卖",
+        "ing": "正在卖"
+      },
+      "en": {
+        "meaning": "exchange for money",
+        "base": "sell",
+        "past": "sold",
+        "participle": "sold",
+        "third": "sells",
+        "ing": "selling"
+      }
+    },
+    "ipaUS": {
+      "base": "/sɛl/",
+      "past": "/soʊld/",
+      "participle": "/soʊld/",
+      "third": "/sɛlz/",
+      "ing": "/ˈsɛlɪŋ/"
+    }
+  },
+  {
+    "base": "send",
+    "past": "sent",
+    "participle": "sent",
+    "thirdPerson": "sends",
+    "ing": "sending",
+    "meaningEs": "enviar",
+    "complement": "a message",
+    "meaningEn": "cause to go or be delivered",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "enviar",
+        "base": "enviar",
+        "past": "envió",
+        "participle": "enviado",
+        "third": "envía",
+        "ing": "enviando"
+      },
+      "fr": {
+        "meaning": "envoyer",
+        "base": "envoyer",
+        "past": "a envoyé",
+        "participle": "envoyé",
+        "third": "envoie",
+        "ing": "en envoyant"
+      },
+      "ko": {
+        "meaning": "보내다",
+        "base": "보내다",
+        "past": "보냈다",
+        "participle": "보낸",
+        "third": "보낸다",
+        "ing": "보내고 있다"
+      },
+      "ja": {
+        "meaning": "送る",
+        "base": "送る",
+        "past": "送った",
+        "participle": "送った",
+        "third": "送る",
+        "ing": "送っている"
+      },
+      "zh-Hans": {
+        "meaning": "发送",
+        "base": "发送",
+        "past": "发送了",
+        "participle": "已发送",
+        "third": "发送",
+        "ing": "正在发送"
+      },
+      "en": {
+        "meaning": "cause to go or be delivered",
+        "base": "send",
+        "past": "sent",
+        "participle": "sent",
+        "third": "sends",
+        "ing": "sending"
+      }
+    },
+    "ipaUS": {
+      "base": "/sɛnd/",
+      "past": "/sɛnt/",
+      "participle": "/sɛnt/",
+      "third": "/sɛndz/",
+      "ing": "/ˈsɛndɪŋ/"
     }
   },
   {
@@ -1463,6 +6224,696 @@
     }
   },
   {
+    "base": "shake",
+    "past": "shook",
+    "participle": "shaken",
+    "thirdPerson": "shakes",
+    "ing": "shaking",
+    "meaningEs": "agitar",
+    "complement": "the bottle",
+    "meaningEn": "to move something quickly up and down or side to side",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "agitar",
+        "base": "agitar",
+        "past": "agitó",
+        "participle": "agitado",
+        "third": "agita",
+        "ing": "agitando"
+      },
+      "fr": {
+        "meaning": "secouer",
+        "base": "secouer",
+        "past": "a secoué",
+        "participle": "secoué",
+        "third": "secoue",
+        "ing": "en secouant"
+      },
+      "ko": {
+        "meaning": "흔들다",
+        "base": "흔들다",
+        "past": "흔들었다",
+        "participle": "흔든",
+        "third": "흔든다",
+        "ing": "흔들고 있다"
+      },
+      "ja": {
+        "meaning": "振る",
+        "base": "振る",
+        "past": "振った",
+        "participle": "振った",
+        "third": "振る",
+        "ing": "振っている"
+      },
+      "zh-Hans": {
+        "meaning": "摇晃",
+        "base": "摇晃",
+        "past": "摇晃了",
+        "participle": "已经摇晃",
+        "third": "摇晃",
+        "ing": "正在摇晃"
+      },
+      "en": {
+        "meaning": "to move something quickly up and down or side to side",
+        "base": "shake",
+        "past": "shook",
+        "participle": "shaken",
+        "third": "shakes",
+        "ing": "shaking"
+      }
+    },
+    "ipaUS": {
+      "base": "/ʃeɪk/",
+      "past": "/ʃʊk/",
+      "participle": "/ˈʃeɪkən/",
+      "third": "/ʃeɪks/",
+      "ing": "/ˈʃeɪkɪŋ/"
+    }
+  },
+  {
+    "base": "show",
+    "past": "showed",
+    "participle": "shown",
+    "thirdPerson": "shows",
+    "ing": "showing",
+    "meaningEs": "mostrar",
+    "complement": "a photo",
+    "meaningEn": "to make (a photo, thing) visible to someone",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "mostrar",
+        "base": "mostrar",
+        "past": "mostró",
+        "participle": "mostrado",
+        "third": "muestra",
+        "ing": "mostrando"
+      },
+      "fr": {
+        "meaning": "montrer",
+        "base": "montrer",
+        "past": "a montré",
+        "participle": "montré",
+        "third": "montre",
+        "ing": "en montrant"
+      },
+      "ko": {
+        "meaning": "보여주다",
+        "base": "보여주다",
+        "past": "보여줬다",
+        "participle": "보여준",
+        "third": "보여준다",
+        "ing": "보여주는 중"
+      },
+      "ja": {
+        "meaning": "見せる",
+        "base": "見せる",
+        "past": "見せた",
+        "participle": "見せた",
+        "third": "見せる",
+        "ing": "見せている"
+      },
+      "zh-Hans": {
+        "meaning": "展示",
+        "base": "展示",
+        "past": "展示了",
+        "participle": "已展示",
+        "third": "展示",
+        "ing": "正在展示"
+      },
+      "en": {
+        "meaning": "to make (a photo, thing) visible to someone",
+        "base": "show",
+        "past": "showed",
+        "participle": "shown",
+        "third": "shows",
+        "ing": "showing"
+      }
+    },
+    "ipaUS": {
+      "base": "/ʃoʊ/",
+      "past": "/ʃoʊd/",
+      "participle": "/ʃoʊn/",
+      "third": "/ʃoʊz/",
+      "ing": "/ˈʃoʊɪŋ/"
+    }
+  },
+  {
+    "base": "shut",
+    "past": "shut",
+    "participle": "shut",
+    "thirdPerson": "shuts",
+    "ing": "shutting",
+    "meaningEs": "cerrar",
+    "complement": "the door",
+    "meaningEn": "to close something",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "cerrar",
+        "base": "cerrar",
+        "past": "cerró",
+        "participle": "cerrado",
+        "third": "cierra",
+        "ing": "cerrando"
+      },
+      "fr": {
+        "meaning": "fermer",
+        "base": "fermer",
+        "past": "a fermé",
+        "participle": "fermé",
+        "third": "ferme",
+        "ing": "en fermant"
+      },
+      "ko": {
+        "meaning": "닫다",
+        "base": "닫다",
+        "past": "닫았다",
+        "participle": "닫은",
+        "third": "닫는다",
+        "ing": "닫는 중"
+      },
+      "ja": {
+        "meaning": "閉める",
+        "base": "閉める",
+        "past": "閉めた",
+        "participle": "閉めた",
+        "third": "閉める",
+        "ing": "閉めている"
+      },
+      "zh-Hans": {
+        "meaning": "关上",
+        "base": "关上",
+        "past": "关上了",
+        "participle": "已关上",
+        "third": "关上",
+        "ing": "关上中"
+      },
+      "en": {
+        "meaning": "to close something",
+        "base": "shut",
+        "past": "shut",
+        "participle": "shut",
+        "third": "shuts",
+        "ing": "shutting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ʃʌt/",
+      "past": "/ʃʌt/",
+      "participle": "/ʃʌt/",
+      "third": "/ʃʌts/",
+      "ing": "/ˈʃʌtɪŋ/"
+    }
+  },
+  {
+    "base": "sing",
+    "past": "sang",
+    "participle": "sung",
+    "thirdPerson": "sings",
+    "ing": "singing",
+    "meaningEs": "cantar",
+    "complement": "a song",
+    "meaningEn": "produce musical tones with the voice",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "cantar",
+        "base": "cantar",
+        "past": "cantó",
+        "participle": "cantado",
+        "third": "canta",
+        "ing": "cantando"
+      },
+      "fr": {
+        "meaning": "chanter",
+        "base": "chanter",
+        "past": "a chanté",
+        "participle": "chanté",
+        "third": "chante",
+        "ing": "en chantant"
+      },
+      "ko": {
+        "meaning": "노래하다",
+        "base": "노래하다",
+        "past": "노래했다",
+        "participle": "노래한",
+        "third": "노래한다",
+        "ing": "노래하는 중"
+      },
+      "ja": {
+        "meaning": "歌う",
+        "base": "歌う",
+        "past": "歌った",
+        "participle": "歌った",
+        "third": "歌う",
+        "ing": "歌っている"
+      },
+      "zh-Hans": {
+        "meaning": "唱歌",
+        "base": "唱歌",
+        "past": "唱了",
+        "participle": "唱过",
+        "third": "唱",
+        "ing": "唱着"
+      },
+      "en": {
+        "meaning": "produce musical tones with the voice",
+        "base": "sing",
+        "past": "sang",
+        "participle": "sung",
+        "third": "sings",
+        "ing": "singing"
+      }
+    },
+    "ipaUS": {
+      "base": "/sɪŋ/",
+      "past": "/sæŋ/",
+      "participle": "/sʌŋ/",
+      "third": "/sɪŋz/",
+      "ing": "/sɪŋɪŋ/"
+    }
+  },
+  {
+    "base": "sink",
+    "past": "sank",
+    "participle": "sunk",
+    "thirdPerson": "sinks",
+    "ing": "sinking",
+    "meaningEs": "hundirse",
+    "complement": "in deep water",
+    "meaningEn": "go down below the surface of a liquid",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "hundirse",
+        "base": "hundirse",
+        "past": "se hundió",
+        "participle": "hundido",
+        "third": "se hunde",
+        "ing": "hundiéndose"
+      },
+      "fr": {
+        "meaning": "couler",
+        "base": "couler",
+        "past": "a coulé",
+        "participle": "coulé",
+        "third": "coule",
+        "ing": "en coulant"
+      },
+      "ko": {
+        "meaning": "가라앉다",
+        "base": "가라앉다",
+        "past": "가라앉았다",
+        "participle": "가라앉은",
+        "third": "가라앉는다",
+        "ing": "가라앉는 중"
+      },
+      "ja": {
+        "meaning": "沈む",
+        "base": "沈む",
+        "past": "沈んだ",
+        "participle": "沈んだ",
+        "third": "沈む",
+        "ing": "沈んでいる"
+      },
+      "zh-Hans": {
+        "meaning": "下沉",
+        "base": "下沉",
+        "past": "沉了",
+        "participle": "沉过",
+        "third": "沉",
+        "ing": "正在下沉"
+      },
+      "en": {
+        "meaning": "go down below the surface of a liquid",
+        "base": "sink",
+        "past": "sank",
+        "participle": "sunk",
+        "third": "sinks",
+        "ing": "sinking"
+      }
+    },
+    "ipaUS": {
+      "base": "/sɪŋk/",
+      "past": "/sæŋk/",
+      "participle": "/sʌŋk/",
+      "third": "/sɪŋks/",
+      "ing": "/sɪŋkɪŋ/"
+    }
+  },
+  {
+    "base": "sit",
+    "past": "sat",
+    "participle": "sat",
+    "thirdPerson": "sits",
+    "ing": "sitting",
+    "meaningEs": "sentarse",
+    "complement": "near the window",
+    "meaningEn": "rest with the body supported by the buttocks",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "sentarse",
+        "base": "sentarse",
+        "past": "se sentó",
+        "participle": "sentado",
+        "third": "se sienta",
+        "ing": "sentándose"
+      },
+      "fr": {
+        "meaning": "s'asseoir",
+        "base": "s'asseoir",
+        "past": "s'est assis",
+        "participle": "assis",
+        "third": "s'assied",
+        "ing": "en s'asseyant"
+      },
+      "ko": {
+        "meaning": "앉다",
+        "base": "앉다",
+        "past": "앉았다",
+        "participle": "앉은",
+        "third": "앉는다",
+        "ing": "앉고 있다"
+      },
+      "ja": {
+        "meaning": "座る",
+        "base": "座る",
+        "past": "座った",
+        "participle": "座った",
+        "third": "座る",
+        "ing": "座っている"
+      },
+      "zh-Hans": {
+        "meaning": "坐下",
+        "base": "坐下",
+        "past": "坐下了",
+        "participle": "已坐下",
+        "third": "坐下",
+        "ing": "正在坐下"
+      },
+      "en": {
+        "meaning": "rest with the body supported by the buttocks",
+        "base": "sit",
+        "past": "sat",
+        "participle": "sat",
+        "third": "sits",
+        "ing": "sitting"
+      }
+    },
+    "ipaUS": {
+      "base": "/sɪt/",
+      "past": "/sæt/",
+      "participle": "/sæt/",
+      "third": "/sɪts/",
+      "ing": "/ˈsɪtɪŋ/"
+    }
+  },
+  {
+    "base": "sleep",
+    "past": "slept",
+    "participle": "slept",
+    "thirdPerson": "sleeps",
+    "ing": "sleeping",
+    "meaningEs": "dormir",
+    "complement": "well",
+    "meaningEn": "be in a resting state with loss of consciousness",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "dormir",
+        "base": "dormir",
+        "past": "durmió",
+        "participle": "dormido",
+        "third": "duerme",
+        "ing": "durmiendo"
+      },
+      "fr": {
+        "meaning": "dormir",
+        "base": "dormir",
+        "past": "a dormi",
+        "participle": "dormi",
+        "third": "dort",
+        "ing": "en dormant"
+      },
+      "ko": {
+        "meaning": "자다",
+        "base": "자다",
+        "past": "잤다",
+        "participle": "잔",
+        "third": "잔다",
+        "ing": "자고 있다"
+      },
+      "ja": {
+        "meaning": "寝る",
+        "base": "寝る",
+        "past": "寝た",
+        "participle": "寝た",
+        "third": "寝る",
+        "ing": "寝ている"
+      },
+      "zh-Hans": {
+        "meaning": "睡觉",
+        "base": "睡觉",
+        "past": "睡着了",
+        "participle": "已经睡了",
+        "third": "睡觉",
+        "ing": "正在睡觉"
+      },
+      "en": {
+        "meaning": "be in a resting state with loss of consciousness",
+        "base": "sleep",
+        "past": "slept",
+        "participle": "slept",
+        "third": "sleeps",
+        "ing": "sleeping"
+      }
+    },
+    "ipaUS": {
+      "base": "/slip/",
+      "past": "/slɛpt/",
+      "participle": "/slɛpt/",
+      "third": "/slips/",
+      "ing": "/ˈslipɪŋ/"
+    }
+  },
+  {
+    "base": "smell",
+    "past": "smelt",
+    "participle": "smelt",
+    "thirdPerson": "smells",
+    "ing": "smelling",
+    "meaningEs": "oler",
+    "complement": "the flowers",
+    "meaningEn": "sense an odor by actively using the nose",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "oler",
+        "base": "oler",
+        "past": "olió",
+        "participle": "olido",
+        "third": "huele",
+        "ing": "oliendo"
+      },
+      "fr": {
+        "meaning": "sentir",
+        "base": "sentir",
+        "past": "a senti",
+        "participle": "senti",
+        "third": "sent",
+        "ing": "en sentant"
+      },
+      "ko": {
+        "meaning": "냄새를 맡다",
+        "base": "냄새를 맡다",
+        "past": "냄새를 맡았다",
+        "participle": "냄새를 맡은",
+        "third": "냄새를 맡는다",
+        "ing": "냄새를 맡고 있다"
+      },
+      "ja": {
+        "meaning": "においをかぐ",
+        "base": "においをかぐ",
+        "past": "においをかいだ",
+        "participle": "においをかいだ",
+        "third": "においをかぐ",
+        "ing": "においをかいでいる"
+      },
+      "zh-Hans": {
+        "meaning": "闻",
+        "base": "闻",
+        "past": "闻了",
+        "participle": "闻过",
+        "third": "闻",
+        "ing": "正在闻"
+      },
+      "en": {
+        "meaning": "sense an odor by actively using the nose",
+        "base": "smell",
+        "past": "smelt",
+        "participle": "smelt",
+        "third": "smells",
+        "ing": "smelling"
+      }
+    },
+    "ipaUS": {
+      "base": "/smɛl/",
+      "past": "/smɛlt/",
+      "participle": "/smɛlt/",
+      "third": "/smɛlz/",
+      "ing": "/ˈsmɛlɪŋ/"
+    }
+  },
+  {
+    "base": "snow",
+    "past": "snowed",
+    "participle": "snowed",
+    "thirdPerson": "snows",
+    "ing": "snowing",
+    "meaningEs": "nevar",
+    "complement": "heavily",
+    "meaningEn": "to have snowfall (weather)",
+    "regular": true,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "nevar",
+        "base": "nevar",
+        "past": "nevó",
+        "participle": "nevado",
+        "third": "nieva",
+        "ing": "nevando"
+      },
+      "fr": {
+        "meaning": "neiger",
+        "base": "neiger",
+        "past": "a neigé",
+        "participle": "neigé",
+        "third": "neige",
+        "ing": "en train de neiger"
+      },
+      "ko": {
+        "meaning": "눈이 오다",
+        "base": "눈이 오다",
+        "past": "눈이 왔다",
+        "participle": "눈이 온",
+        "third": "눈이 온다",
+        "ing": "눈이 오는 중"
+      },
+      "ja": {
+        "meaning": "雪が降る",
+        "base": "雪が降る",
+        "past": "雪が降った",
+        "participle": "雪が降った",
+        "third": "雪が降る",
+        "ing": "雪が降っている"
+      },
+      "zh-Hans": {
+        "meaning": "下雪",
+        "base": "下雪",
+        "past": "下雪了",
+        "participle": "已下雪",
+        "third": "下雪",
+        "ing": "正在下雪"
+      },
+      "en": {
+        "meaning": "to have snowfall (weather)",
+        "base": "snow",
+        "past": "snowed",
+        "participle": "snowed",
+        "third": "snows",
+        "ing": "snowing"
+      }
+    },
+    "ipaUS": {
+      "base": "/snoʊ/",
+      "past": "/snoʊd/",
+      "participle": "/snoʊd/",
+      "third": "/snoʊz/",
+      "ing": "/ˈsnoʊɪŋ/"
+    }
+  },
+  {
+    "base": "sow",
+    "past": "sowed",
+    "participle": "sown",
+    "thirdPerson": "sows",
+    "ing": "sowing",
+    "meaningEs": "sembrar",
+    "complement": "seeds",
+    "meaningEn": "to plant seeds in soil",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "sembrar",
+        "base": "sembrar",
+        "past": "sembró",
+        "participle": "sembrado",
+        "third": "siembra",
+        "ing": "sembrando"
+      },
+      "fr": {
+        "meaning": "semer",
+        "base": "semer",
+        "past": "a semé",
+        "participle": "semé",
+        "third": "sème",
+        "ing": "en semant"
+      },
+      "ko": {
+        "meaning": "씨를 뿌리다",
+        "base": "씨를 뿌리다",
+        "past": "씨를 뿌렸다",
+        "participle": "씨를 뿌린",
+        "third": "씨를 뿌린다",
+        "ing": "씨를 뿌리는 중"
+      },
+      "ja": {
+        "meaning": "種をまく",
+        "base": "種をまく",
+        "past": "種をまいた",
+        "participle": "種をまいた",
+        "third": "種をまく",
+        "ing": "種をまいている"
+      },
+      "zh-Hans": {
+        "meaning": "播种",
+        "base": "播种",
+        "past": "播了种",
+        "participle": "已播种",
+        "third": "播种",
+        "ing": "正在播种"
+      },
+      "en": {
+        "meaning": "to plant seeds in soil",
+        "base": "sow",
+        "past": "sowed",
+        "participle": "sown",
+        "third": "sows",
+        "ing": "sowing"
+      }
+    },
+    "ipaUS": {
+      "base": "/soʊ/",
+      "past": "/soʊd/",
+      "participle": "/soʊn/",
+      "third": "/soʊz/",
+      "ing": "/ˈsoʊɪŋ/"
+    }
+  },
+  {
     "base": "speak",
     "past": "spoke",
     "participle": "spoken",
@@ -1532,6 +6983,558 @@
     }
   },
   {
+    "base": "spell",
+    "past": "spelt",
+    "participle": "spelt",
+    "thirdPerson": "spells",
+    "ing": "spelling",
+    "meaningEs": "deletrear",
+    "complement": "a word",
+    "meaningEn": "name or write the letters of a word in sequence",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "deletrear",
+        "base": "deletrear",
+        "past": "deletreó",
+        "participle": "deletreado",
+        "third": "deletrea",
+        "ing": "deletreando"
+      },
+      "fr": {
+        "meaning": "épeler",
+        "base": "épeler",
+        "past": "a épelé",
+        "participle": "épelé",
+        "third": "épèle",
+        "ing": "en épelant"
+      },
+      "ko": {
+        "meaning": "철자를 말하다",
+        "base": "철자를 말하다",
+        "past": "철자를 말했다",
+        "participle": "철자를 말한",
+        "third": "철자를 말한다",
+        "ing": "철자를 말하고 있다"
+      },
+      "ja": {
+        "meaning": "つづる",
+        "base": "つづる",
+        "past": "つづった",
+        "participle": "つづった",
+        "third": "つづる",
+        "ing": "つづっている"
+      },
+      "zh-Hans": {
+        "meaning": "拼写",
+        "base": "拼写",
+        "past": "拼写了",
+        "participle": "拼写过",
+        "third": "拼写",
+        "ing": "正在拼写"
+      },
+      "en": {
+        "meaning": "name or write the letters of a word in sequence",
+        "base": "spell",
+        "past": "spelt",
+        "participle": "spelt",
+        "third": "spells",
+        "ing": "spelling"
+      }
+    },
+    "ipaUS": {
+      "base": "/spɛl/",
+      "past": "/spɛlt/",
+      "participle": "/spɛlt/",
+      "third": "/spɛlz/",
+      "ing": "/ˈspɛlɪŋ/"
+    }
+  },
+  {
+    "base": "spend",
+    "past": "spent",
+    "participle": "spent",
+    "thirdPerson": "spends",
+    "ing": "spending",
+    "meaningEs": "pasar tiempo",
+    "complement": "time outdoors",
+    "meaningEn": "use time for a purpose",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "pasar tiempo",
+        "base": "pasar tiempo",
+        "past": "pasó tiempo",
+        "participle": "pasado tiempo",
+        "third": "pasa tiempo",
+        "ing": "pasando tiempo"
+      },
+      "fr": {
+        "meaning": "passer du temps",
+        "base": "passer du temps",
+        "past": "a passé du temps",
+        "participle": "passé du temps",
+        "third": "passe du temps",
+        "ing": "en passant du temps"
+      },
+      "ko": {
+        "meaning": "시간을 보내다",
+        "base": "시간을 보내다",
+        "past": "시간을 보냈다",
+        "participle": "시간을 보낸",
+        "third": "시간을 보낸다",
+        "ing": "시간을 보내고 있다"
+      },
+      "ja": {
+        "meaning": "時間を過ごす",
+        "base": "時間を過ごす",
+        "past": "時間を過ごした",
+        "participle": "時間を過ごした",
+        "third": "時間を過ごす",
+        "ing": "時間を過ごしている"
+      },
+      "zh-Hans": {
+        "meaning": "度过时间",
+        "base": "度过时间",
+        "past": "度过了时间",
+        "participle": "度过了时间",
+        "third": "度过时间",
+        "ing": "正在度过时间"
+      },
+      "en": {
+        "meaning": "use time for a purpose",
+        "base": "spend",
+        "past": "spent",
+        "participle": "spent",
+        "third": "spends",
+        "ing": "spending"
+      }
+    },
+    "ipaUS": {
+      "base": "/spɛnd/",
+      "past": "/spɛnt/",
+      "participle": "/spɛnt/",
+      "third": "/spɛndz/",
+      "ing": "/ˈspɛndɪŋ/"
+    }
+  },
+  {
+    "base": "split",
+    "past": "split",
+    "participle": "split",
+    "thirdPerson": "splits",
+    "ing": "splitting",
+    "meaningEs": "dividir",
+    "complement": "the bill",
+    "meaningEn": "to divide into parts",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "dividir",
+        "base": "dividir",
+        "past": "dividió",
+        "participle": "dividido",
+        "third": "divide",
+        "ing": "dividiendo"
+      },
+      "fr": {
+        "meaning": "diviser",
+        "base": "diviser",
+        "past": "a divisé",
+        "participle": "divisé",
+        "third": "divise",
+        "ing": "en divisant"
+      },
+      "ko": {
+        "meaning": "나누다",
+        "base": "나누다",
+        "past": "나눴다",
+        "participle": "나눈",
+        "third": "나눈다",
+        "ing": "나누는 중"
+      },
+      "ja": {
+        "meaning": "分ける",
+        "base": "分ける",
+        "past": "分けた",
+        "participle": "分けた",
+        "third": "分ける",
+        "ing": "分けている"
+      },
+      "zh-Hans": {
+        "meaning": "分开",
+        "base": "分开",
+        "past": "分开了",
+        "participle": "已分开",
+        "third": "分开",
+        "ing": "分开中"
+      },
+      "en": {
+        "meaning": "to divide into parts",
+        "base": "split",
+        "past": "split",
+        "participle": "split",
+        "third": "splits",
+        "ing": "splitting"
+      }
+    },
+    "ipaUS": {
+      "base": "/splɪt/",
+      "past": "/splɪt/",
+      "participle": "/splɪt/",
+      "third": "/splɪts/",
+      "ing": "/ˈsplɪtɪŋ/"
+    }
+  },
+  {
+    "base": "spoil",
+    "past": "spoilt",
+    "participle": "spoilt",
+    "thirdPerson": "spoils",
+    "ing": "spoiling",
+    "meaningEs": "estropear",
+    "complement": "the surprise",
+    "meaningEn": "ruin or make bad",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "estropear",
+        "base": "estropear",
+        "past": "estropeó",
+        "participle": "estropeado",
+        "third": "estropea",
+        "ing": "estropeando"
+      },
+      "fr": {
+        "meaning": "gâcher",
+        "base": "gâcher",
+        "past": "a gâché",
+        "participle": "gâché",
+        "third": "gâche",
+        "ing": "en gâchant"
+      },
+      "ko": {
+        "meaning": "망치다",
+        "base": "망치다",
+        "past": "망쳤다",
+        "participle": "망친",
+        "third": "망친다",
+        "ing": "망치고 있다"
+      },
+      "ja": {
+        "meaning": "台無しにする",
+        "base": "台無しにする",
+        "past": "台無しにした",
+        "participle": "台無しにした",
+        "third": "台無しにする",
+        "ing": "台無しにしている"
+      },
+      "zh-Hans": {
+        "meaning": "破坏",
+        "base": "破坏",
+        "past": "破坏了",
+        "participle": "被破坏",
+        "third": "破坏",
+        "ing": "正在破坏"
+      },
+      "en": {
+        "meaning": "ruin or make bad",
+        "base": "spoil",
+        "past": "spoilt",
+        "participle": "spoilt",
+        "third": "spoils",
+        "ing": "spoiling"
+      }
+    },
+    "ipaUS": {
+      "base": "/spɔɪl/",
+      "past": "/spɔɪlt/",
+      "participle": "/spɔɪlt/",
+      "third": "/spɔɪlz/",
+      "ing": "/ˈspɔɪlɪŋ/"
+    }
+  },
+  {
+    "base": "spread",
+    "past": "spread",
+    "participle": "spread",
+    "thirdPerson": "spreads",
+    "ing": "spreading",
+    "meaningEs": "extender",
+    "complement": "a blanket on the ground",
+    "meaningEn": "to extend over a surface",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "extender",
+        "base": "extender",
+        "past": "extendió",
+        "participle": "extendido",
+        "third": "extiende",
+        "ing": "extendiendo"
+      },
+      "fr": {
+        "meaning": "étendre",
+        "base": "étendre",
+        "past": "a étendu",
+        "participle": "étendu",
+        "third": "étend",
+        "ing": "en étendant"
+      },
+      "ko": {
+        "meaning": "펼치다",
+        "base": "펼치다",
+        "past": "펼쳤다",
+        "participle": "펼친",
+        "third": "펼친다",
+        "ing": "펼치는 중"
+      },
+      "ja": {
+        "meaning": "広げる",
+        "base": "広げる",
+        "past": "広げた",
+        "participle": "広げた",
+        "third": "広げる",
+        "ing": "広げている"
+      },
+      "zh-Hans": {
+        "meaning": "铺开",
+        "base": "铺开",
+        "past": "铺开了",
+        "participle": "已铺开",
+        "third": "铺开",
+        "ing": "铺开中"
+      },
+      "en": {
+        "meaning": "to extend over a surface",
+        "base": "spread",
+        "past": "spread",
+        "participle": "spread",
+        "third": "spreads",
+        "ing": "spreading"
+      }
+    },
+    "ipaUS": {
+      "base": "/sprɛd/",
+      "past": "/sprɛd/",
+      "participle": "/sprɛd/",
+      "third": "/sprɛdz/",
+      "ing": "/ˈsprɛdɪŋ/"
+    }
+  },
+  {
+    "base": "stand",
+    "past": "stood",
+    "participle": "stood",
+    "thirdPerson": "stands",
+    "ing": "standing",
+    "meaningEs": "estar de pie",
+    "complement": "near the door",
+    "meaningEn": "be upright on feet",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "estar de pie",
+        "base": "estar de pie",
+        "past": "estuvo de pie",
+        "participle": "estado de pie",
+        "third": "está de pie",
+        "ing": "estando de pie"
+      },
+      "fr": {
+        "meaning": "être debout",
+        "base": "être debout",
+        "past": "a été debout",
+        "participle": "été debout",
+        "third": "est debout",
+        "ing": "en étant debout"
+      },
+      "ko": {
+        "meaning": "서 있다",
+        "base": "서 있다",
+        "past": "서 있었다",
+        "participle": "서 있는",
+        "third": "서 있다",
+        "ing": "서 있다"
+      },
+      "ja": {
+        "meaning": "立つ",
+        "base": "立つ",
+        "past": "立った",
+        "participle": "立った",
+        "third": "立つ",
+        "ing": "立っている"
+      },
+      "zh-Hans": {
+        "meaning": "站着",
+        "base": "站着",
+        "past": "站着了",
+        "participle": "站着",
+        "third": "站着",
+        "ing": "正在站着"
+      },
+      "en": {
+        "meaning": "be upright on feet",
+        "base": "stand",
+        "past": "stood",
+        "participle": "stood",
+        "third": "stands",
+        "ing": "standing"
+      }
+    },
+    "ipaUS": {
+      "base": "/stænd/",
+      "past": "/stʊd/",
+      "participle": "/stʊd/",
+      "third": "/stændz/",
+      "ing": "/ˈstændɪŋ/"
+    }
+  },
+  {
+    "base": "steal",
+    "past": "stole",
+    "participle": "stolen",
+    "thirdPerson": "steals",
+    "ing": "stealing",
+    "meaningEs": "robar",
+    "complement": "a bicycle",
+    "meaningEn": "take something without permission",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "robar",
+        "base": "robar",
+        "past": "robó",
+        "participle": "robado",
+        "third": "roba",
+        "ing": "robando"
+      },
+      "fr": {
+        "meaning": "voler",
+        "base": "voler",
+        "past": "a volé",
+        "participle": "volé",
+        "third": "vole",
+        "ing": "en volant"
+      },
+      "ko": {
+        "meaning": "훔치다",
+        "base": "훔치다",
+        "past": "훔쳤다",
+        "participle": "훔친",
+        "third": "훔친다",
+        "ing": "훔치는 중"
+      },
+      "ja": {
+        "meaning": "盗む",
+        "base": "盗む",
+        "past": "盗んだ",
+        "participle": "盗んだ",
+        "third": "盗む",
+        "ing": "盗んでいる"
+      },
+      "zh-Hans": {
+        "meaning": "偷",
+        "base": "偷",
+        "past": "偷了",
+        "participle": "偷过",
+        "third": "偷",
+        "ing": "正在偷"
+      },
+      "en": {
+        "meaning": "take something without permission",
+        "base": "steal",
+        "past": "stole",
+        "participle": "stolen",
+        "third": "steals",
+        "ing": "stealing"
+      }
+    },
+    "ipaUS": {
+      "base": "/stil/",
+      "past": "/stoʊl/",
+      "participle": "/ˈstoʊlən/",
+      "third": "/stilz/",
+      "ing": "/stilɪŋ/"
+    }
+  },
+  {
+    "base": "stick",
+    "past": "stuck",
+    "participle": "stuck",
+    "thirdPerson": "sticks",
+    "ing": "sticking",
+    "meaningEs": "pegar",
+    "complement": "a label on the box",
+    "meaningEn": "attach by adhesive",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "pegar",
+        "base": "pegar",
+        "past": "pegó",
+        "participle": "pegado",
+        "third": "pega",
+        "ing": "pegando"
+      },
+      "fr": {
+        "meaning": "coller",
+        "base": "coller",
+        "past": "a collé",
+        "participle": "collé",
+        "third": "colle",
+        "ing": "en collant"
+      },
+      "ko": {
+        "meaning": "붙이다",
+        "base": "붙이다",
+        "past": "붙였다",
+        "participle": "붙인",
+        "third": "붙인다",
+        "ing": "붙이고 있다"
+      },
+      "ja": {
+        "meaning": "貼る",
+        "base": "貼る",
+        "past": "貼った",
+        "participle": "貼った",
+        "third": "貼る",
+        "ing": "貼っている"
+      },
+      "zh-Hans": {
+        "meaning": "粘贴",
+        "base": "粘贴",
+        "past": "粘贴了",
+        "participle": "粘贴了",
+        "third": "粘贴",
+        "ing": "正在粘贴"
+      },
+      "en": {
+        "meaning": "attach by adhesive",
+        "base": "stick",
+        "past": "stuck",
+        "participle": "stuck",
+        "third": "sticks",
+        "ing": "sticking"
+      }
+    },
+    "ipaUS": {
+      "base": "/stɪk/",
+      "past": "/stʌk/",
+      "participle": "/stʌk/",
+      "third": "/stɪks/",
+      "ing": "/ˈstɪkɪŋ/"
+    }
+  },
+  {
     "base": "study",
     "past": "studied",
     "participle": "studied",
@@ -1598,6 +7601,144 @@
       "participle": "/ˈstʌdid/",
       "third": "/ˈstʌdiz/",
       "ing": "/ˈstʌdiɪŋ/"
+    }
+  },
+  {
+    "base": "sweep",
+    "past": "swept",
+    "participle": "swept",
+    "thirdPerson": "sweeps",
+    "ing": "sweeping",
+    "meaningEs": "barrer",
+    "complement": "the floor",
+    "meaningEn": "clean with a broom",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "barrer",
+        "base": "barrer",
+        "past": "barrió",
+        "participle": "barrido",
+        "third": "barre",
+        "ing": "barriendo"
+      },
+      "fr": {
+        "meaning": "balayer",
+        "base": "balayer",
+        "past": "a balayé",
+        "participle": "balayé",
+        "third": "balaye",
+        "ing": "en balayant"
+      },
+      "ko": {
+        "meaning": "쓸다",
+        "base": "쓸다",
+        "past": "쓸었다",
+        "participle": "쓴",
+        "third": "쓴다",
+        "ing": "쓸고 있다"
+      },
+      "ja": {
+        "meaning": "掃く",
+        "base": "掃く",
+        "past": "掃いた",
+        "participle": "掃いた",
+        "third": "掃く",
+        "ing": "掃いている"
+      },
+      "zh-Hans": {
+        "meaning": "扫",
+        "base": "扫",
+        "past": "扫了",
+        "participle": "扫过",
+        "third": "扫",
+        "ing": "正在扫"
+      },
+      "en": {
+        "meaning": "clean with a broom",
+        "base": "sweep",
+        "past": "swept",
+        "participle": "swept",
+        "third": "sweeps",
+        "ing": "sweeping"
+      }
+    },
+    "ipaUS": {
+      "base": "/swip/",
+      "past": "/swɛpt/",
+      "participle": "/swɛpt/",
+      "third": "/swips/",
+      "ing": "/ˈswipɪŋ/"
+    }
+  },
+  {
+    "base": "swim",
+    "past": "swam",
+    "participle": "swum",
+    "thirdPerson": "swims",
+    "ing": "swimming",
+    "meaningEs": "nadar",
+    "complement": "in the pool",
+    "meaningEn": "move through water using body movements",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "nadar",
+        "base": "nadar",
+        "past": "nadó",
+        "participle": "nadado",
+        "third": "nada",
+        "ing": "nadando"
+      },
+      "fr": {
+        "meaning": "nager",
+        "base": "nager",
+        "past": "a nagé",
+        "participle": "nagé",
+        "third": "nage",
+        "ing": "en nageant"
+      },
+      "ko": {
+        "meaning": "수영하다",
+        "base": "수영하다",
+        "past": "수영했다",
+        "participle": "수영한",
+        "third": "수영한다",
+        "ing": "수영하는 중"
+      },
+      "ja": {
+        "meaning": "泳ぐ",
+        "base": "泳ぐ",
+        "past": "泳いだ",
+        "participle": "泳いだ",
+        "third": "泳ぐ",
+        "ing": "泳いでいる"
+      },
+      "zh-Hans": {
+        "meaning": "游泳",
+        "base": "游泳",
+        "past": "游了",
+        "participle": "游过",
+        "third": "游泳",
+        "ing": "正在游泳"
+      },
+      "en": {
+        "meaning": "move through water using body movements",
+        "base": "swim",
+        "past": "swam",
+        "participle": "swum",
+        "third": "swims",
+        "ing": "swimming"
+      }
+    },
+    "ipaUS": {
+      "base": "/swɪm/",
+      "past": "/swæm/",
+      "participle": "/swʌm/",
+      "third": "/swɪmz/",
+      "ing": "/swɪmɪŋ/"
     }
   },
   {
@@ -1739,6 +7880,144 @@
     }
   },
   {
+    "base": "tear",
+    "past": "tore",
+    "participle": "torn",
+    "thirdPerson": "tears",
+    "ing": "tearing",
+    "meaningEs": "rasgar",
+    "complement": "a sheet of paper",
+    "meaningEn": "split something by pulling it apart forcibly",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "rasgar",
+        "base": "rasgar",
+        "past": "rasgó",
+        "participle": "rasgado",
+        "third": "rasga",
+        "ing": "rasgando"
+      },
+      "fr": {
+        "meaning": "déchirer",
+        "base": "déchirer",
+        "past": "a déchiré",
+        "participle": "déchiré",
+        "third": "déchire",
+        "ing": "en déchirant"
+      },
+      "ko": {
+        "meaning": "찢다",
+        "base": "찢다",
+        "past": "찢었다",
+        "participle": "찢은",
+        "third": "찢는다",
+        "ing": "찢는 중"
+      },
+      "ja": {
+        "meaning": "破る",
+        "base": "破る",
+        "past": "破った",
+        "participle": "破った",
+        "third": "破る",
+        "ing": "破っている"
+      },
+      "zh-Hans": {
+        "meaning": "撕破",
+        "base": "撕破",
+        "past": "撕了",
+        "participle": "撕过",
+        "third": "撕破",
+        "ing": "正在撕破"
+      },
+      "en": {
+        "meaning": "split something by pulling it apart forcibly",
+        "base": "tear",
+        "past": "tore",
+        "participle": "torn",
+        "third": "tears",
+        "ing": "tearing"
+      }
+    },
+    "ipaUS": {
+      "base": "/tɛr/",
+      "past": "/tɔr/",
+      "participle": "/tɔrn/",
+      "third": "/tɛrz/",
+      "ing": "/tɛrɪŋ/"
+    }
+  },
+  {
+    "base": "tell",
+    "past": "told",
+    "participle": "told",
+    "thirdPerson": "tells",
+    "ing": "telling",
+    "meaningEs": "contar",
+    "complement": "a story",
+    "meaningEn": "relate in speech",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "contar",
+        "base": "contar",
+        "past": "contó",
+        "participle": "contado",
+        "third": "cuenta",
+        "ing": "contando"
+      },
+      "fr": {
+        "meaning": "raconter",
+        "base": "raconter",
+        "past": "a raconté",
+        "participle": "raconté",
+        "third": "raconte",
+        "ing": "en racontant"
+      },
+      "ko": {
+        "meaning": "이야기하다",
+        "base": "이야기하다",
+        "past": "이야기했다",
+        "participle": "이야기한",
+        "third": "이야기한다",
+        "ing": "이야기하고 있다"
+      },
+      "ja": {
+        "meaning": "話す",
+        "base": "話す",
+        "past": "話した",
+        "participle": "話した",
+        "third": "話す",
+        "ing": "話している"
+      },
+      "zh-Hans": {
+        "meaning": "讲述",
+        "base": "讲述",
+        "past": "讲述了",
+        "participle": "讲述过",
+        "third": "讲述",
+        "ing": "正在讲述"
+      },
+      "en": {
+        "meaning": "relate in speech",
+        "base": "tell",
+        "past": "told",
+        "participle": "told",
+        "third": "tells",
+        "ing": "telling"
+      }
+    },
+    "ipaUS": {
+      "base": "/tɛl/",
+      "past": "/toʊld/",
+      "participle": "/toʊld/",
+      "third": "/tɛlz/",
+      "ing": "/ˈtɛlɪŋ/"
+    }
+  },
+  {
     "base": "think",
     "past": "thought",
     "participle": "thought",
@@ -1805,6 +8084,765 @@
       "participle": "/θɑːt/",
       "third": "/θɪŋks/",
       "ing": "/ˈθɪŋkɪŋ/"
+    }
+  },
+  {
+    "base": "throw",
+    "past": "threw",
+    "participle": "thrown",
+    "thirdPerson": "throws",
+    "ing": "throwing",
+    "meaningEs": "lanzar",
+    "complement": "a ball",
+    "meaningEn": "propel something through the air by hand",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "lanzar",
+        "base": "lanzar",
+        "past": "lanzó",
+        "participle": "lanzado",
+        "third": "lanza",
+        "ing": "lanzando"
+      },
+      "fr": {
+        "meaning": "lancer",
+        "base": "lancer",
+        "past": "a lancé",
+        "participle": "lancé",
+        "third": "lance",
+        "ing": "en lançant"
+      },
+      "ko": {
+        "meaning": "던지다",
+        "base": "던지다",
+        "past": "던졌다",
+        "participle": "던진",
+        "third": "던진다",
+        "ing": "던지는 중"
+      },
+      "ja": {
+        "meaning": "投げる",
+        "base": "投げる",
+        "past": "投げた",
+        "participle": "投げた",
+        "third": "投げる",
+        "ing": "投げている"
+      },
+      "zh-Hans": {
+        "meaning": "扔",
+        "base": "扔",
+        "past": "扔了",
+        "participle": "扔过",
+        "third": "扔",
+        "ing": "正在扔"
+      },
+      "en": {
+        "meaning": "propel something through the air by hand",
+        "base": "throw",
+        "past": "threw",
+        "participle": "thrown",
+        "third": "throws",
+        "ing": "throwing"
+      }
+    },
+    "ipaUS": {
+      "base": "/θroʊ/",
+      "past": "/θruː/",
+      "participle": "/θroʊn/",
+      "third": "/θroʊz/",
+      "ing": "/θroʊɪŋ/"
+    }
+  },
+  {
+    "base": "thrust",
+    "past": "thrust",
+    "participle": "thrust",
+    "thirdPerson": "thrusts",
+    "ing": "thrusting",
+    "meaningEs": "empujar con fuerza",
+    "complement": "a stick into the ground",
+    "meaningEn": "to push with force",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "empujar con fuerza",
+        "base": "empujar con fuerza",
+        "past": "empujó con fuerza",
+        "participle": "empujado con fuerza",
+        "third": "empuja con fuerza",
+        "ing": "empujando con fuerza"
+      },
+      "fr": {
+        "meaning": "pousser avec force",
+        "base": "pousser avec force",
+        "past": "a poussé avec force",
+        "participle": "poussé avec force",
+        "third": "pousse avec force",
+        "ing": "en poussant avec force"
+      },
+      "ko": {
+        "meaning": "세게 밀다",
+        "base": "세게 밀다",
+        "past": "세게 밀었다",
+        "participle": "세게 민",
+        "third": "세게 민다",
+        "ing": "세게 미는 중"
+      },
+      "ja": {
+        "meaning": "力強く押す",
+        "base": "力強く押す",
+        "past": "力強く押した",
+        "participle": "力強く押した",
+        "third": "力強く押す",
+        "ing": "力強く押している"
+      },
+      "zh-Hans": {
+        "meaning": "用力推",
+        "base": "用力推",
+        "past": "用力推了",
+        "participle": "已用力推",
+        "third": "用力推",
+        "ing": "用力推中"
+      },
+      "en": {
+        "meaning": "to push with force",
+        "base": "thrust",
+        "past": "thrust",
+        "participle": "thrust",
+        "third": "thrusts",
+        "ing": "thrusting"
+      }
+    },
+    "ipaUS": {
+      "base": "/θrʌst/",
+      "past": "/θrʌst/",
+      "participle": "/θrʌst/",
+      "third": "/θrʌsts/",
+      "ing": "/ˈθrʌstɪŋ/"
+    }
+  },
+  {
+    "base": "understand",
+    "past": "understood",
+    "participle": "understood",
+    "thirdPerson": "understands",
+    "ing": "understanding",
+    "meaningEs": "entender",
+    "complement": "the instructions",
+    "meaningEn": "perceive the meaning",
+    "regular": false,
+    "continuous": false,
+    "translations": {
+      "es": {
+        "meaning": "entender",
+        "base": "entender",
+        "past": "entendió",
+        "participle": "entendido",
+        "third": "entiende",
+        "ing": "entendiendo"
+      },
+      "fr": {
+        "meaning": "comprendre",
+        "base": "comprendre",
+        "past": "a compris",
+        "participle": "compris",
+        "third": "comprend",
+        "ing": "en comprenant"
+      },
+      "ko": {
+        "meaning": "이해하다",
+        "base": "이해하다",
+        "past": "이해했다",
+        "participle": "이해한",
+        "third": "이해한다",
+        "ing": "이해하는 중"
+      },
+      "ja": {
+        "meaning": "理解する",
+        "base": "理解する",
+        "past": "理解した",
+        "participle": "理解した",
+        "third": "理解する",
+        "ing": "理解している"
+      },
+      "zh-Hans": {
+        "meaning": "理解",
+        "base": "理解",
+        "past": "理解了",
+        "participle": "已理解",
+        "third": "理解",
+        "ing": "正在理解"
+      },
+      "en": {
+        "meaning": "perceive the meaning",
+        "base": "understand",
+        "past": "understood",
+        "participle": "understood",
+        "third": "understands",
+        "ing": "understanding"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌʌndɚˈstænd/",
+      "past": "/ˌʌndɚˈstʊd/",
+      "participle": "/ˌʌndɚˈstʊd/",
+      "third": "/ˌʌndɚˈstændz/",
+      "ing": "/ˌʌndɚˈstændɪŋ/"
+    }
+  },
+  {
+    "base": "undertake",
+    "past": "undertook",
+    "participle": "undertaken",
+    "thirdPerson": "undertakes",
+    "ing": "undertaking",
+    "meaningEs": "emprender",
+    "complement": "a difficult task",
+    "meaningEn": "to commit to and begin doing",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "emprender",
+        "base": "emprender",
+        "past": "emprendió",
+        "participle": "emprendido",
+        "third": "emprende",
+        "ing": "emprendiendo"
+      },
+      "fr": {
+        "meaning": "entreprendre",
+        "base": "entreprendre",
+        "past": "a entrepris",
+        "participle": "entrepris",
+        "third": "entreprend",
+        "ing": "en entreprenant"
+      },
+      "ko": {
+        "meaning": "착수하다",
+        "base": "착수하다",
+        "past": "착수했다",
+        "participle": "착수한",
+        "third": "착수한다",
+        "ing": "착수하는 중"
+      },
+      "ja": {
+        "meaning": "引き受ける",
+        "base": "引き受ける",
+        "past": "引き受けた",
+        "participle": "引き受けた",
+        "third": "引き受ける",
+        "ing": "引き受けている"
+      },
+      "zh-Hans": {
+        "meaning": "承担",
+        "base": "承担",
+        "past": "承担了",
+        "participle": "已承担",
+        "third": "承担",
+        "ing": "正在承担"
+      },
+      "en": {
+        "meaning": "to commit to and begin doing",
+        "base": "undertake",
+        "past": "undertook",
+        "participle": "undertaken",
+        "third": "undertakes",
+        "ing": "undertaking"
+      }
+    },
+    "ipaUS": {
+      "base": "/ˌʌndərˈteɪk/",
+      "past": "/ˌʌndərˈtʊk/",
+      "participle": "/ˌʌndərˈteɪkən/",
+      "third": "/ˌʌndərˈteɪks/",
+      "ing": "/ˌʌndərˈteɪkɪŋ/"
+    }
+  },
+  {
+    "base": "upset",
+    "past": "upset",
+    "participle": "upset",
+    "thirdPerson": "upsets",
+    "ing": "upsetting",
+    "meaningEs": "molestar",
+    "complement": "the neighbors",
+    "meaningEn": "disturb emotionally",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "molestar",
+        "base": "molestar",
+        "past": "molestó",
+        "participle": "molestado",
+        "third": "molesta",
+        "ing": "molestando"
+      },
+      "fr": {
+        "meaning": "contrarier",
+        "base": "contrarier",
+        "past": "a contrarié",
+        "participle": "contrarié",
+        "third": "contrarie",
+        "ing": "en contrariant"
+      },
+      "ko": {
+        "meaning": "불쾌하게 하다",
+        "base": "불쾌하게 하다",
+        "past": "불쾌하게 했다",
+        "participle": "불쾌하게 한",
+        "third": "불쾌하게 한다",
+        "ing": "불쾌하게 하는 중"
+      },
+      "ja": {
+        "meaning": "動揺させる",
+        "base": "動揺させる",
+        "past": "動揺させた",
+        "participle": "動揺させた",
+        "third": "動揺させる",
+        "ing": "動揺させている"
+      },
+      "zh-Hans": {
+        "meaning": "使不安",
+        "base": "使不安",
+        "past": "使不安了",
+        "participle": "已使不安",
+        "third": "使不安",
+        "ing": "正在使不安"
+      },
+      "en": {
+        "meaning": "disturb emotionally",
+        "base": "upset",
+        "past": "upset",
+        "participle": "upset",
+        "third": "upsets",
+        "ing": "upsetting"
+      }
+    },
+    "ipaUS": {
+      "base": "/ʌpˈsɛt/",
+      "past": "/ʌpˈsɛt/",
+      "participle": "/ʌpˈsɛt/",
+      "third": "/ʌpˈsɛts/",
+      "ing": "/ʌpˈsɛtɪŋ/"
+    }
+  },
+  {
+    "base": "wake",
+    "past": "woke",
+    "participle": "woken",
+    "thirdPerson": "wakes",
+    "ing": "waking",
+    "meaningEs": "despertarse",
+    "complement": "early",
+    "meaningEn": "to stop sleeping",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "despertarse",
+        "base": "despertarse",
+        "past": "se despertó",
+        "participle": "despertado",
+        "third": "se despierta",
+        "ing": "despertándose"
+      },
+      "fr": {
+        "meaning": "se réveiller",
+        "base": "se réveiller",
+        "past": "s'est réveillé",
+        "participle": "réveillé",
+        "third": "se réveille",
+        "ing": "en se réveillant"
+      },
+      "ko": {
+        "meaning": "깨다",
+        "base": "깨다",
+        "past": "깼다",
+        "participle": "깬",
+        "third": "깬다",
+        "ing": "깨는 중"
+      },
+      "ja": {
+        "meaning": "目を覚ます",
+        "base": "目を覚ます",
+        "past": "目を覚ました",
+        "participle": "目を覚ました",
+        "third": "目を覚ます",
+        "ing": "目を覚ましている"
+      },
+      "zh-Hans": {
+        "meaning": "醒来",
+        "base": "醒来",
+        "past": "醒来了",
+        "participle": "已经醒来",
+        "third": "醒来",
+        "ing": "正在醒来"
+      },
+      "en": {
+        "meaning": "to stop sleeping",
+        "base": "wake",
+        "past": "woke",
+        "participle": "woken",
+        "third": "wakes",
+        "ing": "waking"
+      }
+    },
+    "ipaUS": {
+      "base": "/weɪk/",
+      "past": "/woʊk/",
+      "participle": "/ˈwoʊkən/",
+      "third": "/weɪks/",
+      "ing": "/ˈweɪkɪŋ/"
+    }
+  },
+  {
+    "base": "wear",
+    "past": "wore",
+    "participle": "worn",
+    "thirdPerson": "wears",
+    "ing": "wearing",
+    "meaningEs": "llevar puesto",
+    "complement": "a warm coat",
+    "meaningEn": "to have clothing on",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "llevar puesto",
+        "base": "llevar puesto",
+        "past": "llevó puesto",
+        "participle": "llevado puesto",
+        "third": "lleva puesto",
+        "ing": "llevando puesto"
+      },
+      "fr": {
+        "meaning": "porter (vêtement)",
+        "base": "porter",
+        "past": "a porté",
+        "participle": "porté",
+        "third": "porte",
+        "ing": "en portant"
+      },
+      "ko": {
+        "meaning": "입다",
+        "base": "입다",
+        "past": "입었다",
+        "participle": "입은",
+        "third": "입는다",
+        "ing": "입고 있는"
+      },
+      "ja": {
+        "meaning": "着る",
+        "base": "着る",
+        "past": "着た",
+        "participle": "着た",
+        "third": "着る",
+        "ing": "着ている"
+      },
+      "zh-Hans": {
+        "meaning": "穿着",
+        "base": "穿着",
+        "past": "穿了",
+        "participle": "已经穿着",
+        "third": "穿着",
+        "ing": "正在穿着"
+      },
+      "en": {
+        "meaning": "to have clothing on",
+        "base": "wear",
+        "past": "wore",
+        "participle": "worn",
+        "third": "wears",
+        "ing": "wearing"
+      }
+    },
+    "ipaUS": {
+      "base": "/wɛr/",
+      "past": "/wɔr/",
+      "participle": "/wɔrn/",
+      "third": "/wɛrz/",
+      "ing": "/ˈwɛrɪŋ/"
+    }
+  },
+  {
+    "base": "weep",
+    "past": "wept",
+    "participle": "wept",
+    "thirdPerson": "weeps",
+    "ing": "weeping",
+    "meaningEs": "llorar",
+    "complement": "with joy",
+    "meaningEn": "shed tears",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "llorar",
+        "base": "llorar",
+        "past": "lloró",
+        "participle": "llorado",
+        "third": "llora",
+        "ing": "llorando"
+      },
+      "fr": {
+        "meaning": "pleurer",
+        "base": "pleurer",
+        "past": "a pleuré",
+        "participle": "pleuré",
+        "third": "pleure",
+        "ing": "en pleurant"
+      },
+      "ko": {
+        "meaning": "울다",
+        "base": "울다",
+        "past": "울었다",
+        "participle": "운",
+        "third": "운다",
+        "ing": "우는 중"
+      },
+      "ja": {
+        "meaning": "泣く",
+        "base": "泣く",
+        "past": "泣いた",
+        "participle": "泣いた",
+        "third": "泣く",
+        "ing": "泣いている"
+      },
+      "zh-Hans": {
+        "meaning": "哭泣",
+        "base": "哭泣",
+        "past": "哭了",
+        "participle": "已哭",
+        "third": "哭",
+        "ing": "正在哭"
+      },
+      "en": {
+        "meaning": "shed tears",
+        "base": "weep",
+        "past": "wept",
+        "participle": "wept",
+        "third": "weeps",
+        "ing": "weeping"
+      }
+    },
+    "ipaUS": {
+      "base": "/wiːp/",
+      "past": "/wɛpt/",
+      "participle": "/wɛpt/",
+      "third": "/wiːps/",
+      "ing": "/ˈwiːpɪŋ/"
+    }
+  },
+  {
+    "base": "wet",
+    "past": "wet",
+    "participle": "wet",
+    "thirdPerson": "wets",
+    "ing": "wetting",
+    "meaningEs": "mojar",
+    "complement": "a towel",
+    "meaningEn": "make something wet",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "mojar",
+        "base": "mojar",
+        "past": "mojó",
+        "participle": "mojado",
+        "third": "moja",
+        "ing": "mojando"
+      },
+      "fr": {
+        "meaning": "mouiller",
+        "base": "mouiller",
+        "past": "a mouillé",
+        "participle": "mouillé",
+        "third": "mouille",
+        "ing": "en mouillant"
+      },
+      "ko": {
+        "meaning": "적시다",
+        "base": "적시다",
+        "past": "적셨다",
+        "participle": "적신",
+        "third": "적신다",
+        "ing": "적시는 중"
+      },
+      "ja": {
+        "meaning": "濡らす",
+        "base": "濡らす",
+        "past": "濡らした",
+        "participle": "濡らした",
+        "third": "濡らす",
+        "ing": "濡らしている"
+      },
+      "zh-Hans": {
+        "meaning": "弄湿",
+        "base": "弄湿",
+        "past": "弄湿了",
+        "participle": "已弄湿",
+        "third": "弄湿",
+        "ing": "正在弄湿"
+      },
+      "en": {
+        "meaning": "make something wet",
+        "base": "wet",
+        "past": "wet",
+        "participle": "wet",
+        "third": "wets",
+        "ing": "wetting"
+      }
+    },
+    "ipaUS": {
+      "base": "/wɛt/",
+      "past": "/wɛt/",
+      "participle": "/wɛt/",
+      "third": "/wɛts/",
+      "ing": "/ˈwɛtɪŋ/"
+    }
+  },
+  {
+    "base": "win",
+    "past": "won",
+    "participle": "won",
+    "thirdPerson": "wins",
+    "ing": "winning",
+    "meaningEs": "ganar",
+    "complement": "prizes",
+    "meaningEn": "achieve victory",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "ganar",
+        "base": "ganar",
+        "past": "ganó",
+        "participle": "ganado",
+        "third": "gana",
+        "ing": "ganando"
+      },
+      "fr": {
+        "meaning": "gagner",
+        "base": "gagner",
+        "past": "a gagné",
+        "participle": "gagné",
+        "third": "gagne",
+        "ing": "en gagnant"
+      },
+      "ko": {
+        "meaning": "이기다",
+        "base": "이기다",
+        "past": "이겼다",
+        "participle": "이긴",
+        "third": "이긴다",
+        "ing": "이기는 중"
+      },
+      "ja": {
+        "meaning": "勝つ",
+        "base": "勝つ",
+        "past": "勝った",
+        "participle": "勝った",
+        "third": "勝つ",
+        "ing": "勝っている"
+      },
+      "zh-Hans": {
+        "meaning": "获胜",
+        "base": "获胜",
+        "past": "赢了",
+        "participle": "已赢",
+        "third": "获胜",
+        "ing": "正在获胜"
+      },
+      "en": {
+        "meaning": "achieve victory",
+        "base": "win",
+        "past": "won",
+        "participle": "won",
+        "third": "wins",
+        "ing": "winning"
+      }
+    },
+    "ipaUS": {
+      "base": "/wɪn/",
+      "past": "/wʌn/",
+      "participle": "/wʌn/",
+      "third": "/wɪnz/",
+      "ing": "/ˈwɪnɪŋ/"
+    }
+  },
+  {
+    "base": "withdraw",
+    "past": "withdrew",
+    "participle": "withdrawn",
+    "thirdPerson": "withdraws",
+    "ing": "withdrawing",
+    "meaningEs": "retirar",
+    "complement": "money from the bank",
+    "meaningEn": "to take out",
+    "regular": false,
+    "continuous": true,
+    "translations": {
+      "es": {
+        "meaning": "retirar",
+        "base": "retirar",
+        "past": "retiró",
+        "participle": "retirado",
+        "third": "retira",
+        "ing": "retirando"
+      },
+      "fr": {
+        "meaning": "retirer",
+        "base": "retirer",
+        "past": "a retiré",
+        "participle": "retiré",
+        "third": "retire",
+        "ing": "en retirant"
+      },
+      "ko": {
+        "meaning": "인출하다",
+        "base": "인출하다",
+        "past": "인출했다",
+        "participle": "인출한",
+        "third": "인출한다",
+        "ing": "인출하는 중"
+      },
+      "ja": {
+        "meaning": "引き出す",
+        "base": "引き出す",
+        "past": "引き出した",
+        "participle": "引き出した",
+        "third": "引き出す",
+        "ing": "引き出している"
+      },
+      "zh-Hans": {
+        "meaning": "取出",
+        "base": "取出",
+        "past": "取出了",
+        "participle": "已取出",
+        "third": "取出",
+        "ing": "正在取出"
+      },
+      "en": {
+        "meaning": "to take out",
+        "base": "withdraw",
+        "past": "withdrew",
+        "participle": "withdrawn",
+        "third": "withdraws",
+        "ing": "withdrawing"
+      }
+    },
+    "ipaUS": {
+      "base": "/wɪðˈdrɔ/",
+      "past": "/wɪðˈdru/",
+      "participle": "/wɪðˈdrɔn/",
+      "third": "/wɪðˈdrɔz/",
+      "ing": "/wɪðˈdrɔɪŋ/"
     }
   },
   {

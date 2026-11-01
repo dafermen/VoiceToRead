@@ -1,6 +1,6 @@
 import Foundation
 
-/// A small, reviewed reference catalog. No user training archive or translation is modified.
+/// A reviewed reference catalog. No user training archive or translation is modified.
 enum VerbTense: String, CaseIterable, Identifiable {
     case all = "All tenses"
     case presentSimple = "Simple present"
@@ -81,8 +81,7 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
         [meaning(in: language), pronunciation("base")].compactMap { $0 }.joined(separator: "  ")
     }
     var id: String { base }
-    /// Patterns compare spelling. Read is deliberately absent from this first catalog:
-    /// equal spelling alone would conceal its changing pronunciation.
+    /// Patterns compare spelling. IPA and playback distinguish read /riːd/ from read /rɛd/.
     var pattern: VerbPattern {
         if regular { return .regular }
         if base == past && past == participle { return .aaa }
@@ -91,11 +90,37 @@ struct ConjugationVerb: Codable, Equatable, Identifiable {
         if base == past { return .aab }
         return .abc
     }
+    /// Limit selected weather/animal/event senses to subjects that form natural examples.
+    var subjects: [VerbSubject] {
+        switch base {
+        case "snow", "crow": return [.it]
+        case "arise", "cost", "mean": return [.it, .they]
+        default: return VerbSubject.concrete
+        }
+    }
+    /// Explicit IPA for homographs is opt-in to this reference's speech output only.
+    func speechPronunciations(tense: VerbTense, form: VerbSentenceForm, subject: VerbSubject) -> [String: String] {
+        guard ["read", "lead", "tear", "say"].contains(base), subjects.contains(subject), supports(tense), form != .all else { return [:] }
+        let word: String
+        let key: String
+        switch tense {
+        case .presentSimple:
+            key = form == .affirmative && subject.third ? "third" : "base"
+            word = key == "third" ? thirdPerson : base
+        case .pastSimple:
+            key = form == .affirmative ? "past" : "base"; word = key == "past" ? past : base
+        case .presentPerfect: key = "participle"; word = participle
+        case .presentContinuous, .presentPerfectContinuous: key = "ing"; word = ing
+        case .all: return [:]
+        }
+        guard let ipa = pronunciation(key) else { return [:] }
+        return [word: String(ipa.dropFirst().dropLast())]
+    }
     func supports(_ tense: VerbTense) -> Bool {
         tense != .all && (continuous || (tense != .presentContinuous && tense != .presentPerfectContinuous))
     }
     func sentence(tense: VerbTense, form: VerbSentenceForm, subject: VerbSubject) -> String? {
-        guard supports(tense), form != .all, subject != .all else { return nil }
+        guard supports(tense), form != .all, subjects.contains(subject) else { return nil }
         let predicate: String
         let auxiliary: String?
         switch tense {

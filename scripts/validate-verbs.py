@@ -3,7 +3,7 @@ import json,re
 from pathlib import Path
 r=Path(__file__).resolve().parents[1]
 data=json.loads((r/'VoiceToRead/Resources/VerbReference/verbs.json').read_text(encoding='utf-8'))
-assert len(data)==28 and len({v['base'] for v in data})==len(data)
+assert len(data)==130 and len({v['base'] for v in data})==len(data)
 patterns={}
 for v in data:
     assert set(v)==set('base past participle thirdPerson ing meaningEs meaningEn complement regular continuous translations ipaUS'.split())
@@ -30,7 +30,21 @@ assert by['work']['ipaUS']['past']=='/wɝːkt/'
 assert by['beat']['past']=='beat' and by['beat']['participle']=='beaten'
 assert by['study']['thirdPerson']=='studies' and by['run']['ing']=='running'
 assert not any(by[w]['continuous'] for w in ['be','know','see'])
-assert not {'crow','snow','read'} & by.keys()
+coverage=json.loads((r/'docs/verb-workbook-coverage.json').read_text(encoding='utf-8'))
+assert len(coverage['source_bases'])==125 and len(coverage['new_bases'])==102
+assert set(coverage['source_bases'])<=by.keys()
+assert set(coverage['previous_bases']) | set(coverage['new_bases'])==by.keys()
+assert by['crow']['past']==by['crow']['participle']=='crowed' and by['crow']['regular']
+assert by['snow']['past']==by['snow']['participle']=='snowed' and by['snow']['regular']
+assert by['bid']['past']==by['bid']['participle']=='bid'
+assert by['get']['participle']=='gotten'
+assert (by['lie']['past'],by['lie']['participle'],by['lie']['ing'])==('lay','lain','lying')
+assert by['read']['ipaUS']['base']=='/riːd/' and by['read']['ipaUS']['past']==by['read']['ipaUS']['participle']=='/rɛd/'
+assert by['say']['ipaUS']['third']=='/sɛz/' and by['rise']['ipaUS']['third']=='/raɪzɪz/'
+assert by['fit']['translations']['es']['past']=='cupo'
+assert by['burn']['translations']['es']['third']=='quema'
+assert by['reset']['ipaUS']['base']=='/ˌriːˈsɛt/'
+assert all('snown' not in (v['past'],v['participle']) and 'crown' not in (v['past'],v['participle']) for v in data)
 project=(r/'VoiceToRead.xcodeproj/project.pbxproj').read_text(encoding='utf-8')
 for path in ['Models/VerbConjugation.swift','UI/VerbReferenceView.swift','Resources/VerbReference','VerbConjugationTests.swift']:
     assert f'path = "{path}";' in project
@@ -45,6 +59,6 @@ for path in ['VoiceToRead/Models/VerbConjugation.swift','VoiceToRead/UI/VerbRefe
     assert not re.search(r'\b(URLSession|AVAudioRecorder|SFSpeechRecognizer)\b',source)
 hub=(r/'VoiceToRead/UI/EnglishTrainingView.swift').read_text(encoding='utf-8')
 assert hub.index('trainingVerbsEntry')>hub.index('trainingPodcastsEntry')
-print('PASS: 28 complete unique verbs; six translation languages and IPA for every displayed form; pattern coverage',patterns)
+print('PASS: 130 complete unique verbs, all 125 distinct workbook verbs covered; six translation languages and IPA for every displayed form; pattern coverage',patterns)
 print('PASS: catalog registration, Training entry order, Swift delimiters and no recording/network APIs.')
 print('Native Swift compilation and XCTest remain pending on macOS.')

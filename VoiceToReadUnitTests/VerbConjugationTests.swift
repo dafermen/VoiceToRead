@@ -1,4 +1,5 @@
 import XCTest
+import AVFoundation
 @testable import VoiceToRead
 
 final class VerbConjugationTests: XCTestCase {
@@ -7,11 +8,11 @@ final class VerbConjugationTests: XCTestCase {
     }
     func testCatalogPatternsAndSearchFindInflectionsAndAccentedMeanings() throws {
         let catalog = try ConjugationVerb.load()
-        XCTAssertEqual(catalog.count, 28)
+        XCTAssertEqual(catalog.count, 130)
         for (word, pattern) in [("cut", VerbPattern.aaa), ("buy", .abb), ("write", .abc), ("come", .aba), ("beat", .aab), ("study", .regular)] {
             XCTAssertEqual(try verb(word).pattern, pattern)
         }
-        XCTAssertEqual(ConjugationVerb.matching(catalog, query: "written", pattern: .all, tense: .all).map(\.base), ["write"])
+        XCTAssertEqual(ConjugationVerb.matching(catalog, query: "written", pattern: .all, tense: .all).map(\.base), ["rewrite", "write"])
         XCTAssertEqual(ConjugationVerb.matching(catalog, query: "ensenar", pattern: .all, tense: .all).map(\.base), ["teach"])
         XCTAssertTrue(ConjugationVerb.matching(catalog, query: "", pattern: .aab, tense: .all).allSatisfy { $0.base == "beat" })
         XCTAssertFalse(ConjugationVerb.matching(catalog, query: "", pattern: .all, tense: .presentContinuous).contains { $0.base == "know" })
@@ -48,7 +49,7 @@ final class VerbConjugationTests: XCTestCase {
                 for form in VerbSentenceForm.concrete {
                     for subject in VerbSubject.concrete {
                         let sentence = verb.sentence(tense: tense, form: form, subject: subject)
-                        if verb.supports(tense) {
+                        if verb.supports(tense) && verb.subjects.contains(subject) {
                             let value = try XCTUnwrap(sentence)
                             XCTAssertFalse(value.contains("  "))
                             XCTAssertTrue(value.hasSuffix(form == .question ? "?" : "."))
@@ -88,9 +89,10 @@ extension VerbConjugationTests {
     }
     func testSearchFindsMeaningsInTheAdditionalLanguages() throws {
         let verbs = try ConjugationVerb.load()
-        for (text, base) in [("acheter", "buy"), ("書く", "write"), ("마시다", "drink"), ("学习", "study")] {
+        for (text, base) in [("acheter", "buy"), ("書く", "write"), ("마시다", "drink")] {
             XCTAssertEqual(ConjugationVerb.matching(verbs, query: text, pattern: .all, tense: .all).map(\.base), [base])
         }
+        XCTAssertEqual(ConjugationVerb.matching(verbs, query: "学习", pattern: .all, tense: .all).map(\.base), ["learn", "study"])
     }
 }
 
@@ -148,5 +150,59 @@ extension VerbConjugationTests {
         XCTAssertEqual(matches(favorites: true, completed: false, pattern: .aba), ["become", "run"])
         XCTAssertEqual(matches(favorites: true, completed: true, query: "written"), [])
         XCTAssertEqual(marks.favorites, ["become", "run", "write"], "Filtering never changes the marks")
+    }
+}
+
+
+extension VerbConjugationTests {
+    func testExpandedCatalogUsesCorrectedFormsAndStableExistingMarks() throws {
+        let verbs = try ConjugationVerb.load()
+        XCTAssertEqual(Set(verbs.map(\.id)).count, 130)
+        for (base, past, participle, pattern) in [
+            ("bid", "bid", "bid", VerbPattern.aaa), ("crow", "crowed", "crowed", .regular),
+            ("snow", "snowed", "snowed", .regular), ("hew", "hewed", "hewn", .abc),
+            ("mow", "mowed", "mown", .abc), ("prove", "proved", "proven", .abc),
+            ("show", "showed", "shown", .abc), ("sow", "sowed", "sown", .abc),
+            ("get", "got", "gotten", .abc), ("lie", "lay", "lain", .abc)
+        ] {
+            let item = try verb(base)
+            XCTAssertEqual(item.past, past); XCTAssertEqual(item.participle, participle)
+            XCTAssertEqual(item.pattern, pattern)
+        }
+        let marks = VerbLibraryMarks(favorites: ["become", "write"], completed: ["run"])
+        let restored = VerbLibraryMarks(data: marks.data)
+        XCTAssertEqual(restored, marks)
+        XCTAssertTrue(restored.includes("write", favoritesOnly: true, completedOnly: false))
+    }
+
+    func testWeatherAndEventExamplesUseAppropriateSubjects() throws {
+        let snow = try verb("snow")
+        XCTAssertEqual(snow.subjects, [.it])
+        XCTAssertEqual(snow.sentence(tense: .presentContinuous, form: .affirmative, subject: .it), "It is snowing heavily.")
+        XCTAssertNil(snow.sentence(tense: .presentSimple, form: .affirmative, subject: .i))
+        XCTAssertEqual(try verb("arise").subjects, [.it, .they])
+        XCTAssertFalse(try verb("understand").supports(.presentContinuous))
+        XCTAssertEqual(try verb("read").pattern, .aaa)
+        XCTAssertNotEqual(try verb("read").pronunciation("base"), try verb("read").pronunciation("past"))
+    }
+
+    @MainActor
+    func testReadPronunciationDependsOnTenseAndAuxiliaryWithoutChangingText() throws {
+        let read = try verb("read")
+        XCTAssertEqual(read.speechPronunciations(tense: .presentSimple, form: .affirmative, subject: .i), ["read": "riːd"])
+        XCTAssertEqual(read.speechPronunciations(tense: .pastSimple, form: .affirmative, subject: .i), ["read": "rɛd"])
+        XCTAssertEqual(read.speechPronunciations(tense: .pastSimple, form: .negative, subject: .i), ["read": "riːd"])
+        XCTAssertEqual(read.speechPronunciations(tense: .presentPerfect, form: .question, subject: .she), ["read": "rɛd"])
+        let text = "I read a book, then reread it."
+        let value = AppleTranslationSpeechOutput.attributedText(text, pronunciations: ["read": "rɛd"])
+        let key = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
+        XCTAssertEqual(value.string, text)
+        let spoken = (text as NSString).range(of: "read")
+        XCTAssertEqual(value.attribute(key, at: spoken.location, effectiveRange: nil) as? String, "rɛd")
+        let reread = (text as NSString).range(of: "reread")
+        XCTAssertNil(value.attribute(key, at: reread.location + 2, effectiveRange: nil))
+        let normal = AppleTranslationSpeechOutput.attributedText("Read the message.", pronunciations: [:])
+        XCTAssertEqual(normal.string, "Read the message.")
+        XCTAssertNil(normal.attribute(key, at: 0, effectiveRange: nil))
     }
 }

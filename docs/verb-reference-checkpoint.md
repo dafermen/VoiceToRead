@@ -48,3 +48,10 @@ Additional XCTest coverage checks translation completeness, representative meani
 override selection, settings changes and multilingual search. XCUI coverage checks Spanish,
 French and return-to-app-language behavior. Native tests and visual verification remain pending
 on macOS/iPhone; Windows checks cover resource integrity, localization and project references.
+
+
+## Complete source expansion — 2026-11-01
+
+The initial 28-entry scope above has been superseded by 130 entries covering all 125 distinct
+verbs in the five workbooks. See [expansion review](verb-catalog-expansion.md) and
+[source inventory](verb-workbook-coverage.json) for corrections, coverage and validation.
