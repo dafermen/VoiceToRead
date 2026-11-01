@@ -1,0 +1,48 @@
+{
+  "text": "I want to relax and meet people.",
+  "duration": 3.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.2199999988079071
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.2199999988079071,
+      "end": 0.5
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 0.5,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 0.800000011920929,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.3200000524520874,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.8200000524520874,
+      "end": 2.0
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.0,
+      "end": 2.319999933242798
+    }
+  ]
+}

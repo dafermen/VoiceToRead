@@ -1,0 +1,90 @@
+{
+  "text": "This morning, I saw I had missed our team meeting for the first time.",
+  "duration": 5.349999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 5,
+      "length": 7,
+      "start": 0.3799999952316284,
+      "end": 0.7799999713897705
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 0.9200000166893005,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.6399999856948853,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 20,
+      "length": 1,
+      "start": 1.7999999523162842,
+      "end": 2.0
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.3399999141693115,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.6600000858306885,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 42,
+      "length": 7,
+      "start": 2.9800000190734863,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 3.3399999141693115,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 58,
+      "length": 5,
+      "start": 3.940000057220459,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.28000020980835,
+      "end": 4.619999885559082
+    }
+  ]
+}

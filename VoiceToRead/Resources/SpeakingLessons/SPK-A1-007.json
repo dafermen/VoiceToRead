@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-007",
+  "number": 7,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Finding a Place to Live",
+    "es": "Buscar dónde vivir"
+  },
+  "category": {
+    "en": "Daily Life and Housing",
+    "es": "Vida cotidiana y vivienda"
+  },
+  "main_topic": {
+    "en": "Viewing a potential home together, sharing needs, discussing trade-offs and responsibilities, expressing preferences.",
+    "es": "Visitar una posible vivienda, compartir necesidades, hablar de ventajas y responsabilidades, expresar preferencias."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Personas adultas conversando dentro de una casa vacía durante una visita a una vivienda.",
+    "prompt": "Realistic editorial photograph, two adults visiting a vacant home together, discussing, looking around the living room, natural daylight, modern American style, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Aprender vocabulario cotidiano de «Buscar dónde vivir».",
+    "Comprender frases breves en una situación cotidiana.",
+    "Reconocer las estructuras básicas presentes en los ejemplos.",
+    "Relacionar las frases en inglés con su significado en español.",
+    "Practicar la lectura clara y la repetición de frases completas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "everyday communication",
+      "en": "I need a new home.",
+      "es": "Necesito un hogar nuevo."
+    },
+    {
+      "number": 2,
+      "function": "everyday communication",
+      "en": "My friend and I see an apartment.",
+      "es": "Mi amiga y yo vemos un apartamento."
+    },
+    {
+      "number": 3,
+      "function": "everyday communication",
+      "en": "It is near our work.",
+      "es": "Está cerca de nuestro trabajo."
+    },
+    {
+      "number": 4,
+      "function": "everyday communication",
+      "en": "The living room is bright.",
+      "es": "La sala es luminosa."
+    },
+    {
+      "number": 5,
+      "function": "everyday communication",
+      "en": "There is a table by the window.",
+      "es": "Hay una mesa junto a la ventana."
+    },
+    {
+      "number": 6,
+      "function": "everyday communication",
+      "en": "The kitchen is small and clean.",
+      "es": "La cocina es pequeña y está limpia."
+    },
+    {
+      "number": 7,
+      "function": "everyday communication",
+      "en": "I like the big windows.",
+      "es": "Me gustan las ventanas grandes."
+    },
+    {
+      "number": 8,
+      "function": "everyday communication",
+      "en": "My friend needs a quiet room.",
+      "es": "Mi amiga necesita una habitación tranquila."
+    },
+    {
+      "number": 9,
+      "function": "everyday communication",
+      "en": "We ask about the rent.",
+      "es": "Preguntamos por el alquiler."
+    },
+    {
+      "number": 10,
+      "function": "everyday communication",
+      "en": "Is water included in the rent?",
+      "es": "¿El agua está incluida en el alquiler?"
+    },
+    {
+      "number": 11,
+      "function": "everyday communication",
+      "en": "We do not need a garage.",
+      "es": "No necesitamos un garaje."
+    },
+    {
+      "number": 12,
+      "function": "everyday communication",
+      "en": "We want space for our books.",
+      "es": "Queremos espacio para nuestros libros."
+    },
+    {
+      "number": 13,
+      "function": "everyday communication",
+      "en": "Can we see the bedroom?",
+      "es": "¿Podemos ver el dormitorio?"
+    },
+    {
+      "number": 14,
+      "function": "everyday communication",
+      "en": "The bedroom has two windows.",
+      "es": "El dormitorio tiene dos ventanas."
+    },
+    {
+      "number": 15,
+      "function": "everyday communication",
+      "en": "I ask about the neighbors.",
+      "es": "Pregunto por los vecinos."
+    },
+    {
+      "number": 16,
+      "function": "everyday communication",
+      "en": "We can clean the apartment together.",
+      "es": "Podemos limpiar el apartamento juntos."
+    },
+    {
+      "number": 17,
+      "function": "everyday communication",
+      "en": "My friend can bring a table.",
+      "es": "Mi amiga puede traer una mesa."
+    },
+    {
+      "number": 18,
+      "function": "everyday communication",
+      "en": "We need time to think.",
+      "es": "Necesitamos tiempo para pensar."
+    },
+    {
+      "number": 19,
+      "function": "everyday communication",
+      "en": "We talk about our choice.",
+      "es": "Hablamos de nuestra elección."
+    },
+    {
+      "number": 20,
+      "function": "everyday communication",
+      "en": "This apartment is good for us.",
+      "es": "Este apartamento nos viene bien."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "We do not need a garage.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Can",
+      "example_en": "Can we see the bedroom?",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I need a new home.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I need a new home.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "My friend and I see an apartment.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "I need a new home.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "The living room is bright.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "And to add information",
+      "example_en": "My friend and I see an apartment.",
+      "explanation_es": "And une palabras, acciones o ideas que se añaden entre sí.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I need a new home",
+      "meaning_es": "Necesito un hogar nuevo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "My friend and I see an apartment",
+      "meaning_es": "Mi amiga y yo vemos un apartamento",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "It is near our work",
+      "meaning_es": "Está cerca de nuestro trabajo",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "The living room is bright",
+      "meaning_es": "La sala es luminosa",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "There is a table by the window",
+      "meaning_es": "Hay una mesa junto a la ventana",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "The kitchen is small and clean",
+      "meaning_es": "La cocina es pequeña y está limpia",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I like the big windows",
+      "meaning_es": "Me gustan las ventanas grandes",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "My friend needs a quiet room",
+      "meaning_es": "Mi amiga necesita una habitación tranquila",
+      "source_paragraph": 8
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I need a new home."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I like the big windows."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "Can we see the bedroom?"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-007",
+    "number": "007",
+    "title_en": "Finding a Place to Live",
+    "title_es": "Buscar dónde vivir",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana y vivienda",
+    "main_topic_es": "Visitar una posible vivienda, compartir necesidades, hablar de ventajas y responsabilidades, expresar preferencias.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article",
+      "And to add information"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-021",
+  "number": 21,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Greetings",
+    "es": "Saludos"
+  },
+  "category": {
+    "en": "Daily Life and Social Interactions",
+    "es": "Vida diaria e interacciones sociales"
+  },
+  "main_topic": {
+    "en": "Real-life American English greetings, responding, and leaving politely.",
+    "es": "Saludos, respuestas y despedidas en inglés americano en situaciones reales."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Dos personas adultas se saludan con una sonrisa y un gesto de la mano junto a una cafetería.",
+    "prompt": "Candid editorial landscape photo of two adult neighbors smiling and waving hello on a neighborhood sidewalk beside a cafe. Natural daylight. No text, logos or watermark.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Reconocer y usar saludos y despedidas en inglés.",
+    "Diferenciar saludos formales e informales.",
+    "Responder apropiadamente a preguntas comunes como 'How are you?'.",
+    "Entender expresiones comunes al conocer a alguien.",
+    "Practicar frases útiles al saludar o despedirse."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Sarah walks into the office in the morning and says, \"Good morning, everyone!\"",
+      "es": "Sarah entra a la oficina por la mañana y dice: \"¡Buenos días a todos!\""
+    },
+    {
+      "number": 2,
+      "function": "scene_register",
+      "en": "Her boss replies, \"Good morning, Sarah. How are you today?\"",
+      "es": "Su jefe responde: \"Buenos días, Sarah. ¿Cómo estás hoy?\""
+    },
+    {
+      "number": 3,
+      "function": "response",
+      "en": "Sarah answers, \"I’m good, thanks. And you?\" Her boss smiles and nods.",
+      "es": "Sarah contesta: \"Estoy bien, gracias. ¿Y usted?\" Su jefe sonríe y asiente."
+    },
+    {
+      "number": 4,
+      "function": "casual_greetings",
+      "en": "At lunch, Sarah sees her friend Tom and says, \"Hey, Tom! What’s up?\"",
+      "es": "En la hora del almuerzo, Sarah ve a su amigo Tom y dice: \"¡Hey, Tom! ¿Qué tal?\""
+    },
+    {
+      "number": 5,
+      "function": "casual_response",
+      "en": "Tom laughs and says, \"Not much. How’s it going?\"",
+      "es": "Tom se ríe y dice: \"No mucho. ¿Cómo va todo?\""
+    },
+    {
+      "number": 6,
+      "function": "casual_answer",
+      "en": "\"Pretty good!\" Sarah replies, and they start talking about their plans.",
+      "es": "\"¡Bastante bien!\" responde Sarah, y comienzan a hablar de sus planes."
+    },
+    {
+      "number": 7,
+      "function": "first_meeting",
+      "en": "Later, Tom introduces Sarah to a new coworker: \"Sarah, this is Mike.\"",
+      "es": "Luego, Tom presenta a Sarah con un nuevo compañero: \"Sarah, este es Mike.\""
+    },
+    {
+      "number": 8,
+      "function": "introducing",
+      "en": "Sarah smiles and says, \"Nice to meet you, Mike.\"",
+      "es": "Sarah sonríe y dice: \"Encantada de conocerte, Mike.\""
+    },
+    {
+      "number": 9,
+      "function": "first_meeting_response",
+      "en": "Mike answers, \"Nice to meet you, too.\"",
+      "es": "Mike responde: \"Igualmente, encantado de conocerte.\""
+    },
+    {
+      "number": 10,
+      "function": "known_person",
+      "en": "After lunch, Sarah sees an old colleague and says, \"Good to see you again!\"",
+      "es": "Después del almuerzo, Sarah ve a una excompañera y dice: \"¡Qué gusto verte de nuevo!\""
+    },
+    {
+      "number": 11,
+      "function": "long_time",
+      "en": "Her colleague smiles, \"Long time no see!\"",
+      "es": "Su compañera sonríe: \"¡Cuánto tiempo sin verte!\""
+    },
+    {
+      "number": 12,
+      "function": "welcome",
+      "en": "Sarah also welcomes a visitor to the office, saying, \"Welcome! Please come in.\"",
+      "es": "Sarah también da la bienvenida a un visitante de la oficina: \"¡Bienvenido! Por favor, pase.\""
+    },
+    {
+      "number": 13,
+      "function": "phone_greeting",
+      "en": "The phone rings. Sarah answers, \"Hello, this is Sarah. How can I help you?\"",
+      "es": "Suena el teléfono. Sarah contesta: \"Hola, habla Sarah. ¿En qué puedo ayudarle?\""
+    },
+    {
+      "number": 14,
+      "function": "polite_workplace",
+      "en": "A client says, \"Good afternoon. May I speak with Tom, please?\"",
+      "es": "Un cliente dice: \"Buenas tardes. ¿Puedo hablar con Tom, por favor?\""
+    },
+    {
+      "number": 15,
+      "function": "casual_group",
+      "en": "Later, Sarah goes to a café. She sees friends and says, \"Hi, everyone!\"",
+      "es": "Más tarde, Sarah va a una cafetería. Ve a sus amigos y dice: \"¡Hola a todos!\""
+    },
+    {
+      "number": 16,
+      "function": "leave_taking",
+      "en": "When it’s time to leave work, Sarah says, \"See you later!\" to her coworker.",
+      "es": "Cuando es hora de salir del trabajo, Sarah dice: \"¡Hasta luego!\" a su compañero."
+    },
+    {
+      "number": 17,
+      "function": "take_care",
+      "en": "Her coworker replies, \"Take care!\"",
+      "es": "Su compañero responde: \"¡Cuídate!\""
+    },
+    {
+      "number": 18,
+      "function": "evening greeting",
+      "en": "That evening, Sarah arrives at a meeting and smiles, \"Good evening!\" to the staff as she walks in.",
+      "es": "Esa noche, Sarah llega a una reunión y sonríe: «¡Buenas noches!» al personal mientras entra."
+    },
+    {
+      "number": 19,
+      "function": "farewell_greeting",
+      "en": "At night, Sarah tells her family, \"Good night!\" as she goes to bed.",
+      "es": "Por la noche, Sarah le dice a su familia: \"¡Buenas noches!\" al irse a la cama."
+    },
+    {
+      "number": 20,
+      "function": "wish_day",
+      "en": "Sarah leaves a shop and says, \"Have a good day!\" to the cashier.",
+      "es": "Sarah sale de una tienda y dice: \"¡Que tenga un buen día!\" al cajero."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Time-of-day greetings",
+      "example_en": "Sarah walks into the office in the morning and says, \"Good morning, everyone!\"",
+      "explanation_es": "Good morning, good afternoon y good evening son saludos que se eligen según el momento del día.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Good night as a farewell",
+      "example_en": "At night, Sarah tells her family, \"Good night!\" as she goes to bed.",
+      "explanation_es": "Good night se usa al despedirse por la noche o antes de dormir, no como saludo habitual al llegar.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "How questions with be",
+      "example_en": "Her boss replies, \"Good morning, Sarah. How are you today?\"",
+      "explanation_es": "En How are you, are va antes de you para formar la pregunta con how y be.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Informal fixed question",
+      "example_en": "At lunch, Sarah sees her friend Tom and says, \"Hey, Tom! What’s up?\"",
+      "explanation_es": "What’s up? es una fórmula informal entre amigos o personas de confianza; una respuesta breve común es Not much.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "To-infinitive in a fixed greeting",
+      "example_en": "Sarah smiles and says, \"Nice to meet you, Mike.\"",
+      "explanation_es": "Nice to meet you contiene el infinitivo to meet y se usa normalmente al conocer a alguien por primera vez.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Polite imperative",
+      "example_en": "Her coworker replies, \"Take care!\"",
+      "explanation_es": "Take care usa un imperativo como despedida amistosa, con el sentido de «cuídate».",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Fixed farewell with see",
+      "example_en": "When it’s time to leave work, Sarah says, \"See you later!\" to her coworker.",
+      "explanation_es": "See you later es una fórmula fija de despedida; no es necesario decir una oración completa como I’ll see you later.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Welcoming expressions",
+      "example_en": "Sarah also welcomes a visitor to the office, saying, \"Welcome! Please come in.\"",
+      "explanation_es": "Welcome se utiliza para recibir a alguien. Según el contexto puede acompañarse de una invitación como Please come in.",
+      "source_paragraph": 12
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Good morning, everyone!",
+      "meaning_es": "¡Buenos días a todos!",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "How are you today?",
+      "meaning_es": "¿Cómo estás hoy?",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "What’s up?",
+      "meaning_es": "¿Qué tal? / ¿Qué pasa?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Nice to meet you, Mike.",
+      "meaning_es": "Encantada de conocerte, Mike.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Welcome! Please come in.",
+      "meaning_es": "¡Bienvenido! Por favor, pase.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "See you later!",
+      "meaning_es": "¡Hasta luego!",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "Take care!",
+      "meaning_es": "¡Cuídate!",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "Have a good day!",
+      "meaning_es": "¡Que tenga un buen día!",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, revisa la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los siguientes fragmentos. Las barras muestran pausas de práctica, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Sarah answers, \"I’m good, thanks. And you?\" Her boss smiles and nods."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "Sarah smiles and says, \"Nice to meet you, Mike.\""
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "When it’s time to leave work, Sarah says, \"See you later!\" to her coworker."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte palabra por palabra; busca claridad, ritmo y buena entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-021",
+    "number": "021",
+    "title_en": "Greetings",
+    "title_es": "Saludos",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria e interacciones sociales",
+    "main_topic_es": "Saludos, respuestas y despedidas en inglés americano en situaciones reales.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Time-of-day greetings",
+      "Good night as a farewell",
+      "How questions with be",
+      "Informal fixed question",
+      "To-infinitive in a fixed greeting",
+      "Polite imperative",
+      "Fixed farewell with see",
+      "Welcoming expressions"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

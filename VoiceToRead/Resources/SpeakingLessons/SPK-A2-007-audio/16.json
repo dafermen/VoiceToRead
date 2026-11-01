@@ -1,0 +1,108 @@
+{
+  "text": "We promised to talk to each other if something bothered us about the apartment in the future.",
+  "duration": 5.800000190734863,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.25999999046325684
+    },
+    {
+      "location": 3,
+      "length": 8,
+      "start": 0.25999999046325684,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 0.7400000095367432,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.159999966621399,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 1.2599999904632568,
+      "end": 1.5
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 1.6799999475479126,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 1.940000057220459,
+      "end": 2.5199999809265137
+    },
+    {
+      "location": 37,
+      "length": 9,
+      "start": 2.5199999809265137,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 2.9800000190734863,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 3.299999952316284,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 3.7200000286102295,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 3.9000000953674316,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 69,
+      "length": 9,
+      "start": 4.199999809265137,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 4.519999980926514,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 4.840000152587891,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 86,
+      "length": 6,
+      "start": 4.980000019073486,
+      "end": 5.239999771118164
+    }
+  ]
+}

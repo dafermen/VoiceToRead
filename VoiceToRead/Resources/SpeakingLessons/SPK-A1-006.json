@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-006",
+  "number": 6,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Travel Plans and Unexpected Changes",
+    "es": "Planes de viaje e imprevistos"
+  },
+  "category": {
+    "en": "Daily Life and Travel",
+    "es": "Vida diaria y viajes"
+  },
+  "main_topic": {
+    "en": "A trip is changed because of a canceled train; ask for help, understand choices, and agree on a new plan.",
+    "es": "Un viaje se cambia por la cancelación de un tren; pedir ayuda, entender opciones y acordar un nuevo plan."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta en una estación de tren revisando su teléfono móvil y un boleto, maleta junto a ella, ambiente de cambio de planes.",
+    "prompt": "Realistic editorial photograph, adult traveler in a modern train station, checking phone and holding a reservation ticket, suitcase next to them, concerned expression, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Reconocer y expresar planes de viaje sencillos.",
+    "Solicitar ayuda y explicar necesidades básicas al viajar.",
+    "Comparar opciones cuando ocurre un cambio inesperado.",
+    "Aceptar, rechazar y acordar alternativas en inglés simple.",
+    "Practicar repeticiones y lectura corta en inglés estadounidense."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I planned a trip with my friend. We want to visit another city by train.",
+      "es": "Planifiqué un viaje con mi amigo. Queremos visitar otra ciudad en tren."
+    },
+    {
+      "number": 2,
+      "function": "anticipation",
+      "en": "We are both happy. This is our first trip together.",
+      "es": "Estamos felices. Este es nuestro primer viaje juntos."
+    },
+    {
+      "number": 3,
+      "function": "description",
+      "en": "Our train tickets are for Saturday morning. We pack our bags the night before.",
+      "es": "Nuestros boletos de tren son para el sábado por la mañana. Empacamos nuestras maletas la noche anterior."
+    },
+    {
+      "number": 4,
+      "function": "unexpected_event",
+      "en": "At the station, a worker says, “The train is canceled.”",
+      "es": "En la estación, un trabajador dice: “El tren está cancelado”."
+    },
+    {
+      "number": 5,
+      "function": "reaction",
+      "en": "We do not expect this. We look at each other and feel confused.",
+      "es": "No esperamos esto. Nos miramos y nos sentimos confundidos."
+    },
+    {
+      "number": 6,
+      "function": "seeking_help",
+      "en": "I go to the ticket desk. I say, “We need to go today. Can you help us?”",
+      "es": "Voy al mostrador de boletos. Digo: “Necesitamos ir hoy. ¿Puede ayudarnos?”"
+    },
+    {
+      "number": 7,
+      "function": "information",
+      "en": "The agent answers, “The next train leaves at six o’clock.”",
+      "es": "El agente responde: “El próximo tren sale a las seis.”"
+    },
+    {
+      "number": 8,
+      "function": "alternative",
+      "en": "He says, “Or, you can take two trains with a stop. You arrive earlier.”",
+      "es": "Dice: “O pueden tomar dos trenes con una parada. Llegan más temprano.”"
+    },
+    {
+      "number": 9,
+      "function": "opinion",
+      "en": "I say, “I want to arrive early. I do not mind changing trains.”",
+      "es": "Digo: “Quiero llegar temprano. No me importa cambiar de tren.”"
+    },
+    {
+      "number": 10,
+      "function": "preference",
+      "en": "My friend says, “Yes! Waiting all day is not good.”",
+      "es": "Mi amigo dice: “¡Sí! Esperar todo el día no está bien.”"
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "We ask, “Are there seats on the two trains? How much does it cost?”",
+      "es": "Preguntamos: “¿Hay asientos en los dos trenes? ¿Cuánto cuesta?”"
+    },
+    {
+      "number": 12,
+      "function": "confirmation",
+      "en": "The agent checks. “Yes, seats are free now. You can buy tickets here.”",
+      "es": "El agente revisa. “Sí, hay asientos libres ahora. Pueden comprar boletos aquí.”"
+    },
+    {
+      "number": 13,
+      "function": "relief",
+      "en": "We feel better. We do not want to stay in the station all day.",
+      "es": "Nos sentimos mejor. No queremos quedarnos todo el día en la estación."
+    },
+    {
+      "number": 14,
+      "function": "process",
+      "en": "We pay at the desk. The agent gives us the new tickets and a plan.",
+      "es": "Pagamos en el mostrador. El agente nos da los nuevos boletos y un plan."
+    },
+    {
+      "number": 15,
+      "function": "preparation",
+      "en": "I ask, “Where do we change trains?” The agent tells us the stop and wait time.",
+      "es": "Pregunto: “¿Dónde cambiamos de tren?” El agente nos dice la parada y el tiempo de espera."
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "This is not the trip we expect. But we find a new plan.",
+      "es": "No es el viaje que esperábamos. Pero encontramos un nuevo plan."
+    },
+    {
+      "number": 17,
+      "function": "alternative_view",
+      "en": "My friend says, “Things can change. This can be fun too!”",
+      "es": "Mi amigo dice: “Las cosas pueden cambiar. ¡Esto también puede ser divertido!”"
+    },
+    {
+      "number": 18,
+      "function": "conclusion",
+      "en": "We take our bags and wait for the first train together.",
+      "es": "Tomamos nuestras maletas y esperamos juntos el primer tren."
+    },
+    {
+      "number": 19,
+      "function": "future_plan",
+      "en": "Next time, we will check our trains again before we go.",
+      "es": "La próxima vez, revisaremos los trenes otra vez antes de salir."
+    },
+    {
+      "number": 20,
+      "function": "summary",
+      "en": "When travel plans change, speak calmly and look for help. It is important.",
+      "es": "Cuando los planes de viaje cambian, habla con calma y pide ayuda. Es importante."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "I planned a trip with my friend. We want to visit another city by train.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "We do not expect this. We look at each other and feel confused.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next time, we will check our trains again before we go.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Can",
+      "example_en": "I go to the ticket desk. I say, “We need to go today. Can you help us?”",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I planned a trip with my friend. We want to visit another city by train.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I planned a trip with my friend. We want to visit another city by train.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I planned a trip with my friend. We want to visit another city by train.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I planned a trip with my friend. We want to visit another city by train.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "The train is canceled.",
+      "meaning_es": "El tren está cancelado.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Can you help us?",
+      "meaning_es": "¿Puede ayudarnos?",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I want to arrive early.",
+      "meaning_es": "Quiero llegar temprano.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Waiting all day is not good.",
+      "meaning_es": "Esperar todo el día no está bien.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "You can buy tickets here.",
+      "meaning_es": "Pueden comprar boletos aquí.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "Where do we change trains?",
+      "meaning_es": "¿Dónde cambiamos de tren?",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "Things can change.",
+      "meaning_es": "Las cosas pueden cambiar.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "speak calmly and look for help.",
+      "meaning_es": "habla con calma y pide ayuda.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "At the station, a worker says, “The train is canceled.”"
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "I go to the ticket desk.",
+              "I say, “We need to go today.",
+              "Can you help us?”"
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "When travel plans change, speak calmly and look for help.",
+              "It is important."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-006",
+    "number": "006",
+    "title_en": "Travel Plans and Unexpected Changes",
+    "title_es": "Planes de viaje e imprevistos",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y viajes",
+    "main_topic_es": "Un viaje se cambia por la cancelación de un tren; pedir ayuda, entender opciones y acordar un nuevo plan.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

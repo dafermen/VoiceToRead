@@ -1,0 +1,36 @@
+{
+  "text": "I make a simple breakfast.",
+  "duration": 2.759999990463257,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 7,
+      "length": 1,
+      "start": 0.800000011920929,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 9,
+      "length": 6,
+      "start": 1.2200000286102295,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 16,
+      "length": 9,
+      "start": 1.600000023841858,
+      "end": 2.180000066757202
+    }
+  ]
+}

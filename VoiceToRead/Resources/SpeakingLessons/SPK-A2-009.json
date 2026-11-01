@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-009",
+  "number": 9,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Friendship and Difficult Conversations",
+    "es": "Amistad y conversaciones difíciles"
+  },
+  "category": {
+    "en": "Everyday Life and Relationships",
+    "es": "Vida cotidiana y relaciones"
+  },
+  "main_topic": {
+    "en": "Dealing with misunderstandings in friendships, expressing feelings, clarifying boundaries, and negotiating future plans.",
+    "es": "Manejar malentendidos en la amistad, expresar sentimientos, aclarar límites y negociar planes futuros."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Dos adultos conversando en una cafetería, con expresiones serias pero amistosas.",
+    "prompt": "Realistic editorial photograph, two adult friends talking seriously but kindly in a coffee shop, natural daylight, cozy atmosphere, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir un malentendido en la amistad.",
+    "Expresar sentimientos y aclarar intenciones.",
+    "Dar y responder explicaciones sencillas.",
+    "Practicar acuerdos y planes futuros de forma básica.",
+    "Leer y repetir frases para mejorar la expresión oral."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "friendship and communication",
+      "en": "Last Friday, my friend Maya asked me to meet after work.",
+      "es": "El viernes pasado, mi amiga Maya me propuso vernos después del trabajo."
+    },
+    {
+      "number": 2,
+      "function": "friendship and communication",
+      "en": "I said yes because I wanted to hear about her new job.",
+      "es": "Acepté porque quería saber cómo le iba en su nuevo trabajo."
+    },
+    {
+      "number": 3,
+      "function": "friendship and communication",
+      "en": "We planned to meet at a small cafe near the station.",
+      "es": "Planeamos vernos en una cafetería pequeña cerca de la estación."
+    },
+    {
+      "number": 4,
+      "function": "friendship and communication",
+      "en": "On Friday afternoon, my manager asked me to stay a little longer.",
+      "es": "El viernes por la tarde, mi jefe me pidió que me quedara un poco más."
+    },
+    {
+      "number": 5,
+      "function": "friendship and communication",
+      "en": "I sent Maya a message, but I did not explain the delay.",
+      "es": "Le envié un mensaje a Maya, pero no le expliqué el retraso."
+    },
+    {
+      "number": 6,
+      "function": "friendship and communication",
+      "en": "She waited at the cafe and thought I did not want to come.",
+      "es": "Esperó en la cafetería y pensó que yo no quería ir."
+    },
+    {
+      "number": 7,
+      "function": "friendship and communication",
+      "en": "When I arrived, she was quiet and looked upset.",
+      "es": "Cuando llegué, estaba callada y parecía molesta."
+    },
+    {
+      "number": 8,
+      "function": "friendship and communication",
+      "en": "\"Are you all right?\" I asked as I sat down.",
+      "es": "«¿Estás bien?», le pregunté mientras me sentaba."
+    },
+    {
+      "number": 9,
+      "function": "friendship and communication",
+      "en": "She said, \"I was worried because your message was very short.\"",
+      "es": "Me dijo: «Estaba preocupada porque tu mensaje era muy breve»."
+    },
+    {
+      "number": 10,
+      "function": "friendship and communication",
+      "en": "\"I'm sorry,\" I said. \"I needed more time at work.\"",
+      "es": "«Lo siento», le dije. «Necesitaba más tiempo en el trabajo»."
+    },
+    {
+      "number": 11,
+      "function": "friendship and communication",
+      "en": "I explained that I could not leave earlier.",
+      "es": "Le expliqué que no podía salir antes."
+    },
+    {
+      "number": 12,
+      "function": "friendship and communication",
+      "en": "\"Next time, can you tell me when you will arrive?\" she asked.",
+      "es": "«La próxima vez, ¿puedes decirme cuándo vas a llegar?», me preguntó."
+    },
+    {
+      "number": 13,
+      "function": "friendship and communication",
+      "en": "I agreed to give her a clear time, not just say sorry.",
+      "es": "Acepté darle una hora concreta y no limitarme a pedir disculpas."
+    },
+    {
+      "number": 14,
+      "function": "friendship and communication",
+      "en": "Then I asked about her first week at the new job.",
+      "es": "Después le pregunté por su primera semana en el nuevo trabajo."
+    },
+    {
+      "number": 15,
+      "function": "friendship and communication",
+      "en": "She smiled and told me about her friendly team.",
+      "es": "Sonrió y me habló de su equipo tan amable."
+    },
+    {
+      "number": 16,
+      "function": "friendship and communication",
+      "en": "We chose our drinks and shared a piece of cake.",
+      "es": "Elegimos nuestras bebidas y compartimos un trozo de pastel."
+    },
+    {
+      "number": 17,
+      "function": "friendship and communication",
+      "en": "I listened and asked questions instead of checking my phone.",
+      "es": "Escuché e hice preguntas en lugar de mirar el teléfono."
+    },
+    {
+      "number": 18,
+      "function": "friendship and communication",
+      "en": "Before we left, we planned another meeting for the following week.",
+      "es": "Antes de irnos, planeamos vernos de nuevo la semana siguiente."
+    },
+    {
+      "number": 19,
+      "function": "friendship and communication",
+      "en": "\"Let's meet on Saturday, when we have more time,\" Maya suggested.",
+      "es": "«Veámonos el sábado, cuando tengamos más tiempo», sugirió Maya."
+    },
+    {
+      "number": 20,
+      "function": "friendship and communication",
+      "en": "Now I send clearer messages when my plans change.",
+      "es": "Ahora envío mensajes más claros cuando cambian mis planes."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "I said yes because I wanted to hear about her new job.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "I sent Maya a message, but I did not explain the delay.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "\"Next time, can you tell me when you will arrive?\" she asked.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Can",
+      "example_en": "\"Next time, can you tell me when you will arrive?\" she asked.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Could",
+      "example_en": "I explained that I could not leave earlier.",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Present simple",
+      "example_en": "\"Let's meet on Saturday, when we have more time,\" Maya suggested.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I said yes because I wanted to hear about her new job.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I said yes because I wanted to hear about her new job.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "after work",
+      "meaning_es": "después del trabajo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "hear about",
+      "meaning_es": "saber de",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "a little longer",
+      "meaning_es": "un poco más",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "explain the delay",
+      "meaning_es": "explicar el retraso",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Are you all right",
+      "meaning_es": "¿Estás bien?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "I'm sorry",
+      "meaning_es": "Lo siento",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Next time",
+      "meaning_es": "La próxima vez",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "a piece of cake",
+      "meaning_es": "un trozo de pastel",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras sólo indican pausas de entrenamiento.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "I said yes because I wanted to hear about her new job."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "She said, \"I was worried because your message was very short.\""
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "\"Let's meet on Saturday, when we have more time,\" Maya suggested."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, sin detenerte en cada palabra. Concéntrate en el ritmo y la entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-009",
+    "number": "009",
+    "title_en": "Friendship and Difficult Conversations",
+    "title_es": "Amistad y conversaciones difíciles",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana y relaciones",
+    "main_topic_es": "Manejar malentendidos en la amistad, expresar sentimientos, aclarar límites y negociar planes futuros.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past simple negative",
+      "Will for future reference",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

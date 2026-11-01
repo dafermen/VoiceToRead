@@ -1,0 +1,102 @@
+{
+  "text": "Admittedly, some prefer not to answer 'What's up?' literally, so a breezy 'Hey' back often suffices.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 10,
+      "start": 0.0,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 1.2200000286102295,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.5800000429153442,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 1.8799999952316284,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.1600000858306885,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 31,
+      "length": 6,
+      "start": 2.5399999618530273,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 2.619999885559082,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.0199999809265137,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 51,
+      "length": 9,
+      "start": 3.259999990463257,
+      "end": 3.640000104904175
+    },
+    {
+      "location": 62,
+      "length": 2,
+      "start": 4.239999771118164,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 65,
+      "length": 1,
+      "start": 4.340000152587891,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 67,
+      "length": 6,
+      "start": 4.559999942779541,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 4.900000095367432,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 80,
+      "length": 4,
+      "start": 5.21999979019165,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 5.539999961853027,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 6.179999828338623,
+      "end": 6.739999771118164
+    }
+  ]
+}

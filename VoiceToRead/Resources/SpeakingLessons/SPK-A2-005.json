@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-005",
+  "number": 5,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "My First Day at a New Job",
+    "es": "Mi primer día en un nuevo trabajo"
+  },
+  "category": {
+    "en": "Work and Daily Life",
+    "es": "Trabajo y vida diaria"
+  },
+  "main_topic": {
+    "en": "Meeting colleagues, clarifying responsibilities, asking for help, and setting expectations on the first day.",
+    "es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas en el primer día."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Una persona adulta en una oficina moderna saludando a sus nuevos compañeros de trabajo.",
+    "prompt": "Realistic editorial photograph, adult professional greeting new colleagues in a modern office environment, bright daylight through windows, diverse group, friendly atmosphere, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir un primer día en un trabajo nuevo.",
+    "Practicar saludos y presentaciones en inglés.",
+    "Hacer preguntas simples sobre tareas y horarios.",
+    "Expresar necesidades de ayuda y comprensión.",
+    "Hablar sobre expectativas y metas sencillas en el trabajo."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This morning, I arrived at my new job feeling excited but also a little nervous.",
+      "es": "Esta mañana llegué a mi nuevo trabajo sintiéndome emocionado pero también un poco nervioso."
+    },
+    {
+      "number": 2,
+      "function": "greeting",
+      "en": "\"Good morning! Welcome!\" my manager said as I walked into the office.",
+      "es": "\"¡Buenos días! ¡Bienvenido!\" dijo mi jefe cuando entré a la oficina."
+    },
+    {
+      "number": 3,
+      "function": "introduction",
+      "en": "She introduced me to the team. Everyone smiled and said, \"Hello!\"",
+      "es": "Ella me presentó al equipo. Todos sonrieron y dijeron: \"¡Hola!\""
+    },
+    {
+      "number": 4,
+      "function": "introduction_detail",
+      "en": "I tried to remember their names and shook hands with each person.",
+      "es": "Traté de recordar sus nombres y saludé de mano a cada persona."
+    },
+    {
+      "number": 5,
+      "function": "responsibility",
+      "en": "After introductions, my manager showed me my desk and explained my main tasks.",
+      "es": "Después de las presentaciones, mi jefe me mostró mi escritorio y explicó mis tareas principales."
+    },
+    {
+      "number": 6,
+      "function": "question",
+      "en": "I asked, \"Can I have a copy of my schedule?\"",
+      "es": "Pregunté: \"¿Puedo tener una copia de mi horario?\""
+    },
+    {
+      "number": 7,
+      "function": "clarification",
+      "en": "She said I will check customer emails and help the sales team with small jobs.",
+      "es": "Ella dijo que revisaré los correos de los clientes y ayudaré al equipo de ventas con tareas sencillas."
+    },
+    {
+      "number": 8,
+      "function": "help_request",
+      "en": "I said, \"I might need help with the computer program at first.\"",
+      "es": "Dije: \"Al principio podría necesitar ayuda con el programa de computadora.\""
+    },
+    {
+      "number": 9,
+      "function": "offer_help",
+      "en": "She told me, \"Carlos will teach you how everything works.\"",
+      "es": "Ella me dijo: \"Carlos te enseñará cómo funciona todo.\""
+    },
+    {
+      "number": 10,
+      "function": "first_task",
+      "en": "Carlos came over and showed me how to log in to my email.",
+      "es": "Carlos se acercó y me mostró cómo iniciar sesión en mi correo electrónico."
+    },
+    {
+      "number": 11,
+      "function": "feedback",
+      "en": "He asked, \"Can you send me a short message as a test?\"",
+      "es": "Me preguntó: \"¿Puedes enviarme un mensaje corto como prueba?\""
+    },
+    {
+      "number": 12,
+      "function": "error_repair",
+      "en": "I made a small mistake, but Carlos was patient and helped me fix it.",
+      "es": "Cometí un pequeño error, pero Carlos tuvo paciencia y me ayudó a corregirlo."
+    },
+    {
+      "number": 13,
+      "function": "interaction",
+      "en": "Later, Ana from the team invited me to join her and others for a coffee break.",
+      "es": "Más tarde, Ana del equipo me invitó a tomar un café con ella y otros compañeros."
+    },
+    {
+      "number": 14,
+      "function": "conversation",
+      "en": "We talked about music and good places to eat near the office.",
+      "es": "Hablamos sobre música y buenos lugares para comer cerca de la oficina."
+    },
+    {
+      "number": 15,
+      "function": "expectations",
+      "en": "Before lunch, my manager told me the most important things to do in my first month.",
+      "es": "Antes del almuerzo, mi jefe me dijo las cosas más importantes para hacer en mi primer mes."
+    },
+    {
+      "number": 16,
+      "function": "support",
+      "en": "She said, \"If you have questions, just ask. We are here to help you.\"",
+      "es": "Ella dijo: \"Si tienes preguntas, solo pregunta. Estamos aquí para ayudarte.\""
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "It made me relaxed to know that I do not have to know everything right away.",
+      "es": "Me tranquilizó saber que no tengo que saber todo de inmediato."
+    },
+    {
+      "number": 18,
+      "function": "plan",
+      "en": "In the afternoon, I made a list of my main tasks and things to ask about.",
+      "es": "Por la tarde, hice una lista de mis tareas principales y cosas sobre las que quiero preguntar."
+    },
+    {
+      "number": 19,
+      "function": "commitment",
+      "en": "I decided, \"I will ask for help any time I am not sure what to do.\"",
+      "es": "Decidí: \"Pediré ayuda siempre que no esté seguro de qué hacer.\""
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "At the end of my first day, I felt tired but happy and thanked everyone for their help.",
+      "es": "Al final de mi primer día, me sentí cansado pero feliz y agradecí a todos por su ayuda."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "This morning, I arrived at my new job feeling excited but also a little nervous.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "It made me relaxed to know that I do not have to know everything right away.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "She said I will check customer emails and help the sales team with small jobs.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Can",
+      "example_en": "I asked, \"Can I have a copy of my schedule?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I asked, \"Can I have a copy of my schedule?\"",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "This morning, I arrived at my new job feeling excited but also a little nervous.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "This morning, I arrived at my new job feeling excited but also a little nervous.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "This morning, I arrived at my new job feeling excited but also a little nervous.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "\"Good morning! Welcome!\"",
+      "meaning_es": "\"¡Buenos días! ¡Bienvenido!\"",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "\"Can I have a copy of my schedule?\"",
+      "meaning_es": "\"¿Puedo tener una copia de mi horario?\"",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "\"Carlos will teach you how everything works.\"",
+      "meaning_es": "\"Carlos te enseñará cómo funciona todo.\"",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "\"Can you send me a short message as a test?\"",
+      "meaning_es": "\"¿Puedes enviarme un mensaje corto como prueba?\"",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "At the end of my first day, I felt tired but happy and thanked everyone for their help.",
+      "meaning_es": "Al final de mi primer día, me sentí cansado pero feliz y agradecí a todos por su ayuda.",
+      "source_paragraph": 20
+    },
+    {
+      "expression_en": "\"If you have questions, just ask. We are here to help you.\"",
+      "meaning_es": "\"Si tienes preguntas, solo pregunta. Estamos aquí para ayudarte.\"",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "I made a small mistake, but Carlos was patient and helped me fix it.",
+      "meaning_es": "Cometí un pequeño error, pero Carlos tuvo paciencia y me ayudó a corregirlo.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "I will ask for help any time I am not sure what to do.",
+      "meaning_es": "Pediré ayuda siempre que no esté seguro de qué hacer.",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "\"Good morning! Welcome!\" my manager said as I walked into the office."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "I asked, \"Can I have a copy of my schedule?\""
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "She said, \"If you have questions, just ask. We are here to help you.\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-005",
+    "number": "005",
+    "title_en": "My First Day at a New Job",
+    "title_es": "Mi primer día en un nuevo trabajo",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y vida diaria",
+    "main_topic_es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas en el primer día.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

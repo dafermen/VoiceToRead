@@ -66,11 +66,14 @@ private struct PodcastReaderView: View {
                         Text("Normal · 1×").tag(false)
                     }.pickerStyle(.segmented).accessibilityIdentifier("podcastSpeed")
                     Toggle("Show transcript", isOn: $showTranscript).accessibilityIdentifier("podcastShowTranscript")
-                    if showTranscript {
-                        DisclosureGroup("Reading options") {
-                            Toggle("Show translation", isOn: $showTranslation)
-                            Toggle("Follow narration", isOn: $followNarration)
+                    DisclosureGroup("Reading options") {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Full-screen text size").font(.subheadline)
+                            Slider(value: $karaokeTextSize, in: 28...72, step: 4)
+                                .accessibilityLabel("Full-screen text size").accessibilityIdentifier("podcastKaraokeTextSize")
                         }
+                        Toggle("Show translation", isOn: $showTranslation)
+                        Toggle("Follow narration", isOn: $followNarration)
                     }
                     Text("AI-generated voice by OpenAI · Marin").font(.caption).foregroundStyle(.secondary)
                     if let message = playback.message { Text(LocalizedStringKey(message)).foregroundStyle(.secondary) }
@@ -141,7 +144,7 @@ private struct PodcastReaderView: View {
                 }
             }
         }
-        .safeAreaInset(edge: .bottom, spacing: 0) { playbackControls }
+        .safeAreaInset(edge: .bottom, spacing: 0) { if !fullScreen { playbackControls } }
         .onAppear { playback.observeInterruptions() }
         .onChange(of: scenePhase) { _, phase in if phase != .active { playback.pause() } }
         .onDisappear { playback.close() }
@@ -152,20 +155,7 @@ private struct PodcastReaderView: View {
     private var karaokeReader: some View {
         VStack(spacing: 0) {
             HStack(spacing: 8) {
-                Text("Fragment \(playback.index + 1) of \(episode.segments.count)")
-                    .font(.caption).foregroundStyle(.secondary).lineLimit(2)
                 Spacer(minLength: 4)
-                Menu {
-                    Button("Larger text", systemImage: "textformat.size.larger") { karaokeTextSize = min(72, karaokePoints + 4) }
-                        .disabled(karaokePoints >= 72).accessibilityIdentifier("podcastLargerText")
-                    Button("Smaller text", systemImage: "textformat.size.smaller") { karaokeTextSize = max(28, karaokePoints - 4) }
-                        .disabled(karaokePoints <= 28).accessibilityIdentifier("podcastSmallerText")
-                    Toggle("Show translation", isOn: $showTranslation)
-                    Toggle("Follow narration", isOn: $followNarration)
-                } label: {
-                    Label("Reading options", systemImage: "textformat.size")
-                        .font(.system(size: 20, weight: .medium)).labelStyle(.iconOnly).frame(width: 44, height: 44)
-                }.buttonStyle(.plain).accessibilityIdentifier("podcastKaraokeOptions")
                 Button("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left") { fullScreen = false }
                     .font(.system(size: 20, weight: .medium)).labelStyle(.iconOnly).frame(width: 44, height: 44)
                     .background(.regularMaterial, in: Circle()).buttonStyle(.plain)

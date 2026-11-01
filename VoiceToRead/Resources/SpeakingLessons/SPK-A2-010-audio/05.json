@@ -1,0 +1,84 @@
+{
+  "text": "I had a hard time trying to share my lists with my family.",
+  "duration": 4.340000152587891,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 2,
+      "length": 3,
+      "start": 0.5,
+      "end": 0.699999988079071
+    },
+    {
+      "location": 6,
+      "length": 1,
+      "start": 0.699999988079071,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.2799999713897705,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.7200000286102295,
+      "end": 2.0
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 2.0,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 2.4000000953674316,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 2.440000057220459,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 2.799999952316284,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 3.0199999809265137,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.2799999713897705,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 51,
+      "length": 6,
+      "start": 3.5199999809265137,
+      "end": 3.8399999141693115
+    }
+  ]
+}

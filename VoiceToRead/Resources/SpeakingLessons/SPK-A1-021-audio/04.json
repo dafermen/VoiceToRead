@@ -1,0 +1,36 @@
+{
+  "text": "\"I'm fine, thanks,\" he says.",
+  "duration": 3.690000057220459,
+  "words": [
+    {
+      "location": 1,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 1.840000033378601,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 2.2799999713897705,
+      "end": 2.5
+    },
+    {
+      "location": 23,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.8399999141693115
+    }
+  ]
+}

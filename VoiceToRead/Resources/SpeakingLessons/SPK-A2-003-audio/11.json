@@ -1,0 +1,66 @@
+{
+  "text": "On Wednesday, I arrive at the office a little early.",
+  "duration": 4.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 3,
+      "length": 9,
+      "start": 0.4000000059604645,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.399999976158142,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.659999966621399,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 23,
+      "length": 2,
+      "start": 1.940000057220459,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.0799999237060547,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 2.4200000762939453,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 37,
+      "length": 1,
+      "start": 2.619999885559082,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 2.9800000190734863,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.140000104904175,
+      "end": 3.5
+    }
+  ]
+}

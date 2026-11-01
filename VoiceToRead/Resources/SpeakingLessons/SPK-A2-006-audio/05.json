@@ -1,0 +1,102 @@
+{
+  "text": "We felt disappointed and surprised. We did not know what to do for our trip now.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 8,
+      "length": 12,
+      "start": 0.6800000071525574,
+      "end": 1.5
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 1.5,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 2.0199999809265137,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 3.380000114440918,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.9600000381469727,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 4.21999979019165,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.579999923706055,
+      "end": 4.900000095367432
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.900000095367432,
+      "end": 5.119999885559082
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 5.119999885559082,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.519999980926514,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 5.78000020980835,
+      "end": 6.0
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 6.0,
+      "end": 6.380000114440918
+    }
+  ]
+}

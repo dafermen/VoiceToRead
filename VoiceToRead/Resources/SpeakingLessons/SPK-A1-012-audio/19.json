@@ -1,0 +1,72 @@
+{
+  "text": "Someone arrives by bus. She says, \"The bus was slow today.\"",
+  "duration": 5.679999828338623,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 8,
+      "length": 7,
+      "start": 0.6200000047683716,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.159999966621399,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.5399999618530273,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 24,
+      "length": 3,
+      "start": 2.4200000762939453,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.859999895095825,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 4.119999885559082,
+      "end": 4.5
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 4.5,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 4.739999771118164,
+      "end": 5.099999904632568
+    }
+  ]
+}

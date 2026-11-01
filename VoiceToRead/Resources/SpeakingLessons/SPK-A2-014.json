@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-014",
+  "number": 14,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Learning a New Skill",
+    "es": "Aprender una habilidad nueva"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Join a hands-on creative class, handle a difficulty, ask for feedback, and agree on a realistic improvement.",
+    "es": "Unirse a una clase creativa práctica, enfrentar una dificultad, pedir retroalimentación y acordar una forma realista de mejorar."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Adultos participando en una clase creativa práctica, trabajando con materiales artísticos y conversando.",
+    "prompt": "Brightly lit classroom with adults attending a beginner art class, painting and discussing, modern creative studio, positive atmosphere, 16:9 horizontal, no visible text",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir la experiencia de unirse a una clase creativa.",
+    "Expresar expectativas y enfrentar dificultades en una nueva actividad.",
+    "Pedir y comprender retroalimentación en inglés sencillo.",
+    "Acordar pasos para mejorar una habilidad.",
+    "Practicar lectura guiada y pronunciación en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Last month, I joined a painting class for beginners at the community center after I saw a poster.",
+      "es": "El mes pasado me apunté a una clase de pintura para principiantes en el centro comunitario después de ver un cartel."
+    },
+    {
+      "number": 2,
+      "function": "expectation",
+      "en": "I wanted painting to help me relax and meet new friends in my neighborhood.",
+      "es": "Quería que la pintura me ayudara a relajarme y conocer nuevos amigos en mi barrio."
+    },
+    {
+      "number": 3,
+      "function": "welcoming",
+      "en": "When I arrived, Amanda, the teacher, smiled at me and showed me where the paint and brushes were.",
+      "es": "Cuando llegué, Amanda, la profesora, me sonrió y me mostró dónde estaban las pinturas y los pinceles."
+    },
+    {
+      "number": 4,
+      "function": "first_task",
+      "en": "She told us, \"Today, please paint a simple sunrise\" even if we had never painted before.",
+      "es": "Nos dijo: \"Hoy, pinten un amanecer sencillo\", aunque nunca hubiéramos pintado antes."
+    },
+    {
+      "number": 5,
+      "function": "challenge",
+      "en": "I tried to paint a bright sky, but my colors mixed together and turned brown on the paper.",
+      "es": "Intenté pintar un cielo brillante, pero mis colores se mezclaron y se volvieron marrones en el papel."
+    },
+    {
+      "number": 6,
+      "function": "reaction",
+      "en": "I looked at my painting after ten minutes and saw it was dark and not what I wanted.",
+      "es": "Miré mi pintura después de diez minutos y vi que estaba oscura y no era lo que quería."
+    },
+    {
+      "number": 7,
+      "function": "peer_observation",
+      "en": "Daniel, who sat next to me, saw I was upset and said, \"It gets easier after some practice.\"",
+      "es": "Daniel, que se sentó a mi lado, vio que estaba frustrado y dijo: \"Se vuelve más fácil después de practicar un poco.\""
+    },
+    {
+      "number": 8,
+      "function": "advice",
+      "en": "\"Try using less water on your brush,\" he told me, and I decided to listen to his advice.",
+      "es": "\"Prueba usar menos agua en tu pincel\", me dijo, y decidí hacerle caso."
+    },
+    {
+      "number": 9,
+      "function": "attempt",
+      "en": "I tried Daniel's idea, but I still found it difficult to paint sharp lines on my picture.",
+      "es": "Intenté la idea de Daniel, pero todavía me costaba pintar líneas definidas en mi dibujo."
+    },
+    {
+      "number": 10,
+      "function": "asking_feedback",
+      "en": "During the break, I asked Amanda, \"Can my painting get better? What should I do next?\"",
+      "es": "Durante el descanso, le pregunté a Amanda: \"¿Puede mejorar mi pintura? ¿Qué debería hacer después?\""
+    },
+    {
+      "number": 11,
+      "function": "teacher_feedback",
+      "en": "She answered, \"If you use too many colors at once, everything mixes. Try fewer colors first.\"",
+      "es": "Ella respondió: \"Si usas demasiados colores a la vez, todo se mezcla. Prueba primero con menos colores.\""
+    },
+    {
+      "number": 12,
+      "function": "clarification",
+      "en": "Amanda explained that waiting for the paint to dry helps the colors stay bright and clear.",
+      "es": "Amanda explicó que esperar a que la pintura se seque ayuda a que los colores se mantengan vivos y claros."
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "I understood I was rushing too much. I needed to slow down between painting steps.",
+      "es": "Entendí que me estaba apurando demasiado. Tenía que ir más despacio entre los pasos de pintar."
+    },
+    {
+      "number": 14,
+      "function": "negotiation",
+      "en": "Amanda said, \"Can you paint the sky first and wait before you finish the rest?\"",
+      "es": "Amanda dijo: \"¿Puedes pintar primero el cielo y esperar antes de terminar el resto?\""
+    },
+    {
+      "number": 15,
+      "function": "agreement",
+      "en": "I said yes. I agreed to try her plan, even if it meant leaving my painting unfinished for now.",
+      "es": "Dije que sí. Acepté probar su plan, aunque significara dejar mi pintura incompleta por ahora."
+    },
+    {
+      "number": 16,
+      "function": "new_try",
+      "en": "When I let the first part dry, the other colors did not mix, and my scene looked much better.",
+      "es": "Cuando dejé secar la primera parte, los otros colores no se mezclaron y mi escena se veía mucho mejor."
+    },
+    {
+      "number": 17,
+      "function": "recognition",
+      "en": "Amanda came over and said, \"That is a nice improvement. You did a good job!\"",
+      "es": "Amanda se acercó y dijo: \"Eso es una buena mejora. ¡Buen trabajo!\""
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "I felt proud because I tried something different and listened to helpful advice.",
+      "es": "Me sentí orgulloso porque probé algo diferente y escuché un buen consejo."
+    },
+    {
+      "number": 19,
+      "function": "plan",
+      "en": "Next time, I will practice with just two colors and paint small shapes first.",
+      "es": "La próxima vez, practicaré solo con dos colores y pintaré formas pequeñas primero."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "If I keep asking for tips and try one new thing each class, I am sure I will improve.",
+      "es": "Si sigo pidiendo consejos y pruebo algo nuevo en cada clase, seguro que mejoraré."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous",
+      "example_en": "I understood I was rushing too much. I needed to slow down between painting steps.",
+      "explanation_es": "Was o were seguidos de un verbo en -ing presentan una actividad que estaba en curso en el pasado.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Past simple",
+      "example_en": "Last month, I joined a painting class for beginners at the community center after I saw a poster.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "When I let the first part dry, the other colors did not mix, and my scene looked much better.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next time, I will practice with just two colors and paint small shapes first.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Can",
+      "example_en": "During the break, I asked Amanda, \"Can my painting get better? What should I do next?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I understood I was rushing too much. I needed to slow down between painting steps.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last month, I joined a painting class for beginners at the community center after I saw a poster.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I wanted painting to help me relax and meet new friends in my neighborhood.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "It gets easier after some practice.",
+      "meaning_es": "Es más fácil después de practicar un poco.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "\"Try using less water on your brush,\" he told me, and I decided to listen to his advice.",
+      "meaning_es": "\"Prueba usar menos agua en tu pincel\", me dijo, y decidí hacerle caso.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Can my painting get better?",
+      "meaning_es": "¿Puede mejorar mi pintura?",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "If you use too many colors at once, everything mixes.",
+      "meaning_es": "Si usas demasiados colores a la vez, todo se mezcla.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Try fewer colors first.",
+      "meaning_es": "Prueba primero con menos colores.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Can you paint the sky first and wait before you finish the rest?",
+      "meaning_es": "¿Puedes pintar primero el cielo y esperar antes de terminar el resto?",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "That is a nice improvement. You did a good job!",
+      "meaning_es": "Eso es una buena mejora. ¡Buen trabajo!",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "If I keep asking for tips and try one new thing each class, I am sure I will improve.",
+      "meaning_es": "Si sigo pidiendo consejos y pruebo algo nuevo en cada clase, seguro que mejoraré.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción española y repítelo dos veces para mejorar memoria y pronunciación.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica estos párrafos completos dividiéndolos por barras. Haz una pausa larga en cada barra.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last month, I joined a painting class for beginners at the community center after I saw a poster."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Daniel, who sat next to me, saw I was upset and said, \"It gets easier after some practice.\""
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "I said yes. I agreed to try her plan, even if it meant leaving my painting unfinished for now."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta seguido para practicar naturalidad y claridad.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-014",
+    "number": "014",
+    "title_en": "Learning a New Skill",
+    "title_es": "Aprender una habilidad nueva",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Unirse a una clase creativa práctica, enfrentar una dificultad, pedir retroalimentación y acordar una forma realista de mejorar.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous",
+      "Past simple",
+      "Past simple negative",
+      "Will for future reference",
+      "Can",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

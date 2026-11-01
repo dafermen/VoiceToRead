@@ -1,0 +1,96 @@
+{
+  "text": "This time, I suggested meeting near the park café, because it has a roof outside.",
+  "duration": 6.860000133514404,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.3799999952316284,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.0,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 13,
+      "length": 9,
+      "start": 1.4800000190734863,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 23,
+      "length": 7,
+      "start": 1.9800000190734863,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.4200000762939453,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.680000066757202,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 2.940000057220459,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.180000066757202,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 51,
+      "length": 7,
+      "start": 4.320000171661377,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.539999961853027,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 62,
+      "length": 3,
+      "start": 4.739999771118164,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 66,
+      "length": 1,
+      "start": 4.940000057220459,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.440000057220459,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 73,
+      "length": 7,
+      "start": 5.480000019073486,
+      "end": 6.119999885559082
+    }
+  ]
+}

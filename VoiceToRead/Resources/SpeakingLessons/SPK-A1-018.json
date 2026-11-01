@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-018",
+  "number": 18,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Day Outdoors",
+    "es": "Planear un día al aire libre"
+  },
+  "category": {
+    "en": "Daily Life and Socializing",
+    "es": "Vida diaria y socialización"
+  },
+  "main_topic": {
+    "en": "Arranging a simple outdoor outing for friends with different preferences and weather.",
+    "es": "Organizar una salida sencilla al aire libre con amigos considerando preferencias y clima."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Grupo de adultos organizando una salida al parque, revisando el clima y conversando en un banco al aire libre.",
+    "prompt": "Realistic editorial photograph, diverse group of adults planning an easy outdoor outing, gathered on a park bench with phones, picnic basket, checking weather together, natural daylight, springtime, relaxed atmosphere, no text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hacer y responder sugerencias simples al planear una salida.",
+    "Expresar preferencias y aceptar opciones.",
+    "Hablar sobre el clima y la ropa para exteriores.",
+    "Describir actividades sencillas con amigos.",
+    "Practicar lectura y repetición en inglés americano natural."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "My friends and I want to plan a day outside together.",
+      "es": "Mis amigos y yo queremos planear un día afuera juntos."
+    },
+    {
+      "number": 2,
+      "function": "intention",
+      "en": "We need a break from work and want to have fun.",
+      "es": "Necesitamos un descanso del trabajo y queremos divertirnos."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "I like to walk in the park, but Maria likes picnics.",
+      "es": "A mí me gusta caminar en el parque, pero a María le gustan los picnics."
+    },
+    {
+      "number": 4,
+      "function": "disagreement",
+      "en": "Alex is worried about rain. He says, \"What if it rains?\"",
+      "es": "Alex está preocupado por la lluvia. Él dice: \"¿Y si llueve?\""
+    },
+    {
+      "number": 5,
+      "function": "information",
+      "en": "I look at the weather. It may rain in the afternoon.",
+      "es": "Miro el clima. Puede llover en la tarde."
+    },
+    {
+      "number": 6,
+      "function": "suggestion",
+      "en": "I say, \"Let’s go early and take jackets and an umbrella.\"",
+      "es": "Yo digo: \"Vayamos temprano y llevemos chaquetas y un paraguas.\""
+    },
+    {
+      "number": 7,
+      "function": "experience",
+      "en": "Last summer, we wanted to go out, but it rained a lot.",
+      "es": "El verano pasado, queríamos salir, pero llovió mucho."
+    },
+    {
+      "number": 8,
+      "function": "proposal",
+      "en": "Now I say, \"Let’s sit near the café in the park.\"",
+      "es": "Ahora digo: \"Sentémonos cerca del café en el parque.\""
+    },
+    {
+      "number": 9,
+      "function": "agreement",
+      "en": "Everyone says, \"That is a good idea!\"",
+      "es": "Todos dicen: \"¡Esa es una buena idea!\""
+    },
+    {
+      "number": 10,
+      "function": "negotiation",
+      "en": "Maria wants the lake, but she agrees to sit with us.",
+      "es": "María quiere el lago, pero acepta sentarse con nosotros."
+    },
+    {
+      "number": 11,
+      "function": "detail",
+      "en": "I ask, \"Who wants to bring games or cards?\"",
+      "es": "Yo pregunto: \"¿Quién quiere traer juegos o cartas?\""
+    },
+    {
+      "number": 12,
+      "function": "past_habit",
+      "en": "We often bring games, but now we just talk outside.",
+      "es": "A menudo traemos juegos, pero ahora solo conversamos afuera."
+    },
+    {
+      "number": 13,
+      "function": "planning",
+      "en": "Alex takes a small speaker. We can play music at the park.",
+      "es": "Alex lleva un altavoz pequeño. Podemos poner música en el parque."
+    },
+    {
+      "number": 14,
+      "function": "option",
+      "en": "If it gets noisy, we can move to the café.",
+      "es": "Si se pone ruidoso, podemos ir al café."
+    },
+    {
+      "number": 15,
+      "function": "decision",
+      "en": "We choose to meet at eleven in the morning.",
+      "es": "Elegimos encontrarnos a las once de la mañana."
+    },
+    {
+      "number": 16,
+      "function": "anticipation",
+      "en": "On Saturday, I am checking the sky. I really want the day to be nice.",
+      "es": "El sábado, estoy mirando el cielo. Realmente quiero que el día esté bonito."
+    },
+    {
+      "number": 17,
+      "function": "problem",
+      "en": "Before I leave home, it starts to rain.",
+      "es": "Antes de salir de casa, comienza a llover."
+    },
+    {
+      "number": 18,
+      "function": "solution",
+      "en": "Maria calls and says, \"Let’s wait thirty minutes and see.\"",
+      "es": "María llama y dice: \"Esperemos treinta minutos y veamos.\""
+    },
+    {
+      "number": 19,
+      "function": "outcome",
+      "en": "The rain stops. We arrive at the park. The air is fresh.",
+      "es": "La lluvia para. Llegamos al parque. El aire está fresco."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "We enjoy our day outside. We laugh and talk together.",
+      "es": "Disfrutamos nuestro día afuera. Reímos y conversamos juntos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "On Saturday, I am checking the sky. I really want the day to be nice.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Past simple",
+      "example_en": "Last summer, we wanted to go out, but it rained a lot.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Can",
+      "example_en": "Alex takes a small speaker. We can play music at the park.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Present simple",
+      "example_en": "My friends and I want to plan a day outside together.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "My friends and I want to plan a day outside together.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "My friends and I want to plan a day outside together.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "My friends and I want to plan a day outside together.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "My friends and I want to plan a day outside together.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Let’s go early and take jackets and an umbrella.",
+      "meaning_es": "Vayamos temprano y llevemos chaquetas y un paraguas.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "What if it rains?",
+      "meaning_es": "¿Y si llueve?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "That is a good idea!",
+      "meaning_es": "¡Esa es una buena idea!",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Let’s sit near the café in the park.",
+      "meaning_es": "Sentémonos cerca del café en el parque.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Who wants to bring games or cards?",
+      "meaning_es": "¿Quién quiere traer juegos o cartas?",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "We can play music at the park.",
+      "meaning_es": "Podemos poner música en el parque.",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "If it gets noisy, we can move to the café.",
+      "meaning_es": "Si se pone ruidoso, podemos ir al café.",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "Let’s wait thirty minutes and see.",
+      "meaning_es": "Esperemos treinta minutos y veamos.",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I like to walk in the park, but Maria likes picnics."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "I say, \"Let’s go early and take jackets and an umbrella.\""
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "If it gets noisy, we can move to the café."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-018",
+    "number": "018",
+    "title_en": "Planning a Day Outdoors",
+    "title_es": "Planear un día al aire libre",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y socialización",
+    "main_topic_es": "Organizar una salida sencilla al aire libre con amigos considerando preferencias y clima.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past simple",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

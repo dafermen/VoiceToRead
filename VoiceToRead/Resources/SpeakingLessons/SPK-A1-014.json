@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-014",
+  "number": 14,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Learning a New Skill",
+    "es": "Aprender una habilidad nueva"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Join a creative class, handle a difficulty, ask for help, agree to improve.",
+    "es": "Unirse a una clase creativa, enfrentar una dificultad, pedir ayuda y acordar mejorar."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Adultos participando en una clase creativa práctica, trabajando con materiales artísticos y conversando.",
+    "prompt": "Brightly lit classroom with adults attending a beginner art class, painting and discussing, modern creative studio, positive atmosphere, 16:9 horizontal, no visible text",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir el comienzo en una nueva actividad práctica.",
+    "Nombrar y expresar una dificultad básica.",
+    "Pedir ayuda y dar las gracias.",
+    "Comprender sugerencias y acordar un cambio simple.",
+    "Practicar frases y preguntas cortas sobre retroalimentación y mejora."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "I am in a new painting class.",
+      "es": "Estoy en una nueva clase de pintura."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "I want to relax and meet people.",
+      "es": "Quiero relajarme y conocer gente."
+    },
+    {
+      "number": 3,
+      "function": "teacher_introduction",
+      "en": "Our teacher is Amanda. She smiles and says, \"Hello!\"",
+      "es": "Nuestra maestra es Amanda. Ella sonríe y dice: \"¡Hola!\""
+    },
+    {
+      "number": 4,
+      "function": "first_task",
+      "en": "Amanda asks, \"Can you paint a sky?\"",
+      "es": "Amanda pregunta: \"¿Puedes pintar un cielo?\""
+    },
+    {
+      "number": 5,
+      "function": "trying",
+      "en": "I try to paint a blue sky. My colors mix together.",
+      "es": "Intento pintar un cielo azul. Mis colores se mezclan."
+    },
+    {
+      "number": 6,
+      "function": "difficulty",
+      "en": "My picture does not look nice. I feel a little sad.",
+      "es": "Mi pintura no se ve bien. Me siento un poco triste."
+    },
+    {
+      "number": 7,
+      "function": "peer_support",
+      "en": "Daniel sits next to me. He says, \"It is okay. It takes practice.\"",
+      "es": "Daniel se sienta a mi lado. Él dice: \"Está bien. Se necesita práctica.\""
+    },
+    {
+      "number": 8,
+      "function": "advice",
+      "en": "Daniel says, \"Use less water on your brush.\"",
+      "es": "Daniel dice: \"Usa menos agua en tu pincel.\""
+    },
+    {
+      "number": 9,
+      "function": "new_attempt",
+      "en": "I try again. It is still hard for me.",
+      "es": "Lo intento de nuevo. Todavía es difícil para mí."
+    },
+    {
+      "number": 10,
+      "function": "ask_feedback",
+      "en": "I ask Amanda, \"Can I make my painting better?\"",
+      "es": "Le pregunto a Amanda: \"¿Puedo mejorar mi pintura?\""
+    },
+    {
+      "number": 11,
+      "function": "teacher_reply",
+      "en": "Amanda says, \"Wait for the paint to dry first.\"",
+      "es": "Amanda dice: \"Espera a que la pintura se seque primero.\""
+    },
+    {
+      "number": 12,
+      "function": "clarification",
+      "en": "She says, \"If you wait, the colors will not mix.\"",
+      "es": "Ella dice: \"Si esperas, los colores no se van a mezclar.\""
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "I was too fast before. I will wait now.",
+      "es": "Antes fui muy rápido. Ahora voy a esperar."
+    },
+    {
+      "number": 14,
+      "function": "plan",
+      "en": "Amanda says, \"Paint the sky. Wait. Then paint the sun.\"",
+      "es": "Amanda dice: \"Pinta el cielo. Espera. Luego pinta el sol.\""
+    },
+    {
+      "number": 15,
+      "function": "agreement",
+      "en": "I say, \"Okay! I can try that.\"",
+      "es": "Digo: \"¡Está bien! Puedo intentar eso.\""
+    },
+    {
+      "number": 16,
+      "function": "success",
+      "en": "This time my colors look bright. My sky looks clear.",
+      "es": "Ahora mis colores se ven brillantes. Mi cielo se ve claro."
+    },
+    {
+      "number": 17,
+      "function": "encouragement",
+      "en": "Amanda smiles. \"Good job!\" she says.",
+      "es": "Amanda sonríe. \"¡Buen trabajo!\" dice."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "I feel happy now. I listen and learn.",
+      "es": "Ahora me siento feliz. Escucho y aprendo."
+    },
+    {
+      "number": 19,
+      "function": "future_plan",
+      "en": "Next class, I will paint the sky again.",
+      "es": "En la próxima clase, voy a pintar el cielo otra vez."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "I can get better. I will ask for help and keep trying.",
+      "es": "Puedo mejorar. Pediré ayuda y seguiré intentando."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "My picture does not look nice. I feel a little sad.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "She says, \"If you wait, the colors will not mix.\"",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Can",
+      "example_en": "Amanda asks, \"Can you paint a sky?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I want to relax and meet people.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to relax and meet people.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I am in a new painting class.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Our teacher is Amanda. She smiles and says, \"Hello!\"",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "I am in a new painting class.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Hello!",
+      "meaning_es": "¡Hola!",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Can you paint a sky?",
+      "meaning_es": "¿Puedes pintar un cielo?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "It takes practice.",
+      "meaning_es": "Se necesita práctica.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Use less water on your brush.",
+      "meaning_es": "Usa menos agua en tu pincel.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Can I make my painting better?",
+      "meaning_es": "¿Puedo mejorar mi pintura?",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Wait for the paint to dry first.",
+      "meaning_es": "Espera a que la pintura se seque primero.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Good job!",
+      "meaning_es": "¡Buen trabajo!",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "I will ask for help and keep trying.",
+      "meaning_es": "Pediré ayuda y seguiré intentando.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Our teacher is Amanda.",
+              "She smiles and says, \"Hello!\""
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I ask Amanda, \"Can I make my painting better?\""
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "Amanda says, \"Paint the sky.",
+              "Wait.",
+              "Then paint the sun.\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-014",
+    "number": "014",
+    "title_en": "Learning a New Skill",
+    "title_es": "Aprender una habilidad nueva",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Unirse a una clase creativa, enfrentar una dificultad, pedir ayuda y acordar mejorar.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

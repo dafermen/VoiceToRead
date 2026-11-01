@@ -225,18 +225,25 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.buttons["newEnglishTraining"].exists, "The training hub has no ambiguous plus action")
         XCTAssertTrue(app.buttons["personalPracticesEntry"].exists)
         entry.tap()
-        let levels = app.segmentedControls["guidedLessonLevel"]
+        let levels = app.buttons["guidedLessonLevel"]
         XCTAssertTrue(levels.waitForExistence(timeout: 5))
-        levels.buttons["B2"].tap()
+        for level in ["A1", "A2", "B1", "B2", "C1", "C2"] {
+            levels.tap(); app.buttons[level].tap()
+            let greetings = app.buttons["guidedLesson-SPK-" + level + "-021"]
+            XCTAssertTrue(greetings.waitForExistence(timeout: 5))
+            XCTAssertTrue(greetings.isHittable, "Greetings is the first lesson at every level")
+        }
+        levels.tap(); app.buttons["B2"].tap()
         XCTAssertTrue(app.buttons["guidedLesson-SPK-B2-001"].waitForExistence(timeout: 5))
         XCTAssertFalse(app.buttons["guidedLesson-SPK-B1-001"].exists)
-        levels.buttons["C1"].tap()
+        levels.tap(); app.buttons["C1"].tap()
         XCTAssertTrue(app.buttons["guidedLesson-SPK-C1-001"].waitForExistence(timeout: 5))
-        levels.buttons["C2"].tap()
+        levels.tap(); app.buttons["C2"].tap()
         XCTAssertTrue(app.buttons["guidedLesson-SPK-C2-001"].waitForExistence(timeout: 5))
-        levels.buttons["B1"].tap()
+        levels.tap(); app.buttons["B1"].tap()
         let lesson = app.buttons["guidedLesson-SPK-B1-001"]
         XCTAssertTrue(lesson.waitForExistence(timeout: 5))
+        if !lesson.isHittable { app.swipeUp() }
         lesson.tap()
         let begin = app.buttons["beginGuidedReading"]
         XCTAssertTrue(begin.waitForExistence(timeout: 5))
@@ -1737,11 +1744,11 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.buttons["prepareTrainingEnglish"].exists, "Translation preparation is automatic")
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
-        app.buttons["reviewTrainingEnglish"].tap()
-        let english = app.textFields.matching(NSPredicate(format: "identifier BEGINSWITH %@", "trainingEnglish-")).firstMatch
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "editTrainingPhrase-")).firstMatch.tap()
+        let english = app.textFields["trainingPhraseTranslationInput"]
         XCTAssertTrue(english.waitForExistence(timeout: 5))
         XCTAssertEqual(english.value as? String, "Test translation. We read both languages together.")
-        app.buttons["saveTrainingEnglish"].tap()
+        app.buttons["saveTrainingPhraseTranslation"].tap()
         start.tap()
         XCTAssertTrue(app.staticTexts["trainingPrompt"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hola, me llamo Alex.")
@@ -1805,37 +1812,37 @@ final class HomeScreenTests: XCTestCase {
         let start = app.buttons["startEnglishTraining"]
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
-        app.buttons["reviewTrainingEnglish"].tap()
-        let translated = app.textFields.matching(NSPredicate(format: "identifier BEGINSWITH %@", "trainingEnglish-")).firstMatch
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "editTrainingPhrase-")).firstMatch.tap()
+        let translated = app.textFields["trainingPhraseTranslationInput"]
         XCTAssertTrue(translated.waitForExistence(timeout: 5))
         XCTAssertEqual(translated.value as? String, "Bonjour")
         translated.tap(); translated.typeText(" corrected")
         let correction = translated.value as? String
-        app.buttons["saveTrainingEnglish"].tap()
+        app.buttons["saveTrainingPhraseTranslation"].tap()
         app.buttons["trainingOptions"].tap()
         app.buttons["retranslateTraining"].tap()
         XCTAssertTrue(app.buttons["confirmTrainingRetranslation"].waitForExistence(timeout: 5))
         app.buttons["Cancel"].lastMatch.tap()
-        app.buttons["reviewTrainingEnglish"].tap()
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "editTrainingPhrase-")).firstMatch.tap()
         XCTAssertEqual(translated.value as? String, correction, "Cancelling retranslation must retain manual corrections")
-        app.navigationBars["Review translations"].buttons["Cancel"].tap()
+        app.navigationBars["Edit translation"].buttons["Cancel"].tap()
         app.buttons["editTrainingSource"].tap()
         app.buttons["trainingTargetLanguage"].tap(); app.buttons["Japanese · 日本語"].tap()
         app.buttons["saveEnglishTraining"].tap()
         XCTAssertTrue(app.buttons["confirmTrainingLanguages"].waitForExistence(timeout: 5))
         app.buttons["Cancel"].lastMatch.tap()
         app.navigationBars["Edit training"].buttons["Cancel"].tap()
-        app.buttons["reviewTrainingEnglish"].tap()
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "editTrainingPhrase-")).firstMatch.tap()
         XCTAssertEqual(translated.value as? String, correction)
-        app.navigationBars["Review translations"].buttons["Cancel"].tap()
+        app.navigationBars["Edit translation"].buttons["Cancel"].tap()
         app.buttons["editTrainingSource"].tap()
         app.buttons["trainingTargetLanguage"].tap(); app.buttons["Japanese · 日本語"].tap()
         app.buttons["saveEnglishTraining"].tap(); app.buttons["confirmTrainingLanguages"].tap()
         let translatedAgain = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
         XCTAssertEqual(XCTWaiter.wait(for: [translatedAgain], timeout: 10), .completed)
-        app.buttons["reviewTrainingEnglish"].tap()
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "editTrainingPhrase-")).firstMatch.tap()
         XCTAssertEqual(translated.value as? String, "こんにちは")
-        app.buttons["saveTrainingEnglish"].tap()
+        app.buttons["saveTrainingPhraseTranslation"].tap()
         start.tap()
         XCTAssertEqual(app.staticTexts["trainingPrompt"].label, "Hello")
         XCTAssertTrue(app.staticTexts["Try saying this in 日本語 before revealing the response."].exists)
@@ -2762,29 +2769,26 @@ extension HomeScreenTests {
         let play = app.buttons["podcastPlayPause"]
         play.tap()
         XCTAssertEqual(play.label, "Pause")
-        expand.tap()
-        let text = app.textViews["podcastKaraokeText"]
-        XCTAssertTrue(text.waitForExistence(timeout: 5))
-        XCTAssertEqual(play.label, "Pause", "Entering fullscreen must not pause or replace the player")
-        let hiddenTabs = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == false"), object: app.tabBars.firstMatch)
-        XCTAssertEqual(XCTWaiter.wait(for: [hiddenTabs], timeout: 5), .completed)
+        // Pause before expanding: fullscreen has only text and its exit button.
         play.tap()
         XCTAssertEqual(play.label, "Play")
         let timeline = app.staticTexts["podcastTimeline"].label
+        expand.tap()
+        let text = app.textViews["podcastKaraokeText"]
+        XCTAssertTrue(text.waitForExistence(timeout: 5))
+        let hiddenTabs = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == false"), object: app.tabBars.firstMatch)
+        XCTAssertEqual(XCTWaiter.wait(for: [hiddenTabs], timeout: 5), .completed)
+        XCTAssertFalse(app.buttons["podcastPlayPause"].exists)
+        XCTAssertFalse(app.buttons["podcastStop"].exists)
+        XCTAssertFalse(app.buttons["podcastKaraokeOptions"].exists)
+        XCTAssertFalse(app.staticTexts["podcastTimeline"].exists)
         let paragraph = text.value as? String
-        XCTAssertFalse(paragraph?.isEmpty ?? true, "Fullscreen shows the active fragment, even if narration has already advanced")
+        XCTAssertFalse(paragraph?.isEmpty ?? true)
         XCUIDevice.shared.orientation = .landscapeLeft
         let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in text.frame.width > text.frame.height }, object: nil)
         XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
-        XCTAssertEqual(play.label, "Play")
-        XCTAssertEqual(app.staticTexts["podcastTimeline"].label, timeline)
         XCTAssertEqual(text.value as? String, paragraph)
         XCTAssertTrue(app.buttons["podcastFullScreenExit"].isHittable)
-        app.buttons["podcastKaraokeOptions"].tap()
-        if app.buttons["podcastLargerText"].isEnabled { app.buttons["podcastLargerText"].tap() }
-        else { app.buttons["podcastSmallerText"].tap() }
-        XCTAssertEqual(app.staticTexts["podcastTimeline"].label, timeline)
-        XCTAssertEqual(text.value as? String, paragraph)
         app.buttons["podcastFullScreenExit"].tap()
         XCUIDevice.shared.orientation = .portrait
         XCTAssertTrue(expand.waitForExistence(timeout: 5))

@@ -1,0 +1,84 @@
+{
+  "text": "Sam said, \"Thank you for owning it right away, not avoiding the mistake.\"",
+  "duration": 6.210000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 1.2999999523162842,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.9600000381469727,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 2.200000047683716,
+      "end": 2.5
+    },
+    {
+      "location": 25,
+      "length": 6,
+      "start": 2.5,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 32,
+      "length": 2,
+      "start": 2.8399999141693115,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 3.1600000858306885,
+      "end": 3.440000057220459
+    },
+    {
+      "location": 41,
+      "length": 4,
+      "start": 3.440000057220459,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 47,
+      "length": 3,
+      "start": 4.440000057220459,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 4.679999828338623,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 5.059999942779541,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 64,
+      "length": 7,
+      "start": 5.440000057220459,
+      "end": 5.739999771118164
+    }
+  ]
+}

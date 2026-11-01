@@ -1,0 +1,84 @@
+{
+  "text": "Sarah walks into the office in the morning and says, \"Good morning, everyone!\"",
+  "duration": 5.349999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 5,
+      "start": 0.5,
+      "end": 0.8999999761581421
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.8999999761581421,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 1.1799999475479126,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 1.7400000095367432,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 1.7400000095367432,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 1.9800000190734863,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.200000047683716,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 3.0399999618530273
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.0399999618530273,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 3.4000000953674316,
+      "end": 3.9800000190734863
+    },
+    {
+      "location": 59,
+      "length": 7,
+      "start": 3.9800000190734863,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 68,
+      "length": 8,
+      "start": 4.380000114440918,
+      "end": 4.78000020980835
+    }
+  ]
+}

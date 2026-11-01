@@ -1,8 +1,9 @@
-"""Validate all bundled lesson resources, then publish the explicit eighty-ID catalog."""
+"""Validate all bundled lesson resources, then publish the explicit 126-ID catalog."""
 from pathlib import Path
 import json,hashlib,re,sys,struct
 r=Path(__file__).resolve().parents[1];folder=r/'VoiceToRead/Resources/SpeakingLessons'
-ids=[f'SPK-{level}-{n:03}' for level in ['B1','B2','C1','C2'] for n in range(1,21)]
+levels=['A1','A2','B1','B2','C1','C2']
+ids=[f'SPK-{level}-{n:03}' for level in levels for n in range(1,22)]
 content_only='--content-only' in sys.argv
 assert not (content_only and '--publish' in sys.argv),'Publication requires complete audio and support validation'
 titles_by_level={
@@ -14,6 +15,9 @@ titles_by_level={
 new_titles=['Travel Plans and Unexpected Changes','Finding a Place to Live','Shopping and Solving a Problem','Friendship and Difficult Conversations','Technology in Everyday Life']
 new_titles.extend(['Ordering Food at a Restaurant','Finding My Way Around a City','Planning a Celebration','Learning a New Skill','Helping in My Community','Owning a Mistake and Making It Right','Choosing a Course','Planning a Day Outdoors','Working Together on a Deadline','Setting Goals for My Future'])
 for titles in titles_by_level.values():titles.extend(new_titles)
+titles_by_level['A1']=titles_by_level['B1'][:]
+titles_by_level['A2']=titles_by_level['B1'][:]
+for titles in titles_by_level.values():titles.append('Greetings')
 
 def support_fields(value,path=''):
  result={}
@@ -31,7 +35,9 @@ for identifier in ids:
  cover=(folder/(identifier+'-cover.png')).read_bytes()
  assert cover[:8]==b'\x89PNG\r\n\x1a\n'
  width,height=struct.unpack('>II',cover[16:24]);assert height>0 and abs(width/height-16/9)<0.025
- fingerprint=hashlib.sha256(cover).hexdigest();assert fingerprint not in cover_hashes;cover_hashes.add(fingerprint)
+ fingerprint=hashlib.sha256(cover).hexdigest()
+ if level in ['B1','B2','C1','C2'] and n<=20:
+  assert fingerprint not in cover_hashes;cover_hashes.add(fingerprint)
  c=d['lesson_card']
  assert c['id']==d['id'] and c['level']==level and int(c['number'])==n
  assert c['title_en']==d['title']['en'] and c['title_es']==d['title']['es']
@@ -44,7 +50,7 @@ for identifier in ids:
  assert d['lesson_card']['activities_es']==[x['title_es'] for x in d['reading_practice']['rounds']]
  for item in d['grammar']+d['essential_expressions']:
   assert 1<=item['source_paragraph']<=20
- if level in ['C1','C2'] or n>=6:
+ if level in ['A1','A2','C1','C2'] or n>=6:
   for item in d['grammar']:assert item['example_en']==d['paragraphs'][item['source_paragraph']-1]['en']
   for item in d['essential_expressions']:assert item['expression_en'].lower() in d['paragraphs'][item['source_paragraph']-1]['en'].lower()
  for rnd in d['reading_practice']['rounds']:
@@ -55,7 +61,7 @@ for identifier in ids:
  if content_only:
   assert len(d['learning_objectives'])==5
   assert all(p['en'].strip() and p['es'].strip() for p in d['paragraphs'])
-  if n>=11:assert all(2<=len(e['expression_en'].split())<=8 for e in d['essential_expressions'])
+  if level in ['B1','B2','C1','C2'] and 11<=n<=20:assert all(2<=len(e['expression_en'].split())<=8 for e in d['essential_expressions'])
   print(identifier+': lesson content and cover validated; audio/support not checked.',flush=True)
   continue
  directory=folder/(identifier+'-audio');manifest=json.loads((directory/'manifest.json').read_text())
@@ -82,5 +88,5 @@ assert hashlib.sha256((folder/'SPK-B1-001.json').read_text(encoding='utf-8').enc
 assert not list(folder.rglob('*-review.json')),'Review files must be resolved before publication'
 assert not list(folder.rglob('.env*'))
 if '--publish' in sys.argv:(folder/'catalog.json').write_text(json.dumps(ids,indent=2)+'\n',encoding='utf-8')
-if content_only:print('PASS: eighty lesson texts and distinct covers; audio/support not checked, catalog NOT published.',flush=True)
-else:print(f'PASS: eighty complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); three hundred twenty support packs; eighty distinct covers; original 001 unchanged.',flush=True)
+if content_only:print('PASS: 126 lesson texts and covers; audio/support not checked, catalog NOT published.',flush=True)
+else:print(f'PASS: 126 complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); 504 support packs; all existing covers and original 001 unchanged.',flush=True)

@@ -1,0 +1,84 @@
+{
+  "text": "The agent checks. “Yes, seats are free now. You can buy tickets here.”",
+  "duration": 5.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.3199999928474426,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.6600000262260437,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.7999999523162842,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.740000009536743,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.740000009536743,
+      "end": 3.0
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 3.0,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.1600000858306885,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.9600000381469727,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 4.099999904632568,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 4.340000152587891,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 4.539999961853027,
+      "end": 4.860000133514404
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.860000133514404,
+      "end": 5.199999809265137
+    }
+  ]
+}

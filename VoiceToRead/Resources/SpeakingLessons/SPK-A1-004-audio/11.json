@@ -1,0 +1,48 @@
+{
+  "text": "I arrive early and greet the staff.",
+  "duration": 3.759999990463257,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.5,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 1.0199999809265137,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.5399999618530273,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 2.180000066757202,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.440000057220459,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 3.0999999046325684,
+      "end": 3.180000066757202
+    }
+  ]
+}

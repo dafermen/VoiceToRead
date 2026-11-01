@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-012",
+  "number": 12,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Finding My Way Around a City",
+    "es": "Orientarme en una ciudad"
+  },
+  "category": {
+    "en": "Everyday Life and Travel",
+    "es": "Vida cotidiana y viajes"
+  },
+  "main_topic": {
+    "en": "Ask for and clarify directions to a local destination; compare a walking route and public transport.",
+    "es": "Pedir y aclarar direcciones a un destino local; comparar una ruta a pie y transporte público."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Dos adultos consultando un mapa en la calle de una ciudad moderna.",
+    "prompt": "Realistic editorial photograph, two adults standing on a modern city sidewalk, looking at a paper map and pointing, street details, casual clothing, urban background, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Pedir y dar direcciones simples en inglés.",
+    "Comprender y repetir indicaciones a pie y en transporte público.",
+    "Preguntar por señales, giros y puntos de referencia.",
+    "Comparar la diferencia entre caminar y tomar transporte.",
+    "Practicar frases comunes para pedir ayuda en la ciudad."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last weekend, I went to a new city to see a famous art museum.",
+      "es": "El fin de semana pasado, fui a una ciudad nueva para ver un museo de arte famoso."
+    },
+    {
+      "number": 2,
+      "function": "situation",
+      "en": "After leaving my hotel, I realized I forgot the museum's street name.",
+      "es": "Después de salir de mi hotel, me di cuenta de que olvidé el nombre de la calle del museo."
+    },
+    {
+      "number": 3,
+      "function": "action_request",
+      "en": "I saw a man waiting at a bus stop and asked, \"Excuse me, can you tell me how to get to the art museum?\"",
+      "es": "Vi a un hombre esperando en una parada de autobús y le pregunté: \"Disculpe, ¿puede decirme cómo llegar al museo de arte?\""
+    },
+    {
+      "number": 4,
+      "function": "response",
+      "en": "He answered, \"Go straight for two blocks, then turn right at the library.\"",
+      "es": "Él respondió: \"Vaya todo recto dos cuadras y luego gire a la derecha en la biblioteca.\""
+    },
+    {
+      "number": 5,
+      "function": "clarification",
+      "en": "I asked, \"Is the library on the corner?\" because I was not sure where to turn.",
+      "es": "Pregunté: \"¿La biblioteca está en la esquina?\" porque no estaba seguro de dónde girar."
+    },
+    {
+      "number": 6,
+      "function": "further_explanation",
+      "en": "He replied, \"Yes, it's a big red building with a sign that says 'Library' in front.\"",
+      "es": "Él respondió: \"Sí, es un edificio grande y rojo con un letrero que dice 'Library' delante.\""
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "I thanked him and started walking, but I wondered if taking the bus would be quicker.",
+      "es": "Le di las gracias y comencé a caminar, pero me pregunté si tomar el autobús sería más rápido."
+    },
+    {
+      "number": 8,
+      "function": "public_transport_inquiry",
+      "en": "I asked another woman, \"Does this bus go near the museum or is it better to walk?\"",
+      "es": "Le pregunté a otra mujer: \"¿Este autobús pasa cerca del museo o es mejor caminar?\""
+    },
+    {
+      "number": 9,
+      "function": "contrast",
+      "en": "She said, \"The bus stops close, but sometimes there is a lot of traffic and it can be slow.\"",
+      "es": "Ella dijo: \"El autobús para cerca, pero a veces hay mucho tráfico y puede ser lento.\""
+    },
+    {
+      "number": 10,
+      "function": "decision",
+      "en": "I decided to walk so I would not have to wait for the bus or get stuck in traffic.",
+      "es": "Decidí caminar para no tener que esperar el autobús o quedarme en el tráfico."
+    },
+    {
+      "number": 11,
+      "function": "observation",
+      "en": "I saw other people at the bus stop looking bored because no bus arrived for a long time.",
+      "es": "Vi a otras personas en la parada de autobús que parecían aburridas porque el autobús no llegaba por mucho tiempo."
+    },
+    {
+      "number": 12,
+      "function": "past_experience",
+      "en": "Once before, I got lost in another city because the directions were not clear.",
+      "es": "Una vez, me perdí en otra ciudad porque las indicaciones no eran claras."
+    },
+    {
+      "number": 13,
+      "function": "plan",
+      "en": "This time, I looked for street signs and checked each name before crossing.",
+      "es": "Esta vez, busqué los letreros de las calles y revisé cada nombre antes de cruzar."
+    },
+    {
+      "number": 14,
+      "function": "obstacle",
+      "en": "At the library corner, the sidewalk was closed for construction so I could not pass.",
+      "es": "En la esquina de la biblioteca, la acera estaba cerrada por obras y no podía pasar."
+    },
+    {
+      "number": 15,
+      "function": "adjustment",
+      "en": "A worker said, \"You can walk on the other side of the street to get around.\"",
+      "es": "Un trabajador me dijo: \"Puede caminar por el otro lado de la calle para rodear.\""
+    },
+    {
+      "number": 16,
+      "function": "appreciation",
+      "en": "I thanked him, crossed carefully, and kept looking for my next street.",
+      "es": "Le agradecí, crucé con cuidado y seguí buscando mi siguiente calle."
+    },
+    {
+      "number": 17,
+      "function": "conclusion",
+      "en": "After ten more minutes, I found the museum. Another visitor arrived by bus at the same time.",
+      "es": "Después de diez minutos más, encontré el museo. Otro visitante llegó en autobús al mismo tiempo."
+    },
+    {
+      "number": 18,
+      "function": "comparison",
+      "en": "She said, \"The bus was slow today because there was a traffic jam on Main Street.\"",
+      "es": "Ella dijo: \"El autobús fue lento hoy porque había un atasco en la Calle Principal.\""
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "I was happy I walked, because I did not wait and I saw the neighborhood.",
+      "es": "Me alegré de haber caminado, porque no esperé y vi el vecindario."
+    },
+    {
+      "number": 20,
+      "function": "future_intent",
+      "en": "Next time I visit a new place, I will ask clear questions and check for signs before I go.",
+      "es": "La próxima vez que visite un lugar nuevo, haré preguntas claras y buscaré señales antes de ir."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last weekend, I went to a new city to see a famous art museum.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "I was happy I walked, because I did not wait and I saw the neighborhood.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next time I visit a new place, I will ask clear questions and check for signs before I go.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Can",
+      "example_en": "I saw a man waiting at a bus stop and asked, \"Excuse me, can you tell me how to get to the art museum?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Could",
+      "example_en": "At the library corner, the sidewalk was closed for construction so I could not pass.",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Next time I visit a new place, I will ask clear questions and check for signs before I go.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last weekend, I went to a new city to see a famous art museum.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "After leaving my hotel, I realized I forgot the museum's street name.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Excuse me, can you tell me how to get to the art museum?",
+      "meaning_es": "Disculpe, ¿puede decirme cómo llegar al museo de arte?",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Go straight for two blocks, then turn right at the library.",
+      "meaning_es": "Vaya todo recto dos cuadras y luego gire a la derecha en la biblioteca.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Is the library on the corner?",
+      "meaning_es": "¿La biblioteca está en la esquina?",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Yes, it's a big red building with a sign that says 'Library' in front.",
+      "meaning_es": "Sí, es un edificio grande y rojo con un letrero que dice 'Library' delante.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Does this bus go near the museum or is it better to walk?",
+      "meaning_es": "¿Este autobús pasa cerca del museo o es mejor caminar?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "The bus stops close, but sometimes there is a lot of traffic and it can be slow.",
+      "meaning_es": "El autobús para cerca, pero a veces hay mucho tráfico y puede ser lento.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "You can walk on the other side of the street to get around.",
+      "meaning_es": "Puede caminar por el otro lado de la calle para rodear.",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "Next time I visit a new place, I will ask clear questions and check for signs before I go.",
+      "meaning_es": "La próxima vez que visite un lugar nuevo, haré preguntas claras y buscaré señales antes de ir.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos por barras. Las barras muestran pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "I saw a man waiting at a bus stop and asked, \"Excuse me, can you tell me how to get to the art museum?\""
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I decided to walk so I would not have to wait for the bus or get stuck in traffic."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Next time I visit a new place, I will ask clear questions and check for signs before I go."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee en voz alta los veinte párrafos en inglés. Hazlo de forma fluida y clara sin pausas largas.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-012",
+    "number": "012",
+    "title_en": "Finding My Way Around a City",
+    "title_es": "Orientarme en una ciudad",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana y viajes",
+    "main_topic_es": "Pedir y aclarar direcciones a un destino local; comparar una ruta a pie y transporte público.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past simple negative",
+      "Will for future reference",
+      "Can",
+      "Could",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

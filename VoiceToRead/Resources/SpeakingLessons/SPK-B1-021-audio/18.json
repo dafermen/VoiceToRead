@@ -1,0 +1,96 @@
+{
+  "text": "When saying goodbye, some people say, \"Take care!\" This shows that you wish someone well.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.5199999809265137,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 12,
+      "length": 7,
+      "start": 0.9200000166893005,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 2.0799999237060547,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.299999952316284,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 3.319999933242798,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 44,
+      "length": 4,
+      "start": 3.5799999237060547,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 4.71999979019165,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 56,
+      "length": 5,
+      "start": 5.039999961853027,
+      "end": 5.360000133514404
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 5.360000133514404,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 67,
+      "length": 3,
+      "start": 5.599999904632568,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 71,
+      "length": 4,
+      "start": 5.78000020980835,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 76,
+      "length": 7,
+      "start": 6.019999980926514,
+      "end": 6.440000057220459
+    },
+    {
+      "location": 84,
+      "length": 4,
+      "start": 6.440000057220459,
+      "end": 6.840000152587891
+    }
+  ]
+}

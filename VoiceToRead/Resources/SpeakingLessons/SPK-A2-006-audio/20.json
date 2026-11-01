@@ -1,0 +1,90 @@
+{
+  "text": "This trip showed me that good communication and patience are important for travel problems.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 0.8600000143051147,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.340000033378601,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.6200000047683716,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 1.9600000381469727,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 30,
+      "length": 13,
+      "start": 2.2200000286102295,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 48,
+      "length": 8,
+      "start": 3.4600000381469727,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.039999961853027,
+      "end": 4.639999866485596
+    },
+    {
+      "location": 61,
+      "length": 9,
+      "start": 4.639999866485596,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.199999809265137,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.659999847412109,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 82,
+      "length": 8,
+      "start": 5.980000019073486,
+      "end": 6.460000038146973
+    }
+  ]
+}

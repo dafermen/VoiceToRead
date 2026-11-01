@@ -1,0 +1,72 @@
+{
+  "text": "Alex is worried about rain. He says, \"What if it rains?\"",
+  "duration": 4.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 2,
+      "start": 0.5,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 8,
+      "length": 7,
+      "start": 0.800000011920929,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.1200000047683716,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 1.5199999809265137,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 28,
+      "length": 2,
+      "start": 2.2200000286102295,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 43,
+      "length": 2,
+      "start": 3.8399999141693115,
+      "end": 4.0
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 4.0,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 49,
+      "length": 5,
+      "start": 4.139999866485596,
+      "end": 4.599999904632568
+    }
+  ]
+}

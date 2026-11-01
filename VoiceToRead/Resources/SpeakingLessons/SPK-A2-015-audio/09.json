@@ -1,0 +1,72 @@
+{
+  "text": "Lisa said, \"Let's make a list, so everyone brings something useful.\"",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 1.659999966621399,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 2.119999885559082,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 23,
+      "length": 1,
+      "start": 2.3399999141693115,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 3.119999885559082,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 34,
+      "length": 8,
+      "start": 3.5799999237060547,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 43,
+      "length": 6,
+      "start": 4.099999904632568,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 50,
+      "length": 9,
+      "start": 4.440000057220459,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 60,
+      "length": 6,
+      "start": 4.940000057220459,
+      "end": 5.360000133514404
+    }
+  ]
+}

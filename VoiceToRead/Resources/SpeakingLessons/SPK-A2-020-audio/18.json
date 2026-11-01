@@ -1,0 +1,102 @@
+{
+  "text": "Next month, I will join an online group for beginners to stay interested and keep learning.",
+  "duration": 6.619999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 5,
+      "start": 0.5199999809265137,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 12,
+      "length": 1,
+      "start": 0.9800000190734863,
+      "end": 1.5
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 1.7200000286102295,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.899999976158142,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 27,
+      "length": 6,
+      "start": 2.200000047683716,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.559999942779541,
+      "end": 2.8399999141693115
+    },
+    {
+      "location": 40,
+      "length": 3,
+      "start": 2.8399999141693115,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 44,
+      "length": 9,
+      "start": 3.119999885559082,
+      "end": 3.5
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 3.5,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 3.940000057220459,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 62,
+      "length": 10,
+      "start": 4.21999979019165,
+      "end": 4.679999828338623
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 4.679999828338623,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 5.340000152587891,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 82,
+      "length": 8,
+      "start": 5.639999866485596,
+      "end": 6.0
+    }
+  ]
+}

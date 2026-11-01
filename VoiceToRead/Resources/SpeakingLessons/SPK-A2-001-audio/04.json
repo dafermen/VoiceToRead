@@ -1,0 +1,114 @@
+{
+  "text": "When I speak, I look for the right words. It takes time, so I feel a little nervous.",
+  "duration": 8.470000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.4399999976158142,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 1.1399999856948853,
+      "end": 1.5
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.940000057220459,
+      "end": 2.5
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 2.6600000858306885,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 3.1600000858306885,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 3.319999933242798,
+      "end": 3.7200000286102295
+    },
+    {
+      "location": 42,
+      "length": 2,
+      "start": 4.400000095367432,
+      "end": 4.519999980926514
+    },
+    {
+      "location": 45,
+      "length": 5,
+      "start": 4.519999980926514,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.380000114440918
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 5.460000038146973,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 60,
+      "length": 1,
+      "start": 6.019999980926514,
+      "end": 6.320000171661377
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 6.320000171661377,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 67,
+      "length": 1,
+      "start": 6.539999961853027,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 6.840000152587891,
+      "end": 7.019999980926514
+    },
+    {
+      "location": 76,
+      "length": 7,
+      "start": 7.019999980926514,
+      "end": 7.5
+    }
+  ]
+}

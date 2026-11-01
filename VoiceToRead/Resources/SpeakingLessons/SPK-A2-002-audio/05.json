@@ -1,0 +1,78 @@
+{
+  "text": "Before, I didn’t make a list and sometimes I forgot important things.",
+  "duration": 6.449999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.6600000262260437
+    },
+    {
+      "location": 8,
+      "length": 1,
+      "start": 0.9200000166893005,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 10,
+      "length": 6,
+      "start": 1.5199999809265137,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.840000033378601,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 22,
+      "length": 1,
+      "start": 2.059999942779541,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.5999999046325684,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 2.5999999046325684,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 33,
+      "length": 9,
+      "start": 3.3399999141693115,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 43,
+      "length": 1,
+      "start": 4.019999980926514,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 45,
+      "length": 6,
+      "start": 4.460000038146973,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 52,
+      "length": 9,
+      "start": 4.840000152587891,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 5.539999961853027,
+      "end": 5.980000019073486
+    }
+  ]
+}

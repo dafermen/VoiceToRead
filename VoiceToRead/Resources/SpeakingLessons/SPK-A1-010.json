@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-010",
+  "number": 10,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "category": {
+    "en": "Daily Life and Communication",
+    "es": "Vida diaria y comunicación"
+  },
+  "main_topic": {
+    "en": "Digital habits, asking for help, balancing phone use.",
+    "es": "Hábitos digitales, pedir ayuda, equilibrio con el uso del teléfono."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta usando un smartphone y una laptop en una mesa, con una taza de café y una expresión pensativa.",
+    "prompt": "Realistic editorial photograph, adult using smartphone and laptop at a table, coffee cup, thoughtful facial expression, soft natural morning light, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hablar sobre el uso diario de la tecnología.",
+    "Describir una rutina digital básica.",
+    "Pedir ayuda con las aplicaciones tecnológicas.",
+    "Expresar gratitud y resolver una pequeña dificultad.",
+    "Distinguir ventajas y posibles distracciones tecnológicas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I use my phone every day for many things.",
+      "es": "Uso mi teléfono todos los días para muchas cosas."
+    },
+    {
+      "number": 2,
+      "function": "routine",
+      "en": "In the morning, I check my messages and the weather.",
+      "es": "Por la mañana, reviso mis mensajes y el clima."
+    },
+    {
+      "number": 3,
+      "function": "routine",
+      "en": "I also look at news before breakfast.",
+      "es": "También veo las noticias antes del desayuno."
+    },
+    {
+      "number": 4,
+      "function": "experience",
+      "en": "My friend told me about an app for lists.",
+      "es": "Mi amigo me habló de una aplicación para listas."
+    },
+    {
+      "number": 5,
+      "function": "action",
+      "en": "I download it and try to make a list for shopping.",
+      "es": "La descargo e intento hacer una lista para compras."
+    },
+    {
+      "number": 6,
+      "function": "challenge",
+      "en": "I do not know how to share my list with my family.",
+      "es": "No sé cómo compartir mi lista con mi familia."
+    },
+    {
+      "number": 7,
+      "function": "request_help",
+      "en": "I ask my sister for help with the app.",
+      "es": "Le pido ayuda a mi hermana con la aplicación."
+    },
+    {
+      "number": 8,
+      "function": "specific_request",
+      "en": "I say, \"Could you please show me how to send my list to Mom and Dad?\"",
+      "es": "Digo: \"¿Puedes mostrarme cómo enviar mi lista a mamá y papá?\""
+    },
+    {
+      "number": 9,
+      "function": "gratitude",
+      "en": "She sits with me and shows me every step.",
+      "es": "Ella se sienta conmigo y me muestra cada paso."
+    },
+    {
+      "number": 10,
+      "function": "reaction",
+      "en": "Now, I can send my list easily.",
+      "es": "Ahora puedo enviar mi lista fácilmente."
+    },
+    {
+      "number": 11,
+      "function": "benefit",
+      "en": "My phone helps me with plans and reminders.",
+      "es": "Mi teléfono me ayuda con planes y recordatorios."
+    },
+    {
+      "number": 12,
+      "function": "reflection",
+      "en": "Sometimes I look at my phone too much.",
+      "es": "A veces miro mi teléfono demasiado."
+    },
+    {
+      "number": 13,
+      "function": "limitation",
+      "en": "Too many messages can distract me from my work.",
+      "es": "Demasiados mensajes pueden distraerme de mi trabajo."
+    },
+    {
+      "number": 14,
+      "function": "wish",
+      "en": "I want to read a book and not use my phone for a while.",
+      "es": "Quiero leer un libro y no usar mi teléfono por un rato."
+    },
+    {
+      "number": 15,
+      "function": "memory",
+      "en": "Before, I wrote lists on paper.",
+      "es": "Antes, escribía listas en papel."
+    },
+    {
+      "number": 16,
+      "function": "change",
+      "en": "Now, I always take my phone with me.",
+      "es": "Ahora, siempre llevo mi teléfono conmigo."
+    },
+    {
+      "number": 17,
+      "function": "intention",
+      "en": "Next week, I want to turn off notifications at work.",
+      "es": "La próxima semana, quiero apagar las notificaciones en el trabajo."
+    },
+    {
+      "number": 18,
+      "function": "goal",
+      "en": "I want to finish my tasks faster and have free time.",
+      "es": "Quiero terminar mis tareas más rápido y tener tiempo libre."
+    },
+    {
+      "number": 19,
+      "function": "strategy",
+      "en": "Sometimes, I use a timer to take breaks from my screen.",
+      "es": "A veces uso una alarma para tomar descansos de la pantalla."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "I can always ask for help and make small changes.",
+      "es": "Siempre puedo pedir ayuda y hacer pequeños cambios."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "I do not know how to share my list with my family.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Can",
+      "example_en": "Now, I can send my list easily.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Could",
+      "example_en": "I say, \"Could you please show me how to send my list to Mom and Dad?\"",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I ask my sister for help with the app.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to read a book and not use my phone for a while.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I use my phone every day for many things.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I use my phone every day for many things.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "My friend told me about an app for lists.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 4
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I use my phone every day",
+      "meaning_es": "Uso mi teléfono todos los días",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "Check my messages",
+      "meaning_es": "Revisar mis mensajes",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Could you please show me how to send my list to Mom and Dad?",
+      "meaning_es": "¿Podrías mostrarme cómo enviar mi lista a mamá y papá?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Help with the app",
+      "meaning_es": "Ayuda con la aplicación",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "My phone helps me",
+      "meaning_es": "Mi teléfono me ayuda",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Too many messages can distract me",
+      "meaning_es": "Demasiados mensajes pueden distraerme",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "Want to read a book",
+      "meaning_es": "Querer leer un libro",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "I can always ask for help",
+      "meaning_es": "Siempre puedo pedir ayuda",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I use my phone every day",
+              "for many things."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I say,",
+              "\"Could you please show me how to send my list to Mom and Dad?\""
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "I want to read a book",
+              "and not use my phone for a while."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-010",
+    "number": "010",
+    "title_en": "Technology in Everyday Life",
+    "title_es": "Tecnología en la vida cotidiana",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y comunicación",
+    "main_topic_es": "Hábitos digitales, pedir ayuda, equilibrio con el uso del teléfono.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

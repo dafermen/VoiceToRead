@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-020",
+  "number": 20,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Setting Goals for My Future",
+    "es": "Definir metas para mi futuro"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Talking about a personal goal, planning, and support.",
+    "es": "Hablar de una meta personal, planificación y apoyo."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta planificando metas en un cuaderno en una mesa, con una taza de café y una ventana al fondo.",
+    "prompt": "Realistic editorial photo, adult sitting at a table, writing personal goals in a notebook, coffee and window in background, warm natural light, calm atmosphere, horizontal, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hablar de una meta simple usando frases cortas.",
+    "Describir motivación y desafíos cotidianos.",
+    "Nombrar apoyo de amigos o familia.",
+    "Decir un plan sencillo con días y horas.",
+    "Practicar comprensión y pronunciación de expresiones esenciales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I am thinking about my future. I want a goal.",
+      "es": "Estoy pensando en mi futuro. Quiero una meta."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "I like to draw. I want to draw on the computer.",
+      "es": "Me gusta dibujar. Quiero dibujar en la computadora."
+    },
+    {
+      "number": 3,
+      "function": "comparison",
+      "en": "Drawing with new tools feels fun. It is different from paper.",
+      "es": "Dibujar con herramientas nuevas es divertido. Es diferente al papel."
+    },
+    {
+      "number": 4,
+      "function": "challenge",
+      "en": "My job is busy. I get home late.",
+      "es": "Mi trabajo es ocupado. Llego a casa tarde."
+    },
+    {
+      "number": 5,
+      "function": "detail",
+      "en": "After work, I am tired. I want to rest.",
+      "es": "Después del trabajo, estoy cansado. Quiero descansar."
+    },
+    {
+      "number": 6,
+      "function": "experience",
+      "en": "Last year, I tried an art class online. I stopped because I was busy.",
+      "es": "El año pasado probé una clase de arte en línea. Paré porque estaba ocupado."
+    },
+    {
+      "number": 7,
+      "function": "reflection",
+      "en": "I think planning time is important.",
+      "es": "Creo que planificar el tiempo es importante."
+    },
+    {
+      "number": 8,
+      "function": "support",
+      "en": "My friend Emily is a designer. She helps me with questions.",
+      "es": "Mi amiga Emily es diseñadora. Ella me ayuda con preguntas."
+    },
+    {
+      "number": 9,
+      "function": "decision",
+      "en": "We choose Sunday for practice. I draw for one hour.",
+      "es": "Elegimos el domingo para practicar. Yo dibujo por una hora."
+    },
+    {
+      "number": 10,
+      "function": "reality",
+      "en": "On weekends, I sometimes forget my goal.",
+      "es": "En los fines de semana, a veces olvido mi meta."
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "Emily says, \"Set an alarm on your phone.\"",
+      "es": "Emily dice: \"Pon una alarma en tu teléfono\"."
+    },
+    {
+      "number": 12,
+      "function": "solution",
+      "en": "Now, I put art time in my calendar.",
+      "es": "Ahora pongo la hora de arte en mi calendario."
+    },
+    {
+      "number": 13,
+      "function": "detail",
+      "en": "Before plans, I check my art hour.",
+      "es": "Antes de hacer planes, reviso mi hora de arte."
+    },
+    {
+      "number": 14,
+      "function": "progress",
+      "en": "I finished three drawings. Emily says they are good.",
+      "es": "Terminé tres dibujos. Emily dice que son buenos."
+    },
+    {
+      "number": 15,
+      "function": "setback",
+      "en": "Last Sunday, no internet. I drew on paper.",
+      "es": "El domingo pasado, no había Internet. Dibujé en papel."
+    },
+    {
+      "number": 16,
+      "function": "support",
+      "en": "My brother sees me. He says, \"Use my tablet if you want.\"",
+      "es": "Mi hermano me ve. Dice: \"Usa mi tableta si quieres\"."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "Small steps help me. I do not worry about big results.",
+      "es": "Los pequeños pasos me ayudan. No me preocupo por grandes resultados."
+    },
+    {
+      "number": 18,
+      "function": "future_plan",
+      "en": "Next month, I can join a beginner group online.",
+      "es": "El próximo mes puedo unirme a un grupo para principiantes en línea."
+    },
+    {
+      "number": 19,
+      "function": "goal",
+      "en": "My goal is to draw on the computer every week.",
+      "es": "Mi meta es dibujar en la computadora cada semana."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "I go slow, but I keep going. I remember why I want this.",
+      "es": "Voy despacio, pero sigo adelante. Recuerdo por qué quiero esto."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "I am thinking about my future. I want a goal.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past simple",
+      "example_en": "Last year, I tried an art class online. I stopped because I was busy.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "Small steps help me. I do not worry about big results.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Can",
+      "example_en": "Next month, I can join a beginner group online.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I am thinking about my future. I want a goal.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I like to draw. I want to draw on the computer.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I am thinking about my future. I want a goal.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I am thinking about my future. I want a goal.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I like to draw.",
+      "meaning_es": "Me gusta dibujar.",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "I want a goal.",
+      "meaning_es": "Quiero una meta.",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "I get home late.",
+      "meaning_es": "Llego a casa tarde.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "I am tired.",
+      "meaning_es": "Estoy cansado.",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Set an alarm on your phone.",
+      "meaning_es": "Pon una alarma en tu teléfono.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "I draw for one hour.",
+      "meaning_es": "Dibujo por una hora.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Small steps help me.",
+      "meaning_es": "Los pequeños pasos me ayudan.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "I keep going.",
+      "meaning_es": "Sigo adelante.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "I like to draw.",
+              "I want to draw on the computer."
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "Emily says, \"Set an alarm on your phone.\""
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "Now, I put art time in my calendar."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-020",
+    "number": "020",
+    "title_en": "Setting Goals for My Future",
+    "title_es": "Definir metas para mi futuro",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Hablar de una meta personal, planificación y apoyo.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past simple",
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "text": "\"Pretty good!\" Sarah replies, and they start talking about their plans.",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 1,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 8,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 15,
+      "length": 5,
+      "start": 1.940000057220459,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 21,
+      "length": 7,
+      "start": 2.0399999618530273,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 3.299999952316284,
+      "end": 3.5799999237060547
+    },
+    {
+      "location": 39,
+      "length": 5,
+      "start": 3.5799999237060547,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 45,
+      "length": 7,
+      "start": 3.859999895095825,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 53,
+      "length": 5,
+      "start": 4.340000152587891,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 59,
+      "length": 5,
+      "start": 4.659999847412109,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 65,
+      "length": 5,
+      "start": 4.980000019073486,
+      "end": 5.440000057220459
+    }
+  ]
+}

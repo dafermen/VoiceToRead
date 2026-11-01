@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-008",
+  "number": 8,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y solución de problemas"
+  },
+  "category": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y resolución de problemas"
+  },
+  "main_topic": {
+    "en": "A mistaken or unsuitable purchase; explain the mismatch and ask for a practical solution.",
+    "es": "Una compra equivocada o inadecuada; explicar la incompatibilidad y pedir una solución práctica."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta mostrando una prenda de ropa inadecuada en un mostrador de tienda y hablando con un empleado.",
+    "prompt": "Realistic editorial photograph. Adult person at a store counter holding up an unsuitable item of clothing and explaining its problem to a helpful store worker, modern US shop, friendly atmosphere, 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Aprender vocabulario cotidiano de «Compras y solución de problemas».",
+    "Comprender frases breves en una situación cotidiana.",
+    "Reconocer las estructuras básicas presentes en los ejemplos.",
+    "Relacionar las frases en inglés con su significado en español.",
+    "Practicar la lectura clara y la repetición de frases completas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "everyday communication",
+      "en": "I want a new jacket.",
+      "es": "Quiero una chaqueta nueva."
+    },
+    {
+      "number": 2,
+      "function": "everyday communication",
+      "en": "I go to a clothes store.",
+      "es": "Voy a una tienda de ropa."
+    },
+    {
+      "number": 3,
+      "function": "everyday communication",
+      "en": "My friend comes with me.",
+      "es": "Mi amigo viene conmigo."
+    },
+    {
+      "number": 4,
+      "function": "everyday communication",
+      "en": "I see a blue jacket.",
+      "es": "Veo una chaqueta azul."
+    },
+    {
+      "number": 5,
+      "function": "everyday communication",
+      "en": "The jacket is on a shelf.",
+      "es": "La chaqueta está en un estante."
+    },
+    {
+      "number": 6,
+      "function": "everyday communication",
+      "en": "I ask for a small size.",
+      "es": "Pido una talla pequeña."
+    },
+    {
+      "number": 7,
+      "function": "everyday communication",
+      "en": "Can I try it on?",
+      "es": "¿Puedo probármela?"
+    },
+    {
+      "number": 8,
+      "function": "everyday communication",
+      "en": "The sleeves are too short.",
+      "es": "Las mangas son demasiado cortas."
+    },
+    {
+      "number": 9,
+      "function": "everyday communication",
+      "en": "I do not want this size.",
+      "es": "No quiero esta talla."
+    },
+    {
+      "number": 10,
+      "function": "everyday communication",
+      "en": "I ask for a bigger size.",
+      "es": "Pido una talla más grande."
+    },
+    {
+      "number": 11,
+      "function": "everyday communication",
+      "en": "The worker brings another jacket.",
+      "es": "El empleado trae otra chaqueta."
+    },
+    {
+      "number": 12,
+      "function": "everyday communication",
+      "en": "This jacket is warm and comfortable.",
+      "es": "Esta chaqueta es abrigada y cómoda."
+    },
+    {
+      "number": 13,
+      "function": "everyday communication",
+      "en": "My friend likes the color.",
+      "es": "A mi amigo le gusta el color."
+    },
+    {
+      "number": 14,
+      "function": "everyday communication",
+      "en": "I look at the price.",
+      "es": "Miro el precio."
+    },
+    {
+      "number": 15,
+      "function": "everyday communication",
+      "en": "I can buy this jacket.",
+      "es": "Puedo comprar esta chaqueta."
+    },
+    {
+      "number": 16,
+      "function": "everyday communication",
+      "en": "I pay at the counter.",
+      "es": "Pago en la caja."
+    },
+    {
+      "number": 17,
+      "function": "everyday communication",
+      "en": "I put the receipt in my bag.",
+      "es": "Guardo el recibo en mi bolso."
+    },
+    {
+      "number": 18,
+      "function": "everyday communication",
+      "en": "I thank the worker for the help.",
+      "es": "Agradezco la ayuda al empleado."
+    },
+    {
+      "number": 19,
+      "function": "everyday communication",
+      "en": "My friend and I leave the store.",
+      "es": "Mi amigo y yo salimos de la tienda."
+    },
+    {
+      "number": 20,
+      "function": "everyday communication",
+      "en": "I wear my new jacket home.",
+      "es": "Llevo puesta mi chaqueta nueva de camino a casa."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "I do not want this size.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Can",
+      "example_en": "Can I try it on?",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I want a new jacket.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I want a new jacket.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "My friend comes with me.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "I want a new jacket.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "The jacket is on a shelf.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "And to add information",
+      "example_en": "This jacket is warm and comfortable.",
+      "explanation_es": "And une palabras, acciones o ideas que se añaden entre sí.",
+      "source_paragraph": 12
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I want a new jacket",
+      "meaning_es": "Quiero una chaqueta nueva",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "I go to a clothes store",
+      "meaning_es": "Voy a una tienda de ropa",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "My friend comes with me",
+      "meaning_es": "Mi amigo viene conmigo",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "I see a blue jacket",
+      "meaning_es": "Veo una chaqueta azul",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "The jacket is on a shelf",
+      "meaning_es": "La chaqueta está en un estante",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "I ask for a small size",
+      "meaning_es": "Pido una talla pequeña",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Can I try it on",
+      "meaning_es": "¿Puedo probármela",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "The sleeves are too short",
+      "meaning_es": "Las mangas son demasiado cortas",
+      "source_paragraph": 8
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I want a new jacket."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Can I try it on?"
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "My friend likes the color."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-008",
+    "number": "008",
+    "title_en": "Shopping and Solving a Problem",
+    "title_es": "Compras y solución de problemas",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Compras y resolución de problemas",
+    "main_topic_es": "Una compra equivocada o inadecuada; explicar la incompatibilidad y pedir una solución práctica.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article",
+      "And to add information"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

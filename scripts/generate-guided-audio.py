@@ -2,7 +2,7 @@ from pathlib import Path
 import urllib.request,urllib.error,json,hashlib,re,unicodedata,uuid,sys,shutil
 import argparse
 parser=argparse.ArgumentParser();parser.add_argument('--lesson',default='SPK-B1-001');args=parser.parse_args()
-if not re.fullmatch(r'SPK-(B1|B2|C1|C2)-[0-9]{3}',args.lesson):sys.exit('Invalid lesson identifier.')
+if not re.fullmatch(r'SPK-(A1|A2|B1|B2|C1|C2)-[0-9]{3}',args.lesson):sys.exit('Invalid lesson identifier.')
 root=Path(__file__).resolve().parents[1]; folder=root/'VoiceToRead/Resources/SpeakingLessons'
 lesson=json.loads((folder/(args.lesson+'.json')).read_text(encoding='utf-8'))
 out=folder/(args.lesson+'-audio');out.mkdir(exist_ok=True)

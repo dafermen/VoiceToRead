@@ -1,0 +1,42 @@
+{
+  "text": "I think planning time is important.",
+  "duration": 2.9200000762939453,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 5,
+      "start": 0.4399999976158142,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 8,
+      "length": 8,
+      "start": 0.7200000286102295,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 1.2200000286102295,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.659999966621399,
+      "end": 2.0
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 2.0,
+      "end": 2.440000057220459
+    }
+  ]
+}

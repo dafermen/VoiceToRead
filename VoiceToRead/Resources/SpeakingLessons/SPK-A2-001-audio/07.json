@@ -1,0 +1,90 @@
+{
+  "text": "Now, I try to think in English and use simple sentences when I talk.",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.9399999976158142,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 1.3600000143051147,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 1.600000023841858,
+      "end": 2.0
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 2.0,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 20,
+      "length": 2,
+      "start": 2.0199999809265137,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 23,
+      "length": 7,
+      "start": 2.299999952316284,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.7799999713897705,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 3.5399999618530273,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 39,
+      "length": 6,
+      "start": 3.8399999141693115,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 46,
+      "length": 9,
+      "start": 4.28000020980835,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 56,
+      "length": 4,
+      "start": 4.760000228881836,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 5.420000076293945,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 5.880000114440918,
+      "end": 5.900000095367432
+    }
+  ]
+}

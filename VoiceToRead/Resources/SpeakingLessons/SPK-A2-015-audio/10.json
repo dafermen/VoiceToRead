@@ -1,0 +1,102 @@
+{
+  "text": "Many people want to help, but we do not agree on what job is most important.",
+  "duration": 5.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 5,
+      "length": 6,
+      "start": 0.47999998927116394,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 0.9800000190734863,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.2599999904632568,
+      "end": 1.5399999618530273
+    },
+    {
+      "location": 20,
+      "length": 4,
+      "start": 1.5399999618530273,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.2799999713897705,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.4000000953674316,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.5999999046325684,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.7799999713897705,
+      "end": 3.0
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 3.0,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 3.380000114440918,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 3.759999990463257,
+      "end": 4.0
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 4.0,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 58,
+      "length": 2,
+      "start": 4.360000133514404,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.559999942779541,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 66,
+      "length": 9,
+      "start": 4.920000076293945,
+      "end": 5.21999979019165
+    }
+  ]
+}

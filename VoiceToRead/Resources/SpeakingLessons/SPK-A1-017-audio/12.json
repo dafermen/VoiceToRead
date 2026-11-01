@@ -1,0 +1,90 @@
+{
+  "text": "The online course sounds easy for my time. But I want to meet people.",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 1.1200000047683716,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 1.7000000476837158,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.740000009536743,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 3.319999933242798,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 34,
+      "length": 2,
+      "start": 4.039999961853027,
+      "end": 4.340000152587891
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 4.340000152587891,
+      "end": 4.78000020980835
+    },
+    {
+      "location": 43,
+      "length": 3,
+      "start": 5.360000133514404,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 5.71999979019165,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 6.300000190734863,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 6.659999847412109,
+      "end": 6.960000038146973
+    },
+    {
+      "location": 57,
+      "length": 4,
+      "start": 6.960000038146973,
+      "end": 7.0
+    },
+    {
+      "location": 62,
+      "length": 6,
+      "start": 7.0,
+      "end": 7.400000095367432
+    }
+  ]
+}

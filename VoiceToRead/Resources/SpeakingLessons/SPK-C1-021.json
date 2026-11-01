@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C1-021",
+  "number": 21,
+  "status": "ready",
+  "level": "C1",
+  "language": "en-US",
+  "title": {
+    "en": "Greetings",
+    "es": "Saludos"
+  },
+  "category": {
+    "en": "Practical Communication",
+    "es": "Comunicación práctica"
+  },
+  "main_topic": {
+    "en": "Nuanced use of greetings, register, and conversational conventions in American English.",
+    "es": "Uso matizado de los saludos, registro y convenciones conversacionales en inglés americano."
+  },
+  "estimated_minutes": 40,
+  "image": {
+    "alt_es": "Dos personas adultas se saludan con una sonrisa y un gesto de la mano junto a una cafetería.",
+    "prompt": "Candid editorial landscape photo of two adult neighbors smiling and waving hello on a neighborhood sidewalk beside a cafe. Natural daylight. No text, logos or watermark.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Distinguir entre saludos formales, semifomales e informales en contexto.",
+    "Responder adecuadamente a distintos tipos de saludos orales y por teléfono.",
+    "Matizar y calificar los saludos según la relación y el entorno.",
+    "Negociar expectativas comunicativas según el registro y el momento del día.",
+    "Conceder y justificar el uso de expresiones en situaciones ambiguas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "general_opening",
+      "en": "In daily life, greeting styles subtly shift depending on setting, relationship, and even the time of day.",
+      "es": "En la vida diaria, los estilos de saludo cambian sutilmente según el entorno, la relación e incluso la hora del día."
+    },
+    {
+      "number": 2,
+      "function": "supermarket_encounter",
+      "en": "At a supermarket, you might say 'Hey, how's it going?' to a neighbor, comfortably expecting a brief update or a smile.",
+      "es": "En el supermercado, podrías decir 'Hey, how's it going?' a un vecino, esperando cómodamente una respuesta breve o una sonrisa."
+    },
+    {
+      "number": 3,
+      "function": "office_greeting",
+      "en": "Arriving at work, a polite 'Good morning' to colleagues sets a respectful tone even if conversation is minimal.",
+      "es": "Al llegar al trabajo, un 'Good morning' cortés a los colegas establece un tono respetuoso aunque la conversación sea mínima."
+    },
+    {
+      "number": 4,
+      "function": "conceding_familiarity",
+      "en": "Granted, with familiar coworkers, that greeting can become 'Morning!' or even just a raised hand, context permitting.",
+      "es": "Eso sí, con compañeros de confianza, ese saludo puede transformarse en un simple 'Morning!' o solo una mano alzada, según el contexto."
+    },
+    {
+      "number": 5,
+      "function": "street_greeting_stranger",
+      "en": "On the street, greeting a stranger with 'Hello' is neutral and rarely risks over-friendliness, although many may simply nod.",
+      "es": "En la calle, saludar a un desconocido con 'Hello' es neutral y rara vez se percibe como demasiado amistoso, aunque muchos solo asientan."
+    },
+    {
+      "number": 6,
+      "function": "first_meeting_networking",
+      "en": "At a professional event, one typically opens with 'Nice to meet you,' reinforcing formality and signaling the start of acquaintance.",
+      "es": "En un evento profesional, normalmente se inicia con un 'Nice to meet you', reforzando la formalidad e indicando el principio de una relación."
+    },
+    {
+      "number": 7,
+      "function": "returning_colleague",
+      "en": "If someone returns after an absence, 'Long time no see' carries both warmth and acknowledgement of elapsed time.",
+      "es": "Si alguien regresa tras una ausencia, un 'Long time no see' aporta calidez y reconoce el tiempo transcurrido."
+    },
+    {
+      "number": 8,
+      "function": "welcoming_visitor",
+      "en": "'Welcome! Let me know if you need anything,' is earnest and creates an atmosphere of hospitality when greeting newcomers.",
+      "es": "'Welcome! Let me know if you need anything,' es sincero y crea un ambiente de hospitalidad al recibir a recién llegados."
+    },
+    {
+      "number": 9,
+      "function": "casual_cafe",
+      "en": "Meeting a friend at a café, a cheerful 'Hey! What's up?' invites informal conversation; a typical response is 'Not much, you?'",
+      "es": "Al encontrarte con un amigo en una cafetería, un animado 'Hey! What's up?' invita a la charla informal; la respuesta habitual es 'Not much, you?'"
+    },
+    {
+      "number": 10,
+      "function": "modulating_response",
+      "en": "Admittedly, some prefer not to answer 'What's up?' literally, so a breezy 'Hey' back often suffices.",
+      "es": "Cierto es que algunos prefieren no contestar literalmente a 'What's up?', por lo que un simple 'Hey' de vuelta a menudo basta."
+    },
+    {
+      "number": 11,
+      "function": "workplace_politeness",
+      "en": "In more hierarchical offices, it's prudent to open with 'Good afternoon, Dr. Lee,' matching both formality and status.",
+      "es": "En oficinas más jerárquicas, conviene iniciar con 'Good afternoon, Dr. Lee,' adaptando la formalidad y el estatus."
+    },
+    {
+      "number": 12,
+      "function": "conceding_exceptions",
+      "en": "Nevertheless, newer companies may foster looser standards—sometimes even executives greet with just 'Hi!'",
+      "es": "Sin embargo, en empresas recientes puede haber normas más flexibles; a veces hasta los directivos saludan solo con un 'Hi!'"
+    },
+    {
+      "number": 13,
+      "function": "phone_call_greeting",
+      "en": "On the phone, 'Hello, this is Jamie speaking' sounds clear and efficient, especially in business or client calls.",
+      "es": "Por teléfono, 'Hello, this is Jamie speaking' suena claro y eficiente, especialmente en llamadas empresariales o de atención al cliente."
+    },
+    {
+      "number": 14,
+      "function": "doctor_appointment",
+      "en": "When calling the doctor's office, introduce yourself: 'Good morning, my name is Sara. I'd like to make an appointment for next week.'",
+      "es": "Al llamar al consultorio médico, preséntate: 'Good morning, my name is Sara. I'd like to make an appointment for next week.'"
+    },
+    {
+      "number": 15,
+      "function": "describing_symptom",
+      "en": "Politely offering context helps: 'I'm feeling some pain in my knee. Is there a time available with Dr. Lopez?'",
+      "es": "Ofrecer contexto con cortesía ayuda: 'I'm feeling some pain in my knee. Is there a time available with Dr. Lopez?'"
+    },
+    {
+      "number": 16,
+      "function": "leaving_work",
+      "en": "Leaving the office, 'Have a good evening' conveys genuine goodwill, regardless of organizational level.",
+      "es": "Al salir de la oficina, 'Have a good evening' transmite una verdadera cortesía, sin importar el nivel jerárquico."
+    },
+    {
+      "number": 17,
+      "function": "good_night_farewell",
+      "en": "Conversely, 'Good night' is almost always used upon departing, not arriving, and indicates the end of interaction.",
+      "es": "Por el contrario, 'Good night' casi siempre se utiliza al despedirse, no al llegar, y marca el final de la interacción."
+    },
+    {
+      "number": 18,
+      "function": "see_later_phrase",
+      "en": "Among coworkers, 'See you later' or 'Take care' efficiently signal a friendly parting without formality.",
+      "es": "Entre compañeros, 'See you later' o 'Take care' indican una despedida amistosa y sin formalidad."
+    },
+    {
+      "number": 19,
+      "function": "justifying_register_shift",
+      "en": "To be fair, some adapt register mid-conversation—starting formally, then relaxing as rapport builds.",
+      "es": "Justo es decir que algunos ajustan el registro a mitad de conversación, pasando de formalidad a distensión según crece la confianza."
+    },
+    {
+      "number": 20,
+      "function": "conclusion_summary",
+      "en": "Each greeting carries subtle cues; mastering these helps you navigate relationships and negotiate expectations with fluency.",
+      "es": "Cada saludo comunica matices; dominarlos te ayuda a desenvolverte y negociar expectativas comunicativas con soltura."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Time-of-day greetings",
+      "example_en": "Arriving at work, a polite 'Good morning' to colleagues sets a respectful tone even if conversation is minimal.",
+      "explanation_es": "Good morning, good afternoon y good evening son saludos que se eligen según el momento del día.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Good night as a farewell",
+      "example_en": "Conversely, 'Good night' is almost always used upon departing, not arriving, and indicates the end of interaction.",
+      "explanation_es": "Good night se usa al despedirse por la noche o antes de dormir, no como saludo habitual al llegar.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Informal fixed question",
+      "example_en": "Meeting a friend at a café, a cheerful 'Hey! What's up?' invites informal conversation; a typical response is 'Not much, you?'",
+      "explanation_es": "What’s up? es una fórmula informal entre amigos o personas de confianza; una respuesta breve común es Not much.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "To-infinitive in a fixed greeting",
+      "example_en": "At a professional event, one typically opens with 'Nice to meet you,' reinforcing formality and signaling the start of acquaintance.",
+      "explanation_es": "Nice to meet you contiene el infinitivo to meet y se usa normalmente al conocer a alguien por primera vez.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Polite imperative",
+      "example_en": "Among coworkers, 'See you later' or 'Take care' efficiently signal a friendly parting without formality.",
+      "explanation_es": "Take care usa un imperativo como despedida amistosa, con el sentido de «cuídate».",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Fixed farewell with see",
+      "example_en": "Among coworkers, 'See you later' or 'Take care' efficiently signal a friendly parting without formality.",
+      "explanation_es": "See you later es una fórmula fija de despedida; no es necesario decir una oración completa como I’ll see you later.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Welcoming expressions",
+      "example_en": "'Welcome! Let me know if you need anything,' is earnest and creates an atmosphere of hospitality when greeting newcomers.",
+      "explanation_es": "Welcome se utiliza para recibir a alguien. Según el contexto puede acompañarse de una invitación como Please come in.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Reunion formula",
+      "example_en": "If someone returns after an absence, 'Long time no see' carries both warmth and acknowledgement of elapsed time.",
+      "explanation_es": "Long time no see es una expresión informal fija para saludar a alguien a quien no has visto desde hace tiempo.",
+      "source_paragraph": 7
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Hey, how's it going?",
+      "meaning_es": "Hola, ¿cómo va todo?",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Nice to meet you",
+      "meaning_es": "Encantado/a de conocerte",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Long time no see",
+      "meaning_es": "Cuánto tiempo sin verte",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Welcome! Let me know if you need anything",
+      "meaning_es": "¡Bienvenido! Dime si necesitas algo",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "What's up?",
+      "meaning_es": "¿Qué tal? / ¿Qué hay?",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Hello, this is Jamie speaking",
+      "meaning_es": "Hola, habla Jamie",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "Have a good evening",
+      "meaning_es": "Que pases buena tarde/noche",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "See you later",
+      "meaning_es": "Nos vemos luego",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "Granted, with familiar coworkers, that greeting can become 'Morning!' or even just a raised hand, context permitting."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "Meeting a friend at a café, a cheerful 'Hey! What's up?' invites informal conversation; a typical response is 'Not much, you?'"
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "When calling the doctor's office, introduce yourself: 'Good morning, my name is Sara. I'd like to make an appointment for next week.'"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C1-021",
+    "number": "021",
+    "title_en": "Greetings",
+    "title_es": "Saludos",
+    "level": "C1",
+    "language": "Inglés americano",
+    "category_es": "Comunicación práctica",
+    "main_topic_es": "Uso matizado de los saludos, registro y convenciones conversacionales en inglés americano.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Time-of-day greetings",
+      "Good night as a farewell",
+      "Informal fixed question",
+      "To-infinitive in a fixed greeting",
+      "Polite imperative",
+      "Fixed farewell with see",
+      "Welcoming expressions",
+      "Reunion formula"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 40
+  }
+}

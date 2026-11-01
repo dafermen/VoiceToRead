@@ -1,0 +1,114 @@
+{
+  "text": "This time, I tried the jacket on at the store before leaving. I was happy with my choice.",
+  "duration": 6.909999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.059999942779541,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 13,
+      "length": 5,
+      "start": 1.399999976158142,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.6799999475479126,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 23,
+      "length": 6,
+      "start": 2.119999885559082,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 2.180000066757202,
+      "end": 2.5
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.5,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 2.759999990463257,
+      "end": 3.0
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 3.0,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 46,
+      "length": 6,
+      "start": 3.240000009536743,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 3.740000009536743,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 62,
+      "length": 1,
+      "start": 4.800000190734863,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.960000038146973,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 68,
+      "length": 5,
+      "start": 5.199999809265137,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 74,
+      "length": 4,
+      "start": 5.480000019073486,
+      "end": 5.760000228881836
+    },
+    {
+      "location": 79,
+      "length": 2,
+      "start": 5.760000228881836,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 82,
+      "length": 6,
+      "start": 5.980000019073486,
+      "end": 6.360000133514404
+    }
+  ]
+}

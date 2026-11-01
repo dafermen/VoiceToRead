@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B1-021",
+  "number": 21,
+  "status": "ready",
+  "level": "B1",
+  "language": "en-US",
+  "title": {
+    "en": "Greetings",
+    "es": "Saludos"
+  },
+  "category": {
+    "en": "Everyday Communication",
+    "es": "Comunicación cotidiana"
+  },
+  "main_topic": {
+    "en": "Exchanging greetings in American English in various real-life situations.",
+    "es": "Intercambio de saludos en inglés americano en diversas situaciones reales."
+  },
+  "estimated_minutes": 30,
+  "image": {
+    "alt_es": "Dos personas adultas se saludan con una sonrisa y un gesto de la mano junto a una cafetería.",
+    "prompt": "Candid editorial landscape photo of two adult neighbors smiling and waving hello on a neighborhood sidewalk beside a cafe. Natural daylight. No text, logos or watermark.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Identificar saludos apropiados según el contexto.",
+    "Diferenciar entre saludos formales e informales.",
+    "Responder de manera natural a saludos comunes.",
+    "Reconocer el uso social de frases como 'nice to meet you' y 'good to see you'.",
+    "Practicar la pronunciación y el ritmo de saludos en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "In America, greetings are part of everyday life. People choose their words based on time, place, and who they are talking to.",
+      "es": "En Estados Unidos, los saludos son parte de la vida diaria. Las personas eligen sus palabras según la hora, el lugar y con quién hablan."
+    },
+    {
+      "number": 2,
+      "function": "public_greeting",
+      "en": "On a city sidewalk, two young men see each other. One says, \"Hey, what's up?\" The other replies, \"Not much. How's it going?\"",
+      "es": "En una acera de la ciudad, dos jóvenes se ven. Uno dice: \"Hey, what's up?\" El otro responde: \"Not much. How's it going?\""
+    },
+    {
+      "number": 3,
+      "function": "formal_greeting",
+      "en": "Early in the office, Olivia greets her manager with \"Good morning.\" The manager replies, \"Good morning, Olivia. How are you?\" Olivia answers, \"I'm good, thanks.\"",
+      "es": "Temprano en la oficina, Olivia saluda a su jefa con \"Good morning.\" La jefa responde: \"Good morning, Olivia. How are you?\" Olivia contesta: \"I'm good, thanks.\""
+    },
+    {
+      "number": 4,
+      "function": "afternoon_greeting",
+      "en": "At one p.m., coworkers returning from lunch say, \"Good afternoon!\" in the hallway. This is polite and friendly.",
+      "es": "A la una de la tarde, colegas que regresan de almorzar se saludan en el pasillo con un \"Good afternoon!\" Es una forma educada y amistosa."
+    },
+    {
+      "number": 5,
+      "function": "evening_greeting",
+      "en": "At six in the evening, Mark enters the gym and says, \"Good evening.\" The receptionist smiles and repeats, \"Good evening!\"",
+      "es": "A las seis de la tarde, Mark entra al gimnasio y dice: \"Good evening.\" La recepcionista sonríe y repite: \"Good evening!\""
+    },
+    {
+      "number": 6,
+      "function": "farewell_night",
+      "en": "When Sarah leaves her friend's house late, she says, \"Good night!\" Her friend waves and says, \"Good night, see you soon!\"",
+      "es": "Cuando Sarah sale tarde de la casa de su amiga, dice: \"Good night!\" Su amiga le hace un gesto y responde: \"Good night, see you soon!\""
+    },
+    {
+      "number": 7,
+      "function": "first_meeting",
+      "en": "At a party, two women meet for the first time. One says, \"Hi, I'm Carla.\" The other responds, \"Nice to meet you, Carla. I'm Julia.\"",
+      "es": "En una fiesta, dos mujeres se conocen por primera vez. Una dice: \"Hi, I'm Carla.\" La otra responde: \"Nice to meet you, Carla. I'm Julia.\""
+    },
+    {
+      "number": 8,
+      "function": "friend_meeting",
+      "en": "In a coffee shop, old friends run into each other. One says, \"Long time no see!\" The other grins, \"Yeah, it's been a long time!\"",
+      "es": "En una cafetería, viejos amigos se encuentran. Uno dice: \"Long time no see!\" El otro sonríe: \"Yeah, it's been a long time!\""
+    },
+    {
+      "number": 9,
+      "function": "known_person",
+      "en": "Tom sees his coworker at the grocery store. He says, \"Good to see you, Anna!\" She replies, \"Good to see you too, Tom!\"",
+      "es": "Tom ve a su compañera de trabajo en la tienda. Él dice: \"Good to see you, Anna!\" Ella responde: \"Good to see you too, Tom!\""
+    },
+    {
+      "number": 10,
+      "function": "casual_greeting",
+      "en": "For casual greetings, people often say, \"Hi,\" \"Hello,\" or simply \"Hey\" to friends and neighbors.",
+      "es": "Para saludos informales, la gente suele decir \"Hi\", \"Hello\" o simplemente \"Hey\" a amigos y vecinos."
+    },
+    {
+      "number": 11,
+      "function": "phone_greeting",
+      "en": "Answering the phone in America, people usually say, \"Hello?\" or state their name, like \"This is Jake.\"",
+      "es": "Al contestar el teléfono en Estados Unidos, la gente suele decir \"Hello?\" o decir su nombre, como \"This is Jake.\""
+    },
+    {
+      "number": 12,
+      "function": "welcoming",
+      "en": "When hosting, it is polite to say, \"Welcome! Come in!\" This makes guests feel comfortable.",
+      "es": "Cuando recibes invitados, es cortés decir, \"Welcome! Come in!\" Esto hace que los invitados se sientan cómodos."
+    },
+    {
+      "number": 13,
+      "function": "office_politeness",
+      "en": "In meetings, a polite greeting is \"Good morning, everyone.\" This sets a positive tone.",
+      "es": "En reuniones, un saludo educado es \"Good morning, everyone.\" Esto crea un ambiente positivo."
+    },
+    {
+      "number": 14,
+      "function": "how_are_you_natural_response",
+      "en": "After \"How are you?\", it's normal to answer, \"I'm good, thanks. And you?\" This keeps the conversation comfortable.",
+      "es": "Después de \"How are you?\", es normal responder, \"I'm good, thanks. And you?\" Así la conversación es amena."
+    },
+    {
+      "number": 15,
+      "function": "whats_up_informal_response",
+      "en": "\"What's up?\" is informal. Friends usually answer, \"Not much,\" or \"Just working,\" before asking it back.",
+      "es": "\"What's up?\" es informal. Los amigos suelen responder, \"Not much,\" o \"Just working,\" antes de devolver la pregunta."
+    },
+    {
+      "number": 16,
+      "function": "arriving_class",
+      "en": "Arriving late to class, Lisa quietly says, \"Hi, sorry I'm late.\" The teacher replies, \"No problem, Lisa. Find a seat.\"",
+      "es": "Al llegar tarde a clase, Lisa dice en voz baja: \"Hi, sorry I'm late.\" La profesora responde: \"No problem, Lisa. Find a seat.\""
+    },
+    {
+      "number": 17,
+      "function": "leaving_work",
+      "en": "At the end of the workday, colleagues say, \"Have a good day!\" or \"See you later!\" before leaving.",
+      "es": "Al final de la jornada laboral, los compañeros se despiden con \"Have a good day!\" o \"See you later!\" antes de irse."
+    },
+    {
+      "number": 18,
+      "function": "farewell_take_care",
+      "en": "When saying goodbye, some people say, \"Take care!\" This shows that you wish someone well.",
+      "es": "Al despedirse, algunas personas dicen, \"Take care!\" Esto demuestra que deseas lo mejor al otro."
+    },
+    {
+      "number": 19,
+      "function": "meeting_new_coworker",
+      "en": "A new coworker joins the team. Sam introduces himself: \"Hi, I'm Sam. Welcome to the team!\"",
+      "es": "Un nuevo compañero se une al equipo. Sam se presenta: \"Hi, I'm Sam. Welcome to the team!\""
+    },
+    {
+      "number": 20,
+      "function": "greeting_practice",
+      "en": "Practicing greetings daily can help you sound friendly and confident in American English.",
+      "es": "Practicar los saludos a diario puede ayudarte a sonar amable y seguro en inglés americano."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Time-of-day greetings",
+      "example_en": "Early in the office, Olivia greets her manager with \"Good morning.\" The manager replies, \"Good morning, Olivia. How are you?\" Olivia answers, \"I'm good, thanks.\"",
+      "explanation_es": "Good morning, good afternoon y good evening son saludos que se eligen según el momento del día.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Good night as a farewell",
+      "example_en": "When Sarah leaves her friend's house late, she says, \"Good night!\" Her friend waves and says, \"Good night, see you soon!\"",
+      "explanation_es": "Good night se usa al despedirse por la noche o antes de dormir, no como saludo habitual al llegar.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "How questions with be",
+      "example_en": "Early in the office, Olivia greets her manager with \"Good morning.\" The manager replies, \"Good morning, Olivia. How are you?\" Olivia answers, \"I'm good, thanks.\"",
+      "explanation_es": "En How are you, are va antes de you para formar la pregunta con how y be.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Informal fixed question",
+      "example_en": "On a city sidewalk, two young men see each other. One says, \"Hey, what's up?\" The other replies, \"Not much. How's it going?\"",
+      "explanation_es": "What’s up? es una fórmula informal entre amigos o personas de confianza; una respuesta breve común es Not much.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "To-infinitive in a fixed greeting",
+      "example_en": "At a party, two women meet for the first time. One says, \"Hi, I'm Carla.\" The other responds, \"Nice to meet you, Carla. I'm Julia.\"",
+      "explanation_es": "Nice to meet you contiene el infinitivo to meet y se usa normalmente al conocer a alguien por primera vez.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Polite imperative",
+      "example_en": "When saying goodbye, some people say, \"Take care!\" This shows that you wish someone well.",
+      "explanation_es": "Take care usa un imperativo como despedida amistosa, con el sentido de «cuídate».",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Fixed farewell with see",
+      "example_en": "At the end of the workday, colleagues say, \"Have a good day!\" or \"See you later!\" before leaving.",
+      "explanation_es": "See you later es una fórmula fija de despedida; no es necesario decir una oración completa como I’ll see you later.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Welcoming expressions",
+      "example_en": "When hosting, it is polite to say, \"Welcome! Come in!\" This makes guests feel comfortable.",
+      "explanation_es": "Welcome se utiliza para recibir a alguien. Según el contexto puede acompañarse de una invitación como Please come in.",
+      "source_paragraph": 12
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "How are you?",
+      "meaning_es": "¿Cómo estás?",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Nice to meet you",
+      "meaning_es": "Mucho gusto",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Good to see you",
+      "meaning_es": "Me alegra verte",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "What's up?",
+      "meaning_es": "¿Qué hay? / ¿Qué pasa?",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Long time no see",
+      "meaning_es": "Cuánto tiempo sin verte",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Welcome! Come in!",
+      "meaning_es": "¡Bienvenido! Adelante",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "See you later!",
+      "meaning_es": "¡Hasta luego!",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "Take care!",
+      "meaning_es": "Cuídate",
+      "source_paragraph": 18
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica con los siguientes fragmentos exactamente como están. Haz una pausa corta entre cada barra.",
+        "chunks": [
+          {
+            "source_paragraph": 3,
+            "segments": [
+              "Early in the office,",
+              "Olivia greets her manager with \"Good morning.\"",
+              "The manager replies,",
+              "\"Good morning, Olivia. How are you?\"",
+              "Olivia answers,",
+              "\"I'm good, thanks.\""
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "In a coffee shop,",
+              "old friends run into each other.",
+              "One says, \"Long time no see!\"",
+              "The other grins,",
+              "\"Yeah, it's been a long time!\""
+            ]
+          },
+          {
+            "source_paragraph": 17,
+            "segments": [
+              "At the end of the workday,",
+              "colleagues say,",
+              "\"Have a good day!\" or \"See you later!\"",
+              "before leaving."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos sin detenerte en cada palabra. Concéntrate en ritmo y pronunciación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B1-021",
+    "number": "021",
+    "title_en": "Greetings",
+    "title_es": "Saludos",
+    "level": "B1",
+    "language": "Inglés americano",
+    "category_es": "Comunicación cotidiana",
+    "main_topic_es": "Intercambio de saludos en inglés americano en diversas situaciones reales.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Time-of-day greetings",
+      "Good night as a farewell",
+      "How questions with be",
+      "Informal fixed question",
+      "To-infinitive in a fixed greeting",
+      "Polite imperative",
+      "Fixed farewell with see",
+      "Welcoming expressions"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 30
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "text": "Last time, I forgot napkins. I want to remember them now.",
+  "duration": 4.989999771118164,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.5400000214576721,
+      "end": 0.9399999976158142
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.2599999904632568,
+      "end": 1.5
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.5,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 1.8799999952316284,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 29,
+      "length": 1,
+      "start": 3.140000104904175,
+      "end": 3.359999895095825
+    },
+    {
+      "location": 31,
+      "length": 4,
+      "start": 3.359999895095825,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 3.559999942779541,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 39,
+      "length": 8,
+      "start": 4.059999942779541,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.059999942779541,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 4.28000020980835,
+      "end": 4.579999923706055
+    }
+  ]
+}

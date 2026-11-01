@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-017",
+  "number": 17,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Choosing a Course",
+    "es": "Elegir un curso"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Comparing courses, asking about fit, support, and time, choosing the best option.",
+    "es": "Comparar cursos, preguntar sobre compatibilidad, apoyo y tiempo, elegir la mejor opción."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Dos adultos conversan en una oficina mientras revisan folletos de cursos en diferentes formatos.",
+    "prompt": "Editorial photograph: two adults in an office, reviewing course brochures together, one looking at a computer, various education materials on table, bright natural light, 16:9 horizontal, no visible text.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Usar frases cortas para decir por qué quieres tomar un curso.",
+    "Hacer preguntas simples sobre horarios y apoyo.",
+    "Comparar dos formatos de curso (presencial y en línea).",
+    "Decidir qué curso es mejor para ti y decir por qué.",
+    "Practicar lectura, comprensión y repetición de frases clave."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I want to learn new things this year.",
+      "es": "Quiero aprender cosas nuevas este año."
+    },
+    {
+      "number": 2,
+      "function": "context",
+      "en": "Emily is my friend. She takes many classes.",
+      "es": "Emily es mi amiga. Ella toma muchas clases."
+    },
+    {
+      "number": 3,
+      "function": "choice",
+      "en": "Emily tells me about two courses.",
+      "es": "Emily me habla de dos cursos."
+    },
+    {
+      "number": 4,
+      "function": "setting",
+      "en": "One course has classes on Saturday at the school.",
+      "es": "Un curso tiene clases los sábados en la escuela."
+    },
+    {
+      "number": 5,
+      "function": "setting",
+      "en": "The other course is online. I can study any time.",
+      "es": "El otro curso es en línea. Puedo estudiar en cualquier momento."
+    },
+    {
+      "number": 6,
+      "function": "preference",
+      "en": "I like to study with people in a room.",
+      "es": "Me gusta estudiar con personas en un salón."
+    },
+    {
+      "number": 7,
+      "function": "preference",
+      "en": "But sometimes I am busy on weekends.",
+      "es": "Pero a veces estoy ocupado los fines de semana."
+    },
+    {
+      "number": 8,
+      "function": "background",
+      "en": "Last year, I took night classes. I felt very tired.",
+      "es": "El año pasado, tomé clases nocturnas. Me sentía muy cansado."
+    },
+    {
+      "number": 9,
+      "function": "question",
+      "en": "I ask both places: Do you help students during the course?",
+      "es": "Pregunto en ambos lugares: ¿Ayudan a los estudiantes durante el curso?"
+    },
+    {
+      "number": 10,
+      "function": "reply",
+      "en": "The school says: Teachers are here before and after class.",
+      "es": "La escuela dice: Los profesores están aquí antes y después de la clase."
+    },
+    {
+      "number": 11,
+      "function": "reply",
+      "en": "The online course says: We have a chat and video calls to help you.",
+      "es": "El curso en línea dice: Tenemos chat y videollamadas para ayudarte."
+    },
+    {
+      "number": 12,
+      "function": "opinion",
+      "en": "The online course sounds easy for my time. But I want to meet people.",
+      "es": "El curso en línea parece fácil para mi tiempo. Pero quiero conocer personas."
+    },
+    {
+      "number": 13,
+      "function": "memory",
+      "en": "I remember: My last online class had little help.",
+      "es": "Recuerdo: Mi última clase en línea tenía poca ayuda."
+    },
+    {
+      "number": 14,
+      "function": "reflection",
+      "en": "This time, I want clear support. I ask for more information.",
+      "es": "Esta vez, quiero apoyo claro. Pido más información."
+    },
+    {
+      "number": 15,
+      "function": "call",
+      "en": "I call the school. Can I visit a class before I choose?",
+      "es": "Llamo a la escuela. ¿Puedo visitar una clase antes de decidir?"
+    },
+    {
+      "number": 16,
+      "function": "answer",
+      "en": "Yes, you can try a class on Saturday. It is free.",
+      "es": "Sí, puedes probar una clase el sábado. Es gratis."
+    },
+    {
+      "number": 17,
+      "function": "decision",
+      "en": "Now I must think about my time. I work from Monday to Friday.",
+      "es": "Ahora debo pensar en mi tiempo. Trabajo de lunes a viernes."
+    },
+    {
+      "number": 18,
+      "function": "plan",
+      "en": "I do not want too much homework in the evenings.",
+      "es": "No quiero demasiada tarea por las noches."
+    },
+    {
+      "number": 19,
+      "function": "choice",
+      "en": "I choose the Saturday class. I want to learn with a teacher and friends.",
+      "es": "Elijo la clase de los sábados. Quiero aprender con un profesor y amigos."
+    },
+    {
+      "number": 20,
+      "function": "result",
+      "en": "Next month, I will start my new class. I feel happy about my choice.",
+      "es": "El mes que viene, empezaré mi nueva clase. Me siento feliz con mi elección."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last year, I took night classes. I felt very tired.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "I do not want too much homework in the evenings.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next month, I will start my new class. I feel happy about my choice.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Can",
+      "example_en": "The other course is online. I can study any time.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I want to learn new things this year.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to learn new things this year.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I want to learn new things this year.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Emily is my friend. She takes many classes.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I want to learn new things this year.",
+      "meaning_es": "Quiero aprender cosas nuevas este año.",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "She takes many classes.",
+      "meaning_es": "Ella toma muchas clases.",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "I like to study with people in a room.",
+      "meaning_es": "Me gusta estudiar con personas en un salón.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I am busy on weekends.",
+      "meaning_es": "Estoy ocupado los fines de semana.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Do you help students during the course?",
+      "meaning_es": "¿Ayudan a los estudiantes durante el curso?",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Teachers are here before and after class.",
+      "meaning_es": "Los profesores están aquí antes y después de la clase.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Can I visit a class before I choose?",
+      "meaning_es": "¿Puedo visitar una clase antes de decidir?",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "I want to learn with a teacher and friends.",
+      "meaning_es": "Quiero aprender con un profesor y amigos.",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés. Consulta la traducción en español si la necesitas. Repite cada uno dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pequeñas pausas. Cada fragmento es parte de un párrafo.",
+        "chunks": [
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "The other course is online.",
+              "I can study any time."
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "The school says:",
+              "Teachers are here before and after class."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "I choose the Saturday class.",
+              "I want to learn with a teacher and friends."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee todos los veinte párrafos en inglés, uno tras otro, sin detenerte mucho. Intenta leer con claridad y buena pronunciación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-017",
+    "number": "017",
+    "title_en": "Choosing a Course",
+    "title_es": "Elegir un curso",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Comparar cursos, preguntar sobre compatibilidad, apoyo y tiempo, elegir la mejor opción.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

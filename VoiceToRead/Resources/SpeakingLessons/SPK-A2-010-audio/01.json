@@ -1,0 +1,96 @@
+{
+  "text": "Every day, I use my phone for many things, like reading messages and checking reminders.",
+  "duration": 7.579999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 3,
+      "start": 0.5,
+      "end": 0.8600000143051147
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 0.8799999952316284,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 17,
+      "length": 2,
+      "start": 1.8200000524520874,
+      "end": 2.140000104904175
+    },
+    {
+      "location": 20,
+      "length": 5,
+      "start": 2.140000104904175,
+      "end": 2.4000000953674316
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.4000000953674316,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 3.0999999046325684,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 4.059999942779541,
+      "end": 4.260000228881836
+    },
+    {
+      "location": 48,
+      "length": 7,
+      "start": 4.260000228881836,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 56,
+      "length": 8,
+      "start": 4.619999885559082,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 65,
+      "length": 3,
+      "start": 5.179999828338623,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 69,
+      "length": 8,
+      "start": 5.78000020980835,
+      "end": 6.119999885559082
+    },
+    {
+      "location": 78,
+      "length": 9,
+      "start": 6.119999885559082,
+      "end": 6.619999885559082
+    }
+  ]
+}

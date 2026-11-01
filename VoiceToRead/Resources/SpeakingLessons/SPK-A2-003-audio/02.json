@@ -1,0 +1,60 @@
+{
+  "text": "I want to make an appointment for this week.",
+  "duration": 3.259999990463257,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 0.7200000286102295,
+      "end": 1.0
+    },
+    {
+      "location": 10,
+      "length": 4,
+      "start": 1.0,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.059999942779541,
+      "end": 1.3200000524520874
+    },
+    {
+      "location": 18,
+      "length": 11,
+      "start": 1.3200000524520874,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 34,
+      "length": 4,
+      "start": 2.200000047683716,
+      "end": 2.5
+    },
+    {
+      "location": 39,
+      "length": 4,
+      "start": 2.5,
+      "end": 2.740000009536743
+    }
+  ]
+}

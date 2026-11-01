@@ -1,0 +1,90 @@
+{
+  "text": "That was perfect, so I thanked the waiter for explaining and helping me decide.",
+  "duration": 6.400000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 5,
+      "length": 3,
+      "start": 0.5199999809265137,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 9,
+      "length": 7,
+      "start": 1.1200000047683716,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 18,
+      "length": 2,
+      "start": 2.4000000953674316,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 21,
+      "length": 1,
+      "start": 2.4600000381469727,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 23,
+      "length": 7,
+      "start": 2.880000114440918,
+      "end": 3.0
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 3.0,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 3.380000114440918,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.4600000381469727,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 46,
+      "length": 10,
+      "start": 3.740000009536743,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.320000171661377,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 61,
+      "length": 7,
+      "start": 4.940000057220459,
+      "end": 5.239999771118164
+    },
+    {
+      "location": 69,
+      "length": 2,
+      "start": 5.239999771118164,
+      "end": 5.539999961853027
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 5.539999961853027,
+      "end": 5.960000038146973
+    }
+  ]
+}

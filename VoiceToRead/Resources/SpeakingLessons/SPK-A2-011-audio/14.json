@@ -1,0 +1,96 @@
+{
+  "text": "While we waited, I hoped the salad would taste fresh because I was very hungry.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 2,
+      "start": 0.5,
+      "end": 1.0399999618530273
+    },
+    {
+      "location": 9,
+      "length": 6,
+      "start": 1.0399999618530273,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 17,
+      "length": 1,
+      "start": 1.7799999713897705,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 2.640000104904175,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.640000104904175,
+      "end": 3.0999999046325684
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 3.0999999046325684,
+      "end": 3.4600000381469727
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 3.4600000381469727,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.799999952316284,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 4.139999866485596,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 4.760000228881836,
+      "end": 5.659999847412109
+    },
+    {
+      "location": 61,
+      "length": 1,
+      "start": 5.659999847412109,
+      "end": 6.039999961853027
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 6.039999961853027,
+      "end": 6.300000190734863
+    },
+    {
+      "location": 67,
+      "length": 4,
+      "start": 6.300000190734863,
+      "end": 6.760000228881836
+    },
+    {
+      "location": 72,
+      "length": 6,
+      "start": 6.760000228881836,
+      "end": 7.079999923706055
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-019",
+  "number": 19,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Working Together on a Deadline",
+    "es": "Trabajar juntos con una fecha límite"
+  },
+  "category": {
+    "en": "Work and Collaboration",
+    "es": "Trabajo y colaboración"
+  },
+  "main_topic": {
+    "en": "A small collaborative project with a deadline; clarify roles, communicate progress, and agree on the scope without overpromising.",
+    "es": "Un pequeño proyecto colaborativo con fecha límite; aclarar roles, comunicar avances y acordar el alcance sin prometer de más."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Dos colegas trabajando juntos en una mesa con computadora portátil, papeles y una pizarra con notas, en ambiente de oficina.",
+    "prompt": "Editorial photo, two adults working together at a table in a modern office, laptop, papers, whiteboard with sticky notes, collaborative teamwork, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir la experiencia de trabajar en equipo con una fecha límite.",
+    "Decidir y aclarar quién hace cada tarea.",
+    "Pedir ayuda y comunicar avances en inglés simple.",
+    "Expresar límites y promesas razonables.",
+    "Practicar comprensión lectora y repetición oral con frases cortas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, my boss asked if I could help make a team presentation before Friday.",
+      "es": "La semana pasada, mi jefe me pidió si podía ayudar a hacer una presentación de equipo antes del viernes."
+    },
+    {
+      "number": 2,
+      "function": "agreement",
+      "en": "I said yes, but I also told him I had another project to finish this week.",
+      "es": "Dije que sí, pero también le dije que tenía otro proyecto que terminar esta semana."
+    },
+    {
+      "number": 3,
+      "function": "team_assembly",
+      "en": "Anna and Luis joined the team. We met on Monday to talk about the work and who does what.",
+      "es": "Anna y Luis se unieron al equipo. Nos reunimos el lunes para hablar del trabajo y quién hace cada cosa."
+    },
+    {
+      "number": 4,
+      "function": "clarification",
+      "en": "In our first meeting, I asked if someone could make the slides because I needed more time for the report.",
+      "es": "En nuestra primera reunión, pregunté si alguien podía hacer las diapositivas porque necesitaba más tiempo para el informe."
+    },
+    {
+      "number": 5,
+      "function": "current_tasks",
+      "en": "Anna said she would write an outline and send us the first draft by Tuesday night.",
+      "es": "Anna dijo que escribiría un esquema y nos enviaría el primer borrador para el martes por la noche."
+    },
+    {
+      "number": 6,
+      "function": "roles_confirmation",
+      "en": "Luis agreed to make the slides, so I felt less stressed and could do my part well.",
+      "es": "Luis aceptó hacer las diapositivas, así que me sentí menos estresado y pude hacer bien mi parte."
+    },
+    {
+      "number": 7,
+      "function": "communication",
+      "en": "We decided to give each other progress updates every morning before work.",
+      "es": "Decidimos darnos actualizaciones de avances cada mañana antes de trabajar."
+    },
+    {
+      "number": 8,
+      "function": "progress_update",
+      "en": "On Tuesday, I finished my report and let the team know, so they could see we were doing well.",
+      "es": "El martes, terminé mi informe y se lo conté al equipo, así podían ver que íbamos bien."
+    },
+    {
+      "number": 9,
+      "function": "tension",
+      "en": "But Anna told us her outline was taking more time, so she might need help with the sections.",
+      "es": "Pero Anna nos dijo que su esquema tomaba más tiempo, así que podría necesitar ayuda con las secciones."
+    },
+    {
+      "number": 10,
+      "function": "suggestion",
+      "en": "Luis suggested we all meet for fifteen minutes that afternoon to organize the main points together.",
+      "es": "Luis sugirió que nos reuniéramos todos quince minutos esa tarde para organizar los puntos principales juntos."
+    },
+    {
+      "number": 11,
+      "function": "experience",
+      "en": "I usually try to do everything myself, but this time I learned it is better to ask for help early.",
+      "es": "Normalmente intento hacerlo todo solo, pero esta vez aprendí que es mejor pedir ayuda pronto."
+    },
+    {
+      "number": 12,
+      "function": "solution",
+      "en": "After our group call, Anna felt better, and we all agreed on which points were the most important.",
+      "es": "Después de la llamada grupal, Anna se sintió mejor y todos estuvimos de acuerdo en cuáles puntos eran los más importantes."
+    },
+    {
+      "number": 13,
+      "function": "boundaries",
+      "en": "We talked about what we could finish before Friday instead of promising extra work we could not do.",
+      "es": "Hablamos sobre lo que sí podíamos terminar antes del viernes, en vez de prometer trabajo extra que no podíamos hacer."
+    },
+    {
+      "number": 14,
+      "function": "middle_update",
+      "en": "On Wednesday, Luis finished most slides, but wanted feedback before adding final pictures.",
+      "es": "El miércoles, Luis terminó casi todas las diapositivas, pero quería comentarios antes de poner las imágenes finales."
+    },
+    {
+      "number": 15,
+      "function": "check-in",
+      "en": "We shared updates and checked materials in our group chat, which made changes easier.",
+      "es": "Compartimos avances y revisamos materiales en el chat grupal, lo que hizo más fáciles los cambios."
+    },
+    {
+      "number": 16,
+      "function": "unexpected_issue",
+      "en": "On Thursday, Anna noticed she forgot a new client request, but she told us right away.",
+      "es": "El jueves, Anna notó que olvidó una nueva petición del cliente, pero nos lo dijo de inmediato."
+    },
+    {
+      "number": 17,
+      "function": "prioritization",
+      "en": "We agreed to add the new section, but only changed what was possible, not important things.",
+      "es": "Acordamos agregar la nueva sección, pero solo cambiamos lo que fue posible, no cosas importantes."
+    },
+    {
+      "number": 18,
+      "function": "outcome",
+      "en": "On Friday morning, the three of us checked all the details together before sending it to the boss.",
+      "es": "El viernes por la mañana, los tres revisamos todos los detalles juntos antes de enviarlo al jefe."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "We could have tried to do more, but we finished every part and the client was happy.",
+      "es": "Pudimos haber intentado hacer más, pero terminamos cada parte y el cliente quedó contento."
+    },
+    {
+      "number": 20,
+      "function": "learning",
+      "en": "Next time, I will talk about deadlines at the start and remind the team not to promise too much.",
+      "es": "La próxima vez, hablaré de los plazos desde el principio y recordaré al equipo que no prometa demasiado."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous",
+      "example_en": "On Tuesday, I finished my report and let the team know, so they could see we were doing well.",
+      "explanation_es": "Was o were seguidos de un verbo en -ing presentan una actividad que estaba en curso en el pasado.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Past simple",
+      "example_en": "I said yes, but I also told him I had another project to finish this week.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next time, I will talk about deadlines at the start and remind the team not to promise too much.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Could",
+      "example_en": "Last week, my boss asked if I could help make a team presentation before Friday.",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last week, my boss asked if I could help make a team presentation before Friday.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Last week, my boss asked if I could help make a team presentation before Friday.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "Last week, my boss asked if I could help make a team presentation before Friday.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "Anna and Luis joined the team. We met on Monday to talk about the work and who does what.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 3
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I said yes, but I also told him I had another project to finish this week.",
+      "meaning_es": "Acepté, pero también le dije que tenía otro proyecto que terminar esta semana.",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "We met on Monday to talk about the work and who does what.",
+      "meaning_es": "Nos reunimos el lunes para hablar del trabajo y quién hace cada cosa.",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "I asked if someone could make the slides because I needed more time for the report.",
+      "meaning_es": "Pregunté si alguien podía hacer las diapositivas porque necesitaba más tiempo para el informe.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Luis agreed to make the slides, so I felt less stressed and could do my part well.",
+      "meaning_es": "Luis aceptó hacer las diapositivas, así que me sentí menos estresado y pude hacer bien mi parte.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "We decided to give each other progress updates every morning before work.",
+      "meaning_es": "Decidimos darnos actualizaciones de avances cada mañana antes de trabajar.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "But Anna told us her outline was taking more time, so she might need help with the sections.",
+      "meaning_es": "Pero Anna nos dijo que su esquema tomaba más tiempo, así que podría necesitar ayuda con las secciones.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "We talked about what we could finish before Friday instead of promising extra work we could not do.",
+      "meaning_es": "Hablamos sobre lo que sí podíamos terminar antes del viernes, en vez de prometer trabajo extra que no podíamos hacer.",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "We could have tried to do more, but we finished every part and the client was happy.",
+      "meaning_es": "Pudimos haber intentado hacer más, pero terminamos cada parte y el cliente quedó contento.",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica estos fragmentos cortos. Descansa un momento entre pausas marcadas por la barra.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "In our first meeting, I asked if someone could make the slides because I needed more time for the report."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "We talked about what we could finish before Friday instead of promising extra work we could not do."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "We could have tried to do more, but we finished every part and the client was happy."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee todos los veinte párrafos en voz alta sin detenerte en cada palabra. Enfócate en la claridad y la entonación natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-019",
+    "number": "019",
+    "title_en": "Working Together on a Deadline",
+    "title_es": "Trabajar juntos con una fecha límite",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y colaboración",
+    "main_topic_es": "Un pequeño proyecto colaborativo con fecha límite; aclarar roles, comunicar avances y acordar el alcance sin prometer de más.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous",
+      "Past simple",
+      "Will for future reference",
+      "Could",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

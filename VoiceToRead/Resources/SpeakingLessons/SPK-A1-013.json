@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-013",
+  "number": 13,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Planning a Celebration",
+    "es": "Organizar una celebración"
+  },
+  "category": {
+    "en": "Everyday Life",
+    "es": "Vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Agreeing on a small celebration, deciding guests, assigning tasks, and discussing practical limits.",
+    "es": "Poner de acuerdo sobre una pequeña celebración, decidir invitados, asignar tareas y hablar de límites prácticos."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Grupo diverso de adultos planificando juntos una pequeña celebración, sentados alrededor de una mesa con blocs de notas y teléfonos.",
+    "prompt": "A realistic editorial photograph of a diverse group of adults planning a small celebration, seated around a table with notebooks, coffee, and smartphones, casual daylight setting. No visible text. Horizontal 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hablar sobre la planificación de una celebración sencilla.",
+    "Usar frases para sugerir ideas y mostrar acuerdo.",
+    "Decidir quién invitar y compartir tareas básicas.",
+    "Reconocer y expresar límites prácticos (espacio, tiempo, dinero).",
+    "Practicar la lectura y repetición de frases simples en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last week, my friends and I talked about a celebration.",
+      "es": "La semana pasada, mis amigos y yo hablamos sobre una celebración."
+    },
+    {
+      "number": 2,
+      "function": "invitation",
+      "en": "Ben said, \"Let’s meet after work for pizza and cake.\"",
+      "es": "Ben dijo: «Reunámonos después del trabajo para comer pizza y pastel»."
+    },
+    {
+      "number": 3,
+      "function": "agreement",
+      "en": "We all liked the idea. A small party is nice.",
+      "es": "A todos nos gustó la idea. Una fiesta pequeña está bien."
+    },
+    {
+      "number": 4,
+      "function": "past_experience",
+      "en": "Our last party was very busy. Many people felt tired.",
+      "es": "Nuestra última fiesta estuvo muy llena. Muchas personas se sintieron cansadas."
+    },
+    {
+      "number": 5,
+      "function": "practical_limit",
+      "en": "Sarah said, \"Let’s keep the guest list short. The office is small.\"",
+      "es": "Sarah dijo: «Mantengamos la lista de invitados corta. La oficina es pequeña»."
+    },
+    {
+      "number": 6,
+      "function": "decision",
+      "en": "We want only our team and the manager at the party.",
+      "es": "Queremos solo a nuestro equipo y al gerente en la fiesta."
+    },
+    {
+      "number": 7,
+      "function": "suggestion",
+      "en": "David asked, \"Do we need many decorations or just a few?\"",
+      "es": "David preguntó: «¿Necesitamos muchas decoraciones o solo unas pocas?»"
+    },
+    {
+      "number": 8,
+      "function": "agreement_simple",
+      "en": "Most people said, \"Some balloons and a sign are enough.\"",
+      "es": "La mayoría dijo: «Algunos globos y un letrero son suficientes»."
+    },
+    {
+      "number": 9,
+      "function": "task_assignment",
+      "en": "I will get the pizza and pick up the cake.",
+      "es": "Voy a comprar la pizza y recoger el pastel."
+    },
+    {
+      "number": 10,
+      "function": "task_assignment",
+      "en": "Sarah can buy drinks and napkins.",
+      "es": "Sarah puede comprar bebidas y servilletas."
+    },
+    {
+      "number": 11,
+      "function": "resource_check",
+      "en": "Someone said, \"Do we need to bring plates and cups?\"",
+      "es": "Alguien dijo: «¿Necesitamos llevar platos y vasos?»"
+    },
+    {
+      "number": 12,
+      "function": "tension_budget",
+      "en": "Ben said, \"Let’s set a budget. We pay for the party.\"",
+      "es": "Ben dijo: «Fijemos un presupuesto. Nosotros pagamos la fiesta.»"
+    },
+    {
+      "number": 13,
+      "function": "solution_budget",
+      "en": "We all give a few dollars. I write down the costs.",
+      "es": "Todos damos unos pocos dólares. Yo anoto los gastos."
+    },
+    {
+      "number": 14,
+      "function": "expectation",
+      "en": "This time, everyone helps. No one does everything alone.",
+      "es": "Esta vez, todos ayudan. Nadie hace todo solo."
+    },
+    {
+      "number": 15,
+      "function": "memory",
+      "en": "Last time, I forgot napkins. I want to remember them now.",
+      "es": "La vez pasada olvidé las servilletas. Ahora quiero recordarlas."
+    },
+    {
+      "number": 16,
+      "function": "final_agreement",
+      "en": "We check the plan together. Everyone knows their job.",
+      "es": "Revisamos el plan juntos. Todos saben su tarea."
+    },
+    {
+      "number": 17,
+      "function": "doubt",
+      "en": "Someone said, \"The manager may leave early.\"",
+      "es": "Alguien dijo: «El gerente puede irse temprano»."
+    },
+    {
+      "number": 18,
+      "function": "anticipation",
+      "en": "We will start after work. We feel happy to celebrate.",
+      "es": "Empezaremos después del trabajo. Nos alegra celebrar."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "A small celebration is nice because we all plan it.",
+      "es": "Una celebración pequeña es buena porque todos la planeamos."
+    },
+    {
+      "number": 20,
+      "function": "result",
+      "en": "We work together and make a simple, good plan.",
+      "es": "Trabajamos juntos y hacemos un plan sencillo y bueno."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Will for future reference",
+      "example_en": "I will get the pizza and pick up the cake.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Can",
+      "example_en": "Sarah can buy drinks and napkins.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Present simple",
+      "example_en": "We want only our team and the manager at the party.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Someone said, \"Do we need to bring plates and cups?\"",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last week, my friends and I talked about a celebration.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Last week, my friends and I talked about a celebration.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "Last week, my friends and I talked about a celebration.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "We all liked the idea. A small party is nice.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 3
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Let’s meet after work for pizza and cake.",
+      "meaning_es": "Reunámonos después del trabajo para comer pizza y pastel.",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "A small party is nice.",
+      "meaning_es": "Una fiesta pequeña está bien.",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Let’s keep the guest list short.",
+      "meaning_es": "Mantengamos la lista de invitados corta.",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Do we need many decorations or just a few?",
+      "meaning_es": "¿Necesitamos muchas decoraciones o solo unas pocas?",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Some balloons and a sign are enough.",
+      "meaning_es": "Algunos globos y un cartel son suficientes.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Sarah can buy drinks and napkins.",
+      "meaning_es": "Sarah puede comprar bebidas y servilletas.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Do we need to bring plates and cups?",
+      "meaning_es": "¿Necesitamos llevar platos y vasos?",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Let’s set a budget.",
+      "meaning_es": "Fijemos un presupuesto.",
+      "source_paragraph": 12
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "Ben said,",
+              "\"Let’s meet after work for pizza and cake.\""
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "Ben said,",
+              "\"Let’s set a budget.",
+              "We pay for the party.\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "We work together",
+              "and make a simple, good plan."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-013",
+    "number": "013",
+    "title_en": "Planning a Celebration",
+    "title_es": "Organizar una celebración",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana",
+    "main_topic_es": "Poner de acuerdo sobre una pequeña celebración, decidir invitados, asignar tareas y hablar de límites prácticos.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "text": "Then, I drink a glass of water and eat a small breakfast before I leave home.",
+  "duration": 5.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 1,
+      "start": 0.699999988079071,
+      "end": 1.0
+    },
+    {
+      "location": 8,
+      "length": 5,
+      "start": 1.0,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 14,
+      "length": 1,
+      "start": 1.1799999475479126,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.659999966621399,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 22,
+      "length": 2,
+      "start": 1.659999966621399,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 25,
+      "length": 5,
+      "start": 2.2200000286102295,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 31,
+      "length": 3,
+      "start": 2.2200000286102295,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 2.759999990463257,
+      "end": 2.940000057220459
+    },
+    {
+      "location": 39,
+      "length": 1,
+      "start": 2.940000057220459,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 41,
+      "length": 5,
+      "start": 3.1600000858306885,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 47,
+      "length": 9,
+      "start": 3.4800000190734863,
+      "end": 4.019999980926514
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 4.019999980926514,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 64,
+      "length": 1,
+      "start": 4.539999961853027,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 66,
+      "length": 5,
+      "start": 4.920000076293945,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 72,
+      "length": 4,
+      "start": 4.980000019073486,
+      "end": 5.28000020980835
+    }
+  ]
+}

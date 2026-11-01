@@ -68,6 +68,13 @@ struct SpeakingLesson: Decodable, Identifiable {
 }
 
 enum SpeakingLessonCatalog {
+    static let levels = ["A1", "A2", "B1", "B2", "C1", "C2"]
+    /// Keep existing IDs stable. The new Greetings topic is first without renumbering content.
+    static func ordered(_ lessons: [SpeakingLesson], level: String) -> [SpeakingLesson] {
+        lessons.filter { $0.level == level }.sorted {
+            ($0.number == 21 ? 0 : $0.number) < ($1.number == 21 ? 0 : $1.number)
+        }
+    }
     static func load(bundle: Bundle = .main) throws -> [SpeakingLesson] {
         guard let index = bundle.url(forResource: "catalog", withExtension: "json", subdirectory: "SpeakingLessons") else {
             throw SpeakingLesson.Failure.missingResource

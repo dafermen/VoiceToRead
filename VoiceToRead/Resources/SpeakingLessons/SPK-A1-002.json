@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-002",
+  "number": 2,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "My Daily Routine",
+    "es": "Mi rutina diaria"
+  },
+  "category": {
+    "en": "Lifestyle and Habits",
+    "es": "Estilo de vida y hábitos"
+  },
+  "main_topic": {
+    "en": "Balancing daily responsibilities, habits, and realistic change in routine.",
+    "es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta equilibrando tareas diarias y hábitos en una rutina casera, ambiente tranquilo y organizando su día.",
+    "prompt": "Realistic editorial photograph, adult managing daily routine tasks and habits at home, calm environment, organizing day on planner, natural light, modern lifestyle, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Aprender vocabulario cotidiano de «Mi rutina diaria».",
+    "Comprender frases breves en una situación cotidiana.",
+    "Reconocer las estructuras básicas presentes en los ejemplos.",
+    "Relacionar las frases en inglés con su significado en español.",
+    "Practicar la lectura clara y la repetición de frases completas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "everyday communication",
+      "en": "I wake up at seven.",
+      "es": "Me despierto a las siete."
+    },
+    {
+      "number": 2,
+      "function": "everyday communication",
+      "en": "I get out of bed.",
+      "es": "Me levanto de la cama."
+    },
+    {
+      "number": 3,
+      "function": "everyday communication",
+      "en": "I wash my face.",
+      "es": "Me lavo la cara."
+    },
+    {
+      "number": 4,
+      "function": "everyday communication",
+      "en": "I make a simple breakfast.",
+      "es": "Preparo un desayuno sencillo."
+    },
+    {
+      "number": 5,
+      "function": "everyday communication",
+      "en": "I drink water and eat bread.",
+      "es": "Bebo agua y como pan."
+    },
+    {
+      "number": 6,
+      "function": "everyday communication",
+      "en": "My bag is on the chair.",
+      "es": "Mi bolso está en la silla."
+    },
+    {
+      "number": 7,
+      "function": "everyday communication",
+      "en": "I go to work at eight.",
+      "es": "Voy al trabajo a las ocho."
+    },
+    {
+      "number": 8,
+      "function": "everyday communication",
+      "en": "I say hello to my friends.",
+      "es": "Saludo a mis amigos."
+    },
+    {
+      "number": 9,
+      "function": "everyday communication",
+      "en": "We start work in the morning.",
+      "es": "Empezamos a trabajar por la mañana."
+    },
+    {
+      "number": 10,
+      "function": "everyday communication",
+      "en": "I write a list of tasks.",
+      "es": "Escribo una lista de tareas."
+    },
+    {
+      "number": 11,
+      "function": "everyday communication",
+      "en": "I do not work at night.",
+      "es": "No trabajo por la noche."
+    },
+    {
+      "number": 12,
+      "function": "everyday communication",
+      "en": "At noon, I have lunch.",
+      "es": "Al mediodía, almuerzo."
+    },
+    {
+      "number": 13,
+      "function": "everyday communication",
+      "en": "I can take a short break.",
+      "es": "Puedo tomar un descanso breve."
+    },
+    {
+      "number": 14,
+      "function": "everyday communication",
+      "en": "I call my family after work.",
+      "es": "Llamo a mi familia después del trabajo."
+    },
+    {
+      "number": 15,
+      "function": "everyday communication",
+      "en": "At home, I cook dinner.",
+      "es": "En casa, preparo la cena."
+    },
+    {
+      "number": 16,
+      "function": "everyday communication",
+      "en": "I eat with my family.",
+      "es": "Como con mi familia."
+    },
+    {
+      "number": 17,
+      "function": "everyday communication",
+      "en": "We talk about our day.",
+      "es": "Hablamos de nuestro día."
+    },
+    {
+      "number": 18,
+      "function": "everyday communication",
+      "en": "I read a book in bed.",
+      "es": "Leo un libro en la cama."
+    },
+    {
+      "number": 19,
+      "function": "everyday communication",
+      "en": "I am tired, but I am happy.",
+      "es": "Estoy cansado, pero estoy contento."
+    },
+    {
+      "number": 20,
+      "function": "everyday communication",
+      "en": "I go to bed at ten.",
+      "es": "Me acuesto a las diez."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "I do not work at night.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Can",
+      "example_en": "I can take a short break.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I wake up at seven.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I wake up at seven.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I wash my face.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "I make a simple breakfast.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Definite article",
+      "example_en": "My bag is on the chair.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "And to add information",
+      "example_en": "I drink water and eat bread.",
+      "explanation_es": "And une palabras, acciones o ideas que se añaden entre sí.",
+      "source_paragraph": 5
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I wake up at seven",
+      "meaning_es": "Me despierto a las siete",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "I get out of bed",
+      "meaning_es": "Me levanto de la cama",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "I wash my face",
+      "meaning_es": "Me lavo la cara",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "I make a simple breakfast",
+      "meaning_es": "Preparo un desayuno sencillo",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "I drink water and eat bread",
+      "meaning_es": "Bebo agua y como pan",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "My bag is on the chair",
+      "meaning_es": "Mi bolso está en la silla",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I go to work at eight",
+      "meaning_es": "Voy al trabajo a las ocho",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "I say hello to my friends",
+      "meaning_es": "Saludo a mis amigos",
+      "source_paragraph": 8
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I wake up at seven."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I go to work at eight."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "I can take a short break."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-002",
+    "number": "002",
+    "title_en": "My Daily Routine",
+    "title_es": "Mi rutina diaria",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Estilo de vida y hábitos",
+    "main_topic_es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article",
+      "And to add information"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

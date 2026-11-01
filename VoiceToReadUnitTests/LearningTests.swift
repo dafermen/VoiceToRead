@@ -626,3 +626,30 @@ extension LearningTests {
         XCTAssertEqual(expanded.phrases[0], corrected, "Editing phrases retains unchanged corrections")
     }
 }
+
+extension LearningTests {
+    func testPhraseTranslationEditPreservesOtherPhrasesAndRejectsStaleEdits() throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = try EnglishTrainingStore(directory: directory)
+        var training = try EnglishTraining.edited(title: "Paragraph edit", text: "Hola\nGracias")
+        training.phrases[0].english = "Hello"
+        training.phrases[1].english = "Thank you"
+        training.phrases[1].reviewed = true; training.phrases[1].needsPractice = false
+        training.showPracticeResponse = true
+        try store.save(training)
+        let original = training.phrases[0]
+        try store.savePhraseTranslation(training.id, original: original, text: "Good morning",
+            language: .spanish, targetLanguage: .english)
+        let saved = try XCTUnwrap(store.training(training.id))
+        XCTAssertEqual(saved.phrases[0].english, "Good morning")
+        XCTAssertEqual(saved.phrases[1], training.phrases[1])
+        XCTAssertTrue(saved.showPracticeResponse)
+        XCTAssertThrowsError(try store.savePhraseTranslation(training.id, original: original, text: "Stale correction",
+            language: .spanish, targetLanguage: .english))
+        XCTAssertEqual(store.training(training.id), saved)
+        XCTAssertThrowsError(try store.savePhraseTranslation(training.id, original: saved.phrases[0], text: "Wrong language",
+            language: .spanish, targetLanguage: .french))
+        XCTAssertEqual(store.training(training.id), saved)
+    }
+}

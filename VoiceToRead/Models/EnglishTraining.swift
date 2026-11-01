@@ -463,6 +463,19 @@ final class EnglishTrainingStore {
         }
         training.updatedAt = Date(); try save(training)
     }
+    func savePhraseTranslation(_ id: UUID, original: EnglishTrainingPhrase, text: String,
+                               language: CaptureLanguage, targetLanguage: CaptureLanguage) throws {
+        guard var current = training(id), current.sourceLanguage == language, current.targetLanguage == targetLanguage,
+              let index = current.phrases.firstIndex(where: { $0.id == original.id }), current.phrases[index] == original
+        else { throw EnglishTrainingFailure.changed }
+        guard text.count <= 1000 else { throw EnglishTrainingFailure.invalidTranslation }
+        let value = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard value != original.english else { return }
+        current.phrases[index].english = value
+        current.phrases[index].reviewed = false; current.phrases[index].needsPractice = true
+        current.updatedAt = Date()
+        try save(current)
+    }
     func acceptTranslation(_ id: UUID, source: [ReviewParagraph], responses: [ReviewParagraph],
                            language: CaptureLanguage = .spanish, targetLanguage: CaptureLanguage = .english,
                            replacing snapshot: EnglishTraining? = nil) throws {

@@ -1,0 +1,108 @@
+{
+  "text": "We learned that plans can change sometimes. It is important to stay calm and look for solutions.",
+  "duration": 7.699999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.41999998688697815,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.8199999928474426,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.2200000286102295,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 2.0
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.0,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 33,
+      "length": 9,
+      "start": 2.3399999141693115,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 3.819999933242798,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 3.8399999141693115,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 50,
+      "length": 9,
+      "start": 4.099999904632568,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 4.420000076293945,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 63,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 68,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.460000038146973
+    },
+    {
+      "location": 73,
+      "length": 3,
+      "start": 5.460000038146973,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 77,
+      "length": 4,
+      "start": 6.019999980926514,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 82,
+      "length": 3,
+      "start": 6.179999828338623,
+      "end": 6.5
+    },
+    {
+      "location": 86,
+      "length": 9,
+      "start": 6.5,
+      "end": 6.840000152587891
+    }
+  ]
+}

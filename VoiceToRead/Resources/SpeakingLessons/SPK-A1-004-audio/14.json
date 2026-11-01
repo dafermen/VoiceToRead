@@ -1,0 +1,48 @@
+{
+  "text": "The interviewer asks me about my experience.",
+  "duration": 3.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 4,
+      "length": 11,
+      "start": 0.4000000059604645,
+      "end": 1.1200000047683716
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.1200000047683716,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 21,
+      "length": 2,
+      "start": 1.2999999523162842,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 1.5800000429153442,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 30,
+      "length": 2,
+      "start": 1.8799999952316284,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 33,
+      "length": 10,
+      "start": 2.119999885559082,
+      "end": 2.880000114440918
+    }
+  ]
+}

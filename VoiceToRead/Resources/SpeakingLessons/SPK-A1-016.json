@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-016",
+  "number": 16,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Owning a Mistake and Making It Right",
+    "es": "Reconocer un error y repararlo"
+  },
+  "category": {
+    "en": "Work and Daily Life",
+    "es": "Trabajo y vida diaria"
+  },
+  "main_topic": {
+    "en": "Notice a real everyday mistake, say it clearly, listen, and help fix it.",
+    "es": "Detectar un error cotidiano, decirlo claramente, escuchar y ayudar a solucionarlo."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Dos compañeros de trabajo en oficina, uno ofrece disculpas mientras el otro escucha con atención, ambos junto a una computadora.",
+    "prompt": "Realistic editorial photograph, two adult coworkers in an office, one apologizing to the other seriously while sitting at a desk with a computer, neutral daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Reconocer y admitir un error sencillo en inglés.",
+    "Pedir disculpas de forma directa y sencilla.",
+    "Proponer cómo ayudar después de un error.",
+    "Escuchar y aceptar sugerencias para reparar el error.",
+    "Practicar frases útiles para disculparse y colaborar."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This morning, I made a mistake at work.",
+      "es": "Esta mañana, cometí un error en el trabajo."
+    },
+    {
+      "number": 2,
+      "function": "background",
+      "en": "I missed a team call with my coworkers.",
+      "es": "Me perdí una llamada con mis compañeros."
+    },
+    {
+      "number": 3,
+      "function": "discovery",
+      "en": "After the meeting, I saw a message from Sam.",
+      "es": "Después de la reunión, vi un mensaje de Sam."
+    },
+    {
+      "number": 4,
+      "function": "cause",
+      "en": "I forgot to check my calendar before work.",
+      "es": "Olvidé revisar mi calendario antes de trabajar."
+    },
+    {
+      "number": 5,
+      "function": "feeling",
+      "en": "I felt bad about missing the call.",
+      "es": "Me sentí mal por perderme la llamada."
+    },
+    {
+      "number": 6,
+      "function": "reflection",
+      "en": "I wanted to tell Sam my mistake right away.",
+      "es": "Quise decirle a Sam mi error de inmediato."
+    },
+    {
+      "number": 7,
+      "function": "admission",
+      "en": "I called Sam and said, \"Hi, I missed the meeting. I am sorry.\"",
+      "es": "Llamé a Sam y dije: \"Hola, no fui a la reunión. Lo siento.\""
+    },
+    {
+      "number": 8,
+      "function": "reaction",
+      "en": "Sam listened. He said, \"Thank you for telling me.\"",
+      "es": "Sam escuchó. Él dijo: \"Gracias por decírmelo.\""
+    },
+    {
+      "number": 9,
+      "function": "specifics",
+      "en": "He explained that the team needed my design ideas.",
+      "es": "Explicó que el equipo necesitaba mis ideas de diseño."
+    },
+    {
+      "number": 10,
+      "function": "offer",
+      "en": "I said, \"Can I help or send my ideas now?\"",
+      "es": "Dije: \"¿Puedo ayudar o enviar mis ideas ahora?\""
+    },
+    {
+      "number": 11,
+      "function": "suggestion",
+      "en": "Sam said, \"Please send your design by email.\"",
+      "es": "Sam dijo: \"Por favor, envía tu diseño por correo.\""
+    },
+    {
+      "number": 12,
+      "function": "acceptance",
+      "en": "I agreed and wrote my design summary.",
+      "es": "Estuve de acuerdo y escribí mi resumen de diseño."
+    },
+    {
+      "number": 13,
+      "function": "action",
+      "en": "I sent my ideas to Sam and the team.",
+      "es": "Envié mis ideas a Sam y al equipo."
+    },
+    {
+      "number": 14,
+      "function": "collaboration",
+      "en": "After lunch, I met Sam at the office.",
+      "es": "Después del almuerzo, me reuní con Sam en la oficina."
+    },
+    {
+      "number": 15,
+      "function": "review",
+      "en": "He showed me the design and we talked together.",
+      "es": "Él me mostró el diseño y hablamos juntos."
+    },
+    {
+      "number": 16,
+      "function": "plan",
+      "en": "I said, \"Next time, I will check my calendar in the morning.\"",
+      "es": "Dije: \"La próxima vez, revisaré mi calendario en la mañana.\""
+    },
+    {
+      "number": 17,
+      "function": "appreciation",
+      "en": "Sam smiled. He said, \"Thank you for helping.\"",
+      "es": "Sam sonrió. Dijo: \"Gracias por ayudar.\""
+    },
+    {
+      "number": 18,
+      "function": "reflection_future",
+      "en": "Now I remember: good teams fix problems together.",
+      "es": "Ahora recuerdo: los buenos equipos arreglan los problemas juntos."
+    },
+    {
+      "number": 19,
+      "function": "habit_change",
+      "en": "I want to use reminders, so I do not forget again.",
+      "es": "Quiero usar recordatorios para no olvidar otra vez."
+    },
+    {
+      "number": 20,
+      "function": "concrete_outcome",
+      "en": "I learned that saying sorry and fixing mistakes is important.",
+      "es": "Aprendí que pedir perdón y solucionar errores es importante."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "This morning, I made a mistake at work.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "I want to use reminders, so I do not forget again.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "I said, \"Next time, I will check my calendar in the morning.\"",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Can",
+      "example_en": "I said, \"Can I help or send my ideas now?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I said, \"Can I help or send my ideas now?\"",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I wanted to tell Sam my mistake right away.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "This morning, I made a mistake at work.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I missed a team call with my coworkers.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Hi, I missed the meeting.",
+      "meaning_es": "Hola, no fui a la reunión.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "I am sorry.",
+      "meaning_es": "Lo siento.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Thank you for telling me.",
+      "meaning_es": "Gracias por decírmelo.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Can I help or send my ideas now?",
+      "meaning_es": "¿Puedo ayudar o enviar mis ideas ahora?",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Please send your design by email.",
+      "meaning_es": "Por favor, envía tu diseño por correo.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Thank you for helping.",
+      "meaning_es": "Gracias por ayudar.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "Next time, I will check my calendar in the morning.",
+      "meaning_es": "La próxima vez, revisaré mi calendario en la mañana.",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "I learned that saying sorry and fixing mistakes is important.",
+      "meaning_es": "Aprendí que pedir perdón y solucionar errores es importante.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I called Sam and said, \"Hi, I missed the meeting. I am sorry.\""
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I said, \"Can I help or send my ideas now?\""
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "I said, \"Next time, I will check my calendar in the morning.\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-016",
+    "number": "016",
+    "title_en": "Owning a Mistake and Making It Right",
+    "title_es": "Reconocer un error y repararlo",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y vida diaria",
+    "main_topic_es": "Detectar un error cotidiano, decirlo claramente, escuchar y ayudar a solucionarlo.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

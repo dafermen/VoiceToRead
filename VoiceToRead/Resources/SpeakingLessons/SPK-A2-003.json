@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-003",
+  "number": 3,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "At the Doctor’s Office",
+    "es": "En la consulta médica"
+  },
+  "category": {
+    "en": "Health and Everyday Life",
+    "es": "Salud y vida cotidiana"
+  },
+  "main_topic": {
+    "en": "Describing health concerns, asking for clarification, and confirming understanding during a routine appointment.",
+    "es": "Describir preocupaciones de salud, pedir aclaraciones y confirmar la comprensión durante una cita rutinaria."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Paciente adulto hablando con el médico en una consulta, ambiente tranquilo y profesional, ilustración realista en 16:9.",
+    "prompt": "Realistic illustration of an adult patient talking to a doctor in a calm medical office, professional setting, clean and warm, 16:9 ratio",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Aprender vocabulario cotidiano de «En la consulta médica».",
+    "Comprender frases breves en una situación cotidiana.",
+    "Reconocer las estructuras básicas presentes en los ejemplos.",
+    "Relacionar las frases en inglés con su significado en español.",
+    "Practicar la lectura clara y la repetición de frases completas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "everyday communication",
+      "en": "I call the doctor's office on Monday morning.",
+      "es": "Llamo al consultorio del médico el lunes por la mañana."
+    },
+    {
+      "number": 2,
+      "function": "everyday communication",
+      "en": "I want to make an appointment for this week.",
+      "es": "Quiero pedir una cita para esta semana."
+    },
+    {
+      "number": 3,
+      "function": "everyday communication",
+      "en": "The receptionist asks for my name and phone number.",
+      "es": "La recepcionista me pide mi nombre y mi número de teléfono."
+    },
+    {
+      "number": 4,
+      "function": "everyday communication",
+      "en": "I say that my name is Alex and give my number.",
+      "es": "Digo que me llamo Alex y le doy mi número."
+    },
+    {
+      "number": 5,
+      "function": "everyday communication",
+      "en": "She offers me an appointment on Tuesday afternoon.",
+      "es": "Me ofrece una cita el martes por la tarde."
+    },
+    {
+      "number": 6,
+      "function": "everyday communication",
+      "en": "I cannot come then because I work in the afternoon.",
+      "es": "No puedo ir a esa hora porque trabajo por la tarde."
+    },
+    {
+      "number": 7,
+      "function": "everyday communication",
+      "en": "Can I come in the morning instead?",
+      "es": "¿Puedo ir por la mañana en su lugar?"
+    },
+    {
+      "number": 8,
+      "function": "everyday communication",
+      "en": "She checks and offers me Wednesday at ten.",
+      "es": "Lo comprueba y me ofrece el miércoles a las diez."
+    },
+    {
+      "number": 9,
+      "function": "everyday communication",
+      "en": "That time is good for me, so I accept.",
+      "es": "Esa hora me viene bien, así que acepto."
+    },
+    {
+      "number": 10,
+      "function": "everyday communication",
+      "en": "I write the day and time in my notebook.",
+      "es": "Apunto el día y la hora en mi cuaderno."
+    },
+    {
+      "number": 11,
+      "function": "everyday communication",
+      "en": "On Wednesday, I arrive at the office a little early.",
+      "es": "El miércoles, llego al consultorio un poco antes de la hora."
+    },
+    {
+      "number": 12,
+      "function": "everyday communication",
+      "en": "I say hello and tell the receptionist my name.",
+      "es": "Saludo y le digo mi nombre a la recepcionista."
+    },
+    {
+      "number": 13,
+      "function": "everyday communication",
+      "en": "She asks me to wait in the waiting room.",
+      "es": "Me pide que espere en la sala de espera."
+    },
+    {
+      "number": 14,
+      "function": "everyday communication",
+      "en": "I sit down and put my bag beside the chair.",
+      "es": "Me siento y pongo mi bolso junto a la silla."
+    },
+    {
+      "number": 15,
+      "function": "everyday communication",
+      "en": "When the doctor calls me, I go into the room.",
+      "es": "Cuando el médico me llama, entro en la consulta."
+    },
+    {
+      "number": 16,
+      "function": "everyday communication",
+      "en": "The doctor asks how I am feeling today.",
+      "es": "El médico me pregunta cómo me siento hoy."
+    },
+    {
+      "number": 17,
+      "function": "everyday communication",
+      "en": "I explain that my throat hurts and that I feel tired.",
+      "es": "Explico que me duele la garganta y que me siento cansado."
+    },
+    {
+      "number": 18,
+      "function": "everyday communication",
+      "en": "I do not understand one question, so I ask again.",
+      "es": "No entiendo una pregunta, así que pido que la repita."
+    },
+    {
+      "number": 19,
+      "function": "everyday communication",
+      "en": "Could you say that more slowly, please?",
+      "es": "¿Podría decirlo más despacio, por favor?"
+    },
+    {
+      "number": 20,
+      "function": "everyday communication",
+      "en": "The doctor repeats the question, and I answer in my own words.",
+      "es": "El médico repite la pregunta y respondo con mis propias palabras."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "The doctor asks how I am feeling today.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "I do not understand one question, so I ask again.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Can",
+      "example_en": "Can I come in the morning instead?",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Could",
+      "example_en": "Could you say that more slowly, please?",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I call the doctor's office on Monday morning.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to make an appointment for this week.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I call the doctor's office on Monday morning.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "The receptionist asks for my name and phone number.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 3
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I call the doctor's office on Monday morning",
+      "meaning_es": "Llamo al consultorio del médico el lunes por la mañana",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "I want to make an appointment for this week",
+      "meaning_es": "Quiero pedir una cita para esta semana",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "The receptionist asks for my name and phone number",
+      "meaning_es": "La recepcionista me pide mi nombre y mi número de teléfono",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "I say that my name is Alex and give my number",
+      "meaning_es": "Digo que me llamo Alex y le doy mi número",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "She offers me an appointment on Tuesday afternoon",
+      "meaning_es": "Me ofrece una cita el martes por la tarde",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "I cannot come then because I work in the afternoon",
+      "meaning_es": "No puedo ir a esa hora porque trabajo por la tarde",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Can I come in the morning instead",
+      "meaning_es": "¿Puedo ir por la mañana en su lugar",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "She checks and offers me Wednesday at ten",
+      "meaning_es": "Lo comprueba y me ofrece el miércoles a las diez",
+      "source_paragraph": 8
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I call the doctor's office on Monday morning."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "Can I come in the morning instead?"
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "She asks me to wait in the waiting room."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-003",
+    "number": "003",
+    "title_en": "At the Doctor’s Office",
+    "title_es": "En la consulta médica",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Salud y vida cotidiana",
+    "main_topic_es": "Describir preocupaciones de salud, pedir aclaraciones y confirmar la comprensión durante una cita rutinaria.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Present simple negative",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

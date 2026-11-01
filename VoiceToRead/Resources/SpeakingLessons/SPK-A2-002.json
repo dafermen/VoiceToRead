@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-002",
+  "number": 2,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "My Daily Routine",
+    "es": "Mi rutina diaria"
+  },
+  "category": {
+    "en": "Daily Life and Habits",
+    "es": "Vida diaria y hábitos"
+  },
+  "main_topic": {
+    "en": "Balancing daily responsibilities, habits, and realistic change in routine.",
+    "es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Persona adulta equilibrando tareas diarias y hábitos en una rutina casera, ambiente tranquilo y organizando su día.",
+    "prompt": "Realistic editorial photograph, adult managing daily routine tasks and habits at home, calm environment, organizing day on planner, natural light, modern lifestyle, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir un día típico y hábitos diarios en inglés básico.",
+    "Expresar cambios simples en la rutina y sus razones.",
+    "Usar presente y pasado simple para hablar de hábitos y cambios.",
+    "Expresar planes futuros sencillos y hacer comparaciones.",
+    "Practicar la lectura, repetición y comprensión de frases cotidianas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Every morning, I wake up early and start my day by opening the window and stretching.",
+      "es": "Cada mañana, me despierto temprano y empiezo mi día abriendo la ventana y estirándome."
+    },
+    {
+      "number": 2,
+      "function": "habit",
+      "en": "Then, I drink a glass of water and eat a small breakfast before I leave home.",
+      "es": "Luego, tomo un vaso de agua y desayuno algo pequeño antes de salir de casa."
+    },
+    {
+      "number": 3,
+      "function": "responsibility",
+      "en": "After breakfast, I usually check my phone to look at my messages and emails.",
+      "es": "Después del desayuno, normalmente reviso mi teléfono para ver mis mensajes y correos electrónicos."
+    },
+    {
+      "number": 4,
+      "function": "daily task",
+      "en": "I make a list of things I need to do so I can remember my important tasks.",
+      "es": "Hago una lista de cosas que debo hacer para recordar mis tareas importantes."
+    },
+    {
+      "number": 5,
+      "function": "past habit",
+      "en": "Before, I didn’t make a list and sometimes I forgot important things.",
+      "es": "Antes, no hacía una lista y a veces olvidaba cosas importantes."
+    },
+    {
+      "number": 6,
+      "function": "change",
+      "en": "Now, I write down my tasks every day because it helps me be more organized.",
+      "es": "Ahora, escribo mis tareas todos los días porque me ayuda a estar más organizado."
+    },
+    {
+      "number": 7,
+      "function": "midday routine",
+      "en": "At noon, I take a short break to eat lunch and relax for fifteen minutes.",
+      "es": "Al mediodía, tomo un breve descanso para almorzar y relajarme quince minutos."
+    },
+    {
+      "number": 8,
+      "function": "habit detail",
+      "en": "I often have a sandwich or some fruit for lunch because it is quick and healthy.",
+      "es": "A menudo almuerzo un sándwich o fruta porque es rápido y saludable."
+    },
+    {
+      "number": 9,
+      "function": "effect",
+      "en": "This break gives me energy so I can work well in the afternoon.",
+      "es": "Este descanso me da energía, así puedo trabajar bien por la tarde."
+    },
+    {
+      "number": 10,
+      "function": "afternoon task",
+      "en": "In the afternoon, I usually have a meeting or talk with my coworkers online.",
+      "es": "Por la tarde, normalmente tengo una reunión o hablo con mis compañeros de trabajo en línea."
+    },
+    {
+      "number": 11,
+      "function": "past limitation",
+      "en": "Before, I did not have online meetings because I worked alone at home.",
+      "es": "Antes, no tenía reuniones en línea porque trabajaba solo en casa."
+    },
+    {
+      "number": 12,
+      "function": "present continuous",
+      "en": "Now, I am learning how to join meetings and work together with my team.",
+      "es": "Ahora, estoy aprendiendo a participar en reuniones y trabajar en equipo."
+    },
+    {
+      "number": 13,
+      "function": "realistic plan",
+      "en": "I want to manage my time better so I plan each meeting with a clear goal.",
+      "es": "Quiero organizar mejor mi tiempo, así que planifico cada reunión con una meta clara."
+    },
+    {
+      "number": 14,
+      "function": "evening routine",
+      "en": "After work, I usually go for a walk or do simple exercises at home to relax.",
+      "es": "Después del trabajo, normalmente salgo a caminar o hago ejercicios sencillos en casa para relajarme."
+    },
+    {
+      "number": 15,
+      "function": "effect of exercise",
+      "en": "If I do not exercise, I feel tired or stressed the next day.",
+      "es": "Si no hago ejercicio, me siento cansado o estresado al día siguiente."
+    },
+    {
+      "number": 16,
+      "function": "weekend habit",
+      "en": "On weekends, I spend more time with my family and friends and rest more.",
+      "es": "Los fines de semana, paso más tiempo con mi familia y amigos y descanso más."
+    },
+    {
+      "number": 17,
+      "function": "realistic change",
+      "en": "Sometimes, I try to go outside for fresh air even if I am busy.",
+      "es": "A veces intento salir para tomar aire fresco, incluso si estoy ocupado."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Balancing work, rest, and good habits is hard but important for my well-being.",
+      "es": "Equilibrar trabajo, descanso y buenos hábitos es difícil pero importante para mi bienestar."
+    },
+    {
+      "number": 19,
+      "function": "goal",
+      "en": "I hope I can keep improving my daily routine and stay flexible when plans change.",
+      "es": "Espero poder seguir mejorando mi rutina diaria y ser flexible cuando los planes cambian."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Small changes help me live a healthy and balanced life every day.",
+      "es": "Pequeños cambios me ayudan a vivir una vida saludable y equilibrada cada día."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "Now, I am learning how to join meetings and work together with my team.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "Before, I didn’t make a list and sometimes I forgot important things.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "If I do not exercise, I feel tired or stressed the next day.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Can",
+      "example_en": "I make a list of things I need to do so I can remember my important tasks.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Every morning, I wake up early and start my day by opening the window and stretching.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I make a list of things I need to do so I can remember my important tasks.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Every morning, I wake up early and start my day by opening the window and stretching.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Every morning, I wake up early and start my day by opening the window and stretching.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "wake up early",
+      "meaning_es": "despertarse temprano",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "drink a glass of water",
+      "meaning_es": "tomar un vaso de agua",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "check my phone",
+      "meaning_es": "revisar mi teléfono",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "make a list",
+      "meaning_es": "hacer una lista",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "write down my tasks",
+      "meaning_es": "anotar mis tareas",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "take a short break",
+      "meaning_es": "tomar un breve descanso",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "go for a walk",
+      "meaning_es": "salir a caminar",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "go outside for fresh air",
+      "meaning_es": "salir para tomar aire fresco",
+      "source_paragraph": 17
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Every morning, I wake up early and start my day by opening the window and stretching."
+            ]
+          },
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I make a list of things I need to do so I can remember my important tasks."
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "If I do not exercise, I feel tired or stressed the next day."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-002",
+    "number": "002",
+    "title_en": "My Daily Routine",
+    "title_es": "Mi rutina diaria",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y hábitos",
+    "main_topic_es": "Equilibrar responsabilidades diarias, hábitos y un cambio realista en la rutina.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past simple negative",
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

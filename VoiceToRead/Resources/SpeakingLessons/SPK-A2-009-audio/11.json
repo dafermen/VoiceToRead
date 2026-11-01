@@ -1,0 +1,54 @@
+{
+  "text": "I explained that I could not leave earlier.",
+  "duration": 3.569999933242798,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 2,
+      "length": 9,
+      "start": 0.9800000190734863,
+      "end": 1.5
+    },
+    {
+      "location": 12,
+      "length": 4,
+      "start": 1.5,
+      "end": 1.7599999904632568
+    },
+    {
+      "location": 17,
+      "length": 1,
+      "start": 1.7599999904632568,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.899999976158142,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.0799999237060547,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 29,
+      "length": 5,
+      "start": 2.4600000381469727,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 35,
+      "length": 7,
+      "start": 2.619999885559082,
+      "end": 3.0399999618530273
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "text": "I prefer to use \"How are you?\" in professional settings because it feels appropriate and polite.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5199999809265137
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.5199999809265137,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 1.059999942779541,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 12,
+      "length": 3,
+      "start": 2.119999885559082,
+      "end": 2.119999885559082
+    },
+    {
+      "location": 17,
+      "length": 3,
+      "start": 2.119999885559082,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 21,
+      "length": 3,
+      "start": 2.4600000381469727,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.819999933242798,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 3.0799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "location": 34,
+      "length": 12,
+      "start": 3.880000114440918,
+      "end": 4.5
+    },
+    {
+      "location": 47,
+      "length": 8,
+      "start": 4.5,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 5.079999923706055,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 64,
+      "length": 2,
+      "start": 5.880000114440918,
+      "end": 6.199999809265137
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 6.199999809265137,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 73,
+      "length": 11,
+      "start": 6.519999980926514,
+      "end": 7.28000020980835
+    },
+    {
+      "location": 85,
+      "length": 3,
+      "start": 7.28000020980835,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 89,
+      "length": 6,
+      "start": 8.119999885559082,
+      "end": 8.4399995803833
+    }
+  ]
+}

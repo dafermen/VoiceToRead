@@ -1,0 +1,60 @@
+{
+  "text": "Sam listened. He said, \"Thank you for telling me.\"",
+  "duration": 4.869999885559082,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 4,
+      "length": 8,
+      "start": 0.7599999904632568,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.5,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 17,
+      "length": 4,
+      "start": 2.380000114440918,
+      "end": 2.700000047683716
+    },
+    {
+      "location": 24,
+      "length": 5,
+      "start": 2.700000047683716,
+      "end": 3.5
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 3.5,
+      "end": 3.700000047683716
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 3.700000047683716,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.9200000762939453,
+      "end": 4.21999979019165
+    },
+    {
+      "location": 46,
+      "length": 2,
+      "start": 4.21999979019165,
+      "end": 4.420000076293945
+    }
+  ]
+}

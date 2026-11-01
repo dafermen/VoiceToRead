@@ -1,0 +1,84 @@
+{
+  "text": "In my experience, using polite greetings can help avoid misunderstandings and build respect.",
+  "duration": 6.789999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.20000000298023224
+    },
+    {
+      "location": 3,
+      "length": 2,
+      "start": 0.20000000298023224,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 6,
+      "length": 10,
+      "start": 0.5600000023841858,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.8799999952316284,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 24,
+      "length": 6,
+      "start": 1.9800000190734863,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 31,
+      "length": 9,
+      "start": 2.4200000762939453,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.9600000381469727,
+      "end": 3.5
+    },
+    {
+      "location": 45,
+      "length": 4,
+      "start": 3.5,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.740000009536743,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 56,
+      "length": 17,
+      "start": 4.179999828338623,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.199999809265137,
+      "end": 5.739999771118164
+    },
+    {
+      "location": 78,
+      "length": 5,
+      "start": 5.739999771118164,
+      "end": 5.980000019073486
+    },
+    {
+      "location": 84,
+      "length": 7,
+      "start": 5.980000019073486,
+      "end": 6.460000038146973
+    }
+  ]
+}

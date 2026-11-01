@@ -1,0 +1,90 @@
+{
+  "text": "The online provider, which specializes in flexible learning, sent me detailed course plans yesterday.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 11,
+      "length": 8,
+      "start": 0.8199999928474426,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 1.5199999809265137,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 27,
+      "length": 11,
+      "start": 2.0399999618530273,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 2.759999990463257,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 42,
+      "length": 8,
+      "start": 3.119999885559082,
+      "end": 3.5399999618530273
+    },
+    {
+      "location": 51,
+      "length": 8,
+      "start": 3.5399999618530273,
+      "end": 4.0
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.679999828338623,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 4.71999979019165,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 69,
+      "length": 8,
+      "start": 5.059999942779541,
+      "end": 5.5
+    },
+    {
+      "location": 78,
+      "length": 6,
+      "start": 5.5,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 85,
+      "length": 5,
+      "start": 5.900000095367432,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 91,
+      "length": 9,
+      "start": 6.159999847412109,
+      "end": 6.599999904632568
+    }
+  ]
+}

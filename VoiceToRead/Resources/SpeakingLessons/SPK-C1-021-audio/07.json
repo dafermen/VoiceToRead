@@ -1,0 +1,114 @@
+{
+  "text": "If someone returns after an absence, 'Long time no see' carries both warmth and acknowledgement of elapsed time.",
+  "duration": 8.470000267028809,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.3199999928474426,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 0.7200000286102295,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.2799999713897705,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 25,
+      "length": 2,
+      "start": 1.7200000286102295,
+      "end": 2.0999999046325684
+    },
+    {
+      "location": 28,
+      "length": 7,
+      "start": 2.0999999046325684,
+      "end": 2.5
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 3.1600000858306885,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 3.259999990463257,
+      "end": 3.5
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 3.5,
+      "end": 3.740000009536743
+    },
+    {
+      "location": 51,
+      "length": 3,
+      "start": 3.740000009536743,
+      "end": 4.059999942779541
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 4.059999942779541,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 64,
+      "length": 4,
+      "start": 4.739999771118164,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 69,
+      "length": 6,
+      "start": 5.21999979019165,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 76,
+      "length": 3,
+      "start": 5.599999904632568,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 80,
+      "length": 15,
+      "start": 6.380000114440918,
+      "end": 6.920000076293945
+    },
+    {
+      "location": 96,
+      "length": 2,
+      "start": 6.920000076293945,
+      "end": 7.360000133514404
+    },
+    {
+      "location": 99,
+      "length": 7,
+      "start": 7.360000133514404,
+      "end": 7.880000114440918
+    },
+    {
+      "location": 107,
+      "length": 4,
+      "start": 7.880000114440918,
+      "end": 8.119999885559082
+    }
+  ]
+}

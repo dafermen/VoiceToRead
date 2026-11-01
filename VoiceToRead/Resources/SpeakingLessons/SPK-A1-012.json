@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-012",
+  "number": 12,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Finding My Way Around a City",
+    "es": "Orientarme en una ciudad"
+  },
+  "category": {
+    "en": "Getting Around and Directions",
+    "es": "Desplazamiento y direcciones"
+  },
+  "main_topic": {
+    "en": "Asking and giving simple directions, comparing walking and public transport routes.",
+    "es": "Pedir y dar direcciones simples, comparar caminar y transporte público."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Dos adultos consultando un mapa en la calle de una ciudad moderna.",
+    "prompt": "Realistic editorial photograph, two adults standing on a modern city sidewalk, looking at a paper map and pointing, street details, casual clothing, urban background, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Pedir direcciones a un destino local.",
+    "Comprender y dar indicaciones básicas en inglés.",
+    "Practicar preguntas cortas y aclarar información.",
+    "Comparar cómo llegar a pie o en autobús.",
+    "Repetir frases comunes para pedir ayuda en la ciudad."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today I am in a big city. I want to visit an art gallery.",
+      "es": "Hoy estoy en una ciudad grande. Quiero visitar una galería de arte."
+    },
+    {
+      "number": 2,
+      "function": "situation",
+      "en": "I leave my hotel. I do not remember the street name.",
+      "es": "Salgo de mi hotel. No recuerdo el nombre de la calle."
+    },
+    {
+      "number": 3,
+      "function": "action_request",
+      "en": "I see a woman at the bus stop. I say, \"Excuse me, can you help me?\"",
+      "es": "Veo a una mujer en la parada del autobús. Digo: \"Disculpe, ¿puede ayudarme?\""
+    },
+    {
+      "number": 4,
+      "function": "request",
+      "en": "I ask, \"How do I get to the art gallery?\"",
+      "es": "Pregunto: \"¿Cómo llego a la galería de arte?\""
+    },
+    {
+      "number": 5,
+      "function": "response",
+      "en": "She says, \"Go straight for three blocks. Then turn left at the bakery.\"",
+      "es": "Ella dice: \"Siga recto tres cuadras. Luego gire a la izquierda en la panadería.\""
+    },
+    {
+      "number": 6,
+      "function": "clarification",
+      "en": "I ask, \"Is there a sign for the bakery?\"",
+      "es": "Pregunto: \"¿Hay un letrero para la panadería?\""
+    },
+    {
+      "number": 7,
+      "function": "further_explanation",
+      "en": "She smiles. She says, \"Yes, it is a big yellow sign. You cannot miss it.\"",
+      "es": "Ella sonríe. Dice: \"Sí, es un letrero amarillo grande. No puede perderlo.\""
+    },
+    {
+      "number": 8,
+      "function": "gratitude",
+      "en": "I say, \"Thank you very much.\" I start to walk.",
+      "es": "Digo: \"Muchas gracias.\" Empiezo a caminar."
+    },
+    {
+      "number": 9,
+      "function": "reflection",
+      "en": "I think, maybe the bus is faster than walking.",
+      "es": "Pienso que tal vez el autobús es más rápido que caminar."
+    },
+    {
+      "number": 10,
+      "function": "public_transport_inquiry",
+      "en": "I ask a man, \"Does the bus go near the art gallery?\"",
+      "es": "Le pregunto a un hombre: \"¿El autobús pasa cerca de la galería de arte?\""
+    },
+    {
+      "number": 11,
+      "function": "transport_advice",
+      "en": "He says, \"The bus stops two blocks from there. But traffic is slow now.\"",
+      "es": "Él dice: \"El autobús para a dos cuadras de allí. Pero el tráfico es lento ahora.\""
+    },
+    {
+      "number": 12,
+      "function": "decision",
+      "en": "I decide to walk. I want to see the city and not wait for the bus.",
+      "es": "Decido caminar. Quiero ver la ciudad y no esperar el autobús."
+    },
+    {
+      "number": 13,
+      "function": "observation",
+      "en": "I look for street signs at each corner.",
+      "es": "Busco los letreros de las calles en cada esquina."
+    },
+    {
+      "number": 14,
+      "function": "obstacle",
+      "en": "At the bakery corner, I see construction. The sidewalk is closed.",
+      "es": "En la esquina de la panadería, veo una obra. La acera está cerrada."
+    },
+    {
+      "number": 15,
+      "function": "adjustment",
+      "en": "A worker says, \"You can walk on the other side of the street.\"",
+      "es": "Un trabajador dice: \"Puede caminar por el otro lado de la calle.\""
+    },
+    {
+      "number": 16,
+      "function": "appreciation",
+      "en": "I say, \"Thanks for your help.\" I cross the street.",
+      "es": "Digo: \"Gracias por su ayuda.\" Cruzo la calle."
+    },
+    {
+      "number": 17,
+      "function": "discovery",
+      "en": "I see the big yellow sign for the bakery ahead.",
+      "es": "Veo el gran letrero amarillo de la panadería adelante."
+    },
+    {
+      "number": 18,
+      "function": "conclusion",
+      "en": "After ten minutes, I find the art gallery.",
+      "es": "Después de diez minutos, encuentro la galería de arte."
+    },
+    {
+      "number": 19,
+      "function": "comparison",
+      "en": "Someone arrives by bus. She says, \"The bus was slow today.\"",
+      "es": "Alguien llega en autobús. Ella dice: \"El autobús fue lento hoy.\""
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "I am happy I walked. I saw more and did not wait in traffic.",
+      "es": "Estoy feliz de haber caminado. Vi más y no esperé en el tráfico."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "I am happy I walked. I saw more and did not wait in traffic.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "I am happy I walked. I saw more and did not wait in traffic.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "I leave my hotel. I do not remember the street name.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Can",
+      "example_en": "I see a woman at the bus stop. I say, \"Excuse me, can you help me?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Today I am in a big city. I want to visit an art gallery.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Today I am in a big city. I want to visit an art gallery.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Today I am in a big city. I want to visit an art gallery.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I leave my hotel. I do not remember the street name.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Excuse me, can you help me?",
+      "meaning_es": "Disculpe, ¿puede ayudarme?",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "How do I get to the art gallery?",
+      "meaning_es": "¿Cómo llego a la galería de arte?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Go straight for three blocks.",
+      "meaning_es": "Siga recto tres cuadras.",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Is there a sign for the bakery?",
+      "meaning_es": "¿Hay un letrero para la panadería?",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "You cannot miss it.",
+      "meaning_es": "No puede perderlo.",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Thank you very much.",
+      "meaning_es": "Muchas gracias.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Does the bus go near the art gallery?",
+      "meaning_es": "¿El autobús pasa cerca de la galería de arte?",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "You can walk on the other side of the street.",
+      "meaning_es": "Puede caminar por el otro lado de la calle.",
+      "source_paragraph": 15
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "She says, \"Go straight for three blocks. Then turn left at the bakery.\""
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "I ask a man, \"Does the bus go near the art gallery?\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "I am happy I walked. I saw more and did not wait in traffic."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-012",
+    "number": "012",
+    "title_en": "Finding My Way Around a City",
+    "title_es": "Orientarme en una ciudad",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Desplazamiento y direcciones",
+    "main_topic_es": "Pedir y dar direcciones simples, comparar caminar y transporte público.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past simple negative",
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

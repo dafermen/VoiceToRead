@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-010",
+  "number": 10,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Technology in Everyday Life",
+    "es": "Tecnología en la vida cotidiana"
+  },
+  "category": {
+    "en": "Daily Life and Digital Skills",
+    "es": "Vida diaria y habilidades digitales"
+  },
+  "main_topic": {
+    "en": "Digital habits, requesting help, and balancing convenience with distraction.",
+    "es": "Hábitos digitales, pedir ayuda y equilibrar comodidad y distracción."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Persona adulta usando un smartphone y una laptop en una mesa, con una taza de café y una expresión pensativa.",
+    "prompt": "Realistic editorial photograph, adult using smartphone and laptop at a table, coffee cup, thoughtful facial expression, soft natural morning light, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir rutinas y hábitos digitales diarios.",
+    "Expresar experiencias pasadas sencillas con tecnología.",
+    "Solicitar ayuda y hacer peticiones relacionadas con tecnología.",
+    "Explicar brevemente ventajas y dificultades digitales.",
+    "Practicar lectura y pronunciación con frases cortas en inglés."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Every day, I use my phone for many things, like reading messages and checking reminders.",
+      "es": "Todos los días uso mi teléfono para muchas cosas, como leer mensajes y revisar recordatorios."
+    },
+    {
+      "number": 2,
+      "function": "routine",
+      "en": "In the morning, I look at the news and the weather before I get out of bed.",
+      "es": "Por la mañana, miro las noticias y el clima antes de levantarme de la cama."
+    },
+    {
+      "number": 3,
+      "function": "experience",
+      "en": "Last week, my friend told me about a new app for making lists, so I decided to use it.",
+      "es": "La semana pasada, mi amigo me habló de una aplicación nueva para hacer listas, así que decidí usarla."
+    },
+    {
+      "number": 4,
+      "function": "opinion",
+      "en": "The app looked simple, but I soon saw that some features were missing for me.",
+      "es": "La aplicación parecía sencilla, pero pronto vi que me faltaban algunas funciones."
+    },
+    {
+      "number": 5,
+      "function": "challenge",
+      "en": "I had a hard time trying to share my lists with my family.",
+      "es": "Me costó trabajo tratar de compartir mis listas con mi familia."
+    },
+    {
+      "number": 6,
+      "function": "request_help",
+      "en": "Because of this, I asked my younger sister, who is good with phones, to help me.",
+      "es": "Por esto, le pedí ayuda a mi hermana menor, que es buena con los teléfonos."
+    },
+    {
+      "number": 7,
+      "function": "specific_request",
+      "en": "I said, \"Could you show me how to send my list to Mom and Dad?\"",
+      "es": "Le dije: \"¿Podrías mostrarme cómo enviar mi lista a mamá y papá?\""
+    },
+    {
+      "number": 8,
+      "function": "gratitude",
+      "en": "She explained the steps slowly until I understood everything.",
+      "es": "Ella me explicó los pasos despacio hasta que entendí todo."
+    },
+    {
+      "number": 9,
+      "function": "reaction",
+      "en": "After that, I felt much better when I used the app by myself.",
+      "es": "Después de eso, me sentí mucho mejor cuando usé la aplicación solo."
+    },
+    {
+      "number": 10,
+      "function": "benefit",
+      "en": "Digital tools can help a lot, especially for organizing daily tasks.",
+      "es": "Las herramientas digitales pueden ayudar mucho, especialmente para organizar tareas diarias."
+    },
+    {
+      "number": 11,
+      "function": "limitation",
+      "en": "But my phone sends me many notifications and can make me lose focus.",
+      "es": "Pero mi teléfono me envía muchas notificaciones y puede quitarme la concentración."
+    },
+    {
+      "number": 12,
+      "function": "contrast",
+      "en": "Sometimes, I wish I could put my phone down and just read a real book.",
+      "es": "A veces, desearía poder dejar el teléfono y solo leer un libro de verdad."
+    },
+    {
+      "number": 13,
+      "function": "comparison",
+      "en": "When I was younger, I wrote important notes on paper instead of my phone.",
+      "es": "Cuando era más joven, escribía notas importantes en papel en vez de usar mi teléfono."
+    },
+    {
+      "number": 14,
+      "function": "change",
+      "en": "Now, I almost never leave home without my phone or my laptop.",
+      "es": "Ahora, casi nunca salgo de casa sin mi teléfono o mi computadora portátil."
+    },
+    {
+      "number": 15,
+      "function": "intention",
+      "en": "Next week, I will try to turn off notifications when I am working.",
+      "es": "La próxima semana, voy a intentar apagar las notificaciones cuando esté trabajando."
+    },
+    {
+      "number": 16,
+      "function": "future_plan",
+      "en": "If I can focus better, I will finish my work faster and have more free time.",
+      "es": "Si puedo concentrarme mejor, terminaré mi trabajo más rápido y tendré más tiempo libre."
+    },
+    {
+      "number": 17,
+      "function": "habit_goal",
+      "en": "I want to use my devices mostly for important things and not only for games or social media.",
+      "es": "Quiero usar mis dispositivos principalmente para cosas importantes y no solo para juegos o redes sociales."
+    },
+    {
+      "number": 18,
+      "function": "strategy",
+      "en": "Sometimes, I set a timer to remind myself to take a break from screens.",
+      "es": "A veces pongo una alarma para recordarme tomar un descanso de las pantallas."
+    },
+    {
+      "number": 19,
+      "function": "expectation",
+      "en": "I hope I can find a good balance between using technology and enjoying quiet time.",
+      "es": "Espero poder encontrar un buen equilibrio entre usar tecnología y disfrutar del tiempo tranquilo."
+    },
+    {
+      "number": 20,
+      "function": "reflection",
+      "en": "For now, I know I can ask for help with technology and make small changes in my habits.",
+      "es": "Por ahora, sé que puedo pedir ayuda con la tecnología y hacer pequeños cambios en mis hábitos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "Next week, I will try to turn off notifications when I am working.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Past continuous",
+      "example_en": "The app looked simple, but I soon saw that some features were missing for me.",
+      "explanation_es": "Was o were seguidos de un verbo en -ing presentan una actividad que estaba en curso en el pasado.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Past simple",
+      "example_en": "Last week, my friend told me about a new app for making lists, so I decided to use it.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next week, I will try to turn off notifications when I am working.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Can",
+      "example_en": "Digital tools can help a lot, especially for organizing daily tasks.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Could",
+      "example_en": "I said, \"Could you show me how to send my list to Mom and Dad?\"",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present simple",
+      "example_en": "In the morning, I look at the news and the weather before I get out of bed.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to use my devices mostly for important things and not only for games or social media.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 17
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I use my phone for many things",
+      "meaning_es": "Uso mi teléfono para muchas cosas",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "I had a hard time",
+      "meaning_es": "Me costó trabajo",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Could you show me how to send my list",
+      "meaning_es": "¿Podrías mostrarme cómo enviar mi lista",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "She explained the steps slowly",
+      "meaning_es": "Ella me explicó los pasos despacio",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "I felt much better",
+      "meaning_es": "Me sentí mucho mejor",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Digital tools can help a lot",
+      "meaning_es": "Las herramientas digitales pueden ayudar mucho",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "My phone sends me many notifications",
+      "meaning_es": "Mi teléfono me envía muchas notificaciones",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "I hope I can find a good balance",
+      "meaning_es": "Espero poder encontrar un buen equilibrio",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Every day, I use my phone for many things, like reading messages and checking reminders."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I said, \"Could you show me how to send my list to Mom and Dad?\""
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "If I can focus better, I will finish my work faster and have more free time."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-010",
+    "number": "010",
+    "title_en": "Technology in Everyday Life",
+    "title_es": "Tecnología en la vida cotidiana",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y habilidades digitales",
+    "main_topic_es": "Hábitos digitales, pedir ayuda y equilibrar comodidad y distracción.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past continuous",
+      "Past simple",
+      "Will for future reference",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

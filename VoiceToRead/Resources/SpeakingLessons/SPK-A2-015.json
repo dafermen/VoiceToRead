@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-015",
+  "number": 15,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Helping in My Community",
+    "es": "Colaborar en mi comunidad"
+  },
+  "category": {
+    "en": "Community and Social Life",
+    "es": "Vida comunitaria y social"
+  },
+  "main_topic": {
+    "en": "Neighborhood volunteering, choosing useful help, and planning together.",
+    "es": "Voluntariado vecinal, elegir ayuda útil y planificar juntos."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Personas adultas organizando una actividad de voluntariado en un parque del vecindario.",
+    "prompt": "Editorial, diverse adults talking and organizing a neighborhood volunteer clean-up in a green community park, clipboards, casual outdoor clothing, warm daylight, natural setting, no branding, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hablar sobre acciones comunitarias en presente y pasado simple.",
+    "Pedir y dar sugerencias simples usando 'can', 'could' y 'should'.",
+    "Explicar razones y contrastar ideas usando 'because', 'but' y 'so'.",
+    "Dividir tareas y describir contribuciones prácticas.",
+    "Practicar la repetición y comprensión lectora en inglés americano simple."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Hello! This month, my neighbors and I want to help in our community park.",
+      "es": "¡Hola! Este mes, mis vecinos y yo queremos ayudar en el parque de nuestra comunidad."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "We think this is a good chance to meet more people and make the park better.",
+      "es": "Creemos que es una buena oportunidad para conocer a más personas y mejorar el parque."
+    },
+    {
+      "number": 3,
+      "function": "personal_experience",
+      "en": "I have never planned a group activity before, but I am excited to try.",
+      "es": "Nunca he planeado una actividad grupal antes, pero estoy emocionado de intentarlo."
+    },
+    {
+      "number": 4,
+      "function": "problem",
+      "en": "Some neighbors know what to do, but a few are not sure how they can help.",
+      "es": "Algunos vecinos saben qué hacer, pero algunos no están seguros de cómo pueden ayudar."
+    },
+    {
+      "number": 5,
+      "function": "conversation",
+      "en": "I asked Sara, \"What should we do first in the park?\"",
+      "es": "Le pregunté a Sara: \"¿Qué deberíamos hacer primero en el parque?\""
+    },
+    {
+      "number": 6,
+      "function": "response",
+      "en": "She said, \"Picking up trash is good, but we could also plant some flowers.\"",
+      "es": "Ella dijo: \"Recoger basura está bien, pero también podríamos plantar algunas flores.\""
+    },
+    {
+      "number": 7,
+      "function": "negotiation",
+      "en": "We talked about bringing new plants or using some that people already have at home.",
+      "es": "Hablamos sobre traer nuevas plantas o usar algunas que la gente ya tiene en casa."
+    },
+    {
+      "number": 8,
+      "function": "comparison",
+      "en": "Last year, people mostly brought tools to clean. This year, we want different things.",
+      "es": "El año pasado, las personas trajeron principalmente herramientas para limpiar. Este año queremos cosas diferentes."
+    },
+    {
+      "number": 9,
+      "function": "suggestion",
+      "en": "Lisa said, \"Let's make a list, so everyone brings something useful.\"",
+      "es": "Lisa dijo: \"Hagamos una lista, para que todos traigan algo útil.\""
+    },
+    {
+      "number": 10,
+      "function": "challenge",
+      "en": "Many people want to help, but we do not agree on what job is most important.",
+      "es": "Muchas personas quieren ayudar, pero no estamos de acuerdo sobre cuál tarea es más importante."
+    },
+    {
+      "number": 11,
+      "function": "solution",
+      "en": "We decide to ask the park staff if there are any special rules for volunteers.",
+      "es": "Decidimos preguntar al personal del parque si hay reglas especiales para los voluntarios."
+    },
+    {
+      "number": 12,
+      "function": "experience",
+      "en": "The staff tells us, \"Please keep the main path clear and do not plant near the playground.\"",
+      "es": "El personal nos dice: \"Por favor, mantengan libre el camino principal y no planten cerca del área de juegos.\""
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "Now I know planning is important, so everyone helps in the best way.",
+      "es": "Ahora sé que planear es importante, así todos ayudan de la mejor forma."
+    },
+    {
+      "number": 14,
+      "function": "division_of_tasks",
+      "en": "We choose three groups: one picks up trash, one plants flowers, and one helps kids paint signs.",
+      "es": "Elegimos tres grupos: uno recoge basura, otro planta flores y otro ayuda a niños a pintar carteles."
+    },
+    {
+      "number": 15,
+      "function": "complication",
+      "en": "On the event day, some people arrive late or forget things, so there is a little confusion.",
+      "es": "El día del evento, algunas personas llegan tarde o olvidan cosas, así que hay un poco de confusión."
+    },
+    {
+      "number": 16,
+      "function": "adjustment",
+      "en": "Even if someone forgets, they can check our list and find another way to help.",
+      "es": "Aunque alguien olvide algo, puede ver nuestra lista y encontrar otra manera de ayudar."
+    },
+    {
+      "number": 17,
+      "function": "positive_outcome",
+      "en": "By the afternoon, the park looks clean, and many people are talking and smiling together.",
+      "es": "Por la tarde, el parque se ve limpio y muchas personas están conversando y sonriendo juntas."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "I think making a plan and asking for ideas really helped.",
+      "es": "Creo que hacer un plan y pedir ideas realmente ayudó."
+    },
+    {
+      "number": 19,
+      "function": "future_intention",
+      "en": "Next time, we might have a picnic after we help, so the day is more special.",
+      "es": "La próxima vez, quizás hagamos un picnic después de ayudar, así el día es más especial."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "We will keep helping, because working together makes our community better.",
+      "es": "Seguiremos ayudando, porque trabajar juntos mejora nuestra comunidad."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "By the afternoon, the park looks clean, and many people are talking and smiling together.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Past simple",
+      "example_en": "I asked Sara, \"What should we do first in the park?\"",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "Many people want to help, but we do not agree on what job is most important.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "We will keep helping, because working together makes our community better.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 20
+    },
+    {
+      "name": "Can",
+      "example_en": "Some neighbors know what to do, but a few are not sure how they can help.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Could",
+      "example_en": "She said, \"Picking up trash is good, but we could also plant some flowers.\"",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Hello! This month, my neighbors and I want to help in our community park.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Hello! This month, my neighbors and I want to help in our community park.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "What should we do first in the park?",
+      "meaning_es": "¿Qué deberíamos hacer primero en el parque?",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Picking up trash is good, but we could also plant some flowers.",
+      "meaning_es": "Recoger basura está bien, pero también podríamos plantar algunas flores.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Let's make a list, so everyone brings something useful.",
+      "meaning_es": "Hagamos una lista, para que todos traigan algo útil.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "They can check our list and find another way to help.",
+      "meaning_es": "Pueden ver nuestra lista y encontrar otra manera de ayudar.",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "By the afternoon, the park looks clean, and many people are talking and smiling together.",
+      "meaning_es": "Por la tarde, el parque se ve limpio y muchas personas están conversando y sonriendo juntas.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "I think making a plan and asking for ideas really helped.",
+      "meaning_es": "Creo que hacer un plan y pedir ideas realmente ayudó.",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "Next time, we might have a picnic after we help, so the day is more special.",
+      "meaning_es": "La próxima vez, quizás hagamos un picnic después de ayudar, así el día es más especial.",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "We will keep helping, because working together makes our community better.",
+      "meaning_es": "Seguiremos ayudando, porque trabajar juntos mejora nuestra comunidad.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Hello!",
+              "This month, my neighbors and I want to help in our community park."
+            ]
+          },
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "She said,",
+              "\"Picking up trash is good,",
+              "but we could also plant some flowers.\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "We will keep helping,",
+              "because working together makes our community better."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-015",
+    "number": "015",
+    "title_en": "Helping in My Community",
+    "title_es": "Colaborar en mi comunidad",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida comunitaria y social",
+    "main_topic_es": "Voluntariado vecinal, elegir ayuda útil y planificar juntos.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past simple",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

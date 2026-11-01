@@ -5,16 +5,13 @@ import UIKit
 struct SpeakingLessonLibraryView: View {
     @State private var lessons: [SpeakingLesson] = []
     @State private var failed = false
-    @State private var level = "B1"
+    @AppStorage("guidedLessonSelectedLevel") private var level = "A1"
     var body: some View {
         List {
             Picker("Level", selection: $level) {
-                Text("B1").tag("B1")
-                Text("B2").tag("B2")
-                Text("C1").tag("C1")
-                Text("C2").tag("C2")
-            }.pickerStyle(.segmented).accessibilityIdentifier("guidedLessonLevel")
-            ForEach(lessons.filter { $0.level == level }.sorted { $0.number < $1.number }) { lesson in
+                ForEach(SpeakingLessonCatalog.levels, id: \.self) { Text(verbatim: $0).tag($0) }
+            }.pickerStyle(.menu).accessibilityIdentifier("guidedLessonLevel")
+            ForEach(SpeakingLessonCatalog.ordered(lessons, level: level)) { lesson in
                 NavigationLink {
                     SpeakingLessonView(lesson: lesson)
                 } label: {
@@ -32,7 +29,10 @@ struct SpeakingLessonLibraryView: View {
             }
         }
         .navigationTitle("Guided lessons").navigationBarTitleDisplayMode(.inline)
-        .task { if lessons.isEmpty { load() } }
+        .task {
+            if !SpeakingLessonCatalog.levels.contains(level) { level = "A1" }
+            if lessons.isEmpty { load() }
+        }
     }
     private func load() {
         do { lessons = try SpeakingLessonCatalog.load(); failed = false }

@@ -197,42 +197,44 @@ private struct TrainingLanguagePair: View {
 }
 
 @MainActor
-private struct TrainingEnglishEditor: View {
+private struct TrainingPhraseTranslationEditor: View {
     let store: EnglishTrainingStore
     let training: EnglishTraining
-    @Environment(\.dismiss) private var dismiss
-    @State private var phrases: [EnglishTrainingPhrase]
+    let original: EnglishTrainingPhrase
+    @State private var text: String
     @State private var failure: String?
-    init(store: EnglishTrainingStore, training: EnglishTraining) {
-        self.store = store; self.training = training
-        _phrases = State(initialValue: training.phrases)
+    @Environment(\.dismiss) private var dismiss
+    init(store: EnglishTrainingStore, training: EnglishTraining, phrase: EnglishTrainingPhrase) {
+        self.store = store; self.training = training; original = phrase
+        _text = State(initialValue: phrase.english)
     }
     var body: some View {
         NavigationStack {
             Form {
                 TrainingLanguagePair(training: training)
-                Text("Review the translations before practising. You can correct the automatic translation.")
-                ForEach($phrases) { $phrase in
-                    Section {
-                        Text(phrase.spanish)
-                        TextField("Translated response", text: $phrase.english, axis: .vertical)
-                            .accessibilityIdentifier("trainingEnglish-" + phrase.id.uuidString)
+                Section("Original") { Text(verbatim: original.spanish).textSelection(.enabled) }
+                Section("Translation") {
+                    TextField("Translated response", text: $text, axis: .vertical)
+                        .lineLimit(3...10).accessibilityIdentifier("trainingPhraseTranslationInput")
+                    if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        Text("An empty response will be translated automatically.").font(.caption).foregroundStyle(.secondary)
                     }
                 }
+                Text("Automatic translations may contain errors. Check your edits before saving.")
+                    .font(.caption).foregroundStyle(.secondary)
                 if let failure { Text(LocalizedStringKey(failure)).foregroundStyle(.red) }
             }
-            .navigationTitle("Review translations").navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Edit translation").navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
                         do {
-                            try store.saveEnglish(training.id, source: training.source,
-                                values: Dictionary(uniqueKeysWithValues: phrases.map { ($0.id, $0.english) }),
+                            try store.savePhraseTranslation(training.id, original: original, text: text,
                                 language: training.sourceLanguage, targetLanguage: training.targetLanguage)
                             dismiss()
                         } catch { failure = error.localizedDescription }
-                    }.accessibilityIdentifier("saveTrainingEnglish")
+                    }.disabled(text.count > 1000).accessibilityIdentifier("saveTrainingPhraseTranslation")
                 }
             }
         }
@@ -244,7 +246,7 @@ private struct EnglishTrainingDetailView: View {
     let store: EnglishTrainingStore
     let trainingID: UUID
     @State private var editingSource = false
-    @State private var editingEnglish = false
+    @State private var editingPhrase: EnglishTrainingPhrase?
     @State private var job: TranslationJob?
     @State private var progress = 0
     @State private var failure: String?
@@ -284,17 +286,20 @@ private struct EnglishTrainingDetailView: View {
                         TrainingLanguagePair(training: training)
                         Button("Edit phrases and languages", systemImage: "pencil") { editingSource = true }
                             .disabled(job != nil).accessibilityIdentifier("editTrainingSource")
-                        Button("Review translations", systemImage: "text.badge.checkmark") { editingEnglish = true }
-                            .disabled(job != nil).accessibilityIdentifier("reviewTrainingEnglish")
                         if !TranslationJob.supported { Text(LocalizedStringKey(TranslationFailure.unsupported.localizedDescription)).font(.caption) }
-                        Text("Translations are prepared automatically. You can review and correct them whenever you like.")
+                        Text("Translations are prepared automatically. Use the pencil beside a phrase to edit its translation.")
                             .font(.caption).foregroundStyle(.secondary)
                     }
                     Section("Phrases") {
                         ForEach(training.phrases) { phrase in
-                            VStack(alignment: .leading, spacing: 6) {
-                                Text(phrase.spanish)
-                                if !phrase.english.isEmpty { Text(phrase.english).foregroundStyle(.secondary) }
+                            HStack(alignment: .top, spacing: 12) {
+                                VStack(alignment: .leading, spacing: 6) {
+                                    Text(verbatim: phrase.spanish)
+                                    if !phrase.english.isEmpty { Text(verbatim: phrase.english).foregroundStyle(.secondary) }
+                                }.frame(maxWidth: .infinity, alignment: .leading)
+                                Button("Edit translation", systemImage: "pencil") { editingPhrase = phrase }
+                                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44).buttonStyle(.borderless)
+                                    .disabled(job != nil).accessibilityIdentifier("editTrainingPhrase-" + phrase.id.uuidString)
                             }
                         }
                     }
@@ -321,7 +326,9 @@ private struct EnglishTrainingDetailView: View {
                         translateAfterEditing = true
                     }
                 }
-                .sheet(isPresented: $editingEnglish, onDismiss: { prepareIfNeeded() }) { TrainingEnglishEditor(store: store, training: training) }
+                .sheet(item: $editingPhrase, onDismiss: { prepareIfNeeded() }) { phrase in
+                    TrainingPhraseTranslationEditor(store: store, training: training, phrase: phrase)
+                }
                 .confirmationDialog("Translate all phrases again?", isPresented: $confirmingRetranslation, titleVisibility: .visible) {
                     Button("Replace translations", role: .destructive) { translate(training, replaceAll: true) }
                         .accessibilityIdentifier("confirmTrainingRetranslation")
@@ -348,7 +355,7 @@ private struct EnglishTrainingDetailView: View {
         .onDisappear { job = nil; replacementSnapshot = nil; translateAfterEditing = false }
     }
     private func prepareIfNeeded() {
-        guard job == nil, failure == nil, !editingSource, !editingEnglish,
+        guard job == nil, failure == nil, !editingSource, editingPhrase == nil,
               TranslationJob.supported, let current = training, !current.ready else { return }
         translate(current)
     }

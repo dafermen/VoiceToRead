@@ -1,0 +1,90 @@
+{
+  "text": "My friend sometimes chooses other dishes, but tonight he really wanted the tomato pasta.",
+  "duration": 6.789999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.47999998927116394,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 10,
+      "length": 9,
+      "start": 0.9200000166893005,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 1.7799999713897705,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 2.2200000286102295,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.619999885559082,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.640000104904175,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 46,
+      "length": 7,
+      "start": 3.799999952316284,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.239999771118164,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 57,
+      "length": 6,
+      "start": 4.619999885559082,
+      "end": 5.079999923706055
+    },
+    {
+      "location": 64,
+      "length": 6,
+      "start": 5.079999923706055,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 71,
+      "length": 3,
+      "start": 5.340000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.71999979019165,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 82,
+      "length": 5,
+      "start": 5.940000057220459,
+      "end": 6.340000152587891
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "text": "The interviewer thanked me for my honest answers and positive attitude.",
+  "duration": 6.159999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.47999998927116394
+    },
+    {
+      "location": 4,
+      "length": 11,
+      "start": 0.47999998927116394,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 16,
+      "length": 7,
+      "start": 1.2999999523162842,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.6399999856948853,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.0399999618530273,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 31,
+      "length": 2,
+      "start": 2.5999999046325684,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 34,
+      "length": 6,
+      "start": 2.9200000762939453,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 41,
+      "length": 7,
+      "start": 3.319999933242798,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.9000000953674316,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 4.539999961853027,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 62,
+      "length": 8,
+      "start": 5.019999980926514,
+      "end": 5.440000057220459
+    }
+  ]
+}

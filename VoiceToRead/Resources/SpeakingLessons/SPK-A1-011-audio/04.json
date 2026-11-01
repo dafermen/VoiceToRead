@@ -1,0 +1,90 @@
+{
+  "text": "I like light food at night. I ask, 'Do you have salad with chicken?'",
+  "duration": 6.400000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.9599999785423279,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 1.659999966621399,
+      "end": 2.0
+    },
+    {
+      "location": 18,
+      "length": 2,
+      "start": 2.0,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 21,
+      "length": 5,
+      "start": 2.4200000762939453,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 28,
+      "length": 1,
+      "start": 3.440000057220459,
+      "end": 3.619999885559082
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 3.619999885559082,
+      "end": 3.9600000381469727
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 4.179999828338623,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 4.539999961853027,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 4.71999979019165,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 5.019999980926514,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 5.320000171661377,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 59,
+      "length": 7,
+      "start": 5.71999979019165,
+      "end": 5.920000076293945
+    }
+  ]
+}

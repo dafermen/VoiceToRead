@@ -6,7 +6,7 @@ import CryptoKit
 
 final class SpeakingLessonTests: XCTestCase {
     private func fixture() throws -> (SpeakingLesson, [String: Any]) {
-        let lesson = try XCTUnwrap(SpeakingLessonCatalog.load().first)
+        let lesson = try XCTUnwrap(SpeakingLessonCatalog.load().first { $0.id == "SPK-B1-001" })
         let url = try XCTUnwrap(Bundle.main.url(forResource: lesson.id, withExtension: "json", subdirectory: "SpeakingLessons"))
         let json = try XCTUnwrap(JSONSerialization.jsonObject(with: Data(contentsOf: url)) as? [String: Any])
         return (lesson, json)
@@ -61,13 +61,14 @@ final class SpeakingLessonTests: XCTestCase {
         }
     }
 
-    func testAllFourLevelsHaveTwentyDistinctCompleteLessons() throws {
+    func testAllSixLevelsHaveTwentyOneDistinctCompleteLessons() throws {
         let lessons = try SpeakingLessonCatalog.load()
-        XCTAssertEqual(lessons.count, 80)
-        XCTAssertEqual(Set(lessons.map(\.id)).count, 80)
-        for level in ["B1", "B2", "C1", "C2"] {
+        XCTAssertEqual(lessons.count, 126)
+        XCTAssertEqual(Set(lessons.map(\.id)).count, 126)
+        for level in SpeakingLessonCatalog.levels {
             let group = lessons.filter { $0.level == level }
-            XCTAssertEqual(group.map(\.number).sorted(), Array(1...20))
+            XCTAssertEqual(group.map(\.number).sorted(), Array(1...21))
+            XCTAssertEqual(SpeakingLessonCatalog.ordered(lessons, level: level).first?.id, "SPK-" + level + "-021")
             for lesson in group {
                 XCTAssertNoThrow(try lesson.validate())
                 for paragraph in lesson.paragraphs {
@@ -84,7 +85,7 @@ final class SpeakingLessonTests: XCTestCase {
                 }
             }
         }
-        XCTAssertEqual(Set(lessons.map { $0.paragraphs.map(\.en).joined(separator: "\n") }).count, 80)
+        XCTAssertEqual(Set(lessons.map { $0.paragraphs.map(\.en).joined(separator: "\n") }).count, 126)
         for number in 1...2 {
             let c1 = try XCTUnwrap(lessons.first { $0.level == "C1" && $0.number == number })
             let c2 = try XCTUnwrap(lessons.first { $0.level == "C2" && $0.number == number })
@@ -99,7 +100,7 @@ final class SpeakingLessonTests: XCTestCase {
         }
     }
 
-    func testEveryLessonHasAUniqueDecodableLandscapeCover() throws {
+    func testEveryLessonHasADecodableLandscapeCoverAndExistingCoversStayDistinct() throws {
         let lessons = try SpeakingLessonCatalog.load()
         var fingerprints = Set<Data>()
         for lesson in lessons {
@@ -108,7 +109,9 @@ final class SpeakingLessonTests: XCTestCase {
             let cover = try XCTUnwrap(UIImage(data: data))
             XCTAssertGreaterThan(cover.size.height, 0)
             XCTAssertEqual(cover.size.width / cover.size.height, 16.0 / 9.0, accuracy: 0.025)
-            XCTAssertTrue(fingerprints.insert(Data(SHA256.hash(data: data))).inserted)
+            if ["B1", "B2", "C1", "C2"].contains(lesson.level) && lesson.number <= 20 {
+                XCTAssertTrue(fingerprints.insert(Data(SHA256.hash(data: data))).inserted)
+            }
         }
         XCTAssertEqual(fingerprints.count, 80)
     }

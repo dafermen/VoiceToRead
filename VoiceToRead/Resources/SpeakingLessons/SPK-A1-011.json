@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-011",
+  "number": 11,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Ordering Food at a Restaurant",
+    "es": "Pedir comida en un restaurante"
+  },
+  "category": {
+    "en": "Daily Life: Food and Eating Out",
+    "es": "Vida cotidiana: Comer fuera y pedir comida"
+  },
+  "main_topic": {
+    "en": "How to order food, ask simple questions, and say your preferences in a restaurant.",
+    "es": "Cómo pedir comida, hacer preguntas sencillas y expresar preferencias en un restaurante."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Dos adultos pidiendo comida en un restaurante casual, mirando el menú mientras conversan con un camarero.",
+    "prompt": "Editorial, realistic photograph of two adults in a casual American restaurant, consulting the menu and speaking with a friendly server, table with water and glasses, natural daylight, 16:9, no visible text.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hacer preguntas simples sobre el menú en inglés.",
+    "Decir qué comida prefieres.",
+    "Pedir que cambien un plato de manera básica.",
+    "Agradecer al camarero y responder con amabilidad.",
+    "Practicar lectura y repetición de frases cortas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "I am at a restaurant with my friend Lisa. We want something nice to eat.",
+      "es": "Estoy en un restaurante con mi amiga Lisa. Queremos comer algo rico."
+    },
+    {
+      "number": 2,
+      "function": "environment",
+      "en": "It is busy inside. We wait for a table. Many people are eating.",
+      "es": "Está lleno dentro. Esperamos una mesa. Muchas personas están comiendo."
+    },
+    {
+      "number": 3,
+      "function": "situation",
+      "en": "The waiter comes to our table. He gives us menus. He smiles and says hello.",
+      "es": "El camarero viene a nuestra mesa. Nos da los menús. Sonríe y dice hola."
+    },
+    {
+      "number": 4,
+      "function": "preference",
+      "en": "I like light food at night. I ask, 'Do you have salad with chicken?'",
+      "es": "Me gusta la comida ligera por la noche. Pregunto: '¿Tiene ensalada con pollo?'"
+    },
+    {
+      "number": 5,
+      "function": "contrast",
+      "en": "Lisa wants pasta. She does not eat pasta often. She wants to try it today.",
+      "es": "Lisa quiere pasta. No come pasta a menudo. Quiere probarla hoy."
+    },
+    {
+      "number": 6,
+      "function": "information",
+      "en": "The waiter points to salads with chicken. He shows us the pasta dishes.",
+      "es": "El camarero señala las ensaladas con pollo. Nos muestra los platos de pasta."
+    },
+    {
+      "number": 7,
+      "function": "experience",
+      "en": "I tried a chef’s salad before at another place. It was not tasty.",
+      "es": "He probado la ensalada del chef antes en otro lugar. No era sabrosa."
+    },
+    {
+      "number": 8,
+      "function": "decision",
+      "en": "I ask, 'Is your chef’s salad good here?' The waiter says, 'Yes, many people like it.'",
+      "es": "Pregunto: '¿Es buena su ensalada del chef aquí?' El camarero dice: 'Sí, a muchas personas les gusta.'"
+    },
+    {
+      "number": 9,
+      "function": "clarification",
+      "en": "Before I order, I ask, 'Does the dressing come on the side?'",
+      "es": "Antes de pedir, pregunto: '¿El aderezo viene aparte?'"
+    },
+    {
+      "number": 10,
+      "function": "action",
+      "en": "The waiter says, 'Yes, we can put the dressing on the side.' I feel happy.",
+      "es": "El camarero dice: 'Sí, podemos poner el aderezo aparte.' Me siento feliz."
+    },
+    {
+      "number": 11,
+      "function": "variation",
+      "en": "Lisa asks, 'Can you make the pasta without cheese?'",
+      "es": "Lisa pregunta: '¿Pueden hacer la pasta sin queso?'"
+    },
+    {
+      "number": 12,
+      "function": "response",
+      "en": "The waiter says, 'Yes, we make the pasta fresh. We can leave out the cheese.'",
+      "es": "El camarero dice: 'Sí, preparamos la pasta al momento. Podemos quitar el queso.'"
+    },
+    {
+      "number": 13,
+      "function": "gratitude",
+      "en": "I say, 'Thank you for your help.' Lisa smiles and says, 'Thank you!'",
+      "es": "Yo digo: 'Gracias por su ayuda.' Lisa sonríe y dice: '¡Gracias!'"
+    },
+    {
+      "number": 14,
+      "function": "past_habit",
+      "en": "Before, I always ordered the same food. Now I ask more questions.",
+      "es": "Antes, siempre pedía la misma comida. Ahora hago más preguntas."
+    },
+    {
+      "number": 15,
+      "function": "reflection",
+      "en": "I like to try different foods now. I ask about the food before I choose.",
+      "es": "Ahora me gusta probar comidas diferentes. Pregunto sobre la comida antes de elegir."
+    },
+    {
+      "number": 16,
+      "function": "service",
+      "en": "The waiter brings us water. He checks if we have everything we need.",
+      "es": "El camarero nos trae agua. Revisa si tenemos todo lo que necesitamos."
+    },
+    {
+      "number": 17,
+      "function": "expectation",
+      "en": "While we wait, I say, 'I hope the food is good.'",
+      "es": "Mientras esperamos, digo: 'Espero que la comida sea buena.'"
+    },
+    {
+      "number": 18,
+      "function": "delivery",
+      "en": "Our food comes. The waiter asks, 'Is your order correct?' Everything looks nice.",
+      "es": "Llega nuestra comida. El camarero pregunta: '¿Está correcto su pedido?' Todo se ve bien."
+    },
+    {
+      "number": 19,
+      "function": "future_intent",
+      "en": "After dinner, Lisa says, 'Let’s come back next time and try dessert.'",
+      "es": "Después de cenar, Lisa dice: 'Volvamos la próxima vez y probemos postre.'"
+    },
+    {
+      "number": 20,
+      "function": "summary",
+      "en": "Now I feel good asking questions and speaking at the restaurant.",
+      "es": "Ahora me siento bien haciendo preguntas y hablando en el restaurante."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "It is busy inside. We wait for a table. Many people are eating.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past simple",
+      "example_en": "I tried a chef’s salad before at another place. It was not tasty.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "Lisa wants pasta. She does not eat pasta often. She wants to try it today.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Can",
+      "example_en": "The waiter says, 'Yes, we can put the dressing on the side.' I feel happy.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I am at a restaurant with my friend Lisa. We want something nice to eat.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Lisa wants pasta. She does not eat pasta often. She wants to try it today.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I am at a restaurant with my friend Lisa. We want something nice to eat.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I am at a restaurant with my friend Lisa. We want something nice to eat.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Do you have salad with chicken?",
+      "meaning_es": "¿Tiene ensalada con pollo?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Is your chef’s salad good here?",
+      "meaning_es": "¿Es buena su ensalada del chef aquí?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Does the dressing come on the side?",
+      "meaning_es": "¿El aderezo viene aparte?",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Can you make the pasta without cheese?",
+      "meaning_es": "¿Pueden hacer la pasta sin queso?",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Thank you for your help.",
+      "meaning_es": "Gracias por su ayuda.",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "I hope the food is good.",
+      "meaning_es": "Espero que la comida sea buena.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "Is your order correct?",
+      "meaning_es": "¿Está correcto su pedido?",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "Let’s come back next time and try dessert.",
+      "meaning_es": "Volvamos la próxima vez y probemos postre.",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español si lo necesitas y repite dos veces en voz alta.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Haz una pausa breve en cada barra.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I like light food at night.",
+              "I ask, 'Do you have salad with chicken?'"
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I ask, 'Is your chef’s salad good here?'",
+              "The waiter says, 'Yes, many people like it.'"
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "Lisa asks, 'Can you make the pasta without cheese?'"
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, con claridad y buen ritmo.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-011",
+    "number": "011",
+    "title_en": "Ordering Food at a Restaurant",
+    "title_es": "Pedir comida en un restaurante",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida cotidiana: Comer fuera y pedir comida",
+    "main_topic_es": "Cómo pedir comida, hacer preguntas sencillas y expresar preferencias en un restaurante.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past simple",
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

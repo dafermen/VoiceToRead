@@ -1,0 +1,78 @@
+{
+  "text": "Of course, I still make mistakes. Sometimes my pronunciation is not perfect.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.36000001430511475,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.1399999856948853,
+      "end": 1.600000023841858
+    },
+    {
+      "location": 13,
+      "length": 5,
+      "start": 1.600000023841858,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 19,
+      "length": 4,
+      "start": 2.059999942779541,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 24,
+      "length": 8,
+      "start": 2.380000114440918,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 34,
+      "length": 9,
+      "start": 3.740000009536743,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 44,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.539999961853027
+    },
+    {
+      "location": 47,
+      "length": 13,
+      "start": 4.539999961853027,
+      "end": 5.260000228881836
+    },
+    {
+      "location": 61,
+      "length": 2,
+      "start": 5.260000228881836,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 5.920000076293945,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 68,
+      "length": 7,
+      "start": 6.179999828338623,
+      "end": 6.679999828338623
+    }
+  ]
+}

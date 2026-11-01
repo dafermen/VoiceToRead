@@ -1,0 +1,108 @@
+{
+  "text": "He said, 'But you can look at other jackets, or check if we have your size online.'",
+  "duration": 6.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.36000001430511475,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 1.2599999904632568,
+      "end": 1.4600000381469727
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 1.4600000381469727,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.7400000095367432,
+      "end": 2.0
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 27,
+      "length": 2,
+      "start": 2.200000047683716,
+      "end": 2.5
+    },
+    {
+      "location": 30,
+      "length": 5,
+      "start": 2.5,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 36,
+      "length": 7,
+      "start": 2.7200000286102295,
+      "end": 3.259999990463257
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.6600000858306885,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 3.859999895095825,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.039999961853027,
+      "end": 4.239999771118164
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.239999771118164,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 60,
+      "length": 4,
+      "start": 4.420000076293945,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 65,
+      "length": 4,
+      "start": 4.579999923706055,
+      "end": 4.840000152587891
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 4.840000152587891,
+      "end": 5.21999979019165
+    },
+    {
+      "location": 75,
+      "length": 6,
+      "start": 5.21999979019165,
+      "end": 5.739999771118164
+    }
+  ]
+}

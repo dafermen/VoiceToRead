@@ -1,0 +1,54 @@
+{
+  "text": "I missed a team call with my coworkers.",
+  "duration": 4.170000076293945,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 2,
+      "length": 6,
+      "start": 0.6800000071525574,
+      "end": 1.0
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 1.0,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.4800000190734863,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 16,
+      "length": 4,
+      "start": 1.6200000047683716,
+      "end": 1.9800000190734863
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.9800000190734863,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 26,
+      "length": 2,
+      "start": 2.4600000381469727,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 29,
+      "length": 9,
+      "start": 2.680000066757202,
+      "end": 3.1600000858306885
+    }
+  ]
+}

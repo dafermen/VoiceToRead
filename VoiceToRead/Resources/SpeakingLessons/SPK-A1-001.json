@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-001",
+  "number": 1,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Improving My English",
+    "es": "Mejorando mi inglés"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Learning English, speaking, building confidence, daily practice, setting goals.",
+    "es": "Aprender inglés, hablar, desarrollar confianza, practicar a diario, establecer metas."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta practicando inglés en un escritorio con cuaderno, portátil y audífonos.",
+    "prompt": "Realistic editorial photograph, adult learner studying English at home, notebook, laptop and headphones on a desk, warm natural daylight, modern apartment, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir por qué aprendes inglés.",
+    "Nombrar dificultades al hablar inglés.",
+    "Decir estrategias básicas para mejorar el inglés.",
+    "Expresar metas personales simples.",
+    "Practicar lectura sencilla y frases útiles en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Hello! My name is Ana. I want to improve my English.",
+      "es": "¡Hola! Me llamo Ana. Quiero mejorar mi inglés."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "English helps me at school and at work.",
+      "es": "El inglés me ayuda en la escuela y en el trabajo."
+    },
+    {
+      "number": 3,
+      "function": "goal",
+      "en": "I want to speak to more people.",
+      "es": "Quiero hablar con más personas."
+    },
+    {
+      "number": 4,
+      "function": "challenge",
+      "en": "Speaking is not easy for me.",
+      "es": "Hablar no es fácil para mí."
+    },
+    {
+      "number": 5,
+      "function": "problem",
+      "en": "Sometimes I do not know the right words.",
+      "es": "A veces no sé las palabras correctas."
+    },
+    {
+      "number": 6,
+      "function": "cause",
+      "en": "I think in Spanish before I speak in English.",
+      "es": "Pienso en español antes de hablar en inglés."
+    },
+    {
+      "number": 7,
+      "function": "habit",
+      "en": "I read and listen, but I do not speak much.",
+      "es": "Leo y escucho, pero no hablo mucho."
+    },
+    {
+      "number": 8,
+      "function": "change",
+      "en": "Now, I try to say simple sentences in English.",
+      "es": "Ahora intento decir oraciones sencillas en inglés."
+    },
+    {
+      "number": 9,
+      "function": "practice",
+      "en": "I say \"Good morning\" and \"How are you?\" every day.",
+      "es": "Digo \"Good morning\" y \"How are you?\" todos los días."
+    },
+    {
+      "number": 10,
+      "function": "strategy",
+      "en": "I practice with my phone, in front of a mirror.",
+      "es": "Practico con mi teléfono, frente a un espejo."
+    },
+    {
+      "number": 11,
+      "function": "support",
+      "en": "My friends help me when I make mistakes.",
+      "es": "Mis amigos me ayudan cuando cometo errores."
+    },
+    {
+      "number": 12,
+      "function": "progress",
+      "en": "I learn new words slowly.",
+      "es": "Aprendo palabras nuevas despacio."
+    },
+    {
+      "number": 13,
+      "function": "confidence",
+      "en": "Now, I am not so afraid to talk.",
+      "es": "Ahora no tengo tanto miedo de hablar."
+    },
+    {
+      "number": 14,
+      "function": "routine",
+      "en": "I practice English for ten minutes every day.",
+      "es": "Practico inglés durante diez minutos cada día."
+    },
+    {
+      "number": 15,
+      "function": "future",
+      "en": "I will try to speak a little more every week.",
+      "es": "Intentaré hablar un poco más cada semana."
+    },
+    {
+      "number": 16,
+      "function": "mistake",
+      "en": "Sometimes I say things wrong. That is okay.",
+      "es": "A veces digo cosas mal. Está bien."
+    },
+    {
+      "number": 17,
+      "function": "advice",
+      "en": "I ask people, \"Can you repeat, please?\"",
+      "es": "Pido a las personas, \"¿Puedes repetir, por favor?\""
+    },
+    {
+      "number": 18,
+      "function": "expectation",
+      "en": "Soon, I want to talk with people from other countries.",
+      "es": "Pronto quiero hablar con personas de otros países."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Learning takes time. I am patient.",
+      "es": "Aprender toma tiempo. Soy paciente."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Every day, I can learn, practice, and get better.",
+      "es": "Cada día puedo aprender, practicar y mejorar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "Sometimes I do not know the right words.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "I will try to speak a little more every week.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 15
+    },
+    {
+      "name": "Can",
+      "example_en": "I ask people, \"Can you repeat, please?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Hello! My name is Ana. I want to improve my English.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Hello! My name is Ana. I want to improve my English.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Hello! My name is Ana. I want to improve my English.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Hello! My name is Ana. I want to improve my English.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "I practice with my phone, in front of a mirror.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 10
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Good morning",
+      "meaning_es": "Buenos días",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "How are you?",
+      "meaning_es": "¿Cómo estás?",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Can you repeat, please?",
+      "meaning_es": "¿Puedes repetir, por favor?",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "I want to speak to more people.",
+      "meaning_es": "Quiero hablar con más personas.",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "Speaking is not easy for me.",
+      "meaning_es": "Hablar no es fácil para mí.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "I am patient.",
+      "meaning_es": "Soy paciente.",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "I can learn, practice, and get better.",
+      "meaning_es": "Puedo aprender, practicar y mejorar.",
+      "source_paragraph": 20
+    },
+    {
+      "expression_en": "I try to say simple sentences in English.",
+      "meaning_es": "Intento decir oraciones sencillas en inglés.",
+      "source_paragraph": 8
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés. Consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Hello!",
+              "My name is Ana.",
+              "I want to improve my English."
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "Now, I try",
+              "to say simple sentences",
+              "in English."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Every day,",
+              "I can learn, practice, and get better."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-001",
+    "number": "001",
+    "title_en": "Improving My English",
+    "title_es": "Mejorando mi inglés",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Aprender inglés, hablar, desarrollar confianza, practicar a diario, establecer metas.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

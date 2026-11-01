@@ -1,0 +1,102 @@
+{
+  "text": "He replied, \"Yes, it's a big red building with a sign that says 'Library' in front.\"",
+  "duration": 7.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 7,
+      "start": 0.36000001430511475,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 13,
+      "length": 3,
+      "start": 0.9800000190734863,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 2.0,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 23,
+      "length": 1,
+      "start": 2.5399999618530273,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 25,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 3.180000066757202,
+      "end": 3.4000000953674316
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 3.4000000953674316,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.759999990463257,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 47,
+      "length": 1,
+      "start": 4.039999961853027,
+      "end": 4.559999942779541
+    },
+    {
+      "location": 49,
+      "length": 4,
+      "start": 4.559999942779541,
+      "end": 4.579999923706055
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.579999923706055,
+      "end": 5.5
+    },
+    {
+      "location": 59,
+      "length": 4,
+      "start": 5.5,
+      "end": 5.5
+    },
+    {
+      "location": 65,
+      "length": 7,
+      "start": 5.5,
+      "end": 6.260000228881836
+    },
+    {
+      "location": 74,
+      "length": 2,
+      "start": 6.260000228881836,
+      "end": 6.940000057220459
+    },
+    {
+      "location": 77,
+      "length": 5,
+      "start": 6.940000057220459,
+      "end": 7.139999866485596
+    }
+  ]
+}

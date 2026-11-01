@@ -1,0 +1,66 @@
+{
+  "text": "The school says: Teachers are here before and after class.",
+  "duration": 5.519999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.3199999928474426,
+      "end": 0.5400000214576721
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.5400000214576721,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 17,
+      "length": 8,
+      "start": 1.2799999713897705,
+      "end": 2.0
+    },
+    {
+      "location": 26,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 30,
+      "length": 4,
+      "start": 2.3399999141693115,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 35,
+      "length": 6,
+      "start": 2.740000009536743,
+      "end": 3.299999952316284
+    },
+    {
+      "location": 42,
+      "length": 3,
+      "start": 3.299999952316284,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 46,
+      "length": 5,
+      "start": 3.7799999713897705,
+      "end": 4.119999885559082
+    },
+    {
+      "location": 52,
+      "length": 5,
+      "start": 4.119999885559082,
+      "end": 4.619999885559082
+    }
+  ]
+}

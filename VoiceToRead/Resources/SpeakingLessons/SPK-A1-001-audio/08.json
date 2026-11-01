@@ -1,0 +1,60 @@
+{
+  "text": "Now, I try to say simple sentences in English.",
+  "duration": 5.159999847412109,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6399999856948853
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.7799999713897705,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 1.399999976158142,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 1.7200000286102295,
+      "end": 2.0
+    },
+    {
+      "location": 14,
+      "length": 3,
+      "start": 2.0,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 18,
+      "length": 6,
+      "start": 2.180000066757202,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 25,
+      "length": 9,
+      "start": 2.799999952316284,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 35,
+      "length": 2,
+      "start": 3.319999933242798,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.819999933242798,
+      "end": 4.300000190734863
+    }
+  ]
+}

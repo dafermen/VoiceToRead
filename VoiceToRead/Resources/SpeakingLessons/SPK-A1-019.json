@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-019",
+  "number": 19,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Working Together on a Deadline",
+    "es": "Trabajar juntos con una fecha límite"
+  },
+  "category": {
+    "en": "Collaboration and Workplace Communication",
+    "es": "Colaboración y comunicación en el trabajo"
+  },
+  "main_topic": {
+    "en": "A small collaborative project with a deadline; clarify roles, communicate progress, and agree on the scope without overpromising.",
+    "es": "Un pequeño proyecto colaborativo con fecha límite; aclarar roles, comunicar avances y acordar el alcance sin prometer de más."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Dos colegas trabajando juntos en una mesa con computadora portátil, papeles y una pizarra con notas, en ambiente de oficina.",
+    "prompt": "Editorial photo, two adults working together at a table in a modern office, laptop, papers, whiteboard with sticky notes, collaborative teamwork, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Aprender vocabulario cotidiano de «Trabajar juntos con una fecha límite».",
+    "Comprender frases breves en una situación cotidiana.",
+    "Reconocer las estructuras básicas presentes en los ejemplos.",
+    "Relacionar las frases en inglés con su significado en español.",
+    "Practicar la lectura clara y la repetición de frases completas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "everyday communication",
+      "en": "I work with a small team.",
+      "es": "Trabajo con un equipo pequeño."
+    },
+    {
+      "number": 2,
+      "function": "everyday communication",
+      "en": "We have a project this week.",
+      "es": "Tenemos un proyecto esta semana."
+    },
+    {
+      "number": 3,
+      "function": "everyday communication",
+      "en": "Our meeting is on Monday.",
+      "es": "Nuestra reunión es el lunes."
+    },
+    {
+      "number": 4,
+      "function": "everyday communication",
+      "en": "The work is due on Friday.",
+      "es": "El trabajo se entrega el viernes."
+    },
+    {
+      "number": 5,
+      "function": "everyday communication",
+      "en": "I can write the first page.",
+      "es": "Puedo escribir la primera página."
+    },
+    {
+      "number": 6,
+      "function": "everyday communication",
+      "en": "My friend can draw a picture.",
+      "es": "Mi amigo puede hacer un dibujo."
+    },
+    {
+      "number": 7,
+      "function": "everyday communication",
+      "en": "We need a list of tasks.",
+      "es": "Necesitamos una lista de tareas."
+    },
+    {
+      "number": 8,
+      "function": "everyday communication",
+      "en": "I write the names on the list.",
+      "es": "Escribo los nombres en la lista."
+    },
+    {
+      "number": 9,
+      "function": "everyday communication",
+      "en": "We talk about our work.",
+      "es": "Hablamos de nuestro trabajo."
+    },
+    {
+      "number": 10,
+      "function": "everyday communication",
+      "en": "I do not understand one task.",
+      "es": "No entiendo una tarea."
+    },
+    {
+      "number": 11,
+      "function": "everyday communication",
+      "en": "Can you help me, please?",
+      "es": "¿Puedes ayudarme, por favor?"
+    },
+    {
+      "number": 12,
+      "function": "everyday communication",
+      "en": "My friend shows me an example.",
+      "es": "Mi amigo me muestra un ejemplo."
+    },
+    {
+      "number": 13,
+      "function": "everyday communication",
+      "en": "Now I know what to do.",
+      "es": "Ahora sé qué hacer."
+    },
+    {
+      "number": 14,
+      "function": "everyday communication",
+      "en": "We work and take short breaks.",
+      "es": "Trabajamos y hacemos descansos breves."
+    },
+    {
+      "number": 15,
+      "function": "everyday communication",
+      "en": "On Wednesday, we check the pages.",
+      "es": "El miércoles, revisamos las páginas."
+    },
+    {
+      "number": 16,
+      "function": "everyday communication",
+      "en": "One picture is not ready.",
+      "es": "Un dibujo no está listo."
+    },
+    {
+      "number": 17,
+      "function": "everyday communication",
+      "en": "We can finish it together.",
+      "es": "Podemos terminarlo juntos."
+    },
+    {
+      "number": 18,
+      "function": "everyday communication",
+      "en": "On Thursday, the project is ready.",
+      "es": "El jueves, el proyecto está listo."
+    },
+    {
+      "number": 19,
+      "function": "everyday communication",
+      "en": "We show it to our teacher.",
+      "es": "Se lo mostramos a nuestra profesora."
+    },
+    {
+      "number": 20,
+      "function": "everyday communication",
+      "en": "I thank my team for the help.",
+      "es": "Agradezco la ayuda a mi equipo."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "I do not understand one task.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "Can",
+      "example_en": "I can write the first page.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I work with a small team.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I work with a small team.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Our meeting is on Monday.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "I work with a small team.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "The work is due on Friday.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "And to add information",
+      "example_en": "We work and take short breaks.",
+      "explanation_es": "And une palabras, acciones o ideas que se añaden entre sí.",
+      "source_paragraph": 14
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I work with a small team",
+      "meaning_es": "Trabajo con un equipo pequeño",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "We have a project this week",
+      "meaning_es": "Tenemos un proyecto esta semana",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Our meeting is on Monday",
+      "meaning_es": "Nuestra reunión es el lunes",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "The work is due on Friday",
+      "meaning_es": "El trabajo se entrega el viernes",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "I can write the first page",
+      "meaning_es": "Puedo escribir la primera página",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "My friend can draw a picture",
+      "meaning_es": "Mi amigo puede hacer un dibujo",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "We need a list of tasks",
+      "meaning_es": "Necesitamos una lista de tareas",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "I write the names on the list",
+      "meaning_es": "Escribo los nombres en la lista",
+      "source_paragraph": 8
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "I work with a small team."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "We need a list of tasks."
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "Now I know what to do."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-019",
+    "number": "019",
+    "title_en": "Working Together on a Deadline",
+    "title_es": "Trabajar juntos con una fecha límite",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Colaboración y comunicación en el trabajo",
+    "main_topic_es": "Un pequeño proyecto colaborativo con fecha límite; aclarar roles, comunicar avances y acordar el alcance sin prometer de más.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article",
+      "And to add information"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

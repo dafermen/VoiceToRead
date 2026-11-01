@@ -73,6 +73,9 @@ struct SettingsView: View {
                 Text("Saved sessions are excluded from device backup. Export anything you need to keep.")
                     .font(.caption)
             }
+            Section("Translation notice") {
+                Text("VoiceToRead does not guarantee the accuracy of automatic translations or manual edits. Translations may contain errors, and user edits are not verified by the app. Check important information before relying on it.").font(.caption).foregroundStyle(.secondary)
+            }
             Section("Privacy") {
                 NavigationLink("Privacy Policy") { PrivacyPolicyView() }
                 Text("No accounts, analytics or tracking. Session audio is optional; pronunciation practice records temporary attempts only when you tap its microphone.")

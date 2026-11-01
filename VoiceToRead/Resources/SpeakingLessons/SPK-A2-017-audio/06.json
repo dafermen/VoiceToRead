@@ -1,0 +1,96 @@
+{
+  "text": "Yesterday, I emailed both providers to ask about the support they give during the course.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 9,
+      "start": 0.0,
+      "end": 0.8199999928474426
+    },
+    {
+      "location": 11,
+      "length": 1,
+      "start": 1.1200000047683716,
+      "end": 1.6399999856948853
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.6399999856948853,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 21,
+      "length": 4,
+      "start": 1.840000033378601,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 26,
+      "length": 9,
+      "start": 2.3399999141693115,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 36,
+      "length": 2,
+      "start": 2.880000114440918,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 39,
+      "length": 3,
+      "start": 3.2200000286102295,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.5199999809265137,
+      "end": 3.759999990463257
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.759999990463257,
+      "end": 4.039999961853027
+    },
+    {
+      "location": 53,
+      "length": 7,
+      "start": 4.039999961853027,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.320000171661377,
+      "end": 4.599999904632568
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 4.599999904632568,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 71,
+      "length": 6,
+      "start": 4.980000019073486,
+      "end": 5.599999904632568
+    },
+    {
+      "location": 78,
+      "length": 3,
+      "start": 5.599999904632568,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 82,
+      "length": 6,
+      "start": 5.78000020980835,
+      "end": 6.119999885559082
+    }
+  ]
+}

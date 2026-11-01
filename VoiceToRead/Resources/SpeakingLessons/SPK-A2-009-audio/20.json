@@ -1,0 +1,60 @@
+{
+  "text": "Now I send clearer messages when my plans change.",
+  "duration": 4.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 4,
+      "length": 1,
+      "start": 0.5,
+      "end": 1.0800000429153442
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 1.0800000429153442,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 1.340000033378601,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 19,
+      "length": 8,
+      "start": 1.899999976158142,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.3399999141693115,
+      "end": 2.740000009536743
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.740000009536743,
+      "end": 3.059999942779541
+    },
+    {
+      "location": 36,
+      "length": 5,
+      "start": 3.059999942779541,
+      "end": 3.5
+    },
+    {
+      "location": 42,
+      "length": 6,
+      "start": 3.5,
+      "end": 4.179999828338623
+    }
+  ]
+}

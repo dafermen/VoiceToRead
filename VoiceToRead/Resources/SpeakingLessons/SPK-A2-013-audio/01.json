@@ -1,0 +1,108 @@
+{
+  "text": "Last week, my friends and I talked about having a small celebration for our coworker's new position.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.7599999904632568
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 1.2400000095367432,
+      "end": 1.5
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.5,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.840000033378601,
+      "end": 2.0799999237060547
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.0799999237060547,
+      "end": 2.440000057220459
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.440000057220459,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 2.640000104904175,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 2.9600000381469727,
+      "end": 3.200000047683716
+    },
+    {
+      "location": 48,
+      "length": 1,
+      "start": 3.200000047683716,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 50,
+      "length": 5,
+      "start": 3.4200000762939453,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 56,
+      "length": 11,
+      "start": 3.9200000762939453,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 4.460000038146973,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 5.179999828338623,
+      "end": 5.420000076293945
+    },
+    {
+      "location": 76,
+      "length": 10,
+      "start": 5.420000076293945,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 87,
+      "length": 3,
+      "start": 6.179999828338623,
+      "end": 6.380000114440918
+    },
+    {
+      "location": 91,
+      "length": 8,
+      "start": 6.380000114440918,
+      "end": 6.679999828338623
+    }
+  ]
+}

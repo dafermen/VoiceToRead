@@ -1,0 +1,114 @@
+{
+  "text": "We paid the small difference. The agent gave us our new tickets and explained where to change trains.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 3,
+      "length": 4,
+      "start": 0.36000001430511475,
+      "end": 0.800000011920929
+    },
+    {
+      "location": 8,
+      "length": 3,
+      "start": 0.800000011920929,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 1.059999942779541,
+      "end": 1.399999976158142
+    },
+    {
+      "location": 18,
+      "length": 10,
+      "start": 1.399999976158142,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 30,
+      "length": 3,
+      "start": 2.5999999046325684,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.680000066757202,
+      "end": 3.0
+    },
+    {
+      "location": 40,
+      "length": 4,
+      "start": 3.0,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 45,
+      "length": 2,
+      "start": 3.3399999141693115,
+      "end": 3.559999942779541
+    },
+    {
+      "location": 48,
+      "length": 3,
+      "start": 3.559999942779541,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 52,
+      "length": 3,
+      "start": 3.7799999713897705,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 4.139999866485596,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 64,
+      "length": 3,
+      "start": 4.420000076293945,
+      "end": 5.0
+    },
+    {
+      "location": 68,
+      "length": 9,
+      "start": 5.0,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 78,
+      "length": 5,
+      "start": 5.579999923706055,
+      "end": 5.900000095367432
+    },
+    {
+      "location": 84,
+      "length": 2,
+      "start": 5.900000095367432,
+      "end": 6.28000020980835
+    },
+    {
+      "location": 87,
+      "length": 6,
+      "start": 6.28000020980835,
+      "end": 6.420000076293945
+    },
+    {
+      "location": 94,
+      "length": 6,
+      "start": 6.420000076293945,
+      "end": 6.900000095367432
+    }
+  ]
+}

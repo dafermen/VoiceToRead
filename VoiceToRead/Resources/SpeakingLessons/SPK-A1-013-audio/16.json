@@ -1,0 +1,60 @@
+{
+  "text": "We check the plan together. Everyone knows their job.",
+  "duration": 4.460000038146973,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 3,
+      "length": 5,
+      "start": 0.3199999928474426,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 0.6800000071525574,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 13,
+      "length": 4,
+      "start": 0.9200000166893005,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 18,
+      "length": 8,
+      "start": 1.2200000286102295,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 28,
+      "length": 8,
+      "start": 2.5799999237060547,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 37,
+      "length": 5,
+      "start": 2.9800000190734863,
+      "end": 3.319999933242798
+    },
+    {
+      "location": 43,
+      "length": 5,
+      "start": 3.319999933242798,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 3.940000057220459
+    }
+  ]
+}

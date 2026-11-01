@@ -1,0 +1,96 @@
+{
+  "text": "By fixing the mistake quickly, I kept my team's trust and learned for next time.",
+  "duration": 7.389999866485596,
+  "words": [
+    {
+      "location": 0,
+      "length": 2,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 3,
+      "length": 6,
+      "start": 0.46000000834465027,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 0.9200000166893005,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.3600000143051147,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 22,
+      "length": 7,
+      "start": 1.659999966621399,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 31,
+      "length": 1,
+      "start": 3.0,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 33,
+      "length": 4,
+      "start": 3.240000009536743,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 38,
+      "length": 2,
+      "start": 3.4800000190734863,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 3.7799999713897705,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 48,
+      "length": 5,
+      "start": 4.760000228881836,
+      "end": 4.760000228881836
+    },
+    {
+      "location": 54,
+      "length": 3,
+      "start": 4.760000228881836,
+      "end": 5.5
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.880000114440918
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 5.880000114440918,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 6.400000095367432,
+      "end": 6.699999809265137
+    },
+    {
+      "location": 75,
+      "length": 4,
+      "start": 6.699999809265137,
+      "end": 7.039999961853027
+    }
+  ]
+}

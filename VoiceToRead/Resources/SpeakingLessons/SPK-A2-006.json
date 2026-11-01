@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-006",
+  "number": 6,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Travel Plans and Unexpected Changes",
+    "es": "Planes de viaje e imprevistos"
+  },
+  "category": {
+    "en": "Transportation and Travel",
+    "es": "Transporte y viajes"
+  },
+  "main_topic": {
+    "en": "A fictional journey disrupted by a changed reservation or transport connection; explain needs, compare realistic alternatives and agree on a plan.",
+    "es": "Un viaje ficticio interrumpido por un cambio de reserva o conexión; explicar necesidades, comparar alternativas realistas y acordar un plan."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Persona adulta en una estación de tren revisando su teléfono móvil y un boleto, maleta junto a ella, ambiente de cambio de planes.",
+    "prompt": "Realistic editorial photograph, adult traveler in a modern train station, checking phone and holding a reservation ticket, suitcase next to them, concerned expression, natural daylight, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir planes y cambios de viaje sencillos.",
+    "Expresar necesidades y hacer peticiones simples.",
+    "Comparar alternativas usando oraciones cortas.",
+    "Mostrar acuerdo o preferencia en situaciones cotidianas.",
+    "Practicar comprensión y repetición de fragmentos en inglés americano."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Saturday, I made travel plans with my friend. We wanted to visit another city by train.",
+      "es": "El sábado pasado, hice planes de viaje con mi amigo. Queríamos visitar otra ciudad en tren."
+    },
+    {
+      "number": 2,
+      "function": "anticipation",
+      "en": "We were very excited. We talked about our trip every day during the week before.",
+      "es": "Estábamos muy emocionados. Hablamos sobre nuestro viaje todos los días durante la semana anterior."
+    },
+    {
+      "number": 3,
+      "function": "preparation",
+      "en": "Our tickets were for the morning. We packed our bags on Friday night and got ready.",
+      "es": "Nuestros boletos eran para la mañana. Empacamos nuestras maletas el viernes por la noche y nos preparamos."
+    },
+    {
+      "number": 4,
+      "function": "unexpected_event",
+      "en": "When we arrived at the train station, we saw a sign. Our train was cancelled because of a problem.",
+      "es": "Cuando llegamos a la estación de tren, vimos un letrero. Nuestro tren estaba cancelado por un problema."
+    },
+    {
+      "number": 5,
+      "function": "reaction",
+      "en": "We felt disappointed and surprised. We did not know what to do for our trip now.",
+      "es": "Nos sentimos decepcionados y sorprendidos. No sabíamos qué hacer para nuestro viaje ahora."
+    },
+    {
+      "number": 6,
+      "function": "seeking_help",
+      "en": "I went to the counter and said, \"Can you help us? We need a way to get to the city today.\"",
+      "es": "Fui a la ventanilla y dije: \"¿Puede ayudarnos? Necesitamos una forma de llegar a la ciudad hoy.\""
+    },
+    {
+      "number": 7,
+      "function": "information",
+      "en": "The agent looked at the computer. He said the next direct train would be in the afternoon.",
+      "es": "El agente miró la computadora. Dijo que el próximo tren directo sería por la tarde."
+    },
+    {
+      "number": 8,
+      "function": "alternative",
+      "en": "He also suggested another way. We could take two trains and change in a small town.",
+      "es": "También sugirió otra opción. Podíamos tomar dos trenes y cambiar en un pueblo pequeño."
+    },
+    {
+      "number": 9,
+      "function": "preference",
+      "en": "I wanted to arrive early, so I thought the two-train option was better. I asked about times.",
+      "es": "Quería llegar temprano, así que pensé que la opción de dos trenes era mejor. Pregunté los horarios."
+    },
+    {
+      "number": 10,
+      "function": "agreement",
+      "en": "My friend agreed with me. Waiting all day at the station did not seem like a good idea to us.",
+      "es": "Mi amigo estuvo de acuerdo conmigo. Esperar todo el día en la estación no nos parecía buena idea."
+    },
+    {
+      "number": 11,
+      "function": "negotiation",
+      "en": "We asked, \"Can you check for seats on the earlier trains? We do not mind a small extra fee.\"",
+      "es": "Preguntamos: \"¿Puede revisar si hay asientos en los trenes anteriores? No nos importa pagar un pequeño extra.\""
+    },
+    {
+      "number": 12,
+      "function": "confirmation",
+      "en": "The agent replied, \"Good news! There are seats for both trains. I can print your tickets now.\"",
+      "es": "El agente respondió: \"¡Buenas noticias! Hay asientos para ambos trenes. Puedo imprimir sus boletos ahora.\""
+    },
+    {
+      "number": 13,
+      "function": "relief",
+      "en": "We felt happy and said thank you. We did not want to lose the whole day waiting.",
+      "es": "Nos sentimos felices y dijimos gracias. No queríamos perder todo el día esperando."
+    },
+    {
+      "number": 14,
+      "function": "process",
+      "en": "We paid the small difference. The agent gave us our new tickets and explained where to change trains.",
+      "es": "Pagamos la pequeña diferencia. El agente nos dio los nuevos boletos y explicó dónde cambiar de tren."
+    },
+    {
+      "number": 15,
+      "function": "clarification",
+      "en": "We listened and wrote down the name of the small town. We checked how long the wait was.",
+      "es": "Escuchamos y anotamos el nombre del pueblo pequeño. Verificamos cuánto tiempo era la espera."
+    },
+    {
+      "number": 16,
+      "function": "reflection",
+      "en": "We learned that plans can change sometimes. It is important to stay calm and look for solutions.",
+      "es": "Aprendimos que los planes pueden cambiar a veces. Es importante mantener la calma y buscar soluciones."
+    },
+    {
+      "number": 17,
+      "function": "alternative_view",
+      "en": "My friend said, \"Sometimes these surprises make the trip more interesting and fun.\"",
+      "es": "Mi amigo dijo: \"A veces estas sorpresas hacen el viaje más interesante y divertido.\""
+    },
+    {
+      "number": 18,
+      "function": "conclusion",
+      "en": "We took the first train together and smiled. We felt proud that we found a good plan.",
+      "es": "Tomamos el primer tren juntos y sonreímos. Nos sentimos orgullosos de encontrar un buen plan."
+    },
+    {
+      "number": 19,
+      "function": "future_plan",
+      "en": "Next time I travel, I will check the schedules twice and be ready for changes.",
+      "es": "La próxima vez que viaje, revisaré los horarios dos veces y estaré listo para cambios."
+    },
+    {
+      "number": 20,
+      "function": "summary",
+      "en": "This trip showed me that good communication and patience are important for travel problems.",
+      "es": "Este viaje me mostró que la buena comunicación y la paciencia son importantes para los problemas de viaje."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last Saturday, I made travel plans with my friend. We wanted to visit another city by train.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "We felt disappointed and surprised. We did not know what to do for our trip now.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "We asked, \"Can you check for seats on the earlier trains? We do not mind a small extra fee.\"",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Next time I travel, I will check the schedules twice and be ready for changes.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Can",
+      "example_en": "I went to the counter and said, \"Can you help us? We need a way to get to the city today.\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Could",
+      "example_en": "He also suggested another way. We could take two trains and change in a small town.",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I went to the counter and said, \"Can you help us? We need a way to get to the city today.\"",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Last Saturday, I made travel plans with my friend. We wanted to visit another city by train.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Can you help us?",
+      "meaning_es": "¿Puede ayudarnos?",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "We need a way to get to the city today.",
+      "meaning_es": "Necesitamos una forma de llegar a la ciudad hoy.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Our train was cancelled because of a problem.",
+      "meaning_es": "Nuestro tren fue cancelado por un problema.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "We could take two trains and change in a small town.",
+      "meaning_es": "Podríamos tomar dos trenes y cambiar en un pueblo pequeño.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "I wanted to arrive early, so I thought the two-train option was better.",
+      "meaning_es": "Quería llegar temprano, así que pensé que la opción de dos trenes era mejor.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "My friend agreed with me.",
+      "meaning_es": "Mi amigo estuvo de acuerdo conmigo.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Good news! There are seats for both trains.",
+      "meaning_es": "¡Buenas noticias! Hay asientos para ambos trenes.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "It is important to stay calm and look for solutions.",
+      "meaning_es": "Es importante mantener la calma y buscar soluciones.",
+      "source_paragraph": 16
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "When we arrived at the train station, we saw a sign.",
+              "Our train was cancelled because of a problem."
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "I wanted to arrive early, so I thought the two-train option was better.",
+              "I asked about times."
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "We learned that plans can change sometimes.",
+              "It is important to stay calm and look for solutions."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-006",
+    "number": "006",
+    "title_en": "Travel Plans and Unexpected Changes",
+    "title_es": "Planes de viaje e imprevistos",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Transporte y viajes",
+    "main_topic_es": "Un viaje ficticio interrumpido por un cambio de reserva o conexión; explicar necesidades, comparar alternativas realistas y acordar un plan.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past simple negative",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "text": "Goodbye! Take care!",
+  "duration": 2.559999942779541,
+  "words": [
+    {
+      "location": 0,
+      "length": 7,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 4,
+      "start": 1.4199999570846558,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 14,
+      "length": 4,
+      "start": 1.7000000476837158,
+      "end": 1.899999976158142
+    }
+  ]
+}

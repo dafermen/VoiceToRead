@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-015",
+  "number": 15,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Helping in My Community",
+    "es": "Colaborar en mi comunidad"
+  },
+  "category": {
+    "en": "Community and Social Life",
+    "es": "Comunidad y vida social"
+  },
+  "main_topic": {
+    "en": "Planning a simple neighborhood volunteering activity, choosing tasks, and talking about helping.",
+    "es": "Planear una actividad sencilla de voluntariado vecinal, elegir tareas y hablar sobre cómo ayudar."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Personas adultas organizando una actividad de voluntariado en un parque del vecindario.",
+    "prompt": "Editorial, diverse adults talking and organizing a neighborhood volunteer clean-up in a green community park, clipboards, casual outdoor clothing, warm daylight, natural setting, no branding, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Nombrar acciones comunes de voluntariado vecinal.",
+    "Pedir y ofrecer ayuda usando inglés simple.",
+    "Elegir tareas y agruparse cooperativamente.",
+    "Decir lo que es útil en el vecindario.",
+    "Practicar la comprensión auditiva y lectura básica."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "This month, my neighbors and I want to help in the park.",
+      "es": "Este mes, mis vecinos y yo queremos ayudar en el parque."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "We want to make our place clean and nice.",
+      "es": "Queremos que nuestro lugar esté limpio y bonito."
+    },
+    {
+      "number": 3,
+      "function": "personal_experience",
+      "en": "I have not done this before, but I want to help.",
+      "es": "No he hecho esto antes, pero quiero ayudar."
+    },
+    {
+      "number": 4,
+      "function": "problem",
+      "en": "Some people are ready to start. Others ask, 'What can I do?'",
+      "es": "Algunas personas están listas para empezar. Otras preguntan: '¿Qué puedo hacer?'"
+    },
+    {
+      "number": 5,
+      "function": "conversation",
+      "en": "I ask Sara, 'What do you think we need to do first?'",
+      "es": "Le pregunto a Sara: '¿Qué crees que debemos hacer primero?'"
+    },
+    {
+      "number": 6,
+      "function": "response",
+      "en": "Sara says, 'Let’s pick up trash. We can plant flowers too.'",
+      "es": "Sara dice: 'Recojamos basura. También podemos plantar flores.'"
+    },
+    {
+      "number": 7,
+      "function": "negotiation",
+      "en": "We talk about flowers. Should we buy new ones or use old ones?",
+      "es": "Hablamos sobre flores. ¿Debemos comprar nuevas o usar las que tenemos?"
+    },
+    {
+      "number": 8,
+      "function": "comparison",
+      "en": "Before, people only brought brooms. Now we want more things.",
+      "es": "Antes, la gente solo traía escobas. Ahora queremos más cosas."
+    },
+    {
+      "number": 9,
+      "function": "suggestion",
+      "en": "Lisa says, 'Let’s write a list. We do not want two people to bring the same.'",
+      "es": "Lisa dice: 'Escribamos una lista. No queremos que dos personas traigan lo mismo.'"
+    },
+    {
+      "number": 10,
+      "function": "challenge",
+      "en": "Many people sign up. Some do not agree on jobs yet.",
+      "es": "Muchas personas se apuntan. Algunas no están de acuerdo sobre las tareas aún."
+    },
+    {
+      "number": 11,
+      "function": "solution",
+      "en": "We agree: Ask the park staff about rules before we begin.",
+      "es": "Acordamos: Preguntar al personal del parque sobre las reglas antes de empezar."
+    },
+    {
+      "number": 12,
+      "function": "experience",
+      "en": "The park staff say, 'Please keep the path open. Do not plant next to the play area.'",
+      "es": "El personal del parque dice: 'Por favor, dejen libre el camino. No planten junto al área de juegos.'"
+    },
+    {
+      "number": 13,
+      "function": "reflection",
+      "en": "We must plan well. We want everyone’s help to be useful.",
+      "es": "Debemos planear bien. Queremos que la ayuda de todos sea útil."
+    },
+    {
+      "number": 14,
+      "function": "division_of_tasks",
+      "en": "We make three groups: pick up trash, plant flowers, help kids paint signs.",
+      "es": "Hacemos tres grupos: recoger basura, plantar flores y ayudar a los niños a pintar carteles."
+    },
+    {
+      "number": 15,
+      "function": "complication",
+      "en": "On the day, some people are late or forget things.",
+      "es": "El día del evento, algunas personas llegan tarde o se olvidan de cosas."
+    },
+    {
+      "number": 16,
+      "function": "adjustment",
+      "en": "We check our list. Everyone can do something to help.",
+      "es": "Revisamos nuestra lista. Todos pueden hacer algo para ayudar."
+    },
+    {
+      "number": 17,
+      "function": "positive_outcome",
+      "en": "Soon, the park looks good. We talk and laugh together.",
+      "es": "Pronto, el parque se ve bien. Charlamos y reímos juntos."
+    },
+    {
+      "number": 18,
+      "function": "reflection",
+      "en": "Clear plans make good teamwork. It is important to ask, 'What is useful?'",
+      "es": "Los planes claros hacen buen trabajo en equipo. Es importante preguntar: '¿Qué es útil?'"
+    },
+    {
+      "number": 19,
+      "function": "future_intention",
+      "en": "Next time we can have a picnic after we help.",
+      "es": "La próxima vez podemos hacer un picnic después de ayudar."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Helping together makes us good neighbors.",
+      "es": "Ayudar juntos nos hace buenos vecinos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "Lisa says, 'Let’s write a list. We do not want two people to bring the same.'",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Can",
+      "example_en": "Some people are ready to start. Others ask, 'What can I do?'",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Present simple",
+      "example_en": "This month, my neighbors and I want to help in the park.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "This month, my neighbors and I want to help in the park.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "This month, my neighbors and I want to help in the park.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "This month, my neighbors and I want to help in the park.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "Lisa says, 'Let’s write a list. We do not want two people to bring the same.'",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 9
+    },
+    {
+      "name": "Definite article",
+      "example_en": "This month, my neighbors and I want to help in the park.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "What can I do?",
+      "meaning_es": "¿Qué puedo hacer?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "What do you think we need to do first?",
+      "meaning_es": "¿Qué crees que debemos hacer primero?",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Let’s pick up trash.",
+      "meaning_es": "Recojamos basura.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "We can plant flowers too.",
+      "meaning_es": "También podemos plantar flores.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Let’s write a list.",
+      "meaning_es": "Escribamos una lista.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "Many people sign up.",
+      "meaning_es": "Muchas personas se apuntan.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Everyone can do something to help.",
+      "meaning_es": "Todos pueden hacer algo para ayudar.",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "Helping together makes us good neighbors.",
+      "meaning_es": "Ayudar juntos nos hace buenos vecinos.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "Sara says, 'Let’s pick up trash. We can plant flowers too.'"
+            ]
+          },
+          {
+            "source_paragraph": 9,
+            "segments": [
+              "Lisa says, 'Let’s write a list. We do not want two people to bring the same.'"
+            ]
+          },
+          {
+            "source_paragraph": 16,
+            "segments": [
+              "We check our list. Everyone can do something to help."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-015",
+    "number": "015",
+    "title_en": "Helping in My Community",
+    "title_es": "Colaborar en mi comunidad",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Comunidad y vida social",
+    "main_topic_es": "Planear una actividad sencilla de voluntariado vecinal, elegir tareas y hablar sobre cómo ayudar.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

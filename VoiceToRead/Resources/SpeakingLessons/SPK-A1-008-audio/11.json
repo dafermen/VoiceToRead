@@ -1,0 +1,36 @@
+{
+  "text": "The worker brings another jacket.",
+  "duration": 3.0399999618530273,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3199999928474426
+    },
+    {
+      "location": 4,
+      "length": 6,
+      "start": 0.3199999928474426,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 0.7200000286102295,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.2799999713897705,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 1.8799999952316284,
+      "end": 2.2200000286102295
+    }
+  ]
+}

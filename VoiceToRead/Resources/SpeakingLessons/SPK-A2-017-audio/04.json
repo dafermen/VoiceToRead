@@ -1,0 +1,96 @@
+{
+  "text": "Although I like studying with people, I might need something that fits my schedule better.",
+  "duration": 7.269999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 1,
+      "start": 0.6000000238418579,
+      "end": 1.1799999475479126
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 1.1799999475479126,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 16,
+      "length": 8,
+      "start": 1.559999942779541,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 25,
+      "length": 4,
+      "start": 2.0199999809265137,
+      "end": 2.4200000762939453
+    },
+    {
+      "location": 30,
+      "length": 6,
+      "start": 2.4200000762939453,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 38,
+      "length": 1,
+      "start": 3.6600000858306885,
+      "end": 3.8399999141693115
+    },
+    {
+      "location": 40,
+      "length": 5,
+      "start": 3.8399999141693115,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 4.159999847412109,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 51,
+      "length": 9,
+      "start": 4.480000019073486,
+      "end": 4.940000057220459
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.940000057220459,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 66,
+      "length": 4,
+      "start": 5.71999979019165,
+      "end": 5.71999979019165
+    },
+    {
+      "location": 71,
+      "length": 2,
+      "start": 5.71999979019165,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 74,
+      "length": 8,
+      "start": 6.159999847412109,
+      "end": 6.539999961853027
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 6.539999961853027,
+      "end": 6.880000114440918
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "text": "When they asked about weaknesses, I was honest about public speaking.",
+  "duration": 6.0,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 1.0199999809265137
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 1.0199999809265137,
+      "end": 1.3600000143051147
+    },
+    {
+      "location": 16,
+      "length": 5,
+      "start": 1.3600000143051147,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 22,
+      "length": 10,
+      "start": 1.7200000286102295,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 2.799999952316284,
+      "end": 3.0799999237060547
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 3.0799999237060547,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 40,
+      "length": 6,
+      "start": 3.380000114440918,
+      "end": 3.859999895095825
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.859999895095825,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 4.480000019073486,
+      "end": 4.980000019073486
+    },
+    {
+      "location": 60,
+      "length": 8,
+      "start": 4.980000019073486,
+      "end": 5.320000171661377
+    }
+  ]
+}

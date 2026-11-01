@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-B2-021",
+  "number": 21,
+  "status": "ready",
+  "level": "B2",
+  "language": "en-US",
+  "title": {
+    "en": "Greetings",
+    "es": "Saludos"
+  },
+  "category": {
+    "en": "Daily Communication",
+    "es": "Comunicación cotidiana"
+  },
+  "main_topic": {
+    "en": "Applying greetings appropriately in real-life situations, choosing register, responding to objections, and justifying preferences.",
+    "es": "Aplicar saludos apropiadamente en situaciones reales, elegir el registro, responder objeciones y justificar preferencias."
+  },
+  "estimated_minutes": 35,
+  "image": {
+    "alt_es": "Dos personas adultas se saludan con una sonrisa y un gesto de la mano junto a una cafetería.",
+    "prompt": "Candid editorial landscape photo of two adult neighbors smiling and waving hello on a neighborhood sidewalk beside a cafe. Natural daylight. No text, logos or watermark.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Justificar y comparar el uso de saludos según el contexto.",
+    "Explicar las diferencias de registro entre saludos formales e informales.",
+    "Reaccionar adecuadamente a saludos y despedidas habituales.",
+    "Responder a saludos telefónicos y laborales con naturalidad.",
+    "Comprender y reproducir microdiálogos de encuentros reales."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Every day, I greet people in many different ways depending on where I am and who I'm with.",
+      "es": "Cada día saludo a las personas de diferentes maneras según dónde estoy y con quién me encuentro."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "For instance, in the office I usually say, \"Good morning, everyone,\" even if I might prefer a simple \"Hello\" elsewhere.",
+      "es": "Por ejemplo, en la oficina suelo decir: \"Buenos días a todos\", aunque en otros lugares podría preferir un simple \"Hola\"."
+    },
+    {
+      "number": 3,
+      "function": "preference",
+      "en": "\"Hi\" feels more casual, and I use it most with friends or friendly colleagues at a café.",
+      "es": "\"Hi\" suena más informal, y lo uso sobre todo con amigos o colegas cercanos en una cafetería."
+    },
+    {
+      "number": 4,
+      "function": "example",
+      "en": "At the gym, someone might greet me with, \"Hey, how's it going?\" and I'd honestly reply, \"Not bad, and you?\"",
+      "es": "En el gimnasio, alguien podría saludarme con: \"Hey, how's it going?\" y yo respondería con sinceridad: \"Not bad, and you?\""
+    },
+    {
+      "number": 5,
+      "function": "analysis",
+      "en": "If I used very formal greetings everywhere, like \"Good afternoon\" with friends, it could feel awkward to them.",
+      "es": "Si usara saludos muy formales en todas partes, como \"Good afternoon\" con amigos, podría resultarles extraño."
+    },
+    {
+      "number": 6,
+      "function": "reasoning",
+      "en": "At an evening event, I greet people with, \"Good evening,\" rather than \"Good night,\" which I normally use when leaving.",
+      "es": "En un evento nocturno, saludo con «Good evening» en lugar de «Good night», que normalmente uso al despedirme."
+    },
+    {
+      "number": 7,
+      "function": "first_meeting",
+      "en": "When I meet someone for the first time, I say, \"Nice to meet you,\" and usually shake hands.",
+      "es": "Cuando conozco a alguien por primera vez, digo: \"Nice to meet you\" y suelo estrechar la mano."
+    },
+    {
+      "number": 8,
+      "function": "reunion",
+      "en": "If I see a colleague after a long break, I might say, \"Long time no see!\" to express some warmth.",
+      "es": "Si veo a un colega tras mucho tiempo, puedo decir: \"Long time no see!\" para mostrar cercanía."
+    },
+    {
+      "number": 9,
+      "function": "recognition",
+      "en": "For someone I already know, \"Good to see you again\" sounds friendly and works with old friends or familiar coworkers.",
+      "es": "Con alguien que ya conozco, «Me alegra verte de nuevo» suena amistoso y sirve con viejos amigos o compañeros conocidos."
+    },
+    {
+      "number": 10,
+      "function": "welcome",
+      "en": "In my job as a receptionist, I often say, \"Welcome! How can I help you today?\" to customers as they enter.",
+      "es": "En mi trabajo como recepcionista, suelo decir: \"Welcome! How can I help you today?\" a los clientes cuando entran."
+    },
+    {
+      "number": 11,
+      "function": "comparison",
+      "en": "Greeting someone new on the phone is different. I usually start with, \"Hello, this is Alex. How may I assist you?\"",
+      "es": "Saludar a alguien nuevo por teléfono es diferente. Suelo empezar con: \"Hello, this is Alex. How may I assist you?\""
+    },
+    {
+      "number": 12,
+      "function": "register_analysis",
+      "en": "I use \"What's up?\" with friends and familiar coworkers, but I choose a more neutral greeting in formal meetings.",
+      "es": "Uso «¿Qué cuentas?» con amigos y compañeros cercanos, pero elijo un saludo más neutro en reuniones formales."
+    },
+    {
+      "number": 13,
+      "function": "justification",
+      "en": "I prefer to use \"How are you?\" in professional settings because it feels appropriate and polite.",
+      "es": "Prefiero usar \"How are you?\" en ambientes profesionales porque es adecuado y cortés."
+    },
+    {
+      "number": 14,
+      "function": "response",
+      "en": "When someone asks, \"How are you?\", I usually say, \"I'm well, thanks. And you?\" to keep the tone positive.",
+      "es": "Cuando alguien pregunta: \"How are you?\", suelo contestar: \"I'm well, thanks. And you?\" para mantener el tono positivo."
+    },
+    {
+      "number": 15,
+      "function": "objection_response",
+      "en": "Sometimes, people tell me I sound too formal. I explain, \"It's important to be polite, especially with clients.\"",
+      "es": "A veces, la gente me dice que sueno demasiado formal. Les explico: \"Es importante ser cortés, especialmente con los clientes.\""
+    },
+    {
+      "number": 16,
+      "function": "cause",
+      "en": "In my experience, using polite greetings can help avoid misunderstandings and build respect.",
+      "es": "En mi experiencia, usar saludos formales puede evitar malentendidos y generar respeto."
+    },
+    {
+      "number": 17,
+      "function": "phone_greeting",
+      "en": "When I answer my phone at work, I usually say, \"Good morning, this is Alex. How can I help you?\"",
+      "es": "Cuando contesto el teléfono en el trabajo, suelo decir: «Buenos días, habla Alex. ¿En qué puedo ayudarle?»"
+    },
+    {
+      "number": 18,
+      "function": "casual_leaving",
+      "en": "With friends, I end a chat with \"See you later\" or sometimes \"Take care,\" which both feel warm and relaxed.",
+      "es": "Con amigos, termino una charla con \"See you later\" o a veces \"Take care\", que suenan cálidos y relajados."
+    },
+    {
+      "number": 19,
+      "function": "formal_leaving",
+      "en": "In professional settings, I prefer departing with \"Have a good day,\" since it stays professional but polite.",
+      "es": "En entornos profesionales, prefiero despedirme con \"Have a good day\", ya que es profesional y educado."
+    },
+    {
+      "number": 20,
+      "function": "night_farewell",
+      "en": "Finally, if someone is leaving late, I say, \"Good night,\" which is always meant as a farewell at the end of the day.",
+      "es": "Por último, si alguien se va tarde, digo \"Good night\", que siempre es una despedida al final del día."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Time-of-day greetings",
+      "example_en": "For instance, in the office I usually say, \"Good morning, everyone,\" even if I might prefer a simple \"Hello\" elsewhere.",
+      "explanation_es": "Good morning, good afternoon y good evening son saludos que se eligen según el momento del día.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Good night as a farewell",
+      "example_en": "At an evening event, I greet people with, \"Good evening,\" rather than \"Good night,\" which I normally use when leaving.",
+      "explanation_es": "Good night se usa al despedirse por la noche o antes de dormir, no como saludo habitual al llegar.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "How questions with be",
+      "example_en": "I prefer to use \"How are you?\" in professional settings because it feels appropriate and polite.",
+      "explanation_es": "En How are you, are va antes de you para formar la pregunta con how y be.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Informal fixed question",
+      "example_en": "I use \"What's up?\" with friends and familiar coworkers, but I choose a more neutral greeting in formal meetings.",
+      "explanation_es": "What’s up? es una fórmula informal entre amigos o personas de confianza; una respuesta breve común es Not much.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "To-infinitive in a fixed greeting",
+      "example_en": "When I meet someone for the first time, I say, \"Nice to meet you,\" and usually shake hands.",
+      "explanation_es": "Nice to meet you contiene el infinitivo to meet y se usa normalmente al conocer a alguien por primera vez.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Polite imperative",
+      "example_en": "With friends, I end a chat with \"See you later\" or sometimes \"Take care,\" which both feel warm and relaxed.",
+      "explanation_es": "Take care usa un imperativo como despedida amistosa, con el sentido de «cuídate».",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Fixed farewell with see",
+      "example_en": "With friends, I end a chat with \"See you later\" or sometimes \"Take care,\" which both feel warm and relaxed.",
+      "explanation_es": "See you later es una fórmula fija de despedida; no es necesario decir una oración completa como I’ll see you later.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Welcoming expressions",
+      "example_en": "In my job as a receptionist, I often say, \"Welcome! How can I help you today?\" to customers as they enter.",
+      "explanation_es": "Welcome se utiliza para recibir a alguien. Según el contexto puede acompañarse de una invitación como Please come in.",
+      "source_paragraph": 10
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Good morning, everyone",
+      "meaning_es": "Buenos días a todos",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Hey, how's it going?",
+      "meaning_es": "Hey, ¿cómo va todo?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Nice to meet you",
+      "meaning_es": "Encantado/a de conocerte",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "Long time no see!",
+      "meaning_es": "¡Cuánto tiempo sin verte!",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Welcome! How can I help you today?",
+      "meaning_es": "¡Bienvenido/a! ¿En qué puedo ayudarte hoy?",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "What's up?",
+      "meaning_es": "¿Qué tal?",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "Take care",
+      "meaning_es": "Cuídate",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "Have a good day",
+      "meaning_es": "Que tengas un buen día",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "For instance, in the office I usually say, \"Good morning, everyone,\" even if I might prefer a simple \"Hello\" elsewhere."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "When I meet someone for the first time, I say, \"Nice to meet you,\" and usually shake hands."
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "With friends, I end a chat with \"See you later\" or sometimes \"Take care,\" which both feel warm and relaxed."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-B2-021",
+    "number": "021",
+    "title_en": "Greetings",
+    "title_es": "Saludos",
+    "level": "B2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación cotidiana",
+    "main_topic_es": "Aplicar saludos apropiadamente en situaciones reales, elegir el registro, responder objeciones y justificar preferencias.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Time-of-day greetings",
+      "Good night as a farewell",
+      "How questions with be",
+      "Informal fixed question",
+      "To-infinitive in a fixed greeting",
+      "Polite imperative",
+      "Fixed farewell with see",
+      "Welcoming expressions"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 35
+  }
+}

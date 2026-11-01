@@ -1,0 +1,102 @@
+{
+  "text": "Ben said we could meet after work for pizza and cake. It sounded simple and nice.",
+  "duration": 7.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.5600000023841858,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.9800000190734863,
+      "end": 1.2000000476837158
+    },
+    {
+      "location": 12,
+      "length": 5,
+      "start": 1.2000000476837158,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 18,
+      "length": 4,
+      "start": 1.440000057220459,
+      "end": 1.7000000476837158
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 1.7000000476837158,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.059999942779541,
+      "end": 2.359999895095825
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.359999895095825,
+      "end": 2.680000066757202
+    },
+    {
+      "location": 38,
+      "length": 5,
+      "start": 2.680000066757202,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 44,
+      "length": 3,
+      "start": 3.119999885559082,
+      "end": 3.5
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 3.5,
+      "end": 3.799999952316284
+    },
+    {
+      "location": 54,
+      "length": 2,
+      "start": 4.739999771118164,
+      "end": 5.0
+    },
+    {
+      "location": 57,
+      "length": 7,
+      "start": 5.0,
+      "end": 5.480000019073486
+    },
+    {
+      "location": 65,
+      "length": 6,
+      "start": 5.480000019073486,
+      "end": 6.079999923706055
+    },
+    {
+      "location": 72,
+      "length": 3,
+      "start": 6.079999923706055,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 76,
+      "length": 4,
+      "start": 6.659999847412109,
+      "end": 6.739999771118164
+    }
+  ]
+}

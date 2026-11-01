@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-020",
+  "number": 20,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Setting Goals for My Future",
+    "es": "Definir metas para mi futuro"
+  },
+  "category": {
+    "en": "Learning and Personal Development",
+    "es": "Aprendizaje y desarrollo personal"
+  },
+  "main_topic": {
+    "en": "Discussing a personal learning or creative goal; competing priorities and practical next steps.",
+    "es": "Hablar de una meta personal de aprendizaje o creatividad, prioridades competitivas y próximos pasos prácticos."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Persona adulta planificando metas en un cuaderno en una mesa, con una taza de café y una ventana al fondo.",
+    "prompt": "Realistic editorial photo, adult sitting at a table, writing personal goals in a notebook, coffee and window in background, warm natural light, calm atmosphere, horizontal, 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hablar sobre una meta personal y por qué es importante.",
+    "Describir barreras y responsabilidades en la vida diaria.",
+    "Decir cómo solicitar ayuda y apoyo.",
+    "Explicar pasos sencillos para organizar el tiempo.",
+    "Practicar lectura natural y repetición de fragmentos."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last month, I decided to set a new goal for my future. I want to learn digital illustration.",
+      "es": "El mes pasado, decidí ponerme una meta nueva para mi futuro. Quiero aprender ilustración digital."
+    },
+    {
+      "number": 2,
+      "function": "motivation",
+      "en": "Drawing has always been fun for me, but I have never tried it on a computer before.",
+      "es": "Dibujar siempre ha sido divertido para mí, pero nunca lo he intentado en una computadora."
+    },
+    {
+      "number": 3,
+      "function": "interest",
+      "en": "Using digital tools sounds exciting because it will let me try new ways to create art.",
+      "es": "Usar herramientas digitales suena emocionante porque me permitirá probar nuevas formas de crear arte."
+    },
+    {
+      "number": 4,
+      "function": "challenge",
+      "en": "Right now, my job takes up a lot of my time, so I often feel too busy after work.",
+      "es": "Actualmente, mi trabajo ocupa mucho de mi tiempo, así que a menudo me siento muy ocupado después del trabajo."
+    },
+    {
+      "number": 5,
+      "function": "feeling",
+      "en": "When I get home in the evening, I just want to rest instead of starting something new.",
+      "es": "Cuando llego a casa por la tarde, solo quiero descansar en vez de comenzar algo nuevo."
+    },
+    {
+      "number": 6,
+      "function": "past_experience",
+      "en": "Last year, I joined a short online art class, but I stopped because I got too busy.",
+      "es": "El año pasado, me inscribí en una clase corta de arte en línea, pero la dejé porque me ocupé demasiado."
+    },
+    {
+      "number": 7,
+      "function": "lesson_learned",
+      "en": "Now, I know I need a better plan so I can keep working on my goal and not stop halfway.",
+      "es": "Ahora sé que necesito un mejor plan para seguir avanzando con mi meta y no dejarla a la mitad."
+    },
+    {
+      "number": 8,
+      "function": "support",
+      "en": "My friend Emily is a graphic designer. She said she can help if I have any problems.",
+      "es": "Mi amiga Emily es diseñadora gráfica. Ella dijo que puede ayudarme si tengo algún problema."
+    },
+    {
+      "number": 9,
+      "function": "agreement",
+      "en": "Emily and I agreed I will practice for one hour every Sunday and show her my drawings.",
+      "es": "Emily y yo acordamos que practicaré una hora cada domingo y le mostraré mis dibujos."
+    },
+    {
+      "number": 10,
+      "function": "problem",
+      "en": "Sometimes I forget about my goal on weekends because I have family plans or other things.",
+      "es": "A veces olvido mi meta los fines de semana porque tengo planes familiares u otras cosas."
+    },
+    {
+      "number": 11,
+      "function": "suggestion",
+      "en": "Emily suggested that I can set a reminder on my phone every Sunday for my art hour.",
+      "es": "Emily sugirió que puedo poner un recordatorio en el teléfono cada domingo para mi hora de arte."
+    },
+    {
+      "number": 12,
+      "function": "solution",
+      "en": "Now, I block this time in my calendar first, so nothing else takes that hour.",
+      "es": "Ahora, reservo primero ese tiempo en mi calendario, para que nada ocupe esa hora."
+    },
+    {
+      "number": 13,
+      "function": "routine",
+      "en": "Every weekend, before making other plans, I check if my art hour is already in the agenda.",
+      "es": "Cada fin de semana, antes de hacer otros planes, reviso si mi hora de arte ya está en la agenda."
+    },
+    {
+      "number": 14,
+      "function": "progress",
+      "en": "So far, I have finished three digital sketches. Emily gave me good feedback on them.",
+      "es": "Hasta ahora, he terminado tres bocetos digitales. Emily me dio buenos comentarios sobre ellos."
+    },
+    {
+      "number": 15,
+      "function": "setback",
+      "en": "Last weekend, there was no internet. I almost missed my art time, but I drew on paper instead.",
+      "es": "El fin de semana pasado no había internet. Casi pierdo mi hora de arte, pero dibujé en papel en su lugar."
+    },
+    {
+      "number": 16,
+      "function": "family_support",
+      "en": "My brother saw that I was drawing. He said I can use his tablet if I need it one day.",
+      "es": "Mi hermano vio que estaba dibujando. Dijo que puedo usar su tableta si la necesito algún día."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "I learned that small steps are important, even if I do not see fast results at first.",
+      "es": "Aprendí que los pequeños pasos son importantes, aunque no vea resultados rápidos al principio."
+    },
+    {
+      "number": 18,
+      "function": "future_plan",
+      "en": "Next month, I will join an online group for beginners to stay interested and keep learning.",
+      "es": "El próximo mes, me uniré a un grupo en línea para principiantes para seguir interesado y aprendiendo."
+    },
+    {
+      "number": 19,
+      "function": "goal",
+      "en": "My goal is to draw on the computer without feeling nervous before the end of this year.",
+      "es": "Mi meta es dibujar en la computadora sin sentirme nervioso antes de que termine este año."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "Even if it takes a long time, I will continue practicing because this goal is important to me.",
+      "es": "Aunque tome mucho tiempo, seguiré practicando porque esta meta es importante para mí."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past continuous",
+      "example_en": "My brother saw that I was drawing. He said I can use his tablet if I need it one day.",
+      "explanation_es": "Was o were seguidos de un verbo en -ing presentan una actividad que estaba en curso en el pasado.",
+      "source_paragraph": 16
+    },
+    {
+      "name": "Past simple",
+      "example_en": "Last month, I decided to set a new goal for my future. I want to learn digital illustration.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "I learned that small steps are important, even if I do not see fast results at first.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 17
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "Using digital tools sounds exciting because it will let me try new ways to create art.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Can",
+      "example_en": "Now, I know I need a better plan so I can keep working on my goal and not stop halfway.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Last month, I decided to set a new goal for my future. I want to learn digital illustration.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Last month, I decided to set a new goal for my future. I want to learn digital illustration.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last month, I decided to set a new goal for my future. I want to learn digital illustration.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "set a new goal for my future",
+      "meaning_es": "ponerme una meta nueva para mi futuro",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "has always been fun for me",
+      "meaning_es": "siempre ha sido divertido para mí",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "try new ways to create art",
+      "meaning_es": "probar nuevas formas de crear arte",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "takes up a lot of my time",
+      "meaning_es": "ocupa mucho de mi tiempo",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "instead of starting something new",
+      "meaning_es": "en vez de comenzar algo nuevo",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "show her my drawings",
+      "meaning_es": "mostrarle mis dibujos",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "block this time in my calendar",
+      "meaning_es": "reservar ese tiempo en mi calendario",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "takes a long time",
+      "meaning_es": "tomar mucho tiempo",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces en voz alta.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Lee cada segmento en voz alta y haz una pausa corta en cada barra.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Last month, I decided to set a new goal for my future.",
+              "I want to learn digital illustration."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "When I get home in the evening, I just want to rest instead of starting something new."
+            ]
+          },
+          {
+            "source_paragraph": 14,
+            "segments": [
+              "So far, I have finished three digital sketches.",
+              "Emily gave me good feedback on them."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta seguidos sin detenerte en cada palabra. Mantén el ritmo y la entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-020",
+    "number": "020",
+    "title_en": "Setting Goals for My Future",
+    "title_es": "Definir metas para mi futuro",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Aprendizaje y desarrollo personal",
+    "main_topic_es": "Hablar de una meta personal de aprendizaje o creatividad, prioridades competitivas y próximos pasos prácticos.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past continuous",
+      "Past simple",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

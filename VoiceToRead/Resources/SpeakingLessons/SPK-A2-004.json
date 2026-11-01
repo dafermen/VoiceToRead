@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-004",
+  "number": 4,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "A Job Interview",
+    "es": "Una entrevista de trabajo"
+  },
+  "category": {
+    "en": "Work and Professional Life",
+    "es": "Trabajo y vida profesional"
+  },
+  "main_topic": {
+    "en": "Preparing for and attending a job interview, discussing past experiences and personal strengths honestly.",
+    "es": "Prepararse y asistir a una entrevista de trabajo, hablando honestamente de experiencias pasadas y fortalezas personales."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Persona adulta en entrevista de trabajo con traje, hablando y sonriendo en una oficina moderna.",
+    "prompt": "Realistic professional photograph, adult job candidate in business attire during a job interview, modern office setting, natural light, focused expression, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Hablar sobre preparación para una entrevista de trabajo.",
+    "Describir experiencias laborales pasadas simples.",
+    "Expresar puntos fuertes y áreas para mejorar.",
+    "Formular preguntas y respuestas básicas en una entrevista.",
+    "Practicar lectura guiada y repetición de frases auténticas angloamericanas."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Today, I have a job interview for a position I really want.",
+      "es": "Hoy tengo una entrevista de trabajo para un puesto que realmente quiero."
+    },
+    {
+      "number": 2,
+      "function": "preparation",
+      "en": "I prepared by thinking about my past jobs and common interview questions.",
+      "es": "Me preparé pensando en mis trabajos anteriores y en preguntas comunes de entrevistas."
+    },
+    {
+      "number": 3,
+      "function": "reflection_past",
+      "en": "At my last job, I worked with a small team and learned about teamwork.",
+      "es": "En mi último trabajo, trabajé con un pequeño equipo y aprendí sobre el trabajo en equipo."
+    },
+    {
+      "number": 4,
+      "function": "example_skill",
+      "en": "For example, I helped plan weekly meetings to share ideas with others.",
+      "es": "Por ejemplo, ayudé a planear reuniones semanales para compartir ideas con los demás."
+    },
+    {
+      "number": 5,
+      "function": "strength",
+      "en": "One of my strengths is staying calm and solving problems quickly.",
+      "es": "Una de mis fortalezas es mantener la calma y resolver problemas rápido."
+    },
+    {
+      "number": 6,
+      "function": "honesty_growth",
+      "en": "But I need to improve my public speaking for group presentations.",
+      "es": "Pero necesito mejorar mi forma de hablar en público para presentaciones en grupo."
+    },
+    {
+      "number": 7,
+      "function": "past_improvement",
+      "en": "I took a course last year to practice speaking in front of people.",
+      "es": "El año pasado tomé un curso para practicar hablar frente a personas."
+    },
+    {
+      "number": 8,
+      "function": "current_goal",
+      "en": "Now, I feel ready to use my new skills at a new job.",
+      "es": "Ahora, me siento listo para usar mis nuevas habilidades en un nuevo trabajo."
+    },
+    {
+      "number": 9,
+      "function": "plan_interview_day",
+      "en": "Before the interview, I read about the company and wrote questions to ask.",
+      "es": "Antes de la entrevista, leí sobre la empresa y anoté preguntas para hacer."
+    },
+    {
+      "number": 10,
+      "function": "arrival",
+      "en": "I arrived fifteen minutes early to make a good impression.",
+      "es": "Llegué quince minutos antes para causar una buena impresión."
+    },
+    {
+      "number": 11,
+      "function": "greeting",
+      "en": "\"Hello, nice to meet you,\" the interviewer said with a smile.",
+      "es": "\"Hola, mucho gusto\", dijo el entrevistador con una sonrisa."
+    },
+    {
+      "number": 12,
+      "function": "answering_question",
+      "en": "When asked about my experience, I talked about handling difficult customers.",
+      "es": "Cuando me preguntaron sobre mi experiencia, hablé de cómo respondí a clientes difíciles."
+    },
+    {
+      "number": 13,
+      "function": "specific_example",
+      "en": "I shared a story where I solved a problem by working with others.",
+      "es": "Conté una historia donde resolví un problema trabajando con otros."
+    },
+    {
+      "number": 14,
+      "function": "discussing_strength",
+      "en": "I said teamwork is important and I adapt quickly to changes.",
+      "es": "Dije que el trabajo en equipo es importante y que me adapto rápido a los cambios."
+    },
+    {
+      "number": 15,
+      "function": "answering_weakness",
+      "en": "When they asked about weaknesses, I was honest about public speaking.",
+      "es": "Cuando preguntaron sobre debilidades, fui honesto sobre hablar en público."
+    },
+    {
+      "number": 16,
+      "function": "follow_up",
+      "en": "I explained that I want to keep learning and practicing my skills.",
+      "es": "Expliqué que quiero seguir aprendiendo y practicando mis habilidades."
+    },
+    {
+      "number": 17,
+      "function": "asking_questions",
+      "en": "At the end, I asked about the team and chances to grow in the company.",
+      "es": "Al final, pregunté por el equipo y las oportunidades de crecimiento en la empresa."
+    },
+    {
+      "number": 18,
+      "function": "closing",
+      "en": "The interviewer thanked me for my honest answers and positive attitude.",
+      "es": "El entrevistador me agradeció por mis respuestas honestas y actitud positiva."
+    },
+    {
+      "number": 19,
+      "function": "reflection_after",
+      "en": "After the interview, I felt proud because I answered clearly.",
+      "es": "Después de la entrevista, me sentí orgulloso porque respondí con claridad."
+    },
+    {
+      "number": 20,
+      "function": "future_expectation",
+      "en": "Now, I hope to get good news and start this new part of my life.",
+      "es": "Ahora, espero recibir buenas noticias y comenzar esta nueva etapa en mi vida."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present continuous",
+      "example_en": "One of my strengths is staying calm and solving problems quickly.",
+      "explanation_es": "El presente continuo se forma con be en presente y un verbo en -ing para presentar una actividad en curso o un plan según el contexto.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Past simple",
+      "example_en": "I took a course last year to practice speaking in front of people.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Today, I have a job interview for a position I really want.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "But I need to improve my public speaking for group presentations.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Today, I have a job interview for a position I really want.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I prepared by thinking about my past jobs and common interview questions.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "Today, I have a job interview for a position I really want.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "Before the interview, I read about the company and wrote questions to ask.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 9
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I have a job interview",
+      "meaning_es": "Tengo una entrevista de trabajo",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "I worked with a small team",
+      "meaning_es": "Trabajé con un pequeño equipo",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "One of my strengths is staying calm and solving problems quickly.",
+      "meaning_es": "Una de mis fortalezas es mantener la calma y resolver problemas rápido.",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "I need to improve my public speaking",
+      "meaning_es": "Necesito mejorar cómo hablo en público",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I feel ready to use my new skills",
+      "meaning_es": "Me siento listo para usar mis nuevas habilidades",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "I arrived fifteen minutes early",
+      "meaning_es": "Llegué quince minutos antes",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "Nice to meet you",
+      "meaning_es": "Mucho gusto",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "I hope to get good news",
+      "meaning_es": "Espero recibir buenas noticias",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Today, I have a job interview for a position I really want."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "One of my strengths is staying calm and solving problems quickly."
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Now, I hope to get good news and start this new part of my life."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte; prioriza la claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-004",
+    "number": "004",
+    "title_en": "A Job Interview",
+    "title_es": "Una entrevista de trabajo",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y vida profesional",
+    "main_topic_es": "Prepararse y asistir a una entrevista de trabajo, hablando honestamente de experiencias pasadas y fortalezas personales.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present continuous",
+      "Past simple",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

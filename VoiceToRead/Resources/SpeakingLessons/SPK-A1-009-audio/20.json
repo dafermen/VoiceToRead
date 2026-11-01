@@ -1,0 +1,78 @@
+{
+  "text": "Now, I see clear words are important. They help us stay friends.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5799999833106995
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.9800000190734863,
+      "end": 1.440000057220459
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 1.440000057220459,
+      "end": 1.7200000286102295
+    },
+    {
+      "location": 11,
+      "length": 5,
+      "start": 1.7200000286102295,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 17,
+      "length": 5,
+      "start": 2.240000009536743,
+      "end": 2.5999999046325684
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 2.5999999046325684,
+      "end": 2.9200000762939453
+    },
+    {
+      "location": 27,
+      "length": 9,
+      "start": 2.9200000762939453,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 38,
+      "length": 4,
+      "start": 4.019999980926514,
+      "end": 4.159999847412109
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 4.159999847412109,
+      "end": 4.480000019073486
+    },
+    {
+      "location": 48,
+      "length": 2,
+      "start": 4.480000019073486,
+      "end": 4.880000114440918
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 4.880000114440918,
+      "end": 5.199999809265137
+    },
+    {
+      "location": 56,
+      "length": 7,
+      "start": 5.199999809265137,
+      "end": 5.599999904632568
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-003",
+  "number": 3,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "At the Doctor’s Office",
+    "es": "En la consulta médica"
+  },
+  "category": {
+    "en": "Daily Life and Health",
+    "es": "Vida diaria y salud"
+  },
+  "main_topic": {
+    "en": "Describing health concerns and asking simple questions at a doctor's appointment.",
+    "es": "Describir preocupaciones de salud y hacer preguntas simples en una cita médica."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Paciente adulto hablando con el médico en una consulta, ambiente tranquilo y profesional, ilustración realista en 16:9.",
+    "prompt": "Realistic illustration of an adult patient talking to a doctor in a calm medical office, professional setting, clean and warm, 16:9 ratio",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Solicitar una cita médica.",
+    "Describir síntomas simples en inglés básico.",
+    "Pedir aclaración sobre instrucciones o términos.",
+    "Confirmar comprensión de información médica sencilla.",
+    "Practicar saludos y despedidas formales en una consulta."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today I go to the doctor. I have a small problem.",
+      "es": "Hoy voy al médico. Tengo un pequeño problema."
+    },
+    {
+      "number": 2,
+      "function": "appointment_request",
+      "en": "I ask: \"Can I make an appointment, please?\"",
+      "es": "Pregunto: \"¿Puedo pedir una cita, por favor?\""
+    },
+    {
+      "number": 3,
+      "function": "symptom_introduction",
+      "en": "I want to talk about my headache.",
+      "es": "Quiero hablar sobre mi dolor de cabeza."
+    },
+    {
+      "number": 4,
+      "function": "arrival",
+      "en": "At the office, I say: \"Good morning.\"",
+      "es": "En la consulta, digo: \"Buenos días.\""
+    },
+    {
+      "number": 5,
+      "function": "waiting",
+      "en": "A nurse tells me, \"Please wait here.\"",
+      "es": "Una enfermera me dice: \"Por favor, espere aquí.\""
+    },
+    {
+      "number": 6,
+      "function": "doctor_greeting",
+      "en": "The doctor comes in and says, \"Hello, I am Dr. Smith.\"",
+      "es": "La doctora entra y dice: \"Hola, soy la Dra. Smith.\""
+    },
+    {
+      "number": 7,
+      "function": "reason_for_visit",
+      "en": "\"Why are you here today?\" she asks.",
+      "es": "\"¿Por qué está aquí hoy?\" pregunta."
+    },
+    {
+      "number": 8,
+      "function": "first_symptom_statement",
+      "en": "I say, \"I have a headache.\"",
+      "es": "Digo: \"Tengo dolor de cabeza.\""
+    },
+    {
+      "number": 9,
+      "function": "extra_symptom",
+      "en": "Sometimes I feel dizzy.",
+      "es": "A veces me siento mareado."
+    },
+    {
+      "number": 10,
+      "function": "doctor_more_questions",
+      "en": "The doctor asks, \"Do you have fever or feel sick?\"",
+      "es": "La doctora pregunta: \"¿Tiene fiebre o se siente mal?\""
+    },
+    {
+      "number": 11,
+      "function": "simple_negative_response",
+      "en": "I answer, \"No, I do not have fever.\"",
+      "es": "Respondo: \"No, no tengo fiebre.\""
+    },
+    {
+      "number": 12,
+      "function": "pain_level",
+      "en": "She asks, \"Is your head pain strong or soft?\"",
+      "es": "Ella pregunta: \"¿El dolor de cabeza es fuerte o leve?\""
+    },
+    {
+      "number": 13,
+      "function": "symptom_detail",
+      "en": "I say, \"It is soft. It is always here.\"",
+      "es": "Digo: \"Es leve. Siempre está aquí.\""
+    },
+    {
+      "number": 14,
+      "function": "clarification_request",
+      "en": "I say, \"Can you please explain that again?\"",
+      "es": "Digo: \"¿Puede explicarlo de nuevo, por favor?\""
+    },
+    {
+      "number": 15,
+      "function": "doctor_simplifies",
+      "en": "The doctor uses simple words for me.",
+      "es": "La doctora usa palabras sencillas para mí."
+    },
+    {
+      "number": 16,
+      "function": "confirmation_understanding",
+      "en": "I say, \"Yes, I understand now.\"",
+      "es": "Digo: \"Sí, ahora entiendo.\""
+    },
+    {
+      "number": 17,
+      "function": "patient_next_steps",
+      "en": "I ask, \"Can I have this on paper, please?\"",
+      "es": "Pregunto: \"¿Me puede dar esto en papel, por favor?\""
+    },
+    {
+      "number": 18,
+      "function": "continue_normal_activity",
+      "en": "I ask, \"Can I do light activities?\"",
+      "es": "Pregunto: \"¿Puedo hacer actividades ligeras?\""
+    },
+    {
+      "number": 19,
+      "function": "doctor_farewell",
+      "en": "The doctor says, \"Call us if you have questions.\"",
+      "es": "La doctora dice: \"Llame si tiene preguntas.\""
+    },
+    {
+      "number": 20,
+      "function": "goodbye",
+      "en": "I say, \"Thank you, doctor. Goodbye.\"",
+      "es": "Digo: \"Gracias, doctora. Adiós.\""
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Present simple negative",
+      "example_en": "I answer, \"No, I do not have fever.\"",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Can",
+      "example_en": "I ask: \"Can I make an appointment, please?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Today I go to the doctor. I have a small problem.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to talk about my headache.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Today I go to the doctor. I have a small problem.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I want to talk about my headache.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "Today I go to the doctor. I have a small problem.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "Today I go to the doctor. I have a small problem.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Can I make an appointment, please?",
+      "meaning_es": "¿Puedo pedir una cita, por favor?",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Good morning.",
+      "meaning_es": "Buenos días.",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Please wait here.",
+      "meaning_es": "Por favor, espere aquí.",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "Hello, I am Dr. Smith.",
+      "meaning_es": "Hola, soy la Dra. Smith.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Why are you here today?",
+      "meaning_es": "¿Por qué está aquí hoy?",
+      "source_paragraph": 7
+    },
+    {
+      "expression_en": "I have a headache.",
+      "meaning_es": "Tengo dolor de cabeza.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Can you please explain that again?",
+      "meaning_es": "¿Puede explicarlo de nuevo, por favor?",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "Thank you, doctor. Goodbye.",
+      "meaning_es": "Gracias, doctora. Adiós.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repite cada frase dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "I ask:",
+              "\"Can I make an appointment, please?\""
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "I say,",
+              "\"I have a headache.\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "I say,",
+              "\"Thank you, doctor. Goodbye.\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta, sin detenerte palabra por palabra. Habla claro y despacio.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-003",
+    "number": "003",
+    "title_en": "At the Doctor’s Office",
+    "title_es": "En la consulta médica",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y salud",
+    "main_topic_es": "Describir preocupaciones de salud y hacer preguntas simples en una cita médica.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Present simple negative",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

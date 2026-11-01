@@ -1,0 +1,102 @@
+{
+  "text": "Luis suggested we all meet for fifteen minutes that afternoon to organize the main points together.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 5,
+      "length": 9,
+      "start": 0.6200000047683716,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 15,
+      "length": 2,
+      "start": 1.2400000095367432,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.6200000047683716,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 22,
+      "length": 4,
+      "start": 2.0199999809265137,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 27,
+      "length": 3,
+      "start": 2.240000009536743,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 31,
+      "length": 7,
+      "start": 2.559999942779541,
+      "end": 3.119999885559082
+    },
+    {
+      "location": 39,
+      "length": 7,
+      "start": 3.119999885559082,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.5199999809265137,
+      "end": 3.9000000953674316
+    },
+    {
+      "location": 52,
+      "length": 9,
+      "start": 3.9000000953674316,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 62,
+      "length": 2,
+      "start": 4.440000057220459,
+      "end": 5.179999828338623
+    },
+    {
+      "location": 65,
+      "length": 8,
+      "start": 5.179999828338623,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 74,
+      "length": 3,
+      "start": 5.699999809265137,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 78,
+      "length": 4,
+      "start": 6.019999980926514,
+      "end": 6.360000133514404
+    },
+    {
+      "location": 83,
+      "length": 6,
+      "start": 6.360000133514404,
+      "end": 6.659999847412109
+    },
+    {
+      "location": 90,
+      "length": 8,
+      "start": 6.659999847412109,
+      "end": 7.059999942779541
+    }
+  ]
+}

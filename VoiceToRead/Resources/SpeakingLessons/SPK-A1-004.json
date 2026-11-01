@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-004",
+  "number": 4,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "A Job Interview",
+    "es": "Una entrevista de trabajo"
+  },
+  "category": {
+    "en": "Work and Employment",
+    "es": "Trabajo y empleo"
+  },
+  "main_topic": {
+    "en": "Attending a job interview: talking about yourself, your experiences, and your skills.",
+    "es": "Asistir a una entrevista de trabajo: hablar de uno mismo, experiencias y habilidades."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Persona adulta en entrevista de trabajo con traje, hablando y sonriendo en una oficina moderna.",
+    "prompt": "Realistic professional photograph, adult job candidate in business attire during a job interview, modern office setting, natural light, focused expression, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Presentarse y compartir información personal básica.",
+    "Hablar de experiencias laborales simples.",
+    "Describir habilidades y cualidades personales.",
+    "Hacer y responder preguntas sencillas en una entrevista.",
+    "Practicar comprensión y pronunciación leyendo en voz alta."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Today, I have a job interview.",
+      "es": "Hoy tengo una entrevista de trabajo."
+    },
+    {
+      "number": 2,
+      "function": "preparation",
+      "en": "I want to do my best.",
+      "es": "Quiero hacerlo lo mejor posible."
+    },
+    {
+      "number": 3,
+      "function": "thinking_about_past",
+      "en": "I think about my last job.",
+      "es": "Pienso en mi último trabajo."
+    },
+    {
+      "number": 4,
+      "function": "simple_job_description",
+      "en": "At my last job, I helped customers.",
+      "es": "En mi último trabajo, ayudé a los clientes."
+    },
+    {
+      "number": 5,
+      "function": "task_example",
+      "en": "I answered the phone and sent emails.",
+      "es": "Contesté el teléfono y envié correos electrónicos."
+    },
+    {
+      "number": 6,
+      "function": "soft_skill",
+      "en": "I am friendly and I listen well.",
+      "es": "Soy amable y sé escuchar bien."
+    },
+    {
+      "number": 7,
+      "function": "strengths",
+      "en": "I can work in a team.",
+      "es": "Puedo trabajar en equipo."
+    },
+    {
+      "number": 8,
+      "function": "area_to_improve",
+      "en": "I want to speak better in public.",
+      "es": "Quiero hablar mejor en público."
+    },
+    {
+      "number": 9,
+      "function": "practicing_for_interview",
+      "en": "I practice answers before the interview.",
+      "es": "Practico respuestas antes de la entrevista."
+    },
+    {
+      "number": 10,
+      "function": "research",
+      "en": "I read about the company.",
+      "es": "Leo sobre la empresa."
+    },
+    {
+      "number": 11,
+      "function": "arrival",
+      "en": "I arrive early and greet the staff.",
+      "es": "Llego temprano y saludo al personal."
+    },
+    {
+      "number": 12,
+      "function": "greeting",
+      "en": "Good morning! Nice to meet you.",
+      "es": "¡Buenos días! Mucho gusto."
+    },
+    {
+      "number": 13,
+      "function": "introduction_to_interviewer",
+      "en": "My name is Ana Lopez.",
+      "es": "Me llamo Ana López."
+    },
+    {
+      "number": 14,
+      "function": "interviewer_question",
+      "en": "The interviewer asks me about my experience.",
+      "es": "El entrevistador me pregunta sobre mi experiencia."
+    },
+    {
+      "number": 15,
+      "function": "answering_simple_question",
+      "en": "I say, I helped my team finish projects.",
+      "es": "Digo: ayudé a mi equipo a terminar proyectos."
+    },
+    {
+      "number": 16,
+      "function": "describing_challenge",
+      "en": "Sometimes the work is difficult.",
+      "es": "A veces el trabajo es difícil."
+    },
+    {
+      "number": 17,
+      "function": "overcoming_challenge",
+      "en": "I always try to solve problems.",
+      "es": "Siempre trato de resolver los problemas."
+    },
+    {
+      "number": 18,
+      "function": "asking_question",
+      "en": "Can you tell me about the team here?",
+      "es": "¿Me puede contar sobre el equipo aquí?"
+    },
+    {
+      "number": 19,
+      "function": "closing_gratitude",
+      "en": "Thank you for your time today.",
+      "es": "Gracias por su tiempo hoy."
+    },
+    {
+      "number": 20,
+      "function": "expectation",
+      "en": "I hope I get the job.",
+      "es": "Espero conseguir el trabajo."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Can",
+      "example_en": "I can work in a team.",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Present simple",
+      "example_en": "Today, I have a job interview.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I want to do my best.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Today, I have a job interview.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "I want to do my best.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "Today, I have a job interview.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Definite article",
+      "example_en": "I answered the phone and sent emails.",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "And to add information",
+      "example_en": "I answered the phone and sent emails.",
+      "explanation_es": "And une palabras, acciones o ideas que se añaden entre sí.",
+      "source_paragraph": 5
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Good morning! Nice to meet you.",
+      "meaning_es": "¡Buenos días! Mucho gusto.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "My name is Ana Lopez.",
+      "meaning_es": "Me llamo Ana López.",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "Can you tell me about the team here?",
+      "meaning_es": "¿Me puede contar sobre el equipo aquí?",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "Thank you for your time today.",
+      "meaning_es": "Gracias por su tiempo hoy.",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "I want to do my best.",
+      "meaning_es": "Quiero hacerlo lo mejor posible.",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "I am friendly and I listen well.",
+      "meaning_es": "Soy amable y sé escuchar bien.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I practice answers before the interview.",
+      "meaning_es": "Practico respuestas antes de la entrevista.",
+      "source_paragraph": 9
+    },
+    {
+      "expression_en": "I hope I get the job.",
+      "meaning_es": "Espero conseguir el trabajo.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas para practicar, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "At my last job, I helped customers."
+            ]
+          },
+          {
+            "source_paragraph": 7,
+            "segments": [
+              "I can work in a team."
+            ]
+          },
+          {
+            "source_paragraph": 12,
+            "segments": [
+              "Good morning! Nice to meet you."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad y ritmo.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-004",
+    "number": "004",
+    "title_en": "A Job Interview",
+    "title_es": "Una entrevista de trabajo",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y empleo",
+    "main_topic_es": "Asistir a una entrevista de trabajo: hablar de uno mismo, experiencias y habilidades.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article",
+      "And to add information"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

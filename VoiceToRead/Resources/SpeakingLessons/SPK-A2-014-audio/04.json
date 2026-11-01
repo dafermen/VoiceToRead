@@ -1,0 +1,102 @@
+{
+  "text": "She told us, \"Today, please paint a simple sunrise\" even if we had never painted before.",
+  "duration": 8.520000457763672,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 4,
+      "length": 4,
+      "start": 0.6000000238418579,
+      "end": 0.9200000166893005
+    },
+    {
+      "location": 9,
+      "length": 2,
+      "start": 0.9200000166893005,
+      "end": 1.5800000429153442
+    },
+    {
+      "location": 14,
+      "length": 5,
+      "start": 2.3399999141693115,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 2.799999952316284,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 28,
+      "length": 5,
+      "start": 3.2200000286102295,
+      "end": 3.4800000190734863
+    },
+    {
+      "location": 34,
+      "length": 1,
+      "start": 3.4800000190734863,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 36,
+      "length": 6,
+      "start": 3.7799999713897705,
+      "end": 4.139999866485596
+    },
+    {
+      "location": 43,
+      "length": 7,
+      "start": 4.139999866485596,
+      "end": 4.739999771118164
+    },
+    {
+      "location": 52,
+      "length": 4,
+      "start": 5.5,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 5.579999923706055,
+      "end": 5.78000020980835
+    },
+    {
+      "location": 60,
+      "length": 2,
+      "start": 5.78000020980835,
+      "end": 5.920000076293945
+    },
+    {
+      "location": 63,
+      "length": 3,
+      "start": 5.920000076293945,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 67,
+      "length": 5,
+      "start": 6.179999828338623,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 73,
+      "length": 7,
+      "start": 6.519999980926514,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 81,
+      "length": 6,
+      "start": 6.860000133514404,
+      "end": 7.360000133514404
+    }
+  ]
+}

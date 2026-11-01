@@ -1,0 +1,54 @@
+{
+  "text": "I look for street signs at each corner.",
+  "duration": 3.569999933242798,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.4399999976158142
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.4399999976158142,
+      "end": 0.7400000095367432
+    },
+    {
+      "location": 7,
+      "length": 3,
+      "start": 0.7400000095367432,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 11,
+      "length": 6,
+      "start": 1.159999966621399,
+      "end": 1.5
+    },
+    {
+      "location": 18,
+      "length": 5,
+      "start": 1.5,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.840000033378601,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.2799999713897705,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 32,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 3.0399999618530273
+    }
+  ]
+}

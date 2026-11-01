@@ -1,0 +1,66 @@
+{
+  "text": "Before, people only brought brooms. Now we want more things.",
+  "duration": 6.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 8,
+      "length": 6,
+      "start": 1.5199999809265137,
+      "end": 1.940000057220459
+    },
+    {
+      "location": 15,
+      "length": 4,
+      "start": 1.940000057220459,
+      "end": 2.299999952316284
+    },
+    {
+      "location": 20,
+      "length": 7,
+      "start": 2.299999952316284,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.6600000858306885,
+      "end": 3.1600000858306885
+    },
+    {
+      "location": 36,
+      "length": 3,
+      "start": 3.880000114440918,
+      "end": 4.179999828338623
+    },
+    {
+      "location": 40,
+      "length": 2,
+      "start": 4.179999828338623,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 43,
+      "length": 4,
+      "start": 4.440000057220459,
+      "end": 4.699999809265137
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.699999809265137,
+      "end": 5.059999942779541
+    },
+    {
+      "location": 53,
+      "length": 6,
+      "start": 5.059999942779541,
+      "end": 5.340000152587891
+    }
+  ]
+}

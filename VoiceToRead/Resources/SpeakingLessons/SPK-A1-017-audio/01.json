@@ -1,0 +1,54 @@
+{
+  "text": "I want to learn new things this year.",
+  "duration": 3.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.41999998688697815
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.41999998688697815,
+      "end": 0.9800000190734863
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 0.9800000190734863,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 1.2999999523162842,
+      "end": 1.5199999809265137
+    },
+    {
+      "location": 16,
+      "length": 3,
+      "start": 1.5199999809265137,
+      "end": 2.0
+    },
+    {
+      "location": 20,
+      "length": 6,
+      "start": 2.0,
+      "end": 2.380000114440918
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.380000114440918,
+      "end": 2.759999990463257
+    },
+    {
+      "location": 32,
+      "length": 4,
+      "start": 2.759999990463257,
+      "end": 3.0
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "text": "I practice English for ten minutes every day.",
+  "duration": 3.259999990463257,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.36000001430511475
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.36000001430511475,
+      "end": 0.8799999952316284
+    },
+    {
+      "location": 11,
+      "length": 7,
+      "start": 0.8799999952316284,
+      "end": 1.340000033378601
+    },
+    {
+      "location": 19,
+      "length": 3,
+      "start": 1.340000033378601,
+      "end": 1.659999966621399
+    },
+    {
+      "location": 23,
+      "length": 3,
+      "start": 1.659999966621399,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 27,
+      "length": 7,
+      "start": 1.8799999952316284,
+      "end": 2.240000009536743
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 2.240000009536743,
+      "end": 2.640000104904175
+    },
+    {
+      "location": 41,
+      "length": 3,
+      "start": 2.640000104904175,
+      "end": 2.940000057220459
+    }
+  ]
+}

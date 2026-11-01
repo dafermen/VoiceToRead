@@ -1,0 +1,66 @@
+{
+  "text": "But I know mistakes are normal. Everyone learns this way.",
+  "duration": 5.46999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.4000000059604645
+    },
+    {
+      "location": 4,
+      "length": 1,
+      "start": 0.4000000059604645,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 6,
+      "length": 4,
+      "start": 0.6200000047683716,
+      "end": 1.2400000095367432
+    },
+    {
+      "location": 11,
+      "length": 8,
+      "start": 1.2400000095367432,
+      "end": 1.899999976158142
+    },
+    {
+      "location": 20,
+      "length": 3,
+      "start": 1.899999976158142,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 24,
+      "length": 6,
+      "start": 2.2799999713897705,
+      "end": 2.619999885559082
+    },
+    {
+      "location": 32,
+      "length": 8,
+      "start": 3.5399999618530273,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 41,
+      "length": 6,
+      "start": 3.940000057220459,
+      "end": 4.300000190734863
+    },
+    {
+      "location": 48,
+      "length": 4,
+      "start": 4.300000190734863,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 4.619999885559082,
+      "end": 4.840000152587891
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-009",
+  "number": 9,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "Friendship and Difficult Conversations",
+    "es": "Amistad y conversaciones difíciles"
+  },
+  "category": {
+    "en": "Friendship and Daily Life",
+    "es": "Amistad y vida diaria"
+  },
+  "main_topic": {
+    "en": "Expressing feelings, clearing up confusion, and planning with friends.",
+    "es": "Expresar sentimientos, aclarar confusiones y hacer planes con amigos."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Dos adultos conversando en una cafetería, con expresiones serias pero amistosas.",
+    "prompt": "Realistic editorial photograph, two adult friends talking seriously but kindly in a coffee shop, natural daylight, cozy atmosphere, no visible text, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Decir cómo te sientes en una amistad.",
+    "Describir un desacuerdo o confusión simple.",
+    "Expresar límites y necesidades personales de forma sencilla.",
+    "Pedir aclaración o confirmar planes.",
+    "Practicar frases cortas de comunicación y repetición oral."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last weekend, I had a problem with my friend Ryan.",
+      "es": "El fin de semana pasado, tuve un problema con mi amigo Ryan."
+    },
+    {
+      "number": 2,
+      "function": "contrast",
+      "en": "He wanted to spend the whole day with me. I only wanted lunch.",
+      "es": "Él quería pasar todo el día conmigo. Yo solo quería almorzar."
+    },
+    {
+      "number": 3,
+      "function": "trigger",
+      "en": "In the morning, Ryan called me. He asked, \"What time will we meet?\"",
+      "es": "Por la mañana, Ryan me llamó. Preguntó: \"¿A qué hora nos vemos?\""
+    },
+    {
+      "number": 4,
+      "function": "realization",
+      "en": "I knew then we did not talk about our plans before.",
+      "es": "Ahí supe que no hablamos de nuestros planes antes."
+    },
+    {
+      "number": 5,
+      "function": "feeling",
+      "en": "I felt surprised and worried. I had work in the afternoon.",
+      "es": "Me sentí sorprendido y preocupado. Yo tenía trabajo en la tarde."
+    },
+    {
+      "number": 6,
+      "function": "response",
+      "en": "I told Ryan, \"I can meet for lunch, but I work later.\"",
+      "es": "Le dije a Ryan: \"Puedo almorzar, pero trabajo después.\""
+    },
+    {
+      "number": 7,
+      "function": "reaction",
+      "en": "Ryan was quiet for a second. He said, \"Okay.\" He looked sad.",
+      "es": "Ryan se quedó callado por un segundo. Dijo: \"Está bien.\" Parecía triste."
+    },
+    {
+      "number": 8,
+      "function": "past_habit",
+      "en": "We often make plans fast. We do not check our schedules first.",
+      "es": "A menudo hacemos planes rápido. No revisamos nuestros horarios primero."
+    },
+    {
+      "number": 9,
+      "function": "reflection",
+      "en": "This makes problems sometimes. We did not talk about what we want.",
+      "es": "Esto causa problemas a veces. No hablamos de lo que queremos."
+    },
+    {
+      "number": 10,
+      "function": "suggestion",
+      "en": "I said, \"Let’s talk now, so we understand each other better.\"",
+      "es": "Dije: \"Hablemos ahora, así nos entendemos mejor.\""
+    },
+    {
+      "number": 11,
+      "function": "explanation",
+      "en": "I told him, \"On weekends, I need time for myself, so lunch is enough.\"",
+      "es": "Le dije: \"En los fines de semana, necesito tiempo para mí, así que el almuerzo es suficiente.\""
+    },
+    {
+      "number": 12,
+      "function": "reassurance",
+      "en": "But I also said, \"I enjoy our time. I do not want you to feel bad.\"",
+      "es": "Pero también dije: \"Me gusta nuestro tiempo juntos. No quiero que te sientas mal.\""
+    },
+    {
+      "number": 13,
+      "function": "clarify",
+      "en": "Ryan felt better. He said, \"Thanks for saying it. I worry sometimes.\"",
+      "es": "Ryan se sintió mejor. Dijo: \"Gracias por decirlo. A veces me preocupo.\""
+    },
+    {
+      "number": 14,
+      "function": "future_plan",
+      "en": "We agreed to check and be clear before making plans next time.",
+      "es": "Acordamos revisar y ser claros antes de hacer planes la próxima vez."
+    },
+    {
+      "number": 15,
+      "function": "proposal",
+      "en": "I said, \"Next time, we can plan a full day, if I am free.\"",
+      "es": "Dije: \"La próxima vez, podemos planear todo un día, si estoy libre.\""
+    },
+    {
+      "number": 16,
+      "function": "condition",
+      "en": "If we talk, we will not have big problems again.",
+      "es": "Si hablamos, no tendremos grandes problemas otra vez."
+    },
+    {
+      "number": 17,
+      "function": "hope",
+      "en": "I hope we can have more fun and no confusion next time.",
+      "es": "Espero que la próxima vez podamos divertirnos más y sin confusiones."
+    },
+    {
+      "number": 18,
+      "function": "gratitude",
+      "en": "I am happy Ryan wanted to talk, even if it was not easy.",
+      "es": "Estoy feliz de que Ryan quisiera hablar, aunque no fue fácil."
+    },
+    {
+      "number": 19,
+      "function": "result",
+      "en": "After we talked, we both felt relaxed. Our lunch was nice.",
+      "es": "Después de hablar, los dos nos sentimos relajados. Nuestro almuerzo fue agradable."
+    },
+    {
+      "number": 20,
+      "function": "lesson",
+      "en": "Now, I see clear words are important. They help us stay friends.",
+      "es": "Ahora veo que las palabras claras son importantes. Ayudan a que sigamos siendo amigos."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "He wanted to spend the whole day with me. I only wanted lunch.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "I knew then we did not talk about our plans before.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "We often make plans fast. We do not check our schedules first.",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "In the morning, Ryan called me. He asked, \"What time will we meet?\"",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Can",
+      "example_en": "I told Ryan, \"I can meet for lunch, but I work later.\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I told Ryan, \"I can meet for lunch, but I work later.\"",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "He wanted to spend the whole day with me. I only wanted lunch.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last weekend, I had a problem with my friend Ryan.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "I can meet for lunch, but I work later.",
+      "meaning_es": "Puedo almorzar, pero trabajo después.",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "Let’s talk now, so we understand each other better.",
+      "meaning_es": "Hablemos ahora, así nos entendemos mejor.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "On weekends, I need time for myself, so lunch is enough.",
+      "meaning_es": "En los fines de semana, necesito tiempo para mí, así que el almuerzo es suficiente.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "I enjoy our time. I do not want you to feel bad.",
+      "meaning_es": "Me gusta nuestro tiempo juntos. No quiero que te sientas mal.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "Thanks for saying it. I worry sometimes.",
+      "meaning_es": "Gracias por decirlo. A veces me preocupo.",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "We agreed to check and be clear before making plans next time.",
+      "meaning_es": "Acordamos revisar y ser claros antes de hacer planes la próxima vez.",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "If we talk, we will not have big problems again.",
+      "meaning_es": "Si hablamos, no tendremos grandes problemas otra vez.",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "They help us stay friends.",
+      "meaning_es": "Ayudan a que sigamos siendo amigos.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción en español y repite cada uno dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 6,
+            "segments": [
+              "I told Ryan, \"I can meet for lunch, but I work later.\""
+            ]
+          },
+          {
+            "source_paragraph": 13,
+            "segments": [
+              "Ryan felt better. He said, \"Thanks for saying it. I worry sometimes.\""
+            ]
+          },
+          {
+            "source_paragraph": 20,
+            "segments": [
+              "Now, I see clear words are important. They help us stay friends."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta en orden, priorizando claridad y ritmo.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-009",
+    "number": "009",
+    "title_en": "Friendship and Difficult Conversations",
+    "title_es": "Amistad y conversaciones difíciles",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Amistad y vida diaria",
+    "main_topic_es": "Expresar sentimientos, aclarar confusiones y hacer planes con amigos.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past simple negative",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

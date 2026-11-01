@@ -1,0 +1,96 @@
+{
+  "text": "Among coworkers, 'See you later' or 'Take care' efficiently signal a friendly parting without formality.",
+  "duration": 7.630000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.46000000834465027
+    },
+    {
+      "location": 6,
+      "length": 9,
+      "start": 0.46000000834465027,
+      "end": 1.159999966621399
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 1.7400000095367432,
+      "end": 1.7999999523162842
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.7999999523162842,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 2.0199999809265137,
+      "end": 2.2799999713897705
+    },
+    {
+      "location": 33,
+      "length": 2,
+      "start": 2.2799999713897705,
+      "end": 2.819999933242798
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.819999933242798,
+      "end": 3.140000104904175
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.140000104904175,
+      "end": 3.5199999809265137
+    },
+    {
+      "location": 48,
+      "length": 11,
+      "start": 3.5199999809265137,
+      "end": 4.440000057220459
+    },
+    {
+      "location": 60,
+      "length": 6,
+      "start": 4.440000057220459,
+      "end": 4.960000038146973
+    },
+    {
+      "location": 67,
+      "length": 1,
+      "start": 4.960000038146973,
+      "end": 5.5
+    },
+    {
+      "location": 69,
+      "length": 8,
+      "start": 5.5,
+      "end": 5.5
+    },
+    {
+      "location": 78,
+      "length": 7,
+      "start": 5.5,
+      "end": 5.940000057220459
+    },
+    {
+      "location": 86,
+      "length": 7,
+      "start": 5.940000057220459,
+      "end": 6.519999980926514
+    },
+    {
+      "location": 94,
+      "length": 9,
+      "start": 6.519999980926514,
+      "end": 7.019999980926514
+    }
+  ]
+}

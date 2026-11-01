@@ -1,0 +1,156 @@
+{
+  "text": "Early in the office, Olivia greets her manager with \"Good morning.\" The manager replies, \"Good morning, Olivia. How are you?\" Olivia answers, \"I'm good, thanks.\"",
+  "duration": 12.329999923706055,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.7200000286102295
+    },
+    {
+      "location": 6,
+      "length": 2,
+      "start": 0.7200000286102295,
+      "end": 1.0
+    },
+    {
+      "location": 9,
+      "length": 3,
+      "start": 1.0,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 13,
+      "length": 6,
+      "start": 1.6799999475479126,
+      "end": 1.6799999475479126
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 2.299999952316284,
+      "end": 2.319999933242798
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.319999933242798,
+      "end": 2.799999952316284
+    },
+    {
+      "location": 35,
+      "length": 3,
+      "start": 2.799999952316284,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 39,
+      "length": 7,
+      "start": 3.380000114440918,
+      "end": 3.380000114440918
+    },
+    {
+      "location": 47,
+      "length": 4,
+      "start": 3.380000114440918,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 53,
+      "length": 4,
+      "start": 4.0,
+      "end": 4.0
+    },
+    {
+      "location": 58,
+      "length": 7,
+      "start": 4.0,
+      "end": 4.28000020980835
+    },
+    {
+      "location": 68,
+      "length": 3,
+      "start": 5.039999961853027,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 72,
+      "length": 7,
+      "start": 5.28000020980835,
+      "end": 5.519999980926514
+    },
+    {
+      "location": 80,
+      "length": 7,
+      "start": 5.519999980926514,
+      "end": 6.179999828338623
+    },
+    {
+      "location": 90,
+      "length": 4,
+      "start": 6.659999847412109,
+      "end": 6.840000152587891
+    },
+    {
+      "location": 95,
+      "length": 7,
+      "start": 6.840000152587891,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 104,
+      "length": 6,
+      "start": 7.179999828338623,
+      "end": 7.480000019073486
+    },
+    {
+      "location": 112,
+      "length": 3,
+      "start": 7.940000057220459,
+      "end": 8.119999885559082
+    },
+    {
+      "location": 116,
+      "length": 3,
+      "start": 8.119999885559082,
+      "end": 8.319999694824219
+    },
+    {
+      "location": 120,
+      "length": 3,
+      "start": 8.319999694824219,
+      "end": 8.619999885559082
+    },
+    {
+      "location": 126,
+      "length": 6,
+      "start": 9.720000267028809,
+      "end": 9.720000267028809
+    },
+    {
+      "location": 133,
+      "length": 7,
+      "start": 9.720000267028809,
+      "end": 10.300000190734863
+    },
+    {
+      "location": 143,
+      "length": 3,
+      "start": 10.720000267028809,
+      "end": 11.0
+    },
+    {
+      "location": 147,
+      "length": 4,
+      "start": 11.0,
+      "end": 11.300000190734863
+    },
+    {
+      "location": 153,
+      "length": 6,
+      "start": 11.65999984741211,
+      "end": 11.979999542236328
+    }
+  ]
+}

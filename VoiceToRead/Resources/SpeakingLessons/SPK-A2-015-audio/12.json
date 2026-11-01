@@ -1,0 +1,108 @@
+{
+  "text": "The staff tells us, \"Please keep the main path clear and do not plant near the playground.\"",
+  "duration": 7.269999980926514,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.3400000035762787
+    },
+    {
+      "location": 4,
+      "length": 5,
+      "start": 0.3400000035762787,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 10,
+      "length": 5,
+      "start": 0.6800000071525574,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 16,
+      "length": 2,
+      "start": 1.100000023841858,
+      "end": 1.4800000190734863
+    },
+    {
+      "location": 21,
+      "length": 6,
+      "start": 2.0199999809265137,
+      "end": 2.0199999809265137
+    },
+    {
+      "location": 28,
+      "length": 4,
+      "start": 2.0199999809265137,
+      "end": 2.3399999141693115
+    },
+    {
+      "location": 33,
+      "length": 3,
+      "start": 2.3399999141693115,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 37,
+      "length": 4,
+      "start": 2.559999942779541,
+      "end": 2.880000114440918
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 2.880000114440918,
+      "end": 3.2200000286102295
+    },
+    {
+      "location": 47,
+      "length": 5,
+      "start": 3.2200000286102295,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 53,
+      "length": 3,
+      "start": 3.5999999046325684,
+      "end": 4.199999809265137
+    },
+    {
+      "location": 57,
+      "length": 2,
+      "start": 4.199999809265137,
+      "end": 4.400000095367432
+    },
+    {
+      "location": 60,
+      "length": 3,
+      "start": 4.400000095367432,
+      "end": 4.71999979019165
+    },
+    {
+      "location": 64,
+      "length": 5,
+      "start": 4.71999979019165,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 70,
+      "length": 4,
+      "start": 5.039999961853027,
+      "end": 5.28000020980835
+    },
+    {
+      "location": 75,
+      "length": 3,
+      "start": 5.28000020980835,
+      "end": 5.5
+    },
+    {
+      "location": 79,
+      "length": 10,
+      "start": 5.5,
+      "end": 5.820000171661377
+    }
+  ]
+}

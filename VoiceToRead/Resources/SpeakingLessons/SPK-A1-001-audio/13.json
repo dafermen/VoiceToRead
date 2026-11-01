@@ -1,0 +1,54 @@
+{
+  "text": "Now, I am not so afraid to talk.",
+  "duration": 3.5,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.6200000047683716
+    },
+    {
+      "location": 5,
+      "length": 1,
+      "start": 0.8999999761581421,
+      "end": 1.2799999713897705
+    },
+    {
+      "location": 7,
+      "length": 2,
+      "start": 1.2799999713897705,
+      "end": 1.5
+    },
+    {
+      "location": 10,
+      "length": 3,
+      "start": 1.5,
+      "end": 1.8600000143051147
+    },
+    {
+      "location": 14,
+      "length": 2,
+      "start": 1.8600000143051147,
+      "end": 2.200000047683716
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 2.200000047683716,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 2.4600000381469727,
+      "end": 2.859999895095825
+    },
+    {
+      "location": 27,
+      "length": 4,
+      "start": 2.859999895095825,
+      "end": 3.180000066757202
+    }
+  ]
+}

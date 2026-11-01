@@ -1,0 +1,84 @@
+{
+  "text": "I remember that before, I always tried to translate everything in my mind.",
+  "duration": 6.690000057220459,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.3799999952316284
+    },
+    {
+      "location": 2,
+      "length": 8,
+      "start": 0.3799999952316284,
+      "end": 0.8399999737739563
+    },
+    {
+      "location": 11,
+      "length": 4,
+      "start": 0.8399999737739563,
+      "end": 1.2200000286102295
+    },
+    {
+      "location": 16,
+      "length": 6,
+      "start": 1.2200000286102295,
+      "end": 1.7400000095367432
+    },
+    {
+      "location": 24,
+      "length": 1,
+      "start": 2.2799999713897705,
+      "end": 2.5
+    },
+    {
+      "location": 26,
+      "length": 6,
+      "start": 2.5,
+      "end": 3.0
+    },
+    {
+      "location": 33,
+      "length": 5,
+      "start": 3.0,
+      "end": 3.3399999141693115
+    },
+    {
+      "location": 39,
+      "length": 2,
+      "start": 3.3399999141693115,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 42,
+      "length": 9,
+      "start": 4.099999904632568,
+      "end": 4.099999904632568
+    },
+    {
+      "location": 52,
+      "length": 10,
+      "start": 4.099999904632568,
+      "end": 4.920000076293945
+    },
+    {
+      "location": 63,
+      "length": 2,
+      "start": 4.920000076293945,
+      "end": 5.340000152587891
+    },
+    {
+      "location": 66,
+      "length": 2,
+      "start": 5.340000152587891,
+      "end": 5.559999942779541
+    },
+    {
+      "location": 69,
+      "length": 4,
+      "start": 5.559999942779541,
+      "end": 5.920000076293945
+    }
+  ]
+}

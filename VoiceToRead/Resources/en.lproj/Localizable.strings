@@ -1393,3 +1393,9 @@
 "Completed verbs" = "Done";
 "Favorite verb" = "Favorite";
 "Completed verb" = "Done";
+"Full-screen text size" = "Full-screen text size";
+"An empty response will be translated automatically." = "An empty response will be translated automatically.";
+"Automatic translations may contain errors. Check your edits before saving." = "Automatic translations may contain errors. Check your edits before saving.";
+"Translations are prepared automatically. Use the pencil beside a phrase to edit its translation." = "Translations are prepared automatically. Use the pencil beside a phrase to edit its translation.";
+"Translation notice" = "Translation notice";
+"VoiceToRead does not guarantee the accuracy of automatic translations or manual edits. Translations may contain errors, and user edits are not verified by the app. Check important information before relying on it." = "VoiceToRead does not guarantee the accuracy of automatic translations or manual edits. Translations may contain errors, and user edits are not verified by the app. Check important information before relying on it.";

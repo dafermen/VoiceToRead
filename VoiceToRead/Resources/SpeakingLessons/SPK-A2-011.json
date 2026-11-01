@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-011",
+  "number": 11,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Ordering Food at a Restaurant",
+    "es": "Pedir comida en un restaurante"
+  },
+  "category": {
+    "en": "Daily Life and Social Situations",
+    "es": "Vida diaria y situaciones sociales"
+  },
+  "main_topic": {
+    "en": "A restaurant visit: ask about the menu, explain preferences and clarify an order respectfully.",
+    "es": "Una visita al restaurante: preguntar por el menú, explicar preferencias y aclarar un pedido de manera respetuosa."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Dos adultos pidiendo comida en un restaurante casual, mirando el menú mientras conversan con un camarero.",
+    "prompt": "Editorial, realistic photograph of two adults in a casual American restaurant, consulting the menu and speaking with a friendly server, table with water and glasses, natural daylight, 16:9, no visible text.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Preguntar por opciones de comida en un restaurante y entender respuestas sencillas.",
+    "Expresar preferencias personales al pedir comida.",
+    "Solicitar cambios simples en un pedido usando frases educadas.",
+    "Formular preguntas claras para aclarar detalles antes de ordenar.",
+    "Practicar frases útiles y estructuras básicas para una visita al restaurante."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Last Friday, I went to a small restaurant with my friend because we wanted to eat something new.",
+      "es": "El viernes pasado fui a un restaurante pequeño con mi amigo porque queríamos comer algo nuevo."
+    },
+    {
+      "number": 2,
+      "function": "environment",
+      "en": "The restaurant was busy, so the hostess asked us to wait at the front for a few minutes.",
+      "es": "El restaurante estaba lleno, así que la anfitriona nos pidió que esperáramos en la entrada unos minutos."
+    },
+    {
+      "number": 3,
+      "function": "situation",
+      "en": "Soon, a waiter welcomed us, smiled, and gave each of us a menu to read.",
+      "es": "Pronto, un camarero nos dio la bienvenida, sonrió y nos entregó un menú a cada uno."
+    },
+    {
+      "number": 4,
+      "function": "introduction",
+      "en": "I said, \"Hello. Could you please tell me about today’s specials?\"",
+      "es": "Dije: \"Hola. ¿Podría decirme cuáles son los platos especiales de hoy?\""
+    },
+    {
+      "number": 5,
+      "function": "information",
+      "en": "The waiter answered, \"Today, we have chicken salad and tomato pasta as our specials.\"",
+      "es": "El camarero respondió: \"Hoy tenemos ensalada de pollo y pasta con tomate como platos especiales.\""
+    },
+    {
+      "number": 6,
+      "function": "preference",
+      "en": "I told the waiter I like light food at night, so I asked if the chicken salad is popular.",
+      "es": "Le dije al camarero que me gusta la comida ligera por la noche, así que pregunté si la ensalada de pollo es popular."
+    },
+    {
+      "number": 7,
+      "function": "contrast",
+      "en": "My friend said he loves pasta, but he usually asks for it without cheese.",
+      "es": "Mi amigo dijo que le encanta la pasta, pero normalmente la pide sin queso."
+    },
+    {
+      "number": 8,
+      "function": "question",
+      "en": "He asked, \"Can I have the tomato pasta without cheese, please?\"",
+      "es": "Preguntó: \"¿Puedo pedir la pasta con tomate sin queso, por favor?\""
+    },
+    {
+      "number": 9,
+      "function": "clarification",
+      "en": "Before I ordered, I wanted to know if the salad came with dressing on the side.",
+      "es": "Antes de pedir, quise saber si la ensalada traía el aderezo aparte."
+    },
+    {
+      "number": 10,
+      "function": "answer",
+      "en": "The waiter replied, \"Yes, we can put the dressing on the side if you prefer.\"",
+      "es": "El camarero respondió: \"Sí, podemos poner el aderezo aparte si usted prefiere.\""
+    },
+    {
+      "number": 11,
+      "function": "gratitude",
+      "en": "That was perfect, so I thanked the waiter for explaining and helping me decide.",
+      "es": "Eso fue perfecto, así que di las gracias al camarero por explicarlo y ayudarme a decidir."
+    },
+    {
+      "number": 12,
+      "function": "variation",
+      "en": "My friend sometimes chooses other dishes, but tonight he really wanted the tomato pasta.",
+      "es": "Mi amigo a veces elige otros platos, pero esta noche realmente quería la pasta con tomate."
+    },
+    {
+      "number": 13,
+      "function": "service",
+      "en": "After we ordered, the waiter brought us water and checked if we needed anything else.",
+      "es": "Después de pedir, el camarero nos trajo agua y verificó si necesitábamos algo más."
+    },
+    {
+      "number": 14,
+      "function": "expectation",
+      "en": "While we waited, I hoped the salad would taste fresh because I was very hungry.",
+      "es": "Mientras esperábamos, yo esperaba que la ensalada supiera fresca porque tenía mucha hambre."
+    },
+    {
+      "number": 15,
+      "function": "delivery",
+      "en": "The food arrived quickly and everything looked very good on our table.",
+      "es": "La comida llegó rápido y todo se veía muy bien en nuestra mesa."
+    },
+    {
+      "number": 16,
+      "function": "check",
+      "en": "The waiter asked, \"Is everything okay with your meal?\" We both said yes and smiled.",
+      "es": "El camarero preguntó: \"¿Está todo bien con su comida?\" Ambos dijimos que sí y sonreímos."
+    },
+    {
+      "number": 17,
+      "function": "enjoyment",
+      "en": "We talked while we ate. My friend said the pasta was delicious, and my salad was fresh.",
+      "es": "Conversamos mientras comíamos. Mi amigo dijo que la pasta estaba deliciosa y mi ensalada estaba fresca."
+    },
+    {
+      "number": 18,
+      "function": "future_intent",
+      "en": "After eating, we decided we will come back and maybe try dessert next time.",
+      "es": "Después de comer, decidimos que volveremos y tal vez probaremos postre la próxima vez."
+    },
+    {
+      "number": 19,
+      "function": "reflection",
+      "en": "Before, I was nervous to ask questions at restaurants, but now I feel more comfortable.",
+      "es": "Antes me ponía nervioso para hacer preguntas en restaurantes, pero ahora me siento más cómodo."
+    },
+    {
+      "number": 20,
+      "function": "summary",
+      "en": "Going to restaurants is easier when I use simple words and ask clearly for what I want.",
+      "es": "Ir a restaurantes es más fácil cuando uso palabras sencillas y pido claramente lo que quiero."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Last Friday, I went to a small restaurant with my friend because we wanted to eat something new.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "After eating, we decided we will come back and maybe try dessert next time.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 18
+    },
+    {
+      "name": "Can",
+      "example_en": "He asked, \"Can I have the tomato pasta without cheese, please?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 8
+    },
+    {
+      "name": "Could",
+      "example_en": "I said, \"Hello. Could you please tell me about today’s specials?\"",
+      "explanation_es": "Could seguido de un verbo en forma base puede expresar capacidad pasada, posibilidad o una petición cortés según el contexto.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Present simple",
+      "example_en": "The waiter answered, \"Today, we have chicken salad and tomato pasta as our specials.\"",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "Last Friday, I went to a small restaurant with my friend because we wanted to eat something new.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Last Friday, I went to a small restaurant with my friend because we wanted to eat something new.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Last Friday, I went to a small restaurant with my friend because we wanted to eat something new.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Could you please tell me about today’s specials?",
+      "meaning_es": "¿Podría decirme cuáles son los platos especiales de hoy?",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Can I have the tomato pasta without cheese, please?",
+      "meaning_es": "¿Puedo pedir la pasta con tomate sin queso, por favor?",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Yes, we can put the dressing on the side if you prefer.",
+      "meaning_es": "Sí, podemos poner el aderezo aparte si usted prefiere.",
+      "source_paragraph": 10
+    },
+    {
+      "expression_en": "That was perfect, so I thanked the waiter for explaining and helping me decide.",
+      "meaning_es": "Eso fue perfecto, así que di las gracias al camarero por explicarlo y ayudarme a decidir.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Is everything okay with your meal?",
+      "meaning_es": "¿Está todo bien con su comida?",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "We will come back and maybe try dessert next time.",
+      "meaning_es": "Volveremos y tal vez probaremos postre la próxima vez.",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "Before, I was nervous to ask questions at restaurants, but now I feel more comfortable.",
+      "meaning_es": "Antes me ponía nervioso para hacer preguntas en restaurantes, pero ahora me siento más cómodo.",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "Going to restaurants is easier when I use simple words and ask clearly for what I want.",
+      "meaning_es": "Ir a restaurantes es más fácil cuando uso palabras sencillas y pido claramente lo que quiero.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de práctica oral, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "I said, \"Hello. Could you please tell me about today’s specials?\""
+            ]
+          },
+          {
+            "source_paragraph": 8,
+            "segments": [
+              "He asked, \"Can I have the tomato pasta without cheese, please?\""
+            ]
+          },
+          {
+            "source_paragraph": 18,
+            "segments": [
+              "After eating, we decided we will come back and maybe try dessert next time."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta en inglés, sin detenerte palabra por palabra; prioriza claridad y entonación natural.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-011",
+    "number": "011",
+    "title_en": "Ordering Food at a Restaurant",
+    "title_es": "Pedir comida en un restaurante",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y situaciones sociales",
+    "main_topic_es": "Una visita al restaurante: preguntar por el menú, explicar preferencias y aclarar un pedido de manera respetuosa.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Will for future reference",
+      "Can",
+      "Could",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns",
+      "Possessive determiners"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

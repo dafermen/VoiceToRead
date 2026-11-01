@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A1-005",
+  "number": 5,
+  "status": "ready",
+  "level": "A1",
+  "language": "en-US",
+  "title": {
+    "en": "My First Day at a New Job",
+    "es": "Mi primer día en un nuevo trabajo"
+  },
+  "category": {
+    "en": "Work and Daily Life",
+    "es": "Trabajo y vida diaria"
+  },
+  "main_topic": {
+    "en": "Meeting colleagues, clarifying responsibilities, asking for help, and setting expectations on the first day.",
+    "es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas en el primer día."
+  },
+  "estimated_minutes": 15,
+  "image": {
+    "alt_es": "Una persona adulta en una oficina moderna saludando a sus nuevos compañeros de trabajo.",
+    "prompt": "Realistic editorial photograph, adult professional greeting new colleagues in a modern office environment, bright daylight through windows, diverse group, friendly atmosphere, horizontal 16:9",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Saludar y presentarse con nuevos compañeros.",
+    "Nombrar responsabilidades básicas en el trabajo.",
+    "Preguntar y pedir ayuda de manera simple.",
+    "Reconocer instrucciones y expectativas iniciales.",
+    "Practicar la comprensión y repetición oral del inglés americano básico."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "context",
+      "en": "Today is my first day at my new job.",
+      "es": "Hoy es mi primer día en mi nuevo trabajo."
+    },
+    {
+      "number": 2,
+      "function": "greeting",
+      "en": "Good morning! My manager says hello and welcomes me.",
+      "es": "¡Buenos días! Mi jefe me saluda y me da la bienvenida."
+    },
+    {
+      "number": 3,
+      "function": "introduction",
+      "en": "I meet my team. They smile and say their names.",
+      "es": "Conozco a mi equipo. Ellos sonríen y dicen sus nombres."
+    },
+    {
+      "number": 4,
+      "function": "response",
+      "en": "I say, \"Nice to meet you!\" and smile back.",
+      "es": "Digo, \"¡Mucho gusto!\" y sonrío también."
+    },
+    {
+      "number": 5,
+      "function": "responsibility",
+      "en": "My manager tells me my main job is to answer emails.",
+      "es": "Mi jefe me dice que mi trabajo principal es responder correos."
+    },
+    {
+      "number": 6,
+      "function": "clarification",
+      "en": "I ask, \"Can you write the tasks for me?\"",
+      "es": "Pregunto: \"¿Me puede escribir las tareas?\""
+    },
+    {
+      "number": 7,
+      "function": "explanation",
+      "en": "She writes a simple list for me on some paper.",
+      "es": "Ella me escribe una lista simple en una hoja."
+    },
+    {
+      "number": 8,
+      "function": "help_request",
+      "en": "I say, \"I need help with the computer program.\"",
+      "es": "Digo: \"Necesito ayuda con el programa de la computadora.\""
+    },
+    {
+      "number": 9,
+      "function": "offer_help",
+      "en": "My manager says, \"Carlos can help you today.\"",
+      "es": "Mi jefa dice: \"Carlos puede ayudarte hoy.\""
+    },
+    {
+      "number": 10,
+      "function": "first_task",
+      "en": "Carlos shows me the email system. We sit together.",
+      "es": "Carlos me muestra el sistema de correos. Nos sentamos juntos."
+    },
+    {
+      "number": 11,
+      "function": "practice",
+      "en": "He says, \"Please send a test email to me.\"",
+      "es": "Él dice: \"Por favor envíame un correo de prueba.\""
+    },
+    {
+      "number": 12,
+      "function": "feedback",
+      "en": "I send the email. I make a small mistake.",
+      "es": "Envío el correo. Cometo un error pequeño."
+    },
+    {
+      "number": 13,
+      "function": "correction",
+      "en": "Carlos shows me how to fix it. He is patient.",
+      "es": "Carlos me muestra cómo corregirlo. Él es paciente."
+    },
+    {
+      "number": 14,
+      "function": "interaction",
+      "en": "At break time, a team member says, \"Join us for coffee!\"",
+      "es": "En el descanso, un compañero dice: \"¡Ven a tomar café con nosotros!\""
+    },
+    {
+      "number": 15,
+      "function": "conversation",
+      "en": "We talk a little. She likes pizza. I like salad.",
+      "es": "Charlamos un poco. A ella le gusta la pizza. A mí me gusta la ensalada."
+    },
+    {
+      "number": 16,
+      "function": "expectations",
+      "en": "Before lunch, my manager says, \"Ask questions if you need. It is okay.\"",
+      "es": "Antes del almuerzo, mi jefa dice: \"Haz preguntas si lo necesitas. Está bien.\""
+    },
+    {
+      "number": 17,
+      "function": "support",
+      "en": "She says, \"You can learn step by step.\" I feel calm.",
+      "es": "Ella dice: \"Puedes aprender paso a paso.\" Me siento tranquilo."
+    },
+    {
+      "number": 18,
+      "function": "organization",
+      "en": "In the afternoon, I make a to-do list for my work.",
+      "es": "Por la tarde, hago una lista de tareas para mi trabajo."
+    },
+    {
+      "number": 19,
+      "function": "gratitude",
+      "en": "I say, \"Thank you for helping me today!\"",
+      "es": "Digo: \"¡Gracias por ayudarme hoy!\""
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "My first day is good. I feel happy to start here.",
+      "es": "Mi primer día es bueno. Estoy feliz de empezar aquí."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Can",
+      "example_en": "I ask, \"Can you write the tasks for me?\"",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "Present simple",
+      "example_en": "I say, \"Nice to meet you!\" and smile back.",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "I meet my team. They smile and say their names.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Possessive determiners",
+      "example_en": "Today is my first day at my new job.",
+      "explanation_es": "Los posesivos, como my, your y our, se colocan delante de un sustantivo para indicar pertenencia o relación.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Indefinite articles",
+      "example_en": "She writes a simple list for me on some paper.",
+      "explanation_es": "A y an presentan un sustantivo contable singular que no se ha identificado previamente.",
+      "source_paragraph": 7
+    },
+    {
+      "name": "Definite article",
+      "example_en": "I ask, \"Can you write the tasks for me?\"",
+      "explanation_es": "The indica que una persona o cosa es identificable por el contexto.",
+      "source_paragraph": 6
+    },
+    {
+      "name": "And to add information",
+      "example_en": "Good morning! My manager says hello and welcomes me.",
+      "explanation_es": "And une palabras, acciones o ideas que se añaden entre sí.",
+      "source_paragraph": 2
+    },
+    {
+      "name": "Time and place phrases",
+      "example_en": "Today is my first day at my new job.",
+      "explanation_es": "Las expresiones con at, in y on pueden situar una acción en un lugar o momento; la elección depende de la expresión.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Good morning!",
+      "meaning_es": "¡Buenos días!",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "Nice to meet you!",
+      "meaning_es": "¡Mucho gusto!",
+      "source_paragraph": 4
+    },
+    {
+      "expression_en": "Can you write the tasks for me?",
+      "meaning_es": "¿Me puede escribir las tareas?",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "I need help with the computer program.",
+      "meaning_es": "Necesito ayuda con el programa de la computadora.",
+      "source_paragraph": 8
+    },
+    {
+      "expression_en": "Please send a test email to me.",
+      "meaning_es": "Por favor envíame un correo de prueba.",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "Ask questions if you need. It is okay.",
+      "meaning_es": "Haz preguntas si lo necesitas. Está bien.",
+      "source_paragraph": 16
+    },
+    {
+      "expression_en": "You can learn step by step.",
+      "meaning_es": "Puedes aprender paso a paso.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "Thank you for helping me today!",
+      "meaning_es": "¡Gracias por ayudarme hoy!",
+      "source_paragraph": 19
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, consulta la traducción y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 2,
+            "segments": [
+              "Good morning!",
+              "My manager says hello and welcomes me."
+            ]
+          },
+          {
+            "source_paragraph": 5,
+            "segments": [
+              "My manager tells me my main job is to answer emails."
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "I say, \"Thank you for helping me today!\""
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra; prioriza claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A1-005",
+    "number": "005",
+    "title_en": "My First Day at a New Job",
+    "title_es": "Mi primer día en un nuevo trabajo",
+    "level": "A1",
+    "language": "Inglés americano",
+    "category_es": "Trabajo y vida diaria",
+    "main_topic_es": "Conocer colegas, aclarar responsabilidades, pedir ayuda y establecer expectativas en el primer día.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Can",
+      "Present simple",
+      "Personal subject pronouns",
+      "Possessive determiners",
+      "Indefinite articles",
+      "Definite article",
+      "And to add information",
+      "Time and place phrases"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 15
+  }
+}

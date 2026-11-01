@@ -1,0 +1,84 @@
+{
+  "text": "I felt proud because I tried something different and listened to helpful advice.",
+  "duration": 7.150000095367432,
+  "words": [
+    {
+      "location": 0,
+      "length": 1,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 2,
+      "length": 4,
+      "start": 0.5,
+      "end": 0.6800000071525574
+    },
+    {
+      "location": 7,
+      "length": 5,
+      "start": 0.6800000071525574,
+      "end": 1.3799999952316284
+    },
+    {
+      "location": 13,
+      "length": 7,
+      "start": 1.3799999952316284,
+      "end": 2.1600000858306885
+    },
+    {
+      "location": 21,
+      "length": 1,
+      "start": 2.1600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "location": 23,
+      "length": 5,
+      "start": 2.6600000858306885,
+      "end": 2.9600000381469727
+    },
+    {
+      "location": 29,
+      "length": 9,
+      "start": 2.9600000381469727,
+      "end": 3.4200000762939453
+    },
+    {
+      "location": 39,
+      "length": 9,
+      "start": 3.4200000762939453,
+      "end": 3.940000057220459
+    },
+    {
+      "location": 49,
+      "length": 3,
+      "start": 3.940000057220459,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 53,
+      "length": 8,
+      "start": 4.659999847412109,
+      "end": 5.039999961853027
+    },
+    {
+      "location": 62,
+      "length": 2,
+      "start": 5.039999961853027,
+      "end": 5.579999923706055
+    },
+    {
+      "location": 65,
+      "length": 7,
+      "start": 5.579999923706055,
+      "end": 6.019999980926514
+    },
+    {
+      "location": 73,
+      "length": 6,
+      "start": 6.019999980926514,
+      "end": 6.519999980926514
+    }
+  ]
+}

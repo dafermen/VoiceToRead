@@ -1,0 +1,120 @@
+{
+  "text": "Politely offering context helps: 'I'm feeling some pain in my knee. Is there a time available with Dr. Lopez?'",
+  "duration": 8.039999961853027,
+  "words": [
+    {
+      "location": 0,
+      "length": 8,
+      "start": 0.0,
+      "end": 0.6000000238418579
+    },
+    {
+      "location": 9,
+      "length": 8,
+      "start": 0.6000000238418579,
+      "end": 1.1399999856948853
+    },
+    {
+      "location": 18,
+      "length": 7,
+      "start": 1.1399999856948853,
+      "end": 1.8200000524520874
+    },
+    {
+      "location": 26,
+      "length": 5,
+      "start": 1.8200000524520874,
+      "end": 2.2200000286102295
+    },
+    {
+      "location": 34,
+      "length": 3,
+      "start": 2.880000114440918,
+      "end": 3.0199999809265137
+    },
+    {
+      "location": 38,
+      "length": 7,
+      "start": 3.0199999809265137,
+      "end": 3.2799999713897705
+    },
+    {
+      "location": 46,
+      "length": 4,
+      "start": 3.2799999713897705,
+      "end": 3.7799999713897705
+    },
+    {
+      "location": 51,
+      "length": 4,
+      "start": 3.7799999713897705,
+      "end": 3.819999933242798
+    },
+    {
+      "location": 56,
+      "length": 2,
+      "start": 3.819999933242798,
+      "end": 4.0
+    },
+    {
+      "location": 59,
+      "length": 2,
+      "start": 4.0,
+      "end": 4.360000133514404
+    },
+    {
+      "location": 62,
+      "length": 4,
+      "start": 4.360000133514404,
+      "end": 4.420000076293945
+    },
+    {
+      "location": 68,
+      "length": 2,
+      "start": 5.139999866485596,
+      "end": 5.320000171661377
+    },
+    {
+      "location": 71,
+      "length": 5,
+      "start": 5.320000171661377,
+      "end": 5.440000057220459
+    },
+    {
+      "location": 77,
+      "length": 1,
+      "start": 5.440000057220459,
+      "end": 5.639999866485596
+    },
+    {
+      "location": 79,
+      "length": 4,
+      "start": 5.639999866485596,
+      "end": 5.960000038146973
+    },
+    {
+      "location": 84,
+      "length": 9,
+      "start": 5.960000038146973,
+      "end": 6.400000095367432
+    },
+    {
+      "location": 94,
+      "length": 4,
+      "start": 6.400000095367432,
+      "end": 6.739999771118164
+    },
+    {
+      "location": 99,
+      "length": 2,
+      "start": 6.739999771118164,
+      "end": 7.099999904632568
+    },
+    {
+      "location": 103,
+      "length": 5,
+      "start": 7.28000020980835,
+      "end": 7.980000019073486
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "text": "Before I order, I ask, 'Does the dressing come on the side?'",
+  "duration": 5.46999979019165,
+  "words": [
+    {
+      "location": 0,
+      "length": 6,
+      "start": 0.0,
+      "end": 0.5600000023841858
+    },
+    {
+      "location": 7,
+      "length": 1,
+      "start": 0.5600000023841858,
+      "end": 0.9599999785423279
+    },
+    {
+      "location": 9,
+      "length": 5,
+      "start": 0.9599999785423279,
+      "end": 1.100000023841858
+    },
+    {
+      "location": 16,
+      "length": 1,
+      "start": 1.7999999523162842,
+      "end": 2.059999942779541
+    },
+    {
+      "location": 18,
+      "length": 3,
+      "start": 2.059999942779541,
+      "end": 2.559999942779541
+    },
+    {
+      "location": 24,
+      "length": 4,
+      "start": 2.880000114440918,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 29,
+      "length": 3,
+      "start": 3.240000009536743,
+      "end": 3.5
+    },
+    {
+      "location": 33,
+      "length": 8,
+      "start": 3.5,
+      "end": 3.9200000762939453
+    },
+    {
+      "location": 42,
+      "length": 4,
+      "start": 3.9200000762939453,
+      "end": 4.320000171661377
+    },
+    {
+      "location": 47,
+      "length": 2,
+      "start": 4.320000171661377,
+      "end": 4.460000038146973
+    },
+    {
+      "location": 50,
+      "length": 3,
+      "start": 4.460000038146973,
+      "end": 4.659999847412109
+    },
+    {
+      "location": 54,
+      "length": 4,
+      "start": 4.659999847412109,
+      "end": 4.980000019073486
+    }
+  ]
+}

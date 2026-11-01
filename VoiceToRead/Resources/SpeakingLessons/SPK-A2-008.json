@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-A2-008",
+  "number": 8,
+  "status": "ready",
+  "level": "A2",
+  "language": "en-US",
+  "title": {
+    "en": "Shopping and Solving a Problem",
+    "es": "Compras y solución de problemas"
+  },
+  "category": {
+    "en": "Daily Life and Practical Situations",
+    "es": "Vida diaria y situaciones prácticas"
+  },
+  "main_topic": {
+    "en": "A mistaken or unsuitable purchase; explain the mismatch and ask for a practical solution.",
+    "es": "Una compra equivocada o inadecuada; explicar la incompatibilidad y pedir una solución práctica."
+  },
+  "estimated_minutes": 20,
+  "image": {
+    "alt_es": "Persona adulta mostrando una prenda de ropa inadecuada en un mostrador de tienda y hablando con un empleado.",
+    "prompt": "Realistic editorial photograph. Adult person at a store counter holding up an unsuitable item of clothing and explaining its problem to a helpful store worker, modern US shop, friendly atmosphere, 16:9.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Describir una situación de compra y un error común.",
+    "Explicar un problema con un producto usando frases simples.",
+    "Solicitar una solución práctica o intercambio en inglés básico.",
+    "Utilizar 'because', 'but' y 'so' para enlazar ideas.",
+    "Practicar frases esenciales para atención al cliente en inglés estadounidense."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "introduction",
+      "en": "Hello! Last Saturday, I went to the shopping center to buy a jacket for my job.",
+      "es": "¡Hola! El sábado pasado, fui al centro comercial para comprar una chaqueta para mi trabajo."
+    },
+    {
+      "number": 2,
+      "function": "background",
+      "en": "I saw a jacket on the shelf. It looked great, so I bought it without trying it on.",
+      "es": "Vi una chaqueta en el estante. Se veía muy bien, así que la compré sin probármela."
+    },
+    {
+      "number": 3,
+      "function": "first_problem",
+      "en": "When I arrived home, I put the jacket on. The sleeves were much too short.",
+      "es": "Cuando llegué a casa, me puse la chaqueta. Las mangas eran demasiado cortas."
+    },
+    {
+      "number": 4,
+      "function": "reaction",
+      "en": "I felt a little sad, because I wanted to use it for work the next day.",
+      "es": "Me sentí un poco triste, porque quería usarla para trabajar al día siguiente."
+    },
+    {
+      "number": 5,
+      "function": "attempted_fix",
+      "en": "I tried wearing the jacket over my sweater, but it still did not fit right.",
+      "es": "Intenté usar la chaqueta sobre mi suéter, pero aún así no quedaba bien."
+    },
+    {
+      "number": 6,
+      "function": "decision",
+      "en": "I decided I needed to go back to the store and talk to someone about the problem.",
+      "es": "Decidí que necesitaba volver a la tienda y hablar con alguien sobre el problema."
+    },
+    {
+      "number": 7,
+      "function": "preparation",
+      "en": "I found the jacket tag and my receipt, so I put them in my bag.",
+      "es": "Encontré la etiqueta de la chaqueta y mi recibo, así que los puse en mi bolso."
+    },
+    {
+      "number": 8,
+      "function": "store_visit",
+      "en": "At the customer desk, I greeted the worker and explained my situation politely.",
+      "es": "En el mostrador de atención, saludé al empleado y expliqué mi situación amablemente."
+    },
+    {
+      "number": 9,
+      "function": "explanation",
+      "en": "I said the jacket was perfect in style but the sleeves were not the right size.",
+      "es": "Dije que la chaqueta era perfecta de estilo, pero las mangas no eran de la talla correcta."
+    },
+    {
+      "number": 10,
+      "function": "reason",
+      "en": "I told the worker I did not try it on before buying, so it was my mistake.",
+      "es": "Le dije al trabajador que no me la probé antes de comprar, así que fue mi error."
+    },
+    {
+      "number": 11,
+      "function": "request",
+      "en": "I asked, 'Can I exchange this jacket for another one that fits me?'",
+      "es": "Pregunté: '¿Puedo cambiar esta chaqueta por otra que me quede bien?'"
+    },
+    {
+      "number": 12,
+      "function": "response",
+      "en": "The worker said, 'I’m sorry, we don’t have this jacket in your size right now.'",
+      "es": "El empleado dijo: 'Lo siento, no tenemos esta chaqueta en tu talla ahora mismo.'"
+    },
+    {
+      "number": 13,
+      "function": "suggestion",
+      "en": "He said, 'But you can look at other jackets, or check if we have your size online.'",
+      "es": "Él dijo: 'Pero puedes ver otras chaquetas o revisar si tu talla está en línea.'"
+    },
+    {
+      "number": 14,
+      "function": "action",
+      "en": "He showed me some similar jackets and helped me pick a good one.",
+      "es": "Me mostró algunas chaquetas similares y me ayudó a elegir una buena."
+    },
+    {
+      "number": 15,
+      "function": "outcome",
+      "en": "We found a different jacket. It was black instead of blue, but the sleeves fit perfectly.",
+      "es": "Encontramos una chaqueta diferente. Era negra en vez de azul, pero las mangas quedaron perfectas."
+    },
+    {
+      "number": 16,
+      "function": "exchange",
+      "en": "The worker did an exchange, so I gave my old jacket and got the new one. I paid nothing extra.",
+      "es": "El empleado hizo un cambio, así que entregué mi chaqueta anterior y recibí la nueva. No pagué nada más."
+    },
+    {
+      "number": 17,
+      "function": "reflection",
+      "en": "This time, I tried the jacket on at the store before leaving. I was happy with my choice.",
+      "es": "Esta vez, me probé la chaqueta en la tienda antes de salir. Estuve contento con mi elección."
+    },
+    {
+      "number": 18,
+      "function": "lesson",
+      "en": "Now I know it’s important to check the size before buying clothes.",
+      "es": "Ahora sé que es importante revisar la talla antes de comprar ropa."
+    },
+    {
+      "number": 19,
+      "function": "advice",
+      "en": "If I have a shopping problem again, I will ask for help and explain clearly.",
+      "es": "Si tengo un problema de compras otra vez, pediré ayuda y lo explicaré claramente."
+    },
+    {
+      "number": 20,
+      "function": "conclusion",
+      "en": "In the end, I solved the problem and now I have a jacket that I can really use.",
+      "es": "Al final, solucioné el problema y ahora tengo una chaqueta que realmente puedo usar."
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Past simple",
+      "example_en": "Hello! Last Saturday, I went to the shopping center to buy a jacket for my job.",
+      "explanation_es": "El pasado simple narra acciones o situaciones terminadas en el pasado.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Past simple negative",
+      "example_en": "I tried wearing the jacket over my sweater, but it still did not fit right.",
+      "explanation_es": "Did not o didn’t van seguidos del verbo principal en forma base para negar una acción pasada.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Present simple negative",
+      "example_en": "The worker said, 'I’m sorry, we don’t have this jacket in your size right now.'",
+      "explanation_es": "Do not y does not, o sus contracciones, se usan con el verbo principal en forma base para negar en presente.",
+      "source_paragraph": 12
+    },
+    {
+      "name": "Will for future reference",
+      "example_en": "If I have a shopping problem again, I will ask for help and explain clearly.",
+      "explanation_es": "Will seguido de un verbo en forma base puede expresar una decisión, intención o predicción futura según el contexto.",
+      "source_paragraph": 19
+    },
+    {
+      "name": "Can",
+      "example_en": "I asked, 'Can I exchange this jacket for another one that fits me?'",
+      "explanation_es": "Can va seguido de un verbo en forma base y expresa capacidad, posibilidad, permiso o petición según el contexto.",
+      "source_paragraph": 11
+    },
+    {
+      "name": "Present simple",
+      "example_en": "He said, 'But you can look at other jackets, or check if we have your size online.'",
+      "explanation_es": "El presente simple puede expresar hábitos, hechos o lo que sucede en una situación presentada en presente.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Want or need + to-infinitive",
+      "example_en": "I felt a little sad, because I wanted to use it for work the next day.",
+      "explanation_es": "Want to y need to se usan con un infinitivo para expresar un deseo o una necesidad.",
+      "source_paragraph": 4
+    },
+    {
+      "name": "Personal subject pronouns",
+      "example_en": "Hello! Last Saturday, I went to the shopping center to buy a jacket for my job.",
+      "explanation_es": "Los pronombres personales identifican quién realiza una acción o de quién se habla.",
+      "source_paragraph": 1
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "Can I exchange this jacket for another one that fits me?",
+      "meaning_es": "¿Puedo cambiar esta chaqueta por otra que me quede bien?",
+      "source_paragraph": 11
+    },
+    {
+      "expression_en": "I’m sorry, we don’t have this jacket in your size right now.",
+      "meaning_es": "Lo siento, no tenemos esta chaqueta en tu talla ahora mismo.",
+      "source_paragraph": 12
+    },
+    {
+      "expression_en": "But you can look at other jackets, or check if we have your size online.",
+      "meaning_es": "Pero puedes ver otras chaquetas o revisar si tu talla está en línea.",
+      "source_paragraph": 13
+    },
+    {
+      "expression_en": "This time, I tried the jacket on at the store before leaving.",
+      "meaning_es": "Esta vez, me probé la chaqueta en la tienda antes de salir.",
+      "source_paragraph": 17
+    },
+    {
+      "expression_en": "It was black instead of blue, but the sleeves fit perfectly.",
+      "meaning_es": "Era negra en vez de azul, pero las mangas quedaron perfectas.",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "Now I know it’s important to check the size before buying clothes.",
+      "meaning_es": "Ahora sé que es importante revisar la talla antes de comprar ropa.",
+      "source_paragraph": 18
+    },
+    {
+      "expression_en": "If I have a shopping problem again, I will ask for help and explain clearly.",
+      "meaning_es": "Si tengo un problema de compras otra vez, pediré ayuda y lo explicaré claramente.",
+      "source_paragraph": 19
+    },
+    {
+      "expression_en": "I solved the problem and now I have a jacket that I can really use.",
+      "meaning_es": "Solucioné el problema y ahora tengo una chaqueta que realmente puedo usar.",
+      "source_paragraph": 20
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, revisa la traducción al español y repítelo dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos separados por barras. Las barras indican pausas para entrenar, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 1,
+            "segments": [
+              "Hello!",
+              "Last Saturday, I went to the shopping center to buy a jacket for my job."
+            ]
+          },
+          {
+            "source_paragraph": 11,
+            "segments": [
+              "I asked,",
+              "'Can I exchange this jacket for another one that fits me?'"
+            ]
+          },
+          {
+            "source_paragraph": 15,
+            "segments": [
+              "We found a different jacket.",
+              "It was black instead of blue, but the sleeves fit perfectly."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en inglés en voz alta, sin detenerte en cada palabra; prioriza claridad y ritmo.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-A2-008",
+    "number": "008",
+    "title_en": "Shopping and Solving a Problem",
+    "title_es": "Compras y solución de problemas",
+    "level": "A2",
+    "language": "Inglés americano",
+    "category_es": "Vida diaria y situaciones prácticas",
+    "main_topic_es": "Una compra equivocada o inadecuada; explicar la incompatibilidad y pedir una solución práctica.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Past simple",
+      "Past simple negative",
+      "Present simple negative",
+      "Will for future reference",
+      "Can",
+      "Present simple",
+      "Want or need + to-infinitive",
+      "Personal subject pronouns"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 20
+  }
+}

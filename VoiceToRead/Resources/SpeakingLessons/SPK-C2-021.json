@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SPK-C2-021",
+  "number": 21,
+  "status": "ready",
+  "level": "C2",
+  "language": "en-US",
+  "title": {
+    "en": "Greetings",
+    "es": "Saludos"
+  },
+  "category": {
+    "en": "Daily Communication",
+    "es": "Comunicación diaria"
+  },
+  "main_topic": {
+    "en": "Pragmatic effective greetings: register, nuance, reformulation and context.",
+    "es": "Saludos efectivos y pragmáticos: registro, matiz, reformulación y contexto."
+  },
+  "estimated_minutes": 45,
+  "image": {
+    "alt_es": "Dos personas adultas se saludan con una sonrisa y un gesto de la mano junto a una cafetería.",
+    "prompt": "Candid editorial landscape photo of two adult neighbors smiling and waving hello on a neighborhood sidewalk beside a cafe. Natural daylight. No text, logos or watermark.",
+    "asset_url": null,
+    "aspect_ratio": "16:9"
+  },
+  "learning_objectives": [
+    "Interpretar matices de registro en saludos orales.",
+    "Reformular o ajustar un saludo según la relación y el entorno.",
+    "Despedirse de forma matizada y natural para distintas situaciones.",
+    "Reconocer y responder a saludos ambiguos o improvisados.",
+    "Demostrar competencia lectora y oral con inglés avanzado auténtico."
+  ],
+  "paragraphs": [
+    {
+      "number": 1,
+      "function": "morning_workplace",
+      "en": "Walking into the office at eight, Olivia greets her colleagues with, \"Good morning, everyone.\" Daniel, already at his desk, raises his coffee: \"Morning, Olivia. Was the traffic bearable today?\"",
+      "es": "Al entrar en la oficina a las ocho, Olivia saluda a sus compañeros: \"Buenos días a todos\". Daniel, que ya está en su escritorio, levanta su café: \"Buenos días, Olivia. ¿El tráfico fue soportable hoy?\""
+    },
+    {
+      "number": 2,
+      "function": "casual_friends",
+      "en": "Later, at lunch, she sees friends from another department and switches to, \"Hey! How's it going?\" Anna replies lightly, \"Not bad—just the usual avalanche of emails.\"",
+      "es": "Más tarde, en el almuerzo, ve a amigos de otro departamento y cambia a: \"¡Hey! ¿Cómo va todo?\" Anna responde con ligereza: \"Nada mal, solo la avalancha habitual de correos.\""
+    },
+    {
+      "number": 3,
+      "function": "concise_response",
+      "en": "\"How are you?\" can be perfunctory or sincere. When Sam is asked by his manager, he simply says, \"I'm good, thanks. And you?\" This balances brevity and politeness.",
+      "es": "\"¿Cómo estás?\" puede ser formalidad o sincero. Cuando su jefe le pregunta, Sam simplemente dice: \"Bien, gracias. ¿Y usted?\" Esto equilibra brevedad y cortesía."
+    },
+    {
+      "number": 4,
+      "function": "evening_transition",
+      "en": "As the sun sets, a polite, \"Good evening,\" replaces \"Good afternoon\" during a work event. Angela subtly shifts her tone: \"Good evening, Mr. Harris. It's nice to see you again.\"",
+      "es": "Al caer el sol, un educado \"Buenas noches\" sustituye a \"Buenas tardes\" en un evento de trabajo. Angela cambia sutilmente el tono: \"Buenas noches, Sr. Harris. Me alegra verlo de nuevo.\""
+    },
+    {
+      "number": 5,
+      "function": "introduction",
+      "en": "At a professional mixer, someone introduces themselves: \"Nice to meet you. I'm Darren.\" The response is direct: \"Nice to meet you, Darren. I'm Carla.\"",
+      "es": "En una reunión profesional, alguien se presenta: \"Encantado de conocerte. Soy Darren.\" La respuesta es directa: \"Igualmente, Darren. Soy Carla.\""
+    },
+    {
+      "number": 6,
+      "function": "old_friends",
+      "en": "\"Long time no see!\" bursts out when Pat recognizes an old classmate. Laughter breaks any initial awkwardness, and they settle into casual conversation.",
+      "es": "¡Cuánto tiempo sin verte! exclama Pat cuando reconoce a un antiguo compañero. Las risas disipan cualquier incomodidad inicial, y conversan informalmente."
+    },
+    {
+      "number": 7,
+      "function": "welcome_scene",
+      "en": "Hosting a team from abroad, the conference chair says warmly, \"Welcome to Chicago! If you need anything, just let us know.\" The guests nod appreciatively.",
+      "es": "Al recibir a un equipo del extranjero, el presidente de la conferencia dice cordialmente: \"¡Bienvenidos a Chicago! Si necesitan algo, solo avísennos.\" Los invitados asienten agradecidos."
+    },
+    {
+      "number": 8,
+      "function": "returning_coworker",
+      "en": "After a coworker's long leave, someone calls out, \"Good to see you back, Rahul!\" Rahul responds with a grin: \"It's great to be back with the team.\"",
+      "es": "Después de una larga ausencia de un colega, alguien exclama: \"¡Qué gusto verte de vuelta, Rahul!\" Rahul responde sonriendo: \"Es genial estar otra vez con el equipo.\""
+    },
+    {
+      "number": 9,
+      "function": "phone_greeting",
+      "en": "Answering the phone professionally, Leslie says, \"Hello, this is Leslie Carter speaking.\" The measured tone establishes context before the caller replies.",
+      "es": "Al contestar el teléfono de manera profesional, Leslie dice: «Hola, habla Leslie Carter». El tono mesurado establece el contexto antes de que responda quien llama."
+    },
+    {
+      "number": 10,
+      "function": "ambiguous_greeting",
+      "en": "Marie receives a text: \"Hey—what’s up?\" The phrase is intentionally open, so she gauges mood before replying, \"Not much, just catching up on some reading. You?\"",
+      "es": "Marie recibe un mensaje: \"Hey, ¿qué tal?\" La frase es intencionadamente abierta, así que mide el ánimo antes de responder: \"Nada especial, poniéndome al día con algunas lecturas. ¿Y tú?\""
+    },
+    {
+      "number": 11,
+      "function": "doctor_appointment",
+      "en": "Calling the doctor's office, Tom greets, \"Good afternoon. I'd like to make an appointment, please.\" The receptionist reciprocates, \"Of course. May I have your name?\"",
+      "es": "Al llamar a la consulta, Tom saluda: \"Buenas tardes. Quisiera pedir cita, por favor.\" La recepcionista responde: \"Por supuesto. ¿Su nombre?\""
+    },
+    {
+      "number": 12,
+      "function": "symptom_statement",
+      "en": "When asked about his reason, Tom says, \"I've been having headaches for a few days.\" The polite formality persists even when describing personal discomfort.",
+      "es": "Cuando le preguntan el motivo, Tom dice: \"He tenido dolor de cabeza varios días.\" La cortesía se mantiene incluso al hablar de molestias personales."
+    },
+    {
+      "number": 13,
+      "function": "transition_register",
+      "en": "Shifting between registers, Tasha leaves her friend's party with, \"Good night, everyone!\" To her closest friend at the door, she nods and adds quietly, \"Take care.\"",
+      "es": "Cambiando de registro, Tasha se despide en la fiesta de su amiga: \"¡Buenas noches a todos!\" A su amiga más cercana en la puerta le dice en voz baja: \"Cuídate.\""
+    },
+    {
+      "number": 14,
+      "function": "see_you",
+      "en": "\"See you later,\" can be practical or warm depending on tone. After a seminar, Marcus tells the group, \"See you later,\" then lingers, elaborates, \"Let's keep in touch about the project.\"",
+      "es": "\"Nos vemos luego\" puede ser práctico o cordial, según el tono. Tras un seminario, Marcus le dice al grupo: \"Nos vemos luego\" y añade: \"Sigamos en contacto por el proyecto.\""
+    },
+    {
+      "number": 15,
+      "function": "have_a_good_day",
+      "en": "Clara wraps up a polite exchange at the bakery with, \"Thanks for your help. Have a good day.\" The cashier replies with a genuine smile: \"You too!\"",
+      "es": "Clara termina un intercambio cortés en la panadería: \"Gracias por su ayuda. Que tenga buen día.\" El cajero sonríe de verdad: \"Igualmente!\""
+    },
+    {
+      "number": 16,
+      "function": "recalibrating_greeting",
+      "en": "When someone greets her with an unexpectedly casual, \"Hey,\" at a networking event, Ruth recalibrates, replying \"Hey! I wasn't expecting to see you here.\" The tone adapts to create connection.",
+      "es": "Cuando alguien la saluda con un inesperado \"Hey\" en un evento profesional, Ruth se adapta: \"¡Hey! No esperaba verte aquí.\" El tono se ajusta para generar cercanía."
+    },
+    {
+      "number": 17,
+      "function": "deferring_request",
+      "en": "In a busy office, James responds to \"How's it going?\" with, \"Pretty busy, to be honest. Can I get back to you in a bit?\"— calibrating honesty and efficiency.",
+      "es": "En una oficina atareada, James responde a \"¿Cómo va todo?\": \"Bastante ocupado, la verdad. ¿Puedo responderte en un rato?\" ajustando honestidad y eficiencia."
+    },
+    {
+      "number": 18,
+      "function": "repairing_faux_pas",
+      "en": "If a greeting feels off, it can be gently repaired. When Nadia offers \"Hi there\" in a sensitive setting, she quickly reformulates: \"Sorry, good afternoon—I should have greeted more formally.\"",
+      "es": "Si un saludo resulta inadecuado, se puede reparar con tacto. Cuando Nadia dice \"Hola\" en un entorno sensible, reformula: \"Perdón, buenas tardes; debí saludar de forma más formal.\""
+    },
+    {
+      "number": 19,
+      "function": "negotiating_agreement",
+      "en": "During a heated exchange, Liz pauses and adds, \"Good to see you, by the way.\" This brief repair can ease tension and reopen a more cooperative exchange.",
+      "es": "Durante una conversación acalorada, Liz hace una pausa y añade: «Por cierto, me alegra verte». Esta breve rectificación puede aliviar la tensión y permitir un intercambio más cooperativo."
+    },
+    {
+      "number": 20,
+      "function": "farewell_transition",
+      "en": "As meetings wrap up, Elena avoids abruptness, saying, \"It's been a pleasure. Take care.\" Her counterpart echoes warmly: \"You too. Have a great evening.\"",
+      "es": "Al terminar reuniones, Elena evita la brusquedad: \"Ha sido un placer. Cuídese.\" Su interlocutor responde cordialmente: \"Igualmente. Que tenga excelente noche.\""
+    }
+  ],
+  "grammar": [
+    {
+      "name": "Time-of-day greetings",
+      "example_en": "Walking into the office at eight, Olivia greets her colleagues with, \"Good morning, everyone.\" Daniel, already at his desk, raises his coffee: \"Morning, Olivia. Was the traffic bearable today?\"",
+      "explanation_es": "Good morning, good afternoon y good evening son saludos que se eligen según el momento del día.",
+      "source_paragraph": 1
+    },
+    {
+      "name": "Good night as a farewell",
+      "example_en": "Shifting between registers, Tasha leaves her friend's party with, \"Good night, everyone!\" To her closest friend at the door, she nods and adds quietly, \"Take care.\"",
+      "explanation_es": "Good night se usa al despedirse por la noche o antes de dormir, no como saludo habitual al llegar.",
+      "source_paragraph": 13
+    },
+    {
+      "name": "How questions with be",
+      "example_en": "\"How are you?\" can be perfunctory or sincere. When Sam is asked by his manager, he simply says, \"I'm good, thanks. And you?\" This balances brevity and politeness.",
+      "explanation_es": "En How are you, are va antes de you para formar la pregunta con how y be.",
+      "source_paragraph": 3
+    },
+    {
+      "name": "Informal fixed question",
+      "example_en": "Marie receives a text: \"Hey—what’s up?\" The phrase is intentionally open, so she gauges mood before replying, \"Not much, just catching up on some reading. You?\"",
+      "explanation_es": "What’s up? es una fórmula informal entre amigos o personas de confianza; una respuesta breve común es Not much.",
+      "source_paragraph": 10
+    },
+    {
+      "name": "To-infinitive in a fixed greeting",
+      "example_en": "At a professional mixer, someone introduces themselves: \"Nice to meet you. I'm Darren.\" The response is direct: \"Nice to meet you, Darren. I'm Carla.\"",
+      "explanation_es": "Nice to meet you contiene el infinitivo to meet y se usa normalmente al conocer a alguien por primera vez.",
+      "source_paragraph": 5
+    },
+    {
+      "name": "Polite imperative",
+      "example_en": "Shifting between registers, Tasha leaves her friend's party with, \"Good night, everyone!\" To her closest friend at the door, she nods and adds quietly, \"Take care.\"",
+      "explanation_es": "Take care usa un imperativo como despedida amistosa, con el sentido de «cuídate».",
+      "source_paragraph": 13
+    },
+    {
+      "name": "Fixed farewell with see",
+      "example_en": "\"See you later,\" can be practical or warm depending on tone. After a seminar, Marcus tells the group, \"See you later,\" then lingers, elaborates, \"Let's keep in touch about the project.\"",
+      "explanation_es": "See you later es una fórmula fija de despedida; no es necesario decir una oración completa como I’ll see you later.",
+      "source_paragraph": 14
+    },
+    {
+      "name": "Welcoming expressions",
+      "example_en": "Hosting a team from abroad, the conference chair says warmly, \"Welcome to Chicago! If you need anything, just let us know.\" The guests nod appreciatively.",
+      "explanation_es": "Welcome se utiliza para recibir a alguien. Según el contexto puede acompañarse de una invitación como Please come in.",
+      "source_paragraph": 7
+    }
+  ],
+  "essential_expressions": [
+    {
+      "expression_en": "\"Good morning, everyone.\"",
+      "meaning_es": "\"Buenos días a todos.\"",
+      "source_paragraph": 1
+    },
+    {
+      "expression_en": "\"Hey! How's it going?\"",
+      "meaning_es": "\"¡Hey! ¿Cómo va todo?\"",
+      "source_paragraph": 2
+    },
+    {
+      "expression_en": "\"I'm good, thanks. And you?\"",
+      "meaning_es": "\"Bien, gracias. ¿Y tú/usted?\"",
+      "source_paragraph": 3
+    },
+    {
+      "expression_en": "\"Nice to meet you. I'm Darren.\"",
+      "meaning_es": "\"Encantado de conocerte. Soy Darren.\"",
+      "source_paragraph": 5
+    },
+    {
+      "expression_en": "\"Long time no see!\"",
+      "meaning_es": "\"¡Cuánto tiempo sin verte!\"",
+      "source_paragraph": 6
+    },
+    {
+      "expression_en": "\"See you later,\"",
+      "meaning_es": "\"Nos vemos luego,\"",
+      "source_paragraph": 14
+    },
+    {
+      "expression_en": "Clara wraps up a polite exchange at the bakery with, \"Thanks for your help. Have a good day.\" The cashier replies with a genuine smile: \"You too!\"",
+      "meaning_es": "Clara termina un intercambio cortés en la panadería: \"Gracias por su ayuda. Que tenga buen día.\" El cajero sonríe de verdad: \"Igualmente!\"",
+      "source_paragraph": 15
+    },
+    {
+      "expression_en": "\"Take care.\"",
+      "meaning_es": "\"Cuídate.\"",
+      "source_paragraph": 13
+    }
+  ],
+  "reading_practice": {
+    "rounds": [
+      {
+        "number": 1,
+        "title_es": "Lectura comprensiva",
+        "instructions_es": "Lee cada párrafo en inglés, revisa la traducción, y repítelo en voz alta dos veces.",
+        "chunks": []
+      },
+      {
+        "number": 2,
+        "title_es": "Repetición por fragmentos",
+        "instructions_es": "Practica los fragmentos indicados por barras. Las barras marcan pausas de entrenamiento, no puntuación.",
+        "chunks": [
+          {
+            "source_paragraph": 4,
+            "segments": [
+              "As the sun sets, a polite, \"Good evening,\" replaces \"Good afternoon\" during a work event.",
+              "Angela subtly shifts her tone: \"Good evening, Mr. Harris. It's nice to see you again.\""
+            ]
+          },
+          {
+            "source_paragraph": 10,
+            "segments": [
+              "Marie receives a text: \"Hey—what’s up?\"",
+              "The phrase is intentionally open, so she gauges mood before replying, \"Not much, just catching up on some reading. You?\""
+            ]
+          },
+          {
+            "source_paragraph": 19,
+            "segments": [
+              "During a heated exchange, Liz pauses and adds, \"Good to see you, by the way.\" This brief repair can ease tension and reopen a more cooperative exchange."
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title_es": "Lectura completa",
+        "instructions_es": "Lee los veinte párrafos en voz alta sin detenerte en cada palabra. Priorizando claridad, ritmo y entonación.",
+        "chunks": []
+      }
+    ]
+  },
+  "lesson_card": {
+    "id": "SPK-C2-021",
+    "number": "021",
+    "title_en": "Greetings",
+    "title_es": "Saludos",
+    "level": "C2",
+    "language": "Inglés americano",
+    "category_es": "Comunicación diaria",
+    "main_topic_es": "Saludos efectivos y pragmáticos: registro, matiz, reformulación y contexto.",
+    "paragraph_count": 20,
+    "grammar_topics": [
+      "Time-of-day greetings",
+      "Good night as a farewell",
+      "How questions with be",
+      "Informal fixed question",
+      "To-infinitive in a fixed greeting",
+      "Polite imperative",
+      "Fixed farewell with see",
+      "Welcoming expressions"
+    ],
+    "essential_expressions_count": 8,
+    "activities_es": [
+      "Lectura comprensiva",
+      "Repetición por fragmentos",
+      "Lectura completa"
+    ],
+    "estimated_minutes": 45
+  }
+}

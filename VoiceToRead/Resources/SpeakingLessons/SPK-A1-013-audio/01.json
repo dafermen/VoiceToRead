@@ -1,0 +1,66 @@
+{
+  "text": "Last week, my friends and I talked about a celebration.",
+  "duration": 4.510000228881836,
+  "words": [
+    {
+      "location": 0,
+      "length": 4,
+      "start": 0.0,
+      "end": 1.0
+    },
+    {
+      "location": 5,
+      "length": 4,
+      "start": 1.0,
+      "end": 1.2999999523162842
+    },
+    {
+      "location": 11,
+      "length": 2,
+      "start": 1.5800000429153442,
+      "end": 1.7799999713897705
+    },
+    {
+      "location": 14,
+      "length": 7,
+      "start": 1.7799999713897705,
+      "end": 1.9600000381469727
+    },
+    {
+      "location": 22,
+      "length": 3,
+      "start": 1.9600000381469727,
+      "end": 2.180000066757202
+    },
+    {
+      "location": 26,
+      "length": 1,
+      "start": 2.180000066757202,
+      "end": 2.4600000381469727
+    },
+    {
+      "location": 28,
+      "length": 6,
+      "start": 2.4600000381469727,
+      "end": 2.7200000286102295
+    },
+    {
+      "location": 35,
+      "length": 5,
+      "start": 2.7200000286102295,
+      "end": 2.9800000190734863
+    },
+    {
+      "location": 41,
+      "length": 1,
+      "start": 2.9800000190734863,
+      "end": 3.240000009536743
+    },
+    {
+      "location": 43,
+      "length": 11,
+      "start": 3.240000009536743,
+      "end": 3.6600000858306885
+    }
+  ]
+}

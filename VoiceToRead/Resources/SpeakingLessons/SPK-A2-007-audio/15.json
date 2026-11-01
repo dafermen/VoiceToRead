@@ -1,0 +1,102 @@
+{
+  "text": "Carla remembered living in a very noisy building before. She said she never wanted that again.",
+  "duration": 7.75,
+  "words": [
+    {
+      "location": 0,
+      "length": 5,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 6,
+      "length": 10,
+      "start": 0.5,
+      "end": 1.2599999904632568
+    },
+    {
+      "location": 17,
+      "length": 6,
+      "start": 1.2599999904632568,
+      "end": 1.6200000047683716
+    },
+    {
+      "location": 24,
+      "length": 2,
+      "start": 1.6200000047683716,
+      "end": 1.8799999952316284
+    },
+    {
+      "location": 27,
+      "length": 1,
+      "start": 1.8799999952316284,
+      "end": 2.0399999618530273
+    },
+    {
+      "location": 29,
+      "length": 4,
+      "start": 2.0399999618530273,
+      "end": 2.5399999618530273
+    },
+    {
+      "location": 34,
+      "length": 5,
+      "start": 2.5399999618530273,
+      "end": 2.7799999713897705
+    },
+    {
+      "location": 40,
+      "length": 8,
+      "start": 2.7799999713897705,
+      "end": 3.180000066757202
+    },
+    {
+      "location": 49,
+      "length": 6,
+      "start": 3.180000066757202,
+      "end": 3.5999999046325684
+    },
+    {
+      "location": 57,
+      "length": 3,
+      "start": 4.5,
+      "end": 4.619999885559082
+    },
+    {
+      "location": 61,
+      "length": 4,
+      "start": 4.619999885559082,
+      "end": 5.019999980926514
+    },
+    {
+      "location": 66,
+      "length": 3,
+      "start": 5.019999980926514,
+      "end": 5.699999809265137
+    },
+    {
+      "location": 70,
+      "length": 5,
+      "start": 5.699999809265137,
+      "end": 6.159999847412109
+    },
+    {
+      "location": 76,
+      "length": 6,
+      "start": 6.159999847412109,
+      "end": 6.5
+    },
+    {
+      "location": 83,
+      "length": 4,
+      "start": 6.5,
+      "end": 6.860000133514404
+    },
+    {
+      "location": 88,
+      "length": 5,
+      "start": 6.860000133514404,
+      "end": 7.300000190734863
+    }
+  ]
+}

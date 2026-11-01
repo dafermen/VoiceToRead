@@ -1,0 +1,36 @@
+{
+  "text": "One picture is not ready.",
+  "duration": 2.880000114440918,
+  "words": [
+    {
+      "location": 0,
+      "length": 3,
+      "start": 0.0,
+      "end": 0.5
+    },
+    {
+      "location": 4,
+      "length": 7,
+      "start": 0.5,
+      "end": 1.059999942779541
+    },
+    {
+      "location": 12,
+      "length": 2,
+      "start": 1.059999942779541,
+      "end": 1.559999942779541
+    },
+    {
+      "location": 15,
+      "length": 3,
+      "start": 1.559999942779541,
+      "end": 1.840000033378601
+    },
+    {
+      "location": 19,
+      "length": 5,
+      "start": 1.840000033378601,
+      "end": 2.0799999237060547
+    }
+  ]
+}
