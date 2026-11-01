@@ -63,7 +63,8 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(conversation.exists)
         listening.tap()
         XCTAssertEqual(listening.label, "Exit full screen")
-        XCTAssertTrue(app.buttons["primaryCaptionAction"].isHittable)
+        XCTAssertFalse(app.buttons["primaryCaptionAction"].exists, "Fullscreen keeps only Exit unless capture is paused")
+        XCTAssertFalse(app.buttons["sessionActionsButton"].exists)
         listening.tap()
         XCTAssertTrue(mode.waitForExistence(timeout: 5))
         openCommunicationSaved(in: app)
@@ -2933,5 +2934,63 @@ extension HomeScreenTests {
         XCTAssertEqual(app.buttons["verbCompleted-be"].value as? String, "On", "Removing a favorite retains Done")
         app.buttons["verbCompleted-be"].tap()
         revealMarks("beat"); app.buttons["verbFavorite-beat"].tap()
+    }
+}
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testListenOriginalCardsAndMinimalPausedFullscreen() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "original"]
+        XCUIDevice.shared.orientation = .portrait
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Listen"].tap()
+        let primary = app.buttons["primaryCaptionAction"]
+        primary.tap()
+        let listening = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [listening], timeout: 10), .completed)
+        let card = app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "originalCaptionCard-")).firstMatch
+        XCTAssertTrue(card.waitForExistence(timeout: 15))
+        XCTAssertFalse(app.scrollViews["liveTranslationReader"].exists, "Original-only cards must not start a translation reader")
+        let expand = app.buttons["fullScreenButton"]
+        expand.tap()
+        XCTAssertFalse(primary.exists)
+        XCTAssertFalse(app.buttons["stopCaptionAction"].exists)
+        XCTAssertFalse(app.buttons["sessionActionsButton"].exists)
+        XCTAssertTrue(expand.isHittable)
+        expand.tap()
+        XCTAssertEqual(primary.label, "Pause", "Entering and leaving fullscreen preserves listening")
+        primary.tap()
+        let paused = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Resume'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [paused], timeout: 10), .completed)
+        XCTAssertFalse(app.descendants(matching: .any).matching(identifier: "pausedCaptureBanner").firstMatch.exists)
+        XCTAssertFalse(app.buttons["resumeCaptureButton"].exists, "The large duplicate resume panel is removed")
+        let before = primary.frame
+        let screenshot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        screenshot.name = "Listen-compact-pause-original-cards"; screenshot.lifetime = .keepAlways; add(screenshot)
+        XCTAssertEqual(primary.frame, before, "The emphasis must not change button geometry")
+        expand.tap()
+        XCTAssertEqual(primary.label, "Resume")
+        XCTAssertTrue(primary.isHittable)
+        XCTAssertFalse(app.buttons["stopCaptionAction"].exists)
+        XCTAssertFalse(app.buttons["sessionActionsButton"].exists)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            app.frame.width > app.frame.height && primary.isHittable && expand.isHittable
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
+        primary.tap()
+        let resumed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [resumed], timeout: 10), .completed)
+        XCTAssertTrue(expand.isHittable)
+        expand.tap()
+        XCTAssertEqual(primary.label, "Pause")
+        app.buttons["stopCaptionAction"].tap()
+        XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.buttons["discardSessionButton"].exists)
     }
 }

@@ -485,7 +485,7 @@ struct LiveSpanishView: View {
                 .accessibilityIdentifier("liveTranslationReader")
                 .accessibilityAction(named: "Read earlier captions") { follow = false }
                 .overlay(alignment: .bottomTrailing) {
-                    if !follow {
+                    if !follow && !compact {
                         ReturnToLiveButton { follow = true }
                             .accessibilityIdentifier("liveTranslationFollowButton").padding(12)
                     }
@@ -501,7 +501,7 @@ struct LiveSpanishView: View {
             }
             if let failure {
                 Text(LocalizedStringKey(failure)).font(.caption).padding(.horizontal)
-                Button("Retry translation") { self.failure = nil; schedule() }
+                if !compact { Button("Retry translation") { self.failure = nil; schedule() } }
             } else if !compact {
                 Text(uiKey(job == nil ? "After stopping, choose Save Session to keep the original. Live translation preview is not saved." : "Translating confirmed text…"))
                     .font(.caption).foregroundStyle(.secondary)

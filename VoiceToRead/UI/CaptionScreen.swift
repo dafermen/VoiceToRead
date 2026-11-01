@@ -64,9 +64,9 @@ struct CaptionScreen: View {
                     TranslationCompatibilityNotice(source: model.language, target: settings.translationLanguage, available: $translationAvailable)
                         .padding(.horizontal, 16)
                 }
-                if model.canResume { resumePanel }
-                else if needsPreparation { preparationPanel }
-                else if let message = statusMessage { captureNotice(message) }
+                if !communicationLayout && model.canResume { resumePanel }
+                else if !model.canResume && needsPreparation { preparationPanel }
+                else if let message = visibleCaptureMessage { captureNotice(message) }
                 Group {
                     if supportsLiveTranslation && liveDisplay != .original {
                         LiveSpanishView(paragraphs: model.transcript.finalized.suffix(40).map {
@@ -108,16 +108,17 @@ struct CaptionScreen: View {
                         if isFullScreen {
                             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 4)) : AnyLayout(HStackLayout(spacing: 8))) {
                                 if communicationLayout {
-                                    headerSessionAction
-                                    if model.state == .listening || model.canResume { primaryButton(iconOnly: true) }
+                                    if model.canResume { primaryButton(iconOnly: true) }
                                 } else {
                                     primaryButton(iconOnly: true)
                                     if model.state != .ended { stopButton(iconOnly: true) }
                                 }
                                 Spacer(minLength: 0)
-                                Menu { sessionActionButtons } label: {
-                                    Image(systemName: "ellipsis.circle").frame(minWidth: 44, minHeight: 44)
-                                }.accessibilityLabel("Session actions").accessibilityIdentifier("sessionActionsButton")
+                                if !communicationLayout {
+                                    Menu { sessionActionButtons } label: {
+                                        Image(systemName: "ellipsis.circle").frame(minWidth: 44, minHeight: 44)
+                                    }.accessibilityLabel("Session actions").accessibilityIdentifier("sessionActionsButton")
+                                }
                                 Button { isFullScreen = false } label: {
                                     Label("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left")
                                         .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
@@ -319,7 +320,7 @@ struct CaptionScreen: View {
             }
             .accessibilityLabel(interfaceMessage(message) + Text(". Show details"))
             .accessibilityIdentifier("captionStatusDetails")
-            if model.canResume {
+            if model.canResume && !communicationLayout {
                 Button { Task { await model.start() } } label: {
                     Label("Resume", systemImage: "play.fill").font(.subheadline).frame(minHeight: 44)
                 }
@@ -517,9 +518,14 @@ struct CaptionScreen: View {
     }
 
     private func captionRow(_ segment: CaptionSegment) -> some View {
-        ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
-            .accessibilityIdentifier("caption-" + segment.id.uuidString)
-            .frame(maxWidth: .infinity, alignment: .leading)
+        VStack(alignment: .leading, spacing: 8) {
+            if communicationLayout { Text("Original \(model.language.name)").font(.caption.weight(.semibold)) }
+            ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
+                .accessibilityIdentifier("caption-" + segment.id.uuidString)
+        }
+        .modifier(LiveLanguageCard(color: settings.color(for: model.language), highContrast: settings.highContrast, enabled: communicationLayout))
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityIdentifier("originalCaptionCard-" + segment.id.uuidString)
     }
 
     /// Home entry, beside the live language selector.
@@ -540,7 +546,7 @@ struct CaptionScreen: View {
                         .foregroundStyle(.secondary)
                         .accessibilityIdentifier("captionPlaceholder")
                 }
-                if firstVisibleIndex > 0 {
+                if firstVisibleIndex > 0 && !(communicationLayout && isFullScreen) {
                     Button("Load Earlier Captions") {
                         let index = max(0, firstVisibleIndex - 300)
                         pauseFollowing()
@@ -554,11 +560,13 @@ struct CaptionScreen: View {
                 // A single stable container avoids replacing the entire provisional view
                 // whenever the recognizer revises its audio range or identifier.
                 if !model.transcript.partial.isEmpty {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Live · may change").font(.caption)
+                    VStack(alignment: .leading, spacing: 8) {
+                        if communicationLayout { Text("Original \(model.language.name)").font(.caption.weight(.semibold)) }
+                        Text("Live · may change").font(.caption).foregroundStyle(.secondary)
                         ReaderParagraph(text: model.transcript.partial.map(\.text).joined(separator: "\n"), points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                             .accessibilityIdentifier("provisionalCaption")
                     }
+                    .modifier(LiveLanguageCard(color: settings.color(for: model.language), highContrast: settings.highContrast, enabled: communicationLayout))
                     .id("provisionalCaption")
                 }
                 Color.clear.frame(height: 1).id("liveBottom")
@@ -591,7 +599,7 @@ struct CaptionScreen: View {
         .accessibilityAction(named: Text("Decrease text size")) { settings.captionSize = CaptionTextSize.clamped(settings.captionSize - 2) }
         .accessibilityAction(named: "Read earlier captions") { pauseFollowing() }
         .overlay(alignment: .bottomTrailing) {
-            if !followLive && hasCaptions {
+            if !followLive && hasCaptions && !(communicationLayout && isFullScreen) {
                 ReturnToLiveButton { followLive = true }
                     .accessibilityIdentifier("backToLiveButton").padding(12)
             }
@@ -755,6 +763,7 @@ struct CaptionScreen: View {
             }
             .buttonStyle(HomeCaptureButtonStyle(active: communicationLayout && !isFullScreen,
                 color: settings.color(for: settings.captureLanguage), highContrast: settings.highContrast))
+            .modifier(ListeningResumeEmphasis(active: communicationLayout && model.canResume))
             .accessibilityLabel(LocalizedStringKey(primaryTitle))
             .accessibilityIdentifier("primaryCaptionAction")
             .keyboardShortcut("r", modifiers: .command)
@@ -829,6 +838,13 @@ struct CaptionScreen: View {
         }
     }
 
+    private var visibleCaptureMessage: String? {
+        // The compact status and existing Resume action already explain an intentional pause.
+        // Recorder/storage notices and interrupted-capture errors remain visible.
+        if communicationLayout && model.state == .paused { return model.notice }
+        return statusMessage
+    }
+
     private var statusMessage: String? {
         if case .problem(let message) = model.state {
             return model.canResume && needsSessionDecision ? "Capture interrupted · draft available" : message
@@ -875,7 +891,7 @@ struct CaptionScreen: View {
     private var primaryIcon: String {
         switch model.state {
         case .listening: return "pause.fill"
-        case .paused, .problem: return "play.fill"
+        case .paused, .problem: return communicationLayout ? "playpause.fill" : "play.fill"
         case .ended: return "plus"
         default: return "mic.fill"
         }
@@ -962,5 +978,33 @@ struct DoneToolbar: ToolbarContent {
     let action: () -> Void
     var body: some ToolbarContent {
         ToolbarItem(placement: .confirmationAction) { DoneButton(action: action) }
+    }
+}
+
+
+/// Presentation only: no scaling, layout animation or changes to capture state.
+private struct ListeningResumeEmphasis: ViewModifier {
+    let active: Bool
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content.overlay {
+            if active {
+                if reduceMotion {
+                    outline(opacity: 1)
+                } else {
+                    PhaseAnimator([false, true]) { bright in
+                        outline(opacity: bright ? 0.85 : 0.25)
+                    } animation: { _ in .easeInOut(duration: 1.4) }
+                }
+            }
+        }
+    }
+
+    private func outline(opacity: Double) -> some View {
+        RoundedRectangle(cornerRadius: 14, style: .continuous)
+            .strokeBorder(Color.accentColor.opacity(opacity), lineWidth: 3)
+            .padding(2)
+            .allowsHitTesting(false).accessibilityHidden(true)
     }
 }
