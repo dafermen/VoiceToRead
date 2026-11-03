@@ -24,6 +24,7 @@ struct CaptionScreen: View {
     @State private var readingStartID: UUID?
     @State private var isFullScreen = false
     @AppStorage("liveCaptionDisplay") private var liveDisplay: LiveCaptionDisplay = .original
+    @AppStorage("liveBilingualLayout") private var bilingualLayout: LiveBilingualLayout = .interleaved
     @State private var followLive = true
     @State private var confirmNewSession = false
     @State private var showingOptions = false
@@ -72,7 +73,7 @@ struct CaptionScreen: View {
                         LiveSpanishView(paragraphs: model.transcript.finalized.suffix(40).map {
                             ReviewParagraph(id: $0.id, text: $0.text)
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
-                           language: model.language, target: settings.translationLanguage, display: liveDisplay, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
+                           language: model.language, target: settings.translationLanguage, display: liveDisplay, layout: bilingualLayout, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
                            englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, compact: isFullScreen, emptyHint: model.state == .idle ? initialInstruction : nil)
                             .id(model.language.rawValue + settings.translationLanguage.rawValue)
@@ -786,6 +787,20 @@ struct CaptionScreen: View {
     private var readingOptions: some View {
         NavigationStack {
             Form {
+                if communicationLayout && supportsLiveTranslation {
+                    Section {
+                        Picker("Live caption display", selection: $liveDisplay) {
+                            Text("Original \(model.language.name)").tag(LiveCaptionDisplay.original)
+                            Text("Translation \(settings.translationLanguage.name)").tag(LiveCaptionDisplay.translation)
+                            Text("Both").tag(LiveCaptionDisplay.both)
+                        }.accessibilityIdentifier("liveReadingDisplayPicker")
+                        Picker("Presentation", selection: $bilingualLayout) {
+                            ForEach(LiveBilingualLayout.allCases) { Text(LocalizedStringKey($0.title)).tag($0) }
+                        }.disabled(liveDisplay != .both).accessibilityIdentifier("liveBilingualLayoutPicker")
+                    } header: { Text("Bilingual reading") } footer: {
+                        Text("Choose Both to place each original paragraph beside its translation. Both columns scroll together. Landscape gives the text more room on a phone.")
+                    }
+                }
                 HomeReadingMenu(settings: settings)
                 CaptureOptionsView(model: model, settings: settings)
                 Section {

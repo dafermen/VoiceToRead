@@ -423,6 +423,36 @@ private struct AppleTranslationRunner: View {
 #endif
 
 
+/// Stored display preference; capture and translation state are independent.
+enum LiveBilingualLayout: String, CaseIterable, Identifiable {
+    case interleaved, columns
+    var id: Self { self }
+    var title: String { self == .columns ? "Columns" : "Interleaved" }
+}
+
+/// One paired row, one scroll view. Both cards share a width and the taller card's height.
+/// Measuring without a height limit keeps long paragraphs and accessibility text complete.
+private struct LiveBilingualColumnsLayout: Layout {
+    var spacing: CGFloat = 12
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        guard subviews.count == 2 else { return .zero }
+        let width = max(0, proposal.width.flatMap { $0.isFinite ? $0 : nil }
+            ?? ((subviews.map { $0.sizeThatFits(.unspecified).width }.max() ?? 0) * 2 + spacing))
+        let column = max(0, (width - spacing) / 2)
+        let height = subviews.map { $0.sizeThatFits(ProposedViewSize(width: column, height: nil)).height }.max() ?? 0
+        return CGSize(width: width, height: height)
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let column = max(0, (bounds.width - spacing) / 2)
+        for (index, view) in subviews.enumerated() {
+            view.place(at: CGPoint(x: bounds.minX + CGFloat(index) * (column + spacing), y: bounds.minY),
+                       anchor: .topLeading, proposal: ProposedViewSize(width: column, height: bounds.height))
+        }
+    }
+}
+
 /// Panel experimental: captura y traducción tienen ciclos independientes. Un fallo de traducción
 /// se muestra aquí sin detener el micrófono. Se procesa como máximo un lote de cuatro párrafos.
 @MainActor
@@ -433,6 +463,7 @@ struct LiveSpanishView: View {
     var language: CaptureLanguage = .english
     var target: CaptureLanguage = .spanish
     var display: LiveCaptionDisplay = .translation
+    var layout: LiveBilingualLayout = .interleaved
     var provisionalText = ""
     var lineSpacing: Double = 4
     var bold = false
@@ -472,12 +503,16 @@ struct LiveSpanishView: View {
                             paragraphPair(paragraph).id(paragraph.id)
                         }
                         if display == .both && !provisionalText.isEmpty {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Original \(language.name)").font(.caption.weight(.semibold))
-                                Text("Live · may change").font(.caption).foregroundStyle(.secondary)
-                                readerText(provisionalText)
-                                    .accessibilityIdentifier("liveBilingualProvisional")
-                            }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
+                            if usesColumns {
+                                columns(original: provisionalText, translated: nil, provisional: true, id: "provisional")
+                            } else {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Original \(language.name)").font(.caption.weight(.semibold))
+                                    Text("Live · may change").font(.caption).foregroundStyle(.secondary)
+                                    readerText(provisionalText)
+                                        .accessibilityIdentifier("liveBilingualProvisional")
+                                }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
+                            }
                         }
                         Color.clear.frame(height: 1).id("translationBottom")
                     }.padding()
@@ -497,6 +532,7 @@ struct LiveSpanishView: View {
                 .onChange(of: paragraphs) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: provisionalText) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: display) { _, _ in scrollIfFollowing(proxy) }
+                .onChange(of: layout) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: follow) { _, _ in scrollIfFollowing(proxy) }
             }
             if let failure {
@@ -532,7 +568,47 @@ struct LiveSpanishView: View {
         .onDisappear { job = nil }
     }
     // El UUID enlaza ambos textos. Cambiar la presentación no reinicia la cola ni el micrófono.
-    private func paragraphPair(_ paragraph: ReviewParagraph) -> some View {
+    private var usesColumns: Bool { display == .both && layout == .columns }
+
+    @ViewBuilder private func paragraphPair(_ paragraph: ReviewParagraph) -> some View {
+        if usesColumns {
+            columns(original: paragraph.text, translated: buffer.translated[paragraph.id], provisional: false, id: paragraph.id.uuidString)
+        } else {
+            interleavedParagraphPair(paragraph)
+        }
+    }
+
+    private func columns(original: String, translated: String?, provisional: Bool, id: String) -> some View {
+        LiveBilingualColumnsLayout {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Original \(language.name)").font(.caption.weight(.semibold))
+                if provisional { Text("Live · may change").font(.caption).foregroundStyle(.secondary) }
+                readerText(original)
+                    .accessibilityIdentifier(provisional ? "liveBilingualProvisional" : "liveOriginal-" + id)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
+            .accessibilityIdentifier("liveOriginalCard-" + id)
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Translation \(target.name)").font(.caption.weight(.semibold))
+                if let translated {
+                    readerText(translated).accessibilityIdentifier("liveTranslated-" + id)
+                } else {
+                    Text("Waiting for translation…").font(.caption).foregroundStyle(.secondary)
+                        .accessibilityIdentifier("liveTranslationPending-" + id)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast))
+            .accessibilityIdentifier("liveTranslationCard-" + id)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("liveColumnPair-" + id)
+        .transaction { $0.animation = nil }
+    }
+
+    private func interleavedParagraphPair(_ paragraph: ReviewParagraph) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             if display == .both || buffer.translated[paragraph.id] == nil {
                 VStack(alignment: .leading, spacing: 8) {

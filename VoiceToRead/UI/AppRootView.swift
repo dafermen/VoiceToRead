@@ -277,6 +277,7 @@ struct AppRootView: View {
                 let settings = AppSettings(defaults: defaults)
                 if ProcessInfo.processInfo.arguments.contains("--ui-test-live-translation") {
                     UserDefaults.standard.removeObject(forKey: "liveCaptionDisplay")
+                    UserDefaults.standard.removeObject(forKey: "liveBilingualLayout")
                     if ProcessInfo.processInfo.arguments.contains("--ui-test-spanish") { settings.captureLanguage = .spanish }
                 }
                 settings.conversationHome = ProcessInfo.processInfo.arguments.contains("--ui-test-communication")

@@ -3040,3 +3040,68 @@ extension HomeScreenTests {
         XCTAssertEqual(app.staticTexts["conversationSourceText"].label, original)
     }
 }
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testLiveColumnsKeepParagraphsPairedAndRestoreInterleavedWithoutStoppingCapture() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "both"]
+        XCUIDevice.shared.orientation = .portrait
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Listen"].tap()
+        let primary = app.buttons["primaryCaptionAction"]
+        primary.tap()
+        let started = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [started], timeout: 10), .completed)
+        app.buttons["sessionActionsButton"].tap(); app.buttons["Reading options"].tap()
+        let layout = app.buttons["liveBilingualLayoutPicker"]
+        XCTAssertTrue(layout.waitForExistence(timeout: 5))
+        XCTAssertTrue(layout.label.contains("Interleaved"))
+        layout.tap(); app.buttons["Columns"].tap()
+        app.navigationBars["Reading options"].buttons["Done"].tap()
+        XCTAssertEqual(primary.label, "Pause", "Presentation changes must not stop capture")
+        primary.tap()
+        let paused = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Resume'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [paused], timeout: 10), .completed)
+        let translations = app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslated-"))
+        XCTAssertTrue(translations.firstMatch.waitForExistence(timeout: 10))
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            translations.allElementsBoundByIndex.contains { $0.isHittable }
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 10), .completed)
+        let visible = translations.allElementsBoundByIndex.last { $0.isHittable }
+        let translated = try XCTUnwrap(visible)
+        let id = translated.identifier.replacingOccurrences(of: "liveTranslated-", with: "")
+        let original = app.staticTexts["liveOriginal-" + id]
+        let originalText = original.label; let translatedText = translated.label
+        let left = app.descendants(matching: .any).matching(identifier: "liveOriginalCard-" + id).firstMatch
+        let right = app.descendants(matching: .any).matching(identifier: "liveTranslationCard-" + id).firstMatch
+        XCTAssertLessThan(left.frame.midX, right.frame.midX)
+        XCTAssertEqual(left.frame.minY, right.frame.minY, accuracy: 2)
+        XCTAssertEqual(left.frame.width, right.frame.width, accuracy: 2)
+        XCTAssertEqual(left.frame.height, right.frame.height, accuracy: 2)
+        app.buttons["fullScreenButton"].tap()
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in app.frame.width > app.frame.height }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
+        XCTAssertTrue(app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveColumnPair-")).firstMatch.exists)
+        XCTAssertEqual(primary.label, "Resume")
+        app.buttons["fullScreenButton"].tap()
+        XCUIDevice.shared.orientation = .portrait
+        app.buttons["sessionActionsButton"].tap(); app.buttons["Reading options"].tap()
+        XCTAssertTrue(layout.label.contains("Columns"), "The choice survives fullscreen and rotation")
+        layout.tap(); app.buttons["Interleaved"].tap()
+        app.navigationBars["Reading options"].buttons["Done"].tap()
+        XCTAssertEqual(primary.label, "Resume")
+        XCTAssertFalse(app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveColumnPair-")).firstMatch.exists)
+        XCTAssertEqual(app.staticTexts["liveOriginal-" + id].label, originalText)
+        XCTAssertEqual(app.staticTexts["liveTranslated-" + id].label, translatedText)
+        app.buttons["stopCaptionAction"].tap()
+        XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.buttons["discardSessionButton"].exists)
+    }
+}
