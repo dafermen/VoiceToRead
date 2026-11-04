@@ -41,6 +41,10 @@ struct CaptionScreen: View {
     }
 
     private var showControlNames: Bool { settings.showButtonNames }
+    private var floatingReaderControls: Bool { communicationLayout && isFullScreen }
+    // The scrollable tail clears the 48-point controls plus their inset; it is not a fixed bar.
+    private var floatingReaderBottomInset: CGFloat { floatingReaderControls ? 56 : 0 }
+
 
     private var readerLayout: some View {
         GeometryReader { geometry in
@@ -75,7 +79,9 @@ struct CaptionScreen: View {
                         }, fontSize: Double(scaledSize) * settings.captionSize / 28,
                            language: model.language, target: settings.translationLanguage, display: liveDisplay, layout: bilingualLayout, provisionalText: model.transcript.partial.map(\.text).joined(separator: "\n"),
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
-                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, compact: isFullScreen, emptyHint: model.state == .idle ? initialInstruction : nil)
+                           englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, compact: isFullScreen,
+                           tighterSpacing: floatingReaderControls && geometry.size.width > geometry.size.height,
+                           bottomContentInset: floatingReaderBottomInset, emptyHint: model.state == .idle ? initialInstruction : nil)
                             .id(model.language.rawValue + settings.translationLanguage.rawValue)
                     } else {
                         transcript.overlay(alignment: .topLeading) {
@@ -86,8 +92,8 @@ struct CaptionScreen: View {
                         }
                     }
                 }
-                    .frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize ? 320 : nil,
-                           maxHeight: dynamicTypeSize.isAccessibilitySize ? 400 : .infinity)
+                    .frame(maxWidth: .infinity, minHeight: dynamicTypeSize.isAccessibilitySize && !floatingReaderControls ? 320 : nil,
+                           maxHeight: dynamicTypeSize.isAccessibilitySize && !floatingReaderControls ? 400 : .infinity)
                     .background(ReaderSurface(settings: settings))
                     .environment(\.colorScheme, settings.readerPaper != .system && !settings.highContrast ? .light : colorScheme)
                 if communicationLayout && !isFullScreen && (!supportsLiveTranslation || liveDisplay == .original) {
@@ -103,7 +109,7 @@ struct CaptionScreen: View {
                 if model.canChooseCaptureOptions && !communicationLayout && !isFullScreen {
                     VStack(spacing: 0) { LanguagePairOptions(model: model, settings: settings, compact: true); quickPreferences }.padding(.horizontal, 16)
                 }
-                if (communicationLayout && (isFullScreen || model.state == .listening || model.canResume)) || (!communicationLayout && (isFullScreen || compact || model.state != .ended)) {
+                if (communicationLayout && !isFullScreen && (model.state == .listening || model.canResume)) || (!communicationLayout && (isFullScreen || compact || model.state != .ended)) {
                     Divider()
                     Group {
                         if isFullScreen {
@@ -138,8 +144,46 @@ struct CaptionScreen: View {
                     .background(.bar)
                 }
             }
+            // Bound the same reader tree at accessibility sizes; switching wrappers would
+            // discard the live translation buffer when fullscreen changes.
+            .frame(height: floatingReaderControls && dynamicTypeSize.isAccessibilitySize ? geometry.size.height : nil)
+            }
+            .overlay(alignment: .bottomTrailing) {
+                if floatingReaderControls {
+                    floatingControls.padding(.trailing, 12).padding(.bottom, 12)
+                }
             }
         }
+    }
+
+    private var floatingControls: some View {
+        HStack(spacing: 10) {
+            if model.canResume {
+                floatingControl("Resume", symbol: "playpause.fill", identifier: "primaryCaptionAction") {
+                    Task { await model.start() }
+                }
+                .modifier(ListeningResumeEmphasis(active: true, circular: true))
+                .keyboardShortcut("r", modifiers: .command)
+                .disabled(model.state.busy || model.preparationPending)
+            }
+            floatingControl("Exit full screen", symbol: "arrow.down.right.and.arrow.up.left", identifier: "fullScreenButton") {
+                isFullScreen = false
+            }
+        }.accessibilityIdentifier("listeningFloatingControls")
+    }
+
+    private func floatingControl(_ title: String, symbol: String, identifier: String,
+                                 action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Label(LocalizedStringKey(title), systemImage: symbol)
+                .labelStyle(.iconOnly).font(.system(size: 21, weight: .semibold))
+                .frame(width: 48, height: 48)
+                .foregroundStyle(Color.accentColor)
+                .background(.regularMaterial, in: Circle())
+                .overlay(Circle().strokeBorder(Color.primary.opacity(settings.highContrast ? 1 : 0.18), lineWidth: 1))
+                .shadow(color: .black.opacity(0.12), radius: 3, x: 0, y: 2)
+        }.buttonStyle(.plain)
+            .accessibilityLabel(LocalizedStringKey(title)).accessibilityIdentifier(identifier)
     }
 
     private var presentedReader: some View {
@@ -539,9 +583,9 @@ struct CaptionScreen: View {
         }
     }
 
-    private func captionContent(height: CGFloat) -> some View {
+    private func captionContent(height: CGFloat, tighterSpacing: Bool) -> some View {
         ScrollView {
-            LazyVStack(alignment: .leading, spacing: 20) {
+            LazyVStack(alignment: .leading, spacing: tighterSpacing ? 12 : 20) {
                 if !hasCaptions {
                     Text("Live \(model.language.name) captions will appear here.")
                         .foregroundStyle(.secondary)
@@ -570,26 +614,26 @@ struct CaptionScreen: View {
                     .modifier(LiveLanguageCard(color: settings.color(for: model.language), highContrast: settings.highContrast, enabled: communicationLayout))
                     .id("provisionalCaption")
                 }
-                Color.clear.frame(height: 1).id("liveBottom")
+                Color.clear.frame(height: 1 + floatingReaderBottomInset).id("liveBottom")
             }
             .font(captionFont)
             .lineSpacing(settings.lineSpacing)
             .frame(maxWidth: .infinity, minHeight: max(0, height - 32), alignment: .topLeading)
-            .padding(16)
+            .padding(.horizontal, 16).padding(.vertical, tighterSpacing ? 12 : 16)
             .transaction { $0.animation = nil }
         }
     }
 
-    private func styledCaptionContent(height: CGFloat) -> some View {
-        captionContent(height: height)
+    private func styledCaptionContent(height: CGFloat, tighterSpacing: Bool) -> some View {
+        captionContent(height: height, tighterSpacing: tighterSpacing)
         .defaultScrollAnchor(followLive ? .bottom : nil)
         .foregroundStyle(settings.highContrast ? (colorScheme == .dark ? Color.white : Color.black) : settings.readerPaper != .system ? Color.black : Color.primary)
         .accessibilityIdentifier("captionScrollView")
         .accessibilityValue(Text("\(model.transcript.finalized.count) finished paragraphs. ") + Text(uiKey(followLive ? "Following live captions" : "Reading earlier captions")))
     }
 
-    private func interactiveCaptionContent(height: CGFloat) -> some View {
-        styledCaptionContent(height: height)
+    private func interactiveCaptionContent(height: CGFloat, tighterSpacing: Bool) -> some View {
+        styledCaptionContent(height: height, tighterSpacing: tighterSpacing)
         .simultaneousGesture(DragGesture(minimumDistance: 10).onChanged { value in
             if hasCaptions && value.translation.height > 10 && value.translation.height > abs(value.translation.width) {
                 pauseFollowing()
@@ -610,7 +654,8 @@ struct CaptionScreen: View {
     private var transcript: some View {
         ScrollViewReader { proxy in
             GeometryReader { viewport in
-                interactiveCaptionContent(height: viewport.size.height)
+                interactiveCaptionContent(height: viewport.size.height,
+                    tighterSpacing: floatingReaderControls && viewport.size.width > viewport.size.height)
                 .onChange(of: model.transcript.finalized) { _, _ in scrollToLive(proxy) }
                 .onChange(of: model.transcript.partial) { _, _ in scrollToLive(proxy) }
                 .onChange(of: followLive) { _, enabled in if enabled { scrollToLive(proxy) } }
@@ -1000,6 +1045,7 @@ struct DoneToolbar: ToolbarContent {
 /// Presentation only: no scaling, layout animation or changes to capture state.
 private struct ListeningResumeEmphasis: ViewModifier {
     let active: Bool
+    var circular = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     func body(content: Content) -> some View {
@@ -1017,9 +1063,13 @@ private struct ListeningResumeEmphasis: ViewModifier {
     }
 
     private func outline(opacity: Double) -> some View {
-        RoundedRectangle(cornerRadius: 14, style: .continuous)
-            .strokeBorder(Color.accentColor.opacity(opacity), lineWidth: 3)
-            .padding(2)
-            .allowsHitTesting(false).accessibilityHidden(true)
+        Group {
+            if circular {
+                Circle().strokeBorder(Color.accentColor.opacity(opacity), lineWidth: 3)
+            } else {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .strokeBorder(Color.accentColor.opacity(opacity), lineWidth: 3)
+            }
+        }.padding(2).allowsHitTesting(false).accessibilityHidden(true)
     }
 }

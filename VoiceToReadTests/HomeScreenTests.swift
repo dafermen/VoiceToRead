@@ -2967,6 +2967,11 @@ extension HomeScreenTests {
         XCTAssertFalse(app.buttons["stopCaptionAction"].exists)
         XCTAssertFalse(app.buttons["sessionActionsButton"].exists)
         XCTAssertTrue(expand.isHittable)
+        let viewport = app.scrollViews["captionScrollView"]
+        XCTAssertTrue(app.descendants(matching: .any).matching(identifier: "listeningFloatingControls").firstMatch.exists)
+        XCTAssertTrue(viewport.frame.contains(expand.frame), "Exit overlays the reader instead of occupying a footer")
+        XCTAssertEqual(expand.frame.width, 48, accuracy: 1)
+        XCTAssertEqual(expand.frame.height, 48, accuracy: 1)
         expand.tap()
         XCTAssertEqual(primary.label, "Pause", "Entering and leaving fullscreen preserves listening")
         primary.tap()
@@ -2988,6 +2993,13 @@ extension HomeScreenTests {
             app.frame.width > app.frame.height && primary.isHittable && expand.isHittable
         }, object: nil)
         XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
+        XCTAssertTrue(viewport.frame.contains(expand.frame))
+        XCTAssertTrue(viewport.frame.contains(primary.frame))
+        XCTAssertEqual(primary.frame.width, 48, accuracy: 1)
+        XCTAssertEqual(primary.frame.height, 48, accuracy: 1)
+        XCTAssertLessThan(primary.frame.maxX, expand.frame.minX)
+        let fullShot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        fullShot.name = "Listen-landscape-floating-resume-and-exit"; fullShot.lifetime = .keepAlways; add(fullShot)
         primary.tap()
         let resumed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: primary)
         XCTAssertEqual(XCTWaiter.wait(for: [resumed], timeout: 10), .completed)
@@ -3090,6 +3102,9 @@ extension HomeScreenTests {
         XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
         XCTAssertTrue(app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveColumnPair-")).firstMatch.exists)
         XCTAssertEqual(primary.label, "Resume")
+        let translatedViewport = app.scrollViews["liveTranslationReader"]
+        XCTAssertTrue(translatedViewport.frame.contains(app.buttons["fullScreenButton"].frame))
+        XCTAssertTrue(translatedViewport.frame.contains(primary.frame))
         app.buttons["fullScreenButton"].tap()
         XCUIDevice.shared.orientation = .portrait
         app.buttons["sessionActionsButton"].tap(); app.buttons["Reading options"].tap()
@@ -3176,5 +3191,28 @@ extension HomeScreenTests {
         XCTAssertEqual(primary.label, "Resume")
         let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         shot.name = "Listen-translation-only-paragraph-cards"; shot.lifetime = .keepAlways; add(shot)
+    }
+}
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testListenFullscreenKeepsReaderViewportAtAccessibilityTextSize() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "original", "-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20)); mode.buttons["Listen"].tap()
+        let expand = app.buttons["fullScreenButton"]
+        XCTAssertTrue(expand.waitForExistence(timeout: 5)); expand.tap()
+        let reader = app.scrollViews["captionScrollView"]
+        XCTAssertTrue(reader.waitForExistence(timeout: 5))
+        XCTAssertGreaterThan(reader.frame.height, app.frame.height * 0.5, "The inner reader must not collapse inside the accessibility wrapper")
+        XCTAssertTrue(reader.frame.contains(expand.frame))
+        XCTAssertTrue(expand.isHittable)
+        XCTAssertEqual(expand.frame.width, 48, accuracy: 1)
+        expand.tap()
+        XCTAssertTrue(app.buttons["listeningSavedSessions"].waitForExistence(timeout: 5))
     }
 }

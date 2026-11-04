@@ -477,6 +477,8 @@ struct LiveSpanishView: View {
     var japaneseColor: LanguageColor = .purple
     var chineseColor: LanguageColor = .orange
     var compact = false
+    var tighterSpacing = false
+    var bottomContentInset: CGFloat = 0
     var emptyHint: LocalizedStringKey? = "Tap Start Recording to begin."
     private func color(for language: CaptureLanguage) -> LanguageColor {
         switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
@@ -496,7 +498,7 @@ struct LiveSpanishView: View {
             }
             ScrollViewReader { proxy in
                 ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 12) {
+                    LazyVStack(alignment: .leading, spacing: tighterSpacing ? 8 : 12) {
                         if buffer.source.isEmpty && provisionalText.isEmpty, let emptyHint {
                             CommunicationEmptyHint(title: emptyHint)
                         }
@@ -515,8 +517,8 @@ struct LiveSpanishView: View {
                                 }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
                             }
                         }
-                        Color.clear.frame(height: 1).id("translationBottom")
-                    }.padding()
+                        Color.clear.frame(height: 1 + bottomContentInset).id("translationBottom")
+                    }.padding(.horizontal, 16).padding(.vertical, tighterSpacing ? 12 : 16)
                 }
                 .accessibilityIdentifier("liveTranslationReader")
                 .accessibilityAction(named: "Read earlier captions") { follow = false }
@@ -534,6 +536,8 @@ struct LiveSpanishView: View {
                 .onChange(of: provisionalText) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: display) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: layout) { _, _ in scrollIfFollowing(proxy) }
+                .onChange(of: bottomContentInset) { _, _ in scrollIfFollowing(proxy) }
+                .onChange(of: tighterSpacing) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: follow) { _, _ in scrollIfFollowing(proxy) }
             }
             if let failure {
