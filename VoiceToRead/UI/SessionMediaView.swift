@@ -167,6 +167,12 @@ final class SessionPlayer {
         // Scrubbing to the end leaves playback paused rather than unexpectedly restarting.
         if resume && time < bounds.upperBound { toggle() }
     }
+    /// Recording seconds, independent of playback speed. Seek preserves playing/paused state.
+    func rewind(seconds: Double = 10) {
+        guard file != nil, duration > 0, seconds.isFinite, seconds > 0 else { return }
+        updateTime()
+        seek(time - seconds)
+    }
     func interrupt() {
         guard playing else { return }
         pause(); interrupted = true; onInterrupted?()
@@ -258,6 +264,9 @@ struct SessionMediaView: View {
             reviewed.filter { paragraph in playbackParagraphs.contains { $0.id == paragraph.id } }
     }
     private var isPlaying: Bool { usesSequence ? sequence.state == .playing : listening == .original ? player.playing : speech.state == .speaking }
+    private var canRewindRecording: Bool {
+        !atMyPace && !usesSequence && listening == .original && audioURL != nil && player.duration > 0
+    }
     private var finished: Bool { usesSequence ? sequence.state == .completed : listening == .original ? player.duration > 0 && player.time >= player.bounds.upperBound : speech.completedParagraphID != nil }
     private var primaryLabel: String {
         if isPlaying { return "Pause" }
@@ -435,7 +444,8 @@ struct SessionMediaView: View {
             PlaybackTransport(playing: isPlaying, title: primaryLabel,
                 previousEnabled: neighbor(-1) != nil, nextEnabled: neighbor(1) != nil,
                 enabled: !audibleParagraphs.isEmpty,
-                previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) })
+                previous: { moveParagraph(-1) }, toggle: { togglePlayback() }, next: { moveParagraph(1) },
+                rewind: canRewindRecording ? { rewindRecording() } : nil, rewindEnabled: player.time > player.bounds.lowerBound)
             (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout())) {
                 Spacer()
                 Button { showingPhrases = true } label: {
@@ -539,7 +549,7 @@ struct SessionMediaView: View {
                 Slider(value: Binding(get: { player.time }, set: { player.seek($0) }), in: player.bounds)
                     .accessibilityLabel("Playback position")
                 HStack {
-                    Text(SessionClock.format(player.time - player.bounds.lowerBound))
+                    Text(SessionClock.format(player.time - player.bounds.lowerBound)).accessibilityIdentifier("recordingElapsedTime")
                     Spacer()
                     Text(SessionClock.format(player.bounds.upperBound - player.bounds.lowerBound))
                 }.font(.caption).monospacedDigit()
@@ -668,6 +678,12 @@ struct SessionMediaView: View {
             player.select(range: atMyPace ? paragraph.start...paragraph.end : nil)
             player.seek(paragraph.start)
         }
+    }
+    private func rewindRecording() {
+        guard canRewindRecording else { return }
+        followingSpeech = true
+        player.rewind()
+        originalStarted = true
     }
     private func pausePlayback() {
         sequence.pause(); player.pause()
@@ -821,12 +837,19 @@ struct PlaybackTransport: View {
     let previous: () -> Void
     let toggle: () -> Void
     let next: () -> Void
+    var rewind: (() -> Void)? = nil
+    var rewindEnabled = true
     var body: some View {
         (dynamicTypeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 16)) : AnyLayout(HStackLayout(alignment: .top, spacing: 12))) {
             Button(action: previous) { transportLabel("Previous", symbol: "backward.end.fill") }
                 .accessibilityLabel("Previous paragraph")
                 .keyboardShortcut(.leftArrow, modifiers: .command)
                 .disabled(!previousEnabled).accessibilityIdentifier("previousParagraphButton")
+            if let rewind {
+                Button(action: rewind) { transportLabel("Back 10 seconds", symbol: "gobackward.10") }
+                    .accessibilityLabel("Back 10 seconds")
+                    .disabled(!enabled || !rewindEnabled).accessibilityIdentifier("rewindRecordingButton")
+            }
             Button(action: toggle) { transportLabel(title, symbol: playing ? "pause.fill" : "play.fill", prominent: true) }
                 .accessibilityLabel(LocalizedStringKey(title))
                 .disabled(!enabled).accessibilityIdentifier("recordingPlayButton")

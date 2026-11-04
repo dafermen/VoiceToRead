@@ -615,7 +615,7 @@ struct LiveSpanishView: View {
                     Text("Original \(language.name)").font(.caption.weight(.semibold))
                     readerText(paragraph.text)
                         .accessibilityIdentifier("liveOriginal-" + paragraph.id.uuidString)
-                }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast, enabled: display == .both))
+                }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
             }
             if let translated = buffer.translated[paragraph.id] {
                 VStack(alignment: .leading, spacing: 8) {
@@ -624,14 +624,15 @@ struct LiveSpanishView: View {
                     }
                     readerText(translated)
                         .accessibilityIdentifier("liveTranslated-" + paragraph.id.uuidString)
-                }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast, enabled: display == .both))
+                }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast))
+                    .accessibilityIdentifier("liveTranslationCard-" + paragraph.id.uuidString)
             } else {
                 VStack(alignment: .leading, spacing: 8) {
                     if display == .both {
                         Text("Translation \(target.name)").font(.caption.weight(.semibold))
                     }
                     Text("Waiting for translation…").font(.caption).foregroundStyle(.secondary)
-                }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast, enabled: display == .both))
+                }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast))
             }
         }.frame(maxWidth: .infinity, alignment: .leading)
             .accessibilityElement(children: .contain)

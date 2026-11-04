@@ -192,3 +192,37 @@ final class SessionMediaTests: XCTestCase {
         XCTAssertNil(try repository.media(for: id))
     }
 }
+
+
+extension SessionMediaTests {
+    func testRecordingRewindClampsToStartAndPreservesPlayingOrPausedState() throws {
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".caf")
+        defer { try? FileManager.default.removeItem(at: url) }
+        let format = try XCTUnwrap(AVAudioFormat(standardFormatWithSampleRate: 16000, channels: 1))
+        let buffer = try XCTUnwrap(AVAudioPCMBuffer(pcmFormat: format, frameCapacity: 480000))
+        buffer.frameLength = 480000
+        buffer.floatChannelData?[0].initialize(repeating: 0, count: 480000)
+        try autoreleasepool { try AVAudioFile(forWriting: url, settings: format.settings).write(from: buffer) }
+        let player = SessionPlayer(); player.load(url)
+        defer { player.stop() }
+        player.seek(25)
+        player.rewind()
+        XCTAssertEqual(player.time, 15, accuracy: 0.01)
+        XCTAssertFalse(player.playing)
+        player.rewind(); XCTAssertEqual(player.time, 5, accuracy: 0.01)
+        player.rewind(); XCTAssertEqual(player.time, 0, accuracy: 0.01)
+        player.rewind(); XCTAssertEqual(player.time, 0, accuracy: 0.01)
+        player.seek(25); player.speed = .fast; player.toggle()
+        XCTAssertTrue(player.playing)
+        player.rewind()
+        XCTAssertTrue(player.playing, "Rewinding while listening must continue playback")
+        XCTAssertEqual(player.time, 15, accuracy: 0.2)
+        player.pause(); let paused = player.time
+        player.rewind(seconds: .nan); player.rewind(seconds: .infinity); player.rewind(seconds: -10)
+        XCTAssertEqual(player.time, paused)
+        XCTAssertFalse(player.playing)
+        player.select(range: 5...18); player.seek(15); player.rewind()
+        XCTAssertEqual(player.time, 5, accuracy: 0.01)
+        player.stop(); player.rewind(); XCTAssertEqual(player.time, 0)
+    }
+}

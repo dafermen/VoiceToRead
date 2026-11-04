@@ -3105,3 +3105,64 @@ extension HomeScreenTests {
         XCTAssertTrue(app.buttons["discardSessionButton"].exists)
     }
 }
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testContinuousRecordingRewindsTenSecondsAcrossParagraphsWithoutStartingPausedAudio() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-media", "--ui-test-translation", "--ui-test-labels"]
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Sessions"].waitForExistence(timeout: 20))
+        app.tabBars.buttons["Sessions"].tap(); app.staticTexts["Review sample"].tap()
+        app.buttons["sessionMediaButton"].tap()
+        let rewind = app.buttons["rewindRecordingButton"]
+        XCTAssertTrue(rewind.waitForExistence(timeout: 8))
+        let play = app.buttons["recordingPlayButton"]
+        let slider = app.sliders["Playback position"]
+        slider.adjust(toNormalizedSliderPosition: 0.6)
+        func seconds() -> Int {
+            app.staticTexts["recordingElapsedTime"].label.split(separator: ":").reduce(0) { $0 * 60 + (Int($1) ?? 0) }
+        }
+        let before = seconds()
+        let beforeParagraph = app.staticTexts["playbackParagraphPosition"].label
+        rewind.tap()
+        XCTAssertEqual(Double(seconds()), Double(max(0, before - 10)), accuracy: 1)
+        XCTAssertEqual(play.label, "Resume", "Seeking paused audio must stay silent")
+        XCTAssertNotEqual(app.staticTexts["playbackParagraphPosition"].label, beforeParagraph)
+        play.tap(); XCTAssertEqual(play.label, "Pause")
+        let playingTime = seconds(); rewind.tap()
+        XCTAssertEqual(play.label, "Pause")
+        XCTAssertEqual(Double(seconds()), Double(max(0, playingTime - 10)), accuracy: 1)
+        play.tap()
+        slider.adjust(toNormalizedSliderPosition: 0.02)
+        rewind.tap(); XCTAssertEqual(seconds(), 0); XCTAssertFalse(rewind.isEnabled)
+        app.segmentedControls["playbackModePicker"].buttons["At my pace"].tap()
+        XCTAssertFalse(rewind.exists)
+        app.segmentedControls["playbackModePicker"].buttons["Continuous"].tap()
+        XCTAssertTrue(rewind.exists)
+        app.buttons["playbackTextMenu"].tap(); app.buttons["Translation"].tap()
+        XCTAssertFalse(rewind.exists, "Generated voice must not claim a recording timestamp")
+    }
+
+    @MainActor
+    func testLiveTranslationOnlyUsesSeparateParagraphCards() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "translation"]
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20)); mode.buttons["Listen"].tap()
+        let primary = app.buttons["primaryCaptionAction"]; primary.tap()
+        let started = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [started], timeout: 10), .completed)
+        primary.tap()
+        let translated = app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslated-"))
+        XCTAssertTrue(translated.firstMatch.waitForExistence(timeout: 10))
+        let id = translated.firstMatch.identifier.replacingOccurrences(of: "liveTranslated-", with: "")
+        XCTAssertTrue(app.descendants(matching: .any).matching(identifier: "liveTranslationCard-" + id).firstMatch.exists)
+        XCTAssertFalse(app.staticTexts["liveOriginal-" + id].exists)
+        XCTAssertEqual(primary.label, "Resume")
+        let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        shot.name = "Listen-translation-only-paragraph-cards"; shot.lifetime = .keepAlways; add(shot)
+    }
+}
