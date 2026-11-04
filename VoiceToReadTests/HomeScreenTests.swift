@@ -3148,7 +3148,7 @@ extension HomeScreenTests {
     @MainActor
     func testLiveTranslationOnlyUsesSeparateParagraphCards() throws {
         let app = XCUIApplication()
-        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "translation"]
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-slow-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "translation"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20)); mode.buttons["Listen"].tap()
@@ -3156,6 +3156,18 @@ extension HomeScreenTests {
         let started = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
         XCTAssertEqual(XCTWaiter.wait(for: [started], timeout: 10), .completed)
         primary.tap()
+        let pendingCards = app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslationPending-"))
+        XCTAssertTrue(pendingCards.firstMatch.waitForExistence(timeout: 10), "The delayed fixture must exercise the pending card")
+        let pending = try XCTUnwrap(pendingCards.allElementsBoundByIndex.last { $0.isHittable })
+        let pendingID = pending.identifier.replacingOccurrences(of: "liveTranslationPending-", with: "")
+        let card = app.descendants(matching: .any).matching(identifier: "liveTranslationCard-" + pendingID).firstMatch
+        XCTAssertTrue(card.exists)
+        XCTAssertEqual(app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveOriginal-")).count, 0,
+                       "Translation-only must never insert blue original cards while waiting")
+        let result = app.staticTexts["liveTranslated-" + pendingID]
+        XCTAssertTrue(result.waitForExistence(timeout: 15))
+        XCTAssertTrue(card.exists, "The same destination card remains after translation arrives")
+        XCTAssertFalse(app.staticTexts["liveTranslationPending-" + pendingID].exists)
         let translated = app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslated-"))
         XCTAssertTrue(translated.firstMatch.waitForExistence(timeout: 10))
         let id = translated.firstMatch.identifier.replacingOccurrences(of: "liveTranslated-", with: "")

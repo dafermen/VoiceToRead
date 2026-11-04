@@ -8,7 +8,7 @@ The button is not shown in At my pace or generated-speech/bilingual-sequence mod
 
 ## Listen: translation-only cards
 
-Translation-only live paragraphs, including pending translations, now use the same LiveLanguageCard modifier as bilingual paragraphs. The configured destination color, contrast, text size and spacing are preserved. Existing original-text fallback while a translation is pending is unchanged. Interleaved and column pairing, UUID matching, translation scheduling, capture and persistence remain intact.
+Translation-only live paragraphs, including pending translations, now use the same LiveLanguageCard modifier as bilingual paragraphs. The configured destination color, contrast, text size and spacing are preserved. Translation-only keeps one destination-language card while waiting, then fills it with the translated text. It does not briefly insert an original-language card; this also prevents the blue-card flash seen before this correction. Interleaved and column pairing, UUID matching, translation scheduling, capture and persistence remain intact.
 
 ## Verification
 

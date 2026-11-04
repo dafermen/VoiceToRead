@@ -365,7 +365,8 @@ struct TranslationRunner: View {
         if ProcessInfo.processInfo.arguments.contains("--ui-test-live-translation") {
             Color.clear.task {
                 do {
-                    try await Task.sleep(for: .milliseconds(400))
+                    let delay = ProcessInfo.processInfo.arguments.contains("--ui-test-slow-live-translation") ? 3000 : 400
+                    try await Task.sleep(for: .milliseconds(delay))
                     finish(.success(job.source.map { ReviewParagraph(id: $0.id,
                         text: job.plan.target == .spanish ? "Traducción de prueba. Leemos los dos idiomas juntos." : job.plan.target == .english ? "Test translation. We read both languages together." : job.plan.target.greeting) }))
                 } catch { finish(.failure(error)) }
@@ -610,30 +611,28 @@ struct LiveSpanishView: View {
 
     private func interleavedParagraphPair(_ paragraph: ReviewParagraph) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            if display == .both || buffer.translated[paragraph.id] == nil {
+            if display == .both {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Original \(language.name)").font(.caption.weight(.semibold))
                     readerText(paragraph.text)
                         .accessibilityIdentifier("liveOriginal-" + paragraph.id.uuidString)
                 }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
             }
-            if let translated = buffer.translated[paragraph.id] {
-                VStack(alignment: .leading, spacing: 8) {
-                    if display == .both {
-                        Text("Translation \(target.name)").font(.caption.weight(.semibold))
-                    }
+            // Keep the destination card stable while its text arrives. Translation-only
+            // never inserts an original-language fallback that would immediately disappear.
+            VStack(alignment: .leading, spacing: 8) {
+                if display == .both {
+                    Text("Translation \(target.name)").font(.caption.weight(.semibold))
+                }
+                if let translated = buffer.translated[paragraph.id] {
                     readerText(translated)
                         .accessibilityIdentifier("liveTranslated-" + paragraph.id.uuidString)
-                }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast))
-                    .accessibilityIdentifier("liveTranslationCard-" + paragraph.id.uuidString)
-            } else {
-                VStack(alignment: .leading, spacing: 8) {
-                    if display == .both {
-                        Text("Translation \(target.name)").font(.caption.weight(.semibold))
-                    }
+                } else {
                     Text("Waiting for translation…").font(.caption).foregroundStyle(.secondary)
-                }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast))
-            }
+                        .accessibilityIdentifier("liveTranslationPending-" + paragraph.id.uuidString)
+                }
+            }.modifier(LiveLanguageCard(color: color(for: target), highContrast: highContrast))
+                .accessibilityIdentifier("liveTranslationCard-" + paragraph.id.uuidString)
         }.frame(maxWidth: .infinity, alignment: .leading)
             .accessibilityElement(children: .contain)
     }
