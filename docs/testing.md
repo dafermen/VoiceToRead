@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Estandarización visual — 2026-11-05
+
+Ver [alcance, verificaciones ejecutadas y matriz de aceptación pendiente](interface-standardization.md). Se ampliaron regresiones nativas de transporte y etiquetas; ejecución de XCTest pendiente en Mac. Las comprobaciones de recursos y fuente no son pruebas de ejecución iOS.
+
 ## Build 22: reducción de ruido
 
 - Persistencia opt-in independiente de audio/idioma; cambiar la opción no inicia captura.

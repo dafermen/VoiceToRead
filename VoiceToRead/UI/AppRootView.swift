@@ -129,10 +129,7 @@ struct AppRootView: View {
             Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") {
                 control.selection.wrappedValue = true
             }
-            .labelStyle(.iconOnly).font(.title3)
-            .frame(width: 44, height: 44)
-            .background(.regularMaterial, in: Circle())
-            .contentShape(Circle())
+            .buttonStyle(AppFloatingControlStyle())
             .accessibilityIdentifier(control.identifier)
         }
     }

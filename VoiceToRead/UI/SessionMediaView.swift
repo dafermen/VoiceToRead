@@ -863,12 +863,8 @@ struct PlaybackTransport: View {
 
     /// The colored circle contains only the symbol; visible names have their own space below it.
     @MainActor private func transportLabel(_ title: String, symbol: String, prominent: Bool = false) -> some View {
-        VStack(spacing: 6) {
-            Image(systemName: symbol).font(.title2)
-                .frame(width: 56, height: 56)
-                .foregroundStyle(prominent ? Color.white : Color.accentColor)
-                .background(prominent ? Color.accentColor : Color.clear, in: Circle())
-                .accessibilityHidden(true)
+        VStack(spacing: AppInterface.controlSpacing) {
+            AppControlSymbol(symbol: symbol, surface: prominent ? .prominent : .neutral)
             if settings.showButtonNames {
                 Text(LocalizedStringKey(title)).font(.caption).accessibilityIdentifier("visibleControlName")
                     .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
@@ -911,8 +907,8 @@ struct PlaybackTextCard: View {
                 }
                 if let playback {
                     Button(action: playback) {
-                        Image(systemName: speaking ? "stop.fill" : "play.fill")
-                            .frame(minWidth: 44, minHeight: 44).contentShape(Rectangle())
+                        AppControlSymbol(symbol: speaking ? "stop.fill" : "play.fill")
+                            .contentShape(Circle())
                     }.buttonStyle(.plain).foregroundStyle(Color.accentColor)
                         .disabled(!playbackEnabled)
                         .accessibilityLabel(uiKey(speaking
@@ -928,7 +924,7 @@ struct PlaybackTextCard: View {
                 .textSelection(.enabled).accessibilityIdentifier(identifier)
         }.environment(\.colorScheme, settings.colorScheme ?? cardScheme)
          .modifier(LiveLanguageCard(color: settings.color(for: language), highContrast: settings.highContrast))
-         .overlay(RoundedRectangle(cornerRadius: 12).stroke(speaking ? (settings.highContrast || cardContrast == .increased ? Color.primary : settings.color(for: language).accent) : .clear, lineWidth: 3))
+         .overlay(RoundedRectangle(cornerRadius: AppInterface.cornerRadius).stroke(speaking ? (settings.highContrast || cardContrast == .increased ? Color.primary : settings.color(for: language).accent) : .clear, lineWidth: 3))
     }
 }
 
@@ -937,7 +933,7 @@ struct PlaybackLaunchStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label.font(.subheadline).frame(maxWidth: .infinity, minHeight: 48)
             .padding(.horizontal, 6).background(Color.accentColor.opacity(configuration.isPressed ? 0.2 : 0.08),
-                                            in: RoundedRectangle(cornerRadius: 10))
+                                            in: RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
     }
 }
 

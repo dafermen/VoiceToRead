@@ -272,6 +272,70 @@ struct ReaderPaperOptions: View {
     }
 }
 
+
+/// Presentation tokens only. Actions, enabled rules, navigation and storage stay with callers.
+enum AppInterface {
+    static let controlSize: CGFloat = 48
+    static let symbolSize: CGFloat = 21
+    static let cornerRadius: CGFloat = 12
+    static let controlSpacing: CGFloat = 6
+}
+
+/// Fixed geometry prevents state changes from resizing a play/stop or create/record control.
+struct AppControlSymbol: View {
+    enum Surface: Equatable { case neutral, prominent, stop }
+    let symbol: String
+    var surface: Surface = .neutral
+    @Environment(\.colorSchemeContrast) private var contrast
+    @Environment(AppSettings.self) private var settings
+    var body: some View {
+        let strong = settings.highContrast || contrast == .increased
+        Image(systemName: symbol)
+            .font(.system(size: AppInterface.symbolSize, weight: .semibold))
+            .foregroundStyle(surface == .prominent || surface == .stop ? Color.white : (strong ? Color.primary : Color.accentColor))
+            .frame(width: AppInterface.controlSize, height: AppInterface.controlSize)
+            .background {
+                switch surface {
+                case .prominent: Circle().fill(Color.blue)
+                case .stop: Circle().fill(Color.red)
+                case .neutral: Circle().fill(Color.secondary.opacity(0.12))
+                }
+            }
+            .overlay {
+                if strong {
+                    Circle().strokeBorder(Color.primary.opacity(strong ? 1 : 0.18), lineWidth: strong ? 2 : 1)
+                }
+            }
+            .contentTransition(.identity)
+            .fixedSize().accessibilityHidden(true)
+    }
+}
+
+/// Fullscreen controls share geometry; the existing button keeps its action and accessible name.
+struct AppFloatingControlStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        AppFloatingControlBody(configuration: configuration)
+    }
+}
+
+/// Read main-actor settings in View.body, not the nonisolated ButtonStyle callback.
+private struct AppFloatingControlBody: View {
+    let configuration: ButtonStyleConfiguration
+    @Environment(\.isEnabled) private var enabled
+    @Environment(\.colorSchemeContrast) private var contrast
+    @Environment(AppSettings.self) private var settings
+    var body: some View {
+        configuration.label.labelStyle(.iconOnly)
+            .font(.system(size: AppInterface.symbolSize, weight: .semibold))
+            .frame(width: AppInterface.controlSize, height: AppInterface.controlSize)
+            .foregroundStyle(Color.accentColor)
+            .background(.regularMaterial, in: Circle())
+            .overlay(Circle().strokeBorder(Color.primary.opacity(settings.highContrast || contrast == .increased ? 1 : 0.18), lineWidth: 1))
+            .contentShape(Circle())
+            .opacity(!enabled ? 0.45 : configuration.isPressed ? 0.8 : 1)
+    }
+}
+
 /// Visible names are optional; accessible names remain present even in the compact interface.
 struct NamedCircleControl: View {
     let title: String
@@ -279,12 +343,9 @@ struct NamedCircleControl: View {
     let prominent: Bool
     let names: Bool
     var body: some View {
-        VStack(spacing: 4) {
-            Image(systemName: symbol).font(.system(size: 20, weight: .semibold))
-                .frame(width: 44, height: 44)
-                .foregroundStyle(prominent ? Color.white : Color.primary)
-                .background(prominent ? Color.accentColor : Color.secondary.opacity(0.15), in: Circle())
-            if names { Text(LocalizedStringKey(title)).font(.caption).fixedSize(horizontal: false, vertical: true) }
+        VStack(spacing: AppInterface.controlSpacing) {
+            AppControlSymbol(symbol: symbol, surface: prominent ? .prominent : .neutral)
+            if names { Text(LocalizedStringKey(title)).font(.caption).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).accessibilityIdentifier("visibleControlName") }
         }.accessibilityElement(children: .ignore).accessibilityLabel(LocalizedStringKey(title))
     }
 }
@@ -301,13 +362,14 @@ private struct PreferenceControlLabel: View {
     var body: some View {
         if settings.showButtonNames {
             VStack(spacing: 4) {
-                configuration.icon
+                configuration.icon.font(.system(size: AppInterface.symbolSize, weight: .semibold))
                 configuration.title.font(.caption).fixedSize(horizontal: false, vertical: true)
                     .accessibilityIdentifier("visibleControlName")
             }
         } else {
             // Native iconOnly retains the original Label title for assistive technologies.
             Label { configuration.title } icon: { configuration.icon }.labelStyle(.iconOnly)
+                .font(.system(size: AppInterface.symbolSize, weight: .semibold))
         }
     }
 }
@@ -338,5 +400,15 @@ private struct InlinePreferenceLabel: View {
         } else {
             Label { configuration.title } icon: { configuration.icon }.labelStyle(.iconOnly)
         }
+    }
+}
+
+/// All options entrances use the same symbol size, touch target and optional visible name.
+struct AppOptionsLabel: View {
+    let title: LocalizedStringKey
+    var body: some View {
+        Label(title, systemImage: "ellipsis.circle")
+            .labelStyle(AccessibleControlLabelStyle())
+            .frame(minWidth: AppInterface.controlSize, minHeight: AppInterface.controlSize)
     }
 }

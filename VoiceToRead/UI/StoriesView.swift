@@ -83,7 +83,7 @@ private struct StoryLibraryCover: View {
             }
         }
         .frame(maxWidth: .infinity).aspectRatio(16 / 9, contentMode: .fit)
-        .clipped().clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipped().clipShape(RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
         .accessibilityHidden(true)
     }
 }
@@ -241,7 +241,7 @@ private struct StoryReaderView: View {
                             Button(role: .destructive) { narrator.stop(); confirmingDelete = true } label: {
                                 Label("Delete story", systemImage: "trash")
                             }.disabled(job != nil)
-                        } label: { Label("Story options", systemImage: "ellipsis.circle").labelStyle(.iconOnly) }
+                        } label: { AppOptionsLabel(title: "Story options") }
                             .accessibilityIdentifier("storyOptions")
                     }
                 }
@@ -331,11 +331,11 @@ private struct StoryReaderView: View {
                 } label: {
                     Label(uiKey(narrator.state == .playing ? "Pause" : narrator.state == .paused ? "Resume" : "Play"),
                           systemImage: narrator.state == .playing ? "pause.fill" : "play.fill")
-                        .font(.headline).frame(maxWidth: .infinity, minHeight: 44)
+                        .labelStyle(InlinePreferenceLabelStyle()).font(.headline).frame(maxWidth: .infinity, minHeight: AppInterface.controlSize)
                 }.buttonStyle(.borderedProminent)
                     .disabled(job != nil || (translated && !story.translatedReady)).accessibilityIdentifier("storyPlay")
                 Button { narrator.stop() } label: {
-                    Label("Stop", systemImage: "stop.fill").font(.headline).frame(maxWidth: .infinity, minHeight: 44)
+                    Label("Stop", systemImage: "stop.fill").labelStyle(InlinePreferenceLabelStyle()).font(.headline).frame(maxWidth: .infinity, minHeight: AppInterface.controlSize)
                 }.buttonStyle(.bordered).tint(.red)
                     .disabled(narrator.state == .idle).accessibilityIdentifier("storyStop")
             }

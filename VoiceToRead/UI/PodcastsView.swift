@@ -138,8 +138,7 @@ private struct PodcastReaderView: View {
             if !fullScreen {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") { fullScreen = true }
-                        .font(.system(size: 20, weight: .medium)).labelStyle(.iconOnly).frame(width: 44, height: 44)
-                        .background(.regularMaterial, in: Circle()).buttonStyle(.plain)
+                        .buttonStyle(AppFloatingControlStyle())
                         .accessibilityIdentifier("podcastFullScreen")
                 }
             }
@@ -157,8 +156,7 @@ private struct PodcastReaderView: View {
             HStack(spacing: 8) {
                 Spacer(minLength: 4)
                 Button("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left") { fullScreen = false }
-                    .font(.system(size: 20, weight: .medium)).labelStyle(.iconOnly).frame(width: 44, height: 44)
-                    .background(.regularMaterial, in: Circle()).buttonStyle(.plain)
+                    .buttonStyle(AppFloatingControlStyle())
                     .accessibilityIdentifier("podcastFullScreenExit")
             }.padding(.horizontal, 16).padding(.vertical, 4)
             if let message = playback.message {
@@ -201,12 +199,9 @@ private struct PodcastReaderView: View {
     private func control(_ title: String, symbol: String, enabled: Bool = true, prominent: Bool = false,
                          action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            VStack(spacing: 4) {
-                Image(systemName: symbol).font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(prominent ? Color.white : Color.accentColor)
-                    .frame(width: 48, height: 48)
-                    .background(prominent ? Color.accentColor : Color.secondary.opacity(0.12), in: Circle())
-                if settings.showButtonNames { Text(LocalizedStringKey(title)).font(.caption).multilineTextAlignment(.center) }
+            VStack(spacing: AppInterface.controlSpacing) {
+                AppControlSymbol(symbol: symbol, surface: prominent ? .prominent : .neutral)
+                if settings.showButtonNames { Text(LocalizedStringKey(title)).font(.caption).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true).accessibilityIdentifier("visibleControlName") }
             }.frame(maxWidth: .infinity)
         }.buttonStyle(.plain).disabled(!enabled).accessibilityLabel(Text(LocalizedStringKey(title)))
     }

@@ -357,8 +357,8 @@ struct SpeakTranslateView: View {
                 if !embedded { DoneToolbar { model.cancel(); dismiss() } }
                 HomeCircleToolbarItem { newConversationAction }
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Reading options", systemImage: "ellipsis.circle") { showingOptions = true }
-                        .disabled(!model.canEdit).labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("conversationOptions")
+                    Button { showingOptions = true } label: { AppOptionsLabel(title: "Reading options") }
+                        .disabled(!model.canEdit).accessibilityIdentifier("conversationOptions")
                 }
             }
         }
@@ -499,12 +499,12 @@ struct SpeakTranslateView: View {
             turnButton(second)
             if !embedded && !fullScreen {
                 Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") { fullScreen = true }
-                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                    .buttonStyle(AppFloatingControlStyle())
                     .accessibilityIdentifier("conversationFullScreenButton")
             }
             if fullScreen {
                 Button("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left") { fullScreen = false }
-                    .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
+                    .buttonStyle(AppFloatingControlStyle())
                     .accessibilityIdentifier("conversationFullScreenButton")
             }
         }.fixedSize(horizontal: false, vertical: true)

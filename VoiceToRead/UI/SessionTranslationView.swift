@@ -673,11 +673,11 @@ struct LiveLanguageCard: ViewModifier {
                 .padding(12)
                 .foregroundStyle(Color.primary)
                 .background {
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    RoundedRectangle(cornerRadius: AppInterface.cornerRadius, style: .continuous)
                         .fill(fill)
                         .shadow(color: .black.opacity(strongContrast ? 0 : 0.12), radius: 3, x: 0, y: 2)
                         .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            RoundedRectangle(cornerRadius: AppInterface.cornerRadius, style: .continuous)
                                 .strokeBorder(strongContrast ? Color.primary : accent.opacity(0.4), lineWidth: strongContrast ? 2 : 1)
                         }
                         .accessibilityHidden(true)

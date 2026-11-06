@@ -176,13 +176,7 @@ struct CaptionScreen: View {
                                  action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Label(LocalizedStringKey(title), systemImage: symbol)
-                .labelStyle(.iconOnly).font(.system(size: 21, weight: .semibold))
-                .frame(width: 48, height: 48)
-                .foregroundStyle(Color.accentColor)
-                .background(.regularMaterial, in: Circle())
-                .overlay(Circle().strokeBorder(Color.primary.opacity(settings.highContrast ? 1 : 0.18), lineWidth: 1))
-                .shadow(color: .black.opacity(0.12), radius: 3, x: 0, y: 2)
-        }.buttonStyle(.plain)
+        }.buttonStyle(AppFloatingControlStyle())
             .accessibilityLabel(LocalizedStringKey(title)).accessibilityIdentifier(identifier)
     }
 
@@ -196,7 +190,7 @@ struct CaptionScreen: View {
                 HomeCircleToolbarItem { headerSessionAction }
                 ToolbarItem(placement: .topBarLeading) {
                     Menu { sessionActionButtons } label: {
-                        Label("Session actions", systemImage: "ellipsis.circle")
+                        AppOptionsLabel(title: "Session actions")
                     }.labelStyle(AccessibleControlLabelStyle()).accessibilityIdentifier("sessionActionsButton")
                 }
             }
@@ -461,7 +455,7 @@ struct CaptionScreen: View {
         if !hostedFullScreen { fullScreenButton }
         if !vertical { Spacer(minLength: 0) }
         Button { showingActions = true } label: {
-            Label("Session actions", systemImage: "ellipsis.circle")
+            AppOptionsLabel(title: "Session actions")
                 .labelStyle(AccessibleControlLabelStyle())
                 .frame(minWidth: 44, minHeight: 44)
         }.foregroundStyle(Color.accentColor).accessibilityIdentifier("sessionActionsButton")

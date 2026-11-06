@@ -37,6 +37,6 @@ struct PrivacyPolicyView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading).padding()
         }
-        .navigationTitle("Privacy")
+        .navigationTitle("Privacy").navigationBarTitleDisplayMode(.inline)
     }
 }

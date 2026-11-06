@@ -55,7 +55,7 @@ private struct SpeakingLessonCover: View {
             } else { placeholder }
         }
         .frame(maxWidth: .infinity).aspectRatio(16 / 9, contentMode: .fit)
-        .clipped().clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipped().clipShape(RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
         .accessibilityElement(children: .ignore).accessibilityLabel(Text(verbatim: altText ?? lesson.image.altEs))
         .accessibilityAddTraits(.isImage).accessibilityIdentifier("guidedCover-" + lesson.id)
     }
@@ -88,6 +88,7 @@ private struct SpeakingLessonView: View {
     let lesson: SpeakingLesson
     @Environment(AppSettings.self) private var settings
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.dynamicTypeSize) private var typeSize
     @State private var narrator = GuidedLessonAudio()
     @AppStorage("guidedLessonSupportLocale") private var supportLocale = CaptureLanguage.spanish.rawValue
     @State private var support: GuidedLessonSupport?
@@ -169,15 +170,18 @@ private struct SpeakingLessonView: View {
         .navigationTitle(Text(verbatim: lesson.title.en)).navigationBarTitleDisplayMode(.inline)
         .safeAreaInset(edge: .bottom) {
             if narrator.active {
-                HStack {
+                (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(alignment: .center, spacing: 12))) {
                     Group {
                         if narrator.waiting { Text("Your turn to repeat") }
                         else { Text("Playing paragraph \(narrator.paragraph ?? 0)") }
                     }.font(.caption).frame(maxWidth: .infinity, alignment: .leading)
-                    Button(uiKey(narrator.paused ? "Resume" : "Pause")) { narrator.togglePause() }
-                        .disabled(narrator.waiting).frame(minHeight: 44)
-                    Button("Stop", systemImage: "stop.fill") { narrator.stop() }
-                        .frame(minHeight: 44).accessibilityIdentifier("guidedStopPlayback")
+                    Button { narrator.togglePause() } label: {
+                        NamedCircleControl(title: narrator.paused ? "Resume" : "Pause",
+                            symbol: narrator.paused ? "play.fill" : "pause.fill", prominent: true, names: settings.showButtonNames)
+                    }.buttonStyle(.plain).disabled(narrator.waiting).accessibilityIdentifier("guidedPausePlayback")
+                    Button { narrator.stop() } label: {
+                        NamedCircleControl(title: "Stop", symbol: "stop.fill", prominent: false, names: settings.showButtonNames)
+                    }.buttonStyle(.plain).accessibilityIdentifier("guidedStopPlayback")
                 }.padding(.horizontal).background(.regularMaterial)
             }
         }
@@ -227,10 +231,9 @@ Section {
                     if narrator.paragraph == paragraph.number { narrator.stop() }
                     else { narrator.start(lesson: lesson, paragraph: paragraph, slow: slow, mode: mode, repeating: repeatParagraph) }
                 } label: {
-                    Label(uiKey(narrator.paragraph == paragraph.number ? "Stop" : "Play"),
-                          systemImage: narrator.paragraph == paragraph.number ? "stop.fill" : "play.fill")
-                        .labelStyle(.iconOnly).frame(minWidth: 44, minHeight: 44)
-                }.buttonStyle(.bordered).accessibilityIdentifier("lessonPlay-\(paragraph.number)")
+                    AppControlSymbol(symbol: narrator.paragraph == paragraph.number ? "stop.fill" : "play.fill")
+                }.buttonStyle(.borderless)
+                    .accessibilityLabel(uiKey(narrator.paragraph == paragraph.number ? "Stop" : "Play")).accessibilityIdentifier("lessonPlay-\(paragraph.number)")
             }
             Text(highlight(paragraph)).font(.system(size: CGFloat(settings.captionSize * textScale), weight: settings.boldCaptions ? .bold : .regular))
                 .lineSpacing(CGFloat(settings.lineSpacing)).accessibilityIdentifier("lessonEnglish-\(paragraph.number)")

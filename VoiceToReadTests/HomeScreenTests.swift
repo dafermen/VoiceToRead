@@ -255,10 +255,19 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.staticTexts["lessonEnglish-1"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["lessonSpanish-1"].exists)
         XCTAssertTrue(app.buttons["lessonPlay-1"].exists)
+        XCTAssertEqual(app.buttons["lessonPlay-1"].frame.width, 48, accuracy: 1)
+        XCTAssertEqual(app.buttons["lessonPlay-1"].frame.height, 48, accuracy: 1)
         XCTAssertTrue(app.staticTexts["lessonEnglish-1"].label.contains("These days, I'm working"))
         app.buttons["lessonPlay-1"].tap()
         XCTAssertTrue(app.buttons["guidedStopPlayback"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.buttons["lessonPlay-1"].label, "Stop")
+        let pause = app.buttons["guidedPausePlayback"]
+        XCTAssertTrue(pause.exists)
+        XCTAssertEqual(pause.label, "Pause")
+        pause.tap()
+        XCTAssertEqual(pause.label, "Resume")
+        pause.tap()
+        XCTAssertEqual(pause.label, "Pause")
         app.buttons["guidedStopPlayback"].tap()
         XCTAssertEqual(app.buttons["lessonPlay-1"].label, "Play")
         for _ in 0..<24 where !app.staticTexts["lessonEnglish-20"].isHittable { app.swipeUp() }
@@ -2710,8 +2719,15 @@ extension HomeScreenTests {
         let play = app.buttons["podcastPlayPause"]
         XCTAssertTrue(play.waitForExistence(timeout: 5))
         XCTAssertFalse(app.alerts.firstMatch.exists)
+        XCTAssertTrue(play.staticTexts["visibleControlName"].exists)
+        let expand = app.buttons["podcastFullScreen"]
+        XCTAssertEqual(expand.frame.width, 48, accuracy: 1)
+        XCTAssertEqual(expand.frame.height, 48, accuracy: 1)
+        let playFrame = play.frame
         play.tap()
         XCTAssertEqual(play.label, "Pause")
+        XCTAssertEqual(play.frame.width, playFrame.width, accuracy: 1)
+        XCTAssertEqual(play.frame.height, playFrame.height, accuracy: 1)
         XCTAssertTrue(app.buttons["podcastStop"].isEnabled)
         play.tap()
         XCTAssertEqual(play.label, "Play")
@@ -3214,5 +3230,37 @@ extension HomeScreenTests {
         XCTAssertEqual(expand.frame.width, 48, accuracy: 1)
         expand.tap()
         XCTAssertTrue(app.buttons["listeningSavedSessions"].waitForExistence(timeout: 5))
+    }
+}
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testPodcastIconOnlyControlsKeepAccessibleNamesAndNavigation() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Train"].tap()
+        let entry = app.buttons["trainingPodcastsEntry"]
+        if !entry.isHittable { app.swipeUp() }
+        entry.tap()
+        app.buttons["podcast-POD-B1B2-001"].tap()
+        let play = app.buttons["podcastPlayPause"]
+        XCTAssertTrue(play.waitForExistence(timeout: 5))
+        XCTAssertFalse(play.staticTexts["visibleControlName"].exists)
+        XCTAssertEqual(play.label, "Play")
+        XCTAssertGreaterThanOrEqual(play.frame.height, 48)
+        play.tap()
+        XCTAssertEqual(play.label, "Pause")
+        play.tap()
+        XCTAssertEqual(play.label, "Play")
+        app.buttons["podcastStop"].tap()
+        XCTAssertEqual(app.staticTexts["podcastCurrentFragment"].label, "Fragment 1 of 30")
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssertTrue(app.buttons["podcast-POD-B1B2-001"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.alerts.firstMatch.exists)
     }
 }

@@ -311,7 +311,7 @@ private struct EnglishTrainingDetailView: View {
                             Button("Translate again", systemImage: "arrow.clockwise") { confirmingRetranslation = true }
                                 .disabled(job != nil || !TranslationJob.supported || training.phrases.allSatisfy { $0.english.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty })
                                 .accessibilityIdentifier("retranslateTraining")
-                        } label: { Label("Practice options", systemImage: "ellipsis.circle").labelStyle(.iconOnly) }
+                        } label: { AppOptionsLabel(title: "Practice options") }
                             .accessibilityIdentifier("trainingOptions")
                     }
                 }
@@ -440,10 +440,10 @@ private struct TrainingPracticeView: View {
                         if practice.activity == .recording {
                             Text("\(Int(practice.elapsed)) / 15 seconds").monospacedDigit()
                             Button("Stop recording", systemImage: "stop.fill") { practice.finishRecording() }
-                                .buttonStyle(.borderedProminent).accessibilityIdentifier("stopTrainingAttempt")
+                                .buttonStyle(.borderedProminent).labelStyle(InlinePreferenceLabelStyle()).frame(minHeight: AppInterface.controlSize).accessibilityIdentifier("stopTrainingAttempt")
                         } else {
                             Button("Record my attempt", systemImage: "mic.fill") { Task { await practice.startRecording() } }
-                                .buttonStyle(.borderedProminent).disabled(practice.activity != .idle)
+                                .buttonStyle(.borderedProminent).labelStyle(InlinePreferenceLabelStyle()).frame(minHeight: AppInterface.controlSize).disabled(practice.activity != .idle)
                                 .accessibilityIdentifier("recordTrainingAttempt")
                         }
                         if practice.activity == .checking { ProgressView("Checking recognized words…") }
@@ -453,7 +453,7 @@ private struct TrainingPracticeView: View {
                                    systemImage: practice.activity == .playback ? "stop.circle" : "play.circle") {
                                 if practice.activity == .playback { practice.stopPlayback() }
                                 else { practice.listenToTake() }
-                            }.disabled(busy).accessibilityIdentifier("trainingAttemptPlayback")
+                            }.labelStyle(InlinePreferenceLabelStyle()).frame(minHeight: AppInterface.controlSize).disabled(busy).accessibilityIdentifier("trainingAttemptPlayback")
                             if practice.heard == nil {
                                 Button("Retry word recognition", systemImage: "arrow.clockwise") { Task { await practice.checkWords() } }.disabled(busy)
                             }

@@ -63,7 +63,7 @@ struct MicrophoneCheckView: View {
                 .frame(maxWidth: 640, alignment: .leading)
                 .frame(maxWidth: .infinity)
             }
-            .navigationTitle("Microphone Check")
+            .navigationTitle("Microphone Check").navigationBarTitleDisplayMode(.inline)
         }
         .onChange(of: scenePhase) { _, phase in
             switch phase {

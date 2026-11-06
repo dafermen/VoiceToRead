@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+- [Estándar visual compartido: alcance, componentes y validación — 2026-11-05](interface-standardization.md).
+
 - [Navegación simplificada: lectores, reproductor único, ✓ y retirada de marcadores](simplified-navigation.md).
 
 - [Hablar y traducir: Automático/Por botón, español a inglés, privacidad y arquitectura](speak-and-translate.md).

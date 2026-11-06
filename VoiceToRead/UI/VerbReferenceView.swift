@@ -88,7 +88,7 @@ struct VerbReferenceLibraryView: View {
                 .labelStyle(InlinePreferenceLabelStyle()).font(.subheadline)
                 .frame(maxWidth: .infinity, minHeight: 44)
                 .foregroundStyle(selected ? Color.accentColor : Color.secondary)
-                .background(selected ? Color.accentColor.opacity(0.12) : Color.secondary.opacity(0.06), in: RoundedRectangle(cornerRadius: 10))
+                .background(selected ? Color.accentColor.opacity(0.12) : Color.secondary.opacity(0.06), in: RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
         }.buttonStyle(.plain)
             .accessibilityLabel(Text(LocalizedStringKey(title)))
             .accessibilityValue(Text(LocalizedStringKey(selected ? "On" : "Off")))
@@ -292,10 +292,8 @@ private struct VerbConjugationView: View {
                 player.start([ReviewParagraph(id: UUID(), text: text)], language: .english, speed: slow ? .slow : .normal)
             }
         } label: {
-            VStack(spacing: 3) {
-                Image(systemName: playing ? "stop.fill" : "play.fill").font(.system(size: 18, weight: .semibold))
-                if settings.showButtonNames { Text(LocalizedStringKey(playing ? "Stop" : "Play")).font(.caption2) }
-            }.frame(minWidth: 44, minHeight: 44)
+            NamedCircleControl(title: playing ? "Stop" : "Play", symbol: playing ? "stop.fill" : "play.fill",
+                               prominent: false, names: settings.showButtonNames)
         }
         .buttonStyle(.borderless)
         .accessibilityLabel(Text(LocalizedStringKey(playing ? "Stop" : "Play")) + Text(verbatim: ": " + text))

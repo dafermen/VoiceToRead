@@ -376,8 +376,8 @@ struct SimpleHomeActionStyle: ButtonStyle {
             Image(systemName: "chevron.right").font(.system(size: 14, weight: .semibold)).accessibilityHidden(true)
         }.padding(.horizontal, 16).padding(.vertical, 10)
             .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
-            .contentShape(RoundedRectangle(cornerRadius: 12))
-            .background(Color(uiColor: configuration.isPressed ? .tertiarySystemGroupedBackground : .secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12))
+            .contentShape(RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
+            .background(Color(uiColor: configuration.isPressed ? .tertiarySystemGroupedBackground : .secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
     }
 }
 
@@ -511,8 +511,8 @@ struct LanguagePickerControl: View {
                 }.font(.body).padding(.horizontal, 10).frame(minHeight: 44)
                     .frame(maxWidth: stackedRole ? .infinity : nil)
                     .foregroundStyle(Color.accentColor)
-                    .background(Color.accentColor.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
-                    .contentShape(RoundedRectangle(cornerRadius: 10))
+                    .background(Color.accentColor.opacity(0.08), in: RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
+                    .contentShape(RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
             }.buttonStyle(.plain).accessibilityLabel(title).accessibilityValue(Text(selection.pickerLabel))
                 .alignmentGuide(.languagePickerCenter) { $0[VerticalAlignment.center] }
         }
@@ -599,9 +599,9 @@ struct HomeCaptureButtonStyle: ButtonStyle {
             let border: Color = stop ? stopInk : (strong ? .primary : color.accent.opacity(enabled ? 0.8 : 0.4))
             configuration.label.padding(.horizontal, 10).padding(.vertical, 8)
                 .foregroundStyle(ink)
-                .background(fill, in: RoundedRectangle(cornerRadius: 12))
+                .background(fill, in: RoundedRectangle(cornerRadius: AppInterface.cornerRadius))
                 .overlay {
-                    RoundedRectangle(cornerRadius: 12).strokeBorder(border, lineWidth: strong ? 2 : 1)
+                    RoundedRectangle(cornerRadius: AppInterface.cornerRadius).strokeBorder(border, lineWidth: strong ? 2 : 1)
                         .accessibilityHidden(true)
                 }
                 .opacity(configuration.isPressed ? 0.8 : 1)
@@ -757,16 +757,11 @@ struct HomeCircleAction: View {
     let action: () -> Void
     var body: some View {
         Button(action: action) {
-            ZStack {
-                Circle().fill(stopping ? Color.red : Color.blue)
-                Image(systemName: symbol).font(.system(size: 21, weight: .semibold))
-                    .foregroundStyle(.white).frame(width: 24, height: 24)
-                    .contentTransition(.identity)
-            }.frame(width: 48, height: 48).fixedSize()
+            AppControlSymbol(symbol: symbol, surface: stopping ? .stop : .prominent)
                 .contentShape(Circle())
         }
         .buttonStyle(HomeCirclePressStyle())
-        .frame(width: 48, height: 48).fixedSize()
+        .frame(width: AppInterface.controlSize, height: AppInterface.controlSize).fixedSize()
         .transaction { $0.animation = nil; $0.disablesAnimations = true }
         .accessibilityLabel(Text(title))
     }

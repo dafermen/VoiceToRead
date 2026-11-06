@@ -128,7 +128,7 @@ struct SessionHistoryView: View {
                         NavigationLink { RecentlyDeletedView(repository: coordinator.repository) } label: {
                             Label("Recently deleted (\(trash.count))", systemImage: "trash")
                         }.accessibilityIdentifier("recentlyDeletedLink")
-                    } label: { Label("Session library options", systemImage: "ellipsis.circle").labelStyle(AccessibleControlLabelStyle()) }
+                    } label: { AppOptionsLabel(title: "Session library options") }
                         .accessibilityIdentifier("sessionLibraryOptions")
                 }
             }
