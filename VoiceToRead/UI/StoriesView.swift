@@ -172,6 +172,7 @@ private struct StoryReaderView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dynamicTypeSize) private var typeSize
+    @State private var fullScreen = false
     @State private var narrator = StoryNarrator()
     @State private var translated = false
     @State private var slow = true
@@ -189,44 +190,54 @@ private struct StoryReaderView: View {
         Group {
             if let story {
                 VStack(spacing: 0) {
-                    CommunicationLanguagePair(symbol: "arrow.right") {
-                        LanguagePickerControl(title: "Original language", selection: .constant(story.sourceLanguage),
-                            choices: [story.sourceLanguage], showRole: true, stackedRole: true)
-                            .disabled(true).accessibilityIdentifier("storyOriginalLanguage")
-                    } right: {
-                        LanguagePickerControl(title: "Translate to", selection: Binding(
-                            get: { story.targetLanguage },
-                            set: { target in
-                                narrator.stop(); translated = false
-                                do { try store.selectTarget(story, target: target) }
-                                catch { failure = error.localizedDescription }
-                            }),
-                            choices: CaptureLanguage.allCases.filter { $0 != story.sourceLanguage },
-                            showRole: true, stackedRole: true)
-                            .disabled(job != nil).accessibilityIdentifier("storyTranslationTarget")
-                    }.padding(.horizontal).padding(.top, 8).padding(.bottom, 8)
-                    if story.translatedReady {
-                        Picker("Reading language", selection: $translated) {
-                            Text("Original").tag(false)
-                            Text("Translation").tag(true)
-                        }.pickerStyle(.segmented).disabled(job != nil)
-                            .padding(.horizontal).padding(.bottom, 8)
-                            .accessibilityIdentifier("storyReadingVersion")
+                    if !fullScreen {
+                        CommunicationLanguagePair(symbol: "arrow.right") {
+                            LanguagePickerControl(title: "Original language", selection: .constant(story.sourceLanguage),
+                                choices: [story.sourceLanguage], showRole: true, stackedRole: true)
+                                .disabled(true).accessibilityIdentifier("storyOriginalLanguage")
+                        } right: {
+                            LanguagePickerControl(title: "Translate to", selection: Binding(
+                                get: { story.targetLanguage },
+                                set: { target in
+                                    narrator.stop(); translated = false
+                                    do { try store.selectTarget(story, target: target) }
+                                    catch { failure = error.localizedDescription }
+                                }),
+                                choices: CaptureLanguage.allCases.filter { $0 != story.sourceLanguage },
+                                showRole: true, stackedRole: true)
+                                .disabled(job != nil).accessibilityIdentifier("storyTranslationTarget")
+                        }.padding(.horizontal).padding(.top, 8).padding(.bottom, 8)
+                        if story.translatedReady {
+                            Picker("Reading language", selection: $translated) {
+                                Text("Original").tag(false)
+                                Text("Translation").tag(true)
+                            }.pickerStyle(.segmented).disabled(job != nil)
+                                .padding(.horizontal).padding(.bottom, 8)
+                                .accessibilityIdentifier("storyReadingVersion")
+                        }
+                        preparation(story)
                     }
-                    preparation(story)
                     if let message = failure ?? narrator.message {
                         Text(LocalizedStringKey(message)).font(.caption).foregroundStyle(.secondary).padding(.horizontal)
                     }
                     StoryReadingText(text: translated ? story.translatedText : story.sourceText,
                         spoken: narrator.progress.text == (translated ? story.translatedText : story.sourceText) ? narrator.progress.range : nil, following: narrator.state == .playing,
                         points: settings.captionSize, bold: settings.boldCaptions, spacing: settings.lineSpacing,
-                        foreground: settings.readerPaper != .system && !settings.highContrast ? .black : .label)
+                        foreground: settings.readerPaper != .system && !settings.highContrast ? .black : .label,
+                        bottomContentInset: 64)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(ReaderSurface(settings: settings))
-                    Divider()
-                    controls(story)
+                        .overlay(alignment: .bottomTrailing) {
+                            ReaderFullScreenToggle(active: $fullScreen, identifier: "storyFullScreen")
+                                .disabled(!fullScreen && job != nil)
+                                .padding(.trailing, 12).padding(.bottom, 12)
+                        }
+                    if !fullScreen { Divider(); controls(story) }
                 }
                 .navigationTitle(story.title).navigationBarTitleDisplayMode(.inline)
+                .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
+                .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
+                .statusBarHidden(fullScreen)
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         Menu {
@@ -405,6 +416,7 @@ private struct StoryReadingText: UIViewRepresentable {
     let bold: Bool
     let spacing: Double
     let foreground: UIColor
+    var bottomContentInset: CGFloat = 0
     func makeCoordinator() -> Coordinator { Coordinator() }
     func makeUIView(context: Context) -> UITextView {
         let view = UITextView()
@@ -416,6 +428,7 @@ private struct StoryReadingText: UIViewRepresentable {
         return view
     }
     func updateUIView(_ view: UITextView, context: Context) {
+        view.textContainerInset.bottom = 16 + bottomContentInset
         let font = UIFontMetrics(forTextStyle: .body).scaledFont(
             for: UIFont.systemFont(ofSize: CGFloat(CaptionTextSize.clamped(points)), weight: bold ? .semibold : .regular),
             compatibleWith: view.traitCollection)

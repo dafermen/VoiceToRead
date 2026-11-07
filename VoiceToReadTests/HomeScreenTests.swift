@@ -163,6 +163,15 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(originalLanguage.frame.midY, app.buttons["storyTranslationTarget"].frame.midY, accuracy: 2)
         XCTAssertTrue(app.buttons["storyTranslateAction"].isHittable)
         XCTAssertTrue(app.buttons["storyTranslationTarget"].isHittable)
+        let storyText = reader.value as? String
+        let expandStory = app.buttons["storyFullScreen"]
+        expandStory.tap()
+        XCTAssertEqual(expandStory.label, "Exit full screen")
+        XCTAssertFalse(app.buttons["storyPlay"].exists)
+        XCTAssertEqual(reader.value as? String, storyText)
+        expandStory.tap()
+        XCTAssertTrue(app.buttons["storyPlay"].waitForExistence(timeout: 5))
+        XCTAssertEqual(reader.value as? String, storyText)
         app.buttons["storyTranslationTarget"].tap()
         XCTAssertTrue(app.buttons["French · Français"].exists)
         XCTAssertTrue(app.buttons["Japanese · 日本語"].exists)
@@ -1773,6 +1782,14 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertFalse(app.alerts.firstMatch.exists, "Opening training must not request microphone access")
         app.buttons["revealTrainingResponse"].tap()
         XCTAssertTrue(app.staticTexts["trainingExpected"].exists)
+        let promptBeforeFullscreen = app.staticTexts["trainingPrompt"].label
+        let practiceExpand = app.buttons["practiceFullScreen"]
+        practiceExpand.tap()
+        XCTAssertEqual(practiceExpand.label, "Exit full screen")
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, promptBeforeFullscreen)
+        XCTAssertTrue(app.staticTexts["trainingExpected"].exists)
+        practiceExpand.tap()
+        XCTAssertEqual(app.staticTexts["trainingPrompt"].label, promptBeforeFullscreen)
         XCTAssertFalse(app.staticTexts["How did this phrase feel?"].exists)
         XCTAssertFalse(app.buttons["Needs practice"].exists)
         XCTAssertFalse(app.buttons["I feel comfortable"].exists)
@@ -2734,6 +2751,14 @@ extension HomeScreenTests {
         app.buttons["podcastStop"].tap()
         XCTAssertEqual(app.staticTexts["podcastCurrentFragment"].label, "Fragment 1 of 30")
         XCTAssertFalse(app.alerts.firstMatch.exists)
+        let fragmentPlay = app.buttons["podcastFragment-1"]
+        for _ in 0..<4 where !fragmentPlay.isHittable { app.swipeUp() }
+        XCTAssertTrue(fragmentPlay.isHittable)
+        XCTAssertEqual(fragmentPlay.frame.width, 48, accuracy: 1)
+        XCTAssertEqual(fragmentPlay.frame.height, 48, accuracy: 1)
+        fragmentPlay.tap()
+        XCTAssertEqual(play.label, "Pause", "The circular fragment action still plays its fragment")
+        app.buttons["podcastStop"].tap()
     }
 }
 
@@ -2787,6 +2812,8 @@ extension HomeScreenTests {
         XCTAssertTrue(expand.waitForExistence(timeout: 5))
         let normal = app.segmentedControls["podcastSpeed"].buttons["Normal · 1×"]
         normal.tap()
+        app.buttons["Reading options"].tap()
+        app.switches["podcastShowTranslation"].tap()
         app.switches["podcastShowTranscript"].tap()
         let play = app.buttons["podcastPlayPause"]
         play.tap()
@@ -2796,7 +2823,7 @@ extension HomeScreenTests {
         XCTAssertEqual(play.label, "Play")
         let timeline = app.staticTexts["podcastTimeline"].label
         expand.tap()
-        let text = app.textViews["podcastKaraokeText"]
+        let text = app.otherElements["podcastKaraokeText"]
         XCTAssertTrue(text.waitForExistence(timeout: 5))
         let hiddenTabs = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == false"), object: app.tabBars.firstMatch)
         XCTAssertEqual(XCTWaiter.wait(for: [hiddenTabs], timeout: 5), .completed)
@@ -2804,14 +2831,26 @@ extension HomeScreenTests {
         XCTAssertFalse(app.buttons["podcastStop"].exists)
         XCTAssertFalse(app.buttons["podcastKaraokeOptions"].exists)
         XCTAssertFalse(app.staticTexts["podcastTimeline"].exists)
-        let paragraph = text.value as? String
-        XCTAssertFalse(paragraph?.isEmpty ?? true)
+        let paragraph = text.staticTexts.allElementsBoundByIndex.map(\.label).joined(separator: " ")
+        XCTAssertFalse(paragraph.isEmpty)
         XCUIDevice.shared.orientation = .landscapeLeft
-        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in text.frame.width > text.frame.height }, object: nil)
+        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in app.scrollViews["podcastKaraokeScroll"].frame.width > app.scrollViews["podcastKaraokeScroll"].frame.height }, object: nil)
         XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
-        XCTAssertEqual(text.value as? String, paragraph)
-        XCTAssertTrue(app.buttons["podcastFullScreenExit"].isHittable)
-        app.buttons["podcastFullScreenExit"].tap()
+        XCTAssertEqual(text.staticTexts.allElementsBoundByIndex.map(\.label).joined(separator: " "), paragraph)
+        let translationCard = app.otherElements["podcastKaraokeTranslation"]
+        XCTAssertTrue(translationCard.exists)
+        let viewport = app.scrollViews["podcastKaraokeScroll"].frame
+        if viewport.width >= 700 {
+            XCTAssertLessThanOrEqual(text.frame.maxX, translationCard.frame.minX, "Wide readers keep original and translation side by side")
+        } else {
+            XCTAssertLessThanOrEqual(text.frame.maxY, translationCard.frame.minY, "Narrow readers stack the cards")
+        }
+        let exit = app.buttons["podcastFullScreenExit"]
+        XCTAssertTrue(exit.isHittable)
+        XCTAssertGreaterThan(exit.frame.midX, viewport.midX)
+        XCTAssertGreaterThan(exit.frame.midY, viewport.midY)
+        XCTAssertEqual(exit.frame.width, 48, accuracy: 1)
+        exit.tap()
         XCUIDevice.shared.orientation = .portrait
         XCTAssertTrue(expand.waitForExistence(timeout: 5))
         XCTAssertEqual(play.label, "Play")
@@ -2944,13 +2983,17 @@ extension HomeScreenTests {
         revealFilters(); app.buttons["verbFavoritesFilter"].tap()
         revealMarks("beat")
         XCTAssertTrue(app.buttons["verb-beat"].exists)
-        revealFilters(); app.buttons["verbCompletedFilter"].tap()
+        revealFilters(); app.buttons["verbCompletedFilter"].tap(); app.buttons["Pending"].tap()
+        revealMarks("beat")
+        XCTAssertTrue(app.buttons["verb-beat"].exists)
+        XCTAssertFalse(app.buttons["verb-be"].exists, "Pending excludes a completed favorite")
+        revealFilters(); app.buttons["verbCompletedFilter"].tap(); app.buttons["Done"].tap()
         revealMarks("be")
         XCTAssertTrue(app.buttons["verb-be"].exists)
         XCTAssertFalse(app.buttons["verb-beat"].exists, "Combined filters require both marks")
         app.buttons["verbFavorite-be"].tap()
         XCTAssertFalse(app.buttons["verb-be"].exists)
-        revealFilters(); app.buttons["verbFavoritesFilter"].tap(); app.buttons["verbCompletedFilter"].tap()
+        revealFilters(); app.buttons["verbFavoritesFilter"].tap(); app.buttons["verbCompletedFilter"].tap(); app.buttons["All"].tap()
         revealMarks("be")
         XCTAssertEqual(app.buttons["verbCompleted-be"].value as? String, "On", "Removing a favorite retains Done")
         app.buttons["verbCompleted-be"].tap()

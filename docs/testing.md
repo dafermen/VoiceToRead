@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Lectores y filtros — 2026-11-07
+
+[Alcance, verificaciones locales y pruebas nativas pendientes](reader-presentation-2026-11-07.md). Las nuevas regresiones de filtros, rangos UTF-16 y pantalla completa deben ejecutarse en Mac; los controles estáticos no demuestran funcionamiento en iPhone.
+
 ## Estandarización visual — 2026-11-05
 
 Ver [alcance, verificaciones ejecutadas y matriz de aceptación pendiente](interface-standardization.md). Se ampliaron regresiones nativas de transporte y etiquetas; ejecución de XCTest pendiente en Mac. Las comprobaciones de recursos y fuente no son pruebas de ejecución iOS.

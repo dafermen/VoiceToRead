@@ -380,6 +380,7 @@ private struct EnglishTrainingDetailView: View {
 private struct TrainingPracticeView: View {
     let store: EnglishTrainingStore
     let trainingID: UUID
+    @State private var fullScreen = false
     @State private var round: EnglishTrainingRound
     @State private var index = 0
     private var revealed: Bool { store.training(trainingID)?.showPracticeResponse ?? false }
@@ -486,13 +487,20 @@ private struct TrainingPracticeView: View {
                     } else {
                         roundSummary
                     }
-                }.padding()
+                }.padding().padding(.bottom, 64)
             }
             .onChange(of: practice.activity) { _, activity in
                 if activity == .example && revealed { proxy.scrollTo("trainingExpected", anchor: .center) }
             }
         }
+        .overlay(alignment: .bottomTrailing) {
+            ReaderFullScreenToggle(active: $fullScreen, identifier: "practiceFullScreen")
+                .padding(.trailing, 12).padding(.bottom, 12)
+        }
         .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
+        .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
+        .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
+        .statusBarHidden(fullScreen)
         .onAppear {
             practice.observeInterruptions()
             refreshLanguageSupport()

@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+- [Siete ajustes de lectores y filtros: Podcasts, Verbos, Cuentos y Mis prácticas — 2026-11-07](reader-presentation-2026-11-07.md).
+
 - [Estándar visual compartido: alcance, componentes y validación — 2026-11-05](interface-standardization.md).
 
 - [Navegación simplificada: lectores, reproductor único, ✓ y retirada de marcadores](simplified-navigation.md).

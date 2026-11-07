@@ -206,3 +206,20 @@ extension VerbConjugationTests {
         XCTAssertNil(normal.attribute(key, at: 0, effectiveRange: nil))
     }
 }
+
+
+extension VerbConjugationTests {
+    func testPendingCompletionFilterCombinesWithFavoritesWithoutChangingMarks() throws {
+        let verbs = try ConjugationVerb.load()
+        let marks = VerbLibraryMarks(favorites: ["be", "run"], completed: ["run"])
+        let saved = marks.data
+        let pending = verbs.filter { marks.includes($0.id, favoritesOnly: false, completion: .pending) }
+        let completed = verbs.filter { marks.includes($0.id, favoritesOnly: false, completion: .completed) }
+        XCTAssertEqual(Set(pending.map(\.id)).intersection(completed.map(\.id)), [])
+        XCTAssertEqual(pending.count + completed.count, verbs.count)
+        XCTAssertEqual(completed.map(\.id), ["run"])
+        XCTAssertEqual(verbs.filter { marks.includes($0.id, favoritesOnly: true, completion: .pending) }.map(\.id), ["be"])
+        XCTAssertTrue(verbs.allSatisfy { marks.includes($0.id, favoritesOnly: false, completion: .all) })
+        XCTAssertEqual(VerbLibraryMarks(data: saved), marks)
+    }
+}

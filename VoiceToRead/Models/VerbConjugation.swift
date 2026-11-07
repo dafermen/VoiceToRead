@@ -190,6 +190,10 @@ enum VerbTranslationPreference {
     }
 }
 
+enum VerbCompletionFilter: String, CaseIterable {
+    case all = "All verbs", pending = "Pending verbs", completed = "Completed verbs"
+}
+
 /// Manual, independent marks keyed by the stable English base form. These never assess
 /// pronunciation or alter personal practices, examples, audio or the conjugation catalog.
 struct VerbLibraryMarks: Codable, Equatable {
@@ -205,6 +209,14 @@ struct VerbLibraryMarks: Codable, Equatable {
     }
     mutating func toggleCompleted(_ id: String) {
         if completed.contains(id) { completed.remove(id) } else { completed.insert(id) }
+    }
+    func includes(_ id: String, favoritesOnly: Bool, completion: VerbCompletionFilter) -> Bool {
+        guard !favoritesOnly || favorites.contains(id) else { return false }
+        switch completion {
+        case .all: return true
+        case .pending: return !completed.contains(id)
+        case .completed: return completed.contains(id)
+        }
     }
     func includes(_ id: String, favoritesOnly: Bool, completedOnly: Bool) -> Bool {
         (!favoritesOnly || favorites.contains(id)) && (!completedOnly || completed.contains(id))

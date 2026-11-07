@@ -8,7 +8,7 @@ struct VerbReferenceLibraryView: View {
     @State private var tense: VerbTense = .all
     @State private var failed = false
     @State private var favoritesOnly = false
-    @State private var completedOnly = false
+    @State private var completion: VerbCompletionFilter = .all
     @AppStorage("verbReferenceMarks") private var marksData = Data()
     @Environment(\.dynamicTypeSize) private var typeSize
     private var marks: VerbLibraryMarks { VerbLibraryMarks(data: marksData) }
@@ -27,7 +27,7 @@ struct VerbReferenceLibraryView: View {
     }
     private var matches: [ConjugationVerb] {
         ConjugationVerb.matching(verbs, query: query, pattern: pattern, tense: tense).filter {
-            marks.includes($0.id, favoritesOnly: favoritesOnly, completedOnly: completedOnly)
+            marks.includes($0.id, favoritesOnly: favoritesOnly, completion: completion)
         }
     }
     var body: some View {
@@ -47,9 +47,7 @@ struct VerbReferenceLibraryView: View {
             }
             Section {
                 markFilters
-                if favoritesOnly && completedOnly {
-                    Text("Favorites marked as done").font(.caption).foregroundStyle(.secondary)
-                }
+
             }
             if failed {
                 Section {
@@ -59,7 +57,7 @@ struct VerbReferenceLibraryView: View {
             } else if matches.isEmpty && !verbs.isEmpty {
                 Section {
                     ContentUnavailableView.search(text: query)
-                    Button("Clear filters") { query = ""; pattern = .all; tense = .all; favoritesOnly = false; completedOnly = false }
+                    Button("Clear filters") { query = ""; pattern = .all; tense = .all; favoritesOnly = false; completion = .all }
                 }
             } else {
                 Section("Choose a verb") {
@@ -74,11 +72,12 @@ struct VerbReferenceLibraryView: View {
         .onChange(of: settings.interfaceLanguage) { _, _ in translationLocale = ""; interfaceAtSelection = "" }
     }
     private var markFilters: some View {
-        let layout = typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(spacing: 8)) : AnyLayout(HStackLayout(spacing: 12))
-        return layout {
+        return VStack(spacing: 8) {
             markFilter("Favorite verbs", symbol: favoritesOnly ? "star.fill" : "star", selected: favoritesOnly) { favoritesOnly.toggle() }
                 .accessibilityIdentifier("verbFavoritesFilter")
-            markFilter("Completed verbs", symbol: completedOnly ? "checkmark.square.fill" : "square", selected: completedOnly) { completedOnly.toggle() }
+            Picker("Completion", selection: $completion) {
+                ForEach(VerbCompletionFilter.allCases, id: \.self) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+            }.pickerStyle(.menu).frame(maxWidth: .infinity, minHeight: 48)
                 .accessibilityIdentifier("verbCompletedFilter")
         }
     }

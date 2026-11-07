@@ -412,3 +412,15 @@ struct AppOptionsLabel: View {
             .frame(minWidth: AppInterface.controlSize, minHeight: AppInterface.controlSize)
     }
 }
+
+
+struct ReaderFullScreenToggle: View {
+    @Binding var active: Bool
+    let identifier: String
+    var body: some View {
+        Button(uiKey(active ? "Exit full screen" : "Full screen"),
+               systemImage: active ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right") {
+            active.toggle()
+        }.buttonStyle(AppFloatingControlStyle()).accessibilityIdentifier(identifier)
+    }
+}

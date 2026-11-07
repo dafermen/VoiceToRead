@@ -52,6 +52,7 @@ private struct PodcastReaderView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.locale) private var locale
+    @Environment(\.dynamicTypeSize) private var typeSize
     init(episode: PodcastEpisode) {
         self.episode = episode
         _playback = State(initialValue: PodcastPlayback(episode: episode))
@@ -72,7 +73,7 @@ private struct PodcastReaderView: View {
                             Slider(value: $karaokeTextSize, in: 28...72, step: 4)
                                 .accessibilityLabel("Full-screen text size").accessibilityIdentifier("podcastKaraokeTextSize")
                         }
-                        Toggle("Show translation", isOn: $showTranslation)
+                        Toggle("Show translation", isOn: $showTranslation).accessibilityIdentifier("podcastShowTranslation")
                         Toggle("Follow narration", isOn: $followNarration)
                     }
                     Text("AI-generated voice by OpenAI · Marin").font(.caption).foregroundStyle(.secondary)
@@ -86,17 +87,25 @@ private struct PodcastReaderView: View {
                                     Text("Fragment \(segment.number)").font(.caption).foregroundStyle(.secondary)
                                     Spacer()
                                     Button { playback.startSegment(index) } label: {
-                                        Image(systemName: "play.fill").frame(minWidth: 44, minHeight: 44)
-                                    }.buttonStyle(.plain)
+                                        AppControlSymbol(symbol: "play.fill")
+                                    }.buttonStyle(.borderless)
                                         .accessibilityLabel(Text("Play fragment \(segment.number)"))
                                         .accessibilityIdentifier("podcastFragment-\(segment.number)")
                                 }
-                                Text(highlight(segment, index: index))
-                                    .font(.system(size: CGFloat(settings.captionSize), weight: settings.boldCaptions ? .bold : .regular))
-                                    .lineSpacing(CGFloat(settings.lineSpacing)).textSelection(.enabled)
-                                    .accessibilityIdentifier("podcastText-\(segment.number)")
-                                if showTranslation {
-                                    Text(verbatim: segment.es).font(.body).foregroundStyle(.secondary).textSelection(.enabled)
+                                if showTranslation && !typeSize.isAccessibilitySize {
+                                    ViewThatFits(in: .horizontal) {
+                                        HStack(alignment: .top, spacing: 12) {
+                                            transcriptCard(segment, index: index, translated: false).frame(minWidth: 300)
+                                            transcriptCard(segment, index: index, translated: true).frame(minWidth: 300)
+                                        }
+                                        VStack(spacing: 12) {
+                                            transcriptCard(segment, index: index, translated: false)
+                                            transcriptCard(segment, index: index, translated: true)
+                                        }
+                                    }
+                                } else {
+                                    transcriptCard(segment, index: index, translated: false)
+                                    if showTranslation { transcriptCard(segment, index: index, translated: true) }
                                 }
                             }.padding(.vertical, 4).id(segment.number)
                         }
@@ -105,6 +114,7 @@ private struct PodcastReaderView: View {
                     ContentUnavailableView("Listening without text", systemImage: "headphones",
                         description: Text("Turn on Show transcript whenever you want to check the words."))
                 }
+                Color.clear.frame(height: 64).listRowBackground(Color.clear).listRowSeparator(.hidden).accessibilityHidden(true)
             }
             .onAppear {
                 if showTranscript && followNarration && (playback.index > 0 || playback.state != .idle) {
@@ -129,20 +139,16 @@ private struct PodcastReaderView: View {
             if fullScreen { karaokeReader }
             else { transcriptReader }
         }
+        .overlay(alignment: .bottomTrailing) {
+            ReaderFullScreenToggle(active: $fullScreen, identifier: fullScreen ? "podcastFullScreenExit" : "podcastFullScreen")
+                .padding(.trailing, 12).padding(.bottom, 12)
+        }
         .navigationTitle(locale.language.languageCode?.identifier == "es" ? episode.titleEs : episode.titleEn)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
         .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
         .statusBarHidden(fullScreen)
-        .toolbar {
-            if !fullScreen {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Full screen", systemImage: "arrow.up.left.and.arrow.down.right") { fullScreen = true }
-                        .buttonStyle(AppFloatingControlStyle())
-                        .accessibilityIdentifier("podcastFullScreen")
-                }
-            }
-        }
+
         .safeAreaInset(edge: .bottom, spacing: 0) { if !fullScreen { playbackControls } }
         .onAppear { playback.observeInterruptions() }
         .onChange(of: scenePhase) { _, phase in if phase != .active { playback.pause() } }
@@ -153,12 +159,6 @@ private struct PodcastReaderView: View {
     }
     private var karaokeReader: some View {
         VStack(spacing: 0) {
-            HStack(spacing: 8) {
-                Spacer(minLength: 4)
-                Button("Exit full screen", systemImage: "arrow.down.right.and.arrow.up.left") { fullScreen = false }
-                    .buttonStyle(AppFloatingControlStyle())
-                    .accessibilityIdentifier("podcastFullScreenExit")
-            }.padding(.horizontal, 16).padding(.vertical, 4)
             if let message = playback.message {
                 Text(LocalizedStringKey(message)).font(.caption).foregroundStyle(.secondary).padding(.horizontal)
             }
@@ -205,6 +205,17 @@ private struct PodcastReaderView: View {
             }.frame(maxWidth: .infinity)
         }.buttonStyle(.plain).disabled(!enabled).accessibilityLabel(Text(LocalizedStringKey(title)))
     }
+    private func transcriptCard(_ segment: PodcastEpisode.Segment, index: Int, translated: Bool) -> some View {
+        let language: CaptureLanguage = translated ? .spanish : .english
+        return VStack(alignment: .leading, spacing: 8) {
+            Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
+                .font(.caption.weight(.semibold))
+            Text(translated ? AttributedString(segment.es) : highlight(segment, index: index))
+                .font(translated ? .body : .system(size: CGFloat(settings.captionSize), weight: settings.boldCaptions ? .bold : .regular))
+                .lineSpacing(CGFloat(settings.lineSpacing)).textSelection(.enabled)
+                .accessibilityIdentifier((translated ? "podcastTranslation-" : "podcastText-") + String(segment.number))
+        }.modifier(LiveLanguageCard(color: settings.color(for: language), highContrast: settings.highContrast))
+    }
     private func highlight(_ segment: PodcastEpisode.Segment, index: Int) -> AttributedString {
         var text = AttributedString(segment.en)
         if playback.index == index, let spoken = playback.range,
@@ -220,9 +231,10 @@ private struct PodcastReaderView: View {
     }
 }
 
-/// A single scrolling fragment, using the same measured UTF-16 word ranges as the normal reader.
+
+/// One scrolling pair per audio fragment. Sentence ranges retain the original cue offsets.
 @MainActor
-private struct PodcastKaraokeText: UIViewRepresentable {
+private struct PodcastKaraokeText: View {
     let english: String
     let translation: String?
     let spoken: NSRange?
@@ -230,87 +242,72 @@ private struct PodcastKaraokeText: UIViewRepresentable {
     let points: Double
     let bold: Bool
     let spacing: Double
-
-    func makeCoordinator() -> Coordinator { Coordinator() }
-    func makeUIView(context: Context) -> PodcastKaraokeTextView {
-        let view = PodcastKaraokeTextView()
-        view.isEditable = false; view.isSelectable = true; view.backgroundColor = .clear
-        view.textContainerInset = UIEdgeInsets(top: 12, left: 16, bottom: 18, right: 16)
-        view.textContainer.lineFragmentPadding = 0
-        view.contentInsetAdjustmentBehavior = .never
-        view.adjustsFontForContentSizeCategory = true
-        view.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        view.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
-        view.accessibilityIdentifier = "podcastKaraokeText"
-        return view
+    @Environment(AppSettings.self) private var settings
+    @Environment(\.dynamicTypeSize) private var typeSize
+    @ScaledMetric(relativeTo: .largeTitle) private var scale = 1.0
+    @State private var followedSentence: Int?
+    private var ranges: [NSRange] { PodcastReadingParagraphs.ranges(in: english) }
+    private var activeSentence: Int? {
+        guard let spoken, Range(spoken, in: english) != nil else { return nil }
+        return ranges.firstIndex { NSIntersectionRange($0, spoken).length > 0 }
     }
-    func updateUIView(_ view: PodcastKaraokeTextView, context: Context) {
-        let font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(
-            for: UIFont.systemFont(ofSize: CGFloat(points), weight: bold ? .bold : .medium),
-            compatibleWith: view.traitCollection)
-        let translationFont = UIFontMetrics(forTextStyle: .body).scaledFont(
-            for: UIFont.systemFont(ofSize: CGFloat(max(20, points * 0.65))), compatibleWith: view.traitCollection)
-        let color = UIColor.label.resolvedColor(with: view.traitCollection)
-        let secondary = UIColor.secondaryLabel.resolvedColor(with: view.traitCollection)
-        let text = english + (translation.map { "\n\n" + $0 } ?? "")
-        let cache = context.coordinator
-        if cache.text != text || cache.font != font || cache.translationFont != translationFont ||
-            cache.color != color || cache.secondary != secondary || cache.spacing != spacing {
-            let paragraph = NSMutableParagraphStyle(); paragraph.lineSpacing = CGFloat(spacing + 6)
-            let value = NSMutableAttributedString(string: text, attributes: [.font: font, .foregroundColor: color, .paragraphStyle: paragraph])
-            if let translation, !translation.isEmpty {
-                value.addAttributes([.font: translationFont, .foregroundColor: secondary],
-                    range: NSRange(location: english.utf16.count + 2, length: translation.utf16.count))
+    var body: some View {
+        GeometryReader { geometry in
+            ScrollViewReader { proxy in
+                ScrollView {
+                    let columns = translation != nil && geometry.size.width >= 700 && !typeSize.isAccessibilitySize
+                    (columns ? AnyLayout(HStackLayout(alignment: .top, spacing: 12)) : AnyLayout(VStackLayout(alignment: .leading, spacing: 12))) {
+                        languageCard(english, language: .english, translated: false)
+                            .accessibilityIdentifier("podcastKaraokeText")
+                        if let translation {
+                            languageCard(translation, language: .spanish, translated: true)
+                                .accessibilityIdentifier("podcastKaraokeTranslation")
+                        }
+                    }.padding(16).padding(.bottom, 64)
+                }
+                .accessibilityIdentifier("podcastKaraokeScroll")
+                .onAppear { follow(proxy, force: true) }
+                .onChange(of: activeSentence) { _, _ in follow(proxy) }
+                .onChange(of: following) { _, _ in follow(proxy, force: true) }
+                .onChange(of: geometry.size) { _, _ in follow(proxy, force: true) }
             }
-            view.attributedText = value
-            cache.text = text; cache.font = font; cache.translationFont = translationFont
-            cache.color = color; cache.secondary = secondary; cache.spacing = spacing; cache.range = nil
-        }
-        let next = spoken.flatMap { $0.length > 0 && Range($0, in: english) != nil ? $0 : nil }
-        view.followWords = following; view.spokenRange = next
-        if cache.range != next {
-            view.textStorage.beginEditing()
-            if let old = cache.range, NSMaxRange(old) <= view.textStorage.length {
-                view.textStorage.removeAttribute(.backgroundColor, range: old)
-                view.textStorage.addAttribute(.foregroundColor, value: color, range: old)
-            }
-            if let next {
-                view.textStorage.addAttributes([.backgroundColor: UIColor(red: 1, green: 0.9, blue: 0.4, alpha: 1), .foregroundColor: UIColor.black], range: next)
-            }
-            view.textStorage.endEditing(); cache.range = next
-            view.followSpokenWord()
-        } else if following && !cache.wasFollowing { view.followSpokenWord() }
-        cache.wasFollowing = following
-    }
-    final class Coordinator {
-        var text: String?
-        var font: UIFont?
-        var translationFont: UIFont?
-        var color: UIColor?
-        var secondary: UIColor?
-        var spacing: Double?
-        var range: NSRange?
-        var wasFollowing = false
-    }
-}
-
-/// Rotation reflows text and keeps the current word visible without touching the audio clock.
-@MainActor
-private final class PodcastKaraokeTextView: UITextView {
-    var spokenRange: NSRange?
-    var followWords = true
-    private var previousSize = CGSize.zero
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if previousSize != bounds.size {
-            previousSize = bounds.size
-            followSpokenWord()
         }
     }
-    func followSpokenWord() {
-        guard followWords, !isDragging, !isDecelerating, let range = spokenRange,
-              range.location != NSNotFound, range.location >= 0, range.length > 0,
-              range.location <= textStorage.length, range.length <= textStorage.length - range.location else { return }
-        UIView.performWithoutAnimation { scrollRangeToVisible(range) }
+    private func languageCard(_ text: String, language: CaptureLanguage, translated: Bool) -> some View {
+        let paragraphs = PodcastReadingParagraphs.ranges(in: text)
+        return VStack(alignment: .leading, spacing: max(16, spacing + 12)) {
+            Text(uiKey(translated ? "Translation \(language.name)" : "Original \(language.name)"))
+                .font(.caption.weight(.semibold))
+            ForEach(paragraphs.indices, id: \.self) { index in
+                Text(highlight(text, range: paragraphs[index], translated: translated))
+                    .font(.system(size: CGFloat((translated ? max(20, points * 0.65) : points) * scale), weight: bold ? .bold : .medium))
+                    .lineSpacing(CGFloat(spacing + 6)).textSelection(.enabled)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .id((translated ? "podcastTranslation-" : "podcastSentence-") + String(index))
+            }
+        }
+        .modifier(LiveLanguageCard(color: settings.color(for: language), highContrast: settings.highContrast))
+        .accessibilityElement(children: .contain)
+    }
+    private func highlight(_ text: String, range: NSRange, translated: Bool) -> AttributedString {
+        let value = (text as NSString).substring(with: range)
+        var attributed = AttributedString(value)
+        if !translated, let spoken, Range(spoken, in: text) != nil {
+            let intersection = NSIntersectionRange(range, spoken)
+            if intersection.length > 0 {
+                let local = NSRange(location: intersection.location - range.location, length: intersection.length)
+                if let selected = Range<AttributedString.Index>(local, in: attributed) {
+                    attributed[selected].backgroundColor = Color(red: 1, green: 0.9, blue: 0.4)
+                    attributed[selected].foregroundColor = .black
+                }
+            }
+        }
+        return attributed
+    }
+    private func follow(_ proxy: ScrollViewProxy, force: Bool = false) {
+        guard following, let activeSentence, force || followedSentence != activeSentence else { return }
+        // Silent gaps between word cues must not repeatedly jump back to the sentence's start.
+        followedSentence = activeSentence
+        proxy.scrollTo("podcastSentence-" + String(activeSentence), anchor: .top)
     }
 }

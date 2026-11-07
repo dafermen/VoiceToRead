@@ -54,3 +54,24 @@ struct PodcastEpisode: Codable, Identifiable, Equatable {
         }
     }
 }
+
+
+/// Presentation ranges reference the original UTF-16 text used by the audio cues.
+enum PodcastReadingParagraphs {
+    static func ranges(in text: String) -> [NSRange] {
+        var result: [NSRange] = []
+        let whole = text.startIndex..<text.endIndex
+        text.enumerateSubstrings(in: whole, options: .byParagraphs) { _, paragraph, _, _ in
+            text.enumerateSubstrings(in: paragraph, options: .bySentences) { _, sentence, _, _ in
+                let trimmed = String(text[sentence]).trimmingCharacters(in: .whitespacesAndNewlines)
+                if !trimmed.isEmpty, let range = text.range(of: trimmed, range: sentence) {
+                    result.append(NSRange(range, in: text))
+                }
+            }
+        }
+        if result.isEmpty, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            result = [NSRange(whole, in: text)]
+        }
+        return result
+    }
+}

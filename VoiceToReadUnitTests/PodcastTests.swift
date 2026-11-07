@@ -107,3 +107,29 @@ private final class FakePodcastOutput: PodcastAudioOutput {
     func pause() { }
     func stop() { }
 }
+
+
+extension PodcastTests {
+    func testReadingParagraphsRespectSentencesNewlinesAndOriginalUTF16Cues() throws {
+        let text = "Hello, café 😊. How are you?\nWe are ready!"
+        let ranges = PodcastReadingParagraphs.ranges(in: text)
+        XCTAssertEqual(ranges.map { (text as NSString).substring(with: $0) }, ["Hello, café 😊.", "How are you?", "We are ready!"])
+        let word = (text as NSString).range(of: "café")
+        let sentence = try XCTUnwrap(ranges.first { NSIntersectionRange($0, word).length > 0 })
+        let local = NSRange(location: word.location - sentence.location, length: word.length)
+        XCTAssertEqual(((text as NSString).substring(with: sentence) as NSString).substring(with: local), "café")
+        XCTAssertTrue(PodcastReadingParagraphs.ranges(in: "\n  ").isEmpty)
+    }
+    func testEveryBundledWordCueBelongsToOneReadableSentence() throws {
+        for episode in try PodcastEpisode.load() {
+            for segment in episode.segments {
+                let ranges = PodcastReadingParagraphs.ranges(in: segment.en)
+                let cues = try JSONDecoder().decode(GuidedWordTiming.self, from: Data(contentsOf: episode.resourceURL(number: segment.number, fileExtension: "json")))
+                for cue in cues.words {
+                    let range = NSRange(location: cue.location, length: cue.length)
+                    XCTAssertTrue(ranges.contains { NSIntersectionRange($0, range).length == range.length })
+                }
+            }
+        }
+    }
+}
