@@ -223,17 +223,12 @@ private struct StoryReaderView: View {
                     StoryReadingText(text: translated ? story.translatedText : story.sourceText,
                         spoken: narrator.progress.text == (translated ? story.translatedText : story.sourceText) ? narrator.progress.range : nil, following: narrator.state == .playing,
                         points: settings.captionSize, bold: settings.boldCaptions, spacing: settings.lineSpacing,
-                        foreground: settings.readerPaper != .system && !settings.highContrast ? .black : .label,
-                        bottomContentInset: 64)
+                        foreground: settings.readerPaper != .system && !settings.highContrast ? .black : .label)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(ReaderSurface(settings: settings))
-                        .overlay(alignment: .bottomTrailing) {
-                            ReaderFullScreenToggle(active: $fullScreen, identifier: "storyFullScreen")
-                                .disabled(!fullScreen && job != nil)
-                                .padding(.trailing, 12).padding(.bottom, 12)
-                        }
                     if !fullScreen { Divider(); controls(story) }
                 }
+                .modifier(ReaderFullScreenPresentation(active: $fullScreen, identifier: "storyFullScreen", enabled: job == nil))
                 .navigationTitle(story.title).navigationBarTitleDisplayMode(.inline)
                 .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
                 .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
@@ -416,7 +411,6 @@ private struct StoryReadingText: UIViewRepresentable {
     let bold: Bool
     let spacing: Double
     let foreground: UIColor
-    var bottomContentInset: CGFloat = 0
     func makeCoordinator() -> Coordinator { Coordinator() }
     func makeUIView(context: Context) -> UITextView {
         let view = UITextView()
@@ -428,7 +422,6 @@ private struct StoryReadingText: UIViewRepresentable {
         return view
     }
     func updateUIView(_ view: UITextView, context: Context) {
-        view.textContainerInset.bottom = 16 + bottomContentInset
         let font = UIFontMetrics(forTextStyle: .body).scaledFont(
             for: UIFont.systemFont(ofSize: CGFloat(CaptionTextSize.clamped(points)), weight: bold ? .semibold : .regular),
             compatibleWith: view.traitCollection)

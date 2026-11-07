@@ -487,16 +487,14 @@ private struct TrainingPracticeView: View {
                     } else {
                         roundSummary
                     }
-                }.padding().padding(.bottom, 64)
+                }.padding()
             }
+            .accessibilityIdentifier("practiceReader")
             .onChange(of: practice.activity) { _, activity in
                 if activity == .example && revealed { proxy.scrollTo("trainingExpected", anchor: .center) }
             }
         }
-        .overlay(alignment: .bottomTrailing) {
-            ReaderFullScreenToggle(active: $fullScreen, identifier: "practiceFullScreen")
-                .padding(.trailing, 12).padding(.bottom, 12)
-        }
+        .modifier(ReaderFullScreenPresentation(active: $fullScreen, identifier: "practiceFullScreen"))
         .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
         .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
         .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)

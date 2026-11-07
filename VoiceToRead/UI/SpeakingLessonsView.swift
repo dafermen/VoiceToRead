@@ -89,6 +89,7 @@ private struct SpeakingLessonView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dynamicTypeSize) private var typeSize
+    @State private var fullScreen = false
     @State private var narrator = GuidedLessonAudio()
     @AppStorage("guidedLessonSupportLocale") private var supportLocale = CaptureLanguage.spanish.rawValue
     @State private var support: GuidedLessonSupport?
@@ -165,9 +166,12 @@ private struct SpeakingLessonView: View {
                 Section {
                     DisclosureGroup("Lesson card") { card }
                 }
-            }
+            }.accessibilityIdentifier("guidedLessonReader")
         }
         .navigationTitle(Text(verbatim: lesson.title.en)).navigationBarTitleDisplayMode(.inline)
+        .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
+        .toolbar(fullScreen ? .hidden : .visible, for: .tabBar)
+        .statusBarHidden(fullScreen)
         .safeAreaInset(edge: .bottom) {
             if narrator.active {
                 (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12)) : AnyLayout(HStackLayout(alignment: .center, spacing: 12))) {
@@ -185,6 +189,7 @@ private struct SpeakingLessonView: View {
                 }.padding(.horizontal).background(.regularMaterial)
             }
         }
+        .modifier(ReaderFullScreenPresentation(active: $fullScreen, identifier: "guidedFullScreen"))
         .onAppear { narrator.observeInterruptions(); loadSupport() }
         .onChange(of: supportLocale) { _, _ in narrator.stop(); loadSupport() }
         .onChange(of: mode) { _, _ in narrator.stop() }

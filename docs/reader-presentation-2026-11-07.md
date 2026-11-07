@@ -1,5 +1,7 @@
 # Lectores y filtros: siete ajustes — 2026-11-07
 
+**Corrección posterior:** la ubicación superpuesta se sustituyó por el acceso junto a las pestañas y una fila de salida en pantalla completa. Podcasts también iguala las fuentes y Lecciones guiadas incorpora ampliación. Ver [corrección vigente y validación](fullscreen-layout-corrections.md).
+
 ## Cambios visibles
 
 1. **Podcasts, expandir/contraer:** botón circular flotante de 48 puntos, abajo a la derecha, tanto en la vista normal como en pantalla completa. En vista normal queda en el área de lectura, encima del transporte; en pantalla completa solo queda Contraer. Se respetan las áreas seguras.

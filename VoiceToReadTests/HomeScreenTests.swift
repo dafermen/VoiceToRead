@@ -3,6 +3,39 @@ import UIKit
 
 final class HomeScreenTests: XCTestCase {
     @MainActor
+    private func assertReaderEntry(_ identifier: String, in app: XCUIApplication,
+                                   file: StaticString = #filePath, line: UInt = #line) {
+        let button = app.buttons[identifier]
+        XCTAssertTrue(button.waitForExistence(timeout: 5), file: file, line: line)
+        XCTAssertTrue(button.isHittable, file: file, line: line)
+        XCTAssertEqual(button.frame.width, 48, accuracy: 1, file: file, line: line)
+        XCTAssertEqual(button.frame.height, 48, accuracy: 1, file: file, line: line)
+        XCTAssertGreaterThan(button.frame.midX, app.frame.midX, file: file, line: line)
+        XCTAssertGreaterThan(button.frame.minY, app.frame.height * 0.65, file: file, line: line)
+        for identifier in ["podcastPlayPause", "podcastStop", "storyPlay", "storyStop", "recordTrainingAttempt", "revealTrainingResponse"] {
+            let control = app.buttons[identifier]
+            if control.exists && control.isHittable {
+                XCTAssertFalse(button.frame.intersects(control.frame), "Expand must not cover an action", file: file, line: line)
+            }
+        }
+    }
+
+    @MainActor
+    private func assertReservedReaderExit(_ identifier: String, exitID: String? = nil, readerID: String,
+                                          in app: XCUIApplication, file: StaticString = #filePath, line: UInt = #line) {
+        let footer = app.descendants(matching: .any)[identifier + "Footer"].firstMatch
+        XCTAssertTrue(footer.waitForExistence(timeout: 5), file: file, line: line)
+        let exit = app.buttons[exitID ?? identifier]
+        XCTAssertTrue(exit.isHittable, file: file, line: line)
+        XCTAssertEqual(exit.label, "Exit full screen", file: file, line: line)
+        XCTAssertEqual(exit.frame.width, 48, accuracy: 1, file: file, line: line)
+        let reader = app.descendants(matching: .any)[readerID].firstMatch
+        XCTAssertTrue(reader.exists, file: file, line: line)
+        XCTAssertGreaterThanOrEqual(footer.frame.minY, reader.frame.maxY - 1, "Exit has a separate row below the reader", file: file, line: line)
+        XCTAssertGreaterThanOrEqual(exit.frame.minY, footer.frame.minY, file: file, line: line)
+    }
+
+    @MainActor
     private func communicationMode(in app: XCUIApplication) -> XCUIElement {
         app.descendants(matching: .any).matching(NSPredicate(format: "identifier == %@ OR identifier == %@", "communicationMode", "communicationModeGrid")).firstMatch
     }
@@ -165,7 +198,9 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.buttons["storyTranslationTarget"].isHittable)
         let storyText = reader.value as? String
         let expandStory = app.buttons["storyFullScreen"]
+        assertReaderEntry("storyFullScreen", in: app)
         expandStory.tap()
+        assertReservedReaderExit("storyFullScreen", readerID: "storyReadingText", in: app)
         XCTAssertEqual(expandStory.label, "Exit full screen")
         XCTAssertFalse(app.buttons["storyPlay"].exists)
         XCTAssertEqual(reader.value as? String, storyText)
@@ -275,6 +310,18 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertEqual(pause.label, "Pause")
         pause.tap()
         XCTAssertEqual(pause.label, "Resume")
+        assertReaderEntry("guidedFullScreen", in: app)
+        let guidedExpand = app.buttons["guidedFullScreen"]
+        guidedExpand.tap()
+        assertReservedReaderExit("guidedFullScreen", readerID: "guidedLessonReader", in: app)
+        XCTAssertEqual(pause.label, "Resume", "Expanding must not resume or restart narration")
+        XCTAssertEqual(app.buttons["lessonPlay-1"].label, "Stop")
+        let footer = app.descendants(matching: .any)["guidedFullScreenFooter"].firstMatch
+        XCTAssertLessThanOrEqual(pause.frame.maxY, footer.frame.minY, "Transport stays above the exit row")
+        guidedExpand.tap()
+        assertReaderEntry("guidedFullScreen", in: app)
+        XCTAssertEqual(pause.label, "Resume")
+        XCTAssertTrue(app.staticTexts["lessonEnglish-1"].isHittable, "The reading position remains on the same paragraph")
         pause.tap()
         XCTAssertEqual(pause.label, "Pause")
         app.buttons["guidedStopPlayback"].tap()
@@ -1784,7 +1831,9 @@ final class HomeScreenTests: XCTestCase {
         XCTAssertTrue(app.staticTexts["trainingExpected"].exists)
         let promptBeforeFullscreen = app.staticTexts["trainingPrompt"].label
         let practiceExpand = app.buttons["practiceFullScreen"]
+        assertReaderEntry("practiceFullScreen", in: app)
         practiceExpand.tap()
+        assertReservedReaderExit("practiceFullScreen", readerID: "practiceReader", in: app)
         XCTAssertEqual(practiceExpand.label, "Exit full screen")
         XCTAssertEqual(app.staticTexts["trainingPrompt"].label, promptBeforeFullscreen)
         XCTAssertTrue(app.staticTexts["trainingExpected"].exists)
@@ -2810,6 +2859,10 @@ extension HomeScreenTests {
         app.buttons["podcast-POD-B1B2-001"].tap()
         let expand = app.buttons["podcastFullScreen"]
         XCTAssertTrue(expand.waitForExistence(timeout: 5))
+        assertReaderEntry("podcastFullScreen", in: app)
+        let metadata = app.staticTexts["podcastLanguageAndLevel"]
+        XCTAssertEqual(metadata.label, "English · B1–B2")
+        XCTAssertFalse(metadata.label.contains("LocalizedStringKey"))
         let normal = app.segmentedControls["podcastSpeed"].buttons["Normal · 1×"]
         normal.tap()
         app.buttons["Reading options"].tap()
@@ -2825,6 +2878,7 @@ extension HomeScreenTests {
         expand.tap()
         let text = app.otherElements["podcastKaraokeText"]
         XCTAssertTrue(text.waitForExistence(timeout: 5))
+        assertReservedReaderExit("podcastFullScreen", exitID: "podcastFullScreenExit", readerID: "podcastKaraokeScroll", in: app)
         let hiddenTabs = XCTNSPredicateExpectation(predicate: NSPredicate(format: "hittable == false"), object: app.tabBars.firstMatch)
         XCTAssertEqual(XCTWaiter.wait(for: [hiddenTabs], timeout: 5), .completed)
         XCTAssertFalse(app.buttons["podcastPlayPause"].exists)
@@ -2850,6 +2904,9 @@ extension HomeScreenTests {
         XCTAssertGreaterThan(exit.frame.midX, viewport.midX)
         XCTAssertGreaterThan(exit.frame.midY, viewport.midY)
         XCTAssertEqual(exit.frame.width, 48, accuracy: 1)
+        assertReservedReaderExit("podcastFullScreen", exitID: "podcastFullScreenExit", readerID: "podcastKaraokeScroll", in: app)
+        let paired = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        paired.name = "Podcast-matched-fonts-reserved-exit"; paired.lifetime = .keepAlways; add(paired)
         exit.tap()
         XCUIDevice.shared.orientation = .portrait
         XCTAssertTrue(expand.waitForExistence(timeout: 5))

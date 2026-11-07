@@ -722,8 +722,9 @@ struct HomeFullScreenControl: Equatable {
     let isFullScreen: Bool
     let identifier: String
     let selection: Binding<Bool>
+    var enabled = true
     static func == (lhs: Self, rhs: Self) -> Bool {
-        lhs.id == rhs.id && lhs.isFullScreen == rhs.isFullScreen && lhs.identifier == rhs.identifier
+        lhs.id == rhs.id && lhs.isFullScreen == rhs.isFullScreen && lhs.identifier == rhs.identifier && lhs.enabled == rhs.enabled
     }
 }
 
@@ -738,12 +739,13 @@ struct HomeFullScreenSource: ViewModifier {
     @Binding var selection: Bool
     let hosted: Bool
     let identifier: String
+    var enabled = true
     @State private var visible = false
     @State private var id = UUID()
     func body(content: Content) -> some View {
         content
             .preference(key: HomeFullScreenControlKey.self, value: hosted && visible
-                ? HomeFullScreenControl(id: id, isFullScreen: selection, identifier: identifier, selection: $selection) : nil)
+                ? HomeFullScreenControl(id: id, isFullScreen: selection, identifier: identifier, selection: $selection, enabled: enabled) : nil)
             .onAppear { visible = true }
             .onDisappear { visible = false }
     }
@@ -785,5 +787,32 @@ struct HomeCircleToolbarItem<Content: View>: ToolbarContent {
         } else {
             ToolbarItem(placement: .topBarTrailing) { content() }
         }
+    }
+}
+
+
+/// Entry lives beside Home/Settings, exactly like Listen. Fullscreen exit owns its own
+/// safe-area row, outside the reading and transport viewports; neither is overlaid.
+struct ReaderFullScreenPresentation: ViewModifier {
+    @Binding var active: Bool
+    let identifier: String
+    var exitIdentifier: String? = nil
+    var enabled = true
+    func body(content: Content) -> some View {
+        VStack(spacing: 0) {
+            // Always keep content in this slot; toggling changes its available height only.
+            content.frame(maxWidth: .infinity, maxHeight: .infinity)
+            if active {
+                HStack(spacing: 0) {
+                    Spacer(minLength: 0)
+                    ReaderFullScreenToggle(active: $active, identifier: exitIdentifier ?? identifier)
+                }
+                .padding(.horizontal, 12).padding(.vertical, 8)
+                .background(Color(uiColor: .systemBackground))
+                .accessibilityElement(children: .contain)
+                .accessibilityIdentifier(identifier + "Footer")
+            }
+        }
+        .modifier(HomeFullScreenSource(selection: $active, hosted: true, identifier: identifier, enabled: enabled))
     }
 }

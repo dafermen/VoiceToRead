@@ -18,7 +18,7 @@ struct PodcastLibraryView: View {
                         Label(title(episode), systemImage: "headphones").font(.headline)
                         Text(verbatim: locale.language.languageCode?.identifier == "es" ? episode.summaryEs : episode.summaryEn)
                             .font(.subheadline).foregroundStyle(.secondary)
-                        Text(verbatim: "\(CaptureLanguage.english.pickerLabel) · \(episode.level) · \(Int((episode.normalDuration / 60).rounded(.up))) min")
+                        (Text(CaptureLanguage.english.pickerLabel) + Text(verbatim: " · \(episode.level) · \(Int((episode.normalDuration / 60).rounded(.up))) min"))
                             .font(.caption).foregroundStyle(.secondary)
                     }.padding(.vertical, 8)
                 }.accessibilityIdentifier("podcast-" + episode.id)
@@ -61,7 +61,8 @@ private struct PodcastReaderView: View {
         ScrollViewReader { proxy in
             List {
                 Section {
-                    Text(verbatim: "\(CaptureLanguage.english.pickerLabel) · \(episode.level)").font(.caption).foregroundStyle(.secondary)
+                    (Text(CaptureLanguage.english.pickerLabel) + Text(verbatim: " · \(episode.level)"))
+                        .font(.caption).foregroundStyle(.secondary).accessibilityIdentifier("podcastLanguageAndLevel")
                     Picker("Playback speed", selection: Binding(get: { playback.slow }, set: { playback.slow = $0 })) {
                         Text("Slow · 0.85×").tag(true)
                         Text("Normal · 1×").tag(false)
@@ -114,7 +115,6 @@ private struct PodcastReaderView: View {
                     ContentUnavailableView("Listening without text", systemImage: "headphones",
                         description: Text("Turn on Show transcript whenever you want to check the words."))
                 }
-                Color.clear.frame(height: 64).listRowBackground(Color.clear).listRowSeparator(.hidden).accessibilityHidden(true)
             }
             .onAppear {
                 if showTranscript && followNarration && (playback.index > 0 || playback.state != .idle) {
@@ -139,10 +139,7 @@ private struct PodcastReaderView: View {
             if fullScreen { karaokeReader }
             else { transcriptReader }
         }
-        .overlay(alignment: .bottomTrailing) {
-            ReaderFullScreenToggle(active: $fullScreen, identifier: fullScreen ? "podcastFullScreenExit" : "podcastFullScreen")
-                .padding(.trailing, 12).padding(.bottom, 12)
-        }
+        .modifier(ReaderFullScreenPresentation(active: $fullScreen, identifier: "podcastFullScreen", exitIdentifier: "podcastFullScreenExit"))
         .navigationTitle(locale.language.languageCode?.identifier == "es" ? episode.titleEs : episode.titleEn)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(fullScreen ? .hidden : .visible, for: .navigationBar)
@@ -263,7 +260,7 @@ private struct PodcastKaraokeText: View {
                             languageCard(translation, language: .spanish, translated: true)
                                 .accessibilityIdentifier("podcastKaraokeTranslation")
                         }
-                    }.padding(16).padding(.bottom, 64)
+                    }.padding(16)
                 }
                 .accessibilityIdentifier("podcastKaraokeScroll")
                 .onAppear { follow(proxy, force: true) }
@@ -280,7 +277,7 @@ private struct PodcastKaraokeText: View {
                 .font(.caption.weight(.semibold))
             ForEach(paragraphs.indices, id: \.self) { index in
                 Text(highlight(text, range: paragraphs[index], translated: translated))
-                    .font(.system(size: CGFloat((translated ? max(20, points * 0.65) : points) * scale), weight: bold ? .bold : .medium))
+                    .font(.system(size: CGFloat(points * scale), weight: bold ? .bold : .medium))
                     .lineSpacing(CGFloat(spacing + 6)).textSelection(.enabled)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .id((translated ? "podcastTranslation-" : "podcastSentence-") + String(index))

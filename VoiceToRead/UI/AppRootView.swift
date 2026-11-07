@@ -130,6 +130,7 @@ struct AppRootView: View {
                 control.selection.wrappedValue = true
             }
             .buttonStyle(AppFloatingControlStyle())
+            .disabled(!control.enabled)
             .accessibilityIdentifier(control.identifier)
         }
     }

@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Accesos inferiores y fuentes — 2026-11-07
+
+[Corrección, verificaciones locales y regresiones nativas pendientes](fullscreen-layout-corrections.md). Los accesos normales reutilizan la raíz de Escuchar; la salida ocupa una fila separada del lector.
+
 ## Lectores y filtros — 2026-11-07
 
 [Alcance, verificaciones locales y pruebas nativas pendientes](reader-presentation-2026-11-07.md). Las nuevas regresiones de filtros, rangos UTF-16 y pantalla completa deben ejecutarse en Mac; los controles estáticos no demuestran funcionamiento en iPhone.
