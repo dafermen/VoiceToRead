@@ -71,7 +71,7 @@ private struct PodcastReaderView: View {
                     DisclosureGroup("Reading options") {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Full-screen text size").font(.subheadline)
-                            Slider(value: $karaokeTextSize, in: 28...72, step: 4)
+                            Slider(value: $karaokeTextSize, in: 16...72, step: 2)
                                 .accessibilityLabel("Full-screen text size").accessibilityIdentifier("podcastKaraokeTextSize")
                         }
                         Toggle("Show translation", isOn: $showTranslation).accessibilityIdentifier("podcastShowTranslation")
@@ -152,7 +152,7 @@ private struct PodcastReaderView: View {
         .onDisappear { playback.close() }
     }
     private var karaokePoints: Double {
-        karaokeTextSize.isFinite ? min(72, max(28, karaokeTextSize)) : 40
+        karaokeTextSize.isFinite ? min(72, max(16, karaokeTextSize)) : 40
     }
     private var karaokeReader: some View {
         VStack(spacing: 0) {

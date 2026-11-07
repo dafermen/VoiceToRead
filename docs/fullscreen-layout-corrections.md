@@ -11,6 +11,14 @@ Fecha: 2026-11-07. Sustituye la ubicación superpuesta de los lectores de la ent
 5. **Mis prácticas:** usa la misma ubicación y fila de salida. Se conserva la misma frase, respuesta visible/oculta, ronda, grabación/ejemplo y resultados; no se abre un segundo lector.
 6. **Lecciones guiadas:** incorpora pantalla completa. La misma lista conserva sus IDs, posición y controles; se ocultan navegación y pestañas. Si la narración está activa, Pausar/Reanudar y Detener permanecen encima de la fila de Contraer.
 
+## Tamaño menor de Podcasts — ajuste posterior
+
+Opciones de lectura > Tamaño del texto en pantalla completa permite ahora **16–72 puntos**, con pasos de dos puntos (antes 28–72, con pasos de cuatro). El original y la traducción siguen compartiendo el mismo tamaño y la misma escala de accesibilidad.
+
+Se conserva la clave `podcastKaraokeTextSize`, el valor elegido anteriormente y el predeterminado de 40 puntos. El usuario puede bajar el deslizador hasta el nuevo mínimo. No cambia el tamaño global de Ajustes, la vista normal de Podcasts ni los demás módulos. El límite aplicado al lector también admite 16 puntos; cambiar solo el deslizador habría dejado el mínimo visual en 28.
+
+Verificaciones de este ajuste: revisión de las dos líneas del rango, auditoría de llamadas/estado, parser del proyecto y `git diff --check`. Compilación y comprobación visual en iPhone pendientes de Xcode/TestFlight.
+
 ## Distribución compartida
 
 `ReaderFullScreenPresentation` reutiliza `HomeFullScreenSource` para que todos los accesos normales se dibujen en el mismo lugar que Escuchar. La raíz respeta el estado habilitado del lector. Los accesos antiguos de Conversar/Escuchar conservan su comportamiento predeterminado.
