@@ -454,6 +454,20 @@ private struct LiveBilingualColumnsLayout: Layout {
     }
 }
 
+/// Presentation bridge for the fullscreen control row. No capture/translation action is exposed.
+struct LiveReaderFollowControl: Equatable {
+    let id: UUID
+    let following: Binding<Bool>
+    static func == (lhs: Self, rhs: Self) -> Bool { lhs.id == rhs.id }
+}
+
+struct LiveReaderFollowControlKey: PreferenceKey {
+    static var defaultValue: LiveReaderFollowControl? = nil
+    static func reduce(value: inout LiveReaderFollowControl?, nextValue: () -> LiveReaderFollowControl?) {
+        if let next = nextValue() { value = next }
+    }
+}
+
 /// Panel experimental: captura y traducción tienen ciclos independientes. Un fallo de traducción
 /// se muestra aquí sin detener el micrófono. Se procesa como máximo un lote de cuatro párrafos.
 @MainActor
@@ -487,6 +501,7 @@ struct LiveSpanishView: View {
     @State private var job: TranslationJob?
     @State private var failure: String?
     @State private var follow = true
+    @State private var followControlID = UUID()
     var body: some View {
         VStack(spacing: 4) {
             if !compact && (!buffer.source.isEmpty || !provisionalText.isEmpty) {
@@ -521,6 +536,10 @@ struct LiveSpanishView: View {
                     }.padding(.horizontal, 16).padding(.vertical, tighterSpacing ? 12 : 16)
                 }
                 .accessibilityIdentifier("liveTranslationReader")
+                .accessibilityValue(Text(uiKey(follow ? "Following live captions" : "Reading earlier captions")))
+                .preference(key: LiveReaderFollowControlKey.self, value:
+                    compact && !follow && (!buffer.source.isEmpty || !provisionalText.isEmpty)
+                    ? LiveReaderFollowControl(id: followControlID, following: $follow) : nil)
                 .accessibilityAction(named: "Read earlier captions") { follow = false }
                 .overlay(alignment: .bottomTrailing) {
                     if !follow && !compact {

@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Escuchar: volver al texto en vivo — 2026-11-13
+
+[Alcance y estado de validación](listen-fullscreen-return-live.md). Tres escenarios UI preparados para original, traducción y ambos en columnas, durante captura y en pausa. Ejecución nativa pendiente en Mac/iPhone.
+
 ## Accesos inferiores y fuentes — 2026-11-07
 
 [Corrección, verificaciones locales y regresiones nativas pendientes](fullscreen-layout-corrections.md). Los accesos normales reutilizan la raíz de Escuchar; la salida ocupa una fila separada del lector.

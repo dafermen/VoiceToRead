@@ -3364,3 +3364,90 @@ extension HomeScreenTests {
         XCTAssertFalse(app.alerts.firstMatch.exists)
     }
 }
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testListenFullscreenReturnToLiveOriginal() throws {
+        try checkListenFullscreenReturnToLive(display: "original")
+    }
+
+    @MainActor
+    func testListenFullscreenReturnToLiveTranslation() throws {
+        try checkListenFullscreenReturnToLive(display: "translation")
+    }
+
+    @MainActor
+    func testListenFullscreenReturnToLiveBothColumns() throws {
+        try checkListenFullscreenReturnToLive(display: "both")
+    }
+
+    @MainActor
+    private func checkListenFullscreenReturnToLive(display: String) throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation",
+            "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", display, "-liveBilingualLayout", "columns"]
+        XCUIDevice.shared.orientation = .portrait
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Listen"].tap()
+        let primary = app.buttons["primaryCaptionAction"]
+        primary.tap()
+        let started = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [started], timeout: 10), .completed)
+        let translated = display != "original"
+        let reader = app.scrollViews[translated ? "liveTranslationReader" : "captionScrollView"]
+        XCTAssertTrue(reader.waitForExistence(timeout: 10))
+        if translated {
+            XCTAssertTrue(reader.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslated-")).firstMatch.waitForExistence(timeout: 15))
+        } else {
+            XCTAssertTrue(reader.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "Paragraph ")).firstMatch.waitForExistence(timeout: 15))
+        }
+        let expand = app.buttons["fullScreenButton"]
+        expand.tap()
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let landscape = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in app.frame.width > app.frame.height }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [landscape], timeout: 8), .completed)
+        let back = app.buttons[translated ? "liveTranslationFollowButton" : "backToLiveButton"]
+        XCTAssertFalse(back.exists, "Following live text does not need a return button")
+        reader.swipeDown()
+        XCTAssertTrue(back.waitForExistence(timeout: 5))
+        XCTAssertTrue((reader.value as? String)?.contains("Reading earlier captions") == true)
+        XCTAssertEqual(back.label, "Back to live text")
+        XCTAssertEqual(back.frame.width, 48, accuracy: 1)
+        XCTAssertFalse(back.frame.intersects(expand.frame))
+        back.tap()
+        let following = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: back)
+        XCTAssertEqual(XCTWaiter.wait(for: [following], timeout: 5), .completed)
+        XCTAssertTrue((reader.value as? String)?.contains("Following live captions") == true)
+        expand.tap()
+        XCTAssertTrue(primary.waitForExistence(timeout: 5))
+        XCTAssertEqual(primary.label, "Pause", "Returning to live must leave recording running")
+
+        // Reading navigation is independent from pause/resume as well.
+        primary.tap()
+        let paused = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Resume'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [paused], timeout: 10), .completed)
+        expand.tap()
+        reader.swipeDown()
+        XCTAssertTrue(back.waitForExistence(timeout: 5))
+        XCTAssertTrue(primary.isHittable)
+        XCTAssertLessThan(back.frame.maxX, primary.frame.minX)
+        XCTAssertLessThan(primary.frame.maxX, expand.frame.minX)
+        back.tap()
+        let restored = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: back)
+        XCTAssertEqual(XCTWaiter.wait(for: [restored], timeout: 5), .completed)
+        XCTAssertEqual(primary.label, "Resume", "Returning to live must not resume paused recording")
+        XCTAssertTrue((reader.value as? String)?.contains("Following live captions") == true)
+        expand.tap()
+        XCTAssertEqual(primary.label, "Resume")
+        if translated {
+            XCTAssertTrue(reader.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslated-")).firstMatch.exists)
+        }
+        app.buttons["stopCaptionAction"].tap()
+        XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.buttons["discardSessionButton"].exists)
+    }
+}

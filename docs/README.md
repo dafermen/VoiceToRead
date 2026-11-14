@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+- [Escuchar: volver al texto en vivo en pantalla completa — 2026-11-13](listen-fullscreen-return-live.md).
+
 - [Corrección de fuentes y accesos de pantalla completa — 2026-11-07](fullscreen-layout-corrections.md).
 
 - [Siete ajustes de lectores y filtros: Podcasts, Verbos, Cuentos y Mis prácticas — 2026-11-07](reader-presentation-2026-11-07.md).

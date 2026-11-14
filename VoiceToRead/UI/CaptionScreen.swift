@@ -26,6 +26,7 @@ struct CaptionScreen: View {
     @AppStorage("liveCaptionDisplay") private var liveDisplay: LiveCaptionDisplay = .original
     @AppStorage("liveBilingualLayout") private var bilingualLayout: LiveBilingualLayout = .interleaved
     @State private var followLive = true
+    @State private var translationFollowControl: LiveReaderFollowControl?
     @State private var confirmNewSession = false
     @State private var showingOptions = false
     @State private var showingLiveDisplay = false
@@ -148,6 +149,7 @@ struct CaptionScreen: View {
             // discard the live translation buffer when fullscreen changes.
             .frame(height: floatingReaderControls && dynamicTypeSize.isAccessibilitySize ? geometry.size.height : nil)
             }
+            .onPreferenceChange(LiveReaderFollowControlKey.self) { translationFollowControl = $0 }
             .overlay(alignment: .bottomTrailing) {
                 if floatingReaderControls {
                     floatingControls.padding(.trailing, 12).padding(.bottom, 12)
@@ -158,6 +160,17 @@ struct CaptionScreen: View {
 
     private var floatingControls: some View {
         HStack(spacing: 10) {
+            if supportsLiveTranslation && liveDisplay != .original {
+                if let control = translationFollowControl {
+                    floatingControl("Back to live text", symbol: "arrow.down", identifier: "liveTranslationFollowButton") {
+                        control.following.wrappedValue = true
+                    }
+                }
+            } else if !followLive && hasCaptions {
+                floatingControl("Back to live text", symbol: "arrow.down", identifier: "backToLiveButton") {
+                    followLive = true
+                }
+            }
             if model.canResume {
                 floatingControl("Resume", symbol: "playpause.fill", identifier: "primaryCaptionAction") {
                     Task { await model.start() }
