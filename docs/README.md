@@ -1,5 +1,8 @@
 # Documentación de VoiceToRead
 
+- [Escuchar: tiempo por párrafo — 2026-11-15](listening-paragraph-times.md).
+- [Pendiente: detección automática entre dos idiomas y evaluación de riesgos](automatic-listening-language-detection.md).
+
 - [Escuchar: volver al texto en vivo en pantalla completa — 2026-11-13](listen-fullscreen-return-live.md).
 
 - [Corrección de fuentes y accesos de pantalla completa — 2026-11-07](fullscreen-layout-corrections.md).

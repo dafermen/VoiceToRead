@@ -82,7 +82,10 @@ struct CaptionScreen: View {
                            lineSpacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast, highContrast: settings.highContrast,
                            englishColor: settings.englishColor, spanishColor: settings.spanishColor, frenchColor: settings.frenchColor, koreanColor: settings.koreanColor, japaneseColor: settings.japaneseColor, chineseColor: settings.chineseColor, compact: isFullScreen,
                            tighterSpacing: floatingReaderControls && geometry.size.width > geometry.size.height,
-                           bottomContentInset: floatingReaderBottomInset, emptyHint: model.state == .idle ? initialInstruction : nil)
+                           bottomContentInset: floatingReaderBottomInset, emptyHint: model.state == .idle ? initialInstruction : nil,
+                           paragraphStartTimes: settings.showListeningParagraphTimes ? Dictionary(uniqueKeysWithValues:
+                               model.transcript.finalized.suffix(40).map { ($0.id, $0.start) }) : [:],
+                           provisionalStartTime: settings.showListeningParagraphTimes ? model.transcript.partial.first?.start : nil)
                             .id(model.language.rawValue + settings.translationLanguage.rawValue)
                     } else {
                         transcript.overlay(alignment: .topLeading) {
@@ -571,7 +574,11 @@ struct CaptionScreen: View {
 
     private func captionRow(_ segment: CaptionSegment) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            if communicationLayout { Text("Original \(model.language.name)").font(.caption.weight(.semibold)) }
+            if communicationLayout || settings.showListeningParagraphTimes {
+                ListeningParagraphHeader(title: communicationLayout ? Text("Original \(model.language.name)") : nil,
+                    start: settings.showListeningParagraphTimes ? segment.start : nil,
+                    identifier: "listeningOriginalTime-" + segment.id.uuidString)
+            }
             ReaderParagraph(text: segment.text, points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                 .accessibilityIdentifier("caption-" + segment.id.uuidString)
         }
@@ -613,7 +620,11 @@ struct CaptionScreen: View {
                 // whenever the recognizer revises its audio range or identifier.
                 if !model.transcript.partial.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
-                        if communicationLayout { Text("Original \(model.language.name)").font(.caption.weight(.semibold)) }
+                        if communicationLayout || settings.showListeningParagraphTimes {
+                            ListeningParagraphHeader(title: communicationLayout ? Text("Original \(model.language.name)") : nil,
+                                start: settings.showListeningParagraphTimes ? model.transcript.partial.first?.start : nil,
+                                identifier: "listeningProvisionalTime")
+                        }
                         Text("Live · may change").font(.caption).foregroundStyle(.secondary)
                         ReaderParagraph(text: model.transcript.partial.map(\.text).joined(separator: "\n"), points: captionPoints, spacing: settings.lineSpacing, bold: settings.boldCaptions, ruled: settings.ruledPaper && !settings.highContrast)
                             .accessibilityIdentifier("provisionalCaption")
@@ -666,6 +677,7 @@ struct CaptionScreen: View {
                 .onChange(of: model.transcript.finalized) { _, _ in scrollToLive(proxy) }
                 .onChange(of: model.transcript.partial) { _, _ in scrollToLive(proxy) }
                 .onChange(of: followLive) { _, enabled in if enabled { scrollToLive(proxy) } }
+                .onChange(of: settings.showListeningParagraphTimes) { _, _ in scrollToLive(proxy) }
                 .onChange(of: isFullScreen) { _, _ in scrollToLive(proxy) }
                 .onChange(of: viewport.size) { _, _ in scrollToLive(proxy) }
             }
@@ -993,6 +1005,26 @@ struct CaptionScreen: View {
             guard followLive, !Task.isCancelled else { return }
             proxy.scrollTo("liveBottom", anchor: .bottom)
         }
+    }
+}
+
+/// Time is presentation metadata, never part of the recognized or translated text.
+struct ListeningParagraphHeader: View {
+    let title: Text?
+    let start: Double?
+    let identifier: String
+    @Environment(\.dynamicTypeSize) private var typeSize
+    var body: some View {
+        (typeSize.isAccessibilitySize ? AnyLayout(VStackLayout(alignment: .leading, spacing: 4)) : AnyLayout(HStackLayout(alignment: .firstTextBaseline, spacing: 8))) {
+            if let title { title.font(.caption.weight(.semibold)) }
+            if !typeSize.isAccessibilitySize { Spacer(minLength: 0) }
+            if let start {
+                Text(verbatim: SessionClock.format(start)).font(.caption).monospacedDigit()
+                    .foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
+                    .accessibilityLabel(Text("Time from session start: \(SessionClock.format(start))"))
+                    .accessibilityIdentifier(identifier)
+            }
+        }.frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

@@ -1419,3 +1419,9 @@
 "All verbs" = "All";
 
 "Pending verbs" = "Pending";
+
+"Show paragraph times" = "Show paragraph times";
+
+"Time from the start of the session audio. Original and translation share the same time." = "Time from the start of the session audio. Original and translation share the same time.";
+
+"Time from session start: %@" = "Time from session start: %@";

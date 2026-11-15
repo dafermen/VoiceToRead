@@ -494,6 +494,8 @@ struct LiveSpanishView: View {
     var tighterSpacing = false
     var bottomContentInset: CGFloat = 0
     var emptyHint: LocalizedStringKey? = "Tap Start Recording to begin."
+    var paragraphStartTimes: [UUID: Double] = [:]
+    var provisionalStartTime: Double? = nil
     private func color(for language: CaptureLanguage) -> LanguageColor {
         switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
     }
@@ -522,10 +524,11 @@ struct LiveSpanishView: View {
                         }
                         if display == .both && !provisionalText.isEmpty {
                             if usesColumns {
-                                columns(original: provisionalText, translated: nil, provisional: true, id: "provisional")
+                                columns(original: provisionalText, translated: nil, provisional: true, id: "provisional", start: provisionalStartTime)
                             } else {
                                 VStack(alignment: .leading, spacing: 8) {
-                                    Text("Original \(language.name)").font(.caption.weight(.semibold))
+                                    ListeningParagraphHeader(title: Text("Original \(language.name)"), start: provisionalStartTime,
+                                        identifier: "listeningProvisionalTime")
                                     Text("Live · may change").font(.caption).foregroundStyle(.secondary)
                                     readerText(provisionalText)
                                         .accessibilityIdentifier("liveBilingualProvisional")
@@ -556,6 +559,8 @@ struct LiveSpanishView: View {
                 .onChange(of: display) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: layout) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: bottomContentInset) { _, _ in scrollIfFollowing(proxy) }
+                .onChange(of: paragraphStartTimes) { _, _ in scrollIfFollowing(proxy) }
+                .onChange(of: provisionalStartTime) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: tighterSpacing) { _, _ in scrollIfFollowing(proxy) }
                 .onChange(of: follow) { _, _ in scrollIfFollowing(proxy) }
             }
@@ -596,16 +601,17 @@ struct LiveSpanishView: View {
 
     @ViewBuilder private func paragraphPair(_ paragraph: ReviewParagraph) -> some View {
         if usesColumns {
-            columns(original: paragraph.text, translated: buffer.translated[paragraph.id], provisional: false, id: paragraph.id.uuidString)
+            columns(original: paragraph.text, translated: buffer.translated[paragraph.id], provisional: false, id: paragraph.id.uuidString, start: paragraphStartTimes[paragraph.id])
         } else {
             interleavedParagraphPair(paragraph)
         }
     }
 
-    private func columns(original: String, translated: String?, provisional: Bool, id: String) -> some View {
+    private func columns(original: String, translated: String?, provisional: Bool, id: String, start: Double?) -> some View {
         LiveBilingualColumnsLayout {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Original \(language.name)").font(.caption.weight(.semibold))
+                ListeningParagraphHeader(title: Text("Original \(language.name)"), start: start,
+                    identifier: provisional ? "listeningProvisionalTime" : "listeningOriginalTime-" + id)
                 if provisional { Text("Live · may change").font(.caption).foregroundStyle(.secondary) }
                 readerText(original)
                     .accessibilityIdentifier(provisional ? "liveBilingualProvisional" : "liveOriginal-" + id)
@@ -614,7 +620,8 @@ struct LiveSpanishView: View {
             .modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
             .accessibilityIdentifier("liveOriginalCard-" + id)
             VStack(alignment: .leading, spacing: 8) {
-                Text("Translation \(target.name)").font(.caption.weight(.semibold))
+                ListeningParagraphHeader(title: Text("Translation \(target.name)"), start: start,
+                    identifier: "listeningTranslationTime-" + id)
                 if let translated {
                     readerText(translated).accessibilityIdentifier("liveTranslated-" + id)
                 } else {
@@ -636,7 +643,8 @@ struct LiveSpanishView: View {
         VStack(alignment: .leading, spacing: 8) {
             if display == .both {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Original \(language.name)").font(.caption.weight(.semibold))
+                    ListeningParagraphHeader(title: Text("Original \(language.name)"), start: paragraphStartTimes[paragraph.id],
+                        identifier: "listeningOriginalTime-" + paragraph.id.uuidString)
                     readerText(paragraph.text)
                         .accessibilityIdentifier("liveOriginal-" + paragraph.id.uuidString)
                 }.modifier(LiveLanguageCard(color: color(for: language), highContrast: highContrast))
@@ -644,8 +652,9 @@ struct LiveSpanishView: View {
             // Keep the destination card stable while its text arrives. Translation-only
             // never inserts an original-language fallback that would immediately disappear.
             VStack(alignment: .leading, spacing: 8) {
-                if display == .both {
-                    Text("Translation \(target.name)").font(.caption.weight(.semibold))
+                if display == .both || paragraphStartTimes[paragraph.id] != nil {
+                    ListeningParagraphHeader(title: display == .both ? Text("Translation \(target.name)") : nil,
+                        start: paragraphStartTimes[paragraph.id], identifier: "listeningTranslationTime-" + paragraph.id.uuidString)
                 }
                 if let translated = buffer.translated[paragraph.id] {
                     readerText(translated)

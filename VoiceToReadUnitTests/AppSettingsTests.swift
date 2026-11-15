@@ -342,3 +342,25 @@ extension AppSettingsTests {
         XCTAssertEqual(PlaybackVoicePreference.saved(for: .french, defaults: defaults), "chosen-french-voice")
     }
 }
+
+
+extension AppSettingsTests {
+    func testListeningParagraphTimePreferenceDefaultsOffAndPersistsIndependently() {
+        let name = UUID().uuidString
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        let settings = AppSettings(defaults: defaults)
+        XCTAssertFalse(settings.showListeningParagraphTimes)
+        let source = settings.captureLanguage; let target = settings.translationLanguage
+        let size = settings.captionSize; let audio = settings.saveAudio
+        settings.showListeningParagraphTimes = true
+        let reopened = AppSettings(defaults: defaults)
+        XCTAssertTrue(reopened.showListeningParagraphTimes)
+        XCTAssertEqual(reopened.captureLanguage, source)
+        XCTAssertEqual(reopened.translationLanguage, target)
+        XCTAssertEqual(reopened.captionSize, size)
+        XCTAssertEqual(reopened.saveAudio, audio)
+        reopened.showListeningParagraphTimes = false
+        XCTAssertFalse(AppSettings(defaults: defaults).showListeningParagraphTimes)
+    }
+}

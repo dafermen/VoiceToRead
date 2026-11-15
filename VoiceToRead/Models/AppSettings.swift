@@ -175,6 +175,7 @@ final class AppSettings {
     var ruledPaper: Bool { didSet { defaults.set(ruledPaper, forKey: "ruledPaper") } }
     var conversationHome: Bool { didSet { defaults.set(conversationHome, forKey: "conversationHome") } }
     var simpleMode: Bool { didSet { defaults.set(simpleMode, forKey: "simpleMode") } }
+    var showListeningParagraphTimes: Bool { didSet { defaults.set(showListeningParagraphTimes, forKey: "showListeningParagraphTimes") } }
     var showButtonNames: Bool { didSet { defaults.set(showButtonNames, forKey: "showButtonNames") } }
     var pauseHaptics: Bool { didSet { defaults.set(pauseHaptics, forKey: "pauseHaptics") } }
     var focusedReading: Bool { didSet { defaults.set(focusedReading, forKey: "focusedReading") } }
@@ -201,6 +202,7 @@ final class AppSettings {
         spanishColor = LanguageColor(rawValue: defaults.string(forKey: "spanishLanguageColor") ?? "") ?? .green
         conversationHome = defaults.object(forKey: "conversationHome") as? Bool ?? true
         simpleMode = defaults.bool(forKey: "simpleMode")
+        showListeningParagraphTimes = defaults.bool(forKey: "showListeningParagraphTimes")
         showButtonNames = defaults.object(forKey: "showButtonNames") as? Bool ?? true
         pauseHaptics = defaults.object(forKey: "pauseHaptics") as? Bool ?? true
         focusedReading = defaults.bool(forKey: "focusedReading")

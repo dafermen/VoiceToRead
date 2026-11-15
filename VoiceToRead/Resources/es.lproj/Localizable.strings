@@ -1419,3 +1419,9 @@
 "All verbs" = "Todos";
 
 "Pending verbs" = "Pendientes";
+
+"Show paragraph times" = "Mostrar tiempo en los párrafos";
+
+"Time from the start of the session audio. Original and translation share the same time." = "Tiempo desde el inicio del audio de la sesión. El original y la traducción muestran el mismo tiempo.";
+
+"Time from session start: %@" = "Tiempo desde el inicio de la sesión: %@";

@@ -20,3 +20,15 @@ final class SessionClockTests: XCTestCase {
         XCTAssertEqual(SessionClock.seconds(.milliseconds(1500)), 1.5, accuracy: 0.0001)
     }
 }
+
+
+extension SessionClockTests {
+    func testParagraphTimeKeepsSessionHoursAndFloorsSubseconds() {
+        XCTAssertEqual(SessionClock.format(0), "00:00:00")
+        XCTAssertEqual(SessionClock.format(59.999), "00:00:59")
+        XCTAssertEqual(SessionClock.format(60), "00:01:00")
+        XCTAssertEqual(SessionClock.format(3599.999), "00:59:59")
+        XCTAssertEqual(SessionClock.format(3661.8), "01:01:01")
+        XCTAssertEqual(SessionClock.format(25 * 3600), "25:00:00")
+    }
+}

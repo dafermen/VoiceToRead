@@ -54,6 +54,12 @@ struct SettingsView: View {
                     .disabled(coordinator.caption.state.active || coordinator.caption.state.busy)
             }
             CaptureOptionsView(model: coordinator.caption, settings: settings)
+            Section("Listen") {
+                Toggle("Show paragraph times", isOn: $settings.showListeningParagraphTimes)
+                    .accessibilityIdentifier("listeningParagraphTimesToggle")
+                Text("Time from the start of the session audio. Original and translation share the same time.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
             Section("Personal vocabulary") {
                 NavigationLink("Names & translation terms") { PersonalVocabularyView() }
             }

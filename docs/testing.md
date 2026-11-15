@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Tiempo por párrafo en Escuchar — 2026-11-15
+
+[Alcance y verificaciones de esta entrega](listening-paragraph-times.md). Pruebas nativas preparadas de preferencia, formato y tarjetas emparejadas durante captura/pausa; ejecución en Mac/iPhone pendiente. La [detección automática](automatic-listening-language-detection.md) sigue como propuesta sin implementar.
+
 ## Escuchar: volver al texto en vivo — 2026-11-13
 
 [Alcance y estado de validación](listen-fullscreen-return-live.md). Tres escenarios UI preparados para original, traducción y ambos en columnas, durante captura y en pausa. Ejecución nativa pendiente en Mac/iPhone.

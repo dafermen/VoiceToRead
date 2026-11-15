@@ -3451,3 +3451,68 @@ extension HomeScreenTests {
         XCTAssertTrue(app.buttons["discardSessionButton"].exists)
     }
 }
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testListeningParagraphTimesCanToggleDuringSessionAndStayPairedInFullscreen() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation",
+            "--ui-test-live-translation", "--ui-test-labels", "-liveCaptionDisplay", "both", "-liveBilingualLayout", "columns"]
+        XCUIDevice.shared.orientation = .portrait
+        defer { XCUIDevice.shared.orientation = .portrait }
+        app.launch()
+        XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
+        func setTimes(_ enabled: Bool) {
+            app.tabBars.buttons["Settings"].tap()
+            let toggle = app.switches["listeningParagraphTimesToggle"]
+            for _ in 0..<12 where !toggle.isHittable { app.swipeUp() }
+            XCTAssertTrue(toggle.isHittable)
+            XCTAssertTrue(toggle.isEnabled, "Display preference remains editable during a session")
+            if (toggle.value as? String == "1") != enabled { tapPreferenceSwitch(toggle) }
+            XCTAssertEqual(toggle.value as? String, enabled ? "1" : "0")
+            app.tabBars.buttons["Home"].tap()
+        }
+        setTimes(false)
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 5))
+        mode.buttons["Listen"].tap()
+        let primary = app.buttons["primaryCaptionAction"]
+        primary.tap()
+        let listening = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [listening], timeout: 10), .completed)
+        XCTAssertTrue(app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "liveTranslated-")).firstMatch.waitForExistence(timeout: 15))
+        XCTAssertFalse(app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listeningOriginalTime-")).firstMatch.exists)
+        setTimes(true)
+        XCTAssertEqual(primary.label, "Pause", "Showing times does not pause recording")
+        let timeLabels = app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listeningOriginalTime-"))
+        XCTAssertTrue(timeLabels.firstMatch.waitForExistence(timeout: 15))
+        primary.tap()
+        let paused = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Resume'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [paused], timeout: 10), .completed)
+        let originalTime = try XCTUnwrap(timeLabels.allElementsBoundByIndex.last { $0.isHittable })
+        let id = originalTime.identifier.replacingOccurrences(of: "listeningOriginalTime-", with: "")
+        let translatedTime = app.staticTexts["listeningTranslationTime-" + id]
+        XCTAssertTrue(translatedTime.exists)
+        XCTAssertEqual(originalTime.label, translatedTime.label, "Translation inherits its original paragraph's time")
+        XCTAssertNotNil(originalTime.label.range(of: #"\d{2}:\d{2}:\d{2}"#, options: .regularExpression))
+        let stamp = originalTime.label
+        let expand = app.buttons["fullScreenButton"]
+        expand.tap()
+        XCUIDevice.shared.orientation = .landscapeLeft
+        let rotated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in app.frame.width > app.frame.height }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [rotated], timeout: 8), .completed)
+        XCTAssertEqual(app.staticTexts["listeningOriginalTime-" + id].label, stamp)
+        XCTAssertEqual(app.staticTexts["listeningTranslationTime-" + id].label, stamp)
+        XCTAssertEqual(primary.label, "Resume", "A timestamp is not a recording control")
+        expand.tap()
+        XCUIDevice.shared.orientation = .portrait
+        setTimes(false)
+        XCTAssertEqual(primary.label, "Resume")
+        XCTAssertFalse(app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listeningOriginalTime-")).firstMatch.exists)
+        XCTAssertFalse(app.staticTexts.matching(NSPredicate(format: "identifier BEGINSWITH %@", "listeningTranslationTime-")).firstMatch.exists)
+        app.buttons["stopCaptionAction"].tap()
+        XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.buttons["discardSessionButton"].exists)
+    }
+}
