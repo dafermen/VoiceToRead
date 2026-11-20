@@ -13,7 +13,7 @@ for v in data:
     assert set(v['ipaUS'])==ipa_keys
     assert all(t.startswith('/') and t.endswith('/') and len(t)>2 and '�' not in t for t in v['ipaUS'].values())
 
-    assert set(v['translations'])=={'en','es','fr','ko','ja','zh-Hans'}
+    assert set(v['translations'])=={'en','es','fr','ko','ja','zh-Hans','de','nl','ru'}
     for lang,glosses in v['translations'].items():
         expected={'base','past','participle','third','ing','meaning'} | ({'past-was','past-were'} if v['base']=='be' else set())
         assert set(glosses)==expected,(v['base'],lang)
@@ -24,6 +24,16 @@ for v in data:
     patterns[group]=patterns.get(group,0)+1
 assert set(patterns)=={'AAA','ABB','ABC','ABA','AAB','regular'}
 by={v['base']:v for v in data}
+# Guard reviewed sense/morphology regressions in the newly added glosses.
+assert by['grow']['translations']['de']['base']=='anbauen'
+assert by['grow']['translations']['nl']['base']=='kweken'
+assert by['spread']['translations']['de']['base']=='ausbreiten'
+assert by['spread']['translations']['ru']['base']=='расстилать'
+assert by['shake']['translations']['ru']['third']=='трясёт'
+assert by['reset']['translations']['nl']['past']=='resette'
+assert by['undertake']['translations']['de']['participle']=='unternommen'
+assert by['broadcast']['translations']['nl']['past']=='zond uit'
+assert all(not re.search('[A-Za-z]', gloss) for v in data for gloss in v['translations']['ru'].values())
 assert by['become']['ipaUS']['base']=='/bɪˈkʌm/'
 assert by['do']['ipaUS']['third']=='/dʌz/'
 assert by['work']['ipaUS']['past']=='/wɝːkt/'
@@ -59,6 +69,6 @@ for path in ['VoiceToRead/Models/VerbConjugation.swift','VoiceToRead/UI/VerbRefe
     assert not re.search(r'\b(URLSession|AVAudioRecorder|SFSpeechRecognizer)\b',source)
 hub=(r/'VoiceToRead/UI/EnglishTrainingView.swift').read_text(encoding='utf-8')
 assert hub.index('trainingVerbsEntry')>hub.index('trainingPodcastsEntry')
-print('PASS: 130 complete unique verbs, all 125 distinct workbook verbs covered; six translation languages and IPA for every displayed form; pattern coverage',patterns)
+print('PASS: 130 complete unique verbs, all 125 distinct workbook verbs covered; nine translation languages and IPA for every displayed form; pattern coverage',patterns)
 print('PASS: catalog registration, Training entry order, Swift delimiters and no recording/network APIs.')
 print('Native Swift compilation and XCTest remain pending on macOS.')

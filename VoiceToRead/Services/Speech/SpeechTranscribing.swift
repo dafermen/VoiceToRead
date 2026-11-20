@@ -54,3 +54,66 @@ extension SpeechTranscribing {
     func configure(language: CaptureLanguage) {}
     func requestAuthorization() async {}
 }
+
+/// Choose once per language, before capture. A missing modern model keeps its installation
+/// flow; only unsupported languages/devices use the existing offline-only Apple engine.
+/// Errors and interruptions never trigger a recognizer switch in the middle of a session.
+@MainActor
+final class LanguageSpeechTranscriber: SpeechTranscribing {
+    private let preferred: any SpeechTranscribing
+    private let compatibility: any SpeechTranscribing
+    private var selected: (any SpeechTranscribing)?
+    private var language: CaptureLanguage = .english
+    private var generation = UUID()
+
+    init(preferred: any SpeechTranscribing, compatibility: any SpeechTranscribing) {
+        self.preferred = preferred; self.compatibility = compatibility
+    }
+    func configure(language: CaptureLanguage) {
+        guard language != self.language else { return }
+        self.language = language; generation = UUID(); selected = nil
+        preferred.configure(language: language); compatibility.configure(language: language)
+    }
+    private func resolve() async throws -> any SpeechTranscribing {
+        try Task.checkCancellation()
+        if let selected { return selected }
+        let identifier = generation
+        let status = await preferred.readiness()
+        guard generation == identifier else { throw CancellationError() }
+        try Task.checkCancellation()
+        let engine = (status == .unsupportedLanguage || status == .unsupportedDevice) ? compatibility : preferred
+        selected = engine
+        return engine
+    }
+    func readiness() async -> SpeechReadiness {
+        let identifier = generation
+        do {
+            let engine = try await resolve()
+            let status = await engine.readiness()
+            guard identifier == generation, !Task.isCancelled else { return .checking }
+            return status
+        } catch { return .checking }
+    }
+    func requestAuthorization() async {
+        guard let engine = try? await resolve() else { return }
+        await engine.requestAuthorization()
+    }
+    func installAssets() async throws {
+        let engine = try await resolve()
+        try await engine.installAssets()
+    }
+    func start() async throws -> AsyncThrowingStream<TranscriptionUpdate, Error> {
+        let identifier = generation
+        let engine = try await resolve()
+        guard identifier == generation else { throw CancellationError() }
+        let stream = try await engine.start()
+        guard identifier == generation else { throw CancellationError() }
+        try Task.checkCancellation()
+        return stream
+    }
+    func finish() async throws { try await selected?.finish() }
+    func cancel() async {
+        generation = UUID()
+        await selected?.cancel()
+    }
+}

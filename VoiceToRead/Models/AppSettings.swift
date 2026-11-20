@@ -16,12 +16,12 @@ enum AppAppearance: String, CaseIterable, Equatable, Hashable, Sendable {
 
 /// Persist a stable locale; unknown/older preferences retain English as the default.
 enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
-    case english = "en-US", spanish = "es-ES", french = "fr-FR", korean = "ko-KR", japanese = "ja-JP", chinese = "zh-CN"
+    case english = "en-US", spanish = "es-ES", french = "fr-FR", korean = "ko-KR", japanese = "ja-JP", chinese = "zh-CN", german = "de-DE", dutch = "nl-NL", russian = "ru-RU"
     var name: String {
-        switch self { case .english: "English"; case .spanish: "Español"; case .french: "Français"; case .korean: "한국어"; case .japanese: "日本語"; case .chinese: "简体中文" }
+        switch self { case .english: "English"; case .spanish: "Español"; case .french: "Français"; case .korean: "한국어"; case .japanese: "日本語"; case .chinese: "简体中文"; case .german: "Deutsch"; case .dutch: "Nederlands"; case .russian: "Русский" }
     }
     var pickerLabel: LocalizedStringKey {
-        switch self { case .english: "English"; case .spanish: "Spanish · Español"; case .french: "French · Français"; case .korean: "Korean · 한국어"; case .japanese: "Japanese · 日本語"; case .chinese: "Mandarin · 简体中文" }
+        switch self { case .english: "English"; case .spanish: "Spanish · Español"; case .french: "French · Français"; case .korean: "Korean · 한국어"; case .japanese: "Japanese · 日本語"; case .chinese: "Mandarin · 简体中文"; case .german: "German · Deutsch"; case .dutch: "Dutch · Nederlands"; case .russian: "Russian · Русский" }
     }
     /// Participant-facing controls use the language of the person who presses them.
     var speakAction: String {
@@ -32,6 +32,9 @@ enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
         case .korean: "한국어로 말하기"
         case .japanese: "日本語で話す"
         case .chinese: "说普通话"
+        case .german: "Deutsch sprechen"
+        case .dutch: "Nederlands spreken"
+        case .russian: "Говорить по-русски"
         }
     }
     var finishAction: String {
@@ -42,16 +45,19 @@ enum CaptureLanguage: String, CaseIterable, Sendable, Codable {
         case .korean: "말하기를 마치고 번역"
         case .japanese: "終了して翻訳"
         case .chinese: "结束并翻译"
+        case .german: "Beenden und übersetzen"
+        case .dutch: "Afronden en vertalen"
+        case .russian: "Завершить и перевести"
         }
     }
     var code: String { self == .chinese ? "zh-Hans" : String(rawValue.prefix(2)) }
     /// Used only to interpret old English/Spanish data and provide a safe first choice.
     var defaultTarget: Self { self == .english ? .spanish : .english }
     var mode: TranscriptLanguage {
-        switch self { case .english: .english; case .spanish: .spanish; case .french: .french; case .korean: .korean; case .japanese: .japanese; case .chinese: .chinese }
+        switch self { case .english: .english; case .spanish: .spanish; case .french: .french; case .korean: .korean; case .japanese: .japanese; case .chinese: .chinese; case .german: .german; case .dutch: .dutch; case .russian: .russian }
     }
     var greeting: String {
-        switch self { case .english: "Hello"; case .spanish: "Hola"; case .french: "Bonjour"; case .korean: "안녕하세요"; case .japanese: "こんにちは"; case .chinese: "你好" }
+        switch self { case .english: "Hello"; case .spanish: "Hola"; case .french: "Bonjour"; case .korean: "안녕하세요"; case .japanese: "こんにちは"; case .chinese: "你好"; case .german: "Hallo"; case .dutch: "Hallo"; case .russian: "Здравствуйте" }
     }
 }
 
@@ -186,14 +192,21 @@ final class AppSettings {
     var koreanColor: LanguageColor { didSet { defaults.set(koreanColor.rawValue, forKey: "koreanLanguageColor") } }
     var japaneseColor: LanguageColor { didSet { defaults.set(japaneseColor.rawValue, forKey: "japaneseLanguageColor") } }
     var chineseColor: LanguageColor { didSet { defaults.set(chineseColor.rawValue, forKey: "chineseLanguageColor") } }
+    var germanColor: LanguageColor { didSet { defaults.set(germanColor.rawValue, forKey: "germanLanguageColor") } }
+    var dutchColor: LanguageColor { didSet { defaults.set(dutchColor.rawValue, forKey: "dutchLanguageColor") } }
+    var russianColor: LanguageColor { didSet { defaults.set(russianColor.rawValue, forKey: "russianLanguageColor") } }
     func color(for language: CaptureLanguage) -> LanguageColor {
-        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
+        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor; case .german: germanColor; case .dutch: dutchColor; case .russian: russianColor }
     }
-    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green; frenchColor = .purple; koreanColor = .orange; japaneseColor = .purple; chineseColor = .orange }
+    func restoreLanguageColors() { englishColor = .blue; spanishColor = .green; frenchColor = .purple; koreanColor = .orange; japaneseColor = .purple; chineseColor = .orange; germanColor = .purple; dutchColor = .orange; russianColor = .green }
     var transcriptionLanguage: String { captureLanguage.rawValue }
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
+        germanColor = LanguageColor(rawValue: defaults.string(forKey: "germanLanguageColor") ?? "") ?? .purple
+        dutchColor = LanguageColor(rawValue: defaults.string(forKey: "dutchLanguageColor") ?? "") ?? .orange
+        russianColor = LanguageColor(rawValue: defaults.string(forKey: "russianLanguageColor") ?? "") ?? .green
+
         japaneseColor = LanguageColor(rawValue: defaults.string(forKey: "japaneseLanguageColor") ?? "") ?? .purple
         chineseColor = LanguageColor(rawValue: defaults.string(forKey: "chineseLanguageColor") ?? "") ?? .orange
         frenchColor = LanguageColor(rawValue: defaults.string(forKey: "frenchLanguageColor") ?? "") ?? .purple

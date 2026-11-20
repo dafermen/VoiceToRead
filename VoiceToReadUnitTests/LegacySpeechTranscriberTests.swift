@@ -222,3 +222,100 @@ private final class TestSpeechAudio: SpeechAudioCapturing {
     }
     func stop() throws { levels?.finish(); levels = nil }
 }
+
+
+extension LegacySpeechTranscriberTests {
+    func testLanguageRoutingUsesAppleCompatibilityBeforeCaptureAndKeepsItForResume() async throws {
+        let modern = LanguageRoutingSpeech(status: .unsupportedLanguage)
+        let legacy = LanguageRoutingSpeech(status: .authorizationRequired)
+        let speech = LanguageSpeechTranscriber(preferred: modern, compatibility: legacy)
+        speech.configure(language: .dutch)
+        XCTAssertEqual(modern.language, .dutch); XCTAssertEqual(legacy.language, .dutch)
+        let needsPermission = await speech.readiness()
+        XCTAssertEqual(needsPermission, .authorizationRequired)
+        XCTAssertEqual(modern.starts, 0); XCTAssertEqual(legacy.starts, 0)
+        await speech.requestAuthorization()
+        XCTAssertEqual(legacy.authorizations, 1); XCTAssertEqual(modern.authorizations, 0)
+        legacy.status = .ready
+        _ = try await speech.start()
+        modern.status = .ready
+        let activeStatus = await speech.readiness()
+        XCTAssertEqual(activeStatus, .ready)
+        try await speech.finish(); await speech.cancel()
+        _ = try await speech.start()
+        XCTAssertEqual(legacy.starts, 2); XCTAssertEqual(modern.starts, 0)
+        XCTAssertEqual(legacy.finishes, 1); XCTAssertEqual(legacy.cancels, 1)
+        speech.configure(language: .german)
+        let modernStatus = await speech.readiness()
+        XCTAssertEqual(modernStatus, .ready)
+        _ = try await speech.start()
+        XCTAssertEqual(modern.starts, 1); XCTAssertEqual(legacy.starts, 2)
+    }
+
+    func testLanguageRoutingDoesNotBypassDownloadsOrRecoverRuntimeFailuresWithAnotherEngine() async throws {
+        let modern = LanguageRoutingSpeech(status: .missingAssets)
+        let legacy = LanguageRoutingSpeech(status: .ready)
+        let speech = LanguageSpeechTranscriber(preferred: modern, compatibility: legacy)
+        speech.configure(language: .russian)
+        let status = await speech.readiness()
+        XCTAssertEqual(status, .missingAssets)
+        try await speech.installAssets()
+        XCTAssertEqual(modern.installations, 1); XCTAssertEqual(legacy.installations, 0)
+        modern.status = .ready; modern.failStart = true
+        do { _ = try await speech.start(); XCTFail("Expected the original runtime failure") }
+        catch { XCTAssertTrue(error is TranscriptionFailure) }
+        XCTAssertEqual(legacy.starts, 0)
+        modern.status = .problem("Temporary interruption")
+        let interrupted = await speech.readiness()
+        XCTAssertEqual(interrupted, .problem("Temporary interruption"))
+        XCTAssertEqual(legacy.readinessChecks, 0)
+    }
+
+    func testCancelledLanguageReadinessCannotSelectOrStartAnOldEngine() async {
+        let modern = LanguageRoutingSpeech(status: .unsupportedLanguage)
+        let legacy = LanguageRoutingSpeech(status: .ready)
+        let speech = LanguageSpeechTranscriber(preferred: modern, compatibility: legacy)
+        modern.delayReadiness = true
+        let pending = Task { await speech.readiness() }
+        for _ in 0..<100 where modern.pendingReadiness == nil { await Task.yield() }
+        XCTAssertNotNil(modern.pendingReadiness)
+        await speech.cancel()
+        modern.pendingReadiness?.resume(returning: .unsupportedLanguage); modern.pendingReadiness = nil
+        let cancelled = await pending.value
+        XCTAssertEqual(cancelled, .checking)
+        XCTAssertEqual(legacy.readinessChecks, 0)
+        XCTAssertEqual(modern.starts, 0); XCTAssertEqual(legacy.starts, 0)
+        modern.status = .ready
+        let refreshed = await speech.readiness()
+        XCTAssertEqual(refreshed, .ready)
+        XCTAssertEqual(legacy.readinessChecks, 0)
+    }
+}
+
+@MainActor
+private final class LanguageRoutingSpeech: SpeechTranscribing {
+    var status: SpeechReadiness
+    var language: CaptureLanguage = .english
+    var starts = 0, finishes = 0, cancels = 0, authorizations = 0, installations = 0, readinessChecks = 0
+    var failStart = false, delayReadiness = false
+    var pendingReadiness: CheckedContinuation<SpeechReadiness, Never>?
+    init(status: SpeechReadiness) { self.status = status }
+    func configure(language: CaptureLanguage) { self.language = language }
+    func readiness() async -> SpeechReadiness {
+        readinessChecks += 1
+        if delayReadiness {
+            delayReadiness = false
+            return await withCheckedContinuation { pendingReadiness = $0 }
+        }
+        return status
+    }
+    func requestAuthorization() async { authorizations += 1 }
+    func installAssets() async throws { installations += 1 }
+    func start() async throws -> AsyncThrowingStream<TranscriptionUpdate, Error> {
+        starts += 1
+        if failStart { throw TranscriptionFailure.failed }
+        return AsyncThrowingStream { $0.finish() }
+    }
+    func finish() async throws { finishes += 1 }
+    func cancel() async { cancels += 1 }
+}

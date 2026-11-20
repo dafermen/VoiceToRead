@@ -51,10 +51,10 @@ struct TranslationSnapshot: Codable, Equatable, Sendable {
 }
 
 enum TranscriptLanguage: String, CaseIterable, Identifiable {
-    case english = "English", spanish = "Español", french = "Français", korean = "한국어", japanese = "日本語", chinese = "简体中文", both = "Both"
+    case english = "English", spanish = "Español", french = "Français", korean = "한국어", japanese = "日本語", chinese = "简体中文", german = "Deutsch", dutch = "Nederlands", russian = "Русский", both = "Both"
     var id: Self { self }
     var fileSuffix: String {
-        switch self { case .english: "en"; case .spanish: "es"; case .french: "fr"; case .korean: "ko"; case .japanese: "ja"; case .chinese: "zh-Hans"; case .both: "bilingual" }
+        switch self { case .english: "en"; case .spanish: "es"; case .french: "fr"; case .korean: "ko"; case .japanese: "ja"; case .chinese: "zh-Hans"; case .german: "de"; case .dutch: "nl"; case .russian: "ru"; case .both: "bilingual" }
     }
 }
 

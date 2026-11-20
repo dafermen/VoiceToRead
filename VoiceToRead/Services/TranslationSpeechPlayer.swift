@@ -439,6 +439,9 @@ enum PlaybackVoicePreference {
         case .korean: "안녕하세요. 한국어 문장을 읽을 때 사용할 목소리입니다."
         case .japanese: "こんにちは。日本語の文章を読むときに使う声です。"
         case .chinese: "你好。这是我朗读中文时使用的声音。"
+        case .german: "Hallo. Das ist die Stimme, mit der ich deutsche Texte vorlese."
+        case .dutch: "Hallo. Dit is de stem waarmee ik Nederlandse teksten voorlees."
+        case .russian: "Здравствуйте. Этим голосом я буду читать тексты на русском языке."
         }
     }
 }

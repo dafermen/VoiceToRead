@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Idiomas Apple adicionales — 2026-11-20
+
+[Alcance, comprobaciones y matriz de aceptación](apple-language-expansion.md). Se amplían las regresiones nativas de preferencias, voces, bibliotecas de traducción, paquetes educativos y selección del motor local. Ejecución de XCTest y pruebas físicas de disponibilidad por idioma pendientes en Mac/iPhone.
+
 ## Tiempo por párrafo en Escuchar — 2026-11-15
 
 [Alcance y verificaciones de esta entrega](listening-paragraph-times.md). Pruebas nativas preparadas de preferencia, formato y tarjetas emparejadas durante captura/pausa; ejecución en Mac/iPhone pendiente. La [detección automática](automatic-listening-language-detection.md) sigue como propuesta sin implementar.

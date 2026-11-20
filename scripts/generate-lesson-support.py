@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,urllib.request,urllib.error,sys
 import argparse,re
-parser=argparse.ArgumentParser();parser.add_argument('--lesson',default='SPK-B1-001');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--lesson',default='SPK-B1-001');parser.add_argument('--locales',nargs='+',choices=['fr','ko','ja','zh-Hans','de','nl','ru'],default=['fr','ko','ja','zh-Hans','de','nl','ru']);args=parser.parse_args()
 if not re.fullmatch(r'SPK-(A1|A2|B1|B2|C1|C2)-[0-9]{3}',args.lesson):sys.exit('Invalid lesson identifier.')
 r=Path(__file__).resolve().parents[1];folder=r/'VoiceToRead/Resources/SpeakingLessons'
 d=json.loads((folder/(args.lesson+'.json')).read_text(encoding='utf-8'))
@@ -16,7 +16,9 @@ def collect(value,path=''):
 collect(d)
 key=next((x.partition('=')[2].strip().strip('"').strip("'") for x in (r/'.env').read_text(encoding='utf-8-sig').splitlines() if x.partition('=')[0].strip()=='OPENAI_API_KEY'),None)
 if not key:sys.exit('Missing local key.')
-for locale,language in [('fr','French'),('ko','Korean'),('ja','Japanese'),('zh-Hans','Simplified Chinese')]:
+languages={'fr':'French','ko':'Korean','ja':'Japanese','zh-Hans':'Simplified Chinese','de':'German','nl':'Dutch','ru':'Russian'}
+for locale in args.locales:
+ language=languages[locale]
  path=folder/f'{args.lesson}-support-{locale}.json'
  if path.exists():print(locale+': existing support pack retained.',flush=True);continue
  schema={'type':'object','properties':{k:{'type':'string'} for k in strings},'required':list(strings),'additionalProperties':False}

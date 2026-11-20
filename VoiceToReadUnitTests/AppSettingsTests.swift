@@ -364,3 +364,59 @@ extension AppSettingsTests {
         XCTAssertFalse(AppSettings(defaults: defaults).showListeningParagraphTimes)
     }
 }
+
+
+extension AppSettingsTests {
+    func testGermanDutchRussianPersistAndRestoreTheirOwnColors() throws {
+        let suite = "AdditionalAppleLanguages-" + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let languages: [CaptureLanguage] = [.german, .dutch, .russian]
+        XCTAssertEqual(languages.map(\.rawValue), ["de-DE", "nl-NL", "ru-RU"])
+        XCTAssertEqual(languages.map(\.code), ["de", "nl", "ru"])
+        XCTAssertEqual(languages.map { $0.mode.fileSuffix }, ["de", "nl", "ru"])
+        let settings = AppSettings(defaults: defaults)
+        settings.interfaceLanguage = .spanish
+        settings.germanColor = .green; settings.dutchColor = .blue; settings.russianColor = .orange
+        for language in languages {
+            settings.captureLanguage = language
+            settings.translationLanguage = .english
+            let reopened = AppSettings(defaults: defaults)
+            XCTAssertEqual(reopened.captureLanguage, language)
+            XCTAssertEqual(reopened.translationLanguage, .english)
+            XCTAssertEqual(reopened.interfaceLanguage, .spanish)
+            XCTAssertEqual(try JSONDecoder().decode(CaptureLanguage.self, from: JSONEncoder().encode(language)), language)
+            XCTAssertFalse(language.greeting.isEmpty)
+            XCTAssertFalse(PlaybackVoicePreference.sample(for: language).isEmpty)
+            settings.translationLanguage = language
+            settings.captureLanguage = language
+            XCTAssertEqual(settings.translationLanguage, .english, "The target must differ from the new source")
+        }
+        let reopened = AppSettings(defaults: defaults)
+        XCTAssertEqual(reopened.color(for: .german), .green)
+        XCTAssertEqual(reopened.color(for: .dutch), .blue)
+        XCTAssertEqual(reopened.color(for: .russian), .orange)
+        reopened.restoreLanguageColors()
+        let restored = AppSettings(defaults: defaults)
+        XCTAssertEqual(restored.color(for: .german), .purple)
+        XCTAssertEqual(restored.color(for: .dutch), .orange)
+        XCTAssertEqual(restored.color(for: .russian), .green)
+        XCTAssertEqual(restored.interfaceLanguage, .spanish)
+    }
+
+    func testNewAppleLanguageVoicesStayWithinTheirLanguage() {
+        let voices = [voice("DE", "de-DE", .female), voice("AT", "de_AT", .male),
+                      voice("NL", "nl-NL", .female), voice("BE", "nl_BE", .male),
+                      voice("RU", "ru-RU", .female), voice("EN", "en-US", .male)]
+        XCTAssertEqual(Set(PlaybackVoicePreference.choices(for: .german, in: voices).map(\.id)), Set(["DE", "AT"]))
+        XCTAssertEqual(Set(PlaybackVoicePreference.choices(for: .dutch, in: voices).map(\.id)), Set(["NL", "BE"]))
+        XCTAssertEqual(PlaybackVoicePreference.choices(for: .russian, in: voices).map(\.id), ["RU"])
+        for language in [CaptureLanguage.german, .dutch, .russian] {
+            let candidates = PlaybackVoicePreference.choices(for: language, in: voices)
+            let expected = candidates.last!.id
+            XCTAssertEqual(PlaybackVoicePreference.identifier(for: language, voices: voices, saved: expected, systemDefault: "EN"), expected)
+            XCTAssertTrue(candidates.contains { $0.id == PlaybackVoicePreference.identifier(for: language, voices: voices, saved: "EN", systemDefault: "EN") })
+            XCTAssertNil(PlaybackVoicePreference.identifier(for: language, voices: [voice("EN", "en-US", .male)], saved: "EN", systemDefault: "EN"))
+        }
+    }
+}

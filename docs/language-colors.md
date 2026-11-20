@@ -1,5 +1,7 @@
 # Colores por idioma
 
+> Actualización 2026-11-20: el catálogo ahora incluye nueve idiomas. Véase [alemán, neerlandés y ruso](apple-language-expansion.md); las cifras anteriores describen la entrega original.
+
 ## Uso
 
 Los controles de Conversación, las tarjetas bilingües en vivo, las tarjetas de Texto y traducción y las de Audio y subtítulos comparten una paleta por idioma. **Inglés es azul y español verde de forma predeterminada**, incluso cuando español es el original e inglés la traducción. Reproducir en inglés/español usa el color del idioma que va a sonar; Corregir mensaje conserva un estilo neutro. Las dos posiciones de los botones no cambian: español a la izquierda, inglés a la derecha.

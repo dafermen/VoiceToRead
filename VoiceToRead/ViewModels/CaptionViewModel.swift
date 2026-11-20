@@ -73,7 +73,8 @@ final class CaptionViewModel {
         let audio = AudioCaptureService()
         #if compiler(>=6.2)
         if #available(iOS 26.0, *), SpeechTranscriber.isAvailable {
-            self.init(microphone: audio, speech: AppleSpeechTranscriber(audio: audio))
+            self.init(microphone: audio, speech: LanguageSpeechTranscriber(
+                preferred: AppleSpeechTranscriber(audio: audio), compatibility: LegacySpeechTranscriber(audio: audio)))
             return
         }
 #endif

@@ -1,5 +1,7 @@
 # Documentación de VoiceToRead
 
+- [Alemán, neerlandés y ruso: alcance, compatibilidad y validación — 2026-11-20](apple-language-expansion.md).
+
 - [Escuchar: tiempo por párrafo — 2026-11-15](listening-paragraph-times.md).
 - [Pendiente: detección automática entre dos idiomas y evaluación de riesgos](automatic-listening-language-detection.md).
 

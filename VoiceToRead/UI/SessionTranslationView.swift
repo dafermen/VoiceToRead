@@ -490,6 +490,9 @@ struct LiveSpanishView: View {
     var koreanColor: LanguageColor = .orange
     var japaneseColor: LanguageColor = .purple
     var chineseColor: LanguageColor = .orange
+    var germanColor: LanguageColor = .purple
+    var dutchColor: LanguageColor = .orange
+    var russianColor: LanguageColor = .green
     var compact = false
     var tighterSpacing = false
     var bottomContentInset: CGFloat = 0
@@ -497,7 +500,7 @@ struct LiveSpanishView: View {
     var paragraphStartTimes: [UUID: Double] = [:]
     var provisionalStartTime: Double? = nil
     private func color(for language: CaptureLanguage) -> LanguageColor {
-        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor }
+        switch language { case .english: englishColor; case .spanish: spanishColor; case .french: frenchColor; case .korean: koreanColor; case .japanese: japaneseColor; case .chinese: chineseColor; case .german: germanColor; case .dutch: dutchColor; case .russian: russianColor }
     }
     @State private var buffer = LiveTranslationBuffer()
     @State private var job: TranslationJob?

@@ -642,3 +642,26 @@ private final class FakeTranslationSpeechOutput: TranslationSpeechOutput {
     func resume() -> Bool { resumeCount += 1; return true }
     func stop() {}
 }
+
+
+extension TranslationTests {
+    func testAdditionalAppleLanguagesRoundTripSavedTextAndExportSuffixes() throws {
+        let source = [ReviewParagraph(id: UUID(), text: "Hello")]
+        for (language, text) in [(CaptureLanguage.german, "Guten Tag"), (.dutch, "Goedendag"), (.russian, "Здравствуйте")] {
+            let generated = [ReviewParagraph(id: source[0].id, text: text)]
+            let snapshot = TranslationSnapshot(source: source, generated: generated,
+                sourceLocale: CaptureLanguage.english.rawValue, targetLocale: language.rawValue)
+            try snapshot.validate()
+            let reopened = try JSONDecoder().decode(TranslationSnapshot.self, from: JSONEncoder().encode(snapshot))
+            XCTAssertEqual(reopened.target, language)
+            XCTAssertEqual(reopened.paragraphs(mode: language.mode), generated)
+            XCTAssertEqual(reopened.fileSuffix(mode: language.mode), language.code)
+            XCTAssertEqual(reopened.fileSuffix(mode: .both), "en-" + language.code)
+            let reversed = TranslationSnapshot(source: generated, generated: source,
+                sourceLocale: language.rawValue, targetLocale: CaptureLanguage.english.rawValue)
+            try reversed.validate()
+            XCTAssertEqual(reversed.paragraphs(mode: language.mode), generated)
+            XCTAssertEqual(reversed.paragraphs(mode: .english), source)
+        }
+    }
+}

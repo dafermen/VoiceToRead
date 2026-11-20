@@ -400,6 +400,9 @@ struct LanguageColorsView: View {
                 colorPicker(.korean, selection: $settings.koreanColor)
                 colorPicker(.japanese, selection: $settings.japaneseColor)
                 colorPicker(.chinese, selection: $settings.chineseColor)
+                colorPicker(.german, selection: $settings.germanColor)
+                colorPicker(.dutch, selection: $settings.dutchColor)
+                colorPicker(.russian, selection: $settings.russianColor)
             }
             Section("Preview") {
                 PlaybackTextCard(text: "Hola", language: .spanish, translated: false,

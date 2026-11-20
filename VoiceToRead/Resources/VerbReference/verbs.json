@@ -58,6 +58,30 @@
         "participle": "arisen",
         "third": "arises",
         "ing": "arising"
+      },
+      "de": {
+        "meaning": "entstehen",
+        "base": "entstehen",
+        "past": "entstand",
+        "participle": "entstanden",
+        "third": "entsteht",
+        "ing": "entstehend"
+      },
+      "nl": {
+        "meaning": "ontstaan",
+        "base": "ontstaan",
+        "past": "ontstond",
+        "participle": "ontstaan",
+        "third": "ontstaat",
+        "ing": "ontstaand"
+      },
+      "ru": {
+        "meaning": "возникать",
+        "base": "возникать",
+        "past": "возник",
+        "participle": "возникший",
+        "third": "возникает",
+        "ing": "возникающий"
       }
     },
     "ipaUS": {
@@ -139,6 +163,36 @@
         "meaning": "exist or be in a state",
         "past-was": "past of be: I / he / she / it",
         "past-were": "past of be: you / we / they"
+      },
+      "de": {
+        "base": "sein",
+        "past": "war / warst / waren / wart",
+        "participle": "gewesen",
+        "third": "ist",
+        "ing": "seiend",
+        "meaning": "sein",
+        "past-was": "war",
+        "past-were": "warst / waren / wart"
+      },
+      "nl": {
+        "base": "zijn / bestaan",
+        "past": "was / waren",
+        "participle": "geweest",
+        "third": "is / bestaand",
+        "ing": "zijnd",
+        "meaning": "zijn of in een toestand verkeren",
+        "past-was": "was",
+        "past-were": "waren"
+      },
+      "ru": {
+        "base": "быть",
+        "past": "был / была / было / были",
+        "participle": "бывший",
+        "third": "есть / является",
+        "ing": "будучи",
+        "meaning": "быть / находиться",
+        "past-was": "был / была / было",
+        "past-were": "был / была / были"
       }
     },
     "ipaUS": {
@@ -210,6 +264,30 @@
         "third": "he / she / it: strike repeatedly",
         "ing": "-ing form of beat",
         "meaning": "strike repeatedly"
+      },
+      "de": {
+        "base": "wiederholt schlagen",
+        "past": "schlug",
+        "participle": "geschlagen",
+        "third": "schlägt",
+        "ing": "schlagend",
+        "meaning": "wiederholt schlagen"
+      },
+      "nl": {
+        "base": "slaan",
+        "past": "sloeg",
+        "participle": "geslagen",
+        "third": "slaat",
+        "ing": "slaan",
+        "meaning": "herhaaldelijk slaan"
+      },
+      "ru": {
+        "base": "бить неоднократно",
+        "past": "бил",
+        "participle": "битый",
+        "third": "он / она / оно: бьет неоднократно",
+        "ing": "бьющий",
+        "meaning": "бить неоднократно"
       }
     },
     "ipaUS": {
@@ -279,6 +357,30 @@
         "third": "he / she / it: begin to be something",
         "ing": "-ing form of become",
         "meaning": "begin to be something"
+      },
+      "de": {
+        "base": "werden",
+        "past": "wurde",
+        "participle": "geworden",
+        "third": "wird",
+        "ing": "werdend",
+        "meaning": "werden"
+      },
+      "nl": {
+        "base": "worden",
+        "past": "werd",
+        "participle": "geworden",
+        "third": "wordt",
+        "ing": "wordend",
+        "meaning": "beginnen iets te zijn"
+      },
+      "ru": {
+        "base": "становиться",
+        "past": "стал",
+        "participle": "ставший",
+        "third": "он / она / оно: становится",
+        "ing": "становящийся",
+        "meaning": "начать быть чем-то"
       }
     },
     "ipaUS": {
@@ -348,6 +450,30 @@
         "participle": "begun",
         "third": "begins",
         "ing": "beginning"
+      },
+      "de": {
+        "meaning": "beginnen",
+        "base": "beginnen",
+        "past": "begann",
+        "participle": "begonnen",
+        "third": "beginnt",
+        "ing": "beginnend"
+      },
+      "nl": {
+        "meaning": "beginnen",
+        "base": "beginnen",
+        "past": "begon",
+        "participle": "begonnen",
+        "third": "begint",
+        "ing": "beginnend"
+      },
+      "ru": {
+        "meaning": "начинать",
+        "base": "начинать",
+        "past": "начал",
+        "participle": "начатый",
+        "third": "начинает",
+        "ing": "начинающий"
       }
     },
     "ipaUS": {
@@ -417,6 +543,30 @@
         "participle": "bent",
         "third": "bends",
         "ing": "bending"
+      },
+      "de": {
+        "meaning": "etwas krümmen",
+        "base": "biegen",
+        "past": "bog",
+        "participle": "gebogen",
+        "third": "biegt",
+        "ing": "biegend"
+      },
+      "nl": {
+        "meaning": "iets laten buigen",
+        "base": "buigen",
+        "past": "boog",
+        "participle": "gebogen",
+        "third": "buigt",
+        "ing": "buigend"
+      },
+      "ru": {
+        "meaning": "сгибать",
+        "base": "сгибать",
+        "past": "согнул",
+        "participle": "согнутый",
+        "third": "сгибает",
+        "ing": "сгибающий"
       }
     },
     "ipaUS": {
@@ -486,6 +636,30 @@
         "participle": "bet",
         "third": "bets",
         "ing": "betting"
+      },
+      "de": {
+        "meaning": "Geld auf ein Ergebnis setzen",
+        "base": "wetten",
+        "past": "wettete",
+        "participle": "gewettet",
+        "third": "wettet",
+        "ing": "wettend"
+      },
+      "nl": {
+        "meaning": "geld riskeren op een uitslag",
+        "base": "wedden",
+        "past": "weddede / wedde",
+        "participle": "gewed",
+        "third": "wedt",
+        "ing": "weddend"
+      },
+      "ru": {
+        "meaning": "ставить деньги на результат",
+        "base": "ставить",
+        "past": "ставил",
+        "participle": "поставленный",
+        "third": "ставит",
+        "ing": "ставящий"
       }
     },
     "ipaUS": {
@@ -555,6 +729,30 @@
         "participle": "bid",
         "third": "bids",
         "ing": "bidding"
+      },
+      "de": {
+        "meaning": "bei einer Auktion bieten",
+        "base": "bieten",
+        "past": "bot",
+        "participle": "geboten",
+        "third": "bietet",
+        "ing": "bietend"
+      },
+      "nl": {
+        "meaning": "een bod uitbrengen bij een veiling",
+        "base": "bieden",
+        "past": "bood",
+        "participle": "geboden",
+        "third": "biedt",
+        "ing": "biedend"
+      },
+      "ru": {
+        "meaning": "делать ставку на аукционе",
+        "base": "предлагать цену",
+        "past": "предлагал цену",
+        "participle": "предложенный",
+        "third": "предлагает цену",
+        "ing": "предлагающий цену"
       }
     },
     "ipaUS": {
@@ -624,6 +822,30 @@
         "participle": "bitten",
         "third": "bites",
         "ing": "biting"
+      },
+      "de": {
+        "meaning": "mit den Zähnen schneiden",
+        "base": "beißen",
+        "past": "biss",
+        "participle": "gebissen",
+        "third": "beißt",
+        "ing": "beißend"
+      },
+      "nl": {
+        "meaning": "met tanden in iets bijten",
+        "base": "bijten",
+        "past": "beet",
+        "participle": "gebeten",
+        "third": "bijt",
+        "ing": "bijtend"
+      },
+      "ru": {
+        "meaning": "кусать",
+        "base": "кусать",
+        "past": "кусал",
+        "participle": "укушенный",
+        "third": "кусает",
+        "ing": "кусающий"
       }
     },
     "ipaUS": {
@@ -693,6 +915,30 @@
         "participle": "blown",
         "third": "blows",
         "ing": "blowing"
+      },
+      "de": {
+        "meaning": "Luft aus dem Mund blasen",
+        "base": "blasen",
+        "past": "blies",
+        "participle": "geblasen",
+        "third": "bläst",
+        "ing": "blasend"
+      },
+      "nl": {
+        "meaning": "lucht uit de mond blazen",
+        "base": "blazen",
+        "past": "blies",
+        "participle": "geblazen",
+        "third": "blaast",
+        "ing": "blazend"
+      },
+      "ru": {
+        "meaning": "дуть",
+        "base": "дуть",
+        "past": "дул",
+        "participle": "подутый",
+        "third": "дует",
+        "ing": "дующий"
       }
     },
     "ipaUS": {
@@ -762,6 +1008,30 @@
         "participle": "broken",
         "third": "breaks",
         "ing": "breaking"
+      },
+      "de": {
+        "meaning": "in Stücke zerbrechen",
+        "base": "brechen",
+        "past": "brach",
+        "participle": "gebrochen",
+        "third": "bricht",
+        "ing": "brechend"
+      },
+      "nl": {
+        "meaning": "doen breken in stukken",
+        "base": "breken",
+        "past": "brak",
+        "participle": "gebroken",
+        "third": "breekt",
+        "ing": "brekend"
+      },
+      "ru": {
+        "meaning": "ломать",
+        "base": "ломать",
+        "past": "сломал",
+        "participle": "сломанный",
+        "third": "ломает",
+        "ing": "ломающий"
       }
     },
     "ipaUS": {
@@ -831,6 +1101,30 @@
         "third": "he / she / it: carry something to a place",
         "ing": "-ing form of bring",
         "meaning": "carry something to a place"
+      },
+      "de": {
+        "base": "bringen",
+        "past": "brachte",
+        "participle": "gebracht",
+        "third": "bringt",
+        "ing": "bringend",
+        "meaning": "etwas zu einem Ort bringen"
+      },
+      "nl": {
+        "base": "brengen",
+        "past": "bracht",
+        "participle": "gebracht",
+        "third": "brengt",
+        "ing": "brengend",
+        "meaning": "iets naar een plaats brengen"
+      },
+      "ru": {
+        "base": "приносить",
+        "past": "принес",
+        "participle": "принесенный",
+        "third": "приносит",
+        "ing": "приносящий",
+        "meaning": "нести в место"
       }
     },
     "ipaUS": {
@@ -900,6 +1194,30 @@
         "participle": "broadcast",
         "third": "broadcasts",
         "ing": "broadcasting"
+      },
+      "de": {
+        "meaning": "per Radio oder Fernsehen übertragen",
+        "base": "übertragen",
+        "past": "übertrug",
+        "participle": "übertragen",
+        "third": "überträgt",
+        "ing": "übertragend"
+      },
+      "nl": {
+        "meaning": "uitzenden via radio of tv",
+        "base": "uitzenden",
+        "past": "zond uit",
+        "participle": "uitgezonden",
+        "third": "zendt uit",
+        "ing": "uitzendend"
+      },
+      "ru": {
+        "meaning": "транслировать",
+        "base": "транслировать",
+        "past": "транслировал",
+        "participle": "транслированный",
+        "third": "транслирует",
+        "ing": "транслирующий"
       }
     },
     "ipaUS": {
@@ -969,6 +1287,30 @@
         "third": "he / she / it: make a structure",
         "ing": "-ing form of build",
         "meaning": "make a structure"
+      },
+      "de": {
+        "base": "bauen",
+        "past": "baute",
+        "participle": "gebaut",
+        "third": "baut",
+        "ing": "bauend",
+        "meaning": "eine Struktur bauen"
+      },
+      "nl": {
+        "base": "bouwen",
+        "past": "bouwde",
+        "participle": "gebouwd",
+        "third": "bouwt",
+        "ing": "bouwend",
+        "meaning": "een gebouw maken"
+      },
+      "ru": {
+        "base": "строить",
+        "past": "построил",
+        "participle": "построенный",
+        "third": "строит",
+        "ing": "строящий",
+        "meaning": "создавать структуру"
       }
     },
     "ipaUS": {
@@ -1038,6 +1380,30 @@
         "participle": "burnt",
         "third": "burns",
         "ing": "burning"
+      },
+      "de": {
+        "meaning": "durch Feuer oder Hitze beschädigen",
+        "base": "brennen",
+        "past": "brannte",
+        "participle": "gebrannt",
+        "third": "brennt",
+        "ing": "brennend"
+      },
+      "nl": {
+        "meaning": "beschadigen door vuur of hitte",
+        "base": "branden",
+        "past": "brandde",
+        "participle": "gebrand",
+        "third": "brandt",
+        "ing": "brandend"
+      },
+      "ru": {
+        "meaning": "жечь",
+        "base": "жечь",
+        "past": "сжег",
+        "participle": "сожженный",
+        "third": "жжет",
+        "ing": "жгущий"
       }
     },
     "ipaUS": {
@@ -1107,6 +1473,30 @@
         "participle": "burst",
         "third": "bursts",
         "ing": "bursting"
+      },
+      "de": {
+        "meaning": "plötzlich aufplatzen",
+        "base": "platzen",
+        "past": "platzte",
+        "participle": "geplatzt",
+        "third": "platzt",
+        "ing": "platzend"
+      },
+      "nl": {
+        "meaning": "plotseling barsten",
+        "base": "barsten",
+        "past": "barstte",
+        "participle": "gebarsten",
+        "third": "barst",
+        "ing": "barstend"
+      },
+      "ru": {
+        "meaning": "внезапно разорваться",
+        "base": "рваться",
+        "past": "лопнул",
+        "participle": "лопнувший",
+        "third": "рвётся",
+        "ing": "лопаясь"
       }
     },
     "ipaUS": {
@@ -1176,6 +1566,30 @@
         "third": "he / she / it: get something by paying",
         "ing": "-ing form of buy",
         "meaning": "get something by paying"
+      },
+      "de": {
+        "base": "kaufen",
+        "past": "kaufte",
+        "participle": "gekauft",
+        "third": "kauft",
+        "ing": "kaufend",
+        "meaning": "kaufen"
+      },
+      "nl": {
+        "base": "kopen",
+        "past": "kocht",
+        "participle": "gekocht",
+        "third": "koopt",
+        "ing": "kopend",
+        "meaning": "iets kopen door te betalen"
+      },
+      "ru": {
+        "base": "покупать",
+        "past": "покупал",
+        "participle": "купленный",
+        "third": "покупает",
+        "ing": "покупая",
+        "meaning": "получать, заплатив"
       }
     },
     "ipaUS": {
@@ -1245,6 +1659,30 @@
         "participle": "cast",
         "third": "casts",
         "ing": "casting"
+      },
+      "de": {
+        "meaning": "in eine bestimmte Richtung werfen",
+        "base": "werfen",
+        "past": "warf",
+        "participle": "geworfen",
+        "third": "wirft",
+        "ing": "werfend"
+      },
+      "nl": {
+        "meaning": "in een bepaalde richting werpen",
+        "base": "werpen",
+        "past": "wierp",
+        "participle": "geworpen",
+        "third": "werpt",
+        "ing": "werpend"
+      },
+      "ru": {
+        "meaning": "бросать в определённом направлении",
+        "base": "бросать",
+        "past": "бросал",
+        "participle": "брошенный",
+        "third": "бросает",
+        "ing": "бросая"
       }
     },
     "ipaUS": {
@@ -1314,6 +1752,30 @@
         "participle": "caught",
         "third": "catches",
         "ing": "catching"
+      },
+      "de": {
+        "meaning": "fangen oder ergreifen",
+        "base": "fangen",
+        "past": "fing",
+        "participle": "gefangen",
+        "third": "fängt",
+        "ing": "fangend"
+      },
+      "nl": {
+        "meaning": "grijpen of vangen",
+        "base": "vangen",
+        "past": "ving",
+        "participle": "gevangen",
+        "third": "vangt",
+        "ing": "vangend"
+      },
+      "ru": {
+        "meaning": "ловить, захватывать",
+        "base": "ловить",
+        "past": "поймал",
+        "participle": "пойманный",
+        "third": "ловит",
+        "ing": "ловя"
       }
     },
     "ipaUS": {
@@ -1383,6 +1845,30 @@
         "participle": "chosen",
         "third": "chooses",
         "ing": "choosing"
+      },
+      "de": {
+        "meaning": "aus Optionen auswählen",
+        "base": "wählen",
+        "past": "wählte",
+        "participle": "gewählt",
+        "third": "wählt",
+        "ing": "wählend"
+      },
+      "nl": {
+        "meaning": "kiezen uit opties",
+        "base": "kiezen",
+        "past": "koos",
+        "participle": "gekozen",
+        "third": "kiest",
+        "ing": "kiezend"
+      },
+      "ru": {
+        "meaning": "выбирать из вариантов",
+        "base": "выбирать",
+        "past": "выбрал",
+        "participle": "выбранный",
+        "third": "выбирает",
+        "ing": "выбирая"
       }
     },
     "ipaUS": {
@@ -1452,6 +1938,30 @@
         "third": "he / she / it: move toward a place",
         "ing": "-ing form of come",
         "meaning": "move toward a place"
+      },
+      "de": {
+        "base": "kommen",
+        "past": "kam",
+        "participle": "gekommen",
+        "third": "kommt",
+        "ing": "kommend",
+        "meaning": "kommen"
+      },
+      "nl": {
+        "base": "komen",
+        "past": "kwam",
+        "participle": "gekomen",
+        "third": "komt",
+        "ing": "komend",
+        "meaning": "bewegen naar een plek toe"
+      },
+      "ru": {
+        "base": "приходить",
+        "past": "приходил",
+        "participle": "пришедший",
+        "third": "приходит",
+        "ing": "приходя",
+        "meaning": "двигаться к месту"
       }
     },
     "ipaUS": {
@@ -1521,6 +2031,30 @@
         "participle": "cost",
         "third": "costs",
         "ing": "costing"
+      },
+      "de": {
+        "meaning": "eine Zahlung erfordern",
+        "base": "kosten",
+        "past": "kostete",
+        "participle": "gekostet",
+        "third": "kostet",
+        "ing": "kostend"
+      },
+      "nl": {
+        "meaning": "een betaling vereisen",
+        "base": "kosten",
+        "past": "kostte",
+        "participle": "gekost",
+        "third": "kost",
+        "ing": "kostend"
+      },
+      "ru": {
+        "meaning": "требовать оплаты",
+        "base": "стоить",
+        "past": "стоил",
+        "participle": "стоящий",
+        "third": "стоит",
+        "ing": "стоящий"
       }
     },
     "ipaUS": {
@@ -1590,6 +2124,30 @@
         "participle": "crept",
         "third": "creeps",
         "ing": "creeping"
+      },
+      "de": {
+        "meaning": "langsam und vorsichtig bewegen",
+        "base": "schleichen",
+        "past": "schlich",
+        "participle": "geschlichen",
+        "third": "schleicht",
+        "ing": "schleichend"
+      },
+      "nl": {
+        "meaning": "langzaam en voorzichtig bewegen",
+        "base": "kruipen",
+        "past": "kroop",
+        "participle": "gekropen",
+        "third": "kruipt",
+        "ing": "kruipend"
+      },
+      "ru": {
+        "meaning": "красться медленно и осторожно",
+        "base": "красться",
+        "past": "крался",
+        "participle": "крадущийся",
+        "third": "крадётся",
+        "ing": "крадущийся"
       }
     },
     "ipaUS": {
@@ -1659,6 +2217,30 @@
         "participle": "crowed",
         "third": "crows",
         "ing": "crowing"
+      },
+      "de": {
+        "meaning": "(eines Hahns) rufen",
+        "base": "krähen",
+        "past": "krähte",
+        "participle": "gekräht",
+        "third": "kräht",
+        "ing": "krähend"
+      },
+      "nl": {
+        "meaning": "kraai van een haan (roepen)",
+        "base": "kraaien",
+        "past": "kraaide",
+        "participle": "gekraaid",
+        "third": "kraait",
+        "ing": "kraaiend"
+      },
+      "ru": {
+        "meaning": "петух поёт крик",
+        "base": "кукарекать",
+        "past": "кукарекал",
+        "participle": "кукарекающий",
+        "third": "кукарекает",
+        "ing": "кукарекая"
       }
     },
     "ipaUS": {
@@ -1728,6 +2310,30 @@
         "third": "he / she / it: divide with a sharp tool",
         "ing": "-ing form of cut",
         "meaning": "divide with a sharp tool"
+      },
+      "de": {
+        "base": "schneiden",
+        "past": "schnitt",
+        "participle": "geschnitten",
+        "third": "schneidet",
+        "ing": "schneidend",
+        "meaning": "schneiden"
+      },
+      "nl": {
+        "base": "snijden",
+        "past": "sneed",
+        "participle": "gesneden",
+        "third": "snijdt",
+        "ing": "snijdend",
+        "meaning": "met een scherp gereedschap verdelen"
+      },
+      "ru": {
+        "base": "резать",
+        "past": "резал",
+        "participle": "порезанный",
+        "third": "режет",
+        "ing": "режущий",
+        "meaning": "делить острым инструментом"
       }
     },
     "ipaUS": {
@@ -1797,6 +2403,30 @@
         "participle": "dealt",
         "third": "deals",
         "ing": "dealing"
+      },
+      "de": {
+        "meaning": "mit einem Problem oder einer Situation umgehen",
+        "base": "umgehen",
+        "past": "ging um",
+        "participle": "umgegangen",
+        "third": "geht um",
+        "ing": "umgehend"
+      },
+      "nl": {
+        "meaning": "omgaan met een probleem",
+        "base": "omgaan",
+        "past": "ging om met",
+        "participle": "omgegaan",
+        "third": "gaat om met",
+        "ing": "omgaand met"
+      },
+      "ru": {
+        "meaning": "справляться с проблемой",
+        "base": "справляться",
+        "past": "справился",
+        "participle": "справившийся",
+        "third": "справляется",
+        "ing": "справляясь"
       }
     },
     "ipaUS": {
@@ -1866,6 +2496,30 @@
         "third": "he / she / it: perform an action",
         "ing": "-ing form of do",
         "meaning": "perform an action"
+      },
+      "de": {
+        "base": "eine Handlung ausführen",
+        "past": "tat",
+        "participle": "getan",
+        "third": "tut",
+        "ing": "tuend",
+        "meaning": "eine Handlung ausführen"
+      },
+      "nl": {
+        "base": "doen",
+        "past": "deed",
+        "participle": "gedaan",
+        "third": "doet",
+        "ing": "doend",
+        "meaning": "een handeling uitvoeren"
+      },
+      "ru": {
+        "base": "делать",
+        "past": "делал",
+        "participle": "сделанный",
+        "third": "делает",
+        "ing": "делая",
+        "meaning": "выполнять действие"
       }
     },
     "ipaUS": {
@@ -1935,6 +2589,30 @@
         "participle": "drawn",
         "third": "draws",
         "ing": "drawing"
+      },
+      "de": {
+        "meaning": "ein Bild mit Linien machen",
+        "base": "zeichnen",
+        "past": "zeichnete",
+        "participle": "gezeichnet",
+        "third": "zeichnet",
+        "ing": "zeichnend"
+      },
+      "nl": {
+        "meaning": "een tekening maken met lijnen",
+        "base": "tekenen",
+        "past": "tekende",
+        "participle": "getekend",
+        "third": "tekent",
+        "ing": "tekenend"
+      },
+      "ru": {
+        "meaning": "рисовать линиями",
+        "base": "рисовать",
+        "past": "рисовал",
+        "participle": "нарисованный",
+        "third": "рисует",
+        "ing": "рисуя"
       }
     },
     "ipaUS": {
@@ -2004,6 +2682,30 @@
         "participle": "dreamt",
         "third": "dreams",
         "ing": "dreaming"
+      },
+      "de": {
+        "meaning": "Visionen oder Gedanken im Schlaf haben",
+        "base": "träumen",
+        "past": "träumte",
+        "participle": "geträumt",
+        "third": "träumt",
+        "ing": "träumend"
+      },
+      "nl": {
+        "meaning": "dromen (visioenen tijdens slaap)",
+        "base": "dromen",
+        "past": "droomde",
+        "participle": "gedroomd",
+        "third": "droomt",
+        "ing": "dromend"
+      },
+      "ru": {
+        "meaning": "видеть сны",
+        "base": "видеть сны",
+        "past": "видел сны",
+        "participle": "видевший сны",
+        "third": "видит сны",
+        "ing": "видя сны"
       }
     },
     "ipaUS": {
@@ -2073,6 +2775,30 @@
         "third": "he / she / it: take liquid into the mouth",
         "ing": "-ing form of drink",
         "meaning": "take liquid into the mouth"
+      },
+      "de": {
+        "base": "trinken",
+        "past": "trank",
+        "participle": "getrunken",
+        "third": "trinkt",
+        "ing": "trinkend",
+        "meaning": "trinken"
+      },
+      "nl": {
+        "base": "drinken",
+        "past": "dronk",
+        "participle": "gedronken",
+        "third": "drinkt",
+        "ing": "drinkend",
+        "meaning": "vloeistof in de mond nemen"
+      },
+      "ru": {
+        "base": "пить",
+        "past": "пил",
+        "participle": "выпитый",
+        "third": "пьёт",
+        "ing": "пьющий",
+        "meaning": "принимать жидкость в рот"
       }
     },
     "ipaUS": {
@@ -2142,6 +2868,30 @@
         "participle": "driven",
         "third": "drives",
         "ing": "driving"
+      },
+      "de": {
+        "meaning": "ein Fahrzeug steuern",
+        "base": "fahren",
+        "past": "fuhr",
+        "participle": "gefahren",
+        "third": "fährt",
+        "ing": "fahrend"
+      },
+      "nl": {
+        "meaning": "een voertuig besturen",
+        "base": "besturen",
+        "past": "bestuurde",
+        "participle": "bestuurd",
+        "third": "bestuurt",
+        "ing": "besturen"
+      },
+      "ru": {
+        "meaning": "управлять транспортным средством",
+        "base": "водить",
+        "past": "водил",
+        "participle": "водивший",
+        "third": "водит",
+        "ing": "водя"
       }
     },
     "ipaUS": {
@@ -2211,6 +2961,30 @@
         "third": "he / she / it: take in food",
         "ing": "-ing form of eat",
         "meaning": "take in food"
+      },
+      "de": {
+        "base": "essen",
+        "past": "aß",
+        "participle": "gegessen",
+        "third": "isst",
+        "ing": "essend",
+        "meaning": "essen"
+      },
+      "nl": {
+        "base": "eten",
+        "past": "at",
+        "participle": "gegeten",
+        "third": "eet",
+        "ing": "eten",
+        "meaning": "eten"
+      },
+      "ru": {
+        "base": "есть",
+        "past": "ел",
+        "participle": "съеденный",
+        "third": "ест",
+        "ing": "кушая",
+        "meaning": "принимать пищу"
       }
     },
     "ipaUS": {
@@ -2280,6 +3054,30 @@
         "participle": "fallen",
         "third": "falls",
         "ing": "falling"
+      },
+      "de": {
+        "meaning": "durch die Schwerkraft herunterfallen",
+        "base": "fallen",
+        "past": "fiel",
+        "participle": "gefallen",
+        "third": "fällt",
+        "ing": "fallend"
+      },
+      "nl": {
+        "meaning": "naar beneden vallen door zwaartekracht",
+        "base": "vallen",
+        "past": "viel",
+        "participle": "gevallen",
+        "third": "valt",
+        "ing": "vallen"
+      },
+      "ru": {
+        "meaning": "падать вниз под действием силы тяжести",
+        "base": "падать",
+        "past": "упал",
+        "participle": "упавший",
+        "third": "падает",
+        "ing": "падая"
       }
     },
     "ipaUS": {
@@ -2349,6 +3147,30 @@
         "participle": "felt",
         "third": "feels",
         "ing": "feeling"
+      },
+      "de": {
+        "meaning": "einen körperlichen oder emotionalen Zustand erleben",
+        "base": "fühlen",
+        "past": "fühlte",
+        "participle": "gefühlt",
+        "third": "fühlt",
+        "ing": "fühlend"
+      },
+      "nl": {
+        "meaning": "een lichamelijke of emotionele staat ervaren",
+        "base": "voelen",
+        "past": "voelde",
+        "participle": "gevoeld",
+        "third": "voelt",
+        "ing": "voelen"
+      },
+      "ru": {
+        "meaning": "испытывать физическое или эмоциональное состояние",
+        "base": "чувствовать",
+        "past": "чувствовал",
+        "participle": "чувствовал",
+        "third": "чувствует",
+        "ing": "чувствуя"
       }
     },
     "ipaUS": {
@@ -2418,6 +3240,30 @@
         "participle": "found",
         "third": "finds",
         "ing": "finding"
+      },
+      "de": {
+        "meaning": "etwas entdecken oder finden",
+        "base": "finden",
+        "past": "fand",
+        "participle": "gefunden",
+        "third": "findet",
+        "ing": "findend"
+      },
+      "nl": {
+        "meaning": "iets ontdekken of vinden",
+        "base": "vinden",
+        "past": "vond",
+        "participle": "gevonden",
+        "third": "vindt",
+        "ing": "vinden"
+      },
+      "ru": {
+        "meaning": "находить или обнаруживать",
+        "base": "находить",
+        "past": "нашёл",
+        "participle": "найденный",
+        "third": "находит",
+        "ing": "находя"
       }
     },
     "ipaUS": {
@@ -2487,6 +3333,30 @@
         "participle": "fit",
         "third": "fits",
         "ing": "fitting"
+      },
+      "de": {
+        "meaning": "die richtige Größe haben",
+        "base": "passen",
+        "past": "passte",
+        "participle": "gepasst",
+        "third": "passt",
+        "ing": "passend"
+      },
+      "nl": {
+        "meaning": "de juiste maat hebben",
+        "base": "passen",
+        "past": "paste",
+        "participle": "gepast",
+        "third": "past",
+        "ing": "passen"
+      },
+      "ru": {
+        "meaning": "быть подходящего размера",
+        "base": "подходить",
+        "past": "подошёл",
+        "participle": "подошедший",
+        "third": "подходит",
+        "ing": "подходя"
       }
     },
     "ipaUS": {
@@ -2556,6 +3426,30 @@
         "participle": "flown",
         "third": "flies",
         "ing": "flying"
+      },
+      "de": {
+        "meaning": "durch die Luft fliegen",
+        "base": "fliegen",
+        "past": "flog",
+        "participle": "geflogen",
+        "third": "fliegt",
+        "ing": "fliegend"
+      },
+      "nl": {
+        "meaning": "door de lucht bewegen",
+        "base": "vliegen",
+        "past": "vloog",
+        "participle": "gevlogen",
+        "third": "vliegt",
+        "ing": "vliegen"
+      },
+      "ru": {
+        "meaning": "летать",
+        "base": "летать",
+        "past": "летал",
+        "participle": "летевший",
+        "third": "летает",
+        "ing": "летая"
       }
     },
     "ipaUS": {
@@ -2625,6 +3519,30 @@
         "participle": "forbidden",
         "third": "forbids",
         "ing": "forbidding"
+      },
+      "de": {
+        "meaning": "anordnen, etwas nicht zu erlauben",
+        "base": "verbieten",
+        "past": "verbot",
+        "participle": "verboten",
+        "third": "verbietet",
+        "ing": "verbietend"
+      },
+      "nl": {
+        "meaning": "verbieden",
+        "base": "verbieden",
+        "past": "verbood",
+        "participle": "verboden",
+        "third": "verbiedt",
+        "ing": "verbieden"
+      },
+      "ru": {
+        "meaning": "запрещать",
+        "base": "запрещать",
+        "past": "запретил",
+        "participle": "запрещённый",
+        "third": "запрещает",
+        "ing": "запрещая"
       }
     },
     "ipaUS": {
@@ -2694,6 +3612,30 @@
         "participle": "forecast",
         "third": "forecasts",
         "ing": "forecasting"
+      },
+      "de": {
+        "meaning": "Zukunft vorhersagen",
+        "base": "vorhersagen",
+        "past": "sagte vorher",
+        "participle": "vorausgesagt",
+        "third": "sagt vorher",
+        "ing": "vorhersagend"
+      },
+      "nl": {
+        "meaning": "voorspellen",
+        "base": "voorspellen",
+        "past": "voorspelde",
+        "participle": "voorspeld",
+        "third": "voorspelt",
+        "ing": "voorspellen"
+      },
+      "ru": {
+        "meaning": "предсказывать будущее",
+        "base": "прогнозировать",
+        "past": "прогнозировал",
+        "participle": "прогнозированный",
+        "third": "прогнозирует",
+        "ing": "прогнозируя"
       }
     },
     "ipaUS": {
@@ -2763,6 +3705,30 @@
         "participle": "forgotten",
         "third": "forgets",
         "ing": "forgetting"
+      },
+      "de": {
+        "meaning": "nicht erinnern",
+        "base": "vergessen",
+        "past": "vergaß",
+        "participle": "vergessen",
+        "third": "vergisst",
+        "ing": "vergessend"
+      },
+      "nl": {
+        "meaning": "niet herinneren",
+        "base": "vergeten",
+        "past": "vergat",
+        "participle": "vergeten",
+        "third": "vergeet",
+        "ing": "vergeten"
+      },
+      "ru": {
+        "meaning": "забывать",
+        "base": "забывать",
+        "past": "забыл",
+        "participle": "забытый",
+        "third": "забывает",
+        "ing": "забывая"
       }
     },
     "ipaUS": {
@@ -2832,6 +3798,30 @@
         "participle": "forgiven",
         "third": "forgives",
         "ing": "forgiving"
+      },
+      "de": {
+        "meaning": "aufhören, jemanden für einen Fehler zu beschuldigen",
+        "base": "vergeben",
+        "past": "vergab",
+        "participle": "vergeben",
+        "third": "vergibt",
+        "ing": "vergebend"
+      },
+      "nl": {
+        "meaning": "vergeven",
+        "base": "vergeven",
+        "past": "vergaf",
+        "participle": "vergeven",
+        "third": "vergeeft",
+        "ing": "vergeven"
+      },
+      "ru": {
+        "meaning": "прощать",
+        "base": "прощать",
+        "past": "простил",
+        "participle": "прощённый",
+        "third": "прощает",
+        "ing": "прощая"
       }
     },
     "ipaUS": {
@@ -2901,6 +3891,30 @@
         "participle": "frozen",
         "third": "freezes",
         "ing": "freezing"
+      },
+      "de": {
+        "meaning": "durch Kälte zu Eis werden",
+        "base": "gefrieren",
+        "past": "fror",
+        "participle": "gefroren",
+        "third": "friert",
+        "ing": "gefrierend"
+      },
+      "nl": {
+        "meaning": "bevriezen",
+        "base": "bevriezen",
+        "past": "bevroor",
+        "participle": "bevroren",
+        "third": "bevriest",
+        "ing": "bevriezen"
+      },
+      "ru": {
+        "meaning": "замораживать",
+        "base": "замораживать",
+        "past": "заморозил",
+        "participle": "замороженный",
+        "third": "замораживает",
+        "ing": "замораживая"
       }
     },
     "ipaUS": {
@@ -2970,6 +3984,30 @@
         "participle": "gotten",
         "third": "gets",
         "ing": "getting"
+      },
+      "de": {
+        "meaning": "etwas bekommen oder erhalten",
+        "base": "bekommen",
+        "past": "bekam",
+        "participle": "bekommen",
+        "third": "bekommt",
+        "ing": "bekommend"
+      },
+      "nl": {
+        "meaning": "krijgen of ontvangen",
+        "base": "krijgen",
+        "past": "kreeg",
+        "participle": "gekregen",
+        "third": "krijgt",
+        "ing": "krijgen"
+      },
+      "ru": {
+        "meaning": "получать",
+        "base": "получать",
+        "past": "получил",
+        "participle": "полученный",
+        "third": "получает",
+        "ing": "получая"
       }
     },
     "ipaUS": {
@@ -3039,6 +4077,30 @@
         "third": "he / she / it: provide something to someone",
         "ing": "-ing form of give",
         "meaning": "provide something to someone"
+      },
+      "de": {
+        "base": "geben",
+        "past": "gab",
+        "participle": "gegeben",
+        "third": "gibt",
+        "ing": "gebend",
+        "meaning": "jemandem etwas geben"
+      },
+      "nl": {
+        "base": "geven",
+        "past": "gaf",
+        "participle": "gegeven",
+        "third": "geeft",
+        "ing": "geven",
+        "meaning": "geven"
+      },
+      "ru": {
+        "base": "давать",
+        "past": "дал",
+        "participle": "данный",
+        "third": "даёт",
+        "ing": "давая",
+        "meaning": "давать"
       }
     },
     "ipaUS": {
@@ -3108,6 +4170,30 @@
         "third": "he / she / it: move to another place",
         "ing": "-ing form of go",
         "meaning": "move to another place"
+      },
+      "de": {
+        "base": "gehen",
+        "past": "ging",
+        "participle": "gegangen",
+        "third": "geht",
+        "ing": "gehend",
+        "meaning": "an einen anderen Ort gehen"
+      },
+      "nl": {
+        "base": "gaan",
+        "past": "ging",
+        "participle": "gegaan",
+        "third": "gaat",
+        "ing": "gaan",
+        "meaning": "gaan"
+      },
+      "ru": {
+        "base": "идти",
+        "past": "шёл",
+        "participle": "ходивший",
+        "third": "идёт",
+        "ing": "идя",
+        "meaning": "перемещаться в другое место"
       }
     },
     "ipaUS": {
@@ -3177,6 +4263,30 @@
         "participle": "grown",
         "third": "grows",
         "ing": "growing"
+      },
+      "de": {
+        "meaning": "Gemüse anbauen",
+        "base": "anbauen",
+        "past": "baute an",
+        "participle": "angebaut",
+        "third": "baut an",
+        "ing": "anbauend"
+      },
+      "nl": {
+        "meaning": "planten of groenten kweken",
+        "base": "kweken",
+        "past": "kweekte",
+        "participle": "gekweekt",
+        "third": "kweekt",
+        "ing": "kwekend"
+      },
+      "ru": {
+        "meaning": "выращивать овощи",
+        "base": "выращивать",
+        "past": "выращивал",
+        "participle": "выращенный",
+        "third": "выращивает",
+        "ing": "выращивая"
       }
     },
     "ipaUS": {
@@ -3246,6 +4356,30 @@
         "third": "he / she / it: eat a meal (in this example)",
         "ing": "-ing form of have",
         "meaning": "eat a meal (in this example)"
+      },
+      "de": {
+        "base": "essen (in diesem Beispiel)",
+        "past": "aß",
+        "participle": "gegessen",
+        "third": "isst",
+        "ing": "essend",
+        "meaning": "essen (in diesem Beispiel)"
+      },
+      "nl": {
+        "base": "eten",
+        "past": "at",
+        "participle": "gegeten",
+        "third": "eet",
+        "ing": "etend",
+        "meaning": "een maaltijd eten"
+      },
+      "ru": {
+        "base": "есть",
+        "past": "ел",
+        "participle": "поевший",
+        "third": "ест",
+        "ing": "принимая пищу",
+        "meaning": "принимать пищу"
       }
     },
     "ipaUS": {
@@ -3315,6 +4449,30 @@
         "participle": "heard",
         "third": "hears",
         "ing": "hearing"
+      },
+      "de": {
+        "meaning": "mit den Ohren hören",
+        "base": "hören",
+        "past": "hörte",
+        "participle": "gehört",
+        "third": "hört",
+        "ing": "hörend"
+      },
+      "nl": {
+        "meaning": "geluid met de oren waarnemen",
+        "base": "horen",
+        "past": "hoorde",
+        "participle": "gehoord",
+        "third": "hoort",
+        "ing": "horend"
+      },
+      "ru": {
+        "meaning": "слышать",
+        "base": "слышать",
+        "past": "слышал",
+        "participle": "слышанный",
+        "third": "слышит",
+        "ing": "слыша"
       }
     },
     "ipaUS": {
@@ -3384,6 +4542,30 @@
         "participle": "hewn",
         "third": "hews",
         "ing": "hewing"
+      },
+      "de": {
+        "meaning": "mit Werkzeug schneiden oder formen (Stein, Holz)",
+        "base": "behauen",
+        "past": "behaute",
+        "participle": "behauen",
+        "third": "behaut",
+        "ing": "behauend"
+      },
+      "nl": {
+        "meaning": "snijden of vormen (steen, hout) met een gereedschap",
+        "base": "houwen",
+        "past": "houwde",
+        "participle": "gehouwen",
+        "third": "houwt",
+        "ing": "houwend"
+      },
+      "ru": {
+        "meaning": "обрабатывать (камень, дерево) инструментом",
+        "base": "обрабатывать",
+        "past": "обрабатывал",
+        "participle": "обработанный",
+        "third": "обрабатывает",
+        "ing": "обрабатывая"
       }
     },
     "ipaUS": {
@@ -3453,6 +4635,30 @@
         "third": "he / she / it: strike something",
         "ing": "-ing form of hit",
         "meaning": "strike something"
+      },
+      "de": {
+        "base": "schlagen",
+        "past": "schlug",
+        "participle": "geschlagen",
+        "third": "schlägt",
+        "ing": "schlagend",
+        "meaning": "schlagen"
+      },
+      "nl": {
+        "base": "slaan",
+        "past": "sloeg",
+        "participle": "geslagen",
+        "third": "slaat",
+        "ing": "slaand",
+        "meaning": "iets slaan"
+      },
+      "ru": {
+        "base": "ударять",
+        "past": "ударил",
+        "participle": "ударенный",
+        "third": "ударяет",
+        "ing": "ударя",
+        "meaning": "ударять"
       }
     },
     "ipaUS": {
@@ -3522,6 +4728,30 @@
         "participle": "hurt",
         "third": "hurts",
         "ing": "hurting"
+      },
+      "de": {
+        "meaning": "Schmerz verursachen",
+        "base": "verletzen",
+        "past": "verletzte",
+        "participle": "verletzt",
+        "third": "verletzt",
+        "ing": "verletzend"
+      },
+      "nl": {
+        "meaning": "pijn veroorzaken",
+        "base": "verwonden",
+        "past": "verwondde",
+        "participle": "verwond",
+        "third": "verwondt",
+        "ing": "verwondend"
+      },
+      "ru": {
+        "meaning": "причинять боль",
+        "base": "причинять боль",
+        "past": "причинил боль",
+        "participle": "причинивший боль",
+        "third": "причиняет боль",
+        "ing": "причиняя боль"
       }
     },
     "ipaUS": {
@@ -3591,6 +4821,30 @@
         "participle": "interwoven",
         "third": "interweaves",
         "ing": "interweaving"
+      },
+      "de": {
+        "meaning": "Elemente, Fäden oder Teile verweben oder vermischen",
+        "base": "verweben",
+        "past": "verwob",
+        "participle": "verwebt",
+        "third": "verwebt",
+        "ing": "verwebend"
+      },
+      "nl": {
+        "meaning": "elementen, draden of delen met elkaar verweven",
+        "base": "verweven",
+        "past": "verweefde",
+        "participle": "verweven",
+        "third": "verweeft",
+        "ing": "verwevend"
+      },
+      "ru": {
+        "meaning": "переплетать",
+        "base": "переплетать",
+        "past": "переплел",
+        "participle": "переплетённый",
+        "third": "переплетает",
+        "ing": "переплетая"
       }
     },
     "ipaUS": {
@@ -3660,6 +4914,30 @@
         "participle": "kept",
         "third": "keeps",
         "ing": "keeping"
+      },
+      "de": {
+        "meaning": "besitzen oder behalten",
+        "base": "behalten",
+        "past": "behielt",
+        "participle": "behalten",
+        "third": "behält",
+        "ing": "behaltend"
+      },
+      "nl": {
+        "meaning": "blijven hebben of bezitten",
+        "base": "houden",
+        "past": "hield",
+        "participle": "gehouden",
+        "third": "houdt",
+        "ing": "houdend"
+      },
+      "ru": {
+        "meaning": "сохранять",
+        "base": "сохранять",
+        "past": "сохранил",
+        "participle": "сохранённый",
+        "third": "сохраняет",
+        "ing": "сохраняя"
       }
     },
     "ipaUS": {
@@ -3729,6 +5007,30 @@
         "third": "he / she / it: have information",
         "ing": "-ing form of know",
         "meaning": "have information"
+      },
+      "de": {
+        "base": "wissen",
+        "past": "wusste",
+        "participle": "gewusst",
+        "third": "weiß",
+        "ing": "wissend",
+        "meaning": "Information haben"
+      },
+      "nl": {
+        "base": "kennen",
+        "past": "kende",
+        "participle": "gekend",
+        "third": "kent",
+        "ing": "kennend",
+        "meaning": "informatie bezitten"
+      },
+      "ru": {
+        "base": "знать",
+        "past": "знал",
+        "participle": "узнанный",
+        "third": "знает",
+        "ing": "зная",
+        "meaning": "иметь информацию"
       }
     },
     "ipaUS": {
@@ -3798,6 +5100,30 @@
         "participle": "led",
         "third": "leads",
         "ing": "leading"
+      },
+      "de": {
+        "meaning": "eine Gruppe führen oder leiten",
+        "base": "führen",
+        "past": "führte",
+        "participle": "geführt",
+        "third": "führt",
+        "ing": "führend"
+      },
+      "nl": {
+        "meaning": "een groep leiden of begeleiden",
+        "base": "leiden",
+        "past": "leidde",
+        "participle": "geleid",
+        "third": "leidt",
+        "ing": "leidend"
+      },
+      "ru": {
+        "meaning": "руководить",
+        "base": "руководить",
+        "past": "руководил",
+        "participle": "руководящий/возглавляемый",
+        "third": "руководит",
+        "ing": "руководя"
       }
     },
     "ipaUS": {
@@ -3867,6 +5193,30 @@
         "participle": "learnt",
         "third": "learns",
         "ing": "learning"
+      },
+      "de": {
+        "meaning": "Wissen oder Fertigkeit erwerben",
+        "base": "lernen",
+        "past": "lernte",
+        "participle": "gelernt",
+        "third": "lernt",
+        "ing": "lernend"
+      },
+      "nl": {
+        "meaning": "kennis of vaardigheid verwerven",
+        "base": "leren",
+        "past": "leerde",
+        "participle": "geleerd",
+        "third": "leert",
+        "ing": "lerend"
+      },
+      "ru": {
+        "meaning": "учиться",
+        "base": "учиться",
+        "past": "учил",
+        "participle": "выученный",
+        "third": "учится",
+        "ing": "учась"
       }
     },
     "ipaUS": {
@@ -3936,6 +5286,30 @@
         "participle": "left",
         "third": "leaves",
         "ing": "leaving"
+      },
+      "de": {
+        "meaning": "von einem Ort weggehen",
+        "base": "verlassen",
+        "past": "verließ",
+        "participle": "verlassen",
+        "third": "verlässt",
+        "ing": "verlassend"
+      },
+      "nl": {
+        "meaning": "weggaan van een plaats",
+        "base": "vertrekken",
+        "past": "vertrok",
+        "participle": "vertrokken",
+        "third": "vertrekt",
+        "ing": "vertrekkend"
+      },
+      "ru": {
+        "meaning": "покидать",
+        "base": "покидать",
+        "past": "покинул",
+        "participle": "покинутый",
+        "third": "покидает",
+        "ing": "покидая"
       }
     },
     "ipaUS": {
@@ -4005,6 +5379,30 @@
         "participle": "lent",
         "third": "lends",
         "ing": "lending"
+      },
+      "de": {
+        "meaning": "jemandem etwas vorübergehend geben",
+        "base": "leihen",
+        "past": "lieh",
+        "participle": "geliehen",
+        "third": "leiht",
+        "ing": "leihend"
+      },
+      "nl": {
+        "meaning": "iets aan iemand tijdelijk geven",
+        "base": "lenen",
+        "past": "leende",
+        "participle": "geleend",
+        "third": "leent",
+        "ing": "lenend"
+      },
+      "ru": {
+        "meaning": "одалживать",
+        "base": "одалживать",
+        "past": "одолжил",
+        "participle": "одолженный",
+        "third": "одалживает",
+        "ing": "одалживая"
       }
     },
     "ipaUS": {
@@ -4074,6 +5472,30 @@
         "participle": "let",
         "third": "lets",
         "ing": "letting"
+      },
+      "de": {
+        "meaning": "erlauben oder gestatten",
+        "base": "lassen",
+        "past": "ließ",
+        "participle": "gelassen",
+        "third": "lässt",
+        "ing": "lassend"
+      },
+      "nl": {
+        "meaning": "toestaan of toelaten",
+        "base": "laten",
+        "past": "liet",
+        "participle": "gelaten",
+        "third": "laat",
+        "ing": "latend"
+      },
+      "ru": {
+        "meaning": "позволять",
+        "base": "позволять",
+        "past": "позволил",
+        "participle": "позволенный",
+        "third": "позволяет",
+        "ing": "позволяя"
       }
     },
     "ipaUS": {
@@ -4143,6 +5565,30 @@
         "participle": "lain",
         "third": "lies",
         "ing": "lying"
+      },
+      "de": {
+        "meaning": "in horizontaler Position sein, liegen",
+        "base": "liegen",
+        "past": "lag",
+        "participle": "gelegen",
+        "third": "liegt",
+        "ing": "liegend"
+      },
+      "nl": {
+        "meaning": "in een horizontale positie liggen",
+        "base": "liggen",
+        "past": "lag",
+        "participle": "gelegen",
+        "third": "ligt",
+        "ing": "liggend"
+      },
+      "ru": {
+        "meaning": "лежать",
+        "base": "лежать",
+        "past": "лежал",
+        "participle": "лежащий",
+        "third": "лежит",
+        "ing": "лежа"
       }
     },
     "ipaUS": {
@@ -4212,6 +5658,30 @@
         "participle": "lit",
         "third": "lights",
         "ing": "lighting"
+      },
+      "de": {
+        "meaning": "etwas anzünden",
+        "base": "anzünden",
+        "past": "zündete an",
+        "participle": "angezündet",
+        "third": "zündet an",
+        "ing": "anzündend"
+      },
+      "nl": {
+        "meaning": "iets aansteken",
+        "base": "aansteken",
+        "past": "stak aan",
+        "participle": "aangestoken",
+        "third": "steekt aan",
+        "ing": "aansteken"
+      },
+      "ru": {
+        "meaning": "зажигать, поджигать",
+        "base": "зажигать",
+        "past": "зажёг",
+        "participle": "зажжённый",
+        "third": "зажигает",
+        "ing": "зажигая"
       }
     },
     "ipaUS": {
@@ -4281,6 +5751,30 @@
         "participle": "lost",
         "third": "loses",
         "ing": "losing"
+      },
+      "de": {
+        "meaning": "einen Wettbewerb verlieren",
+        "base": "verlieren",
+        "past": "verlor",
+        "participle": "verloren",
+        "third": "verliert",
+        "ing": "verlierend"
+      },
+      "nl": {
+        "meaning": "verliezen",
+        "base": "verliezen",
+        "past": "verloor",
+        "participle": "verloren",
+        "third": "verliest",
+        "ing": "verliezend"
+      },
+      "ru": {
+        "meaning": "проигрывать",
+        "base": "проигрывать",
+        "past": "проиграл",
+        "participle": "проигранный",
+        "third": "проигрывает",
+        "ing": "проигрывая"
       }
     },
     "ipaUS": {
@@ -4350,6 +5844,30 @@
         "participle": "made",
         "third": "makes",
         "ing": "making"
+      },
+      "de": {
+        "meaning": "erschaffen oder herstellen",
+        "base": "machen",
+        "past": "machte",
+        "participle": "gemacht",
+        "third": "macht",
+        "ing": "machend"
+      },
+      "nl": {
+        "meaning": "maken, creëren",
+        "base": "maken",
+        "past": "maakte",
+        "participle": "gemaakt",
+        "third": "maakt",
+        "ing": "makend"
+      },
+      "ru": {
+        "meaning": "делать, создавать",
+        "base": "делать",
+        "past": "сделал",
+        "participle": "сделанный",
+        "third": "делает",
+        "ing": "делая"
       }
     },
     "ipaUS": {
@@ -4419,6 +5937,30 @@
         "participle": "meant",
         "third": "means",
         "ing": "meaning"
+      },
+      "de": {
+        "meaning": "bedeuten",
+        "base": "bedeuten",
+        "past": "bedeutete",
+        "participle": "bedeutet",
+        "third": "bedeutet",
+        "ing": "bedeutend"
+      },
+      "nl": {
+        "meaning": "betekenen",
+        "base": "betekenen",
+        "past": "betekende",
+        "participle": "betekend",
+        "third": "betekent",
+        "ing": "betekenend"
+      },
+      "ru": {
+        "meaning": "означать",
+        "base": "означать",
+        "past": "означал",
+        "participle": "означавший",
+        "third": "означает",
+        "ing": "означая"
       }
     },
     "ipaUS": {
@@ -4488,6 +6030,30 @@
         "participle": "met",
         "third": "meets",
         "ing": "meeting"
+      },
+      "de": {
+        "meaning": "jemanden treffen",
+        "base": "treffen",
+        "past": "traf",
+        "participle": "getroffen",
+        "third": "trifft",
+        "ing": "treffend"
+      },
+      "nl": {
+        "meaning": "ontmoeten",
+        "base": "ontmoeten",
+        "past": "ontmoette",
+        "participle": "ontmoet",
+        "third": "ontmoet",
+        "ing": "ontmoetend"
+      },
+      "ru": {
+        "meaning": "встречать, знакомиться",
+        "base": "встречать",
+        "past": "встретил",
+        "participle": "встреченный",
+        "third": "встречает",
+        "ing": "встречая"
       }
     },
     "ipaUS": {
@@ -4557,6 +6123,30 @@
         "participle": "mistaken",
         "third": "mistakes",
         "ing": "mistaking"
+      },
+      "de": {
+        "meaning": "verwechseln",
+        "base": "verwechseln",
+        "past": "verwechselte",
+        "participle": "verwechselt",
+        "third": "verwechselt",
+        "ing": "verwechselnd"
+      },
+      "nl": {
+        "meaning": "verwarren",
+        "base": "verwarren",
+        "past": "verwarde",
+        "participle": "verward",
+        "third": "verwart",
+        "ing": "verwarrend"
+      },
+      "ru": {
+        "meaning": "ошибаться, путать",
+        "base": "ошибаться",
+        "past": "ошибся",
+        "participle": "перепутанный",
+        "third": "ошибается",
+        "ing": "ошибаясь"
       }
     },
     "ipaUS": {
@@ -4626,6 +6216,30 @@
         "participle": "mown",
         "third": "mows",
         "ing": "mowing"
+      },
+      "de": {
+        "meaning": "den Rasen mähen",
+        "base": "mähen",
+        "past": "mähte",
+        "participle": "gemäht",
+        "third": "mäht",
+        "ing": "mähend"
+      },
+      "nl": {
+        "meaning": "maaien (het gras)",
+        "base": "maaien",
+        "past": "maaide",
+        "participle": "gemaaid",
+        "third": "maaien",
+        "ing": "maaiend"
+      },
+      "ru": {
+        "meaning": "косить (газон)",
+        "base": "косить",
+        "past": "косил",
+        "participle": "скошенный",
+        "third": "косит",
+        "ing": "кося"
       }
     },
     "ipaUS": {
@@ -4695,6 +6309,30 @@
         "participle": "offset",
         "third": "offsets",
         "ing": "offsetting"
+      },
+      "de": {
+        "meaning": "ausgleichen",
+        "base": "ausgleichen",
+        "past": "glich aus",
+        "participle": "ausgeglichen",
+        "third": "gleicht aus",
+        "ing": "ausgleichend"
+      },
+      "nl": {
+        "meaning": "compensieren",
+        "base": "compenseren",
+        "past": "compenseerde",
+        "participle": "gecompenseerd",
+        "third": "compenseert",
+        "ing": "compenserend"
+      },
+      "ru": {
+        "meaning": "компенсировать",
+        "base": "компенсировать",
+        "past": "компенсировал",
+        "participle": "компенсированный",
+        "third": "компенсирует",
+        "ing": "компенсируя"
       }
     },
     "ipaUS": {
@@ -4764,6 +6402,30 @@
         "participle": "overcome",
         "third": "overcomes",
         "ing": "overcoming"
+      },
+      "de": {
+        "meaning": "überwinden",
+        "base": "überwinden",
+        "past": "überwand",
+        "participle": "überwunden",
+        "third": "überwindet",
+        "ing": "überwindend"
+      },
+      "nl": {
+        "meaning": "overwinnen",
+        "base": "overwinnen",
+        "past": "overwon",
+        "participle": "overwonnen",
+        "third": "overwint",
+        "ing": "overwinnend"
+      },
+      "ru": {
+        "meaning": "преодолевать",
+        "base": "преодолевать",
+        "past": "преодолел",
+        "participle": "преодоленный",
+        "third": "преодолевает",
+        "ing": "преодолевая"
       }
     },
     "ipaUS": {
@@ -4833,6 +6495,30 @@
         "participle": "overdone",
         "third": "overdoes",
         "ing": "overdoing"
+      },
+      "de": {
+        "meaning": "übertreiben",
+        "base": "übertreiben",
+        "past": "übertrieb",
+        "participle": "übertrieben",
+        "third": "übertreibt",
+        "ing": "übertreibend"
+      },
+      "nl": {
+        "meaning": "overdrijven",
+        "base": "overdrijven",
+        "past": "overdreef",
+        "participle": "overdreven",
+        "third": "overdrijft",
+        "ing": "overdrijvend"
+      },
+      "ru": {
+        "meaning": "переусердствовать",
+        "base": "переусердствовать",
+        "past": "переусердствовал",
+        "participle": "переусердствовавший",
+        "third": "переусердствует",
+        "ing": "переусердствуя"
       }
     },
     "ipaUS": {
@@ -4902,6 +6588,30 @@
         "participle": "overseen",
         "third": "oversees",
         "ing": "overseeing"
+      },
+      "de": {
+        "meaning": "überwachen",
+        "base": "überwachen",
+        "past": "überwachte",
+        "participle": "überwacht",
+        "third": "überwacht",
+        "ing": "überwachend"
+      },
+      "nl": {
+        "meaning": "toezicht houden",
+        "base": "toezicht houden",
+        "past": "hield toezicht",
+        "participle": "toezicht gehouden",
+        "third": "houdt toezicht",
+        "ing": "toezicht houdend"
+      },
+      "ru": {
+        "meaning": "надзирать, контролировать",
+        "base": "надзирать",
+        "past": "контролировал",
+        "participle": "контролировавший",
+        "third": "надзирает",
+        "ing": "надзирая"
       }
     },
     "ipaUS": {
@@ -4971,6 +6681,30 @@
         "participle": "overtaken",
         "third": "overtakes",
         "ing": "overtaking"
+      },
+      "de": {
+        "meaning": "überholen",
+        "base": "überholen",
+        "past": "überholte",
+        "participle": "überholt",
+        "third": "überholt",
+        "ing": "überholend"
+      },
+      "nl": {
+        "meaning": "inhalen",
+        "base": "inhalen",
+        "past": "haalde in",
+        "participle": "ingehaald",
+        "third": "haalt in",
+        "ing": "inhalend"
+      },
+      "ru": {
+        "meaning": "обгонять",
+        "base": "обгонять",
+        "past": "обогнал",
+        "participle": "обогнанный",
+        "third": "обгоняет",
+        "ing": "обгоняя"
       }
     },
     "ipaUS": {
@@ -5040,6 +6774,30 @@
         "participle": "paid",
         "third": "pays",
         "ing": "paying"
+      },
+      "de": {
+        "meaning": "bezahlen",
+        "base": "bezahlen",
+        "past": "bezahlte",
+        "participle": "bezahlt",
+        "third": "bezahlt",
+        "ing": "bezahlend"
+      },
+      "nl": {
+        "meaning": "betalen",
+        "base": "betalen",
+        "past": "betaalde",
+        "participle": "betaald",
+        "third": "betaalt",
+        "ing": "betalend"
+      },
+      "ru": {
+        "meaning": "платить",
+        "base": "платить",
+        "past": "платил",
+        "participle": "оплаченный",
+        "third": "платит",
+        "ing": "платя"
       }
     },
     "ipaUS": {
@@ -5109,6 +6867,30 @@
         "third": "he / she / it: take part in a game",
         "ing": "-ing form of play",
         "meaning": "take part in a game"
+      },
+      "de": {
+        "base": "spielen",
+        "past": "spielte",
+        "participle": "gespielt",
+        "third": "spielt",
+        "ing": "spielend",
+        "meaning": "spielen"
+      },
+      "nl": {
+        "base": "spelen",
+        "past": "speelde",
+        "participle": "gespeeld",
+        "third": "speelt",
+        "ing": "spelend",
+        "meaning": "spelen"
+      },
+      "ru": {
+        "base": "играть",
+        "past": "играл",
+        "participle": "игравший",
+        "third": "играет",
+        "ing": "играя",
+        "meaning": "играть"
       }
     },
     "ipaUS": {
@@ -5178,6 +6960,30 @@
         "participle": "proven",
         "third": "proves",
         "ing": "proving"
+      },
+      "de": {
+        "meaning": "beweisen",
+        "base": "beweisen",
+        "past": "bewies",
+        "participle": "bewiesen",
+        "third": "beweist",
+        "ing": "beweisend"
+      },
+      "nl": {
+        "meaning": "bewijzen",
+        "base": "bewijzen",
+        "past": "bewees",
+        "participle": "bewezen",
+        "third": "bewijst",
+        "ing": "bewijzend"
+      },
+      "ru": {
+        "meaning": "доказывать",
+        "base": "доказывать",
+        "past": "доказал",
+        "participle": "доказанный",
+        "third": "доказывает",
+        "ing": "доказывая"
       }
     },
     "ipaUS": {
@@ -5247,6 +7053,30 @@
         "third": "he / she / it: place something somewhere",
         "ing": "-ing form of put",
         "meaning": "place something somewhere"
+      },
+      "de": {
+        "base": "legen",
+        "past": "legte",
+        "participle": "gelegt",
+        "third": "legt",
+        "ing": "legend",
+        "meaning": "etwas irgendwohin legen"
+      },
+      "nl": {
+        "base": "zetten",
+        "past": "zette",
+        "participle": "gezet",
+        "third": "zet",
+        "ing": "aan het zetten",
+        "meaning": "plaatsen"
+      },
+      "ru": {
+        "base": "класть",
+        "past": "положил",
+        "participle": "положенный",
+        "third": "кладёт",
+        "ing": "кладя",
+        "meaning": "класть что-то куда-то"
       }
     },
     "ipaUS": {
@@ -5316,6 +7146,30 @@
         "participle": "quit",
         "third": "quits",
         "ing": "quitting"
+      },
+      "de": {
+        "meaning": "aufhören oder verlassen",
+        "base": "aufhören",
+        "past": "hörte auf",
+        "participle": "aufgehört",
+        "third": "hört auf",
+        "ing": "aufhörend"
+      },
+      "nl": {
+        "meaning": "stoppen of vertrekken",
+        "base": "stoppen",
+        "past": "stopte",
+        "participle": "gestopt",
+        "third": "stopt",
+        "ing": "stoppen"
+      },
+      "ru": {
+        "meaning": "прекратить или уйти",
+        "base": "увольняться",
+        "past": "уволился",
+        "participle": "уволившийся",
+        "third": "увольняется",
+        "ing": "увольняясь"
       }
     },
     "ipaUS": {
@@ -5385,6 +7239,30 @@
         "participle": "read",
         "third": "reads",
         "ing": "reading"
+      },
+      "de": {
+        "meaning": "geschriebene Wörter anschauen und verstehen",
+        "base": "lesen",
+        "past": "las",
+        "participle": "gelesen",
+        "third": "liest",
+        "ing": "lesend"
+      },
+      "nl": {
+        "meaning": "kijken naar en begrijpen van geschreven woorden",
+        "base": "lezen",
+        "past": "las",
+        "participle": "gelezen",
+        "third": "leest",
+        "ing": "lezen"
+      },
+      "ru": {
+        "meaning": "читать и понимать написанное",
+        "base": "читать",
+        "past": "читал",
+        "participle": "прочитанный",
+        "third": "читает",
+        "ing": "читая"
       }
     },
     "ipaUS": {
@@ -5454,6 +7332,30 @@
         "participle": "reset",
         "third": "resets",
         "ing": "resetting"
+      },
+      "de": {
+        "meaning": "wieder einstellen oder in Anfangszustand versetzen",
+        "base": "zurücksetzen",
+        "past": "setzte zurück",
+        "participle": "zurückgesetzt",
+        "third": "setzt zurück",
+        "ing": "zurücksetzend"
+      },
+      "nl": {
+        "meaning": "opnieuw instellen",
+        "base": "resetten",
+        "past": "resette",
+        "participle": "gereset",
+        "third": "reset",
+        "ing": "resettend"
+      },
+      "ru": {
+        "meaning": "сбросить или восстановить изначальное состояние",
+        "base": "сбрасывать",
+        "past": "сбросил",
+        "participle": "сброшенный",
+        "third": "сбрасывает",
+        "ing": "сбрасывая"
       }
     },
     "ipaUS": {
@@ -5523,6 +7425,30 @@
         "participle": "rewritten",
         "third": "rewrites",
         "ing": "rewriting"
+      },
+      "de": {
+        "meaning": "etwas anders erneut schreiben",
+        "base": "umschreiben",
+        "past": "schrieb um",
+        "participle": "umgeschrieben",
+        "third": "schreibt um",
+        "ing": "umschreibend"
+      },
+      "nl": {
+        "meaning": "opnieuw schrijven op een andere manier",
+        "base": "herschrijven",
+        "past": "herschreef",
+        "participle": "herschreven",
+        "third": "herschrijft",
+        "ing": "herschrijven"
+      },
+      "ru": {
+        "meaning": "переписать по-другому",
+        "base": "переписывать",
+        "past": "переписал",
+        "participle": "переписанный",
+        "third": "переписывает",
+        "ing": "переписывая"
       }
     },
     "ipaUS": {
@@ -5592,6 +7518,30 @@
         "participle": "rid",
         "third": "rids",
         "ing": "ridding"
+      },
+      "de": {
+        "meaning": "frei machen von etwas Ungewünschtem",
+        "base": "befreien",
+        "past": "befreite",
+        "participle": "befreit",
+        "third": "befreit",
+        "ing": "befreiend"
+      },
+      "nl": {
+        "meaning": "ergens van bevrijden",
+        "base": "bevrijden",
+        "past": "bevrijdde",
+        "participle": "bevrijd",
+        "third": "bevrijdt",
+        "ing": "aan het bevrijden"
+      },
+      "ru": {
+        "meaning": "избавить от чего-то нежелательного",
+        "base": "избавлять",
+        "past": "избавил",
+        "participle": "избавленный",
+        "third": "избавляет",
+        "ing": "избавляя"
       }
     },
     "ipaUS": {
@@ -5661,6 +7611,30 @@
         "participle": "ridden",
         "third": "rides",
         "ing": "riding"
+      },
+      "de": {
+        "meaning": "mit einem Fahrzeug oder Tier fahren",
+        "base": "fahren",
+        "past": "fuhr",
+        "participle": "gefahren",
+        "third": "fährt",
+        "ing": "fahrend"
+      },
+      "nl": {
+        "meaning": "reizen op een voertuig of dier",
+        "base": "rijden",
+        "past": "reed",
+        "participle": "gereden",
+        "third": "rijdt",
+        "ing": "rijden"
+      },
+      "ru": {
+        "meaning": "ездить на транспорте или животном",
+        "base": "ехать верхом",
+        "past": "ехал верхом",
+        "participle": "проехавший",
+        "third": "едет верхом",
+        "ing": "едущий верхом"
       }
     },
     "ipaUS": {
@@ -5730,6 +7704,30 @@
         "participle": "rung",
         "third": "rings",
         "ing": "ringing"
+      },
+      "de": {
+        "meaning": "eine Glocke klingen lassen",
+        "base": "läuten",
+        "past": "läutete",
+        "participle": "geläutet",
+        "third": "läutet",
+        "ing": "läutend"
+      },
+      "nl": {
+        "meaning": "een bel laten klinken",
+        "base": "laten luiden",
+        "past": "liet luiden",
+        "participle": "laten luiden",
+        "third": "laat luiden",
+        "ing": "aan het laten luiden"
+      },
+      "ru": {
+        "meaning": "звонить колокольчиком",
+        "base": "звонить",
+        "past": "звонил",
+        "participle": "прозвонивший",
+        "third": "звонит",
+        "ing": "звоня"
       }
     },
     "ipaUS": {
@@ -5799,6 +7797,30 @@
         "participle": "risen",
         "third": "rises",
         "ing": "rising"
+      },
+      "de": {
+        "meaning": "aufstehen vom Liegen oder Sitzen",
+        "base": "aufstehen",
+        "past": "stand auf",
+        "participle": "aufgestanden",
+        "third": "steht auf",
+        "ing": "aufstehend"
+      },
+      "nl": {
+        "meaning": "opstaan vanuit liggen of zitten",
+        "base": "opstaan",
+        "past": "stond op",
+        "participle": "opgestaan",
+        "third": "staat op",
+        "ing": "opstaan"
+      },
+      "ru": {
+        "meaning": "вставать из положения лежа или сидя",
+        "base": "вставать",
+        "past": "встал",
+        "participle": "поднявшийся",
+        "third": "встаёт",
+        "ing": "вставая"
       }
     },
     "ipaUS": {
@@ -5868,6 +7890,30 @@
         "third": "he / she / it: move quickly on foot",
         "ing": "-ing form of run",
         "meaning": "move quickly on foot"
+      },
+      "de": {
+        "base": "rennen",
+        "past": "rannte",
+        "participle": "gerannt",
+        "third": "rennt",
+        "ing": "rennend",
+        "meaning": "sich zu Fuß schnell bewegen"
+      },
+      "nl": {
+        "base": "rennen",
+        "past": "rende",
+        "participle": "gerend",
+        "third": "rent",
+        "ing": "rennen",
+        "meaning": "snel lopen te voet"
+      },
+      "ru": {
+        "base": "бежать",
+        "past": "бежал",
+        "participle": "побежавший",
+        "third": "бежит",
+        "ing": "бегая",
+        "meaning": "быстро двигаться пешком"
       }
     },
     "ipaUS": {
@@ -5937,6 +7983,30 @@
         "participle": "said",
         "third": "says",
         "ing": "saying"
+      },
+      "de": {
+        "meaning": "Worte sprechen",
+        "base": "sagen",
+        "past": "sagte",
+        "participle": "gesagt",
+        "third": "sagt",
+        "ing": "sprechend"
+      },
+      "nl": {
+        "meaning": "woorden spreken",
+        "base": "zeggen",
+        "past": "zei",
+        "participle": "gezegd",
+        "third": "zegt",
+        "ing": "zeggen"
+      },
+      "ru": {
+        "meaning": "говорить слова",
+        "base": "говорить",
+        "past": "сказал",
+        "participle": "сказанный",
+        "third": "говорит",
+        "ing": "говоря"
       }
     },
     "ipaUS": {
@@ -6006,6 +8076,30 @@
         "third": "he / she / it: notice with the eyes",
         "ing": "-ing form of see",
         "meaning": "notice with the eyes"
+      },
+      "de": {
+        "base": "sehen",
+        "past": "sah",
+        "participle": "gesehen",
+        "third": "sieht",
+        "ing": "sehend",
+        "meaning": "mit den Augen wahrnehmen"
+      },
+      "nl": {
+        "base": "zien",
+        "past": "zag",
+        "participle": "gezien",
+        "third": "ziet",
+        "ing": "zien",
+        "meaning": "opmerken met de ogen"
+      },
+      "ru": {
+        "base": "видеть",
+        "past": "видел",
+        "participle": "увиденный",
+        "third": "видит",
+        "ing": "видя",
+        "meaning": "замечать глазами"
       }
     },
     "ipaUS": {
@@ -6075,6 +8169,30 @@
         "participle": "sold",
         "third": "sells",
         "ing": "selling"
+      },
+      "de": {
+        "meaning": "gegen Geld tauschen",
+        "base": "verkaufen",
+        "past": "verkaufte",
+        "participle": "verkauft",
+        "third": "verkauft",
+        "ing": "verkaufend"
+      },
+      "nl": {
+        "meaning": "ruilen voor geld",
+        "base": "verkopen",
+        "past": "verkocht",
+        "participle": "verkocht",
+        "third": "verkoopt",
+        "ing": "verkopen"
+      },
+      "ru": {
+        "meaning": "обменивать на деньги",
+        "base": "продавать",
+        "past": "продал",
+        "participle": "проданный",
+        "third": "продаёт",
+        "ing": "продавая"
       }
     },
     "ipaUS": {
@@ -6144,6 +8262,30 @@
         "participle": "sent",
         "third": "sends",
         "ing": "sending"
+      },
+      "de": {
+        "meaning": "veranlassen, dass etwas geht oder geliefert wird",
+        "base": "senden",
+        "past": "sandte",
+        "participle": "gesandt",
+        "third": "sendet",
+        "ing": "sendend"
+      },
+      "nl": {
+        "meaning": "laten gaan of bezorgen",
+        "base": "sturen",
+        "past": "stuurde",
+        "participle": "gestuurd",
+        "third": "stuurt",
+        "ing": "sturen"
+      },
+      "ru": {
+        "meaning": "отправлять",
+        "base": "посылать",
+        "past": "послал",
+        "participle": "посланный",
+        "third": "посылает",
+        "ing": "посылая"
       }
     },
     "ipaUS": {
@@ -6213,6 +8355,30 @@
         "third": "he / she / it: prepare or arrange something",
         "ing": "-ing form of set",
         "meaning": "prepare or arrange something"
+      },
+      "de": {
+        "base": "decken",
+        "past": "deckte",
+        "participle": "gedeckt",
+        "third": "deckt",
+        "ing": "deckend",
+        "meaning": "etwas vorbereiten oder den Tisch decken"
+      },
+      "nl": {
+        "base": "zetten",
+        "past": "zette",
+        "participle": "gezet",
+        "third": "zet",
+        "ing": "zetten",
+        "meaning": "voorbereiden of klaarmaken"
+      },
+      "ru": {
+        "base": "накрывать/готовить",
+        "past": "накрыл",
+        "participle": "накрытый",
+        "third": "накрывает",
+        "ing": "накрывая",
+        "meaning": "готовить или организовывать"
       }
     },
     "ipaUS": {
@@ -6282,6 +8448,30 @@
         "participle": "shaken",
         "third": "shakes",
         "ing": "shaking"
+      },
+      "de": {
+        "meaning": "etwas schnell auf und ab oder hin und her bewegen",
+        "base": "schütteln",
+        "past": "schüttelte",
+        "participle": "geschüttelt",
+        "third": "schüttelt",
+        "ing": "schüttelnd"
+      },
+      "nl": {
+        "meaning": "iets snel heen en weer bewegen, op en neer of van links naar rechts",
+        "base": "schudden",
+        "past": "schudde",
+        "participle": "geschud",
+        "third": "schudt",
+        "ing": "schuddend"
+      },
+      "ru": {
+        "meaning": "быстро двигать что-то вверх-вниз или из стороны в сторону",
+        "base": "трясти",
+        "past": "тряс",
+        "participle": "встряхнутый",
+        "third": "трясёт",
+        "ing": "тряся"
       }
     },
     "ipaUS": {
@@ -6351,6 +8541,30 @@
         "participle": "shown",
         "third": "shows",
         "ing": "showing"
+      },
+      "de": {
+        "meaning": "etwas (ein Foto, eine Sache) jemandem sichtbar machen",
+        "base": "zeigen",
+        "past": "zeigte",
+        "participle": "gezeigt",
+        "third": "zeigt",
+        "ing": "zeigend"
+      },
+      "nl": {
+        "meaning": "iets (zoals een foto) aan iemand zichtbaar maken",
+        "base": "tonen",
+        "past": "toonde",
+        "participle": "getoond",
+        "third": "toont",
+        "ing": "tonend"
+      },
+      "ru": {
+        "meaning": "показывать (фото, вещь) кому-то",
+        "base": "показывать",
+        "past": "показал",
+        "participle": "показанный",
+        "third": "показывает",
+        "ing": "показывая"
       }
     },
     "ipaUS": {
@@ -6420,6 +8634,30 @@
         "participle": "shut",
         "third": "shuts",
         "ing": "shutting"
+      },
+      "de": {
+        "meaning": "etwas schließen",
+        "base": "zumachen",
+        "past": "machte zu",
+        "participle": "zugemacht",
+        "third": "macht zu",
+        "ing": "zumachend"
+      },
+      "nl": {
+        "meaning": "iets sluiten",
+        "base": "sluiten",
+        "past": "sloot",
+        "participle": "gesloten",
+        "third": "sluit",
+        "ing": "sluitend"
+      },
+      "ru": {
+        "meaning": "закрывать что-то",
+        "base": "закрывать",
+        "past": "закрыл",
+        "participle": "закрытый",
+        "third": "закрывает",
+        "ing": "закрывая"
       }
     },
     "ipaUS": {
@@ -6489,6 +8727,30 @@
         "participle": "sung",
         "third": "sings",
         "ing": "singing"
+      },
+      "de": {
+        "meaning": "mit der Stimme musikalische Töne erzeugen",
+        "base": "singen",
+        "past": "sang",
+        "participle": "gesungen",
+        "third": "singt",
+        "ing": "singend"
+      },
+      "nl": {
+        "meaning": "muzikale tonen met de stem voortbrengen",
+        "base": "zingen",
+        "past": "zong",
+        "participle": "gezongen",
+        "third": "zingt",
+        "ing": "zingend"
+      },
+      "ru": {
+        "meaning": "издавать музыкальные звуки голосом",
+        "base": "петь",
+        "past": "пел",
+        "participle": "спетый",
+        "third": "поёт",
+        "ing": "поющий"
       }
     },
     "ipaUS": {
@@ -6558,6 +8820,30 @@
         "participle": "sunk",
         "third": "sinks",
         "ing": "sinking"
+      },
+      "de": {
+        "meaning": "unter die Oberfläche einer Flüssigkeit gehen",
+        "base": "sinken",
+        "past": "sank",
+        "participle": "gesunken",
+        "third": "sinkt",
+        "ing": "sinkend"
+      },
+      "nl": {
+        "meaning": "onder het oppervlak van een vloeistof zakken",
+        "base": "zinken",
+        "past": "zonk",
+        "participle": "gezonken",
+        "third": "zinkt",
+        "ing": "zinkend"
+      },
+      "ru": {
+        "meaning": "погружаться под поверхность жидкости",
+        "base": "тонуть",
+        "past": "тонул",
+        "participle": "утонувший",
+        "third": "тонет",
+        "ing": "тонущий"
       }
     },
     "ipaUS": {
@@ -6627,6 +8913,30 @@
         "participle": "sat",
         "third": "sits",
         "ing": "sitting"
+      },
+      "de": {
+        "meaning": "sich so hinsetzen, dass der Körper von Gesäß gestützt wird",
+        "base": "sitzen",
+        "past": "saß",
+        "participle": "gesessen",
+        "third": "sitzt",
+        "ing": "sitzend"
+      },
+      "nl": {
+        "meaning": "rusten met het lichaam ondersteund door de billen",
+        "base": "zitten",
+        "past": "zat",
+        "participle": "gezeten",
+        "third": "zit",
+        "ing": "zittend"
+      },
+      "ru": {
+        "meaning": "сидеть, опираясь на ягодицы",
+        "base": "сидеть",
+        "past": "сидел",
+        "participle": "сидевший",
+        "third": "сидит",
+        "ing": "сидящий"
       }
     },
     "ipaUS": {
@@ -6696,6 +9006,30 @@
         "participle": "slept",
         "third": "sleeps",
         "ing": "sleeping"
+      },
+      "de": {
+        "meaning": "in einem Ruhezustand mit Bewusstseinsverlust sein",
+        "base": "schlafen",
+        "past": "schlief",
+        "participle": "geschlafen",
+        "third": "schläft",
+        "ing": "schlafend"
+      },
+      "nl": {
+        "meaning": "in een rusttoestand zijn met bewustzijnsverlies",
+        "base": "slapen",
+        "past": "sliep",
+        "participle": "geslapen",
+        "third": "slaapt",
+        "ing": "slapend"
+      },
+      "ru": {
+        "meaning": "находиться в состоянии отдыха с утратой сознания",
+        "base": "спать",
+        "past": "спал",
+        "participle": "спавший",
+        "third": "спит",
+        "ing": "спящий"
       }
     },
     "ipaUS": {
@@ -6765,6 +9099,30 @@
         "participle": "smelt",
         "third": "smells",
         "ing": "smelling"
+      },
+      "de": {
+        "meaning": "einen Geruch aktiv mit der Nase wahrnehmen",
+        "base": "riechen",
+        "past": "roch",
+        "participle": "gerochen",
+        "third": "riecht",
+        "ing": "riechend"
+      },
+      "nl": {
+        "meaning": "een geur actief met de neus waarnemen",
+        "base": "ruiken",
+        "past": "rook",
+        "participle": "geroken",
+        "third": "ruikt",
+        "ing": "ruikend"
+      },
+      "ru": {
+        "meaning": "чувствовать запах, используя нос",
+        "base": "нюхать",
+        "past": "нюхал",
+        "participle": "нюханный",
+        "third": "нюхает",
+        "ing": "нюхающий"
       }
     },
     "ipaUS": {
@@ -6834,6 +9192,30 @@
         "participle": "snowed",
         "third": "snows",
         "ing": "snowing"
+      },
+      "de": {
+        "meaning": "Schnee fällt (Wetter)",
+        "base": "schneien",
+        "past": "schneite",
+        "participle": "geschneit",
+        "third": "schneit",
+        "ing": "schneiend"
+      },
+      "nl": {
+        "meaning": "sneeuwval hebben (weer)",
+        "base": "sneeuwen",
+        "past": "sneeuwde",
+        "participle": "gesneeuwd",
+        "third": "sneeuwt",
+        "ing": "sneeuwend"
+      },
+      "ru": {
+        "meaning": "идёт снег (погода)",
+        "base": "идти (о снеге)",
+        "past": "шёл (о снеге)",
+        "participle": "шедший (о снеге)",
+        "third": "идёт (о снеге)",
+        "ing": "идущий (о снеге)"
       }
     },
     "ipaUS": {
@@ -6903,6 +9285,30 @@
         "participle": "sown",
         "third": "sows",
         "ing": "sowing"
+      },
+      "de": {
+        "meaning": "Samen in die Erde pflanzen",
+        "base": "säen",
+        "past": "säte",
+        "participle": "gesät",
+        "third": "säht",
+        "ing": "sähend"
+      },
+      "nl": {
+        "meaning": "zaden planten in de grond",
+        "base": "zaaien",
+        "past": "zaaide",
+        "participle": "gezaaid",
+        "third": "zaait",
+        "ing": "zaaiend"
+      },
+      "ru": {
+        "meaning": "сеять, сажать семена в землю",
+        "base": "сеять",
+        "past": "сеял",
+        "participle": "посеянный",
+        "third": "сеет",
+        "ing": "сеяющий"
       }
     },
     "ipaUS": {
@@ -6972,6 +9378,30 @@
         "third": "he / she / it: communicate using words",
         "ing": "-ing form of speak",
         "meaning": "communicate using words"
+      },
+      "de": {
+        "base": "sprechen",
+        "past": "sprach",
+        "participle": "gesprochen",
+        "third": "spricht",
+        "ing": "sprechend",
+        "meaning": "mit Wörtern kommunizieren"
+      },
+      "nl": {
+        "base": "spreken",
+        "past": "sprak",
+        "participle": "gesproken",
+        "third": "spreekt",
+        "ing": "sprekend",
+        "meaning": "met woorden communiceren"
+      },
+      "ru": {
+        "base": "говорить",
+        "past": "говорил",
+        "participle": "сказанный",
+        "third": "говорит",
+        "ing": "говоря",
+        "meaning": "общаться с помощью слов"
       }
     },
     "ipaUS": {
@@ -7041,6 +9471,30 @@
         "participle": "spelt",
         "third": "spells",
         "ing": "spelling"
+      },
+      "de": {
+        "meaning": "die Buchstaben eines Wortes in der Reihenfolge nennen oder schreiben",
+        "base": "buchstabieren",
+        "past": "buchstabierte",
+        "participle": "buchstabiert",
+        "third": "buchstabiert",
+        "ing": "buchstabierend"
+      },
+      "nl": {
+        "meaning": "de letters van een woord achter elkaar noemen of schrijven",
+        "base": "spellen",
+        "past": "spelde",
+        "participle": "gespeld",
+        "third": "spelt",
+        "ing": "spellend"
+      },
+      "ru": {
+        "meaning": "называть или писать буквы слова по порядку",
+        "base": "произносить по буквам",
+        "past": "произнёс по буквам",
+        "participle": "произнесённый по буквам",
+        "third": "произносит по буквам",
+        "ing": "произнося по буквам"
       }
     },
     "ipaUS": {
@@ -7110,6 +9564,30 @@
         "participle": "spent",
         "third": "spends",
         "ing": "spending"
+      },
+      "de": {
+        "meaning": "Zeit für einen Zweck verwenden",
+        "base": "verbringen",
+        "past": "verbrachte",
+        "participle": "verbracht",
+        "third": "verbringt",
+        "ing": "verbringend"
+      },
+      "nl": {
+        "meaning": "tijd voor een doel gebruiken",
+        "base": "doorbrengen",
+        "past": "bracht door",
+        "participle": "doorgebracht",
+        "third": "brengt door",
+        "ing": "doorgebrengend"
+      },
+      "ru": {
+        "meaning": "тратить время на что-то",
+        "base": "проводить (время)",
+        "past": "проводил",
+        "participle": "проведённый",
+        "third": "проводит",
+        "ing": "проводя"
       }
     },
     "ipaUS": {
@@ -7179,6 +9657,30 @@
         "participle": "split",
         "third": "splits",
         "ing": "splitting"
+      },
+      "de": {
+        "meaning": "in Teile teilen",
+        "base": "teilen",
+        "past": "teilte",
+        "participle": "geteilt",
+        "third": "teilt",
+        "ing": "teilend"
+      },
+      "nl": {
+        "meaning": "in delen verdelen",
+        "base": "splitsen",
+        "past": "splitste",
+        "participle": "gesplitst",
+        "third": "splitst",
+        "ing": "splitsend"
+      },
+      "ru": {
+        "meaning": "разделять на части",
+        "base": "разделять",
+        "past": "разделил",
+        "participle": "разделённый",
+        "third": "разделяет",
+        "ing": "разделяя"
       }
     },
     "ipaUS": {
@@ -7248,6 +9750,30 @@
         "participle": "spoilt",
         "third": "spoils",
         "ing": "spoiling"
+      },
+      "de": {
+        "meaning": "ruinieren oder schlecht machen",
+        "base": "versauen",
+        "past": "versaute",
+        "participle": "versaut",
+        "third": "versaut",
+        "ing": "versauend"
+      },
+      "nl": {
+        "meaning": "verpesten of slecht maken",
+        "base": "bederven",
+        "past": "bedierf",
+        "participle": "bedorven",
+        "third": "bederft",
+        "ing": "bedervend"
+      },
+      "ru": {
+        "meaning": "портить",
+        "base": "портить",
+        "past": "испортил",
+        "participle": "испорченный",
+        "third": "портит",
+        "ing": "портящий"
       }
     },
     "ipaUS": {
@@ -7317,6 +9843,30 @@
         "participle": "spread",
         "third": "spreads",
         "ing": "spreading"
+      },
+      "de": {
+        "meaning": "ausbreiten (über eine Fläche)",
+        "base": "ausbreiten",
+        "past": "breitete aus",
+        "participle": "ausgebreitet",
+        "third": "breitet aus",
+        "ing": "ausbreitend"
+      },
+      "nl": {
+        "meaning": "spreiden, uitspreiden over een oppervlak",
+        "base": "spreiden",
+        "past": "spreidde",
+        "participle": "gespreid",
+        "third": "spreidt",
+        "ing": "aan het spreiden"
+      },
+      "ru": {
+        "meaning": "расстилать по поверхности",
+        "base": "расстилать",
+        "past": "расстелил",
+        "participle": "расстеленный",
+        "third": "расстилает",
+        "ing": "расстилая"
       }
     },
     "ipaUS": {
@@ -7386,6 +9936,30 @@
         "participle": "stood",
         "third": "stands",
         "ing": "standing"
+      },
+      "de": {
+        "meaning": "aufrecht auf den Füßen stehen",
+        "base": "stehen",
+        "past": "stand",
+        "participle": "gestanden",
+        "third": "steht",
+        "ing": "stehend"
+      },
+      "nl": {
+        "meaning": "rechtop staan op de voeten",
+        "base": "staan",
+        "past": "stond",
+        "participle": "gestaan",
+        "third": "staat",
+        "ing": "staand"
+      },
+      "ru": {
+        "meaning": "стоять прямо на ногах",
+        "base": "стоять",
+        "past": "стоял",
+        "participle": "стоявший",
+        "third": "стоит",
+        "ing": "стоя"
       }
     },
     "ipaUS": {
@@ -7455,6 +10029,30 @@
         "participle": "stolen",
         "third": "steals",
         "ing": "stealing"
+      },
+      "de": {
+        "meaning": "etwas ohne Erlaubnis nehmen",
+        "base": "stehlen",
+        "past": "stahl",
+        "participle": "gestohlen",
+        "third": "stehlt",
+        "ing": "stehlend"
+      },
+      "nl": {
+        "meaning": "iets zonder toestemming meenemen",
+        "base": "stelen",
+        "past": "stal",
+        "participle": "gestolen",
+        "third": "steelt",
+        "ing": "aan het stelen"
+      },
+      "ru": {
+        "meaning": "брать без разрешения",
+        "base": "красть",
+        "past": "украл",
+        "participle": "украденный",
+        "third": "крадёт",
+        "ing": "крадя"
       }
     },
     "ipaUS": {
@@ -7524,6 +10122,30 @@
         "participle": "stuck",
         "third": "sticks",
         "ing": "sticking"
+      },
+      "de": {
+        "meaning": "mit Klebstoff befestigen",
+        "base": "kleben",
+        "past": "klebte",
+        "participle": "geklebt",
+        "third": "klebt",
+        "ing": "klebend"
+      },
+      "nl": {
+        "meaning": "vastplakken met lijm",
+        "base": "plakken",
+        "past": "plakte",
+        "participle": "geplakt",
+        "third": "plakt",
+        "ing": "aan het plakken"
+      },
+      "ru": {
+        "meaning": "приклеивать",
+        "base": "приклеивать",
+        "past": "приклеил",
+        "participle": "приклеенный",
+        "third": "приклеивает",
+        "ing": "приклеивая"
       }
     },
     "ipaUS": {
@@ -7593,6 +10215,30 @@
         "third": "he / she / it: learn about a subject",
         "ing": "-ing form of study",
         "meaning": "learn about a subject"
+      },
+      "de": {
+        "base": "lernen (ein Fach)",
+        "past": "lernte/studierte",
+        "participle": "gelernt/studiert",
+        "third": "lernt/studiert",
+        "ing": "lernend/studierend",
+        "meaning": "ein Fach lernen"
+      },
+      "nl": {
+        "base": "studeren",
+        "past": "studeerde",
+        "participle": "gestudeerd",
+        "third": "studeert",
+        "ing": "aan het studeren",
+        "meaning": "leren over een vak"
+      },
+      "ru": {
+        "base": "изучать",
+        "past": "изучал",
+        "participle": "изучавший",
+        "third": "изучает",
+        "ing": "изучающий",
+        "meaning": "изучать"
       }
     },
     "ipaUS": {
@@ -7662,6 +10308,30 @@
         "participle": "swept",
         "third": "sweeps",
         "ing": "sweeping"
+      },
+      "de": {
+        "meaning": "mit Besen reinigen",
+        "base": "fegen",
+        "past": "fegte",
+        "participle": "gefegt",
+        "third": "fegt",
+        "ing": "fegend"
+      },
+      "nl": {
+        "meaning": "vegen met een bezem",
+        "base": "vegen",
+        "past": "veegde",
+        "participle": "geveegd",
+        "third": "veegt",
+        "ing": "aan het vegen"
+      },
+      "ru": {
+        "meaning": "подметать",
+        "base": "подметать",
+        "past": "подметал",
+        "participle": "подметённый",
+        "third": "подметает",
+        "ing": "подметая"
       }
     },
     "ipaUS": {
@@ -7731,6 +10401,30 @@
         "participle": "swum",
         "third": "swims",
         "ing": "swimming"
+      },
+      "de": {
+        "meaning": "sich im Wasser bewegen",
+        "base": "schwimmen",
+        "past": "schwamm",
+        "participle": "geschwommen",
+        "third": "schwimmt",
+        "ing": "schwimmend"
+      },
+      "nl": {
+        "meaning": "door water bewegen met lichaamsbeweging",
+        "base": "zwemmen",
+        "past": "zwom",
+        "participle": "gezwommen",
+        "third": "zwemt",
+        "ing": "aan het zwemmen"
+      },
+      "ru": {
+        "meaning": "плавать (передвигаться в воде)",
+        "base": "плавать",
+        "past": "плавал",
+        "participle": "плывший",
+        "third": "плавает",
+        "ing": "плавающий"
       }
     },
     "ipaUS": {
@@ -7800,6 +10494,30 @@
         "third": "he / she / it: have a break (in this example)",
         "ing": "-ing form of take",
         "meaning": "have a break (in this example)"
+      },
+      "de": {
+        "base": "eine Pause machen",
+        "past": "machte",
+        "participle": "gemacht",
+        "third": "macht",
+        "ing": "machend",
+        "meaning": "eine Pause machen"
+      },
+      "nl": {
+        "base": "een pauze nemen",
+        "past": "nam",
+        "participle": "genomen",
+        "third": "neemt",
+        "ing": "aan het nemen",
+        "meaning": "een pauze nemen"
+      },
+      "ru": {
+        "base": "делать перерыв",
+        "past": "сделал перерыв",
+        "participle": "сделавший перерыв",
+        "third": "делает перерыв",
+        "ing": "делая перерыв",
+        "meaning": "делать перерыв"
       }
     },
     "ipaUS": {
@@ -7869,6 +10587,30 @@
         "third": "he / she / it: help someone learn",
         "ing": "-ing form of teach",
         "meaning": "help someone learn"
+      },
+      "de": {
+        "base": "jemandem etwas beibringen",
+        "past": "lehrte",
+        "participle": "gelehrt",
+        "third": "lehrt",
+        "ing": "lehrend",
+        "meaning": "jemandem helfen zu lernen"
+      },
+      "nl": {
+        "base": "onderwijzen",
+        "past": "onderwees",
+        "participle": "onderwezen",
+        "third": "onderwijst",
+        "ing": "aan het onderwijzen",
+        "meaning": "iemand helpen leren"
+      },
+      "ru": {
+        "base": "учить, преподавать",
+        "past": "учил, преподавал",
+        "participle": "учивший, преподававший",
+        "third": "учит, преподаёт",
+        "ing": "учащий, преподающий",
+        "meaning": "учить, преподавать"
       }
     },
     "ipaUS": {
@@ -7938,6 +10680,30 @@
         "participle": "torn",
         "third": "tears",
         "ing": "tearing"
+      },
+      "de": {
+        "meaning": "heftig auseinanderreißen",
+        "base": "reißen",
+        "past": "riss",
+        "participle": "gerissen",
+        "third": "reißt",
+        "ing": "reißend"
+      },
+      "nl": {
+        "meaning": "iets losscheuren door kracht",
+        "base": "scheuren",
+        "past": "scheurde",
+        "participle": "gescheurd",
+        "third": "scheurt",
+        "ing": "aan het scheuren"
+      },
+      "ru": {
+        "meaning": "рвать",
+        "base": "рвать",
+        "past": "порвал",
+        "participle": "порванный",
+        "third": "рвёт",
+        "ing": "рвущий"
       }
     },
     "ipaUS": {
@@ -8007,6 +10773,30 @@
         "participle": "told",
         "third": "tells",
         "ing": "telling"
+      },
+      "de": {
+        "meaning": "erzählen",
+        "base": "erzählen",
+        "past": "erzählte",
+        "participle": "erzählt",
+        "third": "erzählt",
+        "ing": "erzählend"
+      },
+      "nl": {
+        "meaning": "mondeling vertellen",
+        "base": "vertellen",
+        "past": "vertelde",
+        "participle": "verteld",
+        "third": "vertelt",
+        "ing": "aan het vertellen"
+      },
+      "ru": {
+        "meaning": "рассказывать",
+        "base": "рассказывать",
+        "past": "рассказал",
+        "participle": "рассказанный",
+        "third": "рассказывает",
+        "ing": "рассказывая"
       }
     },
     "ipaUS": {
@@ -8076,6 +10866,30 @@
         "third": "he / she / it: consider an idea",
         "ing": "-ing form of think",
         "meaning": "consider an idea"
+      },
+      "de": {
+        "base": "nachdenken über",
+        "past": "dachte",
+        "participle": "gedacht",
+        "third": "denkt",
+        "ing": "nachdenkend",
+        "meaning": "über eine Idee nachdenken"
+      },
+      "nl": {
+        "base": "nadenken over een idee",
+        "past": "dacht",
+        "participle": "gedacht",
+        "third": "denkt",
+        "ing": "aan het denken",
+        "meaning": "nadenken over een idee"
+      },
+      "ru": {
+        "base": "думать",
+        "past": "думал",
+        "participle": "думавший",
+        "third": "думает",
+        "ing": "думая",
+        "meaning": "думать"
       }
     },
     "ipaUS": {
@@ -8145,6 +10959,30 @@
         "participle": "thrown",
         "third": "throws",
         "ing": "throwing"
+      },
+      "de": {
+        "meaning": "mit der Hand werfen",
+        "base": "werfen",
+        "past": "warf",
+        "participle": "geworfen",
+        "third": "wirft",
+        "ing": "werfend"
+      },
+      "nl": {
+        "meaning": "iets met de hand door de lucht gooien",
+        "base": "gooien",
+        "past": "gooide",
+        "participle": "gegooid",
+        "third": "gooit",
+        "ing": "aan het gooien"
+      },
+      "ru": {
+        "meaning": "бросать",
+        "base": "бросать",
+        "past": "бросил",
+        "participle": "брошенный",
+        "third": "бросает",
+        "ing": "бросая"
       }
     },
     "ipaUS": {
@@ -8214,6 +11052,30 @@
         "participle": "thrust",
         "third": "thrusts",
         "ing": "thrusting"
+      },
+      "de": {
+        "meaning": "mit Kraft stoßen",
+        "base": "stoßen",
+        "past": "stieß",
+        "participle": "gestoßen",
+        "third": "stößt",
+        "ing": "stoßend"
+      },
+      "nl": {
+        "meaning": "met kracht duwen",
+        "base": "duwen",
+        "past": "duwde",
+        "participle": "geduwd",
+        "third": "duwt",
+        "ing": "aan het duwen"
+      },
+      "ru": {
+        "meaning": "толкать с силой",
+        "base": "толкать",
+        "past": "толкнул",
+        "participle": "толкнувший",
+        "third": "толкает",
+        "ing": "толкая"
       }
     },
     "ipaUS": {
@@ -8283,6 +11145,30 @@
         "participle": "understood",
         "third": "understands",
         "ing": "understanding"
+      },
+      "de": {
+        "meaning": "die Bedeutung verstehen",
+        "base": "verstehen",
+        "past": "verstand",
+        "participle": "verstanden",
+        "third": "versteht",
+        "ing": "verstehend"
+      },
+      "nl": {
+        "meaning": "de betekenis begrijpen",
+        "base": "begrijpen",
+        "past": "begrepen",
+        "participle": "begrepen",
+        "third": "begrijpt",
+        "ing": "aan het begrijpen"
+      },
+      "ru": {
+        "meaning": "понимать",
+        "base": "понимать",
+        "past": "понял",
+        "participle": "понятый",
+        "third": "понимает",
+        "ing": "понимая"
       }
     },
     "ipaUS": {
@@ -8352,6 +11238,30 @@
         "participle": "undertaken",
         "third": "undertakes",
         "ing": "undertaking"
+      },
+      "de": {
+        "meaning": "verpflichten und anfangen zu tun",
+        "base": "unternehmen",
+        "past": "unternahm",
+        "participle": "unternommen",
+        "third": "unternimmt",
+        "ing": "unternehmend"
+      },
+      "nl": {
+        "meaning": "zich verplichten om te beginnen",
+        "base": "ondernemen",
+        "past": "ondernam",
+        "participle": "ondernomen",
+        "third": "onderneemt",
+        "ing": "ondernemend"
+      },
+      "ru": {
+        "meaning": "браться за что-либо и начинать делать",
+        "base": "браться",
+        "past": "взялся",
+        "participle": "взявшийся",
+        "third": "берется",
+        "ing": "берущийся"
       }
     },
     "ipaUS": {
@@ -8421,6 +11331,30 @@
         "participle": "upset",
         "third": "upsets",
         "ing": "upsetting"
+      },
+      "de": {
+        "meaning": "emotional stören",
+        "base": "verstören",
+        "past": "verstörte",
+        "participle": "verstört",
+        "third": "verstört",
+        "ing": "verstörend"
+      },
+      "nl": {
+        "meaning": "emotioneel van streek maken",
+        "base": "van streek maken",
+        "past": "maakte van streek",
+        "participle": "van streek gemaakt",
+        "third": "maakt van streek",
+        "ing": "van streek makend"
+      },
+      "ru": {
+        "meaning": "расстраивать эмоционально",
+        "base": "расстраивать",
+        "past": "расстроил",
+        "participle": "расстроенный",
+        "third": "расстраивает",
+        "ing": "расстраивающий"
       }
     },
     "ipaUS": {
@@ -8490,6 +11424,30 @@
         "participle": "woken",
         "third": "wakes",
         "ing": "waking"
+      },
+      "de": {
+        "meaning": "aufhören zu schlafen",
+        "base": "aufwachen",
+        "past": "wachte auf",
+        "participle": "aufgewacht",
+        "third": "wacht auf",
+        "ing": "aufwachend"
+      },
+      "nl": {
+        "meaning": "wakker worden",
+        "base": "wakker worden",
+        "past": "werd wakker",
+        "participle": "wakker geworden",
+        "third": "wordt wakker",
+        "ing": "wakker wordend"
+      },
+      "ru": {
+        "meaning": "просыпаться",
+        "base": "просыпаться",
+        "past": "проснулся",
+        "participle": "проснувшийся",
+        "third": "просыпается",
+        "ing": "просыпающийся"
       }
     },
     "ipaUS": {
@@ -8559,6 +11517,30 @@
         "participle": "worn",
         "third": "wears",
         "ing": "wearing"
+      },
+      "de": {
+        "meaning": "Kleidung tragen",
+        "base": "tragen",
+        "past": "trug",
+        "participle": "getragen",
+        "third": "trägt",
+        "ing": "tragend"
+      },
+      "nl": {
+        "meaning": "kleding dragen",
+        "base": "dragen",
+        "past": "droeg",
+        "participle": "gedragen",
+        "third": "draagt",
+        "ing": "dragend"
+      },
+      "ru": {
+        "meaning": "носить одежду",
+        "base": "носить",
+        "past": "носил",
+        "participle": "ношенный",
+        "third": "носит",
+        "ing": "носящий"
       }
     },
     "ipaUS": {
@@ -8628,6 +11610,30 @@
         "participle": "wept",
         "third": "weeps",
         "ing": "weeping"
+      },
+      "de": {
+        "meaning": "Tränen vergießen",
+        "base": "weinen",
+        "past": "weinte",
+        "participle": "geweint",
+        "third": "weint",
+        "ing": "weinen"
+      },
+      "nl": {
+        "meaning": "tranen vergieten",
+        "base": "wenen",
+        "past": "weende",
+        "participle": "gewenen",
+        "third": "weent",
+        "ing": "wenend"
+      },
+      "ru": {
+        "meaning": "проливать слезы",
+        "base": "плакать",
+        "past": "плакал",
+        "participle": "плакавший",
+        "third": "плачет",
+        "ing": "плачущий"
       }
     },
     "ipaUS": {
@@ -8697,6 +11703,30 @@
         "participle": "wet",
         "third": "wets",
         "ing": "wetting"
+      },
+      "de": {
+        "meaning": "etwas nass machen",
+        "base": "befeuchten",
+        "past": "befeuchtete",
+        "participle": "befeuchtet",
+        "third": "befeuchtet",
+        "ing": "befeuchtend"
+      },
+      "nl": {
+        "meaning": "iets nat maken",
+        "base": "natmaken",
+        "past": "maakte nat",
+        "participle": "natgemaakt",
+        "third": "maakt nat",
+        "ing": "natmakend"
+      },
+      "ru": {
+        "meaning": "заставлять что-либо быть влажным",
+        "base": "мочить",
+        "past": "мочил",
+        "participle": "моченный",
+        "third": "мочит",
+        "ing": "мочащий"
       }
     },
     "ipaUS": {
@@ -8766,6 +11796,30 @@
         "participle": "won",
         "third": "wins",
         "ing": "winning"
+      },
+      "de": {
+        "meaning": "Sieg erringen",
+        "base": "gewinnen",
+        "past": "gewann",
+        "participle": "gewonnen",
+        "third": "gewinnt",
+        "ing": "gewinnend"
+      },
+      "nl": {
+        "meaning": "overwinning behalen",
+        "base": "winnen",
+        "past": "won",
+        "participle": "gewonnen",
+        "third": "wint",
+        "ing": "winnend"
+      },
+      "ru": {
+        "meaning": "одерживать победу",
+        "base": "выигрывать",
+        "past": "выиграл",
+        "participle": "выигранный",
+        "third": "выигрывает",
+        "ing": "выигрывающий"
       }
     },
     "ipaUS": {
@@ -8835,6 +11889,30 @@
         "participle": "withdrawn",
         "third": "withdraws",
         "ing": "withdrawing"
+      },
+      "de": {
+        "meaning": "herausnehmen",
+        "base": "abheben",
+        "past": "hob ab",
+        "participle": "abgehoben",
+        "third": "hebt ab",
+        "ing": "abhebend"
+      },
+      "nl": {
+        "meaning": "opnemen",
+        "base": "opnemen",
+        "past": "nam op",
+        "participle": "opgenomen",
+        "third": "neemt op",
+        "ing": "opnemend"
+      },
+      "ru": {
+        "meaning": "вынимать, снимать (деньги)",
+        "base": "снимать",
+        "past": "снял",
+        "participle": "снятый",
+        "third": "снимает",
+        "ing": "снимающий"
       }
     },
     "ipaUS": {
@@ -8904,6 +11982,30 @@
         "third": "he / she / it: do a job or task",
         "ing": "-ing form of work",
         "meaning": "do a job or task"
+      },
+      "de": {
+        "base": "arbeiten",
+        "past": "arbeitete",
+        "participle": "gearbeitet",
+        "third": "arbeitet",
+        "ing": "arbeitend",
+        "meaning": "eine Arbeit tun"
+      },
+      "nl": {
+        "base": "werken",
+        "past": "werkte",
+        "participle": "gewerkt",
+        "third": "werkt",
+        "ing": "werkend",
+        "meaning": "een taak of baan doen"
+      },
+      "ru": {
+        "base": "работать",
+        "past": "работал",
+        "participle": "работавший",
+        "third": "работает",
+        "ing": "работающий",
+        "meaning": "делать работу или задание"
       }
     },
     "ipaUS": {
@@ -8973,6 +12075,30 @@
         "third": "he / she / it: put words into written form",
         "ing": "-ing form of write",
         "meaning": "put words into written form"
+      },
+      "de": {
+        "base": "schreiben",
+        "past": "schrieb",
+        "participle": "geschrieben",
+        "third": "schreibt",
+        "ing": "schreibend",
+        "meaning": "Worte zu Papier bringen"
+      },
+      "nl": {
+        "base": "schrijven",
+        "past": "schreef",
+        "participle": "geschreven",
+        "third": "schrijft",
+        "ing": "schrijvend",
+        "meaning": "woorden opschrijven"
+      },
+      "ru": {
+        "base": "писать",
+        "past": "писал",
+        "participle": "писавший",
+        "third": "пишет",
+        "ing": "пишущий",
+        "meaning": "записывать слова в письменной форме"
       }
     },
     "ipaUS": {

@@ -1,5 +1,7 @@
 # Biblioteca e idiomas — 17 de octubre de 2026
 
+> Actualización 2026-11-20: el catálogo ahora incluye nueve idiomas. Véase [alemán, neerlandés y ruso](apple-language-expansion.md); las cifras anteriores describen la entrega original.
+
 ## Para quien utiliza la aplicación
 
 VoiceToRead busca facilitar la comprensión a personas con dificultades auditivas o baja visión, personas que todavía no dominan un idioma y niños que practican con acompañamiento adulto. Los controles conservan etiquetas accesibles, contraste y tamaño dinámico; los colores nunca sustituyen el nombre del idioma. No se promete una certificación de accesibilidad ni reconocimiento/traducción perfectos.

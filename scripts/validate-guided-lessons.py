@@ -78,7 +78,7 @@ for identifier in ids:
    assert last<=word['start']<=word['end']<=timing['duration']+0.1
    last=word['start']
   bytes_audio+=audio.stat().st_size;audio_count+=1
- for locale in ['fr','ko','ja','zh-Hans']:
+ for locale in ['fr','ko','ja','zh-Hans','de','nl','ru']:
   pack=json.loads((folder/f'{identifier}-support-{locale}.json').read_text(encoding='utf-8'))
   assert pack['lesson']==identifier and pack['locale']==locale
   assert set(pack['strings'])==set(support_fields(d))
@@ -89,4 +89,4 @@ assert not list(folder.rglob('*-review.json')),'Review files must be resolved be
 assert not list(folder.rglob('.env*'))
 if '--publish' in sys.argv:(folder/'catalog.json').write_text(json.dumps(ids,indent=2)+'\n',encoding='utf-8')
 if content_only:print('PASS: 126 lesson texts and covers; audio/support not checked, catalog NOT published.',flush=True)
-else:print(f'PASS: 126 complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); 504 support packs; all existing covers and original 001 unchanged.',flush=True)
+else:print(f'PASS: 126 complete lessons; {audio_count} audios ({bytes_audio/1024/1024:.1f} MiB); 882 support packs; all existing covers and original 001 unchanged.',flush=True)

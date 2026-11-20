@@ -1425,3 +1425,9 @@
 "Time from the start of the session audio. Original and translation share the same time." = "Tiempo desde el inicio del audio de la sesión. El original y la traducción muestran el mismo tiempo.";
 
 "Time from session start: %@" = "Tiempo desde el inicio de la sesión: %@";
+"German · Deutsch" = "Alemán · Deutsch";
+"Dutch · Nederlands" = "Neerlandés · Nederlands";
+"Russian · Русский" = "Ruso · Русский";
+"Deutsch" = "Alemán";
+"Nederlands" = "Neerlandés";
+"Русский" = "Ruso";

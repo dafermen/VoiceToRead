@@ -49,7 +49,7 @@ final class SpeakingLessonTests: XCTestCase {
     }
     func testSupportPacksContainEveryTranslatedParagraphAndExplanation() throws {
         let (lesson, _) = try fixture()
-        for language in [CaptureLanguage.french, .korean, .japanese, .chinese] {
+        for language in (CaptureLanguage.allCases.filter { $0 != .english && $0 != .spanish }) {
             let pack = try XCTUnwrap(GuidedLessonSupport.load(lesson: lesson, language: language))
             XCTAssertEqual(pack.locale, language.code)
             for i in 0..<20 { XCTAssertFalse(pack.text("paragraphs.\(i).es", fallback: "").isEmpty) }
@@ -79,7 +79,7 @@ final class SpeakingLessonTests: XCTestCase {
                     let timing = try JSONDecoder().decode(GuidedWordTiming.self, from: Data(contentsOf: url))
                     XCTAssertNoThrow(try timing.validate(expected: paragraph.en))
                 }
-                for language in [CaptureLanguage.french, .korean, .japanese, .chinese] {
+                for language in (CaptureLanguage.allCases.filter { $0 != .english && $0 != .spanish }) {
                     let pack = try XCTUnwrap(GuidedLessonSupport.load(lesson: lesson, language: language))
                     for i in 0..<20 { XCTAssertFalse(pack.text("paragraphs.\(i).es", fallback: "").isEmpty) }
                 }
