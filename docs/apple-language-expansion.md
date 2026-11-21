@@ -1,5 +1,7 @@
 # Alemán, neerlandés y ruso — 2026-11-20
 
+> Corrección 2026-11-21: [instalación, dictado local y reservas de modelos](speech-preparation-and-language-swap.md). El camino de compatibilidad de esta entrega se amplía con DictationTranscriber antes del adaptador antiguo.
+
 ## Alcance
 
 Se amplían los idiomas de contenido de seis a nueve: inglés, español, francés,

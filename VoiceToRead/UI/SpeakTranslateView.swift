@@ -106,7 +106,7 @@ final class SpeakTranslateModel {
             if install {
                 if capture.readiness == .authorizationRequired { await capture.requestSpeechPermission() }
                 guard token == request else { return }
-                if capture.readiness == .missingAssets { await capture.installAssets() }
+                if capture.readiness == .missingAssets || capture.readiness == .downloading { await capture.installAssets() }
                 guard token == request else { return }
             }
             phase = .ready
@@ -451,14 +451,14 @@ struct SpeakTranslateView: View {
                 } else {
                     Text(LocalizedStringKey(readiness.description)).font(.caption).foregroundStyle(.secondary)
                 }
-                if !fullScreen && (readiness == .missingAssets || readiness == .authorizationRequired) {
-                    Button(uiKey(readiness == .authorizationRequired ? "Allow Speech Recognition" : "Install speech model"), systemImage: "arrow.down.circle") {
+                if !fullScreen && readiness.canPrepareSpeechAssets {
+                    Button(uiKey(readiness == .authorizationRequired ? "Allow Speech Recognition" : readiness == .missingAssets ? "Install speech model" : "Retry speech model preparation"), systemImage: "arrow.down.circle") {
                         model.prepareSpeechModel(install: true)
                     }.labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44)
                         .disabled(!model.canEdit || model.capture.preparationPending)
                         .accessibilityIdentifier("conversationInstallSpeechModel")
                     Text("Model installation needs Internet and may require additional storage.").font(.caption).foregroundStyle(.secondary)
-                } else if !fullScreen && model.canEdit {
+                } else if !fullScreen && model.canEdit && readiness != .unsupportedLanguage && readiness != .unsupportedDevice {
                     Button("Refresh Checks", systemImage: "arrow.clockwise") { model.prepareSpeechModel() }
                         .labelStyle(InlinePreferenceLabelStyle()).frame(minWidth: 44, minHeight: 44)
                         .accessibilityIdentifier("conversationRefreshSpeechModel")
@@ -468,11 +468,18 @@ struct SpeakTranslateView: View {
     }
 
     private var pairControls: some View {
-        CommunicationLanguagePair(symbol: "arrow.left.arrow.right") {
+        CommunicationLanguagePair(symbol: "arrow.left.arrow.right", swapAction: swapLanguages) {
             conversationPicker(left: true)
         } right: {
             conversationPicker(left: false)
         }.disabled(!model.canEdit || model.capture.preparationPending)
+    }
+    private func swapLanguages() {
+        guard model.canEdit, !model.capture.preparationPending else { return }
+        let previous = first
+        first = second; second = previous
+        model.selectLanguage(first, target: second)
+        model.prepareSpeechModel()
     }
     private func conversationPicker(left: Bool) -> some View {
         LanguagePickerControl(title: left ? "Me" : "Other person", selection: Binding(

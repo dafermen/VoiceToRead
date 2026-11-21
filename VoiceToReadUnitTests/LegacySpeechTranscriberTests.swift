@@ -319,3 +319,155 @@ private final class LanguageRoutingSpeech: SpeechTranscribing {
     func finish() async throws { finishes += 1 }
     func cancel() async { cancels += 1 }
 }
+
+
+extension LegacySpeechTranscriberTests {
+    func testOldReservationsMakeRoomForAllNineLanguagesWithoutAccumulatingSlots() async throws {
+        let inventory = ReservationInventory(limit: 2, reserved: ["en-US", "es-ES"])
+        let manager = SpeechAssetReservationManager(inventory: inventory)
+        for language in CaptureLanguage.allCases {
+            let owner = UUID()
+            try await manager.acquire(Locale(identifier: language.rawValue), owner: owner)
+            XCTAssertTrue(inventory.reserved.contains { $0.identifier == Locale(identifier: language.rawValue).identifier })
+            XCTAssertLessThanOrEqual(inventory.reserved.count, 2)
+            manager.release(owner: owner)
+        }
+        XCTAssertFalse(inventory.released.isEmpty)
+        XCTAssertEqual(Set(inventory.reserved.map(\.identifier)).count, inventory.reserved.count)
+    }
+
+    func testActiveRecognitionAndDownloadsCannotBeEvictedToInstallAnotherLanguage() async throws {
+        let inventory = ReservationInventory(limit: 2, reserved: [])
+        let manager = SpeechAssetReservationManager(inventory: inventory)
+        let recording = UUID(), download = UUID(), german = UUID()
+        try await manager.acquire(Locale(identifier: "en-US"), owner: recording)
+        try await manager.acquire(Locale(identifier: "es-ES"), owner: download)
+        do {
+            try await manager.acquire(Locale(identifier: "de-DE"), owner: german)
+            XCTFail("An active model must never be released")
+        } catch { guard case TranscriptionFailure.assetReservationUnavailable = error else { return XCTFail("Unexpected error: \(error)") }
+        }
+        XCTAssertTrue(inventory.released.isEmpty)
+        manager.release(owner: download)
+        try await manager.acquire(Locale(identifier: "de-DE"), owner: german)
+        XCTAssertEqual(inventory.released, ["es-ES"])
+        XCTAssertTrue(inventory.reserved.contains { $0.identifier == "en-US" })
+    }
+
+    func testSharedLocaleRemainsProtectedUntilEveryOwnerFinishesAndVariantsDoNotTakeAnotherSlot() async throws {
+        let inventory = ReservationInventory(limit: 1, reserved: ["en-US"])
+        let manager = SpeechAssetReservationManager(inventory: inventory)
+        let first = UUID(), second = UUID()
+        try await manager.acquire(Locale(identifier: "en_US"), owner: first)
+        try await manager.acquire(Locale(identifier: "en-US"), owner: second)
+        XCTAssertEqual(inventory.reserveCalls, 0)
+        manager.release(owner: first)
+        do { try await manager.acquire(Locale(identifier: "de-DE"), owner: UUID()); XCTFail("Second owner still uses English") }
+        catch { guard case TranscriptionFailure.assetReservationUnavailable = error else { return XCTFail("Unexpected error") } }
+        XCTAssertTrue(inventory.released.isEmpty)
+        manager.release(owner: second)
+        try await manager.acquire(Locale(identifier: "de-DE"), owner: UUID())
+        XCTAssertEqual(inventory.released, ["en-US"])
+    }
+
+    func testFailedReleaseHasBoundedRecoveryAndDoesNotAttemptOverQuotaReservation() async throws {
+        let inventory = ReservationInventory(limit: 1, reserved: ["en-US"])
+        inventory.refuseRelease = true
+        let manager = SpeechAssetReservationManager(inventory: inventory)
+        do { try await manager.acquire(Locale(identifier: "de-DE"), owner: UUID()); XCTFail("Expected an explanatory failure") }
+        catch { guard case TranscriptionFailure.assetReservationUnavailable = error else { return XCTFail("Unexpected error") } }
+        XCTAssertEqual(inventory.releaseCalls, 1)
+        XCTAssertEqual(inventory.reserveCalls, 0)
+    }
+
+    func testCancelledReservationCannotLeaveAnInvisibleOwnerThatBlocksRetry() async throws {
+        let inventory = ReservationInventory(limit: 1, reserved: [])
+        inventory.pauseReserve = true
+        let manager = SpeechAssetReservationManager(inventory: inventory)
+        let cancelled = Task { try await manager.acquire(Locale(identifier: "en-US"), owner: UUID()) }
+        for _ in 0..<200 where inventory.pendingReserve == nil { await Task.yield() }
+        let pending = try XCTUnwrap(inventory.pendingReserve)
+        cancelled.cancel(); pending.resume(); inventory.pendingReserve = nil
+        do { try await cancelled.value; XCTFail("Expected cancellation") } catch { XCTAssertTrue(error is CancellationError) }
+        try await manager.acquire(Locale(identifier: "de-DE"), owner: UUID())
+        XCTAssertEqual(inventory.released, ["en-US"])
+    }
+}
+
+@MainActor
+private final class ReservationInventory: SpeechAssetInventoryAccess {
+    let maximumReservations: Int
+    var reserved: [Locale]
+    var released: [String] = []
+    var reserveCalls = 0, releaseCalls = 0
+    var refuseRelease = false, pauseReserve = false
+    var pendingReserve: CheckedContinuation<Void, Never>?
+    init(limit: Int, reserved: [String]) {
+        maximumReservations = limit; self.reserved = reserved.map { Locale(identifier: $0) }
+    }
+    func reservations() async -> [Locale] { reserved }
+    func key(for locale: Locale) async -> String {
+        locale.identifier.replacingOccurrences(of: "_", with: "-").lowercased()
+    }
+    func reserve(_ locale: Locale) async throws {
+        reserveCalls += 1
+        if pauseReserve {
+            pauseReserve = false
+            await withCheckedContinuation { pendingReserve = $0 }
+        }
+        guard reserved.count < maximumReservations else { throw TranscriptionFailure.assetReservationUnavailable }
+        reserved.append(locale)
+    }
+    func release(_ locale: Locale) async -> Bool {
+        releaseCalls += 1
+        guard !refuseRelease else { return false }
+        let before = reserved.count
+        reserved.removeAll { $0.identifier == locale.identifier }
+        released.append(locale.identifier)
+        return reserved.count != before
+    }
+}
+
+
+extension LegacySpeechTranscriberTests {
+    func testInstallableDictationIsUsedBeforeLegacyWhenModernLanguageIsUnsupported() async throws {
+        let modern = LanguageRoutingSpeech(status: .unsupportedLanguage)
+        let dictation = LanguageRoutingSpeech(status: .missingAssets)
+        let legacy = LanguageRoutingSpeech(status: .ready)
+        let fallback = LanguageSpeechTranscriber(preferred: dictation, compatibility: legacy)
+        let speech = LanguageSpeechTranscriber(preferred: modern, compatibility: fallback)
+        speech.configure(language: .russian)
+        let readiness = await speech.readiness()
+        XCTAssertEqual(readiness, .missingAssets)
+        XCTAssertEqual(dictation.language, .russian)
+        XCTAssertEqual(legacy.readinessChecks, 0)
+        try await speech.installAssets()
+        XCTAssertEqual(dictation.installations, 1)
+        XCTAssertEqual(modern.installations, 0)
+        XCTAssertEqual(legacy.installations, 0)
+        dictation.status = .ready
+        _ = try await speech.start()
+        XCTAssertEqual(dictation.starts, 1)
+        XCTAssertEqual(legacy.starts, 0)
+        XCTAssertEqual(modern.starts, 0)
+        try await speech.finish()
+        await speech.cancel()
+        XCTAssertEqual(dictation.finishes, 1)
+        XCTAssertEqual(dictation.cancels, 1)
+    }
+
+    func testUnsupportedDictationPreservesExistingOfflineLegacyPermissionFlow() async {
+        let modern = LanguageRoutingSpeech(status: .unsupportedDevice)
+        let dictation = LanguageRoutingSpeech(status: .unsupportedLanguage)
+        let legacy = LanguageRoutingSpeech(status: .authorizationRequired)
+        let speech = LanguageSpeechTranscriber(preferred: modern,
+            compatibility: LanguageSpeechTranscriber(preferred: dictation, compatibility: legacy))
+        speech.configure(language: .dutch)
+        let readiness = await speech.readiness()
+        XCTAssertEqual(readiness, .authorizationRequired)
+        await speech.requestAuthorization()
+        XCTAssertEqual(legacy.authorizations, 1)
+        XCTAssertEqual(dictation.authorizations, 0)
+        XCTAssertEqual(modern.starts + dictation.starts + legacy.starts, 0)
+    }
+}

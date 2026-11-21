@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Preparación de voz e intercambio — 2026-11-21
+
+[Alcance, diez regresiones y aceptación física pendiente](speech-preparation-and-language-swap.md). Cobertura de botón real, reintento, dictado instalable, cuotas y protección de modelos en uso. Las pruebas XCTest requieren Mac; las comprobaciones de fuente en Windows no equivalen a ejecutarlas.
+
 ## Idiomas Apple adicionales — 2026-11-20
 
 [Alcance, comprobaciones y matriz de aceptación](apple-language-expansion.md). Se amplían las regresiones nativas de preferencias, voces, bibliotecas de traducción, paquetes educativos y selección del motor local. Ejecución de XCTest y pruebas físicas de disponibilidad por idioma pendientes en Mac/iPhone.

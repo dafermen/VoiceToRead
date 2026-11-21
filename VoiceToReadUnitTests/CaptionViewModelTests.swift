@@ -352,6 +352,7 @@ private final class MockSpeech: SpeechTranscribing {
     var starts = 0
     var installations = 0
     var installedLanguages: [CaptureLanguage] = []
+    var installationError: Error?
     var installationCompletes = true
     var delayReadiness = false
     var pendingReadiness: CheckedContinuation<SpeechReadiness, Never>?
@@ -372,6 +373,7 @@ private final class MockSpeech: SpeechTranscribing {
     }
     func installAssets() async throws {
         installations += 1; installedLanguages.append(language)
+        if let installationError { throw installationError }
         if installationCompletes { status = .ready }
     }
     func start() async throws -> AsyncThrowingStream<TranscriptionUpdate, Error> {
@@ -791,5 +793,47 @@ extension CaptionViewModelTests {
         XCTAssertEqual(output.spoken.last, "Hola"); XCTAssertEqual(output.language, .spanish)
         XCTAssertEqual(speech.starts, 1, "Manual audio must not reopen the microphone")
         model.cancel(); await eventually { model.phase == .ready }
+    }
+}
+
+
+extension SpeakTranslateTests {
+    func testGermanModelFailureOffersRealRetryAndNeverStartsTheMicrophone() async {
+        let speech = MockSpeech(); speech.status = .missingAssets
+        speech.installationError = TranscriptionFailure.assetReservationUnavailable
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let model = SpeakTranslateModel(capture: capture,
+            speaker: TranslationSpeechPlayer(output: ConversationTestOutput(), activate: {}, deactivate: {}), supported: { true })
+        model.selectLanguage(.german, target: .spanish)
+        model.edit("Guten Tag")
+        model.prepareSpeechModel(install: true)
+        await eventually { model.phase == .ready }
+        guard case .problem = capture.readiness else { return XCTFail("The installation error must stay visible") }
+        XCTAssertTrue(capture.readiness.canPrepareSpeechAssets)
+        XCTAssertEqual(speech.installedLanguages, [.german])
+        speech.installationError = nil
+        speech.status = .missingAssets
+        model.prepareSpeechModel(install: true)
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(capture.readiness, .ready)
+        XCTAssertEqual(speech.installedLanguages, [.german, .german])
+        XCTAssertEqual(model.source, "Guten Tag")
+        XCTAssertEqual(model.target, .spanish)
+        XCTAssertEqual(speech.starts, 0)
+    }
+
+    func testPendingAppleDownloadCanResumeThroughInstallInsteadOfEndlessRefresh() async {
+        let speech = MockSpeech(); speech.status = .downloading
+        let capture = CaptionViewModel(microphone: CaptionMicrophone(), speech: speech)
+        let model = SpeakTranslateModel(capture: capture,
+            speaker: TranslationSpeechPlayer(output: ConversationTestOutput(), activate: {}, deactivate: {}), supported: { true })
+        model.selectLanguage(.russian, target: .english)
+        XCTAssertTrue(speech.status.canPrepareSpeechAssets)
+        model.prepareSpeechModel(install: true)
+        await eventually { model.phase == .ready }
+        XCTAssertEqual(speech.installedLanguages, [.russian])
+        XCTAssertEqual(capture.readiness, .ready)
+        XCTAssertEqual(speech.starts, 0)
+        XCTAssertFalse(SpeechReadiness.systemModelUnavailable.canPrepareSpeechAssets, "Legacy system models cannot be downloaded by the app")
     }
 }

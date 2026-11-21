@@ -72,9 +72,12 @@ final class CaptionViewModel {
     convenience init() {
         let audio = AudioCaptureService()
         #if compiler(>=6.2)
-        if #available(iOS 26.0, *), SpeechTranscriber.isAvailable {
+        if #available(iOS 26.0, *) {
+            let compatibility = LanguageSpeechTranscriber(
+                preferred: AppleSpeechTranscriber(audio: audio, kind: .dictation),
+                compatibility: LegacySpeechTranscriber(audio: audio))
             self.init(microphone: audio, speech: LanguageSpeechTranscriber(
-                preferred: AppleSpeechTranscriber(audio: audio), compatibility: LegacySpeechTranscriber(audio: audio)))
+                preferred: AppleSpeechTranscriber(audio: audio), compatibility: compatibility))
             return
         }
 #endif
@@ -124,7 +127,7 @@ final class CaptionViewModel {
     }
 
     func installAssets() async {
-        guard !state.active, !state.busy, !preparationPending, readiness != .downloading else { return }
+        guard !state.active, !state.busy, !preparationPending else { return }
         preparationPending = true
         installingSpeechAssets = true
         readinessCheckID = UUID()

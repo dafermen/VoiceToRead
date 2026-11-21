@@ -1,5 +1,7 @@
 # VoiceToRead
 
+[Corrección de intercambio de idiomas y preparación de modelos — 2026-11-21](docs/speech-preparation-and-language-swap.md).
+
 [Alemán, neerlandés y ruso: idiomas de contenido, compatibilidad Apple y pruebas](docs/apple-language-expansion.md).
 
 Nueva biblioteca e idiomas: [uso y arquitectura](docs/session-library-and-languages.md), [validación](docs/session-library-languages-checkpoint.md). Sesiones guardadas primero; borradores y papelera separados. Los menús siguen en inglés/español.

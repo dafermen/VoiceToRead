@@ -539,18 +539,33 @@ private extension VerticalAlignment {
 /// Accessibility sizes stack rather than truncate roles or language names.
 struct CommunicationLanguagePair<Left: View, Right: View>: View {
     let symbol: String
+    var swapAction: (() -> Void)? = nil
     @ViewBuilder let left: () -> Left
     @ViewBuilder let right: () -> Right
     @Environment(\.dynamicTypeSize) private var size
     var body: some View {
         if size.isAccessibilitySize {
-            VStack(alignment: .leading, spacing: 12) { left(); right() }
+            VStack(alignment: .leading, spacing: 12) {
+                left()
+                if swapAction != nil { directionControl.frame(maxWidth: .infinity, alignment: .trailing) }
+                right()
+            }
         } else {
             HStack(alignment: .languagePickerCenter, spacing: 12) {
                 left().frame(maxWidth: .infinity, alignment: .center)
-                Image(systemName: symbol).frame(width: 24, height: 44).accessibilityHidden(true)
+                directionControl
                 right().frame(maxWidth: .infinity, alignment: .center)
             }
+        }
+    }
+    @ViewBuilder private var directionControl: some View {
+        if let swapAction {
+            Button(action: swapAction) {
+                Image(systemName: symbol).frame(width: 44, height: 44).contentShape(Rectangle())
+            }.buttonStyle(.plain).accessibilityLabel("Swap languages")
+                .accessibilityIdentifier("swapLanguagesButton")
+        } else {
+            Image(systemName: symbol).frame(width: 24, height: 44).accessibilityHidden(true)
         }
     }
 }

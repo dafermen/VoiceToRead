@@ -1,4 +1,5 @@
 #if compiler(>=6.2)
+import Foundation
 import AVFoundation
 import CoreMedia
 import Speech
@@ -8,6 +9,10 @@ import Speech
 @available(iOS 26.0, *)
 @MainActor
 final class AppleSpeechTranscriber: SpeechTranscribing {
+    enum Kind: Equatable { case speech, dictation }
+    private let kind: Kind
+    private var captureAssetOwner: UUID?
+    private let reservations = AppleSpeechAssetInventory.shared
     private var language: CaptureLanguage = .english
     func configure(language: CaptureLanguage) { self.language = language }
     private let audio: any SpeechAudioCapturing
@@ -22,20 +27,32 @@ final class AppleSpeechTranscriber: SpeechTranscribing {
     private var terminalError: (any Error)?
     private var lastAudioAt = ContinuousClock.now
 
-    init(audio: any SpeechAudioCapturing) { self.audio = audio }
+    init(audio: any SpeechAudioCapturing, kind: Kind = .speech) { self.audio = audio; self.kind = kind }
 
-    private func module(locale: Locale) -> SpeechTranscriber {
-        SpeechTranscriber(locale: locale, transcriptionOptions: [],
-                          reportingOptions: [.volatileResults, .fastResults],
-                          attributeOptions: [.audioTimeRange])
+    private func supportedLocale() async -> Locale? {
+        let requested = Locale(identifier: language.rawValue)
+        switch kind {
+        case .speech: return await SpeechTranscriber.supportedLocale(equivalentTo: requested)
+        case .dictation: return await DictationTranscriber.supportedLocale(equivalentTo: requested)
+        }
+    }
+    private func module(locale: Locale) -> AppleLiveSpeechModule {
+        switch kind {
+        case .speech:
+            return .speech(SpeechTranscriber(locale: locale, transcriptionOptions: [],
+                reportingOptions: [.volatileResults, .fastResults], attributeOptions: [.audioTimeRange]))
+        case .dictation:
+            return .dictation(DictationTranscriber(locale: locale, contentHints: [],
+                transcriptionOptions: [.punctuation], reportingOptions: [.volatileResults], attributeOptions: [.audioTimeRange]))
+        }
     }
 
     func readiness() async -> SpeechReadiness {
-        guard SpeechTranscriber.isAvailable else { return .unsupportedDevice }
-        guard let locale = await SpeechTranscriber.supportedLocale(equivalentTo: Locale(identifier: language.rawValue)) else {
+        guard kind == .dictation || SpeechTranscriber.isAvailable else { return .unsupportedDevice }
+        guard let locale = await supportedLocale() else {
             return .unsupportedLanguage
         }
-        switch await AssetInventory.status(forModules: [module(locale: locale)]) {
+        switch await AssetInventory.status(forModules: [module(locale: locale).value]) {
         case .installed: return .ready
         case .downloading: return .downloading
         case .supported: return .missingAssets
@@ -45,12 +62,14 @@ final class AppleSpeechTranscriber: SpeechTranscribing {
     }
 
     func installAssets() async throws {
-        guard SpeechTranscriber.isAvailable,
-              let locale = await SpeechTranscriber.supportedLocale(equivalentTo: Locale(identifier: language.rawValue)) else {
+        guard (kind == .dictation || SpeechTranscriber.isAvailable),
+              let locale = await supportedLocale() else {
             throw TranscriptionFailure.notReady
         }
-        try await AssetInventory.reserve(locale: locale)
-        if let request = try await AssetInventory.assetInstallationRequest(supporting: [module(locale: locale)]) {
+        let owner = UUID()
+        try await reservations.acquire(locale, owner: owner)
+        defer { reservations.release(owner: owner) }
+        if let request = try await AssetInventory.assetInstallationRequest(supporting: [module(locale: locale).value]) {
             try await request.downloadAndInstall()
         }
         guard await readiness() == .ready else { throw TranscriptionFailure.notReady }
@@ -61,21 +80,45 @@ final class AppleSpeechTranscriber: SpeechTranscribing {
         let startIdentifier = UUID()
         generation = startIdentifier
         guard await readiness() == .ready,
-              let locale = await SpeechTranscriber.supportedLocale(equivalentTo: Locale(identifier: language.rawValue)) else {
+              let locale = await supportedLocale() else {
             throw TranscriptionFailure.notReady
         }
         guard generation == startIdentifier, !Task.isCancelled else { throw CancellationError() }
-        // Reserving installed assets does not request a model download.
-        try await AssetInventory.reserve(locale: locale)
-        let transcriber = module(locale: locale)
-        guard let format = await SpeechAnalyzer.bestAvailableAudioFormat(compatibleWith: [transcriber]) else {
-            throw TranscriptionFailure.format
+        // Reserve installed assets without downloading; protect this model until cleanup.
+        let owner = UUID()
+        try await reservations.acquire(locale, owner: owner)
+        guard generation == startIdentifier, !Task.isCancelled else {
+            reservations.release(owner: owner); throw CancellationError()
         }
-        guard generation == startIdentifier, !Task.isCancelled else { throw CancellationError() }
+        let transcriber = module(locale: locale)
+        guard let format = await SpeechAnalyzer.bestAvailableAudioFormat(compatibleWith: [transcriber.value]) else {
+            reservations.release(owner: owner); throw TranscriptionFailure.format
+        }
+        guard generation == startIdentifier, !Task.isCancelled else {
+            reservations.release(owner: owner); throw CancellationError()
+        }
         let identifier = startIdentifier
         let sessionOffset = (audio as? AudioCaptureService)?.timeline.duration
         terminalError = nil
-        let newAnalyzer = SpeechAnalyzer(modules: [transcriber])
+        let newAnalyzer = SpeechAnalyzer(modules: [transcriber.value])
+        if kind == .dictation {
+            let words = PersonalVocabulary.saved(for: language).map(\.source)
+            if !words.isEmpty {
+                let context = AnalysisContext()
+                context.contextualStrings[.general] = words
+                do { try await newAnalyzer.setContext(context) }
+                catch {
+                    await newAnalyzer.cancelAndFinishNow()
+                    reservations.release(owner: owner)
+                    throw error
+                }
+            }
+        }
+        guard generation == startIdentifier, !Task.isCancelled else {
+            await newAnalyzer.cancelAndFinishNow()
+            reservations.release(owner: owner); throw CancellationError()
+        }
+        captureAssetOwner = owner
         analyzer = newAnalyzer
         let raw = AsyncThrowingStream<CapturedAudio, Error>.makeStream(bufferingPolicy: .bufferingOldest(64))
         let inputs = AsyncThrowingStream<AnalyzerInput, Error>.makeStream(bufferingPolicy: .bufferingOldest(128))
@@ -93,15 +136,15 @@ final class AppleSpeechTranscriber: SpeechTranscribing {
         }
         resultTask = Task { @MainActor [weak self] in
             do {
-                for try await result in transcriber.results {
-                    guard !Task.isCancelled, self?.generation == identifier else { return }
+                try await transcriber.forEachResult { text, range, isFinal in
+                    guard !Task.isCancelled, self?.generation == identifier else { throw CancellationError() }
                     let update = TranscriptionUpdate(
-                        runID: identifier, start: (sessionOffset ?? 0) + CMTimeGetSeconds(result.range.start),
-                        end: (sessionOffset ?? 0) + CMTimeGetSeconds(CMTimeRangeGetEnd(result.range)),
-                        text: String(result.text.characters), isFinal: result.isFinal,
-                        words: result.text.runs.compactMap { run in
+                        runID: identifier, start: (sessionOffset ?? 0) + CMTimeGetSeconds(range.start),
+                        end: (sessionOffset ?? 0) + CMTimeGetSeconds(CMTimeRangeGetEnd(range)),
+                        text: String(text.characters), isFinal: isFinal,
+                        words: text.runs.compactMap { run in
                             guard let range = run.audioTimeRange else { return nil }
-                            return TimedWord(text: String(result.text[run.range].characters),
+                            return TimedWord(text: String(text[run.range].characters),
                                 start: (sessionOffset ?? 0) + CMTimeGetSeconds(range.start),
                                 end: (sessionOffset ?? 0) + CMTimeGetSeconds(CMTimeRangeGetEnd(range)))
                         }, sessionTime: sessionOffset != nil)
@@ -225,6 +268,7 @@ final class AppleSpeechTranscriber: SpeechTranscribing {
     }
 
     private func cleanup() {
+        if let owner = captureAssetOwner { reservations.release(owner: owner); captureAssetOwner = nil }
         generation = UUID()
         analyzer = nil
         inputTask = nil
@@ -234,5 +278,43 @@ final class AppleSpeechTranscriber: SpeechTranscribing {
         rawInput = nil
         output = nil
     }
+}
+
+/// Both Apple modules feed exactly the same session timeline, buffering and finalization.
+@available(iOS 26.0, *)
+private enum AppleLiveSpeechModule: Sendable {
+    case speech(SpeechTranscriber)
+    case dictation(DictationTranscriber)
+    var value: any SpeechModule {
+        switch self { case .speech(let module): return module; case .dictation(let module): return module }
+    }
+    @MainActor
+    func forEachResult(_ consume: @MainActor (AttributedString, CMTimeRange, Bool) throws -> Void) async throws {
+        switch self {
+        case .speech(let module):
+            for try await result in module.results { try consume(result.text, result.range, result.isFinal) }
+        case .dictation(let module):
+            for try await result in module.results { try consume(result.text, result.range, result.isFinal) }
+        }
+    }
+}
+
+/// Apple reports the current per-app limit; never assume that all nine languages can
+/// hold a reservation simultaneously. Normalize variants using the same SDK resolver.
+@available(iOS 26.0, *)
+@MainActor
+private final class AppleSpeechAssetInventory: SpeechAssetInventoryAccess {
+    static let shared = SpeechAssetReservationManager(inventory: AppleSpeechAssetInventory())
+    var maximumReservations: Int { AssetInventory.maximumReservedLocales }
+    func reservations() async -> [Locale] { await AssetInventory.reservedLocales }
+    func key(for locale: Locale) async -> String {
+        let modern = await SpeechTranscriber.supportedLocale(equivalentTo: locale)
+        let supported: Locale
+        if let modern { supported = modern }
+        else { supported = await DictationTranscriber.supportedLocale(equivalentTo: locale) ?? locale }
+        return supported.identifier.replacingOccurrences(of: "_", with: "-").lowercased()
+    }
+    func reserve(_ locale: Locale) async throws { _ = try await AssetInventory.reserve(locale: locale) }
+    func release(_ locale: Locale) async -> Bool { await AssetInventory.release(reservedLocale: locale) }
 }
 #endif

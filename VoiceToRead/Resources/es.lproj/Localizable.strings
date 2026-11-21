@@ -1431,3 +1431,7 @@
 "Deutsch" = "Alemán";
 "Nederlands" = "Neerlandés";
 "Русский" = "Ruso";
+"Swap languages" = "Intercambiar idiomas";
+"Retry speech model preparation" = "Reintentar preparación del modelo de voz";
+"No speech model slot is available while another model is in use. Stop other listening or model preparation, then try installing again." = "No hay espacio para reservar otro modelo de voz mientras uno está en uso. Detén la escucha o la preparación de otros modelos y vuelve a intentar la instalación.";
+"The selected language has no compatible on-device speech model on this device. Choose another spoken language or check for an iOS update." = "El idioma elegido no tiene un modelo de voz local compatible con este dispositivo. Elige otro idioma de origen o comprueba si hay una actualización de iOS.";

@@ -3516,3 +3516,50 @@ extension HomeScreenTests {
         XCTAssertTrue(app.buttons["discardSessionButton"].exists)
     }
 }
+
+
+extension HomeScreenTests {
+    @MainActor
+    func testConversationSwapExchangesGermanAndSpanishAndLocksWhileListening() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launch()
+        XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
+        app.buttons["speakTranslateEntry"].tap()
+        let first = app.buttons["conversationFirstLanguage"]
+        let second = app.buttons["conversationSecondLanguage"]
+        first.tap(); app.buttons["German · Deutsch"].tap()
+        let swap = app.buttons["swapLanguagesButton"]
+        let initiallyReady = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: swap)
+        XCTAssertEqual(XCTWaiter.wait(for: [initiallyReady], timeout: 5), .completed)
+        second.tap(); app.buttons["Spanish · Español"].tap()
+        let pairReady = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: swap)
+        XCTAssertEqual(XCTWaiter.wait(for: [pairReady], timeout: 5), .completed)
+        XCTAssertEqual(first.value as? String, "German · Deutsch")
+        XCTAssertEqual(second.value as? String, "Spanish · Español")
+        XCTAssertEqual(swap.label, "Swap languages")
+        XCTAssertGreaterThanOrEqual(swap.frame.width, 44)
+        XCTAssertGreaterThanOrEqual(swap.frame.height, 44)
+        swap.tap()
+        let swapped = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", "Spanish · Español"), object: first)
+        XCTAssertEqual(XCTWaiter.wait(for: [swapped], timeout: 5), .completed)
+        XCTAssertEqual(second.value as? String, "German · Deutsch")
+        let swapBackReady = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: swap)
+        XCTAssertEqual(XCTWaiter.wait(for: [swapBackReady], timeout: 5), .completed)
+        swap.tap()
+        let originalPair = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", "German · Deutsch"), object: first)
+        XCTAssertEqual(XCTWaiter.wait(for: [originalPair], timeout: 5), .completed)
+        let start = app.buttons["conversationTurn-de"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: start)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed)
+        start.tap()
+        let locked = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == false"), object: swap)
+        XCTAssertEqual(XCTWaiter.wait(for: [locked], timeout: 5), .completed)
+        XCTAssertEqual(first.value as? String, "German · Deutsch")
+        XCTAssertEqual(second.value as? String, "Spanish · Español")
+        XCTAssertFalse(first.isEnabled)
+        XCTAssertFalse(second.isEnabled)
+        app.buttons["conversationCancel"].tap()
+        app.terminate()
+    }
+}
