@@ -415,7 +415,7 @@ struct SpeakTranslateView: View {
 
     private var conversationActions: some View {
         HStack(alignment: .center, spacing: 8) {
-            if !embedded {
+            if !embedded && settings.englishLearningEnabled {
                 NavigationLink { EnglishTrainingLibraryView() } label: {
                     Label("Train", systemImage: "book.closed")
                 }

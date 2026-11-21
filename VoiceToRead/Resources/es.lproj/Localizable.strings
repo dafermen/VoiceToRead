@@ -1435,3 +1435,6 @@
 "Retry speech model preparation" = "Reintentar preparación del modelo de voz";
 "No speech model slot is available while another model is in use. Stop other listening or model preparation, then try installing again." = "No hay espacio para reservar otro modelo de voz mientras uno está en uso. Detén la escucha o la preparación de otros modelos y vuelve a intentar la instalación.";
 "The selected language has no compatible on-device speech model on this device. Choose another spoken language or check for an iOS update." = "El idioma elegido no tiene un modelo de voz local compatible con este dispositivo. Elige otro idioma de origen o comprueba si hay una actualización de iOS.";
+"English learning" = "Aprendizaje de inglés";
+"Enable English learning" = "Habilitar aprendizaje de inglés";
+"Shows Training, guided lessons, My practices, Stories, Podcasts, and Verbs and sentences. Hiding them keeps your saved practices and preferences." = "Muestra Entrenar, Lecciones guiadas, Mis prácticas, Cuentos, Podcasts y Verbos y frases. Al ocultarlos se conservan tus prácticas y preferencias guardadas.";

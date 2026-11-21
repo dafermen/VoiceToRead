@@ -180,6 +180,7 @@ final class AppSettings {
     var readerPaper: ReaderPaper { didSet { defaults.set(readerPaper.rawValue, forKey: "readerPaper") } }
     var ruledPaper: Bool { didSet { defaults.set(ruledPaper, forKey: "ruledPaper") } }
     var conversationHome: Bool { didSet { defaults.set(conversationHome, forKey: "conversationHome") } }
+    var englishLearningEnabled: Bool { didSet { defaults.set(englishLearningEnabled, forKey: "englishLearningEnabled") } }
     var simpleMode: Bool { didSet { defaults.set(simpleMode, forKey: "simpleMode") } }
     var showListeningParagraphTimes: Bool { didSet { defaults.set(showListeningParagraphTimes, forKey: "showListeningParagraphTimes") } }
     var showButtonNames: Bool { didSet { defaults.set(showButtonNames, forKey: "showButtonNames") } }
@@ -214,6 +215,7 @@ final class AppSettings {
         englishColor = LanguageColor(rawValue: defaults.string(forKey: "englishLanguageColor") ?? "") ?? .blue
         spanishColor = LanguageColor(rawValue: defaults.string(forKey: "spanishLanguageColor") ?? "") ?? .green
         conversationHome = defaults.object(forKey: "conversationHome") as? Bool ?? true
+        englishLearningEnabled = defaults.bool(forKey: "englishLearningEnabled")
         simpleMode = defaults.bool(forKey: "simpleMode")
         showListeningParagraphTimes = defaults.bool(forKey: "showListeningParagraphTimes")
         showButtonNames = defaults.object(forKey: "showButtonNames") as? Bool ?? true

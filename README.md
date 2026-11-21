@@ -1,5 +1,7 @@
 # VoiceToRead
 
+[Aprendizaje de inglés opcional y título común de Inicio — 2026-11-21](docs/optional-english-learning.md).
+
 [Corrección de intercambio de idiomas y preparación de modelos — 2026-11-21](docs/speech-preparation-and-language-swap.md).
 
 [Alemán, neerlandés y ruso: idiomas de contenido, compatibilidad Apple y pruebas](docs/apple-language-expansion.md).

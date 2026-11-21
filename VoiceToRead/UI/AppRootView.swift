@@ -14,6 +14,8 @@ struct AppRootView: View {
     @State private var fullScreenControl: HomeFullScreenControl?
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var homePath: [HomeDestination] = []
+    @State private var homeModule: CommunicationModule = .talk
+    @State private var homeNavigationID = UUID()
     @State private var translationConfirmationVisible = false
 
     var body: some View {
@@ -33,6 +35,15 @@ struct AppRootView: View {
                     NavigationStack { SettingsView(settings: coordinator.settings, coordinator: coordinator) }.tag(2)
                         .tabItem { Label { Text(verbatim: InterfaceLocalization.string("Settings", language: coordinator.settings.interfaceLanguage)) } icon: { Image(systemName: "gear") } }
                 }
+                .onChange(of: coordinator.settings.englishLearningEnabled) { _, enabled in
+                    guard !enabled else { return }
+                    // Reset only a training stack. Listening/review elsewhere keeps its identity.
+                    if (coordinator.settings.conversationHome && homeModule == .train) || homePath.contains(.englishTraining) {
+                        homeModule = .talk; homePath.removeAll()
+                        fullScreenControl = nil; homeNavigationID = UUID()
+                    }
+                }
+                .onChange(of: coordinator.settings.conversationHome) { _, _ in homeModule = .talk }
                 .onPreferenceChange(HomeFullScreenControlKey.self) { fullScreenControl = $0 }
                 .safeAreaInset(edge: .bottom, spacing: 0) {
                     if #available(iOS 26.0, *), !dynamicTypeSize.isAccessibilitySize {
@@ -138,7 +149,7 @@ struct AppRootView: View {
     private func homeNavigation(coordinator: SessionCoordinator) -> some View {
         NavigationStack(path: $homePath) {
             Group {
-                if coordinator.settings.conversationHome { CommunicationHomeView(coordinator: coordinator) }
+                if coordinator.settings.conversationHome { CommunicationHomeView(coordinator: coordinator, module: $homeModule) }
                 else if coordinator.settings.simpleMode { SimpleHomeView(coordinator: coordinator) }
                 else { LiveCaptionView(coordinator: coordinator) }
             }
@@ -146,12 +157,13 @@ struct AppRootView: View {
                 switch destination {
                 case .listen: LiveCaptionView(coordinator: coordinator)
                 case .sessions: SessionHistoryView(coordinator: coordinator)
-                case .englishTraining: EnglishTrainingLibraryView()
+                case .englishTraining:
+                    if coordinator.settings.englishLearningEnabled { EnglishTrainingLibraryView() }
                 case .response: WrittenResponseView(coordinator: coordinator)
                 case .preparation: OfflineReadinessView(coordinator: coordinator)
                 }
             }
-        }
+        }.id(homeNavigationID)
     }
 
     private func openStorage() {
@@ -198,6 +210,7 @@ struct AppRootView: View {
                     UserDefaults.standard.removeObject(forKey: key)
                 }
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-communication"), forKey: "conversationHome")
+                UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-english-learning"), forKey: "englishLearningEnabled")
                 UserDefaults.standard.set(false, forKey: "conversationTranslationEnabled")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-simple"), forKey: "simpleMode")
                 UserDefaults.standard.set(ProcessInfo.processInfo.arguments.contains("--ui-test-labels"), forKey: "showButtonNames")
@@ -278,6 +291,7 @@ struct AppRootView: View {
                     UserDefaults.standard.removeObject(forKey: "liveBilingualLayout")
                     if ProcessInfo.processInfo.arguments.contains("--ui-test-spanish") { settings.captureLanguage = .spanish }
                 }
+                settings.englishLearningEnabled = ProcessInfo.processInfo.arguments.contains("--ui-test-english-learning")
                 settings.conversationHome = ProcessInfo.processInfo.arguments.contains("--ui-test-communication")
                 settings.showButtonNames = ProcessInfo.processInfo.arguments.contains("--ui-test-labels")
                 settings.saveAudio = false
@@ -390,6 +404,9 @@ private final class ReaderPreviewSpeech: SpeechTranscribing {
 }
 #endif
 
+/// Presentation selection survives tab changes and is clamped when learning is hidden.
+enum CommunicationModule: Hashable { case talk, listen, train }
+
 /// Value routes let the Home tab return to its menu without resetting SessionCoordinator.
 enum HomeDestination: Hashable { case listen, sessions, englishTraining, response, preparation }
 
@@ -398,25 +415,31 @@ enum HomeDestination: Hashable { case listen, sessions, englishTraining, respons
 @MainActor
 struct CommunicationHomeView: View {
     let coordinator: SessionCoordinator
-    private enum Module: Hashable { case talk, listen, train }
-    @State private var module: Module = .talk
+    private typealias Module = CommunicationModule
+    @Binding var module: CommunicationModule
     @Environment(\.dynamicTypeSize) private var typeSize
     @State private var fullScreen = false
     @State private var conversation = SpeakTranslateModel()
     private var audioBusy: Bool {
         !conversation.canEdit || coordinator.caption.state.active || coordinator.caption.state.busy || coordinator.caption.preparationPending
     }
+    private var visibleModule: Module {
+        module == .train && !coordinator.settings.englishLearningEnabled ? .talk : module
+    }
+    private var moduleSelection: Binding<Module> {
+        Binding(get: { visibleModule }, set: { module = $0 })
+    }
     private var modulePicker: some View {
-        Picker("What would you like to do?", selection: $module) {
+        Picker("What would you like to do?", selection: moduleSelection) {
             Text("Talk").tag(Module.talk)
             Text("Listen").tag(Module.listen)
-            Text("Train").tag(Module.train)
+            if coordinator.settings.englishLearningEnabled { Text("Train").tag(Module.train) }
         }.pickerStyle(.segmented).accessibilityIdentifier("communicationMode")
     }
     private var moduleGrid: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 6) {
             moduleButton("Talk", .talk); moduleButton("Listen", .listen)
-            moduleButton("Train", .train)
+            if coordinator.settings.englishLearningEnabled { moduleButton("Train", .train) }
         }.accessibilityElement(children: .contain).accessibilityIdentifier("communicationModeGrid")
     }
     private func moduleButton(_ title: LocalizedStringKey, _ selection: Module) -> some View {
@@ -424,8 +447,8 @@ struct CommunicationHomeView: View {
             Text(title).font(.subheadline.weight(.semibold)).multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true).padding(8)
                 .frame(maxWidth: .infinity, minHeight: 44)
-                .background(module == selection ? Color.accentColor.opacity(0.15) : Color.secondary.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
-        }.buttonStyle(.plain).accessibilityAddTraits(module == selection ? .isSelected : [])
+                .background(visibleModule == selection ? Color.accentColor.opacity(0.15) : Color.secondary.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+        }.buttonStyle(.plain).accessibilityAddTraits(visibleModule == selection ? .isSelected : [])
     }
     var body: some View {
         VStack(spacing: 0) {
@@ -440,7 +463,7 @@ struct CommunicationHomeView: View {
                     }
                 }.padding(.horizontal).padding(.vertical, 8).disabled(audioBusy)
             }
-            if module == .train {
+            if module == .train && coordinator.settings.englishLearningEnabled {
                 EnglishTrainingLibraryView()
             } else if module == .listen {
                 LiveCaptionView(coordinator: coordinator, showConversationShortcut: false, communicationLayout: true)

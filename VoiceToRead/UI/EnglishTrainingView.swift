@@ -52,7 +52,7 @@ struct EnglishTrainingLibraryView: View {
                 }.accessibilityIdentifier("trainingVerbsEntry")
             }
         }
-        .navigationTitle("Training").navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("VoiceToRead").navigationBarTitleDisplayMode(.inline)
     }
 }
 

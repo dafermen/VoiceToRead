@@ -420,3 +420,46 @@ extension AppSettingsTests {
         }
     }
 }
+
+
+extension AppSettingsTests {
+    func testEnglishLearningIsHiddenForNewAndExistingPreferencesUntilEnabled() throws {
+        let suite = "OptionalEnglishLearning-" + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        XCTAssertFalse(AppSettings(defaults: defaults).englishLearningEnabled)
+        defaults.set("es-ES", forKey: "captureLanguage")
+        defaults.set("de-DE", forKey: "translationLanguage")
+        defaults.set(true, forKey: "showButtonNames")
+        let existing = AppSettings(defaults: defaults)
+        XCTAssertFalse(existing.englishLearningEnabled)
+        XCTAssertEqual(existing.captureLanguage, .spanish)
+        XCTAssertEqual(existing.translationLanguage, .german)
+        XCTAssertTrue(existing.showButtonNames)
+    }
+
+    func testLearningVisibilityPersistsIndependentlyAndNeverClearsSavedPreferences() throws {
+        let suite = "LearningVisibilityPersistence-" + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let marks = VerbLibraryMarks(favorites: ["become"], completed: ["be"])
+        defaults.set(marks.data, forKey: "verbMarksSentinel")
+        defaults.set(CaptureLanguage.russian.rawValue, forKey: "guidedLessonSupportLocale")
+        let settings = AppSettings(defaults: defaults)
+        settings.captureLanguage = .spanish; settings.translationLanguage = .german
+        settings.interfaceLanguage = .spanish
+        settings.englishLearningEnabled = true
+        let enabled = AppSettings(defaults: defaults)
+        XCTAssertTrue(enabled.englishLearningEnabled)
+        enabled.englishLearningEnabled = false
+        let hidden = AppSettings(defaults: defaults)
+        XCTAssertFalse(hidden.englishLearningEnabled)
+        XCTAssertEqual(hidden.captureLanguage, .spanish)
+        XCTAssertEqual(hidden.translationLanguage, .german)
+        XCTAssertEqual(hidden.interfaceLanguage, .spanish)
+        XCTAssertEqual(defaults.data(forKey: "verbMarksSentinel"), marks.data)
+        XCTAssertEqual(defaults.string(forKey: "guidedLessonSupportLocale"), CaptureLanguage.russian.rawValue)
+        hidden.englishLearningEnabled = true
+        XCTAssertTrue(AppSettings(defaults: defaults).englishLearningEnabled)
+    }
+}

@@ -113,6 +113,7 @@ final class HomeScreenTests: XCTestCase {
     func testListenHeaderActionsPreservePauseResumeAndSessionDecision() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -164,6 +165,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-stories"]
         app.launchEnvironment["STORIES_TEST_ID"] = UUID().uuidString
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -261,6 +263,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training"]
         app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -356,6 +359,7 @@ final class HomeScreenTests: XCTestCase {
     func testCommunicationMeetingCaptureOwnsMicrophone() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -386,6 +390,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         XCUIDevice.shared.orientation = .portrait
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         XCTAssertTrue(communicationMode(in: app).waitForExistence(timeout: 20))
         XCTAssertFalse(app.buttons["speakTranslateEntry"].exists)
@@ -589,6 +594,7 @@ final class HomeScreenTests: XCTestCase {
     func testConversationFixedBarKeepsActionsVisibleWhileScrollingLongText() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let write = app.buttons["conversationWriteReply"]
         let new = app.buttons["newConversationButton"]
@@ -634,6 +640,7 @@ final class HomeScreenTests: XCTestCase {
     func testConversationFullScreenKeepsControlsAndRestoresHome() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-conversation", "--ui-test-live-translation"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         XCTAssertTrue(app.buttons["speakTranslateEntry"].waitForExistence(timeout: 20))
         app.buttons["speakTranslateEntry"].tap()
@@ -780,6 +787,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-reader"]
         XCUIDevice.shared.orientation = .portrait
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         XCTAssertTrue(app.tabBars.buttons["Settings"].waitForExistence(timeout: 20))
         app.tabBars.buttons["Settings"].tap()
@@ -1804,6 +1812,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training", "--ui-test-labels"]
         app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
@@ -1877,6 +1886,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training", "--ui-test-labels"]
         app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         trainingEntry(in: app).tap()
@@ -1936,6 +1946,7 @@ final class HomeScreenTests: XCTestCase {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training", "--ui-test-labels"]
         app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         XCTAssertTrue(trainingEntry(in: app).waitForExistence(timeout: 20))
         let train = trainingEntry(in: app)
@@ -2772,6 +2783,7 @@ extension HomeScreenTests {
     func testPodcastEntryAndVisiblePlaybackWithoutMicrophonePrompt() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -2849,6 +2861,7 @@ extension HomeScreenTests {
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
         XCUIDevice.shared.orientation = .portrait
         defer { XCUIDevice.shared.orientation = .portrait }
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -2926,6 +2939,7 @@ extension HomeScreenTests {
     func testVerbReferenceFiltersConjugationsWithoutRecording() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -2969,6 +2983,7 @@ extension HomeScreenTests {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-labels",
                                "-interfaceLanguage", "en"]
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -3018,6 +3033,7 @@ extension HomeScreenTests {
         func revealFilters() {
             for _ in 0..<6 where !app.buttons["verbFavoritesFilter"].isHittable { app.swipeDown() }
         }
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch(); openVerbs()
         for base in ["be", "beat"] {
             revealMarks(base)
@@ -3340,6 +3356,7 @@ extension HomeScreenTests {
         let app = XCUIApplication()
         app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation"]
         XCUIDevice.shared.orientation = .portrait
+        app.launchArguments += ["--ui-test-english-learning"]
         app.launch()
         let mode = communicationMode(in: app)
         XCTAssertTrue(mode.waitForExistence(timeout: 20))
@@ -3560,6 +3577,103 @@ extension HomeScreenTests {
         XCTAssertFalse(first.isEnabled)
         XCTAssertFalse(second.isEnabled)
         app.buttons["conversationCancel"].tap()
+        app.terminate()
+    }
+}
+
+
+extension HomeScreenTests {
+    @MainActor
+    private func setEnglishLearning(_ enabled: Bool, in app: XCUIApplication) {
+        app.tabBars.buttons["Settings"].tap()
+        let toggle = app.switches["englishLearningEnabledToggle"]
+        for _ in 0..<5 where !toggle.isHittable { app.swipeUp() }
+        XCTAssertTrue(toggle.isHittable)
+        if toggle.value as? String != (enabled ? "1" : "0") { tapPreferenceSwitch(toggle) }
+        XCTAssertEqual(toggle.value as? String, enabled ? "1" : "0")
+    }
+
+    @MainActor
+    func testLearningDefaultOffCanBeEnabledHiddenInsidePracticesAndRestoredWithoutDataLoss() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-training"]
+        app.launchEnvironment["TRAINING_TEST_ID"] = UUID().uuidString
+        app.launch()
+        var mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        XCTAssertTrue(mode.buttons["Talk"].exists)
+        XCTAssertTrue(mode.buttons["Listen"].exists)
+        XCTAssertFalse(mode.buttons["Train"].exists)
+        XCTAssertTrue(app.navigationBars["VoiceToRead"].exists)
+        setEnglishLearning(true, in: app)
+        app.tabBars.buttons["Home"].tap()
+        mode = communicationMode(in: app)
+        let enabled = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: mode.buttons["Train"])
+        XCTAssertEqual(XCTWaiter.wait(for: [enabled], timeout: 5), .completed)
+        mode.buttons["Train"].tap()
+        XCTAssertTrue(app.buttons["guidedLessonsEntry"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars["VoiceToRead"].exists, "The three root modules share the app title")
+        app.buttons["personalPracticesEntry"].tap()
+        let practice = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "englishTraining-")).firstMatch
+        XCTAssertTrue(practice.waitForExistence(timeout: 10))
+        let savedPractice = practice.identifier
+        setEnglishLearning(false, in: app)
+        app.tabBars.buttons["Home"].tap()
+        mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 5))
+        XCTAssertFalse(mode.buttons["Train"].exists)
+        XCTAssertFalse(app.buttons["personalPracticesEntry"].exists)
+        XCTAssertFalse(app.buttons["newEnglishTraining"].exists)
+        XCTAssertTrue(app.navigationBars["VoiceToRead"].exists)
+        setEnglishLearning(true, in: app)
+        app.tabBars.buttons["Home"].tap()
+        let again = communicationMode(in: app).buttons["Train"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: again)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 5), .completed)
+        again.tap(); app.buttons["personalPracticesEntry"].tap()
+        XCTAssertTrue(app.buttons[savedPractice].waitForExistence(timeout: 10), "The same stored practice survives hiding and re-enabling")
+        app.terminate()
+    }
+
+    @MainActor
+    func testHidingLearningDuringListeningDoesNotResetCaptureOrItsLanguagePair() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-reader", "--ui-test-session-flow", "--ui-test-communication", "--ui-test-conversation", "--ui-test-live-translation", "--ui-test-english-learning"]
+        app.launch()
+        let mode = communicationMode(in: app)
+        XCTAssertTrue(mode.waitForExistence(timeout: 20))
+        mode.buttons["Listen"].tap()
+        let primary = app.buttons["primaryCaptionAction"]
+        XCTAssertTrue(primary.waitForExistence(timeout: 5))
+        primary.tap()
+        let capturing = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == 'Pause'"), object: primary)
+        XCTAssertEqual(XCTWaiter.wait(for: [capturing], timeout: 10), .completed)
+        let source = app.buttons["captureLanguagePicker"].value as? String
+        let target = app.buttons["translationTargetPicker"].value as? String
+        setEnglishLearning(false, in: app)
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(primary.waitForExistence(timeout: 5))
+        XCTAssertEqual(primary.label, "Pause", "Learning visibility cannot stop or restart the microphone")
+        XCTAssertFalse(communicationMode(in: app).buttons["Train"].exists)
+        XCTAssertEqual(app.buttons["captureLanguagePicker"].value as? String, source)
+        XCTAssertEqual(app.buttons["translationTargetPicker"].value as? String, target)
+        XCTAssertTrue(app.buttons["stopCaptionAction"].isHittable)
+        app.buttons["stopCaptionAction"].tap()
+        XCTAssertTrue(app.buttons["saveSessionButton"].waitForExistence(timeout: 15))
+        app.terminate()
+    }
+
+    @MainActor
+    func testSimpleHomeHidesTrainingUntilLearningIsEnabled() throws {
+        let app = XCUIApplication()
+        app.launchArguments = ["--ui-test-review", "--ui-test-simple", "--ui-test-conversation"]
+        app.launch()
+        XCTAssertTrue(app.buttons["simpleListenNow"].waitForExistence(timeout: 20))
+        XCTAssertFalse(app.buttons["simpleEnglishTraining"].exists)
+        XCTAssertTrue(app.buttons["simpleSessions"].exists)
+        setEnglishLearning(true, in: app)
+        app.tabBars.buttons["Home"].tap()
+        XCTAssertTrue(app.buttons["simpleEnglishTraining"].waitForExistence(timeout: 5))
         app.terminate()
     }
 }

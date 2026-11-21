@@ -1435,3 +1435,6 @@
 "Retry speech model preparation" = "Retry speech model preparation";
 "No speech model slot is available while another model is in use. Stop other listening or model preparation, then try installing again." = "No speech model slot is available while another model is in use. Stop other listening or model preparation, then try installing again.";
 "The selected language has no compatible on-device speech model on this device. Choose another spoken language or check for an iOS update." = "The selected language has no compatible on-device speech model on this device. Choose another spoken language or check for an iOS update.";
+"English learning" = "English learning";
+"Enable English learning" = "Enable English learning";
+"Shows Training, guided lessons, My practices, Stories, Podcasts, and Verbs and sentences. Hiding them keeps your saved practices and preferences." = "Shows Training, guided lessons, My practices, Stories, Podcasts, and Verbs and sentences. Hiding them keeps your saved practices and preferences.";

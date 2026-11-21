@@ -23,6 +23,12 @@ struct SettingsView: View {
                     .disabled(coordinator.caption.state.active || coordinator.caption.state.busy)
                 Text("You can return to the previous home without deleting your saved sessions.").font(.caption)
             }
+            Section("English learning") {
+                Toggle("Enable English learning", isOn: $settings.englishLearningEnabled)
+                    .accessibilityIdentifier("englishLearningEnabledToggle")
+                Text("Shows Training, guided lessons, My practices, Stories, Podcasts, and Verbs and sentences. Hiding them keeps your saved practices and preferences.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
             Section("Accessibility and ease of use") {
                 Toggle("Simple mode", isOn: $settings.simpleMode).disabled(coordinator.caption.state.active || coordinator.caption.state.busy).accessibilityIdentifier("simpleModeToggle")
                 Toggle("Show button names", isOn: $settings.showButtonNames).accessibilityIdentifier("buttonNamesToggle")
@@ -351,8 +357,10 @@ struct SimpleHomeView: View {
                     .accessibilityIdentifier("simpleListenNow")
                 NavigationLink(value: HomeDestination.sessions) { Label("My sessions", systemImage: "clock") }
                     .accessibilityIdentifier("simpleSessions")
-                NavigationLink(value: HomeDestination.englishTraining) { Label("Training", systemImage: "book.closed") }
-                    .accessibilityIdentifier("simpleEnglishTraining")
+                if coordinator.settings.englishLearningEnabled {
+                    NavigationLink(value: HomeDestination.englishTraining) { Label("Training", systemImage: "book.closed") }
+                        .accessibilityIdentifier("simpleEnglishTraining")
+                }
                 NavigationLink(value: HomeDestination.response) { Label("Write and speak", systemImage: "keyboard") }
                     .accessibilityIdentifier("simpleWriteResponse")
                 NavigationLink(value: HomeDestination.preparation) { Label("Prepare VoiceToRead", systemImage: "checkmark.shield") }

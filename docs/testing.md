@@ -1,5 +1,9 @@
 # Testing through Phase 9
 
+## Aprendizaje opcional — 2026-11-21
+
+[Preferencia desactivada por defecto, accesos y navegación](optional-english-learning.md). Dos regresiones unitarias y tres UI preparadas; pruebas de Entrenar anteriores optan por habilitarlo explícitamente. Comprobaciones locales de fuente/recursos disponibles; XCTest y aceptación física pendientes.
+
 ## Preparación de voz e intercambio — 2026-11-21
 
 [Alcance, diez regresiones y aceptación física pendiente](speech-preparation-and-language-swap.md). Cobertura de botón real, reintento, dictado instalable, cuotas y protección de modelos en uso. Las pruebas XCTest requieren Mac; las comprobaciones de fuente en Windows no equivalen a ejecutarlas.

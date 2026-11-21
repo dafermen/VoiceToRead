@@ -1,5 +1,7 @@
 # Estándar visual compartido — 2026-11-05
 
+> Actualización 2026-11-21: [Inicio comparte el título VoiceToRead y Entrenar es opcional desde Ajustes](optional-english-learning.md).
+
 Esta entrega unifica la presentación y los accesos equivalentes. Conserva los destinos de navegación, acciones, condiciones de disponibilidad, avisos importantes y confirmaciones. No migra datos ni modifica captura, traducción, reproducción, voces, exportación, contenidos educativos o preferencias guardadas.
 
 ## Convenciones
